@@ -1,12 +1,13 @@
 name: Update & Deploy
 on:
   schedule:
-    - cron: "30 23 * * *"   # 07:30 Beijing time daily
+    - cron: "30 23 * * *"   # daily 07:30 Beijing time
   workflow_dispatch:
 permissions:
   contents: write
   pages: write
   id-token: write
+  issues: write
 concurrency: { group: pages, cancel-in-progress: false }
 jobs:
   build:
@@ -17,10 +18,8 @@ jobs:
       - uses: actions/setup-python@v5
         with: { python-version: "3.12" }
       - run: pip install feedparser
-      - name: Check LLM endpoint reachability
-        run: |
-          curl -s -m 20 -o /dev/null -w "%{http_code}\n" -H "Authorization: Bearer $LLM_API_KEY" "${LLM_BASE_URL%/}/models"
-        env: { LLM_API_KEY: "${{ secrets.LLM_API_KEY }}", LLM_BASE_URL: "${{ secrets.LLM_BASE_URL }}" }
+      - name: Unit tests
+        run: python tests/test_hub.py
       - name: Fetch, summarize, build
         run: python hub.py
         env:
@@ -28,6 +27,14 @@ jobs:
           LLM_BASE_URL: ${{ secrets.LLM_BASE_URL }}
           LLM_MODEL: ${{ vars.LLM_MODEL || 'deepseek-v4-flash' }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          MAX_NEW: "80"
+      - name: Source health alert (0 items for 3+ runs)
+        env: { GH_TOKEN: "${{ github.token }}" }
+        run: |
+          if [ -s data/alerts.md ]; then
+            n=$(gh issue list --state open --search "in:title 数据源告警" --json number -q '.[0].number')
+            if [ -n "$n" ]; then gh issue comment "$n" --body-file data/alerts.md; else gh issue create --title "数据源告警：来源连续为 0" --body-file data/alerts.md; fi
+          fi
       - name: Commit data
         run: |
           git config user.name "github-actions[bot]"; git config user.email "41898299+github-actions[bot]@users.noreply.github.com"

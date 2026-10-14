@@ -1,0 +1,81 @@
+{
+ "runs": [
+  {
+   "time": "2026-10-14T07:04:44.974456+00:00",
+   "sources": {
+    "arXiv": {
+     "fetched": 213,
+     "error": null
+    },
+    "medRxiv": {
+     "fetched": 30,
+     "error": null
+    },
+    "bioRxiv": {
+     "fetched": 6,
+     "error": null
+    },
+    "PubMed": {
+     "fetched": 25,
+     "error": null
+    },
+    "Nature Medicine": {
+     "fetched": 8,
+     "error": null
+    },
+    "npj Digital Medicine": {
+     "fetched": 8,
+     "error": null
+    },
+    "Lancet Digital Health": {
+     "fetched": 12,
+     "error": null
+    },
+    "NEJM AI": {
+     "fetched": 8,
+     "error": null
+    },
+    "Hugging Face": {
+     "fetched": 15,
+     "error": null
+    },
+    "GitHub": {
+     "fetched": 15,
+     "error": null
+    },
+    "STAT News": {
+     "fetched": 1,
+     "error": null
+    },
+    "Fierce Healthcare": {
+     "fetched": 4,
+     "error": null
+    },
+    "Google News · FDA AI": {
+     "fetched": 15,
+     "error": null
+    },
+    "Google News · NMPA AI": {
+     "fetched": 10,
+     "error": null
+    }
+   }
+  }
+ ],
+ "streak": {
+  "arXiv": 0,
+  "medRxiv": 0,
+  "bioRxiv": 0,
+  "PubMed": 0,
+  "Nature Medicine": 0,
+  "npj Digital Medicine": 0,
+  "Lancet Digital Health": 0,
+  "NEJM AI": 0,
+  "Hugging Face": 0,
+  "GitHub": 0,
+  "STAT News": 0,
+  "Fierce Healthcare": 0,
+  "Google News · FDA AI": 0,
+  "Google News · NMPA AI": 0
+ }
+}

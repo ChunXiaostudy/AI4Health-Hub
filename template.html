@@ -1,6 +1,4 @@
-<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>{{TITLE}}</title><meta name="description" content="{{DESC}}"><link rel="alternate" type="application/rss+xml" href="feed.xml">
-<style>
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">{{HEAD}}<style>
 .health{--bg:#F6F8F7;--sf:#FFFFFF;--tx:#14201C;--mu:#5B6B65;--bd:#E3E9E6;--ac:#0E8A6E;--ac2:#2F6FDB;--acr:14,138,110;--ac2r:47,111,219}
 .apps{--bg:#FBF8F3;--sf:#FFFFFF;--tx:#1F1B16;--mu:#6E665C;--bd:#ECE5DA;--ac:#FF6A3D;--ac2:#7A5AF8;--acr:255,106,61;--ac2r:122,90,248}
 @media (prefers-color-scheme:dark){
@@ -41,54 +39,58 @@ h2{font-size:12px;font-weight:500;letter-spacing:.02em;color:var(--mu);margin:28
 footer{border-top:1px solid var(--bd);margin-top:48px;padding:24px 0 40px;font-size:12px;color:var(--mu)}footer a{color:var(--ac)}
 .sub{display:flex;flex-wrap:wrap;gap:8px;margin:4px 0 8px}.sub button{border:1px solid var(--bd);background:var(--sf);color:var(--mu);border-radius:999px;height:28px;padding:0 12px;font:500 12px inherit;font-family:inherit;cursor:pointer}.sub button.on{border-color:var(--ac);color:var(--ac)}
 .empty{color:var(--mu);padding:24px 0}
-</style></head><body class="{{MODE}}">
-<header><div class="wrap"><a class="brand" href="./" id="brand"></a><nav class="tabs" id="tabs"></nav><div class="links"><a href="feed.xml">RSS</a><a id="gh" target="_blank" rel="noopener">GitHub</a></div></div></header>
-<main class="wrap"><section class="hero"><div><h1 id="date"></h1><p id="tag"></p></div><div id="heroR" class="links"></div></section>
-<div id="featWrap"><h2>今日精选</h2><div id="feat"><div class="sk"></div></div></div><div id="feed"><div class="sk"></div><div class="sk"></div><div class="sk"></div></div></main>
-<footer><div class="wrap" id="foot"></div></footer>
-<script>
-const MODE=document.body.className,E=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-const host=u=>{try{return new URL(u).hostname}catch{return''}},fav=u=>`https://www.google.com/s2/favicons?sz=32&domain=${host(u)}`;
-function rel(iso){const d=(Date.now()-new Date(iso))/36e5;if(!(d>=0))return'';if(d<1)return'刚刚';if(d<24)return Math.floor(d)+' 小时前';if(d<24*30)return Math.floor(d/24)+' 天前';return iso.slice(0,10)}
-const arr=v=>Array.isArray(v)?v:(v?[v]:[]);let D,cur='全部';
-function metaRow(i,badge){return `<div class="meta"><img src="${fav(i.link)}" alt="" loading="lazy" onerror="this.style.display='none'"><span>${E(i.source)}</span><span>·</span><span>${rel(i.date)}</span>${i.pop?`<span>·</span><span class="mono">${E(i.pop)}</span>`:''}${badge&&i.badge?`<span class="badge" title="${E(i.badge)}">${E(i.badge)}</span>`:''}</div>`}
-function initial(i){return E((i.name||i.zh_title||i.title||'?').trim()[0]||'?')}
-function healthCard(i){const ev=i.evidence||'';const pre=ev==='预印本';
- return `<a class="card ${i.type==='监管'?'reg':''}" href="${E(i.link)}" target="_blank" rel="noopener">${metaRow(i,1)}<div class="t">${E(i.zh_title||i.title)}</div><p class="s">${E(i.summary)}</p>
- ${arr(i.key_points).length?`<ul class="kp">${arr(i.key_points).slice(0,3).map(k=>`<li>${E(k)}</li>`).join('')}</ul>`:''}
- <div class="chips"><span class="chip ${i.type==='论文'?'p':''}">${E(i.type)}</span>${ev?`<span class="chip w">${pre?'预印本 · 未经同行评审':E(ev)}</span>`:''}${arr(i.tags).slice(0,4).map(t=>`<span class="chip">${E(t)}</span>`).join('')}</div></a>`}
-function appCard(i){const ic=i.image?`<img class="ico" src="${E(i.image)}" alt="" loading="lazy">`:`<div class="ico">${initial(i)}</div>`;
- return `<a class="card" href="${E(i.link)}" target="_blank" rel="noopener"><div class="row">${ic}<div class="body">${metaRow(i,0)}<div class="t">${E(i.name||i.title)}</div><p class="s">${E(i.summary)}</p>
- <div class="chips">${arr(i.tags).slice(0,3).map(t=>`<span class="chip ${/AI/i.test(t)?'p':''}">${E(t)}</span>`).join('')}${arr(i.platform).map(p=>`<span class="chip w">${E(p)}</span>`).join('')}${i.pricing?`<span class="chip w">${E(i.pricing)}</span>`:''}</div>
- ${i.why?`<div class="why">有意思在哪：${E(i.why)}</div>`:''}</div></div></a>`}
-function featHealth(i){return `<a class="card feat ${i.type==='监管'?'reg':''}" href="${E(i.link)}" target="_blank" rel="noopener"><div class="img" style="${i.image?`background-image:url('${E(i.image)}')`:''}">${i.image?'':E(i.type||'')}</div><div class="txt">${metaRow(i,1)}<div class="t">${E(i.zh_title||i.title)}</div><p class="s">${E(i.summary)}</p><ul class="kp">${arr(i.key_points).slice(0,3).map(k=>`<li>${E(k)}</li>`).join('')}</ul></div></a>`}
-function featApp(i){return `<a class="card" href="${E(i.link)}" target="_blank" rel="noopener"><div class="shot" style="${i.image?`background-image:url('${E(i.image)}')`:''}">${i.image?'':initial(i)}</div><div class="inner">${metaRow(i,0)}<div class="t">${E(i.name||i.title)}</div><p class="s">${E(i.summary)}</p>${i.why?`<div class="why">有意思在哪：${E(i.why)}</div>`:''}</div></a>`}
-let sub='全部';
-function confView(){const C=D.conf||[];const labs=[...new Set(C.map(i=>i.conf))].sort();const cnt=k=>C.filter(i=>i.conf===k).length;
- let h=`<div class="sub">${['全部','预印本与期刊','顶会论文',...labs].map(k=>`<button data-k="${E(k)}" class="${k===sub?'on':''}">${E(k)}${labs.includes(k)?' '+cnt(k):''}</button>`).join('')}</div>`;
- return h}
-function bindSub(){document.querySelectorAll('.sub button').forEach(b=>b.onclick=()=>{sub=b.dataset.k;render()})}
-function render(){if(cur!=='研究论文')sub='全部';const C=(cur==='研究论文')?(D.conf||[]):[];
- let items=D.items.filter(i=>cur==='全部'||i.section===cur);
- if(cur==='研究论文'&&sub!=='全部'&&sub!=='预印本与期刊')items=[];
- const confs=sub==='全部'||sub==='顶会论文'?C:(sub==='预印本与期刊'?[]:C.filter(i=>i.conf===sub));const card=MODE==='health'?healthCard:appCard;
- document.querySelectorAll('.tab').forEach(t=>t.classList.toggle('on',t.dataset.s===cur));
- const days=[...new Set(D.items.map(i=>i.day))].sort().reverse(),today=days[0];
- const top=items.filter(i=>i.day===today).sort((a,b)=>(b.score||0)-(a.score||0)).slice(0,5);
- const fw=document.getElementById('featWrap');fw.style.display=top.length&&sub==='全部'?'':'none';
- document.getElementById('feat').innerHTML=MODE==='health'?(top[0]?featHealth(top[0])+`<div class="mini">${top.slice(1).map(card).join('')}</div>`:''):`<div class="grid">${top.slice(0,4).map(featApp).join('')}</div>${top[4]?`<div class="mini">${card(top[4])}</div>`:''}`;
- const topIds=new Set(top.map(i=>i.id));let h='';
- for(const d of days){const g=items.filter(i=>i.day===d&&!topIds.has(i.id));if(!g.length)continue;h+=`<div class="day">${d}${d===today?' · 今天':''} · ${g.length} 条</div><div class="feed">${g.map(card).join('')}</div>`}
- if(confs.length){const L=[...new Set(confs.map(i=>i.source))].sort((a,b)=>b.slice(-4).localeCompare(a.slice(-4))||a.localeCompare(b));
-  for(const l of L){const g=confs.filter(i=>i.source===l).sort((a,b)=>(b.score||0)-(a.score||0));h+=`<div class="day">顶会 · ${E(l)} · ${g.length} 篇</div><div class="feed">${g.map(card).join('')}</div>`}}
- document.getElementById('feed').innerHTML=(cur==='研究论文'?confView():'')+(h||'<div class="empty">该分类暂无内容</div>');bindSub();if(0)document.getElementById('feed').innerHTML=h||'<div class="empty">该分类暂无内容</div>'}
-fetch('data.json').then(r=>r.json()).then(d=>{D=d;const m=d.meta;
- document.getElementById('brand').innerHTML=m.wordmark;document.getElementById('gh').href=m.repo;
- const days=[...new Set(d.items.map(i=>i.day))].sort().reverse(),n=d.items.filter(i=>i.day===days[0]).length;
- document.getElementById('date').innerHTML=`<span class="mono">${days[0]||''}</span>`;document.getElementById('tag').textContent=`${m.tagline} · 今日 ${n} 条`;
- document.getElementById('tabs').innerHTML=['全部',...m.sections].map(s=>`<button class="tab" data-s="${E(s)}">${E(s)}</button>`).join('');
- document.querySelectorAll('.tab').forEach(t=>t.onclick=()=>{cur=t.dataset.s;render()});
- if(MODE==='apps'){const b=document.createElement('button');b.className='pill';b.textContent='随机看一个';b.onclick=()=>{const i=D.items[Math.floor(Math.random()*D.items.length)];if(i)window.open(i.link,'_blank','noopener')};document.getElementById('heroR').appendChild(b)}
- document.getElementById('foot').innerHTML=`${E(m.disclaimer||'')}<br>数据来源：${m.sources.map(E).join('、')}<br>更新于 <span class="mono">${new Date(m.updated).toLocaleString('zh-CN',{hour12:false})}</span> · <a href="${m.repo}" target="_blank">${m.repo}</a> · 灵感来自 <a href="https://github.com/wuyoscar/AISafetyHot-Hub" target="_blank">AISafetyHot-Hub</a> 与 <a href="https://github.com/KKKKhazix/AIHOT" target="_blank">AIHOT</a>`;
- render()}).catch(()=>{document.getElementById('feed').innerHTML='<div class="empty">数据加载失败</div>'});
+
+.card .stretch{color:inherit;text-decoration:none;display:-webkit-box}.card .stretch::after{content:"";position:absolute;inset:0;z-index:0}
+.card .chip.tag,.card .also a,.card .cite,.card .meta img{position:relative;z-index:1}
+.chip.tag{border:0;cursor:pointer;font-family:inherit}.chip.tag:hover{background:rgba(var(--acr),.18)}
+.orig{font-size:12px;color:var(--mu);margin:-2px 0 4px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.also{font-size:12px;color:var(--mu);margin-top:8px}.also a{color:var(--ac);margin-right:8px}
+.cite{margin-top:8px;border:1px solid var(--bd);background:none;color:var(--mu);border-radius:8px;font:500 12px inherit;font-family:inherit;padding:2px 8px;cursor:pointer}.cite:hover{color:var(--ac);border-color:var(--ac)}
+.feat .img.logo{flex-direction:column;gap:8px;font-size:15px;font-weight:600;background:rgba(var(--acr),.06);flex-basis:30%}.feat .img.logo img{width:48px;height:48px;border-radius:10px}.feat .img.logo .ev{font-size:12px;font-weight:500;color:var(--mu)}
+.big{padding:0}.big .inner{padding:16px 20px 18px}
+.tools{display:flex;gap:10px;align-items:center;margin:0 0 8px}.tools input{flex:1;height:38px;border:1px solid var(--bd);border-radius:10px;background:var(--sf);color:var(--tx);padding:0 12px;font:400 14px inherit;font-family:inherit}
+.tools input:focus{outline:none;border-color:var(--ac)}.tagf{font-size:12px;color:var(--ac);cursor:pointer;border:1px solid var(--ac);border-radius:999px;padding:2px 10px}
+.filters{display:flex;gap:8px;flex-wrap:wrap;margin:8px 0 12px}.filters select{height:30px;border:1px solid var(--bd);border-radius:8px;background:var(--sf);color:var(--tx);font:400 13px inherit;font-family:inherit}
+.pager{display:flex;gap:8px;justify-content:center;align-items:center;margin:16px 0;font-size:13px;color:var(--mu)}.pager button{border:1px solid var(--bd);background:var(--sf);color:var(--tx);border-radius:8px;padding:4px 12px;cursor:pointer}
+.list{list-style:none;padding:0;display:flex;flex-direction:column;gap:8px}.list a{display:block;padding:12px 16px;background:var(--sf);border:1px solid var(--bd);border-radius:12px}.list a:hover{border-color:var(--ac)}
+.prose p{margin:0 0 12px}.prose a{color:var(--ac)}.refs{padding-left:0;list-style:none;font-size:14px}.muted{color:var(--mu)}
+table.st{border-collapse:collapse;font-size:13px;width:100%}table.st td,table.st th{padding:6px 8px;border-bottom:1px solid var(--bd);text-align:left;white-space:nowrap}td.bad{color:#d33}
+[hidden]{display:none!important}
+</style></head><body class="{{MODE}}">{{BODY}}<script>
+(function(){
+const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)],E=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+let sec='全部',q='',tag='',sub='feed',C=null,page=0;const PER=30;
+document.addEventListener('click',e=>{const t=e.target.closest('.chip.tag');if(t){e.preventDefault();tag=t.dataset.tag;page=0;apply();window.scrollTo({top:0,behavior:'smooth'});return}
+ const c=e.target.closest('.cite');if(c){e.preventDefault();navigator.clipboard&&navigator.clipboard.writeText(c.dataset.cite).then(()=>{const o=c.textContent;c.textContent='已复制';setTimeout(()=>c.textContent=o,1200)});}});
+$$('.tab').forEach(b=>b.onclick=()=>{sec=b.dataset.s;$$('.tab').forEach(x=>x.classList.toggle('on',x===b));if(sec!=='研究论文')sub='feed';apply()});
+const qi=$('#q');if(qi)qi.oninput=()=>{q=qi.value.trim().toLowerCase();page=0;apply()};
+const tf=$('#tagf');if(tf)tf.onclick=()=>{tag='';apply()};
+$$('#paperSub button').forEach(b=>b.onclick=()=>{sub=b.dataset.k;$$('#paperSub button').forEach(x=>x.classList.toggle('on',x===b));page=0;apply()});
+const rnd=$('#rnd');if(rnd)rnd.onclick=()=>{const a=$$('#feed article .stretch');if(a.length)window.open(a[Math.floor(Math.random()*a.length)].href,'_blank','noopener')};
+const H=new URLSearchParams(location.hash.slice(1));if(H.get('tab')){sec=H.get('tab');$$('.tab').forEach(x=>x.classList.toggle('on',x.dataset.s===sec))}if(H.get('sub')){sub=H.get('sub');$$('#paperSub button').forEach(x=>x.classList.toggle('on',x.dataset.k===sub))}
+function match(el){return (sec==='全部'||el.dataset.sec===sec)&&(!q||el.dataset.text.includes(q))&&(!tag||el.dataset.tags.split('|').includes(tag))}
+function apply(){const fw=$('#featWrap');if(fw)fw.hidden=!!(sec!=='全部'||q||tag);
+ if(tf){tf.hidden=!tag;tf.textContent='标签：'+tag+' ✕'}
+ const ps=$('#paperSub'),cp=$('#confPanel'),feed=$('#feed');if(ps)ps.hidden=sec!=='研究论文';
+ const conf=sec==='研究论文'&&sub==='conf';if(cp)cp.hidden=!conf;feed.hidden=conf;let n=0;
+ if(conf){loadConf();n=1}else{$$('#feed .dayg').forEach(g=>{let k=0;const fv=fw&&!fw.hidden;g.querySelectorAll('article').forEach(a=>{const m=match(a)&&!(fv&&a.dataset.top);a.hidden=!m;k+=m});g.hidden=!k;const s=g.querySelector('.n');if(s)s.textContent=k;n+=k})}
+ const em=$('#empty');if(em)em.hidden=!!n}
+function loadConf(){if(C){renderConf();return}$('#confPanel').innerHTML='<div class="sk"></div><div class="sk"></div>';
+ fetch('conf.json').then(r=>r.json()).then(d=>{C=d;const cs=[...new Set(d.map(x=>x.c))].sort(),ys=[...new Set(d.map(x=>x.y))].sort().reverse(),ts=[...new Set(d.flatMap(x=>x.tg))].sort();
+  const opt=(id,l,a)=>`<select id="${id}"><option value="">${l}</option>${a.map(v=>`<option>${E(v)}</option>`).join('')}</select>`;
+  $('#confPanel').innerHTML=`<div class="filters">${opt('fc','全部会议',cs)}${opt('fy','全部年份',ys)}${opt('ft','全部标签',ts)}<span class="muted" id="fn" style="font-size:12px;align-self:center"></span></div><div class="feed" id="cl"></div><div class="pager" id="pg"></div>`;
+  ['fc','fy','ft'].forEach(i=>$('#'+i).onchange=()=>{page=0;renderConf()});renderConf()}).catch(()=>{$('#confPanel').innerHTML='<div class="empty">加载失败</div>'})}
+function ccard(x){const cite=`${x.t}. ${x.cl}. ${x.doi?'https://doi.org/'+x.doi:x.l}`;
+ return `<article class="card"><div class="meta"><span>${E(x.cl)}</span><span>·</span><span>发布于 ${E((x.d||'').slice(0,10))}</span>${x.ci?`<span>·</span><span class="mono">引用 ${x.ci}</span>`:''}<span class="badge">${E(x.cl)} · ${E(x.r)}</span></div>
+ <a class="t stretch" href="${E(x.l)}" target="_blank" rel="noopener">${E(x.zt)}</a><div class="orig">${E(x.t)}</div><p class="s">${E(x.s)}</p>${x.kp&&x.kp.length?`<ul class="kp">${x.kp.map(k=>`<li>${E(k)}</li>`).join('')}</ul>`:''}
+ <div class="chips"><span class="chip p">论文</span><span class="chip w">同行评审</span>${x.tg.map(t=>`<button class="chip tag" data-tag="${E(t)}">${E(t)}</button>`).join('')}${x.th?'<span class="chip w">仅基于标题</span>':''}</div>
+ <button class="cite" data-cite="${E(cite)}">${x.doi?'复制引用 / DOI':'复制引用'}</button></article>`}
+function renderConf(){const fc=$('#fc').value,fy=$('#fy').value,ft=$('#ft').value||tag;
+ const L=C.filter(x=>(!fc||x.c===fc)&&(!fy||String(x.y)===fy)&&(!ft||x.tg.includes(ft))&&(!q||(x.t+' '+x.zt+' '+x.s+' '+x.cl+' '+x.tg.join(' ')).toLowerCase().includes(q)));
+ const P=Math.max(1,Math.ceil(L.length/PER));page=Math.min(page,P-1);$('#fn').textContent=`共 ${L.length} 篇`;
+ $('#cl').innerHTML=L.slice(page*PER,(page+1)*PER).map(ccard).join('')||'<div class="empty">没有匹配的论文</div>';
+ $('#pg').innerHTML=`<button id="pp" ${page?'':'disabled'}>上一页</button><span class="mono">${page+1} / ${P}</span><button id="pn" ${page<P-1?'':'disabled'}>下一页</button>`;
+ $('#pp').onclick=()=>{page--;renderConf();$('#confPanel').scrollIntoView()};$('#pn').onclick=()=>{page++;renderConf();$('#confPanel').scrollIntoView()}}
+apply();
+})();
 </script></body></html>

@@ -1,0 +1,109 @@
+{
+ "week": "2026-W42",
+ "range": "2026-10-12 ~ 2026-10-18",
+ "partial": true,
+ "generated": "2026-10-14T07:11:28.646264+00:00",
+ "summary": "本周文献显示，医疗AI的难点正从模型构建转向部署、证据与持续治理。NEJM AI 总结50多个算法在2000家医院、1100万患者中的落地经验，指出部署应用比构建模型更困难 [1]。NEJM AI 还提出从技术性能到临床可用性的阶段式证据标准框架 [5]；npj Digital Medicine 介绍面向美欧监管的自适应医疗AI上市后治理基础设施 AEGIS [11]。另有观点主张以信任为节奏推进AI研发与医疗采纳 [13]，并关注双重用途大语言模型时代面向患者医疗AI的安全 [17]；人道主义AI中的权力、治理与问责亦被讨论 [18]。\n\n神经领域，小型癫痫监测研究显示，基于大语言模型的聊天界面让患者用手机实时对话脑电监测，患者反馈使检测器误报减少约80% [2]。Lancet Digital Health 社论讨论AI方法如何助力并加速癫痫研究、支持及时诊断与适当照护，背景为美国参议院通过国家癫痫计划法案 [16]。同刊还报告多中心开发与验证的脑电图基础模型 MORGOTH，在临床场景达到专家级表现，并提升低资源环境诊断准确性 [6]。\n\n肿瘤与慢病风险分层方面，Nature Medicine 基于52,236例癌症患者纵向数据构建恶病质多模态图谱，体重下降事件与血清学特征及肿瘤基因型相关，并可整合临床与分子数据预测 [4]；另一项研究在52,236例癌症患者中分析恶病质体重下降与生存、疾病进展及血清标志物的关联，并训练模型预测风险 [7]。还有研究以可解释端到端神经网络构建晚期黑色素瘤预后评分 [19]，以及利用多维连续血糖监测指标进行糖尿病全谱系数字风险分层 [20]。\n\n筛查与模型可靠性方面，NEJM AI 对用于 HPV 筛查双染分流的 AI 模型进行独立外部验证，以缩小自动化差距 [3]。回顾性比较显示，大数据集微调时传统模型与 RETFound 在眼病检测表现相近，小数据集时 RETFound 在全身病检测占优 [9]。npj Digital Medicine 研究指出提示词效应因模型而异，给中医医疗大模型可靠部署带来挑战 [10]。研究还纳入健康社会决定因素实现急诊科需求逐小时预测 [12]；范围综述显示开放获取文献中临床预测模型代码共享仍有限，实践与文档质量差异显著 [15]。",
+ "items": [
+  {
+   "title": "临床AI落地比构建更难：50余算法、2000家医院的经验",
+   "link": "https://ai.nejm.org/doi/full/10.1056/AI-S2601120%4010.1056/ai_2026.3.issue-10?af=R&rss=currentIssue",
+   "source": "NEJM AI"
+  },
+  {
+   "title": "人机协作实时共同管理癫痫",
+   "link": "https://www.nature.com/articles/s41591-026-04680-4",
+   "source": "Nature Medicine"
+  },
+  {
+   "title": "HPV 宫颈癌筛查：双染分流 AI 模型的独立外部验证",
+   "link": "https://ai.nejm.org/doi/full/10.1056/AIoa2600270?af=R&rss=currentIssue",
+   "source": "NEJM AI"
+  },
+  {
+   "title": "健康系统规模的癌症恶病质病程多模态图谱",
+   "link": "https://www.nature.com/articles/s41591-026-04689-9",
+   "source": "Nature Medicine"
+  },
+  {
+   "title": "从技术性能到临床可用：临床AI证据标准阶段式框架",
+   "link": "https://ai.nejm.org/doi/full/10.1056/AIp2600684?af=R&rss=currentIssue",
+   "source": "NEJM AI"
+  },
+  {
+   "title": "EEG基础模型MORGOTH的多中心开发与验证",
+   "link": "https://www.thelancet.com/journals/landig/article/PIIS2589-7500(26)00062-2/fulltext?rss=yes",
+   "source": "Lancet Digital Health"
+  },
+  {
+   "title": "利用常规临床数据刻画癌症恶病质的发生与进展",
+   "link": "https://www.nature.com/articles/s41591-026-04720-z",
+   "source": "Nature Medicine"
+  },
+  {
+   "title": "人口规模绝经动态重建揭示末次月经期生理骤变",
+   "link": "https://www.nature.com/articles/s41591-026-04614-0",
+   "source": "Nature Medicine"
+  },
+  {
+   "title": "RETFound与传统深度学习模型检测眼病及全身病的比较",
+   "link": "https://www.thelancet.com/journals/landig/article/PIIS2589-7500(26)00054-3/fulltext?rss=yes",
+   "source": "Lancet Digital Health"
+  },
+  {
+   "title": "提示词模型依赖性影响中医医疗大模型可靠部署",
+   "link": "https://www.nature.com/articles/s41746-026-03397-5",
+   "source": "npj Digital Medicine"
+  },
+  {
+   "title": "AEGIS：自适应医疗AI上市后治理基础设施",
+   "link": "https://www.nature.com/articles/s41746-026-03290-1",
+   "source": "npj Digital Medicine"
+  },
+  {
+   "title": "融合健康社会决定因素的AI急诊需求逐小时预测",
+   "link": "https://www.nature.com/articles/s41746-026-03378-8",
+   "source": "npj Digital Medicine"
+  },
+  {
+   "title": "以信任的速度推进AI研发与医疗采纳",
+   "link": "https://ai.nejm.org/doi/full/10.1056/AI-S2600964%4010.1056/ai_2026.3.issue-10?af=R&rss=currentIssue",
+   "source": "NEJM AI"
+  },
+  {
+   "title": "专才AI为何仍可能赢得放射学部署竞赛",
+   "link": "https://ai.nejm.org/doi/full/10.1056/AIltr2600389?af=R&rss=currentIssue",
+   "source": "NEJM AI"
+  },
+  {
+   "title": "临床预测模型代码共享的AI辅助范围综述",
+   "link": "https://www.nature.com/articles/s41591-026-04691-1",
+   "source": "Nature Medicine"
+  },
+  {
+   "title": "社论：AI时代的癫痫研究",
+   "link": "https://www.thelancet.com/journals/landig/article/PIIS2589-7500(26)00138-X/fulltext?rss=yes",
+   "source": "Lancet Digital Health"
+  },
+  {
+   "title": "当聊天机器人泄露：双重用途大模型时代面向患者医疗AI的安全",
+   "link": "https://ai.nejm.org/doi/full/10.1056/AIp2600583?af=R&rss=currentIssue",
+   "source": "NEJM AI"
+  },
+  {
+   "title": "人道主义AI中的权力、治理与问责",
+   "link": "https://www.thelancet.com/journals/landig/article/PIIS2589-7500(26)00091-9/fulltext?rss=yes",
+   "source": "Lancet Digital Health"
+  },
+  {
+   "title": "可解释端到端神经网络构建晚期黑色素瘤预后评分",
+   "link": "https://www.nature.com/articles/s41746-026-03379-7",
+   "source": "npj Digital Medicine"
+  },
+  {
+   "title": "多维连续血糖监测指标实现糖尿病全谱系数字风险分层",
+   "link": "https://www.nature.com/articles/s41746-026-03368-w",
+   "source": "npj Digital Medicine"
+  }
+ ]
+}

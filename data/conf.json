@@ -10454,7 +10454,7 @@
 "year": 2025,
 "date": "2025-04-11",
 "link": "https://doi.org/10.1609/aaai.v39i7.32824",
-"cites": 11,
+"cites": 12,
 "zh_title": "S³-Mamba：面向小病灶分割的小尺寸敏感Mamba模型",
 "summary": "提出S³-Mamba，从通道、空间与训练策略三方面提升对小病灶的敏感性，以改善小病灶分割。",
 "key_points": [

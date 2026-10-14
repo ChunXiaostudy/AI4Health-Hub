@@ -1,0 +1,36 @@
+name: Weekly Digest
+on:
+  schedule:
+    - cron: "0 1 * * 1"   # Monday 09:00 Beijing time, covers previous Mon-Sun
+  workflow_dispatch:
+    inputs:
+      which: { description: "last (previous week) or current", default: "last" }
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+concurrency: { group: pages, cancel-in-progress: false }
+jobs:
+  weekly:
+    runs-on: ubuntu-latest
+    environment: { name: github-pages, url: "${{ steps.deploy.outputs.page_url }}" }
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - run: pip install feedparser
+      - name: Write weekly digest and rebuild
+        run: python weekly.py "${{ inputs.which || 'last' }}" && python hub.py build
+        env:
+          LLM_API_KEY: ${{ secrets.LLM_API_KEY }}
+          LLM_BASE_URL: ${{ secrets.LLM_BASE_URL }}
+          LLM_MODEL: ${{ vars.LLM_MODEL || 'deepseek-v4-flash' }}
+      - name: Commit
+        run: |
+          git config user.name "github-actions[bot]"; git config user.email "41898299+github-actions[bot]@users.noreply.github.com"
+          git add data && (git diff --cached --quiet || (git commit -m "weekly: $(date -u +%F)" && git push))
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with: { path: site }
+      - id: deploy
+        uses: actions/deploy-pages@v4

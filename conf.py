@@ -63,31 +63,36 @@ def fetch_all():
 def run(llm_enrich):
     path = "data/conf.json"
     store = json.load(open(path)) if os.path.exists(path) else {}
-    for pid, c in fetch_all().items():
+    fetched = fetch_all()
+    for pid, c in fetched.items():
         if pid in store: store[pid]["cites"] = c["cites"]
         else: store[pid] = c
     todo = [c for c in store.values() if "zh_title" not in c and not c.get("skip")]
-    # spread the cap across conferences (round robin), most-cited first
     todo.sort(key=lambda c: -c["cites"]); by = {}
     for c in todo: by.setdefault(c["conf_label"], []).append(c)
     pick = []
     while len(pick) < CAP and any(by.values()):
         for k in list(by):
             if by[k] and len(pick) < CAP: pick.append(by[k].pop(0))
-    print(f"[conf] store {len(store)}, pending {len(todo)}, enriching {len(pick)}", file=sys.stderr)
-    batch_items = [dict(title=c["title"], source=c["conf_label"], desc=c["abstract"] or "(无摘要，仅依据标题)", evidence_hint="同行评审", _pid=c["pid"]) for c in pick]
-    for r in llm_enrich(batch_items):
+    print(f"[conf] fetched {len(fetched)}, store {len(store)}, pending {len(todo)}, enriching {len(pick)}", file=sys.stderr)
+    items = [dict(title=c["title"], source=c["conf_label"], desc=c["abstract"], thin=not c["abstract"], evidence_hint="同行评审", _pid=c["pid"]) for c in pick]
+    for r in llm_enrich(items):
         c = store[r["_pid"]]
         if r.get("keep") is False: c["skip"] = True; continue
         for k in ("zh_title", "summary", "key_points", "tags"): c[k] = r.get(k)
         c["score"] = r.get("score", 5)
-    for c in pick:  # failed LLM calls stay pending; keep=false marked skip
-        pass
     json.dump(store, open(path, "w"), ensure_ascii=False, indent=0)
-    shown = []
+    return shown(store)
+
+def shown(store):
+    from hub import norm_tags
+    out = []
     for c in store.values():
         if "zh_title" not in c or c.get("skip"): continue
-        shown.append(dict(id="c" + c["pid"][:11], title=c["title"], zh_title=c["zh_title"], summary=c.get("summary"), key_points=c.get("key_points"), tags=c.get("tags"),
-                          link=c["link"], date=c["date"], source=c["conf_label"], badge=c["conf_label"] + (" · " + c["rank"]), conf=c["conf"], type="论文",
-                          section="研究论文", evidence="同行评审", pop=f"引用 {c['cites']}" if c["cites"] else None, score=c.get("score", 5), day=c["date"][:10]))
-    return shown
+        thin = not c.get("abstract")
+        doi = next(iter(re.findall(r"doi\.org/(.+)$", c["link"])), "")
+        out.append(dict(id="c" + c["pid"][:11], t=c["title"], zt=c["zh_title"], s=c.get("summary"), kp=[] if thin else (c.get("key_points") or [])[:3], tg=norm_tags(c.get("tags")),
+                        l=c["link"], d=c["date"], c=c["conf"], cl=c["conf_label"], r=c["rank"], y=c.get("year"), ci=c.get("cites", 0), th=thin, doi=doi,
+                        sc=round((c.get("score") or 5) + min(2, 0.6 * __import__("math").log10((c.get("cites") or 0) + 1)), 2)))
+    out.sort(key=lambda x: -x["sc"])
+    return out

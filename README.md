@@ -20,3 +20,11 @@ Secrets: `LLM_API_KEY`, `LLM_BASE_URL`；可选变量 `LLM_MODEL`（默认 deeps
 
 ## 顶会论文
 `conf.py` 通过 Semantic Scholar bulk search API 检索 2025–2026 年顶会（ACL/AAAI/IJCAI/NeurIPS/ICML/CVPR/ICCV/KDD/WWW/SIGIR/MM，及 EMNLP/NAACL/ICLR/MICCAI；CCF 等级按实际标注）中标题含医疗/临床/生物医学关键词的论文，持久保存在 `data/conf.json`（不过期），每日刷新，每次最多新摘要 120 篇（`CONF_MAX`）。
+
+## 结构（v2）
+- `hub.py`：抓取 → 去重（标题相似度 + 事件合并，显示「N 个来源报道」）→ LLM 摘要（固定标签枚举）→ 综合排序（LLM 分 + 来源权重 + 证据级别 + 星标/引用/HN 分）→ 预渲染静态 HTML。
+- `data/items.json` 滚动 30 天；`data/archive/YYYY-MM-DD.json` 永久归档 → `/YYYY-MM-DD/` 与 `/archive/`。
+- `data/status.json` 记录每次各来源条数 → `/status.html`；连续 3 次为 0 自动开/更新 issue。
+- RSS：`feed.xml`、各分区 `feed-<section>.xml`、周报 `weekly/feed.xml`。
+- `weekly.py` + `.github/workflows/weekly.yml`：每周一生成周报 `/weekly/YYYY-Www/`。
+- 测试：`python tests/test_hub.py`。
