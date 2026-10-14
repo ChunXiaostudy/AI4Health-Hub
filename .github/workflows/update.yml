@@ -1,0 +1,38 @@
+name: Update & Deploy
+on:
+  schedule:
+    - cron: "30 23 * * *"   # 07:30 Beijing time daily
+  workflow_dispatch:
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+concurrency: { group: pages, cancel-in-progress: false }
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    environment: { name: github-pages, url: "${{ steps.deploy.outputs.page_url }}" }
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - run: pip install feedparser
+      - name: Check LLM endpoint reachability
+        run: curl -s -m 20 -o /dev/null -w "%{http_code}\n" -H "Authorization: Bearer $LLM_API_KEY" "${LLM_BASE_URL%/}/models"
+        env: { LLM_API_KEY: "${{ secrets.LLM_API_KEY }}", LLM_BASE_URL: "${{ secrets.LLM_BASE_URL }}" }
+      - name: Fetch, summarize, build
+        run: python hub.py
+        env:
+          LLM_API_KEY: ${{ secrets.LLM_API_KEY }}
+          LLM_BASE_URL: ${{ secrets.LLM_BASE_URL }}
+          LLM_MODEL: ${{ vars.LLM_MODEL || 'deepseek-v4-flash' }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Commit data
+        run: |
+          git config user.name "github-actions[bot]"; git config user.email "41898299+github-actions[bot]@users.noreply.github.com"
+          git add data && (git diff --cached --quiet || (git commit -m "data: $(date -u +%F)" && git push))
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with: { path: site }
+      - id: deploy
+        uses: actions/deploy-pages@v4
