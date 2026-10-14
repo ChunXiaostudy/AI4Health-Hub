@@ -165,6 +165,66 @@
 "rank": 12.0
 },
 {
+"title": "[Articles] Multimodal artificial intelligence-based long-term mortality prediction after transcatheter aortic valve implantation: a multicentre development, validation, and testing study",
+"link": "https://www.thelancet.com/journals/landig/article/PIIS2589-7500(26)00072-5/fulltext?rss=yes",
+"date": "2026-08-27T22:30:02+00:00",
+"source": "Lancet Digital Health",
+"source_group": "Lancet Digital Health",
+"home": "",
+"thin": false,
+"badge": "",
+"pop": null,
+"id": "c8c63b97d96a",
+"keep": true,
+"zh_title": "多模态AI预测TAVI术后长期死亡率",
+"summary": "多中心开发、验证与测试显示，可解释多模态AI模型预测TAVI长期结局优于传统风险评分。",
+"key_points": [
+"多模态AI模型预测TAVI后长期死亡率",
+"多中心开发、验证与测试设计",
+"优于传统风险评分且泛化性稳健"
+],
+"section": "研究论文",
+"type": "论文",
+"tags": [
+"多模态",
+"临床预测"
+],
+"evidence": "同行评审",
+"score": 8,
+"day": "2026-10-14",
+"rank": 12.0
+},
+{
+"title": "[Articles] Effect of a computer-aided quality feedback system on colonoscopists’ adenoma detection rate in Denmark: a multicentre, stepped-wedge, cluster-randomised, controlled trial",
+"link": "https://www.thelancet.com/journals/landig/article/PIIS2589-7500(26)00069-5/fulltext?rss=yes",
+"date": "2026-09-02T13:42:00+00:00",
+"source": "Lancet Digital Health",
+"source_group": "Lancet Digital Health",
+"home": "",
+"thin": false,
+"badge": "",
+"pop": null,
+"id": "4a99b246253d",
+"keep": true,
+"zh_title": "计算机辅助质量反馈系统提高结肠镜腺瘤检出率：丹麦随机试验",
+"summary": "丹麦多中心阶梯楔形整群随机对照试验显示，实施CCC CAQ反馈系统提高了腺瘤、息肉及晚期腺瘤检出率，并延长退镜时间。",
+"key_points": [
+"丹麦多中心阶梯楔形整群随机对照试验",
+"腺瘤、息肉及晚期腺瘤检出率均提高",
+"退镜时间延长；对结肠镜后结直肠癌影响待评估"
+],
+"section": "研究论文",
+"type": "论文",
+"tags": [
+"医学影像",
+"临床落地"
+],
+"evidence": "同行评审",
+"score": 8,
+"day": "2026-10-14",
+"rank": 12.0
+},
+{
 "title": "Characterizing the onset and progression of cancer cachexia using routine clinical data",
 "link": "https://www.nature.com/articles/s41591-026-04720-z",
 "date": "2026-10-13T00:00:00+00:00",
@@ -241,6 +301,99 @@
 "眼科",
 "医学影像",
 "医学大模型"
+],
+"evidence": "同行评审",
+"score": 7,
+"day": "2026-10-14",
+"rank": 11.0
+},
+{
+"title": "[Articles] Status, challenges, and future directions of machine learning in the management of epilepsy: a systematic review and meta-analysis",
+"link": "https://www.thelancet.com/journals/landig/article/PIIS2589-7500(26)00052-X/fulltext?rss=yes",
+"date": "2026-09-03T22:30:04+00:00",
+"source": "Lancet Digital Health",
+"source_group": "Lancet Digital Health",
+"home": "",
+"thin": false,
+"badge": "",
+"pop": null,
+"id": "d77e936503a6",
+"keep": true,
+"zh_title": "机器学习在癫痫管理中的现状、挑战与未来方向：系统综述与荟萃分析",
+"summary": "系统综述与荟萃分析指出，机器学习预测癫痫治疗结局受高异质性与偏倚限制，临床适用性有限。",
+"key_points": [
+"机器学习在预测癫痫治疗结局上显示潜力",
+"小样本、缺失数据处理与缺少外部验证造成偏倚",
+"未来需更大规模多样化数据集与前瞻性试验"
+],
+"section": "研究论文",
+"type": "论文",
+"tags": [
+"临床预测",
+"神经科学",
+"临床决策支持"
+],
+"evidence": "同行评审",
+"score": 7,
+"day": "2026-10-14",
+"rank": 11.0
+},
+{
+"title": "[Review] Artificial intelligence models for automated and semiautomated analysis and interpretation of clinical electroencephalography",
+"link": "https://www.thelancet.com/journals/landig/article/PIIS2589-7500(26)00046-4/fulltext?rss=yes",
+"date": "2026-09-03T22:30:02+00:00",
+"source": "Lancet Digital Health",
+"source_group": "Lancet Digital Health",
+"home": "",
+"thin": false,
+"badge": "",
+"pop": null,
+"id": "91b6afea69bc",
+"keep": true,
+"zh_title": "AI模型用于临床脑电图自动与半自动分析解读（综述）",
+"summary": "《柳叶刀·数字健康》综述指出，人工神经网络分析临床脑电图已取得重要突破，AI辅助解读正接近临床落地。",
+"key_points": [
+"脑电图是癫痫最常用诊断工具，但解读专才不足",
+"可穿戴与数字化带来海量脑电数据，人工判读难应对",
+"人工神经网络分析临床脑电已取得重要突破"
+],
+"section": "观点与综述",
+"type": "观点",
+"tags": [
+"生理信号",
+"神经科学",
+"临床决策支持"
+],
+"evidence": "同行评审",
+"score": 7,
+"day": "2026-10-14",
+"rank": 11.0
+},
+{
+"title": "[Review] Machine learning prediction for epilepsy treatment selection and prognosis: achievements and challenges",
+"link": "https://www.thelancet.com/journals/landig/article/PIIS2589-7500(26)00045-2/fulltext?rss=yes",
+"date": "2026-09-03T22:30:03+00:00",
+"source": "Lancet Digital Health",
+"source_group": "Lancet Digital Health",
+"home": "",
+"thin": false,
+"badge": "",
+"pop": null,
+"id": "d500b158cc30",
+"keep": true,
+"zh_title": "机器学习预测癫痫治疗选择与预后：进展与挑战（综述）",
+"summary": "综述指出，癫痫治疗反应缺乏可靠替代生物标志物，选药仍以试错为主；统计与机器学习已用于预测药物及手术疗效。",
+"key_points": [
+"治疗反应缺乏可靠的替代生物标志物",
+"抗癫痫药物选择目前仍多为试错方式",
+"机器学习已用于预测药物与手术的发作结局"
+],
+"section": "观点与综述",
+"type": "观点",
+"tags": [
+"神经科学",
+"临床预测",
+"临床决策支持"
 ],
 "evidence": "同行评审",
 "score": 7,
@@ -1809,6 +1962,36 @@
 "rank": 7.0
 },
 {
+"title": "Brain Age Gap Progression in Individuals at Risk for Neurodegeneration",
+"link": "https://arxi",
+"date": "2026-10-13T17:40:34+00:00",
+"source": "arXiv",
+"source_group": "arXiv",
+"home": "",
+"thin": false,
+"badge": "",
+"pop": null,
+"id": "10c4da5d14a9",
+"keep": true,
+"zh_title": "VNN脑龄差与阿尔茨海默进展评分纵向研究",
+"summary": "预印本纵向研究用协方差神经网络从神经影像构建脑龄差，结合阿尔茨海默进展评分分析神经退行高风险人群。",
+"key_points": [
+"基于VNN从神经影像构建脑龄差",
+"联合多模态阿尔茨海默进展评分APS",
+"基线高风险预示更大的脑龄差进展"
+],
+"section": "研究论文",
+"type": "论文",
+"tags": [
+"医学影像",
+"神经科学"
+],
+"evidence": "预印本",
+"score": 6,
+"day": "2026-10-14",
+"rank": 7.0
+},
+{
 "title": "Zhangyiqian218/StructFlow-MedicalEval",
 "link": "https://github.com/Zhangyiqian218/StructFlow-MedicalEval",
 "date": "2026-10-09T14:42:25Z",
@@ -2742,6 +2925,36 @@
 "score": 4,
 "day": "2026-10-14",
 "source_group": "medRxiv"
+},
+{
+"title": "Understanding clinician engagement with electronic health records: a mixed-methods study of structured data entry using the Theory of Planned Behaviour",
+"link": "https://www.medrxiv.org/content/10.64898/2026.10.08.26365036v1?rss=1",
+"date": "2026-10-11T00:00:00+00:00",
+"source": "medRxiv",
+"source_group": "medRxiv",
+"home": "",
+"thin": false,
+"badge": "DOI 10.64898/2026.10.08.26365036v1",
+"pop": null,
+"id": "af18a8ba147a",
+"keep": true,
+"zh_title": "英国NHS医生电子病历结构化数据录入参与度的混合方法研究",
+"summary": "伦敦NHS教学医院混合方法研究，基于计划行为理论分析医生对电子病历结构化数据录入的参与。",
+"key_points": [
+"研究在伦敦NHS教学医院Epic电子病历环境开展",
+"研究1为非顾问级医生横断面问卷调查",
+"作者称首次将计划行为理论用于结构化数据录入"
+],
+"section": "研究论文",
+"type": "论文",
+"tags": [
+"电子病历",
+"临床落地"
+],
+"evidence": "预印本",
+"score": 4,
+"day": "2026-10-14",
+"rank": 5.0
 },
 {
 "title": "hujizhou35-cmd/medical-journal-selector",
