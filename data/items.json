@@ -345,6 +345,140 @@
   "day": "2026-10-14"
  },
  {
+  "title": "AI-based hourly prediction of emergency department demand integrating social determinants of health",
+  "link": "https://www.nature.com/articles/s41746-026-03378-8",
+  "date": "2026-10-12T00:00:00+00:00",
+  "pop": null,
+  "source": "npj Digital Medicine",
+  "badge": "DOI 10.1038/s41746-026-03378-8",
+  "id": "73a91ee6b2fc",
+  "keep": true,
+  "zh_title": "融合健康社会决定因素的AI急诊需求逐小时预测",
+  "summary": "同行评审研究构建AI模型，纳入健康社会决定因素，实现急诊科需求的逐小时预测。",
+  "key_points": [
+   "逐小时预测急诊科需求",
+   "纳入健康社会决定因素",
+   "发表于npj Digital Medicine"
+  ],
+  "section": "研究论文",
+  "type": "模型",
+  "tags": [
+   "临床预测",
+   "公共卫生",
+   "机器学习"
+  ],
+  "evidence": "同行评审",
+  "score": 7,
+  "day": "2026-10-14"
+ },
+ {
+  "title": "AI chatbots abandon sleep apnoea referral when simulated patients minimise symptoms",
+  "link": "https://www.medrxiv.org/content/10.64898/2026.10.09.26365165v1?rss=1",
+  "date": "2026-10-12T00:00:00+00:00",
+  "pop": null,
+  "source": "medRxiv",
+  "badge": "DOI 10.64898/2026.10.09.26365165v1",
+  "id": "79b9854c885c",
+  "keep": true,
+  "zh_title": "模拟患者弱化症状时AI聊天机器人放弃睡眠呼吸暂停转诊",
+  "summary": "预印本测试显示，当模拟患者弱化症状时，消费级AI聊天机器人不再给出符合指南的睡眠呼吸暂停转诊建议。",
+  "key_points": [
+   "患者日益向免费AI聊天机器人咨询",
+   "模型或倾向迎合患者而非准确性",
+   "症状弱化时转诊建议被放弃"
+  ],
+  "section": "研究论文",
+  "type": "论文",
+  "tags": [
+   "医学大模型",
+   "临床NLP",
+   "临床决策"
+  ],
+  "evidence": "预印本",
+  "score": 7,
+  "day": "2026-10-14"
+ },
+ {
+  "title": "The content of biomedical papers predicts future clinical trials: a proof-of-concept framework tested on CAR-T cell therapy",
+  "link": "https://www.medrxiv.org/content/10.64898/2026.10.10.26365160v1?rss=1",
+  "date": "2026-10-12T00:00:00+00:00",
+  "pop": null,
+  "source": "medRxiv",
+  "badge": "DOI 10.64898/2026.10.10.26365160v1",
+  "id": "de62376d0aa8",
+  "keep": true,
+  "zh_title": "论文内容可预测未来临床试验：CAR-T验证",
+  "summary": "预印本显示，可用机器学习基于生物医学论文内容预测其是否与后续临床试验相关，以CAR-T为验证场景。",
+  "key_points": [
+   "重建论文与临床试验之间的关联",
+   "训练机器学习模型进行预测",
+   "以CAR-T细胞治疗为概念验证"
+  ],
+  "section": "研究论文",
+  "type": "论文",
+  "tags": [
+   "药物发现",
+   "临床NLP"
+  ],
+  "evidence": "预印本",
+  "score": 7,
+  "day": "2026-10-14"
+ },
+ {
+  "title": "Do Calibrated-Probability Claims Hold Up in Clinical Diagnosis? A Pre-registered Evaluation of a Decision Model Against Frontier Language Models",
+  "link": "https://www.medrxiv.org/content/10.64898/2026.10.09.26365153v1?rss=1",
+  "date": "2026-10-11T00:00:00+00:00",
+  "pop": null,
+  "source": "medRxiv",
+  "badge": "DOI 10.64898/2026.10.09.26365153v1",
+  "id": "6b1ce605fed1",
+  "keep": true,
+  "zh_title": "决策模型校准概率主张的临床诊断预注册评估",
+  "summary": "预注册研究将某决策模型与前沿语言模型对比，检验临床诊断准确性、校准度与概率一致性。",
+  "key_points": [
+   "预注册评估决策模型临床诊断表现",
+   "与前沿语言模型及推理版本对比",
+   "检验概率校准与一致性主张"
+  ],
+  "section": "研究论文",
+  "type": "论文",
+  "tags": [
+   "医学大模型",
+   "临床诊断",
+   "基准"
+  ],
+  "evidence": "预印本",
+  "score": 7,
+  "day": "2026-10-14"
+ },
+ {
+  "title": "Dynamic Risk Stratification for Short-Term Deterioration After Acute Stroke: Incremental Value of Radiology-Report-Derived Neuroimaging Phenotypes Beyond Dynamic ICU States, a retrospective cohort study with temporal validation",
+  "link": "https://www.medrxiv.org/content/10.64898/2026.10.08.26365059v1?rss=1",
+  "date": "2026-10-11T00:00:00+00:00",
+  "pop": null,
+  "source": "medRxiv",
+  "badge": "DOI 10.64898/2026.10.08.26365059v1",
+  "id": "96f3d4a8650a",
+  "keep": true,
+  "zh_title": "急性卒中后短期恶化动态风险分层：影像报告表型的增量价值",
+  "summary": "基于MIMIC-IV 4,827例急性卒中患者，在ICU入院后6至48小时八个时间点，评估影像报告衍生神经影像表型对短期恶化预测的增量价值。",
+  "key_points": [
+   "回顾性队列含4,827例急性卒中成人",
+   "设6至48小时共八个预测时间点",
+   "报告表型在动态生理状态之外提供增量信息"
+  ],
+  "section": "研究论文",
+  "type": "论文",
+  "tags": [
+   "临床NLP",
+   "医学影像",
+   "数据集"
+  ],
+  "evidence": "预印本",
+  "score": 7,
+  "day": "2026-10-14"
+ },
+ {
   "title": "Provider Experiences with AI Clinical Decision Support in eSanjeevani",
   "link": "https://www.medrxiv.org/content/10.64898/2026.10.12.26365316v1?rss=1",
   "date": "2026-10-13T00:00:00+00:00",
@@ -800,6 +934,247 @@
   "day": "2026-10-14"
  },
  {
+  "title": "FDA Warning Letter Flags Algorithm Updates and Cloud Moves - Medical Device and Diagnostic industry",
+  "link": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxQLVY3bjJfNGRTY2JWVDh3RDZ5WXJGLVRLZWQ4V3NxZ2JETFl1NzhJV2Y1cWwzLTIzRTNhRk9kYUtQSkpEclJQeWlvT2pzQ0dtclI0dFdleHZMZTZROGdPcERuQW9xMG5CVVRlTnpoRXFfc3UwcVVCLUE4VjVyZVAweFFKc01wTHdfNVdhV0hmVlpNdURQWUJuMWw5QkJaNTQ4TVA0REg1cUJMZUhhTVRjdTA5SVc0UHgy?oc=5",
+  "date": "2026-10-12T20:21:52+00:00",
+  "pop": null,
+  "source": "Google News · FDA AI",
+  "badge": "",
+  "id": "d66a1b829aaf",
+  "keep": true,
+  "zh_title": "FDA警告信指向算法更新与云端迁移",
+  "summary": "行业媒体报道称，FDA警告信内容涉及医疗器械的算法更新与云端迁移事项。",
+  "key_points": [
+   "FDA警告信涉及算法更新",
+   "警告信涉及云端迁移",
+   "报道面向医疗器械与诊断行业"
+  ],
+  "section": "临床落地与监管",
+  "type": "监管",
+  "tags": [
+   "医疗器械",
+   "监管"
+  ],
+  "evidence": "新闻",
+  "score": 6,
+  "day": "2026-10-14"
+ },
+ {
+  "title": "Stage-aware deep learning with adversarial data synthesis enables prospective season-scale A/H1N1 influenza forecasting in China.",
+  "link": "https://pubmed.ncbi.nlm.nih.gov/42571518/",
+  "date": "2026-10-14T03:03:26.567839+00:00",
+  "pop": null,
+  "badge": "DOI 10.1016/j.idm.2026.07.003",
+  "source": "PubMed",
+  "id": "466a76dfdb5c",
+  "keep": true,
+  "zh_title": "阶段感知深度学习结合对抗数据合成预测中国甲型H1N1流感",
+  "summary": "同行评审研究提出阶段感知深度学习并引入对抗数据合成，实现中国甲型H1N1流感的季节尺度前瞻性预测。",
+  "key_points": [
+   "阶段感知深度学习建模方法",
+   "对抗数据合成扩充训练数据",
+   "中国A/H1N1季节尺度前瞻预测"
+  ],
+  "section": "研究论文",
+  "type": "论文",
+  "tags": [
+   "公共卫生",
+   "深度学习",
+   "预测建模"
+  ],
+  "evidence": "同行评审",
+  "score": 6,
+  "day": "2026-10-14"
+ },
+ {
+  "title": "Label-free, low-cost AI ranking for systematic review screening",
+  "link": "https://www.medrxiv.org/content/10.64898/2026.10.09.26365173v1?rss=1",
+  "date": "2026-10-12T00:00:00+00:00",
+  "pop": null,
+  "source": "medRxiv",
+  "badge": "DOI 10.64898/2026.10.09.26365173v1",
+  "id": "bec9f082452e",
+  "keep": true,
+  "zh_title": "低成本无标注AI排序用于系统综述筛选",
+  "summary": "预印本提出无需筛选标注的低成本AI决策模型Jev，用于系统综述题录筛选排序。",
+  "key_points": [
+   "模型无需筛选标签即可评分",
+   "评估128篇综述共169,982条记录",
+   "23篇留出综述平均AUC 0.966"
+  ],
+  "section": "研究论文",
+  "type": "论文",
+  "tags": [
+   "临床NLP",
+   "基准",
+   "医学大模型"
+  ],
+  "evidence": "预印本",
+  "score": 6,
+  "day": "2026-10-14"
+ },
+ {
+  "title": "Decision models can offload structured clinical tasks from large language models",
+  "link": "https://www.medrxiv.org/content/10.64898/2026.10.09.26365130v1?rss=1",
+  "date": "2026-10-12T00:00:00+00:00",
+  "pop": null,
+  "source": "medRxiv",
+  "badge": "DOI 10.64898/2026.10.09.26365130v1",
+  "id": "0a560b87aa15",
+  "keep": true,
+  "zh_title": "决策模型可承接大语言模型的结构化临床任务",
+  "summary": "预印本探讨用低成本决策模型Jev承接死亡率估计、决策选择题与结肠癌分期等临床任务。",
+  "key_points": [
+   "决策模型成本远低于大语言模型",
+   "覆盖死亡率与分期等结构化输出",
+   "标准输入下性能落后五个旗舰LLM"
+  ],
+  "section": "研究论文",
+  "type": "论文",
+  "tags": [
+   "临床NLP",
+   "医学大模型",
+   "基准"
+  ],
+  "evidence": "预印本",
+  "score": 6,
+  "day": "2026-10-14"
+ },
+ {
+  "title": "ClinStigma: A Clinician-Guided Framework for Developing Synthetic Benchmarks of Contextual Stigmatizing Language in Clinical Documentation",
+  "link": "https://www.medrxiv.org/content/10.64898/2026.10.10.26365233v1?rss=1",
+  "date": "2026-10-12T00:00:00+00:00",
+  "pop": null,
+  "source": "medRxiv",
+  "badge": "DOI 10.64898/2026.10.10.26365233v1",
+  "id": "16b6498b61af",
+  "keep": true,
+  "zh_title": "ClinStigma：临床文档污名化语言合成基准框架",
+  "summary": "提出由临床医生指导的框架，用于构建、标注与评估临床文档中情境化污名化语言的合成基准。",
+  "key_points": [
+   "面向 LLM 生成、总结与评估临床文档",
+   "现有方法依赖标注语料或关键词",
+   "ClinStigma 以合成基准提升可复现性"
+  ],
+  "section": "研究论文",
+  "type": "论文",
+  "tags": [
+   "临床NLP",
+   "医学大模型",
+   "基准"
+  ],
+  "evidence": "预印本",
+  "score": 6,
+  "day": "2026-10-14"
+ },
+ {
+  "title": "From examinations to consultations: a physician-reviewed Japanese benchmark for large language models in traditional Kampo medicine",
+  "link": "https://www.medrxiv.org/content/10.64898/2026.10.07.26365005v1?rss=1",
+  "date": "2026-10-11T00:00:00+00:00",
+  "pop": null,
+  "source": "medRxiv",
+  "badge": "DOI 10.64898/2026.10.07.26365005v1",
+  "id": "5536d679d864",
+  "keep": true,
+  "zh_title": "KampoBench：汉方医学大模型医师审核基准",
+  "summary": "发布含 74 个问诊场景、310 条对话评分标准的日文汉方医学基准，评测大模型从考试到问诊的应用能力。",
+  "key_points": [
+   "74 个问诊场景与 310 条评分标准",
+   "设计参照 HealthBench",
+   "经医师审核，考察问诊应用能力"
+  ],
+  "section": "研究论文",
+  "type": "论文",
+  "tags": [
+   "医学大模型",
+   "基准",
+   "临床NLP"
+  ],
+  "evidence": "预印本",
+  "score": 6,
+  "day": "2026-10-14"
+ },
+ {
+  "title": "AI Adoption in Clinical Trials Hindered by Validation, Governance Gaps - The Clinical Trial Vanguard",
+  "link": "https://news.google.com/rss/articles/CBMiswFBVV95cUxQOHBVcGhOdlJJeGNEMzFpWEg1ZjRNV2xqUjRXVzFhQTVZMWxzYmFVZk51ZkZhWktPc3ZVNTlidldNUXltMkpsUnA5MmpoWFN5WWhacGNMZ20ycXJSN2ZPbFM2T2RHWlNCR0d5QS1rV2c1Q29fR3ZDeVBhWkFoQjNLYy1NamhtSHRvd2NMWmVSOWVGOXhrbk8wS0NneXdoX3hpMWlHT1N0a1Y0Nlp0cmMxS0l4WQ?oc=5",
+  "date": "2026-10-12T07:29:50+00:00",
+  "pop": null,
+  "source": "Google News · FDA AI",
+  "badge": "",
+  "id": "6c637465deb2",
+  "keep": true,
+  "zh_title": "验证与治理缺口阻碍临床试验中的AI采用",
+  "summary": "报道称验证与治理方面的缺口正阻碍AI在临床试验中的应用。",
+  "key_points": [
+   "AI在临床试验采用受阻",
+   "主因涉及验证不足",
+   "治理缺口同样构成障碍"
+  ],
+  "section": "临床落地与监管",
+  "type": "监管",
+  "tags": [
+   "临床试验",
+   "治理",
+   "验证"
+  ],
+  "evidence": "新闻",
+  "score": 6,
+  "day": "2026-10-14"
+ },
+ {
+  "title": "A Multi-Domain EEG Framework Integrating Spectral, Functional Connectivity, and Topological Features for Subject-Level ADHD Classification",
+  "link": "https://www.medrxiv.org/content/10.64898/2026.10.08.26365043v1?rss=1",
+  "date": "2026-10-11T00:00:00+00:00",
+  "pop": null,
+  "source": "medRxiv",
+  "badge": "DOI 10.64898/2026.10.08.26365043v1",
+  "id": "2f4ed015269c",
+  "keep": true,
+  "zh_title": "融合频谱、功能连接与拓扑特征的EEG多域ADHD分类框架",
+  "summary": "预印本研究提出多域EEG框架，整合频谱、功能连接与拓扑特征进行个体级ADHD分类。",
+  "key_points": [
+   "整合频谱与功能连接等特征",
+   "面向受试者级ADHD分类",
+   "基于EEG的机器学习方法"
+  ],
+  "section": "研究论文",
+  "type": "论文",
+  "tags": [
+   "脑电",
+   "机器学习",
+   "精神疾病"
+  ],
+  "evidence": "预印本",
+  "score": 6,
+  "day": "2026-10-14"
+ },
+ {
+  "title": "Data-efficient machine learning for the detection of duodenal neoplasia: a multi-centre study",
+  "link": "https://www.medrxiv.org/content/10.64898/2026.10.08.26365053v1?rss=1",
+  "date": "2026-10-11T00:00:00+00:00",
+  "pop": null,
+  "source": "medRxiv",
+  "badge": "DOI 10.64898/2026.10.08.26365053v1",
+  "id": "c6cb6cec8671",
+  "keep": true,
+  "zh_title": "数据高效机器学习检测十二指肠肿瘤：多中心研究",
+  "summary": "五家医院8,027例正常与401例肿瘤十二指肠活检全切片图像，提出数据高效机器学习流程用于肿瘤检测。",
+  "key_points": [
+   "五医院HE染色全切片图像多中心数据集",
+   "含8,027例正常与401例肿瘤样本",
+   "针对标注数据稀缺提出数据高效流程"
+  ],
+  "section": "研究论文",
+  "type": "论文",
+  "tags": [
+   "病理",
+   "数据集"
+  ],
+  "evidence": "预印本",
+  "score": 6,
+  "day": "2026-10-14"
+ },
+ {
   "title": "jbilcke/whisper-medical-large-coreml",
   "link": "https://huggingface.co/jbilcke/whisper-medical-large-coreml",
   "date": "2026-10-13T12:11:30.000Z",
@@ -1122,6 +1497,218 @@
   "day": "2026-10-14"
  },
  {
+  "title": "Podcast: The FDA’s GenAI proposal: evolving regulation for an evolved medtech era - Medical Device Network",
+  "link": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxPY3VWLW12N1hxN2xDNWtqZnhTa0owMnlCS0VNeWVzRmRzeWRhX1FrX2tTOTFqQjQxbFBGaEJ6b1JzVEJhNjdqNDlmcjVNSUFDVXFTNElqQnk2OFFieEV4WDRJeWFSS0NPSkxaNFNSSUpzaW1aZHJSSHpieXRzTThKb0VLQzRnMXE5cFl2RWNxODA2SDRacG1rYjlKeUdOLXh4aUhjMVZ1c09rV2ZNWFRVczJiTXZuWHB2OUFIQWJmdlJ0c3c?oc=5",
+  "date": "2026-10-13T17:07:10+00:00",
+  "pop": null,
+  "source": "Google News · FDA AI",
+  "badge": "",
+  "id": "f15617991f45",
+  "keep": true,
+  "zh_title": "播客：FDA 生成式AI提案与医疗器械监管演进",
+  "summary": "播客讨论 FDA 针对生成式AI的监管提案，以及医疗器械监管如何随技术演进。",
+  "key_points": [
+   "主题为FDA的生成式AI监管提案",
+   "聚焦医疗器械监管框架演进",
+   "形式为播客讨论"
+  ],
+  "section": "临床落地与监管",
+  "type": "监管",
+  "tags": [
+   "医学大模型"
+  ],
+  "evidence": "新闻",
+  "score": 5,
+  "day": "2026-10-14"
+ },
+ {
+  "title": "AI Medical Device Certification Body Scarlet Raises $50M Series B - Wowtale",
+  "link": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE1adldLT050dVlqdGpSWkdsOFlKZEdOS2RXR2liMEQ2Q1hkUXZjUFoxX2stQkMyOWNMeVlQZGVaRE9yVGt3WHRzc2tTQ1h6NVdfcmhJ?oc=5",
+  "date": "2026-10-13T09:12:25+00:00",
+  "pop": null,
+  "source": "Google News · FDA AI",
+  "badge": "",
+  "id": "ef7e734438ec",
+  "keep": true,
+  "zh_title": "AI医疗器械认证机构Scarlet获5000万美元B轮",
+  "summary": "AI医疗器械认证机构 Scarlet 完成 5000 万美元 B 轮融资。",
+  "key_points": [
+   "Scarlet 为AI医疗器械认证机构",
+   "完成5000万美元B轮融资",
+   "消息来源为新闻报道"
+  ],
+  "section": "产业与融资",
+  "type": "融资",
+  "tags": [
+   "医疗器械"
+  ],
+  "evidence": "新闻",
+  "score": 5,
+  "day": "2026-10-14"
+ },
+ {
+  "title": "金域医学终止对DRA公司投资；晶泰科技开源化学反应产率定量AI模型 - 21财经",
+  "link": "https://news.google.com/rss/articles/CBMijwFBVV95cUxPUFFoeFlzdDFlYVI5Vi13bnJDRUlxNElQaHROVlk0Zm03bWNnV01wdUlhVVBKZzh3QVEtMXdRbE4tNnowclR6YVJOQkhCUS1sZjY5b1FXOVY2VXlJZEo2S1NJeGNnU3M2VGJxb1NBbUdMUWZRX0x3d1RyNW9iTU1WUW1mV0s5eWhwSjgzYlJuUQ?oc=5",
+  "date": "2026-10-13T00:00:00+00:00",
+  "pop": null,
+  "source": "Google News · NMPA AI",
+  "badge": "",
+  "id": "66f779e04c22",
+  "keep": true,
+  "zh_title": "金域医学终止投资DRA；晶泰科技开源反应产率AI模型",
+  "summary": "金域医学终止对DRA公司的投资，晶泰科技开源化学反应产率定量AI模型。",
+  "key_points": [
+   "金域医学终止对DRA公司投资",
+   "晶泰科技开源化学反应产率定量AI模型",
+   "信息来自21财经报道"
+  ],
+  "section": "产业与融资",
+  "type": "融资",
+  "tags": [
+   "药物发现",
+   "化学AI"
+  ],
+  "evidence": "新闻",
+  "score": 5,
+  "day": "2026-10-14"
+ },
+ {
+  "title": "Establishment and validation of intelligent review rules for blood cell analysis based on the gradient boosting decision tree algorithm.",
+  "link": "https://pubmed.ncbi.nlm.nih.gov/42331130/",
+  "date": "2026-10-14T03:03:26.567839+00:00",
+  "pop": null,
+  "badge": "DOI 10.1016/j.cca.2026.121196",
+  "source": "PubMed",
+  "id": "4cc645b87ef5",
+  "keep": true,
+  "zh_title": "梯度提升决策树构建血细胞分析智能审核规则",
+  "summary": "同行评审研究基于梯度提升决策树算法建立并验证血细胞分析智能审核规则。",
+  "key_points": [
+   "采用梯度提升决策树算法",
+   "构建血细胞分析智能审核规则",
+   "完成规则建立与验证"
+  ],
+  "section": "研究论文",
+  "type": "论文",
+  "tags": [
+   "血液学",
+   "机器学习"
+  ],
+  "evidence": "同行评审",
+  "score": 5,
+  "day": "2026-10-14"
+ },
+ {
+  "title": "higumalu/RT-Gaia",
+  "link": "https://github.com/higumalu/RT-Gaia",
+  "date": "2026-10-09T19:27:33Z",
+  "pop": "★ 5",
+  "image": "https://avatars.githubusercontent.com/u/43444071?v=4",
+  "source": "GitHub",
+  "badge": "",
+  "id": "c1663bf596d9",
+  "keep": true,
+  "zh_title": "RT-Gaia：网页端放疗影像勾画与复核工具",
+  "summary": "GitHub 开源项目 RT-Gaia 提供网页端放疗影像、勾画与复核，在同一三维与时间空间中呈现影像、结构、剂量、计划与测量。",
+  "key_points": [
+   "网页端放疗影像查看与勾画复核",
+   "整合影像、结构、剂量、计划与测量",
+   "自述为研究软件，非医疗器械"
+  ],
+  "section": "模型与开源",
+  "type": "模型",
+  "tags": [
+   "医学影像",
+   "放射治疗",
+   "开源工具"
+  ],
+  "evidence": "新闻",
+  "score": 5,
+  "day": "2026-10-14"
+ },
+ {
+  "title": "Children Are Left Out of Medical AI - A New Method Could Help Close the Gap | Newswise - Newswise",
+  "link": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxOSGdodjFVMWl3Y3pBTDVOSVpwVU1RbG5Ca2Z2V1E2UTBLTkRuQm1hck55M01fQ1pZdE9yX0RGem1WT1JKV0x3QjR2a0IyMkJsRlc5NXlUS0JsejFQRUpmZm1ZS08tamNZU3htRkg0QXAzam5IMXVKb1Zua3FrNXFSU1NrbndLLXl3bmNNa1drZGZWUnJaYXloalJpRjZDX3BnU1lyM3dJb3pVMW_SAasBQVVfeXFMTkhnaHYxVTFpd2N6QUw1TklacFVNUWxuQmtmdldRNlEwS05EbkJtYXJOeTNNX0NaWXRPcl9ERnptVk9SSldMd0I0dmtCMjJCbEZXOTV5VEtCbHoxUEVKZmZtWUtPLWpjWVN4bUZINEFwM2puSDF1Sm9WbmtxazVxUlNTa253Sy15d25jTWtXa2RmVlJyWmF5aGpSaUY2Q19wZ1NZcjN3SW96VTFv?oc=5",
+  "date": "2026-10-12T07:00:00+00:00",
+  "pop": null,
+  "source": "Google News · FDA AI",
+  "badge": "",
+  "id": "e8aba20308dc",
+  "keep": true,
+  "zh_title": "儿童被排除在医疗AI之外，新方法或可弥合差距",
+  "summary": "报道指出儿童群体在医疗AI中被忽视，介绍一种可能缩小该差距的新方法。",
+  "key_points": [
+   "医疗AI对儿童群体覆盖不足",
+   "提出新方法尝试弥合差距",
+   "报道未给出具体验证结论"
+  ],
+  "section": "观点与综述",
+  "type": "观点",
+  "tags": [
+   "儿科",
+   "医疗AI",
+   "公平性"
+  ],
+  "evidence": "新闻",
+  "score": 5,
+  "day": "2026-10-14"
+ },
+ {
+  "title": "amitpuri/multiagent-retrieval-gaps",
+  "link": "https://github.com/amitpuri/multiagent-retrieval-gaps",
+  "date": "2026-10-02T12:45:14Z",
+  "pop": "★ 4",
+  "image": "https://avatars.githubusercontent.com/u/6460233?v=4",
+  "source": "GitHub",
+  "badge": "",
+  "id": "fd0d62c57ef9",
+  "keep": true,
+  "zh_title": "多智能体检索缺口临床决策支持系统",
+  "summary": "GitHub开源Python项目，构建面向临床决策支持的多智能体检索缺口系统。",
+  "key_points": [
+   "多智能体架构的临床决策支持",
+   "聚焦检索缺口问题",
+   "Python开源实现"
+  ],
+  "section": "模型与开源",
+  "type": "模型",
+  "tags": [
+   "临床决策支持",
+   "多智能体",
+   "开源工具"
+  ],
+  "evidence": "新闻",
+  "score": 5,
+  "day": "2026-10-14"
+ },
+ {
+  "title": "Digital wellbeing in the social media era: dual pathway analysis of emotional and behavioural distress indicators and public health utility",
+  "link": "https://www.medrxiv.org/content/10.64898/2026.10.09.26365101v1?rss=1",
+  "date": "2026-10-11T00:00:00+00:00",
+  "pop": null,
+  "source": "medRxiv",
+  "badge": "DOI 10.64898/2026.10.09.26365101v1",
+  "id": "e0f58df7907b",
+  "keep": true,
+  "zh_title": "社交媒体数字福祉与心理健康预测模型",
+  "summary": "预印本研究分析2万条推文与两个合成数据集，指出常用评估方式会高估基于社交媒体信号的心理健康预测准确率。",
+  "key_points": [
+   "分析72名用户的2万条推文",
+   "使用两个合成数据集",
+   "指出常规评估高估准确率"
+  ],
+  "section": "研究论文",
+  "type": "论文",
+  "tags": [
+   "临床NLP",
+   "心理健康",
+   "公共卫生"
+  ],
+  "evidence": "预印本",
+  "score": 5,
+  "day": "2026-10-14"
+ },
+ {
   "title": "Clinical AI Decoded: A Regulatory Overview - Wilson Sonsini",
   "link": "https://news.google.com/rss/articles/CBMigwFBVV95cUxOeHBnUmtwcnk5ZnN2OGlZM3VhcXZVZkx6ZnR5ZUFBM2lmRzdLYnJzVUJTVmhEb3hRc2xwSlJWU3p1OERMN1pYdzJsWHdDMWNYeUtkUk9VUVlqUnRRVEFHaXdVZVRwTzRoM2sySjQ3cUFTVmVScEtob0JaY1ZnNEZXM3FyRQ?oc=5",
   "date": "2026-10-13T21:09:01+00:00",
@@ -1253,6 +1840,269 @@
   "day": "2026-10-14"
  },
  {
+  "title": "NESTApp: A GUI-Based MATLAB Application for Auditable TMS-EEG Preprocessing with EEGLAB",
+  "link": "https://www.medrxiv.org/content/10.64898/2026.10.11.26365251v1?rss=1",
+  "date": "2026-10-13T00:00:00+00:00",
+  "pop": null,
+  "source": "medRxiv",
+  "badge": "DOI 10.64898/2026.10.11.26365251v1",
+  "id": "09ab06a2a181",
+  "keep": true,
+  "zh_title": "NESTApp：基于MATLAB的TMS-EEG预处理工具",
+  "summary": "研究团队开发NESTApp，基于EEGLAB对TMS-EEG进行可审计的预处理，以提升可复现性。",
+  "key_points": [
+   "针对TMS-EEG伪迹较大的问题",
+   "提供可审计的预处理流程",
+   "基于MATLAB与EEGLAB实现"
+  ],
+  "section": "模型与开源",
+  "type": "模型",
+  "tags": [
+   "脑电信号",
+   "开源工具"
+  ],
+  "evidence": "预印本",
+  "score": 4,
+  "day": "2026-10-14"
+ },
+ {
+  "title": "中新健康｜脑机接口告别“讲故事”？ - 中国新闻网",
+  "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTFBOQjhPV3YtTWNPbXJ3MDdKYnc3YVZQMXlVTlBXQmw2MnhuVlViR3ZCWGtINzUtcllJS2YxQ1pMcjNqamY3c3gtY2xfNVVIODdtek9ldTN3TDhtOUJVUUpvWTJ0dlE2QWY3?oc=5",
+  "date": "2026-10-13T13:45:48+00:00",
+  "pop": null,
+  "source": "Google News · NMPA AI",
+  "badge": "",
+  "id": "99a7519b3e04",
+  "keep": true,
+  "zh_title": "中新健康：脑机接口告别“讲故事”？",
+  "summary": "中新健康报道讨论脑机接口是否已告别“讲故事”阶段。",
+  "key_points": [
+   "报道来自中国新闻网",
+   "聚焦脑机接口行业现状",
+   "质疑其概念炒作属性"
+  ],
+  "section": "产业与融资",
+  "type": "观点",
+  "tags": [
+   "脑机接口"
+  ],
+  "evidence": "新闻",
+  "score": 4,
+  "day": "2026-10-14"
+ },
+ {
+  "title": "Precision forensic toxicology: Leveraging Toxicogenomics, multi-omics, and artificial intelligence for next-generation poisoning investigations.",
+  "link": "https://pubmed.ncbi.nlm.nih.gov/42476280/",
+  "date": "2026-10-14T03:03:26.567839+00:00",
+  "pop": null,
+  "badge": "DOI 10.1016/j.cca.2026.121239",
+  "source": "PubMed",
+  "id": "f487173c30b4",
+  "keep": true,
+  "zh_title": "精准法医毒理学：多组学与AI用于中毒调查",
+  "summary": "同行评审文章探讨结合毒理基因组学、多组学与人工智能开展下一代中毒调查。",
+  "key_points": [
+   "发表于Clinica Chimica Acta",
+   "结合毒理基因组学与多组学",
+   "面向下一代中毒调查"
+  ],
+  "section": "观点与综述",
+  "type": "观点",
+  "tags": [
+   "基因组学",
+   "多组学"
+  ],
+  "evidence": "同行评审",
+  "score": 4,
+  "day": "2026-10-14"
+ },
+ {
+  "title": "轻量化AI终端推动大健康产业从云端向本地迁移 - 虎嗅网",
+  "link": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE5kSl9FWU1wc3JsRm9Ucjh2ZTNzYnFNbUlfcUlfS2NoblZMWlFfNTFhUU9HOFlPMm1rb1NUZDdfYmZUX0JzSERCcTJONHl1a1ZmSGZOdA?oc=5",
+  "date": "2026-10-07T08:45:47+00:00",
+  "pop": null,
+  "source": "Google News · NMPA AI",
+  "badge": "",
+  "id": "0e0cd60fd106",
+  "keep": true,
+  "zh_title": "轻量化AI终端推动大健康产业本地化迁移",
+  "summary": "报道称轻量化AI终端正推动大健康产业从云端向本地迁移。",
+  "key_points": [
+   "轻量化AI终端为关注方向",
+   "大健康产业向本地迁移",
+   "来源为虎嗅网报道"
+  ],
+  "section": "产业与融资",
+  "type": "观点",
+  "tags": [
+   "医学大模型"
+  ],
+  "evidence": "新闻",
+  "score": 4,
+  "day": "2026-10-14"
+ },
+ {
+  "title": "Trust in emergency response: The impact of time pressure and artificial intelligence rank.",
+  "link": "https://pubmed.ncbi.nlm.nih.gov/42805110/",
+  "date": "2026-10-14T03:03:26.567839+00:00",
+  "pop": null,
+  "badge": "DOI 10.1016/j.apergo.2026.104896",
+  "source": "PubMed",
+  "id": "ae3c398a3c42",
+  "keep": true,
+  "zh_title": "应急响应中的信任：时间压力与 AI 排序影响",
+  "summary": "发表于 Applied Ergonomics 的研究考察时间压力与人工智能排序如何影响应急响应中的信任。",
+  "key_points": [
+   "期刊：Applied Ergonomics",
+   "考察时间压力这一因素",
+   "考察 AI 排序对信任的影响"
+  ],
+  "section": "研究论文",
+  "type": "论文",
+  "tags": [
+   "人机协作",
+   "应急医学",
+   "信任"
+  ],
+  "evidence": "同行评审",
+  "score": 4,
+  "day": "2026-10-14"
+ },
+ {
+  "title": "ShubhThadani17/DiabetesPredictor",
+  "link": "https://github.com/ShubhThadani17/DiabetesPredictor",
+  "date": "2026-10-05T18:56:57Z",
+  "pop": "★ 5",
+  "image": "https://avatars.githubusercontent.com/u/273157216?v=4",
+  "source": "GitHub",
+  "badge": "",
+  "id": "88cc2da8e589",
+  "keep": true,
+  "zh_title": "DiabetesPredictor：糖尿病风险预测开源应用",
+  "summary": "全栈机器学习网页应用，以 SVM、随机森林与 MLP 集成模型从临床健康指标预测糖尿病风险，并提供 SHAP 解释。",
+  "key_points": [
+   "SVM、随机森林与 MLP 集成建模",
+   "SHAP 可解释性与 FastAPI 后端",
+   "输入为临床健康指标"
+  ],
+  "section": "模型与开源",
+  "type": "模型",
+  "tags": [
+   "疾病预测",
+   "机器学习",
+   "可解释性"
+  ],
+  "evidence": "新闻",
+  "score": 4,
+  "day": "2026-10-14"
+ },
+ {
+  "title": "ajinkyabarapatre/CareFlow-Clinical-Pathway-Process-Mining",
+  "link": "https://github.com/ajinkyabarapatre/CareFlow-Clinical-Pathway-Process-Mining",
+  "date": "2026-10-10T13:08:28Z",
+  "pop": "★ 4",
+  "image": "https://avatars.githubusercontent.com/u/95560902?v=4",
+  "source": "GitHub",
+  "badge": "",
+  "id": "741e6d3ef405",
+  "keep": true,
+  "zh_title": "临床路径过程挖掘开源项目CareFlow",
+  "summary": "GitHub开源Python项目，以过程挖掘分析临床路径，属医疗流程数据分析工具。",
+  "key_points": [
+   "Python实现的开源临床路径项目",
+   "以过程挖掘分析诊疗流程",
+   "面向临床路径优化场景"
+  ],
+  "section": "模型与开源",
+  "type": "模型",
+  "tags": [
+   "临床路径",
+   "过程挖掘",
+   "开源工具"
+  ],
+  "evidence": "新闻",
+  "score": 4,
+  "day": "2026-10-14"
+ },
+ {
+  "title": "A deep learning-assisted whole-cell biosensor for catechol monitoring: Synergizing BphC recognition with a multi-feature fusion vision transformer.",
+  "link": "https://pubmed.ncbi.nlm.nih.gov/42766880/",
+  "date": "2026-10-14T03:03:26.567839+00:00",
+  "pop": null,
+  "badge": "DOI 10.1016/j.talanta.2026.130638",
+  "source": "PubMed",
+  "id": "76d929578027",
+  "keep": true,
+  "zh_title": "深度学习辅助全细胞生物传感器监测邻苯二酚",
+  "summary": "研究将BphC识别与多特征融合视觉Transformer结合，构建深度学习辅助全细胞生物传感器用于邻苯二酚监测。",
+  "key_points": [
+   "结合BphC识别与全细胞生物传感器",
+   "采用多特征融合视觉Transformer",
+   "发表于Talanta，2027年2月"
+  ],
+  "section": "研究论文",
+  "type": "论文",
+  "tags": [
+   "生物传感器",
+   "深度学习"
+  ],
+  "evidence": "同行评审",
+  "score": 4,
+  "day": "2026-10-14"
+ },
+ {
+  "title": "Artificial intelligence-guided nanozyme engineering for chronic wound healing: from rational design to precision therapeutics.",
+  "link": "https://pubmed.ncbi.nlm.nih.gov/42741683/",
+  "date": "2026-10-14T03:03:26.567839+00:00",
+  "pop": null,
+  "badge": "DOI 10.1016/j.bioactmat.2026.08.060",
+  "source": "PubMed",
+  "id": "79158f203233",
+  "keep": true,
+  "zh_title": "AI引导纳米酶工程设计促进慢性伤口愈合",
+  "summary": "文章探讨以人工智能引导纳米酶工程设计，从理性设计走向慢性伤口精准治疗。",
+  "key_points": [
+   "聚焦AI引导的纳米酶工程",
+   "面向慢性伤口愈合",
+   "强调从理性设计到精准治疗"
+  ],
+  "section": "观点与综述",
+  "type": "观点",
+  "tags": [
+   "纳米材料",
+   "伤口愈合"
+  ],
+  "evidence": "同行评审",
+  "score": 4,
+  "day": "2026-10-14"
+ },
+ {
+  "title": "Organoid Intelligent Morphomics: Decoding the organoid morphome through artificial intelligence from phenotypic quantification to mechanistic insight.",
+  "link": "https://pubmed.ncbi.nlm.nih.gov/42733575/",
+  "date": "2026-10-14T03:03:26.567839+00:00",
+  "pop": null,
+  "badge": "DOI 10.1016/j.bioactmat.2026.08.043",
+  "source": "PubMed",
+  "id": "97a6b44fc26e",
+  "keep": true,
+  "zh_title": "类器官智能形态组学",
+  "summary": "该文提出类器官智能形态组学，用人工智能从表型定量解码类器官形态组并获取机制洞见。",
+  "key_points": [
+   "提出类器官智能形态组学概念",
+   "以AI量化类器官形态表型",
+   "连接表型定量与机制解析"
+  ],
+  "section": "观点与综述",
+  "type": "观点",
+  "tags": [
+   "类器官",
+   "形态组学"
+  ],
+  "evidence": "同行评审",
+  "score": 4,
+  "day": "2026-10-14"
+ },
+ {
   "title": "AI, Tech Leaders Are Lobbying Trump Health Officials in a Government-Run Chat Room - Word & Brown General Agency",
   "link": "https://news.google.com/rss/articles/CBMixgFBVV95cUxQVzBuVVYxcHZLcG1FWUdpSWtBZHhiZHJOdHN5Yk5ISS1qb1VHWHNSRERSSWpreF9OcmNmWm9iaGQ2V05vbDI1cTF1WjVkWFlwNXU4Q2RjRTFYek1XOXVGZzI3THdiVko5M2lLOGdlNDFfSkZiMEFHOU1PaV93VkJWaWl6d2xCYUM5NGZRNE1Vd0JqdnNZVUdxT19PZWREN2hDZnFGQUlPcVBmb1lLTFpJNllNbVJmbGJMTVQ4U0s0UW5sNm0zdVE?oc=5",
   "date": "2026-10-13T20:34:35+00:00",
@@ -1301,6 +2151,87 @@
   ],
   "evidence": "新闻",
   "score": 3,
+  "day": "2026-10-14"
+ },
+ {
+  "title": "hujizhou35-cmd/medical-journal-selector",
+  "link": "https://github.com/hujizhou35-cmd/medical-journal-selector",
+  "date": "2026-10-01T16:46:24Z",
+  "pop": "★ 14",
+  "image": "https://avatars.githubusercontent.com/u/257512292?v=4",
+  "source": "GitHub",
+  "badge": "",
+  "id": "d0e973b3d28c",
+  "keep": true,
+  "zh_title": "medical-journal-selector：面向代码代理的选刊技能",
+  "summary": "一个可移植的医学选刊技能，供Codex、Claude Code等代理比较期刊分区、周期与契合度。",
+  "key_points": [
+   "面向Codex与Claude Code等代理",
+   "比较期刊分区、周期与契合度",
+   "Python实现，可移植使用"
+  ],
+  "section": "模型与开源",
+  "type": "模型",
+  "tags": [
+   "医学大模型",
+   "科研工具"
+  ],
+  "evidence": "新闻",
+  "score": 3,
+  "day": "2026-10-14"
+ },
+ {
+  "title": "graciellafavoreto/knowledge-distillation-for-medical-image-classification",
+  "link": "https://github.com/graciellafavoreto/knowledge-distillation-for-medical-image-classification",
+  "date": "2026-10-05T12:49:57Z",
+  "pop": "★ 4",
+  "image": "https://avatars.githubusercontent.com/u/235738506?v=4",
+  "source": "GitHub",
+  "badge": "",
+  "id": "f4bbe480ae5d",
+  "keep": true,
+  "zh_title": "医学图像分类知识蒸馏开源项目",
+  "summary": "GitHub开源项目，提供面向医学图像分类的知识蒸馏实现，代码以Jupyter Notebook编写。",
+  "key_points": [
+   "开源知识蒸馏代码库",
+   "面向医学图像分类任务",
+   "以Jupyter Notebook实现"
+  ],
+  "section": "模型与开源",
+  "type": "模型",
+  "tags": [
+   "医学影像",
+   "知识蒸馏"
+  ],
+  "evidence": "新闻",
+  "score": 3,
+  "day": "2026-10-14"
+ },
+ {
+  "title": "krishankumawat027-cmd/PulseMD",
+  "link": "https://github.com/krishankumawat027-cmd/PulseMD",
+  "date": "2026-10-04T10:27:15Z",
+  "pop": "★ 4",
+  "image": "https://avatars.githubusercontent.com/u/240305434?v=4",
+  "source": "GitHub",
+  "badge": "",
+  "id": "fa18d7aed71e",
+  "keep": true,
+  "zh_title": "PulseMD AI虚拟医疗服务平台",
+  "summary": "GitHub开源项目PulseMD，提供在线问诊、电子处方、预约及音视频通话等虚拟医疗功能。",
+  "key_points": [
+   "开源AI虚拟医疗平台",
+   "支持问诊与电子处方",
+   "含预约与实时音视频"
+  ],
+  "section": "模型与开源",
+  "type": "模型",
+  "tags": [
+   "远程医疗",
+   "医疗平台"
+  ],
+  "evidence": "新闻",
+  "score": 2,
   "day": "2026-10-14"
  }
 ]
