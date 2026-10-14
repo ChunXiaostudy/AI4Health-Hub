@@ -94,7 +94,7 @@ def enrich(batch):
     for r in res or []:
         try:
             b = batch[int(r["i"])]
-            if r.get("keep") is False: continue
+            if r.get("keep") is False and "_pid" not in b: continue
             r.pop("i", None); b.update(r); out.append(b)
         except Exception: pass
     return out
@@ -130,14 +130,18 @@ def main():
     db = [d for d in db if d.get("day", today) >= (NOW - dt.timedelta(days=KEEP_DAYS)).strftime("%Y-%m-%d")] + done
     db.sort(key=lambda d: (d.get("day", ""), d.get("score", 0)), reverse=True)
     json.dump(db, open(db_path, "w"), ensure_ascii=False, indent=1)
-    build(db)
+    conf_items = []
+    if os.path.exists("conf.py"):
+        import conf
+        conf_items = conf.run(lambda items: [x for lst in cf.ThreadPoolExecutor(6).map(enrich, [items[i:i + 8] for i in range(0, len(items), 8)]) for x in lst])
+    build(db, conf_items)
     print(f"added {len(done)}, total {len(db)}", file=sys.stderr)
     if not done and not db: sys.exit(1)
 
-def build(db):
+def build(db, conf_items=None):
     os.makedirs("site", exist_ok=True)
     meta = dict(SITE, sections=SECTIONS, sources=sorted({s["name"] for s in SOURCES}), updated=NOW.isoformat())
-    json.dump({"meta": meta, "items": db}, open("site/data.json", "w"), ensure_ascii=False)
+    json.dump({"meta": meta, "items": db, "conf": conf_items or []}, open("site/data.json", "w"), ensure_ascii=False)
     tpl = open("template.html", encoding="utf-8").read()
     open("site/index.html", "w").write(tpl.replace("{{TITLE}}", html.escape(SITE["title"])).replace("{{DESC}}", html.escape(SITE["tagline"])).replace("{{MODE}}", SITE["mode"]))
     items = "".join(f"<item><title>{html.escape(d.get('zh_title') or d['title'])}</title><link>{html.escape(d['link'])}</link><guid>{d['id']}</guid><description>{html.escape(d.get('summary',''))}</description></item>" for d in db[:60])
@@ -145,5 +149,6 @@ def build(db):
     open("site/.nojekyll", "w").write("")
 
 if __name__ == "__main__":
-    if len(sys.argv) > 1 and sys.argv[1] == "build": build(json.load(open("data/items.json")))
+    if len(sys.argv) > 1 and sys.argv[1] == "build":
+        import conf; conf.CAP = 0; build(json.load(open("data/items.json")), conf.run(lambda x: []) if conf.os.getenv("NOFETCH") is None else [])
     else: main()

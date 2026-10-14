@@ -39,6 +39,7 @@ h2{font-size:12px;font-weight:500;letter-spacing:.02em;color:var(--mu);margin:28
 .sk{height:120px;border-radius:14px;background:#00000008;margin-bottom:12px}
 .mini{list-style:none;padding:0;margin:12px 0 0;display:flex;flex-direction:column;gap:12px}
 footer{border-top:1px solid var(--bd);margin-top:48px;padding:24px 0 40px;font-size:12px;color:var(--mu)}footer a{color:var(--ac)}
+.sub{display:flex;flex-wrap:wrap;gap:8px;margin:4px 0 8px}.sub button{border:1px solid var(--bd);background:var(--sf);color:var(--mu);border-radius:999px;height:28px;padding:0 12px;font:500 12px inherit;font-family:inherit;cursor:pointer}.sub button.on{border-color:var(--ac);color:var(--ac)}
 .empty{color:var(--mu);padding:24px 0}
 </style></head><body class="{{MODE}}">
 <header><div class="wrap"><a class="brand" href="./" id="brand"></a><nav class="tabs" id="tabs"></nav><div class="links"><a href="feed.xml">RSS</a><a id="gh" target="_blank" rel="noopener">GitHub</a></div></div></header>
@@ -62,15 +63,25 @@ function appCard(i){const ic=i.image?`<img class="ico" src="${E(i.image)}" alt="
  ${i.why?`<div class="why">有意思在哪：${E(i.why)}</div>`:''}</div></div></a>`}
 function featHealth(i){return `<a class="card feat ${i.type==='监管'?'reg':''}" href="${E(i.link)}" target="_blank" rel="noopener"><div class="img" style="${i.image?`background-image:url('${E(i.image)}')`:''}">${i.image?'':E(i.type||'')}</div><div class="txt">${metaRow(i,1)}<div class="t">${E(i.zh_title||i.title)}</div><p class="s">${E(i.summary)}</p><ul class="kp">${arr(i.key_points).slice(0,3).map(k=>`<li>${E(k)}</li>`).join('')}</ul></div></a>`}
 function featApp(i){return `<a class="card" href="${E(i.link)}" target="_blank" rel="noopener"><div class="shot" style="${i.image?`background-image:url('${E(i.image)}')`:''}">${i.image?'':initial(i)}</div><div class="inner">${metaRow(i,0)}<div class="t">${E(i.name||i.title)}</div><p class="s">${E(i.summary)}</p>${i.why?`<div class="why">有意思在哪：${E(i.why)}</div>`:''}</div></a>`}
-function render(){const items=D.items.filter(i=>cur==='全部'||i.section===cur);const card=MODE==='health'?healthCard:appCard;
+let sub='全部';
+function confView(){const C=D.conf||[];const labs=[...new Set(C.map(i=>i.conf))].sort();const cnt=k=>C.filter(i=>i.conf===k).length;
+ let h=`<div class="sub">${['全部','预印本与期刊','顶会论文',...labs].map(k=>`<button data-k="${E(k)}" class="${k===sub?'on':''}">${E(k)}${labs.includes(k)?' '+cnt(k):''}</button>`).join('')}</div>`;
+ return h}
+function bindSub(){document.querySelectorAll('.sub button').forEach(b=>b.onclick=()=>{sub=b.dataset.k;render()})}
+function render(){if(cur!=='研究论文')sub='全部';const C=(cur==='研究论文')?(D.conf||[]):[];
+ let items=D.items.filter(i=>cur==='全部'||i.section===cur);
+ if(cur==='研究论文'&&sub!=='全部'&&sub!=='预印本与期刊')items=[];
+ const confs=sub==='全部'||sub==='顶会论文'?C:(sub==='预印本与期刊'?[]:C.filter(i=>i.conf===sub));const card=MODE==='health'?healthCard:appCard;
  document.querySelectorAll('.tab').forEach(t=>t.classList.toggle('on',t.dataset.s===cur));
  const days=[...new Set(D.items.map(i=>i.day))].sort().reverse(),today=days[0];
  const top=items.filter(i=>i.day===today).sort((a,b)=>(b.score||0)-(a.score||0)).slice(0,5);
- const fw=document.getElementById('featWrap');fw.style.display=top.length?'':'none';
+ const fw=document.getElementById('featWrap');fw.style.display=top.length&&sub==='全部'?'':'none';
  document.getElementById('feat').innerHTML=MODE==='health'?(top[0]?featHealth(top[0])+`<div class="mini">${top.slice(1).map(card).join('')}</div>`:''):`<div class="grid">${top.slice(0,4).map(featApp).join('')}</div>${top[4]?`<div class="mini">${card(top[4])}</div>`:''}`;
  const topIds=new Set(top.map(i=>i.id));let h='';
  for(const d of days){const g=items.filter(i=>i.day===d&&!topIds.has(i.id));if(!g.length)continue;h+=`<div class="day">${d}${d===today?' · 今天':''} · ${g.length} 条</div><div class="feed">${g.map(card).join('')}</div>`}
- document.getElementById('feed').innerHTML=h||'<div class="empty">该分类暂无内容</div>'}
+ if(confs.length){const L=[...new Set(confs.map(i=>i.source))].sort((a,b)=>b.slice(-4).localeCompare(a.slice(-4))||a.localeCompare(b));
+  for(const l of L){const g=confs.filter(i=>i.source===l).sort((a,b)=>(b.score||0)-(a.score||0));h+=`<div class="day">顶会 · ${E(l)} · ${g.length} 篇</div><div class="feed">${g.map(card).join('')}</div>`}}
+ document.getElementById('feed').innerHTML=(cur==='研究论文'?confView():'')+(h||'<div class="empty">该分类暂无内容</div>');bindSub();if(0)document.getElementById('feed').innerHTML=h||'<div class="empty">该分类暂无内容</div>'}
 fetch('data.json').then(r=>r.json()).then(d=>{D=d;const m=d.meta;
  document.getElementById('brand').innerHTML=m.wordmark;document.getElementById('gh').href=m.repo;
  const days=[...new Set(d.items.map(i=>i.day))].sort().reverse(),n=d.items.filter(i=>i.day===days[0]).length;
