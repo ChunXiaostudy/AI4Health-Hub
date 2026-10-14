@@ -133,6 +133,32 @@
   "day": "2026-10-14"
  },
  {
+  "title": "Subversion of clinical judgment by conversational artificial intelligence",
+  "link": "https://www.medrxiv.org/content/10.64898/2026.10.05.26364541v1?rss=1",
+  "date": "2026-10-07T00:00:00+00:00",
+  "pop": null,
+  "source": "medRxiv",
+  "badge": "DOI 10.64898/2026.10.05.26364541v1",
+  "id": "5c2e85d2cfde",
+  "keep": true,
+  "zh_title": "对话式AI对临床判断的隐性颠覆",
+  "summary": "预印本参与者盲法随机试验，检验225名来自42个国家、8个临床学科的医生能否识别并抵制对话式AI对其临床判断的隐性引导。",
+  "key_points": [
+   "参与者盲法随机实验，225名医生参与",
+   "覆盖42个国家与8个临床学科",
+   "此前AI安全多聚焦幻觉、偏见与校准失准"
+  ],
+  "section": "研究论文",
+  "type": "论文",
+  "tags": [
+   "医学大模型",
+   "临床NLP"
+  ],
+  "evidence": "预印本",
+  "score": 8,
+  "day": "2026-10-14"
+ },
+ {
   "title": "VirtualSkin integrates skin-cell identity with intervention-response prediction",
   "link": "https://www.biorxiv.org/content/10.64898/2026.10.06.756877v1?rss=1",
   "date": "2026-10-13T00:00:00+00:00",
@@ -473,6 +499,32 @@
    "临床NLP",
    "医学影像",
    "数据集"
+  ],
+  "evidence": "预印本",
+  "score": 7,
+  "day": "2026-10-14"
+ },
+ {
+  "title": "Precision Evidence Bench: Assessing PICO alignment and faithful reporting in clinical AI",
+  "link": "https://www.medrxiv.org/content/10.64898/2026.10.07.26364976v1?rss=1",
+  "date": "2026-10-09T00:00:00+00:00",
+  "pop": null,
+  "source": "medRxiv",
+  "badge": "DOI 10.64898/2026.10.07.26364976v1",
+  "id": "d34167fcd926",
+  "keep": true,
+  "zh_title": "Precision Evidence Bench：评估临床AI的PICO对齐与忠实报告",
+  "summary": "medRxiv预印本提出评估基准，考察AI在患者特征影响证据适用性的临床问题上的PICO对齐与报告忠实度。",
+  "key_points": [
+   "关注PICO对齐与忠实报告",
+   "针对证据适用性缺口设计问题",
+   "预印本，未经同行评审"
+  ],
+  "section": "研究论文",
+  "type": "论文",
+  "tags": [
+   "医学大模型",
+   "基准"
   ],
   "evidence": "预印本",
   "score": 7,
@@ -1175,6 +1227,138 @@
   "day": "2026-10-14"
  },
  {
+  "title": "Dynamic near-term risk prediction of clinically significant immune-related adverse events using longitudinal electronic health records",
+  "link": "https://www.medrxiv.org/content/10.64898/2026.10.06.26364907v1?rss=1",
+  "date": "2026-10-08T00:00:00+00:00",
+  "pop": null,
+  "source": "medRxiv",
+  "badge": "DOI 10.64898/2026.10.06.26364907v1",
+  "id": "00dac17d337d",
+  "keep": true,
+  "zh_title": "基于纵向电子健康记录的免疫相关不良事件动态风险预测",
+  "summary": "研究开发动态模型，在免疫检查点抑制剂治疗首年每21天依据EHR信息预测30天内首发≥2级免疫相关不良事件风险。",
+  "key_points": [
+   "2015-2022年启动ICI治疗成人构成开发队列",
+   "2023年启动者为独立时间验证队列",
+   "每21天更新预测30天内首发irAE风险"
+  ],
+  "section": "研究论文",
+  "type": "论文",
+  "tags": [
+   "电子健康记录",
+   "临床预测",
+   "免疫治疗"
+  ],
+  "evidence": "预印本",
+  "score": 6,
+  "day": "2026-10-14"
+ },
+ {
+  "title": "Proteomic Signatures Capture Environmental Exposures Across Diverse Populations",
+  "link": "https://www.medrxiv.org/content/10.64898/2026.10.06.26364311v1?rss=1",
+  "date": "2026-10-08T00:00:00+00:00",
+  "pop": null,
+  "source": "medRxiv",
+  "badge": "DOI 10.64898/2026.10.06.26364311v1",
+  "id": "7b510a47a0da",
+  "keep": true,
+  "zh_title": "血浆蛋白质组特征可捕捉多人群环境暴露",
+  "summary": "基于All of Us项目10,043人血浆5,416种蛋白，评估百余种环境暴露的蛋白关联，发现暴露蛋白特征在人群间大体一致。",
+  "key_points": [
+   "纳入10,043人、5,416种血浆蛋白",
+   "覆盖肥胖、空气污染、气温与物质使用等暴露",
+   "蛋白暴露特征在不同人群中大体一致"
+  ],
+  "section": "研究论文",
+  "type": "论文",
+  "tags": [
+   "基因组学"
+  ],
+  "evidence": "预印本",
+  "score": 6,
+  "day": "2026-10-14"
+ },
+ {
+  "title": "Considerations for implementing a machine learning model for suicide risk in the health systems that serve American Indian communities",
+  "link": "https://www.medrxiv.org/content/10.64898/2026.10.05.26364799v1?rss=1",
+  "date": "2026-10-07T00:00:00+00:00",
+  "pop": null,
+  "source": "medRxiv",
+  "badge": "DOI 10.64898/2026.10.05.26364799v1",
+  "id": "94d85176bbb2",
+  "keep": true,
+  "zh_title": "美国印第安社区卫生系统部署自杀风险ML模型的考量",
+  "summary": "基于2019至2021年急诊EHR数据，探讨在主要服务美国印第安人群的卫生系统中实施机器学习自杀风险识别的落地考量。",
+  "key_points": [
+   "数据为2019-2021年急诊EHR记录",
+   "传统性能指标不直接反映临床流程",
+   "聚焦服务美国印第安人群的卫生系统"
+  ],
+  "section": "临床落地与监管",
+  "type": "论文",
+  "tags": [
+   "数据集",
+   "基准"
+  ],
+  "evidence": "预印本",
+  "score": 6,
+  "day": "2026-10-14"
+ },
+ {
+  "title": "Implementing AI-assisted, patient-friendly imaging report summaries to enhance oncology care delivery: protocol for a randomized mixed-methods quality improvement study",
+  "link": "https://www.medrxiv.org/content/10.64898/2026.10.05.26364529v1?rss=1",
+  "date": "2026-10-07T00:00:00+00:00",
+  "pop": null,
+  "source": "medRxiv",
+  "badge": "DOI 10.64898/2026.10.05.26364529v1",
+  "id": "b2db8d022c09",
+  "keep": true,
+  "zh_title": "AI辅助患者友好型影像报告摘要研究方案",
+  "summary": "一项随机混合方法质量改进研究方案，评估用大语言模型生成患者友好的影像报告摘要以改善肿瘤诊疗服务。",
+  "key_points": [
+   "法规要求影像报告定稿后即向患者公开",
+   "用大语言模型生成通俗患者版摘要",
+   "在肿瘤诊疗场景开展随机混合方法研究"
+  ],
+  "section": "临床落地与监管",
+  "type": "论文",
+  "tags": [
+   "医学影像",
+   "医学大模型",
+   "临床NLP"
+  ],
+  "evidence": "预印本",
+  "score": 6,
+  "day": "2026-10-14"
+ },
+ {
+  "title": "Can Generative Video Address the Clinical Video Data Gap? Evaluation of Synthetic Parkinsonian Hand Motions",
+  "link": "https://www.medrxiv.org/content/10.64898/2026.10.05.26363719v1?rss=1",
+  "date": "2026-10-07T00:00:00+00:00",
+  "pop": null,
+  "source": "medRxiv",
+  "badge": "DOI 10.64898/2026.10.05.26363719v1",
+  "id": "8125c3e810dc",
+  "keep": true,
+  "zh_title": "生成视频能否填补临床视频数据缺口？帕金森手部动作合成评估",
+  "summary": "预印本提出三部分框架评估合成医学动作数据的临床保真度，并以Sora 2生成的帕金森样手部动作视频为例检验。",
+  "key_points": [
+   "评估视觉保真度、生物力学稳定性与病理生理准确性",
+   "对象为文生视频模型Sora 2生成的帕金森样手部动作",
+   "动机为临床视频数据稀缺与分布不平衡"
+  ],
+  "section": "研究论文",
+  "type": "论文",
+  "tags": [
+   "医学影像",
+   "数据集",
+   "基准"
+  ],
+  "evidence": "预印本",
+  "score": 6,
+  "day": "2026-10-14"
+ },
+ {
   "title": "jbilcke/whisper-medical-large-coreml",
   "link": "https://huggingface.co/jbilcke/whisper-medical-large-coreml",
   "date": "2026-10-13T12:11:30.000Z",
@@ -1709,6 +1893,58 @@
   "day": "2026-10-14"
  },
  {
+  "title": "Sense and Sensibility: Sensible Quality Control and Data Decision-Making in Passive Sensing Data for Adolescent Substance Use Risk Prediction",
+  "link": "https://www.medrxiv.org/content/10.64898/2026.10.06.26364884v1?rss=1",
+  "date": "2026-10-08T00:00:00+00:00",
+  "pop": null,
+  "source": "medRxiv",
+  "badge": "DOI 10.64898/2026.10.06.26364884v1",
+  "id": "f47aceb0f6f7",
+  "keep": true,
+  "zh_title": "被动感知数据质控与青少年物质使用风险预测",
+  "summary": "探讨智能手机与可穿戴被动感知数据的质控和特征工程决策如何影响青少年物质使用障碍风险预测分析结果。",
+  "key_points": [
+   "被动感知联合基因组信息识别青少年风险",
+   "自然场景数据异质，需大量预处理",
+   "清洗与特征工程决策常缺少披露"
+  ],
+  "section": "研究论文",
+  "type": "论文",
+  "tags": [
+   "数据集",
+   "基因组学"
+  ],
+  "evidence": "预印本",
+  "score": 5,
+  "day": "2026-10-14"
+ },
+ {
+  "title": "PySpiro: A Python Library for Lung Function Reference Equations and Severity Classification",
+  "link": "https://www.medrxiv.org/content/10.64898/2026.10.06.26364407v1?rss=1",
+  "date": "2026-10-07T00:00:00+00:00",
+  "pop": null,
+  "source": "medRxiv",
+  "badge": "DOI 10.64898/2026.10.06.26364407v1",
+  "id": "36b0adc047a8",
+  "keep": true,
+  "zh_title": "PySpiro：肺功能参考方程与严重度分级的Python库",
+  "summary": "预印本介绍开源Python库PySpiro，将多种肺功能参考方程与临床严重度分类器统一于单一API。",
+  "key_points": [
+   "整合23个肺量计及多项肺功能参考方程",
+   "含10个临床严重度分类器",
+   "现有多为模态与语言特定工具，以R为主"
+  ],
+  "section": "模型与开源",
+  "type": "模型",
+  "tags": [
+   "基准",
+   "数据集"
+  ],
+  "evidence": "预印本",
+  "score": 5,
+  "day": "2026-10-14"
+ },
+ {
   "title": "Clinical AI Decoded: A Regulatory Overview - Wilson Sonsini",
   "link": "https://news.google.com/rss/articles/CBMigwFBVV95cUxOeHBnUmtwcnk5ZnN2OGlZM3VhcXZVZkx6ZnR5ZUFBM2lmRzdLYnJzVUJTVmhEb3hRc2xwSlJWU3p1OERMN1pYdzJsWHdDMWNYeUtkUk9VUVlqUnRRVEFHaXdVZVRwTzRoM2sySjQ3cUFTVmVScEtob0JaY1ZnNEZXM3FyRQ?oc=5",
   "date": "2026-10-13T21:09:01+00:00",
@@ -2103,6 +2339,58 @@
   "day": "2026-10-14"
  },
  {
+  "title": "FDA Medical Device Cybersecurity Documentation: SBOMs & Threat Models - Global Brands Magazine",
+  "link": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxOSTV5OUdjekxzZ2toYk93Rk9nNURmSDNXS21PSE1GRFRCaUhBX0NuUzdpRkFOVTNfdDIzNUZpUS1aTnhXX0pnYVVsXzNLUzJiQWdFa0xMcHRwMW5aTGlaQ0NkaFdoTm1FUU1KdGswUXFZc0JxQVl5dE05cWhlckJ4bFVQbWNqUzBRYlVN?oc=5",
+  "date": "2026-10-13T18:48:01+00:00",
+  "pop": null,
+  "source": "Google News · FDA AI",
+  "badge": "",
+  "id": "2c11d19719a2",
+  "keep": true,
+  "zh_title": "FDA医疗器械网络安全文档：SBOM与威胁模型",
+  "summary": "报道称FDA就医疗器械网络安全文档提出SBOM与威胁模型相关要求。",
+  "key_points": [
+   "聚焦医疗器械网络安全文档",
+   "涉及SBOM软件物料清单",
+   "涉及威胁模型"
+  ],
+  "section": "临床落地与监管",
+  "type": "监管",
+  "tags": [
+   "监管",
+   "医疗器械",
+   "网络安全"
+  ],
+  "evidence": "新闻",
+  "score": 4,
+  "day": "2026-10-14"
+ },
+ {
+  "title": "High-throughput pharmaceutical classification via short-range interferometric hyperspectral imaging.",
+  "link": "https://pubmed.ncbi.nlm.nih.gov/42702094/",
+  "date": "2026-10-14T03:27:24.325706+00:00",
+  "pop": null,
+  "badge": "DOI 10.1016/j.talanta.2026.130550",
+  "source": "PubMed",
+  "id": "18b04c15c681",
+  "keep": true,
+  "zh_title": "短程干涉高光谱成像实现高通量药物分类",
+  "summary": "利用短程干涉高光谱成像实现高通量药物分类鉴别，成果发表于Talanta期刊。",
+  "key_points": [
+   "采用短程干涉高光谱成像技术",
+   "面向药物高通量分类鉴别",
+   "发表于Talanta"
+  ],
+  "section": "研究论文",
+  "type": "论文",
+  "tags": [
+   "药物发现"
+  ],
+  "evidence": "同行评审",
+  "score": 4,
+  "day": "2026-10-14"
+ },
+ {
   "title": "AI, Tech Leaders Are Lobbying Trump Health Officials in a Government-Run Chat Room - Word & Brown General Agency",
   "link": "https://news.google.com/rss/articles/CBMixgFBVV95cUxQVzBuVVYxcHZLcG1FWUdpSWtBZHhiZHJOdHN5Yk5ISS1qb1VHWHNSRERSSWpreF9OcmNmWm9iaGQ2V05vbDI1cTF1WjVkWFlwNXU4Q2RjRTFYek1XOXVGZzI3THdiVko5M2lLOGdlNDFfSkZiMEFHOU1PaV93VkJWaWl6d2xCYUM5NGZRNE1Vd0JqdnNZVUdxT19PZWREN2hDZnFGQUlPcVBmb1lLTFpJNllNbVJmbGJMTVQ4U0s0UW5sNm0zdVE?oc=5",
   "date": "2026-10-13T20:34:35+00:00",
@@ -2231,6 +2519,33 @@
    "医疗平台"
   ],
   "evidence": "新闻",
+  "score": 2,
+  "day": "2026-10-14"
+ },
+ {
+  "title": "tawdesangeeta1973-coder/cancer-therapy-design-concept",
+  "link": "https://github.com/tawdesangeeta1973-coder/cancer-therapy-design-concept",
+  "date": "2026-10-08T11:06:57Z",
+  "pop": "★ 10",
+  "image": "https://avatars.githubusercontent.com/u/243953734?v=4",
+  "source": "GitHub",
+  "badge": "",
+  "id": "1c158f8cc5d7",
+  "keep": true,
+  "zh_title": "开源概念工具探讨软件辅助癌症风险与治疗设计",
+  "summary": "GitHub讨论稿提出概念及小型开源工具，探讨软件如何支持癌症风险评估、早筛与治疗设计，并区分已证实、推测与未解问题。",
+  "key_points": [
+   "属讨论草稿，明确非医疗建议",
+   "区分已证实、推测与未解内容",
+   "提供小型开源工具，语言为Python"
+  ],
+  "section": "模型与开源",
+  "type": "模型",
+  "tags": [
+   "肿瘤",
+   "开源工具"
+  ],
+  "evidence": "预印本",
   "score": 2,
   "day": "2026-10-14"
  }
