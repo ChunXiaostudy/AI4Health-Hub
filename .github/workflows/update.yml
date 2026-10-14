@@ -18,7 +18,8 @@ jobs:
         with: { python-version: "3.12" }
       - run: pip install feedparser
       - name: Check LLM endpoint reachability
-        run: curl -s -m 20 -o /dev/null -w "%{http_code}\n" -H "Authorization: Bearer $LLM_API_KEY" "${LLM_BASE_URL%/}/models"
+        run: |
+          curl -s -m 20 -o /dev/null -w "%{http_code}\n" -H "Authorization: Bearer $LLM_API_KEY" "${LLM_BASE_URL%/}/models"
         env: { LLM_API_KEY: "${{ secrets.LLM_API_KEY }}", LLM_BASE_URL: "${{ secrets.LLM_BASE_URL }}" }
       - name: Fetch, summarize, build
         run: python hub.py
