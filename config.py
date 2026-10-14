@@ -5,6 +5,7 @@ MED = ["medical","clinical","patient","patients","health","healthcare","disease"
 SECTIONS = ["研究论文", "模型与开源", "临床落地与监管", "产业与融资", "观点与综述"]
 SOURCES = [
  dict(name="arXiv", url="https://export.arxiv.org/api/query?search_query=(cat:cs.AI+OR+cat:cs.CV+OR+cat:cs.CL+OR+cat:cs.LG+OR+cat:eess.IV+OR+cat:q-bio.QM)+AND+(abs:medical+OR+abs:clinical+OR+abs:radiology+OR+abs:pathology+OR+abs:biomedical+OR+abs:patient)&sortBy=submittedDate&sortOrder=descending&max_results=60", keywords=MED, limit=60, evidence="预印本"),
+ dict(name="arXiv", url="https://rss.arxiv.org/rss/cs.AI+cs.CV+eess.IV+q-bio.QM", keywords=MED, limit=500, evidence="预印本"),  # fallback when API rate-limits
  dict(name="medRxiv", url="https://connect.medrxiv.org/medrxiv_xml.php?subject=Health_Informatics", evidence="预印本"),
  dict(name="bioRxiv", url="https://connect.biorxiv.org/biorxiv_xml.php?subject=bioinformatics", keywords=["deep learning","machine learning","language model","neural","AI","foundation model","transformer"], evidence="预印本"),
  dict(name="PubMed", kind="pubmed", term='("artificial intelligence"[tiab] OR "deep learning"[tiab] OR "large language model"[tiab]) AND hasabstract', evidence="同行评审"),
