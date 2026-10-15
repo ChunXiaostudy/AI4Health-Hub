@@ -100,6 +100,25 @@ def top_picks(items, n=5):
     ranked = sorted(items, key=rank, reverse=True)
     return ([i for i in ranked if age_days(i) <= FEATURED_MAX_AGE] + [i for i in ranked if age_days(i) > FEATURED_MAX_AGE])[:n]
 
+SEC_KW = [("落地与监管", ["fda", "nmpa", "监管", "审批", "指南", "治理", "部署", "伦理", "教育"]), ("产业动态", ["融资", "并购", "收购", "万美元", "亿美元", "亿元", "raises", "funding round"]),
+          ("影像与病理", ["影像", "病理", "内镜", "超声", "imaging", "pathology"]), ("大模型与智能体", ["大模型", "语言模型", "llm", "agent", "智能体", "对话"]),
+          ("生命科学与药物", ["药物", "蛋白", "基因", "细胞", "分子"]), ("数字健康", ["可穿戴", "心理", "公共卫生", "流感", "远程"])]
+def section_of(it):
+    """Topic section; migrates items labelled with the old content-form sections and backs up off-list LLM answers."""
+    if it.get("section") in SECTIONS: return it["section"]
+    if it.get("type") == "监管": return "落地与监管"
+    if it.get("type") == "融资": return "产业动态"
+    for t in it.get("tags") or []:
+        if t in getattr(C, "TAG_SECTION", {}): return C.TAG_SECTION[t]
+    if it.get("section") in getattr(C, "OLD_SECTION", {}): return C.OLD_SECTION[it["section"]]
+    txt = " ".join([it.get("zh_title") or "", it.get("title") or "", it.get("summary") or ""]).lower()
+    for sec, kws in SEC_KW:
+        if any(k in txt for k in kws): return sec
+    return "落地与监管" if it.get("type") == "观点" else "临床预测与决策"
+
+def form_of(it):
+    return getattr(C, "FORMS", {}).get(it.get("type"), "新闻")
+
 def zh_date(iso):
     try: d = dt.datetime.fromisoformat(iso.replace("Z", "+00:00"))
     except Exception: return ""
@@ -252,7 +271,7 @@ def llm_raw(messages, want="array"):
 
 def enrich(batch):
     payload = [dict(i=k, title=b["title"], source=b["source"], desc=(b.get("desc") or "")[:900], evidence_hint=b.get("evidence_hint", ""), title_only=b.get("thin", False)) for k, b in enumerate(batch)]
-    sysmsg = (PROMPT + "\n\n可选 section: " + " / ".join(SECTIONS) + "\n可选 tags（只能从中选择 1-3 个，不得自创）: " + "、".join(TAGS) +
+    sysmsg = (PROMPT + "\n\n可选 section（按方向）:\n" + "\n".join(f"- {k}：{v}" for k, v in getattr(C, "SECTION_HINTS", {}).items()) + "\n可选 tags（只能从中选择 1-3 个，不得自创）: " + "、".join(TAGS) +
               "\n若 title_only=true（只有标题、无正文），summary 只能复述标题信息，key_points 必须为空数组 []。" +
               "\n每条输出 JSON 对象，字段: i, " + FIELDS + "。只输出一个 JSON 数组，不要其他文字。" +
               "\n\n" + getattr(C, "RUBRIC", ""))
@@ -263,7 +282,7 @@ def enrich(batch):
             b = batch[int(r["i"])]
             if r.get("keep") is False and "_pid" not in b: continue
             r.pop("i", None); b.update(r)
-            b["tags"] = norm_tags(b.get("tags"))
+            b["tags"] = norm_tags(b.get("tags")); b["section"] = section_of(b)
             if b.get("thin"): b["key_points"] = []
             out.append(b)
         except Exception: pass
@@ -332,6 +351,7 @@ def save_pool(pick, kept_ids):
 def main():
     os.makedirs("data", exist_ok=True)
     db = json.load(open("data/items.json")) if os.path.exists("data/items.json") else []
+    for d in db: d["section"] = section_of(d)
     with cf.ThreadPoolExecutor(8) as ex: results = list(ex.map(fetch_source, SOURCES))
     update_status(results)
     seen = {d["id"] for d in db}
@@ -385,7 +405,7 @@ def card(i, featured=False, top=False):
     tags = i.get("tags") or []
     title = (i.get("zh_title") or i["title"]) if health else (i.get("name") or i["title"])
     txt = " ".join([title, i["title"], i.get("summary") or "", i["source"], " ".join(tags)]).lower()
-    attrs = ('data-top="1" ' if top else '') + f'data-sec="{E(i.get("section"))}" data-tags="{E("|".join(tags))}" data-text="{E(txt)}"'
+    attrs = ('data-top="1" ' if top else '') + f'data-sec="{E(section_of(i))}" data-form="{E(form_of(i))}" data-tags="{E("|".join(tags))}" data-text="{E(txt)}"'
     meta = (f'<div class="meta"><img src="{fav(i["link"], i.get("home"))}" alt="" loading="lazy" onerror="this.remove()"><span>{E(i["source"])}</span>'
             f'<span>·</span><span>发布于 {zh_date(i.get("date",""))}</span>' + (f'<span>·</span><span class="mono">{E(i["pop"])}</span>' if i.get("pop") else "") +
             (f'<span class="badge" title="{E(i["badge"])}">{E(i["badge"])}</span>' if health and i.get("badge") else "") + "</div>")
@@ -489,26 +509,33 @@ def rss(path, title, link, items):
 def build(db=None, conf_items=None):
     if db is None: db = json.load(open("data/items.json"))
     for i in db:  # normalize legacy items
-        i["tags"] = norm_tags(i.get("tags")); i["rank"] = rank(i)
+        i["tags"] = norm_tags(i.get("tags")); i["section"] = section_of(i); i["rank"] = rank(i)
         if i.get("thin"): i["key_points"] = []
     os.makedirs("site", exist_ok=True)
     url = SITE["url"]
     feat, latest, n = featured(db)
     tools = ('<div class="tools"><input id="q" type="search" placeholder="搜索标题、摘要、来源、标签…" aria-label="搜索"><span id="tagf" class="tagf" hidden></span></div>')
-    sub = ('<div id="paperSub" class="sub" hidden><button data-k="feed" class="on">预印本与期刊</button><button data-k="conf">顶会论文</button></div><div id="confPanel" hidden></div>'
-           if conf_items is not None or os.path.exists("site/conf.json") else "")
+    has_conf = conf_items is not None or os.path.exists("site/conf.json")
+    forms = ["全部形式"] + list(dict.fromkeys(getattr(C, "FORMS", {}).values()))
+    sub = ('<div id="formBar" class="sub">' + "".join(f'<button data-f="{E(f)}"{" class=on" if k == 0 else ""}>{E(f)}</button>' for k, f in enumerate(forms)) +
+           ('<button data-f="conf">顶会论文</button>' if has_conf else "") + '</div>' + ('<div id="confPanel" hidden></div>' if has_conf else ""))
     random_btn = '<button class="pill" id="rnd">随机看一个</button>' if SITE["mode"] == "apps" else ""
     hero = (f'<section class="hero"><div><h1><span class="mono">{latest}</span></h1><p>{E(SITE["tagline"])} · 今日 {n} 条</p></div>{random_btn}</section>')
-    body = header("") + f'<main class="wrap">{hero}{tools}{feat}{sub}<div id="feed">{feed_list(db, conf_items)}</div><div id="empty" class="empty" hidden>没有匹配的内容</div></main>' + footer("")
+    body = header("") + f'<main class="wrap">{hero}{tools}{sub}{feat}<div id="feed">{feed_list(db, conf_items)}</div><div id="empty" class="empty" hidden>没有匹配的内容</div></main>' + footer("")
     open("site/index.html", "w").write(page(SITE["title"], SITE["tagline"] + "：" + "、".join(SECTIONS), url, body))
     # conference data, loaded on demand
     if conf_items is not None:
+        for c in conf_items: c["sec"] = section_of(dict(tags=c.get("tg"), title=c.get("t"), zh_title=c.get("zt"), summary=c.get("s")))
         json.dump(conf_items, open("site/conf.json", "w"), ensure_ascii=False, separators=(",", ":"))
-    # RSS: all + per section
+    # RSS: all + per topic section + per form (papers / models / opinion keep their pre-v3 URLs)
     rss("site/feed.xml", SITE["title"], url, db)
     for k, s in enumerate(SECTIONS):
         slug = C.SECTION_SLUGS[k]
         rss(f"site/feed-{slug}.xml", f'{SITE["title"]} · {s}', url, [i for i in db if i.get("section") == s])
+    for f, slug in getattr(C, "FORM_SLUGS", {}).items():
+        rss(f"site/feed-{slug}.xml", f'{SITE["title"]} · {f}', url, [i for i in db if form_of(i) == f])
+    if "落地与监管" in SECTIONS:  # old 临床落地与监管 feed URL
+        rss("site/feed-clinical-regulatory.xml", f'{SITE["title"]} · 落地与监管', url, [i for i in db if i.get("section") == "落地与监管"])
     # archive pages (permanent store)
     arc = load_archive()
     for day, items in arc.items():

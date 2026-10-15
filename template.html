@@ -60,20 +60,21 @@ table.st{border-collapse:collapse;font-size:13px;width:100%}table.st td,table.st
 </style></head><body class="{{MODE}}">{{BODY}}<script>
 (function(){
 const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)],E=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-let sec='全部',q='',tag='',sub='feed',C=null,page=0;const PER=30;
+let sec='全部',q='',tag='',form='全部形式',C=null,page=0;const PER=30;
 document.addEventListener('click',e=>{const t=e.target.closest('.chip.tag');if(t){e.preventDefault();tag=t.dataset.tag;page=0;apply();window.scrollTo({top:0,behavior:'smooth'});return}
  const c=e.target.closest('.cite');if(c){e.preventDefault();navigator.clipboard&&navigator.clipboard.writeText(c.dataset.cite).then(()=>{const o=c.textContent;c.textContent='已复制';setTimeout(()=>c.textContent=o,1200)});}});
-$$('.tab').forEach(b=>b.onclick=()=>{sec=b.dataset.s;$$('.tab').forEach(x=>x.classList.toggle('on',x===b));if(sec!=='研究论文')sub='feed';apply()});
+$$('.tab').forEach(b=>b.onclick=()=>{sec=b.dataset.s;$$('.tab').forEach(x=>x.classList.toggle('on',x===b));page=0;apply()});
 const qi=$('#q');if(qi)qi.oninput=()=>{q=qi.value.trim().toLowerCase();page=0;apply()};
 const tf=$('#tagf');if(tf)tf.onclick=()=>{tag='';apply()};
-$$('#paperSub button').forEach(b=>b.onclick=()=>{sub=b.dataset.k;$$('#paperSub button').forEach(x=>x.classList.toggle('on',x===b));page=0;apply()});
+const setForm=f=>{form=f;$$('#formBar button').forEach(x=>x.classList.toggle('on',x.dataset.f===f))};
+$$('#formBar button').forEach(b=>b.onclick=()=>{setForm(b.dataset.f);page=0;apply()});
 const rnd=$('#rnd');if(rnd)rnd.onclick=()=>{const a=$$('#feed article .stretch');if(a.length)window.open(a[Math.floor(Math.random()*a.length)].href,'_blank','noopener')};
-const H=new URLSearchParams(location.hash.slice(1));if(H.get('tab')){sec=H.get('tab');$$('.tab').forEach(x=>x.classList.toggle('on',x.dataset.s===sec))}if(H.get('sub')){sub=H.get('sub');$$('#paperSub button').forEach(x=>x.classList.toggle('on',x.dataset.k===sub))}
-function match(el){return (sec==='全部'||el.dataset.sec===sec)&&(!q||el.dataset.text.includes(q))&&(!tag||el.dataset.tags.split('|').includes(tag))}
-function apply(){const fw=$('#featWrap');if(fw)fw.hidden=!!(sec!=='全部'||q||tag);
+const H=new URLSearchParams(location.hash.slice(1));if(H.get('tab')){sec=H.get('tab');$$('.tab').forEach(x=>x.classList.toggle('on',x.dataset.s===sec))}if(H.get('form'))setForm(H.get('form'));if(H.get('sub')==='conf')setForm('conf');
+function match(el){return (sec==='全部'||el.dataset.sec===sec)&&(form==='全部形式'||el.dataset.form===form)&&(!q||el.dataset.text.includes(q))&&(!tag||el.dataset.tags.split('|').includes(tag))}
+function apply(){const fw=$('#featWrap');if(fw)fw.hidden=!!(sec!=='全部'||form!=='全部形式'||q||tag);
  if(tf){tf.hidden=!tag;tf.textContent='标签：'+tag+' ✕'}
- const ps=$('#paperSub'),cp=$('#confPanel'),feed=$('#feed');if(ps)ps.hidden=sec!=='研究论文';
- const conf=sec==='研究论文'&&sub==='conf';if(cp)cp.hidden=!conf;feed.hidden=conf;let n=0;
+ const cp=$('#confPanel'),feed=$('#feed');
+ const conf=form==='conf'&&!!cp;if(cp)cp.hidden=!conf;feed.hidden=conf;let n=0;
  if(conf){loadConf();n=1}else{$$('#feed .dayg').forEach(g=>{let k=0;const fv=fw&&!fw.hidden;g.querySelectorAll('article').forEach(a=>{const m=match(a)&&!(fv&&a.dataset.top);a.hidden=!m;k+=m});g.hidden=!k;const s=g.querySelector('.n');if(s)s.textContent=k;n+=k})}
  const em=$('#empty');if(em)em.hidden=!!n}
 function loadConf(){if(C){renderConf();return}$('#confPanel').innerHTML='<div class="sk"></div><div class="sk"></div>';
@@ -87,7 +88,7 @@ function ccard(x){const cite=`${x.t}. ${x.cl}. ${x.doi?'https://doi.org/'+x.doi:
  <div class="chips"><span class="chip p">论文</span><span class="chip w">同行评审</span>${x.tg.map(t=>`<button class="chip tag" data-tag="${E(t)}">${E(t)}</button>`).join('')}${x.th?'<span class="chip w">仅基于标题</span>':''}</div>
  <button class="cite" data-cite="${E(cite)}">${x.doi?'复制引用 / DOI':'复制引用'}</button></article>`}
 function renderConf(){const fc=$('#fc').value,fy=$('#fy').value,ft=$('#ft').value||tag;
- const L=C.filter(x=>(!fc||x.c===fc)&&(!fy||String(x.y)===fy)&&(!ft||x.tg.includes(ft))&&(!q||(x.t+' '+x.zt+' '+x.s+' '+x.cl+' '+x.tg.join(' ')).toLowerCase().includes(q)));
+ const L=C.filter(x=>(sec==='全部'||x.sec===sec)&&(!fc||x.c===fc)&&(!fy||String(x.y)===fy)&&(!ft||x.tg.includes(ft))&&(!q||(x.t+' '+x.zt+' '+x.s+' '+x.cl+' '+x.tg.join(' ')).toLowerCase().includes(q)));
  const P=Math.max(1,Math.ceil(L.length/PER));page=Math.min(page,P-1);$('#fn').textContent=`共 ${L.length} 篇`;
  $('#cl').innerHTML=L.slice(page*PER,(page+1)*PER).map(ccard).join('')||'<div class="empty">没有匹配的论文</div>';
  $('#pg').innerHTML=`<button id="pp" ${page?'':'disabled'}>上一页</button><span class="mono">${page+1} / ${P}</span><button id="pn" ${page<P-1?'':'disabled'}>下一页</button>`;

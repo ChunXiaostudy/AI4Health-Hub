@@ -56,6 +56,15 @@ def test_score_display():
     f = hub.card(it, featured=True)
     assert "scorecard" in f and "多中心外部验证" in f
 
+def test_sections_and_forms():
+    assert hub.section_of(dict(section="影像与病理")) == "影像与病理"
+    assert hub.section_of(dict(section="研究论文", tags=["病理", "肿瘤"])) == "影像与病理"
+    assert hub.section_of(dict(section="临床落地与监管", type="监管", tags=["医学影像"])) == "落地与监管"
+    assert hub.section_of(dict(section="产业与融资", tags=[])) == "产业动态"
+    assert hub.section_of(dict(section="研究论文", tags=[], zh_title="单细胞基因调控")) == "生命科学与药物"
+    assert hub.form_of(dict(type="论文")) == "论文" and hub.form_of(dict(type="融资")) == "新闻" and hub.form_of(dict(type="模型")) == "模型与代码"
+    assert len(hub.C.SECTION_SLUGS) == len(hub.SECTIONS)
+
 if __name__ == "__main__":
     for k, f in list(globals().items()):
         if k.startswith("test_"): f(); print("ok", k)
