@@ -1,6 +1,6 @@
 """Shared pipeline: fetch -> dedupe -> LLM summarize -> rank -> static build (pre-rendered HTML, archives, RSS, weekly).
 Concept inspired by AISafetyHot-Hub (CC BY-NC 4.0) and AIHOT (MIT); code written from scratch."""
-import json, os, re, sys, time, math, glob, html, hashlib, difflib, datetime as dt, urllib.request, urllib.parse, urllib.error
+import json, os, re, sys, time, math, glob, html, hashlib, difflib, shutil, datetime as dt, urllib.request, urllib.parse, urllib.error
 import xml.etree.ElementTree as ET, concurrent.futures as cf
 import config as C
 try:
@@ -79,7 +79,9 @@ def age_days(it):
     """Days between publication and the day the item was collected (stable over time, so archive pages don't reshuffle)."""
     try: day = dt.date.fromisoformat(it.get("day") or TODAY)
     except ValueError: day = NOW.astimezone(CST).date()
-    return max(0, (day - parse_date(it.get("date") or "").astimezone(CST).date()).days)
+    d = parse_date(it.get("date") or "", None)
+    if d is None: return FEATURED_MAX_AGE + 1  # unknown publication date: no freshness bonus, not eligible as a recent pick
+    return max(0, (day - d.astimezone(CST).date()).days)
 
 def rank_parts(it):
     return {"内容": it.get("score") or 5, "来源": WEIGHTS.get(it.get("source"), WEIGHTS.get(it.get("source_group"), 1.0)),
@@ -132,11 +134,11 @@ def zh_date(iso):
     if d.tzinfo: d = d.astimezone(CST)
     return (f"{d.year}年" if d.year != NOW.astimezone(CST).year else "") + f"{d.month}月{d.day}日"
 
-def parse_date(s):
+def parse_date(s, default=NOW):
     try:
         d = dt.datetime.fromisoformat(s.replace("Z", "+00:00"))
         return d if d.tzinfo else d.replace(tzinfo=dt.timezone.utc)
-    except Exception: return NOW
+    except Exception: return default
 
 # ---------------------------------------------------------------- fetchers
 def f_rss(src):
@@ -286,10 +288,12 @@ def enrich(batch):
               "\n每条输出 JSON 对象，字段: i, " + FIELDS + "。只输出一个 JSON 数组，不要其他文字。" +
               "\n\n" + getattr(C, "RUBRIC", ""))
     res = llm_raw([{"role": "system", "content": sysmsg}, {"role": "user", "content": json.dumps(payload, ensure_ascii=False)}])
+    for b in batch: b["_verdict"] = None  # None = no answer (call failed / item missing from the reply), not a rejection
     out = []
     for r in res or []:
         try:
             b = batch[int(r["i"])]
+            b["_verdict"] = r.get("keep") is not False
             if r.get("keep") is False and "_pid" not in b: continue
             r.pop("i", None); b.update(r)
             b["tags"] = norm_tags(b.get("tags")); b["section"] = section_of(b)
@@ -407,17 +411,39 @@ def backfill(db, results):
     translate_all(got)
     print(f"backfill: tried {len(todo)}, found abstracts {len(got)}", file=sys.stderr)
 
-def save_pool(pick, kept_ids):
-    """Raw LLM inputs + the model's verdict, for building the evaluation set (see evalset.py). Kept KEEP_DAYS days."""
+def save_pool(pick):
+    """Raw LLM inputs + the model's verdict, for building the evaluation set (see evalset.py). Kept KEEP_DAYS days.
+    One row per id per day (re-runs overwrite); model_keep is None when the LLM gave no answer for the item."""
     os.makedirs("data/pool", exist_ok=True)
-    with open(f"data/pool/{TODAY}.jsonl", "a", encoding="utf-8") as f:
-        for it in pick:
-            row = {k: it.get(k) for k in POOL_FIELDS}
-            row.update(day=TODAY, model_keep=it["id"] in kept_ids, model_score=it.get("score") if it["id"] in kept_ids else None)
-            f.write(json.dumps(row, ensure_ascii=False) + "\n")
+    path = f"data/pool/{TODAY}.jsonl"
+    rows = {}
+    if os.path.exists(path):
+        for line in open(path, encoding="utf-8"):
+            if line.strip(): r = json.loads(line); rows[r["id"]] = r
+    for it in pick:
+        row = {k: it.get(k) for k in POOL_FIELDS}
+        v = it.get("_verdict")
+        row.update(day=TODAY, model_keep=v, model_score=it.get("score") if v else None)
+        if v is None and rows.get(it["id"], {}).get("model_keep") is not None: continue  # keep an earlier real verdict
+        rows[it["id"]] = row
+    with open(path, "w", encoding="utf-8") as f:
+        f.writelines(json.dumps(r, ensure_ascii=False) + "\n" for r in rows.values())
     cutoff = (NOW - dt.timedelta(days=KEEP_DAYS)).strftime("%Y-%m-%d")
     for p in glob.glob("data/pool/*.jsonl"):
         if os.path.basename(p)[:10] < cutoff: os.remove(p)
+
+REJECTED = "data/rejected.json"
+def load_rejected():
+    return json.load(open(REJECTED)) if os.path.exists(REJECTED) else {}
+
+def save_rejected(rej, pick):
+    """Ids the LLM explicitly dropped ({id: day}), so they are not sent to the LLM again on every run. Kept KEEP_DAYS days."""
+    for it in pick:
+        if it.get("_verdict") is False: rej[it["id"]] = TODAY
+    cutoff = (NOW - dt.timedelta(days=KEEP_DAYS)).strftime("%Y-%m-%d")
+    rej = {k: v for k, v in rej.items() if v >= cutoff}
+    json.dump(rej, open(REJECTED, "w"), indent=0, sort_keys=True)
+    return rej
 
 def main():
     os.makedirs("data", exist_ok=True)
@@ -425,7 +451,8 @@ def main():
     for d in db: d["section"] = section_of(d)
     with cf.ThreadPoolExecutor(8) as ex: results = list(ex.map(fetch_source, SOURCES))
     update_status(results)
-    seen = {d["id"] for d in db}
+    rejected = load_rejected()
+    seen = {d["id"] for d in db} | set(rejected)
     for d in db: seen.update(hashlib.sha1(a["link"].encode()).hexdigest()[:12] for a in d.get("also", []))
     new = []
     for src, res, _ in results:
@@ -445,8 +472,12 @@ def main():
     print(f"new candidates {len(new)}, processing {len(pick)}", file=sys.stderr)
     with cf.ThreadPoolExecutor(6) as ex: list(ex.map(fill_abstract, pick))
     done = enrich_all(pick)
-    save_pool(pick, {d["id"] for d in done})
+    save_pool(pick)
+    save_rejected(rejected, pick)
+    failed = sum(1 for it in pick if it.get("_verdict") is None)
+    if failed: print(f"[warn] LLM gave no answer for {failed}/{len(pick)} items; they will be retried next run", file=sys.stderr)
     for d in done:
+        d.pop("_verdict", None)
         ab = d.pop("desc", None) or ""
         if not d.get("thin") and len(ab) >= 200: d["abstract"] = ab
         d["day"] = TODAY; d.pop("evidence_hint", None); d.pop("thin_src", None); d["rank"] = rank(d)
@@ -467,9 +498,29 @@ def main():
     print(f"added {len(done)}, total {len(db)}", file=sys.stderr)
 
 # ---------------------------------------------------------------- render
-def fav(link, home=""):
-    h = urllib.parse.urlparse(home or link).hostname or ""
-    return f"https://www.google.com/s2/favicons?sz=32&domain={h}"
+FAV_DIR = "data/fav"  # favicons cached in the repo and served from site/fav/ (google.com is unreachable for many readers)
+def fav_host(link, home=""):
+    return re.sub(r"[^a-z0-9.-]", "", (urllib.parse.urlparse(home or link).hostname or "").lower())
+
+def fetch_favicons(hosts):
+    """Download missing favicons once; an empty file marks a host without one so it is not retried every build."""
+    os.makedirs(FAV_DIR, exist_ok=True)
+    def one(h):
+        try: data = get(f"https://www.google.com/s2/favicons?sz=32&domain={h}", timeout=10)
+        except Exception: data = b""
+        open(f"{FAV_DIR}/{h}.png", "wb").write(data)
+    todo = [h for h in hosts if h and not os.path.exists(f"{FAV_DIR}/{h}.png")]
+    with cf.ThreadPoolExecutor(8) as ex: list(ex.map(one, todo))
+    if todo: print(f"favicons fetched {len(todo)}", file=sys.stderr)
+    os.makedirs("site/fav", exist_ok=True)
+    for p in glob.glob(f"{FAV_DIR}/*.png"):
+        if os.path.getsize(p): shutil.copyfile(p, "site/fav/" + os.path.basename(p))
+
+def fav_img(i, base="", lazy=True):
+    h = fav_host(i["link"], i.get("home"))
+    p = f"{FAV_DIR}/{h}.png"
+    if not h or not os.path.exists(p) or not os.path.getsize(p): return ""
+    return f'<img src="{base}fav/{h}.png" alt=""' + (' loading="lazy"' if lazy else "") + ' onerror="this.remove()">'
 
 def cite_text(i):
     ref = i.get("badge") or i["link"]
@@ -481,7 +532,7 @@ def card(i, featured=False, top=False, base=""):
     title = (i.get("zh_title") or i["title"]) if health else (i.get("name") or i["title"])
     txt = " ".join([title, i["title"], i.get("summary") or "", i["source"], " ".join(tags)]).lower()
     attrs = ('data-top="1" ' if top else '') + f'data-sec="{E(section_of(i))}" data-form="{E(form_of(i))}" data-tags="{E("|".join(tags))}" data-text="{E(txt)}"'
-    meta = (f'<div class="meta"><img src="{fav(i["link"], i.get("home"))}" alt="" loading="lazy" onerror="this.remove()"><span>{E(i["source"])}</span>'
+    meta = (f'<div class="meta">{fav_img(i, base)}<span>{E(i["source"])}</span>'
             f'<span>·</span><span>发布于 {zh_date(i.get("date",""))}</span>' + (f'<span>·</span><span class="mono">{E(i["pop"])}</span>' if i.get("pop") else "") +
             (f'<span class="badge" title="{E(i["badge"])}">{E(i["badge"])}</span>' if health and i.get("badge") else "") +
             f'<a class="ext" href="{E(i["link"])}" target="_blank" rel="noopener" title="打开原文">原文 ↗</a></div>')
@@ -598,6 +649,7 @@ def build(db=None, conf_items=None):
         i["tags"] = norm_tags(i.get("tags")); i["section"] = section_of(i); i["rank"] = rank(i)
         if i.get("thin"): i["key_points"] = []
     os.makedirs("site", exist_ok=True)
+    fetch_favicons({fav_host(i["link"], i.get("home")) for i in db + (conf_items or []) + [x for v in load_archive().values() for x in v]})
     url = SITE["url"]
     feat, latest, n = featured(db)
     tools = ('<div class="tools"><input id="q" type="search" placeholder="搜索标题、摘要、来源、标签…" aria-label="搜索"><span id="tagf" class="tagf" hidden></span></div>')
@@ -647,7 +699,7 @@ def zh_paras(txt):
 def item_page(i, related, url):
     tn, tc = tier(i.get("score"))
     title = i.get("zh_title") or i.get("name") or i["title"]
-    meta = (f'<div class="meta"><img src="{fav(i["link"], i.get("home"))}" alt="" onerror="this.remove()"><span>{E(i["source"])}</span><span>·</span><span>发布于 {zh_date(i.get("date", ""))}</span>' +
+    meta = (f'<div class="meta">{fav_img(i, "../../", lazy=False)}<span>{E(i["source"])}</span><span>·</span><span>发布于 {zh_date(i.get("date", ""))}</span>' +
             (f'<span>·</span><span class="mono">{E(i["pop"])}</span>' if i.get("pop") else "") +
             (f'<span>·</span><span>收录于 <a href="../../{E(i["day"])}/">{E(i["day"])}</a></span>' if i.get("day") else "") + "</div>")
     digest = f'<p>{E(i.get("summary"))}</p>' + (f'<ul class="kp">' + "".join(f"<li>{E(k)}</li>" for k in i["key_points"][:3]) + "</ul>" if i.get("key_points") and not i.get("thin") else "")

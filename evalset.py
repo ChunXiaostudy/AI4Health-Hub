@@ -28,7 +28,9 @@ def candidates():
     rows = {}
     for p in sorted(glob.glob("data/pool/*.jsonl")):
         for line in open(p, encoding="utf-8"):
-            r = json.loads(line); r["desc_src"] = "raw"; rows[r["id"]] = r
+            r = json.loads(line); r["desc_src"] = "raw"
+            if r.get("model_keep") is None: continue  # LLM gave no answer (failed call), not a rejection
+            rows[r["id"]] = r
     for p in sorted(glob.glob("data/archive/*.json")):
         for i in json.load(open(p, encoding="utf-8")):
             if i["id"] in rows: continue
