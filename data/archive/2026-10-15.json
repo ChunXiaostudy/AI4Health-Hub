@@ -29,7 +29,10 @@
 "score": 7,
 "day": "2026-10-15",
 "rank": 12.31,
-"abstract_tries": 3
+"abstract_days": [
+"2026-10-15"
+],
+"abstract_err": "page: no abstract in meta (3036 bytes, best 0 chars); europepmc: empty; openalex: HTTP Error 404: Not Found"
 },
 {
 "title": "From research to clinical practice: Expert consensus on Neuroimaging AI tools for the Memory clinic (Neuro-AIM)",
@@ -43,25 +46,27 @@
 "pop": null,
 "id": "991c125f7804",
 "keep": true,
-"zh_title": "记忆门诊神经影像AI工具从研究到临床的专家共识",
-"summary": "npj Digital Medicine刊出专家共识，聚焦记忆门诊神经影像AI工具从研究走向临床实践。",
+"zh_title": "记忆门诊神经影像AI工具专家共识（Neuro-AIM）",
+"summary": "16位专家经三轮Delphi问卷，就记忆门诊神经影像AI的目标、质量、临床交互与隐私伦理达成8条共识。",
 "key_points": [
-"题为记忆门诊神经影像AI工具的专家共识",
-"主题为从研究到临床实践的转化",
-"发表于npj Digital Medicine"
+"16位临床、学术与产业专家参与三轮问卷",
+"就目的、质量、交互、隐私伦理四主题达成共识",
+"由DEMON网络影像工作组协调，含患者代表"
 ],
 "section": "落地与监管",
-"type": "监管",
+"type": "观点",
 "tags": [
 "医学影像",
 "临床落地",
 "神经科学"
 ],
 "evidence": "同行评审",
-"score": 6,
+"score": 5,
 "day": "2026-10-15",
 "rank": 11.31,
-"abstract_tries": 3
+"abstract": "Abstract Although AI tools for neuroimaging show considerable promise in the diagnosis, prognosis, and management of neurodegenerative disorders, their uptake in memory clinics has been limited. A key barrier is lack of consensus on their effective design and implementation. Here we establish expert consensus on the specific goals, usage and challenges of AI tools for neuroimaging in the memory clinic using a Delphi process. Sixteen experts from clinical, academic, and industry backgrounds participated in three rounds of questionnaires, coordinated by the Imaging Working Group of the Deep Dementia Phenotyping (DEMON) network, with support from a patient and public involvement representative. Consensus was reached on eight statements covering four themes: purpose, quality, interactions with clinicians and memory clinics, and privacy and ethics. Implementation of these recommendations will further the adoption of AI neuroimaging tools from research to clinical practice, improving diagnostic and care pathways for patient benefit.",
+"reason": "专家共识属观点类，无外部验证数据，按观点档取5分",
+"zh_abstract": "摘要 尽管用于神经影像的 AI 工具在神经退行性疾病的诊断、预后和管理方面显示出相当大的前景，但它们在记忆门诊中的采用仍然有限。一个关键障碍是缺乏对其有效设计和实施的共识。在此，我们采用德尔菲流程，就记忆门诊中用于神经影像的 AI 工具的具体目标、使用和挑战建立了专家共识。来自临床、学术和行业背景的十六位专家参与了三轮问卷调查，由深度痴呆表型分析（Deep Dementia Phenotyping, DEMON）网络影像工作组协调，并得到一名患者与公众参与代表的支持。我们就涵盖四个主题的八项声明达成了共识：目的、质量、与临床医生和记忆门诊的互动，以及隐私与伦理。实施这些建议将进一步推动 AI 神经影像工具从研究走向临床实践，改善诊断和照护路径，使患者受益。"
 },
 {
 "title": "CorVista System With Pulmonary Capillary Wedge Pressure Add-On Earns FDA Clearance",
@@ -144,7 +149,6 @@
 "score": 4,
 "day": "2026-10-15",
 "rank": 11.81,
-"abstract_tries": 1,
 "abstract": "Nature Medicine, Published online: 14 October 2026; doi:10.1038/s41591-026-04726-7 Drawing on experiences across diverse settings, this issue of Nature Medicine explores the challenges of and lessons learned from the deployment of artificial intelligence models into healthcare.",
 "reason": "期刊专刊编者按，仅概述主题与经验，无具体数据或结论，属增量档",
 "zh_abstract": "《自然·医学》（Nature Medicine），在线发表于2026年10月14日；doi:10.1038/s41591-026-04726-7 本期《自然·医学》借鉴不同场景下的经验，探讨将人工智能模型部署到医疗保健中所面临的挑战和汲取的教训。"
@@ -173,7 +177,10 @@
 "score": 4,
 "day": "2026-10-15",
 "rank": 9.64,
-"abstract_tries": 3
+"abstract_days": [
+"2026-10-15"
+],
+"abstract_err": "page: HTTP Error 403: Forbidden; europepmc: empty; openalex: empty"
 },
 {
 "title": "Characterizing time-of-day physical activity patterns across cognitive trajectories in older adults: a longitudinal cohort study",
@@ -266,7 +273,6 @@
 "score": 4,
 "day": "2026-10-15",
 "rank": 11.31,
-"abstract_tries": 1,
 "abstract": "npj Digital Medicine, Published online: 14 October 2026; doi:10.1038/s41746-026-03265-2 Sequence models reveal diagnosis accumulation pathways beyond comorbidity burden in population-scale hospital data",
 "reason": "仅有标题级信息，虽为人群规模数据但缺细节，属增量档",
 "zh_abstract": "npj Digital Medicine，在线发表于2026年10月14日；doi:10.1038/s41746-026-03265-2 序列模型在人口规模医院数据中揭示超越共病负担的诊断累积路径"
@@ -300,7 +306,6 @@
 "score": 4,
 "day": "2026-10-15",
 "rank": 10.31,
-"abstract_tries": 1,
 "abstract": "npj Digital Medicine, Published online: 14 October 2026; doi:10.1038/s41746-026-03390-y AI's fast-paced irruption in medicine and education has challenged undergraduate medical colleges, with institutions documenting policies emphasizing immediate conduct restrictions, while strategic oversight, infrastructure and evaluation remain less consistently developed. We propose a multi-level framework for AI governance in undergraduate medical education based on accountability, competence and co-responsibility across institutions, educators and students, designed to turn a fast-evolving technology from a threat into an opportunity for collective progress.",
 "reason": "观点型治理框架，无实证数据或评估结果，属增量档",
 "zh_abstract": "npj Digital Medicine，在线发表于2026年10月14日；doi:10.1038/s41746-026-03390-y 人工智能在医学和教育中的快速突入给本科医学院校带来了挑战，各机构记录的政策强调即时行为限制，而战略监督、基础设施和评估则发展得较不一致。我们提出一个基于院校、教育者和学生之间问责、能力和共同责任的本科医学教育人工智能治理多层次框架，旨在将快速演进的技术从威胁转变为集体进步的机会。"
@@ -317,51 +322,27 @@
 "pop": null,
 "id": "e17343e26d27",
 "keep": true,
-"zh_title": "人工智能与自动化在静脉输液系统中的现状与展望",
-"summary": "npj Digital Medicine刊文评述人工智能与自动化在静脉输液系统中的应用现状与未来展望。",
-"key_points": [],
-"section": "落地与监管",
+"zh_title": "AI与自动化在静脉输注系统中的现状与展望",
+"summary": "综述回顾物联网、AI与可穿戴生物传感器驱动的智能静脉输注自动化，并提出概念框架INFUSYNC。",
+"key_points": [
+"综述AI监测、智能输注自动化与可穿戴传感器进展",
+"提出INFUSYNC概念框架，同步监测、输注与预测分析",
+"可穿戴非接触监测部分参数接近临床级精度"
+],
+"section": "数字健康",
 "type": "观点",
 "tags": [
-"临床落地",
-"数字健康"
+"数字健康",
+"生理信号",
+"医疗器械"
 ],
 "evidence": "同行评审",
 "score": 4,
 "day": "2026-10-15",
 "rank": 9.31,
-"abstract_tries": 3
-},
-{
-"title": "A “growth mindset of mental health” intervention increases the likelihood of initiating self-help on a mental health app: a randomized controlled trial",
-"link": "https://www.nature.com/articles/s41746-026-03322-w",
-"date": "2026-10-13T00:00:00+00:00",
-"source": "npj Digital Medicine",
-"source_group": "npj Digital Medicine",
-"home": "",
-"thin": false,
-"badge": "DOI 10.1038/s41746-026-03322-w",
-"pop": null,
-"id": "9e98d8f89cd5",
-"keep": true,
-"zh_title": "心理健康成长型思维干预提升App自助启动率",
-"summary": "随机对照试验显示，心理健康成长型思维干预提高在心理健康App中启动自助的可能性。",
-"key_points": [
-"研究设计为随机对照试验",
-"干预为心理健康成长型思维",
-"结局为启动App自助的可能性"
-],
-"section": "数字健康",
-"type": "论文",
-"tags": [
-"心理健康",
-"数字健康"
-],
-"evidence": "同行评审",
-"score": 4,
-"day": "2026-10-15",
-"rank": 9.14,
-"abstract_tries": 3
+"abstract": "Abstract The combination of the Internet of Things (IoT), artificial intelligence (AI), and wearable biosensors is transforming healthcare by allowing continuous, real-time monitoring and more intelligent clinical decision-making. This review explores AI-driven monitoring, smart intravenous (IV) infusion automation, and wearable biosensors, and proposes Intelligent IV Automation and Smart Patient Synchronization (INFUSYNC), a conceptual framework synchronizing monitoring, automated fluid delivery, and predictive analytics. The literature shows meaningful progress: wearables increasingly support non-contact monitoring with near clinical-grade accuracy for select parameters, while infusion pumps with dose-error-reduction and AI-assisted decision support are reported to improve delivery precision and safety. Predictive models further support early detection of physiological decline. Progress remains uneven, however: most AI-enabled infusion systems are prototype-stage, closed-loop control remains rare, and interoperability, data security, and privacy remain underdeveloped. Future systems will need compatible, security-by-design, clinically validated, feedback-controlled architectures. Overall, this review outlines a clear but early-stage trajectory toward integrated smart-health environments for IV therapy.",
+"reason": "叙述性综述，仅提出概念框架无原始数据，属增量档",
+"zh_abstract": "摘要 物联网（Internet of Things, IoT）、人工智能（AI）和可穿戴生物传感器的结合，通过允许持续、实时监测和更智能的临床决策，正在改变医疗保健。本综述探讨了 AI 驱动的监测、智能静脉（IV）输注自动化和可穿戴生物传感器，并提出了智能静脉输注自动化与患者智能同步（Intelligent IV Automation and Smart Patient Synchronization, INFUSYNC），这是一个同步监测、自动液体输送和预测分析的概念框架。文献显示出有意义的进展：可穿戴设备日益支持非接触式监测，对某些参数具有接近临床级的准确性，而具有剂量错误减少和 AI 辅助决策支持的输注泵据报道可提高输送精度和安全性。预测模型进一步支持对生理衰退的早期检测。然而，进展仍不均衡：大多数 AI 赋能的输注系统处于原型阶段，闭环控制仍少见，互操作性、数据安全和隐私仍不完善。未来的系统将需要兼容、设计即安全、经临床验证、反馈控制的架构。总体而言，本综述概述了一条明确但处于早期阶段的轨迹，迈向用于静脉治疗的集成智能健康环境。"
 },
 {
 "title": "Confido Health nabs $12.5M to scale agentic AI across PE-backed medical groups",
@@ -422,7 +403,6 @@
 "score": 6,
 "day": "2026-10-15",
 "rank": 8.81,
-"abstract_tries": 1,
 "abstract": "The International Mouse Phenotyping Consortium (IMPC) maintains a large archive of whole-body dorsoventral radiographs. However, heterogeneity in file formats, metadata completeness, orientation, and image quality limits its reuse for large-scale quantitative analysis. We present FERDINAND (Framework for Extracting and Restructuring Distributed IMPC radiographs into a Normalised, AI-ready Navigable Dataset), an open framework for programmatic access, harmonisation, quality control, and curation of IMPC radiographs. FERDINAND combines metadata retrieval and local radiograph archiving with centre-aware preprocessing, automated exposure screening, orientation standardisation, and clustering-assisted visual curation. Applied to IMPC Data Release 24, FERDINAND organises 104,819 radiographs acquired between February 2012 and June 2025 across ten phenotyping centres and 6,306 single-gene knockout mouse lines, with semi-automated curation recorded for every image. As an independent validation of the harmonised output, a DeepLabCut-based bone-morphometry pipeline showed that FERDINAND-processed radiographs improve data efficiency for landmark detection: at reduced training-set sizes, they achieve better performance than original radiographs and require fewer manual annotations to reach a given level of quality. FERDINAND provides a reproducible foundation for artificial intelligence (AI)-ready analysis and scalable quantitative phenotyping of heterogeneous IMPC and comparable radiograph resources. The complete FERDINAND source code is openly available on GitHub.",
 "reason": "预印本开源框架与十万级公开影像资源，但属临床前小鼠数据，属值得一看档上限",
 "zh_abstract": "国际小鼠表型联盟（IMPC）维护着一个大型全身背腹位 X 射线影像档案。然而，文件格式、元数据完整性、方向和图像质量方面的异质性限制了其用于大规模定量分析的可重复使用性。我们提出 FERDINAND（Framework for Extracting and Restructuring Distributed IMPC radiographs into a Normalised, AI-ready Navigable Dataset，将分布式 IMPC X 射线影像提取并重构为标准化、AI 就绪、可导航数据集的框架），这是一个用于 IMPC X 射线影像的程序化访问、协调、质量控制和策展的开放框架。FERDINAND 将元数据检索和本地 X 射线影像归档与中心感知预处理、自动曝光筛查、方向标准化和聚类辅助的视觉策展相结合。应用于 IMPC Data Release 24，FERDINAND 整理了 2012 年 2 月至 2025 年 6 月期间在十个表型分析中心、6,306 个单基因敲除小鼠品系中获取的 104,819 张 X 射线影像，并为每张图像记录了半自动策展。作为对协调输出的独立验证，一个基于 DeepLabCut 的骨骼形态测量流程显示，经 FERDINAND 处理的 X 射线影像提高了标志点检测的数据效率：在缩减训练集规模时，它们比原始 X 射线影像取得更好的性能，并且达到给定质量水平所需的人工标注更少。FERDINAND 为人工智能（AI）就绪分析以及对异质性 IMPC 和类似 X 射线影像资源进行可扩展定量表型分析提供了可重复的基础。完整的 FERDINAND 源代码在 GitHub 上公开可用。"
@@ -583,7 +563,6 @@
 "score": 5,
 "day": "2026-10-15",
 "rank": 9.81,
-"abstract_tries": 1,
 "abstract": "Subcellular transcript localization shapes gene regulation and cellular function, yet profiling it at scale remains difficult, limiting our ability to study subcellular heterogeneity across tissues and disease. Here, we present SVC, a Vision Transformer-based spatially and virtually embedded cell model that learns subcellular transcript organization within native tissue context directly from subcellular-resolution spatial transcriptomics. SVC represents each gene's subcellular localization as an image patch and uses other genes within the same cell as context, enabling subcellular contextual learning of spatial dependencies that govern intracellular organization. By integrating gene-function priors, cell morphology, spatial context, and, when available, cell identity, SVC captures unified, spatially grounded representations across genes and cells that connect subcellular organization to cellular state and tissue microenvironment. Across diverse subcellular-resolution spatial transcriptomics datasets, SVC accurately predicts cell-specific subcellular transcript localization and co-organization, generalizes across tissues and technical platforms, and supports subcellular imputation of unmeasured genes and in silico perturbation. Leveraging these capabilities, SVC highlights disease-associated patterns of intracellular transcript reorganization and spatially heterogeneous responses to gene perturbations. Beyond prediction, SVC reveals systematic variation in subcellular transcript organization associated with gene function, cellular states, and tissue microenvironments, uncovering de novo spatial biology that is not accessible by cell-level analysis. SVC's learned representations further transfer to cell- and tissue-level tasks, including cell-level expression imputation, cell clustering, and spatial domain detection. Together, SVC provides a general framework for modeling and interrogating subcellular transcript organization in situ, enabling scalable discovery of subcellular spatial biology.",
 "reason": "预印本新方法有创新性，但未见外部验证或基准对比细节，属值得一看档",
 "zh_abstract": "亚细胞转录本定位塑造基因调控和细胞功能，然而在规模化水平上对其进行分析仍然困难，限制了我们在组织和疾病中研究亚细胞异质性的能力。在此，我们提出 SVC，一种基于 Vision Transformer（视觉 Transformer）的空间和虚拟嵌入细胞模型，可直接从亚细胞分辨率空间转录组学中学习天然组织背景内的亚细胞转录本组织。SVC 将每个基因的亚细胞定位表示为图像块，并使用同一细胞内的其他基因作为上下文，从而实现对支配细胞内组织的空间依赖性的亚细胞上下文学习。通过整合基因功能先验、细胞形态、空间上下文以及（在可用时）细胞身份，SVC 捕获跨基因和细胞的统一、空间锚定的表征，将亚细胞组织与细胞状态和组织微环境联系起来。在多种亚细胞分辨率空间转录组学数据集上，SVC 准确预测细胞特异性亚细胞转录本定位和共组织，可跨组织和技术平台泛化，并支持未测量基因的亚细胞插补和计算机扰动。利用这些能力，SVC 突出疾病相关的细胞内转录本重组织模式以及对基因扰动的空间异质性反应。超越预测，SVC 揭示与基因功能、细胞状态和组织微环境相关的亚细胞转录本组织的系统性变异，发现细胞水平分析无法获取的从头空间生物学。SVC 学到的表征进一步迁移到细胞和组织水平任务，包括细胞水平表达插补、细胞聚类和空间域检测。总之，SVC 提供了一个在原位建模和探究亚细胞转录本组织的通用框架，使得可扩展地发现亚细胞空间生物学成为可能。"
@@ -617,7 +596,6 @@
 "score": 5,
 "day": "2026-10-15",
 "rank": 8.81,
-"abstract_tries": 1,
 "abstract": "Tumour heterogeneity reflects both cellular identity (lineage) and state (active transcriptional programs), yet computational methods generally analyse these axes separately. We introduce CellScribe, a generative framework that conditions a pretrained language model on frozen single cell foundation model embeddings through AdaLN adapters, enabling one shared model to generate an ontology- grounded cell type or a quantified meta-program profile. Supervised multitask fine- tuning produces fine grained typing across hundreds of cell types and outperforms generative and retrieval baselines on meta-program identification under study-holdout evaluation. We further train the model with reinforcement learning, scoring its generations against cell ontology distance and meta-program agreement, so that they align with biological knowledge rather than token agreement. To identify new cell types not present in the supervised training data, we post-train the model to read several labelled example cells in a single context, each conditioning its own text span, and infer the type of a query cell through in-context learning. CellScribe thus unifies cell identity and state in one generative interface, grounds both in biological structure, and identifies cell types outside the supervised vocabulary.",
 "reason": "预印本新生成框架并优于基线，但仅研究留存评估、无外部验证，属值得一看档",
 "zh_abstract": "肿瘤异质性既反映细胞身份（谱系），也反映细胞状态（活跃转录程序），然而计算方法通常分别分析这些轴。我们提出 CellScribe，一种生成式框架，通过 AdaLN 适配器将预训练语言模型以冻结的单细胞基础模型嵌入为条件，使一个共享模型能够生成以本体为基础的细胞类型或量化的元程序谱。监督式多任务微调可在数百种细胞类型中产生细粒度分型，并在研究留出评估下在元程序鉴定上优于生成式和检索式基线。我们进一步用强化学习训练该模型，根据细胞本体距离和元程序一致性对其生成结果进行评分，使其与生物学知识而非 token 一致性对齐。为了识别监督训练数据中不存在的新细胞类型，我们对模型进行后训练，使其在单个上下文中读取若干带标签的示例细胞，每个示例条件化其自身的文本跨度，并通过上下文学习推断查询细胞的类型。因此，CellScribe 在一个生成式接口中统一了细胞身份和状态，将二者均建立在生物学结构之上，并识别监督词汇表之外的细胞类型。"
@@ -651,7 +629,6 @@
 "score": 5,
 "day": "2026-10-15",
 "rank": 8.81,
-"abstract_tries": 1,
 "abstract": "Protein protein interaction (PPI) predictors are often evaluated with random pair splits that permit proteins to recur across training and test sets, while constructed negative pairs can introduce a separate source of benchmark-specific signal. We reassessed the Guo yeast benchmark using a matched protein novelty curve, independently generated MMseqs2 sequence cluster controlled R3 variants, topology only controls, degree- and length matched putative negatives, handcrafted and frozen protein language model representations, multiple model configurations, seed analyses, and connected component aware inference. In the matched R1[->]R2[->]R3 comparison, AAC+CTD-MLP ROC-AUC declined from 0.697 for seen-seen pairs to 0.626 for one-unseen pairs and 0.587 for both-unseen pairs. Across independently regenerated cluster-disjoint R3 variants at 50%, 40%, 30%, and 20% MMseqs2 clustering thresholds, performance showed no consistent monotonic trend. Guo original-negative endpoints had lower positive-network degree than positive endpoints (mean 3.34 versus 6.72), and a degree-only logistic model reached ROC-AUC 0.962 on the original negatives but 0.502 on degree-matched negatives. We used degree-matched negatives consistently for R3 training and testing; six sequence based model configurations yielded ROC-AUC 0.493- 0.547; none showed corrected connected-component-aware evidence of above-chance discrimination. A PIPR multispecies analysis reproduced degree-associated label separation but also exposed cross-species pairing as an additional pooled cue. These results show that protein novelty, operational sequence cluster separation, and negative-set topology are distinct dimensions of PPI benchmark evaluation. The Guo result is benchmark-specific and should not be generalized to sequence-based PPI prediction or protein language models overall. The dataset and source code for the experiments are publicly available at https://github.com/morufwork/guoAudit.git.",
 "reason": "基准偏差分析有新意含多重对照，但为预印本且无外部验证，属值得一看档",
 "zh_abstract": "蛋白质-蛋白质相互作用（protein-protein interaction, PPI）预测器通常采用随机配对划分进行评估，这种划分允许蛋白质在训练集和测试集中重复出现，而构建的负样本对则会引入另一类基准特异性信号来源。我们使用匹配的蛋白质新颖性曲线、独立生成并由 MMseqs2 序列聚类控制的 R3 变体、仅拓扑结构的对照、度数（degree）与长度匹配的推定负样本、手工设计特征与冻结的蛋白质语言模型表示、多种模型配置、种子分析以及连通分量感知推断，重新评估了 Guo 酵母基准。在匹配的 R1[->]R2[->]R3 比较中，AAC+CTD-MLP 的 ROC-AUC 从 seen-seen 配对的 0.697 降至 one-unseen 配对的 0.626，以及 both-unseen 配对的 0.587。在 50%、40%、30% 和 20% MMseqs2 聚类阈值下独立重新生成的聚类不相交 R3 变体中，性能未显示出一致的单调趋势。Guo 原始负样本端点的正网络度数低于正样本端点（均值 3.34 对 6.72），而仅基于度数的逻辑回归模型在原始负样本上达到 ROC-AUC 0.962，但在度数匹配负样本上为 0.502。我们在 R3 训练和测试中一致使用度数匹配负样本；六种基于序列的模型配置得到 ROC-AUC 0.493–0.547；没有一种显示出经校正的、连通分量感知的优于随机判别证据。一项 PIPR 多物种分析重现了与度数相关的标签分离，但也揭示了跨物种配对作为额外的混合线索。这些结果表明，蛋白质新颖性、操作性序列聚类分离和负样本集拓扑是 PPI 基准评估的不同维度。Guo 结果具有基准特异性，不应推广至基于序列的 PPI 预测或整体的蛋白质语言模型。实验数据集和源代码公开于 https://github.com/morufwork/guoAudit.git。"
@@ -781,6 +758,39 @@
 "zh_abstract": "一项新研究发现，在最近20年间举行的FDA咨询委员会会议中，近40%包括了一名与制药公司资助的倡导组织有积极联系的患者代表或消费者代表。了解更多："
 },
 {
+"title": "A “growth mindset of mental health” intervention increases the likelihood of initiating self-help on a mental health app: a randomized controlled trial",
+"link": "https://www.nature.com/articles/s41746-026-03322-w",
+"date": "2026-10-13T00:00:00+00:00",
+"source": "npj Digital Medicine",
+"source_group": "npj Digital Medicine",
+"home": "",
+"thin": false,
+"badge": "DOI 10.1038/s41746-026-03322-w",
+"pop": null,
+"id": "9e98d8f89cd5",
+"keep": true,
+"zh_title": "思维干预提升心理健康App自助使用率：随机对照试验",
+"summary": "N=252随机对照试验显示，成长型思维心理健康干预可提高三个月内再次使用App自助功能的比例。",
+"key_points": [
+"研究设计为随机对照试验",
+"干预为心理健康成长型思维",
+"结局为启动App自助的可能性"
+],
+"section": "数字健康",
+"type": "论文",
+"tags": [
+"心理健康",
+"数字健康"
+],
+"evidence": "同行评审",
+"score": 2,
+"day": "2026-10-15",
+"rank": 9.14,
+"abstract": "Abstract Mental health apps hold potential to improve access to treatment, but engagement remains low. One barrier may be the belief that mental health cannot be meaningfully improved. In a randomized controlled trial ( N = 252), we examined whether a brief growth-mindset-of-mental-health intervention—portraying mental health as improvable, not fixed—can initiate mental health app engagement among people with mental health needs. Participants completed baseline well-being measures (stress, anxiety and depression, and positive mental well-being) and were randomly assigned to the growth-mindset-of-mental-health or active control condition. Over the subsequent three months, we tracked whether they re-engaged with the app overall (i.e., completed at least a second self-help feature), and with features categorized as low-, moderate-, and high-intensity. Analyses revealed that participants in the growth-mindset condition (vs. control) with poorer baseline mental well-being (i.e., higher stress, anxiety and depressive symptoms, and lower positive mental well-being) were significantly more likely to show repeat app engagement. Moreover, those with higher anxiety and depressive symptoms were more likely to show repeat engagement with moderate-intensity features, while those experiencing higher stress and lower positive mental well-being were more likely to do so with both low- and moderate-intensity features. Together, these findings demonstrate the benefits of the growth-mindset intervention for successful initiation of self-help on a mental health app. Trial Registration: The trial was registered on ClinicalTrials.gov (Identifier: NCT07071311) on July 25, 2025.",
+"reason": "无AI或算法成分，与医疗AI主题无关，属边缘档",
+"zh_abstract": "摘要 心理健康应用有潜力改善治疗可及性，但参与度仍然较低。一个障碍可能是认为心理健康无法得到有意义的改善。在一项随机对照试验（N = 252）中，我们检验了一项简短的心理健康成长型思维干预——将心理健康描绘为可改善而非固定不变——能否在存在心理健康需求的人群中启动心理健康应用参与。参与者完成了基线幸福感测量（压力、焦虑和抑郁，以及积极心理健康），并被随机分配到心理健康成长型思维组或主动对照组。在随后的三个月中，我们追踪了他们总体是否重新参与该应用（即完成至少第二个自助功能），以及是否参与被归类为低、中和高强度的功能。分析显示，基线心理健康较差（即压力、焦虑和抑郁症状较高，积极心理健康较低）的成长型思维组参与者（相较于对照组）显著更可能表现出重复应用参与。此外，焦虑和抑郁症状较高者更可能表现出对中等强度功能的重复参与，而压力较高和积极心理健康较低者则更可能对低强度和中等强度功能均表现出重复参与。总之，这些发现证明了成长型思维干预对成功启动心理健康应用上的自助的益处。试验注册：该试验于2025年7月25日在 ClinicalTrials.gov 注册（标识符：NCT07071311）。"
+},
+{
 "title": "Readily secures $11M series A to continue building out AI regulatory compliance platform",
 "link": "https://www.fiercehealthcare.com/finance/readily-secures-11m-series-continue-building-out-ai-regulatory-compliance-platform",
 "date": "2026-10-15T06:22:19.309189+00:00",
@@ -839,7 +849,6 @@
 "reason": "肿瘤疫苗临床试验，与AI或算法在医疗中的应用无关",
 "day": "2026-10-15",
 "rank": 10.81,
-"abstract_tries": 1,
 "abstract": "Nature Medicine, Published online: 14 October 2026; doi:10.1038/s41591-026-04717-8 A phase 1 trial shows that treatment of patients with high-grade serous ovarian cancer with personalized neoantigen vaccines combined with PD-1 blockade was feasible and led to tumor-specific immune responses in many patients and putative mechanisms of resistance related to antigen presentation were identified via cell-free DNA analysis.",
 "zh_abstract": "《自然·医学》（Nature Medicine），在线发表于2026年10月14日；doi:10.1038/s41591-026-04717-8 一项1期试验显示，对高级别浆液性卵巢癌患者采用个体化新抗原疫苗联合PD-1阻断治疗是可行的，并在许多患者中引发了肿瘤特异性免疫应答，且通过游离DNA（cell-free DNA）分析鉴定出与抗原呈递相关的推定耐药机制。"
 },
@@ -873,7 +882,6 @@
 "score": 4,
 "day": "2026-10-15",
 "rank": 8.81,
-"abstract_tries": 1,
 "abstract": "Survival prediction frequently exhibit unstable and irreproducible performance, limiting their clinical applicability. Rather than proposing a new predictive architecture, this work presents a diagnostic investigation into the sources of this instability. Using a transformer-based deep fusion model combining RNA sequencing and histopathology data from the TCGA-BRCA cohort as a diagnostic probe, we demonstrate that global survival prediction is highly unstable across data splits. We then analyze the learned multimodal embeddings in an unsupervised manner, revealing stable latent patient subgroups with significantly divergent survival outcomes. These subgroups are not explained by canonical receptor status or immune infiltration, but instead align with tumor-intrinsic proliferative activity. Conditioning survival modeling on the largest discovered subgroup recovers strong and stable prognostic performance, substantially outperforming unimodal baselines. These findings indicate that survival predictability is conditional on latent heterogeneity and suggest that heterogeneity-aware modeling strategies are essential for robust multimodal prognostication. This work establishes a methodological framework for interpreting instability in multimodal survival learning.",
 "reason": "预印本、单一TCGA队列的诊断性研究，未提出新架构，属增量档",
 "zh_abstract": "生存预测经常表现出不稳定且不可重复的性能，限制了其临床应用。本文并非提出新的预测架构，而是对造成这种不稳定性的来源进行诊断性研究。使用一个基于 transformer 的深度融合模型，结合来自 TCGA-BRCA 队列的 RNA 测序和组织病理学数据作为诊断探针，我们证明全局生存预测在不同数据划分之间高度不稳定。然后我们以无监督方式分析学到的多模态嵌入，揭示出具有显著不同生存结局的稳定潜在患者亚组。这些亚组不能由经典受体状态或免疫浸润解释，而是与肿瘤内在增殖活性一致。以发现的最大亚组为条件进行生存建模，恢复了强且稳定的预后性能，显著优于单模态基线。这些发现表明，生存可预测性以潜在异质性为条件，并提示异质性感知建模策略对于稳健的多模态预后至关重要。这项工作为解释多模态生存学习中的不稳定性建立了一个方法学框架。"
@@ -940,7 +948,6 @@
 "score": 4,
 "day": "2026-10-15",
 "rank": 8.64,
-"abstract_tries": 1,
 "abstract": "[Journal of colloid and interface science] Physiological signal acquisition is essential for medical diagnostics and human-machine interfaces. Motion artifacts and sweat-induced instability present persistent challenges for conventional electrodes, fundamentally limiting their reliability in dynamic or long-term use. Here, we report a Janus hydrogel electrode that combines high electrical conductivity (3 × 104 S·m-1), strong interfacial adhesion to copper surfaces (2079 J·m-2), and low skin-electrode impedance (∼300 Ω). Distinct from conventional Ag/AgCl electrodes, hydrogel electrode uniquely combines hydrophobic protection, high-strain impedance insensitivity (250%) and rapid self-healing, achieving interference-resistant physiological signal monitoring even under vibration and moisture interferences. Notably, coupling with advanced Transformer algorithms optimized for temporal sequence analysis, the electrodes delivered 97.02% gesture recognition accuracy. This system harnesses these gestures to generate robust and intuitive command inputs, paving the way for potential rehabilitation applications, where future clinical validation is required. This work introduces a multifunctional, biocompatible electrode platform that couples reliable physiological monitoring with AI-powered rehabilitation assessment, opening new avenues for next-generation intelligent wearable bioelectronics.",
 "reason": "材料与电极为主、算法为配套，无临床结局评估，属增量档",
 "zh_abstract": "[Journal of colloid and interface science] 生理信号采集对于医学诊断和人机接口至关重要。运动伪影和汗液引起的不稳定性给传统电极带来了持续挑战，从根本上限制了其在动态或长期使用中的可靠性。在此，我们报道了一种 Janus 水凝胶电极，它结合了高电导率（3 × 104 S·m-1）、对铜表面的强界面粘附力（2079 J·m-2）和低皮肤-电极阻抗（∼300 Ω）。与传统 Ag/AgCl 电极不同，该水凝胶电极独特地结合了疏水保护、高应变阻抗不敏感性（250%）和快速自愈合，即使在振动和湿气干扰下也能实现抗干扰的生理信号监测。值得注意的是，与针对时间序列分析优化的先进 Transformer 算法相结合，这些电极实现了 97.02% 的手势识别准确率。该系统利用这些手势生成稳健且直观的命令输入，为潜在的康复应用铺平道路，未来仍需临床验证。这项工作引入了一种多功能、生物相容的电极平台，将可靠的生理监测与 AI 驱动的康复评估相结合，为下一代智能可穿戴生物电子学开辟了新途径。"
@@ -1113,6 +1120,39 @@
 "rank": 6.0
 },
 {
+"title": "As prior auth becomes an AI ‘arms race,’ Otter Health raises $8M for a different approach",
+"link": "https://www.fiercehealthcare.com/ai-and-machine-learning/otter-health-launches-8m-take-prior-authorization",
+"date": "2026-10-15T13:29:10.234543+00:00",
+"source": "Fierce Healthcare",
+"source_group": "Fierce Healthcare",
+"home": "",
+"thin": false,
+"badge": "",
+"pop": null,
+"id": "77c570c6efa7",
+"keep": true,
+"zh_title": "Otter Health获800万美元，切入预授权AI",
+"summary": "Otter Health融资800万美元，做实时临床质量AI平台，通过影响诊疗决策管理医疗利用，而非事后审批。",
+"key_points": [
+"融资800万美元，金额较小",
+"定位预授权AI竞争下的替代路线",
+"以实时影响诊疗决策替代申请审批"
+],
+"section": "产业动态",
+"type": "融资",
+"tags": [
+"融资与并购",
+"临床决策支持"
+],
+"evidence": "新闻",
+"score": 3,
+"reason": "小额融资加产品动态，无效果数据，属增量档",
+"abstract": "Prior authorization has long been a source of friction between payers and providers, and now, with algorithmic tools for claims reviews and LLMs for appeals, it's evolved into an AI \"arms race\" as | The company built an AI-powered real-time clinical quality platform to better manage healthcare utilization by influencing care decisions rather than requiring clinicians to get permission for them.",
+"day": "2026-10-15",
+"rank": 6.0,
+"zh_abstract": "事前授权长期以来一直是付款方与医疗服务提供方之间摩擦的根源，而如今，随着用于理赔审核的算法工具和用于申诉的大语言模型（LLMs），它已经演变成一场 AI“军备竞赛”，因为 | 该公司构建了一个由 AI 驱动的实时临床质量平台，通过影响照护决策而非要求临床医生就这些决策获得许可，来更好地管理医疗资源利用。"
+},
+{
 "title": "A pseudo-labeling approach for automated assignment of unlabeled proteins exceeding 100 amino acid residues.",
 "link": "https://pubmed.ncbi.nlm.nih.gov/42872102/",
 "date": "2026-09-28T00:00:00+00:00",
@@ -1140,7 +1180,6 @@
 "score": 3,
 "day": "2026-10-15",
 "rank": 6.87,
-"abstract_tries": 1,
 "abstract": "[Magnetic resonance letters] In the era of AI-driven protein structure prediction, there is an urgent demand for rapid, accessible experimental approaches to validate computationally predicted structural models or to improve the accuracy of AI-based structure determination. As a key experimental technique for determining protein structures in solution, conventional biomolecular NMR spectroscopy relies heavily on proteins labeled with 13C and 15N isotopes, a requirement that entails high experimental costs, lengthy sample preparation times, and steep technical barriers, thereby limiting its broader application. Building on our previous work, we have developed a pseudo-labeling strategy for the automated resonance assignment of unlabeled proteins. Using high-field NMR spectrometers equipped with cryoprobes, we acquired natural-abundance 1H-13C and 1H-15N heteronuclear correlation spectra directly from unlabeled samples. By integrating predicted chemical shifts of HN, Hα, 13Cα, and 15N from three complementary AI tools into an iterative simulated annealing framework with an alternating scoring scheme, our method effectively resolves severe cross-peak overlap during the automated assignment process by introducing heteronuclear dimensional constraints. This approach enables reliable automated backbone resonance assignment for unlabeled proteins exceeding 100 amino acid residues. We anticipate that this labeling-free strategy will lower the technical barrier to biomolecular NMR, enabling researchers without specialized NMR expertise to employ NMR spectroscopy in fundamental life science research and drug development.",
 "reason": "实验方法学进展，与AI算法仅间接相关，属增量档",
 "zh_abstract": "[Magnetic resonance letters] 在 AI 驱动的蛋白质结构预测时代，迫切需要快速、易获取的实验方法来验证计算预测的结构模型，或提高基于 AI 的结构测定的准确性。作为在溶液中测定蛋白质结构的关键实验技术，传统生物分子 NMR 波谱学严重依赖用 13C 和 15N 同位素标记的蛋白质，这一要求带来高实验成本、冗长的样品制备时间和陡峭的技术门槛，从而限制了其更广泛的应用。在我们先前工作的基础上，我们开发了一种用于未标记蛋白质自动共振归属的伪标记策略。使用配备低温探针的高场 NMR 波谱仪，我们直接从无标记样品中采集天然丰度的 1H-13C 和 1H-15N 异核相关谱。通过将来自三种互补 AI 工具的 HN、Hα、13Cα 和 15N 预测化学位移整合到具有交替评分方案的迭代模拟退火框架中，我们的方法通过引入异核维度约束，有效解决了自动归属过程中严重的交叉峰重叠问题。该方法能够对超过 100 个氨基酸残基的未标记蛋白质进行可靠的自动主链共振归属。我们预期，这种无标记策略将降低生物分子 NMR 的技术门槛，使不具备 NMR 专业知识的研究人员也能在基础生命科学研究和药物开发中使用 NMR 波谱学。"
@@ -1263,7 +1302,6 @@
 "reason": "未涉及AI或算法，仅患者需求定性研究，相关性弱",
 "day": "2026-10-15",
 "rank": 5.64,
-"abstract_tries": 1,
 "abstract": "Background: Patient Decision aids (PtDAs) are important tools that support shared decision-making (SDM) between clinicians and patients, enabling patients to be more informed and engaged in decisions regarding their care. The use of PtDAs can increase patient knowledge, reduce decisional regret, and engage the clinician and patient in meaningful dialogue. Shared decision-making relies on decision aids, but how patients receive the PtDA can vary. This qualitative study elucidated patient familiarity with PtDAs and the barriers, needs, and requirements of patients to access and confidently use DAs, including when received via a clinician-facing EHR-integrated Decision Aid Navigator System (DEANS). Methods: We conducted six focus groups (FG) with participants who were recruited from two academic medical centers. Focus groups included an introduction to what a PtDA is and an exploration of how patients or family members, i.e., people who had not made a medical decision for themselves using a PtDA, but who have helped a family member, had previously used PtDAs in their healthcare. The FGs focused on PtDA-users, affordances and barriers to using PtDAs, and PtDA-user needs and requirements of a proposed DEAN patient portal. We applied Rapid Qualitative Analysis (RQA) to summarize the data, using a consensus making approach to identify emerging themes. Results: We identified three overarching themes: 1) Patients had varied familiarity with PtDAs and often confused them with general health tools, but found value in SDM, 2) Patients perceived technology accessibility, PtDA credibility, and time as barriers potentially impeding PtDA use, and 3) Patients valued flexible, user-friendly, and accessible PtDAs that support patient-led decisions, particularly when introduced by clinicians and delivered via a patient portal. Conclusion: This study provides patient-derived insights into factors that influence PtDA uptake, highlighting common misconceptions about PtDAs and identifying key patient priorities such as accessibility, flexibility, clear content, and clinician-guided usage. Patient also expected clinicians to be familiar with PtDAs, especially when the PtDA covers a complex decision. These findings can inform the development of more patient-centered SDM infrastructure and strategies to support PtDA use in clinical practice, including clinician-supported delivery, accessibility, and integration into routine care to strengthen shared decision-making.",
 "zh_abstract": "【背景】患者决策辅助工具（Patient Decision aids, PtDAs）是支持临床医生与患者之间共享决策（shared decision-making, SDM）的重要工具，使患者能够更知情并参与有关其照护的决策。使用 PtDAs 可以增加患者知识、减少决策后悔，并使临床医生和患者进行有意义的对话。共享决策依赖决策辅助工具，但患者获得 PtDA 的方式可能各不相同。这项定性研究阐明了患者对 PtDAs 的熟悉程度，以及患者获取并自信使用 DAs 的障碍、需求和要求，包括当通过面向临床医生的、与 EHR 集成的决策辅助导航系统（Decision Aid Navigator System, DEANS）获得时。【方法】我们开展了六个焦点小组（focus group, FG），参与者从两个学术医疗中心招募。焦点小组包括介绍什么是 PtDA，并探讨患者或家庭成员（即未曾自己使用 PtDA 做出医疗决定、但曾帮助过家庭成员的人）此前在其医疗保健中如何使用 PtDAs。焦点小组聚焦于 PtDA 使用者、使用 PtDAs 的可供性与障碍，以及拟议的 DEAN 患者门户的 PtDA 使用者需求和要求。我们应用快速定性分析（Rapid Qualitative Analysis, RQA）来总结数据，使用共识制定方法识别新出现的主题。【结果】我们确定了三个总体主题：1）患者对 PtDAs 的熟悉程度各异，常将其与一般健康工具混淆，但认为 SDM 有价值；2）患者认为技术可及性、PtDA 可信度和时间是可能阻碍 PtDA 使用的障碍；3）患者重视灵活、用户友好且可及的 PtDAs，这些工具支持患者主导的决策，尤其是当由临床医生介绍并通过患者门户提供时。【结论】本研究提供了来自患者的洞见，揭示影响 PtDA 采用的因素，强调了关于 PtDAs 的常见误解，并确定了患者的关键优先事项，如可及性、灵活性、清晰内容和临床医生指导的使用。患者还期望临床医生熟悉 PtDAs，尤其是当 PtDA 涉及复杂决策时。这些发现可为开发更以患者为中心的 SDM 基础设施和策略提供信息，以支持临床实践中 PtDA 的使用，包括临床医生支持的提供、可及性以及整合到常规照护中，以加强共享决策。"
 },
