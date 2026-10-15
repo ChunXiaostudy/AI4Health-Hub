@@ -594,6 +594,39 @@
 "rank": 8.31
 },
 {
+"title": "PatientPheX: A Full-Text Biomedical Corpus for Patient-Specific Phenotype Information Extraction",
+"link": "https://www.biorxiv.org/content/10.64898/2026.10.07.757319v1?rss=1",
+"date": "2026-10-15T00:00:00+00:00",
+"source": "bioRxiv",
+"source_group": "bioRxiv",
+"home": "",
+"thin": false,
+"badge": "DOI 10.64898/2026.10.07.757319v1",
+"pop": null,
+"id": "13393b70cbbb",
+"keep": true,
+"zh_title": "PatientPheX：患者特异性表型抽取全文语料",
+"summary": "bioRxiv 发布 PatientPheX 语料，含 200 篇全文文献的患者—表型实体标注与跨句关联，用于病例报告表型抽取。",
+"key_points": [
+"含 200 篇全文文献，以病例报告与病例系列为主",
+"标注 7 类生物医学实体及患者—实体关联",
+"覆盖跨句跨段关联，并标注否定与复合表型"
+],
+"section": "大模型与智能体",
+"type": "论文",
+"tags": [
+"临床NLP",
+"数据集"
+],
+"evidence": "预印本",
+"score": 5,
+"reason": "新标注语料有方法新意，但仅200篇、无外部评测，属值得一看档",
+"abstract": "Patient-specific phenotype information extraction identifiers and normalizes phenotype entities and links them with individual patients, supporting rare disease research and genotype-phenotype analysis. However, existing datasets rarely combine full-text biomedical content with detailed annotations of patients, phenotypes, related entities, and their associations. In this work, we present PatientPheX, a corpus for patient-specific phenotype information extraction comprising 200 full-text articles, primarily case reports and case series. The corpus provides mention annotations and normalization for seven biomedical entity types, together with explicit associations between patients and entities across sentences, paragraphs, and sections. Negated findings and composite phenotype mentions are also annotated. Corpus construction combines automated pre-annotation, large language model (LLM)-assisted verification, and manual review and adjudication. Benchmarks cover entity recognition and normalization and patient-phenotype association extraction using gold-standard and predicted entities. The overall document-level entity F1 was 86.95%, while phenotype F1 was 79.33%. The best relation extraction macro-F1 decreased from 84.14% with gold-standard entities to 54.98% with predicted entities, highlighting the combined challenges of phenotype extraction and patient attribution. PatientPheX provides a resource for developing and evaluating patient-centered information extraction methods and supports the construction of structured patient-level knowledge resources for phenotype-driven biomedical research.",
+"day": "2026-10-15",
+"rank": 8.0,
+"zh_abstract": "患者特异性表型信息抽取（patient-specific phenotype information extraction）识别并规范化表型实体，并将其与个体患者关联，支持罕见病研究和基因型-表型分析。然而，现有数据集很少将全文生物医学内容与患者、表型、相关实体及其关联的详细标注相结合。在本研究中，我们提出 PatientPheX，一个用于患者特异性表型信息抽取的语料库，包含 200 篇全文文章，主要是病例报告和病例系列。该语料库为七种生物医学实体类型提供提及标注和规范化，并提供跨句子、段落和章节的患者与实体之间的显式关联。否定发现和复合表型提及也进行了标注。语料库构建结合了自动预标注、大型语言模型（LLM）辅助验证以及人工审核和裁定。基准测试涵盖使用金标准和预测实体的实体识别与规范化以及患者-表型关联抽取。整体文档级实体 F1 为 86.95%，而表型 F1 为 79.33%。最佳关系抽取宏 F1 从使用金标准实体时的 84.14% 下降到使用预测实体时的 54.98%，凸显了表型抽取和患者归属的综合挑战。PatientPheX 为开发和评估以患者为中心的信息抽取方法提供了资源，并支持为表型驱动的生物医学研究构建结构化的患者级知识资源。"
+},
+{
 "title": "pardesline/pardesline",
 "link": "https://github.com/pardesline/pardesline",
 "date": "2026-10-10T18:53:11Z",

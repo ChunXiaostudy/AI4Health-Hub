@@ -1,6 +1,67 @@
 {
  "runs": [
   {
+   "time": "2026-10-15T08:05:28.048500+00:00",
+   "sources": {
+    "arXiv": {
+     "fetched": 60,
+     "error": null
+    },
+    "medRxiv": {
+     "fetched": 30,
+     "error": null
+    },
+    "bioRxiv": {
+     "fetched": 7,
+     "error": null
+    },
+    "PubMed": {
+     "fetched": 25,
+     "error": null
+    },
+    "Nature Medicine": {
+     "fetched": 0,
+     "error": null
+    },
+    "npj Digital Medicine": {
+     "fetched": 8,
+     "error": null
+    },
+    "Lancet Digital Health": {
+     "fetched": 12,
+     "error": null
+    },
+    "NEJM AI": {
+     "fetched": 9,
+     "error": null
+    },
+    "Hugging Face": {
+     "fetched": 15,
+     "error": null
+    },
+    "GitHub": {
+     "fetched": 15,
+     "error": null
+    },
+    "STAT News": {
+     "fetched": 6,
+     "error": null
+    },
+    "Fierce Healthcare": {
+     "fetched": 5,
+     "error": null
+    },
+    "Google News · FDA AI": {
+     "fetched": 15,
+     "error": null
+    },
+    "Google News · NMPA AI": {
+     "fetched": 10,
+     "error": null
+    }
+   }
+  },
+  {
    "time": "2026-10-15T07:20:02.888783+00:00",
    "sources": {
     "arXiv": {
@@ -555,8 +616,8 @@
   "medRxiv": 0,
   "bioRxiv": 0,
   "PubMed": 0,
-  "Nature Medicine": 1,
-  "npj Digital Medicine": 1,
+  "Nature Medicine": 2,
+  "npj Digital Medicine": 0,
   "Lancet Digital Health": 0,
   "NEJM AI": 0,
   "Hugging Face": 0,
