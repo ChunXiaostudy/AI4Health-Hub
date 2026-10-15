@@ -44,7 +44,7 @@ SOURCES = [
 ]
 PROMPT = """你是严谨克制的医疗 AI 情报编辑。根据给定条目（仅依据其中提供的信息）生成中文结构化摘要。
 规则：只陈述来源中的事实，绝不编造数字、结论或机构；不夸大；绝不给出任何医疗建议或诊疗推荐；预印本须视为未经同行评审。
-若条目与 AI/算法在医疗健康、生物医学中的应用无关，keep=false。"""
+若条目与 AI/算法在医疗健康、生物医学中的应用无关，keep=false；AI 只是顺带提及、信息几乎为零的宣传稿或旧闻重复报道，也 keep=false。拿不准时倾向 keep=false。"""
 RUBRIC = open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "prompts", "score_rubric.md"), encoding="utf-8").read()
 FIELDS = """keep(bool), zh_title(中文标题,≤40字), summary(一句话摘要,≤80字), key_points(3条要点数组,每条≤30字), section(从可选 section 中按研究/事件所属方向选一，见各方向说明), type(论文/模型/监管/融资/观点 之一，表示内容形式), tags(从可选 tags 中选 1-3 个), evidence(预印本/同行评审/已获批/新闻 之一, 参考 evidence_hint；FDA/NMPA 批准类为 已获批), score(1-10 重要性整数，严格按下方评分标准), reason(打分理由,≤40字,点明对应评分标准中的档位与加减分依据,如「多中心外部验证+临床结局，属重要档」)"""
 

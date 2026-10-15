@@ -1,4 +1,4 @@
-import os, sys
+import os, sys, json, tempfile
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 import hub, evalset, conf
 
@@ -103,6 +103,39 @@ def test_backfill_uses_feed_and_redoes_summary():
     finally: hub.enrich_all, hub.translate_all = e, t
     assert old["abstract"].startswith("Background") and old["summary"] == "new" and old["score"] == 8 and calls["t"] == ["p1"]
     assert "abstract_tries" not in news and old["abstract_tries"] == 1   # news sources are never backfilled
+
+def test_verdicts_rejected_and_pool():
+    batch = [dict(id=k, title=k, source="arXiv", desc="d") for k in ("keep", "drop", "missing")]
+    raw = hub.llm_raw
+    hub.llm_raw = lambda *a, **k: [dict(i=0, keep=True, score=6, tags=[]), dict(i=1, keep=False)]
+    try: out = hub.enrich(batch)
+    finally: hub.llm_raw = raw
+    assert [b["id"] for b in out] == ["keep"] and [b["_verdict"] for b in batch] == [True, False, None]
+    cwd, tmp = os.getcwd(), tempfile.mkdtemp()
+    os.chdir(tmp)
+    try:
+        os.makedirs("data")
+        hub.save_pool(batch); hub.save_pool(batch)   # re-run on the same day does not duplicate rows
+        rows = [json.loads(l) for l in open(f"data/pool/{hub.TODAY}.jsonl")]
+        assert [(r["id"], r["model_keep"]) for r in rows] == [("keep", True), ("drop", False), ("missing", None)]
+        rej = hub.save_rejected({"old": "2000-01-01"}, batch)
+        assert rej == {"drop": hub.TODAY} and hub.load_rejected() == rej   # failures are retried, expired ids pruned
+    finally: os.chdir(cwd)
+
+def test_unknown_date_gets_no_freshness():
+    it = dict(score=6, source="arXiv", day="2026-10-14", date="not a date")
+    assert hub.age_days(it) > hub.FEATURED_MAX_AGE and hub.rank_parts(it)["新鲜度"] < 1
+
+def test_local_favicons():
+    cwd, tmp = os.getcwd(), tempfile.mkdtemp()
+    os.chdir(tmp)
+    try:
+        os.makedirs("data/fav")
+        open("data/fav/www.nature.com.png", "wb").write(b"png"); open("data/fav/empty.org.png", "wb").write(b"")
+        assert hub.fav_img(dict(link="https://www.nature.com/articles/x"), "../") .startswith('<img src="../fav/www.nature.com.png"')
+        assert hub.fav_img(dict(link="https://empty.org/a")) == "" and hub.fav_img(dict(link="https://unknown.org/a")) == ""
+        assert "google.com" not in hub.card(dict(id="x", title="t", link="https://www.nature.com/a", source="s", tags=[]))
+    finally: os.chdir(cwd)
 
 if __name__ == "__main__":
     for k, f in list(globals().items()):
