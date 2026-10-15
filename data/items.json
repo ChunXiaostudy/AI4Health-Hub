@@ -2745,7 +2745,13 @@
   "score": 5,
   "day": "2026-10-14",
   "thin": true,
-  "source_group": "Google News · FDA AI"
+  "source_group": "Google News · FDA AI",
+  "also": [
+   {
+    "source": "HIT Consultant",
+    "link": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxPWjFsaXZ2ZXlCLS1EM21naHprODRCVTJINUxZcUZENmZHd2JWZ0lVYWhLTnFuMFAtTkNDMUh5YU1wS2d0cXR2clYyT01Nc2U3aUFWZkplQ0MtN18walpHcTVxNHBiWkc4YTd1SWk1dzQ3NGhWSEs2S2RZT3lqQzVBSjhnbmxiMlZQd1l3eEhfeHFzVUZFb1FUVWdKLUxaeDlnQ2JCNWwwQmRtbF9zT1lZZVI1ZkRteXpJQkJzU0NsaEgzQQ?oc=5"
+   }
+  ]
  },
  {
   "title": "金域医学终止对DRA公司投资；晶泰科技开源化学反应产率定量AI模型 - 21财经",
