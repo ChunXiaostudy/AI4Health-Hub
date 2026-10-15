@@ -102,7 +102,27 @@ def test_backfill_uses_feed_and_redoes_summary():
     try: hub.backfill([old, news], [(None, [fresh], None)])
     finally: hub.enrich_all, hub.translate_all = e, t
     assert old["abstract"].startswith("Background") and old["summary"] == "new" and old["score"] == 8 and calls["t"] == ["p1"]
-    assert "abstract_tries" not in news and old["abstract_tries"] == 1   # news sources are never backfilled
+    assert "abstract_days" not in news and "abstract_days" not in old   # news never backfilled; success clears the retry log
+
+def test_backfill_retries_once_a_day_and_records_why():
+    p = dict(id="p2", title="T", source="npj Digital Medicine", source_group="npj Digital Medicine", link="https://x/3", badge="DOI 10.1/x", day="2026-10-15", abstract_tries=3)
+    fns = hub.fill_abstract, hub.europepmc_abstract, hub.openalex_abstract
+    hub.fill_abstract = lambda x: x.update(_abs_err="page: HTTP Error 403: Forbidden")
+    hub.europepmc_abstract = lambda doi: ""
+    hub.openalex_abstract = lambda doi: "Background: " + "y" * 300
+    try:
+        ab, err = hub.find_abstract(p, {})
+        assert ab.startswith("Background") and err == ""
+        hub.openalex_abstract = lambda doi: (_ for _ in ()).throw(ValueError("404"))
+        hub.backfill([p], [])     # an exhausted old counter no longer blocks it
+        assert p["abstract_days"] == [hub.TODAY] and "abstract_tries" not in p
+        assert p["abstract_err"] == "page: HTTP Error 403: Forbidden; europepmc: empty; openalex: 404"
+        hub.backfill([p], [])     # not retried twice on the same day
+        assert p["abstract_days"] == [hub.TODAY]
+        p["abstract_days"] = ["d%d" % k for k in range(hub.BACKFILL_DAYS)]
+        hub.backfill([p], [])     # gives up after BACKFILL_DAYS distinct days
+        assert len(p["abstract_days"]) == hub.BACKFILL_DAYS
+    finally: hub.fill_abstract, hub.europepmc_abstract, hub.openalex_abstract = fns
 
 def test_verdicts_rejected_and_pool():
     batch = [dict(id=k, title=k, source="arXiv", desc="d") for k in ("keep", "drop", "missing")]
