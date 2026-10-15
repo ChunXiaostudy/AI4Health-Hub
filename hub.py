@@ -230,8 +230,9 @@ def fill_abstract(it):
     s = None
     for a in range(2):  # publishers drop some requests under load; one polite retry
         try: s = get(it["link"], timeout=15).decode("utf-8", "ignore"); break
-        except Exception: time.sleep(2)
+        except Exception as ex: it["_abs_err"] = f"page: {str(ex)[:80]}"; time.sleep(2)
     if s is None: return it
+    it.pop("_abs_err", None)
     best = it.get("desc") or ""
     for k in META_KEYS:
         m = re.search(r'<meta[^>]+(?:name|property)="' + re.escape(k) + r'"[^>]+content="([^"]*)"', s, re.I)
@@ -239,6 +240,7 @@ def fill_abstract(it):
         if len(txt) > len(best) and not txt.lower().startswith("abstract page for"): best = txt
     if len(best) > len(it.get("desc") or ""):
         it["desc"] = best; it["thin"] = len(best) < 80
+    if len(best) < 200: it["_abs_err"] = f"page: no abstract in meta ({len(s)} bytes, best {len(best)} chars)"
     return it
 
 FETCH = dict(rss=f_rss, arxiv=f_arxiv, github=f_github, hf=f_hf, pubmed=f_pubmed)
@@ -365,6 +367,7 @@ def save_archive_day(day, items):
 
 POOL_FIELDS = ("id", "title", "link", "date", "source", "source_group", "desc", "evidence_hint", "thin")
 BACKFILL_MAX = int(os.getenv("BACKFILL_MAX", "60"))  # older paper items re-processed per run once an abstract is found
+BACKFILL_DAYS = 7  # try each item on at most this many distinct days (at most once a day): indexes like OpenAlex lag a few days
 
 def europepmc_abstract(doi):
     q = urllib.parse.quote(f'DOI:"{doi}"')
@@ -376,32 +379,52 @@ def pubmed_abstract(pmid):
     root = ET.fromstring(get("https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&retmode=xml&id=" + pmid, timeout=20))
     return clean(" ".join("".join(x.itertext()) for x in root.iter("AbstractText")), ABS_MAX)
 
+def openalex_abstract(doi):
+    r = json.loads(get("https://api.openalex.org/works/doi:" + urllib.parse.quote(doi), timeout=20))
+    pos = sorted((p, w) for w, ps in (r.get("abstract_inverted_index") or {}).items() for p in ps)
+    return clean(" ".join(w for _, w in pos), ABS_MAX)
+
 def find_abstract(it, fresh):
-    """Abstract for an item collected before abstracts were stored: same-run feed entry > article page meta > Europe PMC / PubMed."""
+    """Abstract for a paper item: same-run feed entry > article page meta > PubMed > Europe PMC > OpenAlex.
+    Returns (abstract, why it failed); the reason is kept on the item so CI failures are visible in items.json."""
     f = fresh.get(it["id"])
-    if f and len(f.get("desc") or "") >= 200: return f["desc"]
+    if f and len(f.get("desc") or "") >= 200: return f["desc"], ""
     x = dict(link=it["link"], desc="")
     fill_abstract(x)
-    if len(x["desc"]) >= 200: return x["desc"]
-    try:
-        m = re.search(r"pubmed\.ncbi\.nlm\.nih\.gov/(\d+)", it["link"])
-        if m: return pubmed_abstract(m.group(1))
-        doi = (it.get("badge") or "")[4:] if (it.get("badge") or "").startswith("DOI ") else ""
-        if doi: return europepmc_abstract(doi)
-    except Exception as ex:
-        print(f"[backfill] {it['id']}: {ex}", file=sys.stderr)
-    return ""
+    if len(x["desc"]) >= 200: return x["desc"], ""
+    errs = [x.get("_abs_err") or "page: skipped"]
+    m = re.search(r"pubmed\.ncbi\.nlm\.nih\.gov/(\d+)", it["link"])
+    doi = (it.get("badge") or "")[4:] if (it.get("badge") or "").startswith("DOI ") else ""
+    tries = ([("pubmed", pubmed_abstract, m.group(1))] if m else []) + ([("europepmc", europepmc_abstract, doi), ("openalex", openalex_abstract, doi)] if doi else [])
+    for name, fn, key in tries:
+        try:
+            ab = fn(key)
+            if len(ab) >= 200: return ab, ""
+            errs.append(f"{name}: empty")
+        except Exception as ex:
+            errs.append(f"{name}: {str(ex)[:60]}")
+    if not tries: errs.append("no DOI / PMID")
+    return "", "; ".join(errs)
 
 def backfill(db, results):
-    """Paper items collected before abstracts were kept: find the abstract, redo summary/score from it, translate. Each item gets up to 3 runs."""
+    """Paper items without an abstract: find it, redo summary/score from it, translate.
+    Each item is tried at most once a day, on up to BACKFILL_DAYS distinct days."""
     fresh = {it["id"]: it for _, res, _ in results for it in res}
-    todo = [d for d in db if not d.get("abstract") and d.get("abstract_tries", 0) < 3 and (d.get("source_group") or d.get("source")) in PAPER_SOURCES]
+    for d in db:  # the old per-run counter was used up within hours by repeated manual runs; restart under the per-day budget
+        d.pop("abstract_tries", None)
+    todo = [d for d in db if not d.get("abstract") and (d.get("source_group") or d.get("source")) in PAPER_SOURCES
+            and TODAY not in d.get("abstract_days", []) and len(d.get("abstract_days", [])) < BACKFILL_DAYS]
     todo = sorted(todo, key=lambda d: d.get("day", ""), reverse=True)[:BACKFILL_MAX]
-    with cf.ThreadPoolExecutor(3) as ex: abstracts = list(ex.map(lambda d: find_abstract(d, fresh), todo))
-    got = []
-    for d, ab in zip(todo, abstracts):
-        d["abstract_tries"] = d.get("abstract_tries", 0) + 1
-        if len(ab) >= 200: d["abstract"] = ab; d["thin"] = False; got.append(d)
+    with cf.ThreadPoolExecutor(3) as ex: found = list(ex.map(lambda d: find_abstract(d, fresh), todo))
+    got, errs = [], {}
+    for d, (ab, err) in zip(todo, found):
+        d["abstract_days"] = d.get("abstract_days", []) + [TODAY]
+        if len(ab) >= 200:
+            d["abstract"] = ab; d["thin"] = False; d.pop("abstract_err", None); d.pop("abstract_days", None); got.append(d)
+        else:
+            d["abstract_err"] = err
+            k = err.split(";")[0][:50]; errs[k] = errs.get(k, 0) + 1
+    for k, n in sorted(errs.items(), key=lambda x: -x[1]): print(f"[backfill] {n}× {k}", file=sys.stderr)
     redo = [dict(title=d["title"], source=d["source"], desc=d["abstract"][:900], evidence_hint=d.get("evidence") or "", thin=False, _pid=d["id"]) for d in got]
     by = {d["id"]: d for d in got}
     for r in enrich_all(redo) if redo else []:
