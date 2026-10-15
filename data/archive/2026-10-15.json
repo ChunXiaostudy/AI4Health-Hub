@@ -176,6 +176,33 @@
 "rank": 10.0
 },
 {
+"title": "ThinkSono Secures FDA Clearance for Ultrasound AI Software for Blood Clots",
+"link": "https://news.google.com/rss/articles/CBMiswFBVV95cUxPdGtUb01kelczNDZrWkdnbFRkbG1vTTcxN1R2U0FMSWpENmxDbGwwRk9wRm55a1dDWExYNTlOUGpGU3E3QTRhQzhjakRoOXlCV1A4NDZMMVVrNzdBamRTbUoyMDdvNW10Nzc5UThRd0ZXc01NLVpXQmlIVjZrT0xvR182dFZUaDM2ZVlnMm1meVBMaXplejhSOTY4c0xCNHQ5dWlTM3diUGdRWDVWeEk1TlpnQQ?oc=5",
+"date": "2026-10-15T06:22:44+00:00",
+"source": "Medical Product Outsourcing",
+"source_group": "Google News · FDA AI",
+"home": "https://www.mpo-mag.com",
+"thin": true,
+"badge": "",
+"pop": null,
+"id": "58b22128ba35",
+"keep": true,
+"zh_title": "ThinkSono 超声 AI 血栓检测软件获 FDA 许可",
+"summary": "ThinkSono 的超声 AI 软件获得 FDA 许可，用于血栓（血凝块）检测。",
+"key_points": [],
+"section": "临床落地与监管",
+"type": "监管",
+"tags": [
+"医疗器械",
+"医学影像"
+],
+"evidence": "已获批",
+"score": 6,
+"reason": "FDA 许可属实质监管进展，但仅标题信息，受上限约束",
+"day": "2026-10-15",
+"rank": 10.0
+},
+{
 "title": "SVC: A Vision Transformer-based Spatially and Virtually Embedded Cell Model for Deciphering Subcellular Spatial Transcriptomic Heterogeneity",
 "link": "https://www.biorxiv.org/content/10.64898/2026.10.07.757371v1?rss=1",
 "date": "2026-10-14T00:00:00+00:00",
@@ -786,6 +813,33 @@
 "score": 4,
 "day": "2026-10-15",
 "rank": 6.31
+},
+{
+"title": "Funding Tracker '26: Ours Privacy, Arintra and Happy Health",
+"link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxQaFJTdWtYZzBuMHVULWhJWFV3dVB3d0NfeEE1V0RMcV82Z2VFZ2ZtV2x2ZDBYTG1ZUnQ1RGFsZ0pFWmNFZW1rczNCOFRDUjFCTlFvUEplLVFuZmpHRVpfS2pZX3M1ZjZDaFUzZVV3QURjclpScmZlVndpaWlaN3hBNU11dWRpMkxmamp5ZXhR?oc=5",
+"date": "2026-10-15T00:56:23+00:00",
+"source": "Fierce Healthcare",
+"source_group": "Google News · FDA AI",
+"home": "https://www.fiercehealthcare.com",
+"thin": true,
+"badge": "",
+"pop": null,
+"id": "9b6679e9ae6f",
+"keep": true,
+"zh_title": "2026融资追踪：Ours Privacy、Arintra与Happy Health",
+"summary": "融资追踪报道Ours Privacy、Arintra与Happy Health三家公司的融资动态。",
+"key_points": [],
+"section": "产业与融资",
+"type": "融资",
+"tags": [
+"数字健康",
+"融资与并购"
+],
+"evidence": "新闻",
+"score": 3,
+"reason": "标题仅列公司名，信息量低且非AI专指，属增量档上限",
+"day": "2026-10-15",
+"rank": 6.0
 },
 {
 "title": "faizaltkl/medical-gemma-300m-emb",
