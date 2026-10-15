@@ -29,7 +29,7 @@
 "score": 7,
 "day": "2026-10-15",
 "rank": 12.31,
-"abstract_tries": 1
+"abstract_tries": 2
 },
 {
 "title": "From research to clinical practice: Expert consensus on Neuroimaging AI tools for the Memory clinic (Neuro-AIM)",
@@ -61,7 +61,7 @@
 "score": 6,
 "day": "2026-10-15",
 "rank": 11.31,
-"abstract_tries": 1
+"abstract_tries": 2
 },
 {
 "title": "CorVista System With Pulmonary Capillary Wedge Pressure Add-On Earns FDA Clearance",
@@ -173,7 +173,7 @@
 "score": 4,
 "day": "2026-10-15",
 "rank": 9.64,
-"abstract_tries": 1
+"abstract_tries": 2
 },
 {
 "title": "Characterizing time-of-day physical activity patterns across cognitive trajectories in older adults: a longitudinal cohort study",
@@ -207,6 +207,35 @@
 "day": "2026-10-15",
 "rank": 9.5,
 "zh_abstract": "npj Digital Medicine，在线发表：2026年10月15日；doi:10.1038/s41746-026-03370-2 表征老年人不同认知轨迹中的一天内身体活动模式：一项纵向队列研究"
+},
+{
+"title": "Implementation and effectiveness of a smartphone app targeted at improving physicians adherence to antimicrobial treatment guidelines",
+"link": "https://www.nature.com/articles/s41746-026-03401-y",
+"date": "2026-10-15T00:00:00+00:00",
+"source": "npj Digital Medicine",
+"source_group": "npj Digital Medicine",
+"home": "",
+"thin": false,
+"badge": "DOI 10.1038/s41746-026-03401-y",
+"pop": null,
+"id": "e84bdc4ba132",
+"keep": true,
+"zh_title": "智能手机App提升医生抗菌治疗指南依从性",
+"summary": "npj Digital Medicine刊文报告一款提高医生对抗菌治疗指南依从性的智能手机应用的实施与效果。",
+"key_points": [],
+"section": "数字健康",
+"type": "论文",
+"tags": [
+"数字健康",
+"临床决策支持"
+],
+"evidence": "同行评审",
+"score": 4,
+"reason": "仅有标题信息，无数据与设计细节，属增量档",
+"abstract": "npj Digital Medicine, Published online: 15 October 2026; doi:10.1038/s41746-026-03401-y Implementation and effectiveness of a smartphone app targeted at improving physicians adherence to antimicrobial treatment guidelines",
+"day": "2026-10-15",
+"rank": 9.5,
+"zh_abstract": "npj Digital Medicine，在线发表：2026年10月15日；doi:10.1038/s41746-026-03401-y 一款旨在提高医生对抗微生物治疗指南依从性的智能手机应用程序的实施与有效性"
 },
 {
 "title": "Sequence models reveal diagnosis accumulation pathways beyond comorbidity burden in population-scale hospital data",
@@ -301,7 +330,7 @@
 "score": 4,
 "day": "2026-10-15",
 "rank": 9.31,
-"abstract_tries": 1
+"abstract_tries": 2
 },
 {
 "title": "A “growth mindset of mental health” intervention increases the likelihood of initiating self-help on a mental health app: a randomized controlled trial",
@@ -332,7 +361,7 @@
 "score": 4,
 "day": "2026-10-15",
 "rank": 9.14,
-"abstract_tries": 1
+"abstract_tries": 2
 },
 {
 "title": "Confido Health nabs $12.5M to scale agentic AI across PE-backed medical groups",
@@ -850,6 +879,39 @@
 "zh_abstract": "生存预测经常表现出不稳定且不可重复的性能，限制了其临床应用。本文并非提出新的预测架构，而是对造成这种不稳定性的来源进行诊断性研究。使用一个基于 transformer 的深度融合模型，结合来自 TCGA-BRCA 队列的 RNA 测序和组织病理学数据作为诊断探针，我们证明全局生存预测在不同数据划分之间高度不稳定。然后我们以无监督方式分析学到的多模态嵌入，揭示出具有显著不同生存结局的稳定潜在患者亚组。这些亚组不能由经典受体状态或免疫浸润解释，而是与肿瘤内在增殖活性一致。以发现的最大亚组为条件进行生存建模，恢复了强且稳定的预后性能，显著优于单模态基线。这些发现表明，生存可预测性以潜在异质性为条件，并提示异质性感知建模策略对于稳健的多模态预后至关重要。这项工作为解释多模态生存学习中的不稳定性建立了一个方法学框架。"
 },
 {
+"title": "Neuroimaging Biomarkers for Brain Disorder Diagnosis Using Advanced Learning Techniques.",
+"link": "https://pubmed.ncbi.nlm.nih.gov/42786613/",
+"date": "2026-09-25T00:00:00+00:00",
+"badge": "DOI 10.1142/S0129065727500158",
+"source": "PubMed · International journal of neural systems",
+"source_group": "PubMed",
+"home": "",
+"thin": false,
+"pop": null,
+"id": "4631d5000dce",
+"keep": true,
+"zh_title": "机器学习与深度学习用于fMRI脑疾病诊断生物标志物",
+"summary": "该文聚焦用机器学习与深度学习分析fMRI/静息态fMRI，识别与双相障碍、阿尔茨海默病相关的脑部特征。",
+"key_points": [
+"静息态fMRI可反映脑功能连接与区域交互",
+"用ML/DL寻找BD与AD相关脑特征",
+"fMRI数据处理用于定位认知功能区"
+],
+"section": "影像与病理",
+"type": "论文",
+"tags": [
+"医学影像",
+"神经科学"
+],
+"evidence": "同行评审",
+"score": 4,
+"reason": "综述性方法总结，未见外部验证或临床结局，属增量档",
+"abstract": "[International journal of neural systems] Mental illness is becoming increasingly common in everyday life, affecting a growing number of people. Functional Magnetic Resonance Imaging (fMRI) is an effective technique for detecting mental disorders. Resting-state fMRI (rs-fMRI) analyses spontaneous low-frequency oscillations in the Blood Oxygen Level Dependent signal to examine the functional architecture of the brain. fMRI and rs-fMRI data processing contribute to mapping neural activity in specific brain regions, enabling accurate localization of cognitive functions and improving our understanding of Functional Connectivity and interactions among brain regions. This paper focuses on the use of Machine Learning and Deep Learning techniques for fMRI analysis to identify brain features that may be associated with Bipolar Disorder (BD) and Alzheimer's Disease (AD). The first step in the proposed approach is the preprocessing of fMRI and rs-fMRI data using two distinct methods: the first combines Statistical Parametric Mapping and the CONN toolbox for improved results, and the second focuses on the MELODIC software. The proposed approach begins with fMRI and rs-fMRI preprocessing using two pipelines: one integrating Statistical Parametric Mapping (SPM) with the CONN toolbox and another based on the MELODIC framework. The aim is to evaluate how preprocessing choices affect functional connectivity representations and classification performance when combined with classical Machine Learning (ML) methods, namely Support Vector Machines and Random Forests, and the Deep Learning (DL) model AlexNet. Given the altered brain connectivity patterns observed in Bipolar Disorder and Alzheimer's Disease, these methods are employed to assess preprocessing-learning interactions across both disorders. Experimental results emphasize that Connbox-SPM preprocessing combined with AlexNet yields the best results for both mental disorders, with Bipolar Disorder reporting 78.2% accuracy and AD achieving 82.4% accuracy.",
+"day": "2026-10-15",
+"rank": 6.78,
+"zh_abstract": "[International Journal of Neural Systems] 精神疾病在日常生活中正变得越来越常见，影响着越来越多的人。功能磁共振成像（Functional Magnetic Resonance Imaging，fMRI）是检测精神障碍的一种有效技术。静息态 fMRI（resting-state fMRI，rs-fMRI）分析血氧水平依赖信号中的自发低频振荡，以检查大脑的功能架构。fMRI 和 rs-fMRI 数据处理有助于绘制特定脑区的神经活动，从而能够准确定位认知功能，并增进我们对功能连接（Functional Connectivity）以及脑区之间相互作用的理解。本文关注使用机器学习和深度学习技术进行 fMRI 分析，以识别可能与双相情感障碍（Bipolar Disorder，BD）和阿尔茨海默病（Alzheimer's Disease，AD）相关的大脑特征。所提出方法的第一步是使用两种不同方法对 fMRI 和 rs-fMRI 数据进行预处理：第一种结合统计参数映射（Statistical Parametric Mapping）和 CONN 工具箱以获得更好的结果，第二种侧重于 MELODIC 软件。所提出的方法首先使用两种流程对 fMRI 和 rs-fMRI 进行预处理：一种将统计参数映射（Statistical Parametric Mapping，SPM）与 CONN 工具箱集成，另一种基于 MELODIC 框架。目的是评估当与经典机器学习（Machine Learning，ML）方法，即支持向量机（Support Vector Machines）和随机森林（Random Forests），以及深度学习（Deep Learning，DL）模型 AlexNet 结合时，预处理选择如何影响功能连接表示和分类性能。鉴于在双相情感障碍和阿尔茨海默病中观察到的大脑连接模式改变，这些方法被用于评估这两种疾病中的预处理-学习相互作用。实验结果强调，Connbox-SPM 预处理与 AlexNet 结合对这两种精神障碍都产生了最佳结果，其中双相情感障碍报告了 78.2% 的准确率，AD 达到了 82.4% 的准确率。"
+},
+{
 "title": "Interference-resistant Janus hydrogel electrodes for AI-enabled platform for rehabilitation assessment.",
 "link": "https://pubmed.ncbi.nlm.nih.gov/42772131/",
 "date": "2026-09-18T00:00:00+00:00",
@@ -907,7 +969,13 @@
 "evidence": "新闻",
 "score": 4,
 "day": "2026-10-15",
-"rank": 6.5
+"rank": 6.5,
+"also": [
+{
+"source": "Streetwise Reports",
+"link": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxPNEVZalEwTHFIajBGd25fRHFLcFl3QmxRWjJJWjB5MnMyWXpJX2pBNEhoamplYUpUZVV6RGZwYm4wY0xXUkxTcThLQXB1a1BuRXFyLWxKRkg0T3RCUVRndjZSMHhYamJ0QWw2Q2M4aEJxUTRkaFllbzBrVWwwaXE4THNMVWZVQWpLbmF3bXNWVV85M1RZRW9KVEFqQV82ZHBQWlB5aG1kLW9Bbm5YV2xsb2Vrck5jb0ZuZWRKdm9qTmJaRlpJUGdCTDJfZXZKVmlmUHRlZUhWSzItbWhFa1ZV?oc=5"
+}
+]
 },
 {
 "title": "Your Quality Team Is Already Using AI To Draft Compliance Documents",
