@@ -28,36 +28,8 @@
   "evidence": "同行评审",
   "score": 7,
   "day": "2026-10-15",
-  "rank": 12.31
- },
- {
-  "title": "Making AI work in healthcare",
-  "link": "https://www.nature.com/articles/s41591-026-04726-7",
-  "date": "2026-10-14T00:00:00+00:00",
-  "source": "Nature Medicine",
-  "source_group": "Nature Medicine",
-  "home": "",
-  "thin": false,
-  "badge": "DOI 10.1038/s41591-026-04726-7",
-  "pop": null,
-  "id": "2813ef6bdc10",
-  "keep": true,
-  "zh_title": "让AI在医疗中真正落地",
-  "summary": "《Nature Medicine》本期汇集多种场景经验，探讨AI模型部署到医疗健康中的挑战与教训。",
-  "key_points": [
-   "本期聚焦AI模型在医疗中的部署",
-   "汇集不同场景的实践经验",
-   "讨论部署中的挑战与经验教训"
-  ],
-  "section": "落地与监管",
-  "type": "观点",
-  "tags": [
-   "临床落地"
-  ],
-  "evidence": "同行评审",
-  "score": 6,
-  "day": "2026-10-15",
-  "rank": 11.81
+  "rank": 12.31,
+  "abstract_tries": 1
  },
  {
   "title": "From research to clinical practice: Expert consensus on Neuroimaging AI tools for the Memory clinic (Neuro-AIM)",
@@ -88,97 +60,8 @@
   "evidence": "同行评审",
   "score": 6,
   "day": "2026-10-15",
-  "rank": 11.31
- },
- {
-  "title": "Sequence models reveal diagnosis accumulation pathways beyond comorbidity burden in population-scale hospital data",
-  "link": "https://www.nature.com/articles/s41746-026-03265-2",
-  "date": "2026-10-14T00:00:00+00:00",
-  "source": "npj Digital Medicine",
-  "source_group": "npj Digital Medicine",
-  "home": "",
-  "thin": false,
-  "badge": "DOI 10.1038/s41746-026-03265-2",
-  "pop": null,
-  "id": "707f20405212",
-  "keep": true,
-  "zh_title": "序列模型揭示超越共病负担的诊断累积路径",
-  "summary": "研究基于人口规模医院数据，用序列模型揭示超出共病负担之外的诊断累积路径。",
-  "key_points": [
-   "研究基于人口规模医院数据",
-   "采用序列模型建模诊断累积过程",
-   "识别共病负担之外的诊断路径"
-  ],
-  "section": "大模型与智能体",
-  "type": "论文",
-  "tags": [
-   "电子病历",
-   "临床预测"
-  ],
-  "evidence": "同行评审",
-  "score": 6,
-  "day": "2026-10-15",
-  "rank": 11.31
- },
- {
-  "title": "Personalized neoantigen-targeting cancer vaccines in ovarian cancer: a phase 1 trial",
-  "link": "https://www.nature.com/articles/s41591-026-04717-8",
-  "date": "2026-10-14T00:00:00+00:00",
-  "source": "Nature Medicine",
-  "source_group": "Nature Medicine",
-  "home": "",
-  "thin": false,
-  "badge": "DOI 10.1038/s41591-026-04717-8",
-  "pop": null,
-  "id": "2a4a1146b013",
-  "keep": true,
-  "zh_title": "卵巢癌个体化新抗原疫苗1期试验",
-  "summary": "1期试验显示个体化新抗原疫苗联合PD-1阻断治疗高级别浆液性卵巢癌可行，多数患者产生肿瘤特异性免疫应答。",
-  "key_points": [
-   "新抗原疫苗联合PD-1阻断方案可行",
-   "多数患者出现肿瘤特异性免疫应答",
-   "cfDNA分析提示抗原呈递相关耐药机制"
-  ],
-  "section": "生命科学与药物",
-  "type": "论文",
-  "tags": [
-   "肿瘤",
-   "基因组学"
-  ],
-  "evidence": "同行评审",
-  "score": 5,
-  "reason": "同行评审1期试验、样本小、无AI方法，属值得一看档",
-  "day": "2026-10-15",
-  "rank": 10.81
- },
- {
-  "title": "From compliance to competence: a multi-level model for AI governance in undergraduate medical education",
-  "link": "https://www.nature.com/articles/s41746-026-03390-y",
-  "date": "2026-10-14T00:00:00+00:00",
-  "source": "npj Digital Medicine",
-  "source_group": "npj Digital Medicine",
-  "home": "",
-  "thin": false,
-  "badge": "DOI 10.1038/s41746-026-03390-y",
-  "pop": null,
-  "id": "65e4346d23e3",
-  "keep": true,
-  "zh_title": "本科医学教育AI治理的多层次模型",
-  "summary": "文章提出基于问责、能力与共同责任的本科医学教育AI治理多层次框架，覆盖院校、教师与学生。",
-  "key_points": [
-   "院校现有政策多强调即时行为限制",
-   "战略监督、基础设施与评估发展不足",
-   "框架主张院校、教师与学生共同担责"
-  ],
-  "section": "落地与监管",
-  "type": "观点",
-  "tags": [
-   "监管政策"
-  ],
-  "evidence": "同行评审",
-  "score": 5,
-  "day": "2026-10-15",
-  "rank": 10.31
+  "rank": 11.31,
+  "abstract_tries": 1
  },
  {
   "title": "CorVista System With Pulmonary Capillary Wedge Pressure Add-On Earns FDA Clearance",
@@ -234,34 +117,37 @@
   "rank": 10.0
  },
  {
-  "title": "SVC: A Vision Transformer-based Spatially and Virtually Embedded Cell Model for Deciphering Subcellular Spatial Transcriptomic Heterogeneity",
-  "link": "https://www.biorxiv.org/content/10.64898/2026.10.07.757371v1?rss=1",
+  "title": "Making AI work in healthcare",
+  "link": "https://www.nature.com/articles/s41591-026-04726-7",
   "date": "2026-10-14T00:00:00+00:00",
-  "source": "bioRxiv",
-  "source_group": "bioRxiv",
+  "source": "Nature Medicine",
+  "source_group": "Nature Medicine",
   "home": "",
   "thin": false,
-  "badge": "DOI 10.64898/2026.10.07.757371v1",
+  "badge": "DOI 10.1038/s41591-026-04726-7",
   "pop": null,
-  "id": "bb6f3dad16c8",
+  "id": "2813ef6bdc10",
   "keep": true,
-  "zh_title": "SVC：视觉Transformer亚细胞空间转录组模型",
-  "summary": "研究提出SVC模型，用视觉Transformer从亚细胞分辨率空间转录组中学习基因亚细胞定位与空间依赖。",
+  "zh_title": "让AI在医疗中运转起来：部署经验与挑战",
+  "summary": "Nature Medicine本期专刊汇集不同场景经验，探讨AI模型进入医疗实践所面临的挑战与教训。",
   "key_points": [
-   "以图像块表示基因的亚细胞定位",
-   "以同细胞其他基因作为上下文学习",
-   "整合基因功能先验与细胞形态；预印本未经同行评审"
+   "本期专刊主题为AI模型在医疗中的部署",
+   "经验来自多种不同的实践场景",
+   "聚焦部署挑战与已获教训"
   ],
-  "section": "生命科学与药物",
-  "type": "论文",
+  "section": "落地与监管",
+  "type": "观点",
   "tags": [
-   "基因组学",
-   "多模态"
+   "临床落地"
   ],
-  "evidence": "预印本",
-  "score": 7,
+  "evidence": "同行评审",
+  "score": 4,
   "day": "2026-10-15",
-  "rank": 9.81
+  "rank": 11.81,
+  "abstract_tries": 1,
+  "abstract": "Nature Medicine, Published online: 14 October 2026; doi:10.1038/s41591-026-04726-7 Drawing on experiences across diverse settings, this issue of Nature Medicine explores the challenges of and lessons learned from the deployment of artificial intelligence models into healthcare.",
+  "reason": "期刊专刊编者按，仅概述主题与经验，无具体数据或结论，属增量档",
+  "zh_abstract": "《自然·医学》（Nature Medicine），在线发表于2026年10月14日；doi:10.1038/s41591-026-04726-7 本期《自然·医学》借鉴不同场景下的经验，探讨将人工智能模型部署到医疗保健中所面临的挑战和汲取的教训。"
  },
  {
   "title": "No Mastery without the Machine — Medical Education in the Age of Clinical AI",
@@ -286,7 +172,109 @@
   "evidence": "同行评审",
   "score": 4,
   "day": "2026-10-15",
-  "rank": 9.64
+  "rank": 9.64,
+  "abstract_tries": 1
+ },
+ {
+  "title": "Characterizing time-of-day physical activity patterns across cognitive trajectories in older adults: a longitudinal cohort study",
+  "link": "https://www.nature.com/articles/s41746-026-03370-2",
+  "date": "2026-10-15T00:00:00+00:00",
+  "source": "npj Digital Medicine",
+  "source_group": "npj Digital Medicine",
+  "home": "",
+  "thin": false,
+  "badge": "DOI 10.1038/s41746-026-03370-2",
+  "pop": null,
+  "id": "52f525dc0a40",
+  "keep": true,
+  "zh_title": "老年人认知轨迹与一天中体力活动模式：纵向队列研究",
+  "summary": "一项纵向队列研究刻画老年人一天中不同时段的体力活动模式，并按认知轨迹分层进行比较。",
+  "key_points": [
+   "纵向队列研究设计",
+   "按认知轨迹分层比较活动模式",
+   "关注一天中时段分布特征"
+  ],
+  "section": "数字健康",
+  "type": "论文",
+  "tags": [
+   "数字健康",
+   "神经科学"
+  ],
+  "evidence": "同行评审",
+  "score": 4,
+  "reason": "纵向队列但仅见标题级信息，无AI方法细节，属增量档",
+  "abstract": "npj Digital Medicine, Published online: 15 October 2026; doi:10.1038/s41746-026-03370-2 Characterizing time-of-day physical activity patterns across cognitive trajectories in older adults: a longitudinal cohort study",
+  "day": "2026-10-15",
+  "rank": 9.5,
+  "zh_abstract": "npj Digital Medicine，在线发表：2026年10月15日；doi:10.1038/s41746-026-03370-2 表征老年人不同认知轨迹中的一天内身体活动模式：一项纵向队列研究"
+ },
+ {
+  "title": "Sequence models reveal diagnosis accumulation pathways beyond comorbidity burden in population-scale hospital data",
+  "link": "https://www.nature.com/articles/s41746-026-03265-2",
+  "date": "2026-10-14T00:00:00+00:00",
+  "source": "npj Digital Medicine",
+  "source_group": "npj Digital Medicine",
+  "home": "",
+  "thin": false,
+  "badge": "DOI 10.1038/s41746-026-03265-2",
+  "pop": null,
+  "id": "707f20405212",
+  "keep": true,
+  "zh_title": "序列模型揭示人群医院数据中超越共病负担的诊断累积路径",
+  "summary": "基于人群规模医院数据，用序列模型刻画超越共病负担的诊断累积路径。",
+  "key_points": [
+   "使用人群规模的医院数据",
+   "采用序列模型建模诊断累积",
+   "发现超出共病负担的路径"
+  ],
+  "section": "临床预测与决策",
+  "type": "论文",
+  "tags": [
+   "电子病历",
+   "临床预测"
+  ],
+  "evidence": "同行评审",
+  "score": 4,
+  "day": "2026-10-15",
+  "rank": 11.31,
+  "abstract_tries": 1,
+  "abstract": "npj Digital Medicine, Published online: 14 October 2026; doi:10.1038/s41746-026-03265-2 Sequence models reveal diagnosis accumulation pathways beyond comorbidity burden in population-scale hospital data",
+  "reason": "仅有标题级信息，虽为人群规模数据但缺细节，属增量档",
+  "zh_abstract": "npj Digital Medicine，在线发表于2026年10月14日；doi:10.1038/s41746-026-03265-2 序列模型在人口规模医院数据中揭示超越共病负担的诊断累积路径"
+ },
+ {
+  "title": "From compliance to competence: a multi-level model for AI governance in undergraduate medical education",
+  "link": "https://www.nature.com/articles/s41746-026-03390-y",
+  "date": "2026-10-14T00:00:00+00:00",
+  "source": "npj Digital Medicine",
+  "source_group": "npj Digital Medicine",
+  "home": "",
+  "thin": false,
+  "badge": "DOI 10.1038/s41746-026-03390-y",
+  "pop": null,
+  "id": "65e4346d23e3",
+  "keep": true,
+  "zh_title": "从合规到胜任：本科医学教育AI治理多层次模型",
+  "summary": "针对本科医学院AI治理提出基于问责、胜任与共同责任的多层次框架。",
+  "key_points": [
+   "现有院校政策多为即时行为限制",
+   "战略监督、基础设施与评估发展不足",
+   "提出机构、教师、学生多层次问责框架"
+  ],
+  "section": "落地与监管",
+  "type": "观点",
+  "tags": [
+   "监管政策",
+   "临床落地"
+  ],
+  "evidence": "同行评审",
+  "score": 4,
+  "day": "2026-10-15",
+  "rank": 10.31,
+  "abstract_tries": 1,
+  "abstract": "npj Digital Medicine, Published online: 14 October 2026; doi:10.1038/s41746-026-03390-y AI's fast-paced irruption in medicine and education has challenged undergraduate medical colleges, with institutions documenting policies emphasizing immediate conduct restrictions, while strategic oversight, infrastructure and evaluation remain less consistently developed. We propose a multi-level framework for AI governance in undergraduate medical education based on accountability, competence and co-responsibility across institutions, educators and students, designed to turn a fast-evolving technology from a threat into an opportunity for collective progress.",
+  "reason": "观点型治理框架，无实证数据或评估结果，属增量档",
+  "zh_abstract": "npj Digital Medicine，在线发表于2026年10月14日；doi:10.1038/s41746-026-03390-y 人工智能在医学和教育中的快速突入给本科医学院校带来了挑战，各机构记录的政策强调即时行为限制，而战略监督、基础设施和评估则发展得较不一致。我们提出一个基于院校、教育者和学生之间问责、能力和共同责任的本科医学教育人工智能治理多层次框架，旨在将快速演进的技术从威胁转变为集体进步的机会。"
  },
  {
   "title": "Current status and future outlook of artificial intelligence and automation in intravenous infusion systems",
@@ -312,7 +300,8 @@
   "evidence": "同行评审",
   "score": 4,
   "day": "2026-10-15",
-  "rank": 9.31
+  "rank": 9.31,
+  "abstract_tries": 1
  },
  {
   "title": "A “growth mindset of mental health” intervention increases the likelihood of initiating self-help on a mental health app: a randomized controlled trial",
@@ -342,7 +331,8 @@
   "evidence": "同行评审",
   "score": 4,
   "day": "2026-10-15",
-  "rank": 9.14
+  "rank": 9.14,
+  "abstract_tries": 1
  },
  {
   "title": "Confido Health nabs $12.5M to scale agentic AI across PE-backed medical groups",
@@ -375,67 +365,6 @@
   "rank": 9.0
  },
  {
-  "title": "Instability as Signal: Diagnosing Latent Heterogeneity in Multimodal Survival Models",
-  "link": "https://www.medrxiv.org/content/10.64898/2026.10.13.26365414v1?rss=1",
-  "date": "2026-10-14T00:00:00+00:00",
-  "source": "medRxiv",
-  "source_group": "medRxiv",
-  "home": "",
-  "thin": false,
-  "badge": "DOI 10.64898/2026.10.13.26365414v1",
-  "pop": null,
-  "id": "42be958ef162",
-  "keep": true,
-  "zh_title": "多模态生存模型不稳定性与潜在异质性诊断",
-  "summary": "研究以TCGA-BRCA的RNA测序与病理图像融合模型为探针，发现全局生存预测高度不稳定，无监督分析揭示预后差异显著的稳定潜在亚组。",
-  "key_points": [
-   "全局生存预测在不同数据划分下高度不稳定",
-   "无监督分析发现预后差异显著的稳定潜在亚组",
-   "亚组与受体状态、免疫浸润无关，与增殖活性一致"
-  ],
-  "section": "临床预测与决策",
-  "type": "论文",
-  "tags": [
-   "多模态",
-   "肿瘤",
-   "病理"
-  ],
-  "evidence": "预印本",
-  "score": 6,
-  "day": "2026-10-15",
-  "rank": 8.81
- },
- {
-  "title": "From Closed-Set Annotation to In-Context Discovery: Biologically Grounded LLMs for Cellular Profiling",
-  "link": "https://www.biorxiv.org/content/10.64898/2026.10.07.757352v1?rss=1",
-  "date": "2026-10-14T00:00:00+00:00",
-  "source": "bioRxiv",
-  "source_group": "bioRxiv",
-  "home": "",
-  "thin": false,
-  "badge": "DOI 10.64898/2026.10.07.757352v1",
-  "pop": null,
-  "id": "628a556df6d0",
-  "keep": true,
-  "zh_title": "CellScribe：细胞图谱的生物基础生成式框架",
-  "summary": "预印本提出CellScribe，通过AdaLN适配器将预训练语言模型条件化于单细胞基础模型嵌入，统一生成细胞类型与元程序谱。",
-  "key_points": [
-   "监督多任务微调实现数百种细胞类型精细分型",
-   "用强化学习按细胞本体距离与元程序一致性打分",
-   "目标包括识别未见的新细胞类型"
-  ],
-  "section": "大模型与智能体",
-  "type": "论文",
-  "tags": [
-   "医学大模型",
-   "生成模型"
-  ],
-  "evidence": "预印本",
-  "score": 6,
-  "day": "2026-10-15",
-  "rank": 8.81
- },
- {
   "title": "FERDINAND: An Open Framework for Download and AI-ready Preprocessing of IMPC 2D Radiographs",
   "link": "https://www.biorxiv.org/content/10.64898/2026.10.07.757287v1?rss=1",
   "date": "2026-10-14T00:00:00+00:00",
@@ -447,12 +376,12 @@
   "pop": null,
   "id": "bd0f9eb649df",
   "keep": true,
-  "zh_title": "FERDINAND：IMPC 小鼠 X 线影像开放预处理框架",
-  "summary": "bioRxiv 预印本发布 FERDINAND，用于 IMPC 小鼠全身 X 线影像的下载、标准化与 AI 就绪预处理。",
+  "zh_title": "FERDINAND：IMPC小鼠2D放射影像开放预处理框架",
+  "summary": "预印本发布FERDINAND开源框架，对IMPC小鼠全身X线片进行统一质控与AI就绪化整理。",
   "key_points": [
-   "预印本，未经同行评审",
-   "整合 104,819 张影像（2012–2025）",
-   "覆盖 10 个表型中心、6,306 个敲除"
+   "整合元数据检索与本地影像归档",
+   "中心感知预处理、曝光筛查与方向标准化",
+   "整理104,819张影像、覆盖6,306个单基因敲除"
   ],
   "section": "影像与病理",
   "type": "模型",
@@ -463,68 +392,11 @@
   "evidence": "预印本",
   "score": 6,
   "day": "2026-10-15",
-  "rank": 8.81
- },
- {
-  "title": "Protein novelty, sequence similarity, and negative sampling controls reveal benchmark specific discrimination in protein protein interactionprediction",
-  "link": "https://www.biorxiv.org/content/10.64898/2026.10.06.757125v1?rss=1",
-  "date": "2026-10-14T00:00:00+00:00",
-  "source": "bioRxiv",
-  "source_group": "bioRxiv",
-  "home": "",
-  "thin": false,
-  "badge": "DOI 10.64898/2026.10.06.757125v1",
-  "pop": null,
-  "id": "a10e15fb9d14",
-  "keep": true,
-  "zh_title": "蛋白新颖性与序列相似度控制揭示PPI预测基准特异性区分",
-  "summary": "bioRxiv预印本重新评估Guo酵母PPI基准，发现随机配对拆分与构造负样本带来基准特异信号。",
-  "key_points": [
-   "AAC+CTD-MLP的ROC-AUC由0.697降至0.587",
-   "未见蛋白配对性能随蛋白新颖性下降",
-   "在50%至20% MMseqs2聚类阈值下重生成R3变体"
-  ],
-  "section": "生命科学与药物",
-  "type": "论文",
-  "tags": [
-   "蛋白质",
-   "基准",
-   "数据集"
-  ],
-  "evidence": "预印本",
-  "score": 6,
-  "day": "2026-10-15",
-  "rank": 8.81
- },
- {
-  "title": "Interference-resistant Janus hydrogel electrodes for AI-enabled platform for rehabilitation assessment.",
-  "link": "https://pubmed.ncbi.nlm.nih.gov/42772131/",
-  "date": "2026-09-18T00:00:00+00:00",
-  "badge": "DOI 10.1016/j.jcis.2026.141615",
-  "source": "PubMed · Journal of colloid and interface science",
-  "source_group": "PubMed",
-  "home": "",
-  "thin": false,
-  "pop": null,
-  "id": "8d6ec5c3426d",
-  "keep": true,
-  "zh_title": "抗干扰Janus水凝胶电极用于AI康复评估平台",
-  "summary": "研究报道Janus水凝胶电极，兼具高导电、强黏附与低皮肤阻抗，结合Transformer算法实现抗干扰生理信号监测。",
-  "key_points": [
-   "电导率3×10⁴ S·m⁻¹，铜界面黏附2079 J·m⁻²",
-   "皮肤-电极阻抗约300 Ω，250%应变下阻抗不敏感",
-   "具疏水保护与快速自愈，抗振动与汗液干扰"
-  ],
-  "section": "临床预测与决策",
-  "type": "论文",
-  "tags": [
-   "生理信号",
-   "医疗器械"
-  ],
-  "evidence": "同行评审",
-  "score": 6,
-  "day": "2026-10-15",
-  "rank": 8.64
+  "rank": 8.81,
+  "abstract_tries": 1,
+  "abstract": "The International Mouse Phenotyping Consortium (IMPC) maintains a large archive of whole-body dorsoventral radiographs. However, heterogeneity in file formats, metadata completeness, orientation, and image quality limits its reuse for large-scale quantitative analysis. We present FERDINAND (Framework for Extracting and Restructuring Distributed IMPC radiographs into a Normalised, AI-ready Navigable Dataset), an open framework for programmatic access, harmonisation, quality control, and curation of IMPC radiographs. FERDINAND combines metadata retrieval and local radiograph archiving with centre-aware preprocessing, automated exposure screening, orientation standardisation, and clustering-assisted visual curation. Applied to IMPC Data Release 24, FERDINAND organises 104,819 radiographs acquired between February 2012 and June 2025 across ten phenotyping centres and 6,306 single-gene knockout mouse lines, with semi-automated curation recorded for every image. As an independent validation of the harmonised output, a DeepLabCut-based bone-morphometry pipeline showed that FERDINAND-processed radiographs improve data efficiency for landmark detection: at reduced training-set sizes, they achieve better performance than original radiographs and require fewer manual annotations to reach a given level of quality. FERDINAND provides a reproducible foundation for artificial intelligence (AI)-ready analysis and scalable quantitative phenotyping of heterogeneous IMPC and comparable radiograph resources. The complete FERDINAND source code is openly available on GitHub.",
+  "reason": "预印本开源框架与十万级公开影像资源，但属临床前小鼠数据，属值得一看档上限",
+  "zh_abstract": "国际小鼠表型联盟（IMPC）维护着一个大型全身背腹位 X 射线影像档案。然而，文件格式、元数据完整性、方向和图像质量方面的异质性限制了其用于大规模定量分析的可重复使用性。我们提出 FERDINAND（Framework for Extracting and Restructuring Distributed IMPC radiographs into a Normalised, AI-ready Navigable Dataset，将分布式 IMPC X 射线影像提取并重构为标准化、AI 就绪、可导航数据集的框架），这是一个用于 IMPC X 射线影像的程序化访问、协调、质量控制和策展的开放框架。FERDINAND 将元数据检索和本地 X 射线影像归档与中心感知预处理、自动曝光筛查、方向标准化和聚类辅助的视觉策展相结合。应用于 IMPC Data Release 24，FERDINAND 整理了 2012 年 2 月至 2025 年 6 月期间在十个表型分析中心、6,306 个单基因敲除小鼠品系中获取的 104,819 张 X 射线影像，并为每张图像记录了半自动策展。作为对协调输出的独立验证，一个基于 DeepLabCut 的骨骼形态测量流程显示，经 FERDINAND 处理的 X 射线影像提高了标志点检测的数据效率：在缩减训练集规模时，它们比原始 X 射线影像取得更好的性能，并且达到给定质量水平所需的人工标注更少。FERDINAND 为人工智能（AI）就绪分析以及对异质性 IMPC 和类似 X 射线影像资源进行可扩展定量表型分析提供了可重复的基础。完整的 FERDINAND 源代码在 GitHub 上公开可用。"
  },
  {
   "title": "manglu097/SkeMex",
@@ -594,6 +466,33 @@
   "rank": 8.31
  },
  {
+  "title": "STAT+: Many patient, consumer reps on FDA advisory panels have ties to groups funded by pharma, analysis finds",
+  "link": "https://www.statnews.com/pharmalot/2026/10/13/many-patient-and-consumer-reps-on-fda-advisory-committees-ties-to-groups-funded-by-pharma/?utm_campaign=rss",
+  "date": "2026-10-13T18:00:13+00:00",
+  "source": "STAT News",
+  "source_group": "STAT News",
+  "home": "",
+  "thin": false,
+  "badge": "",
+  "pop": null,
+  "id": "b2acfda5e2e6",
+  "keep": true,
+  "zh_title": "分析发现多数FDA顾问委员会患者代表与药企资助组织有关联",
+  "summary": "一项分析显示,20年间近40%的FDA顾问委员会会议有与药企资助倡导组织存在关联的患者或消费者代表。",
+  "key_points": [],
+  "section": "落地与监管",
+  "type": "论文",
+  "tags": [
+   "监管政策",
+   "公平与安全"
+  ],
+  "evidence": "新闻",
+  "score": 5,
+  "reason": "对FDA审评治理与利益冲突的实证分析,具监管参考价值,属值得一看档。",
+  "day": "2026-10-15",
+  "rank": 8.31
+ },
+ {
   "title": "PatientPheX: A Full-Text Biomedical Corpus for Patient-Specific Phenotype Information Extraction",
   "link": "https://www.biorxiv.org/content/10.64898/2026.10.07.757319v1?rss=1",
   "date": "2026-10-15T00:00:00+00:00",
@@ -625,6 +524,108 @@
   "day": "2026-10-15",
   "rank": 8.0,
   "zh_abstract": "患者特异性表型信息抽取（patient-specific phenotype information extraction）识别并规范化表型实体，并将其与个体患者关联，支持罕见病研究和基因型-表型分析。然而，现有数据集很少将全文生物医学内容与患者、表型、相关实体及其关联的详细标注相结合。在本研究中，我们提出 PatientPheX，一个用于患者特异性表型信息抽取的语料库，包含 200 篇全文文章，主要是病例报告和病例系列。该语料库为七种生物医学实体类型提供提及标注和规范化，并提供跨句子、段落和章节的患者与实体之间的显式关联。否定发现和复合表型提及也进行了标注。语料库构建结合了自动预标注、大型语言模型（LLM）辅助验证以及人工审核和裁定。基准测试涵盖使用金标准和预测实体的实体识别与规范化以及患者-表型关联抽取。整体文档级实体 F1 为 86.95%，而表型 F1 为 79.33%。最佳关系抽取宏 F1 从使用金标准实体时的 84.14% 下降到使用预测实体时的 54.98%，凸显了表型抽取和患者归属的综合挑战。PatientPheX 为开发和评估以患者为中心的信息抽取方法提供了资源，并支持为表型驱动的生物医学研究构建结构化的患者级知识资源。"
+ },
+ {
+  "title": "SVC: A Vision Transformer-based Spatially and Virtually Embedded Cell Model for Deciphering Subcellular Spatial Transcriptomic Heterogeneity",
+  "link": "https://www.biorxiv.org/content/10.64898/2026.10.07.757371v1?rss=1",
+  "date": "2026-10-14T00:00:00+00:00",
+  "source": "bioRxiv",
+  "source_group": "bioRxiv",
+  "home": "",
+  "thin": false,
+  "badge": "DOI 10.64898/2026.10.07.757371v1",
+  "pop": null,
+  "id": "bb6f3dad16c8",
+  "keep": true,
+  "zh_title": "SVC：基于ViT的亚细胞空间转录组嵌入细胞模型",
+  "summary": "预印本提出SVC，用Vision Transformer在原生组织语境中学习基因亚细胞定位与空间依赖。",
+  "key_points": [
+   "将每个基因的亚细胞定位表示为图像块",
+   "以同细胞内其他基因作为上下文",
+   "融合基因功能先验、细胞形态与空间语境"
+  ],
+  "section": "生命科学与药物",
+  "type": "模型",
+  "tags": [
+   "基因组学",
+   "多模态"
+  ],
+  "evidence": "预印本",
+  "score": 5,
+  "day": "2026-10-15",
+  "rank": 9.81,
+  "abstract_tries": 1,
+  "abstract": "Subcellular transcript localization shapes gene regulation and cellular function, yet profiling it at scale remains difficult, limiting our ability to study subcellular heterogeneity across tissues and disease. Here, we present SVC, a Vision Transformer-based spatially and virtually embedded cell model that learns subcellular transcript organization within native tissue context directly from subcellular-resolution spatial transcriptomics. SVC represents each gene's subcellular localization as an image patch and uses other genes within the same cell as context, enabling subcellular contextual learning of spatial dependencies that govern intracellular organization. By integrating gene-function priors, cell morphology, spatial context, and, when available, cell identity, SVC captures unified, spatially grounded representations across genes and cells that connect subcellular organization to cellular state and tissue microenvironment. Across diverse subcellular-resolution spatial transcriptomics datasets, SVC accurately predicts cell-specific subcellular transcript localization and co-organization, generalizes across tissues and technical platforms, and supports subcellular imputation of unmeasured genes and in silico perturbation. Leveraging these capabilities, SVC highlights disease-associated patterns of intracellular transcript reorganization and spatially heterogeneous responses to gene perturbations. Beyond prediction, SVC reveals systematic variation in subcellular transcript organization associated with gene function, cellular states, and tissue microenvironments, uncovering de novo spatial biology that is not accessible by cell-level analysis. SVC's learned representations further transfer to cell- and tissue-level tasks, including cell-level expression imputation, cell clustering, and spatial domain detection. Together, SVC provides a general framework for modeling and interrogating subcellular transcript organization in situ, enabling scalable discovery of subcellular spatial biology.",
+  "reason": "预印本新方法有创新性，但未见外部验证或基准对比细节，属值得一看档",
+  "zh_abstract": "亚细胞转录本定位塑造基因调控和细胞功能，然而在规模化水平上对其进行分析仍然困难，限制了我们在组织和疾病中研究亚细胞异质性的能力。在此，我们提出 SVC，一种基于 Vision Transformer（视觉 Transformer）的空间和虚拟嵌入细胞模型，可直接从亚细胞分辨率空间转录组学中学习天然组织背景内的亚细胞转录本组织。SVC 将每个基因的亚细胞定位表示为图像块，并使用同一细胞内的其他基因作为上下文，从而实现对支配细胞内组织的空间依赖性的亚细胞上下文学习。通过整合基因功能先验、细胞形态、空间上下文以及（在可用时）细胞身份，SVC 捕获跨基因和细胞的统一、空间锚定的表征，将亚细胞组织与细胞状态和组织微环境联系起来。在多种亚细胞分辨率空间转录组学数据集上，SVC 准确预测细胞特异性亚细胞转录本定位和共组织，可跨组织和技术平台泛化，并支持未测量基因的亚细胞插补和计算机扰动。利用这些能力，SVC 突出疾病相关的细胞内转录本重组织模式以及对基因扰动的空间异质性反应。超越预测，SVC 揭示与基因功能、细胞状态和组织微环境相关的亚细胞转录本组织的系统性变异，发现细胞水平分析无法获取的从头空间生物学。SVC 学到的表征进一步迁移到细胞和组织水平任务，包括细胞水平表达插补、细胞聚类和空间域检测。总之，SVC 提供了一个在原位建模和探究亚细胞转录本组织的通用框架，使得可扩展地发现亚细胞空间生物学成为可能。"
+ },
+ {
+  "title": "From Closed-Set Annotation to In-Context Discovery: Biologically Grounded LLMs for Cellular Profiling",
+  "link": "https://www.biorxiv.org/content/10.64898/2026.10.07.757352v1?rss=1",
+  "date": "2026-10-14T00:00:00+00:00",
+  "source": "bioRxiv",
+  "source_group": "bioRxiv",
+  "home": "",
+  "thin": false,
+  "badge": "DOI 10.64898/2026.10.07.757352v1",
+  "pop": null,
+  "id": "628a556df6d0",
+  "keep": true,
+  "zh_title": "CellScribe：面向细胞图谱的生物知识约束LLM框架",
+  "summary": "预印本提出CellScribe，以AdaLN适配器将语言模型条件于单细胞基础模型嵌入，统一输出细胞类型与元程序谱。",
+  "key_points": [
+   "条件化于冻结的单细胞基础模型嵌入",
+   "多任务微调覆盖数百种细胞类型",
+   "用强化学习按本体距离与元程序一致性打分"
+  ],
+  "section": "生命科学与药物",
+  "type": "模型",
+  "tags": [
+   "医学大模型",
+   "基因组学"
+  ],
+  "evidence": "预印本",
+  "score": 5,
+  "day": "2026-10-15",
+  "rank": 8.81,
+  "abstract_tries": 1,
+  "abstract": "Tumour heterogeneity reflects both cellular identity (lineage) and state (active transcriptional programs), yet computational methods generally analyse these axes separately. We introduce CellScribe, a generative framework that conditions a pretrained language model on frozen single cell foundation model embeddings through AdaLN adapters, enabling one shared model to generate an ontology- grounded cell type or a quantified meta-program profile. Supervised multitask fine- tuning produces fine grained typing across hundreds of cell types and outperforms generative and retrieval baselines on meta-program identification under study-holdout evaluation. We further train the model with reinforcement learning, scoring its generations against cell ontology distance and meta-program agreement, so that they align with biological knowledge rather than token agreement. To identify new cell types not present in the supervised training data, we post-train the model to read several labelled example cells in a single context, each conditioning its own text span, and infer the type of a query cell through in-context learning. CellScribe thus unifies cell identity and state in one generative interface, grounds both in biological structure, and identifies cell types outside the supervised vocabulary.",
+  "reason": "预印本新生成框架并优于基线，但仅研究留存评估、无外部验证，属值得一看档",
+  "zh_abstract": "肿瘤异质性既反映细胞身份（谱系），也反映细胞状态（活跃转录程序），然而计算方法通常分别分析这些轴。我们提出 CellScribe，一种生成式框架，通过 AdaLN 适配器将预训练语言模型以冻结的单细胞基础模型嵌入为条件，使一个共享模型能够生成以本体为基础的细胞类型或量化的元程序谱。监督式多任务微调可在数百种细胞类型中产生细粒度分型，并在研究留出评估下在元程序鉴定上优于生成式和检索式基线。我们进一步用强化学习训练该模型，根据细胞本体距离和元程序一致性对其生成结果进行评分，使其与生物学知识而非 token 一致性对齐。为了识别监督训练数据中不存在的新细胞类型，我们对模型进行后训练，使其在单个上下文中读取若干带标签的示例细胞，每个示例条件化其自身的文本跨度，并通过上下文学习推断查询细胞的类型。因此，CellScribe 在一个生成式接口中统一了细胞身份和状态，将二者均建立在生物学结构之上，并识别监督词汇表之外的细胞类型。"
+ },
+ {
+  "title": "Protein novelty, sequence similarity, and negative sampling controls reveal benchmark specific discrimination in protein protein interactionprediction",
+  "link": "https://www.biorxiv.org/content/10.64898/2026.10.06.757125v1?rss=1",
+  "date": "2026-10-14T00:00:00+00:00",
+  "source": "bioRxiv",
+  "source_group": "bioRxiv",
+  "home": "",
+  "thin": false,
+  "badge": "DOI 10.64898/2026.10.06.757125v1",
+  "pop": null,
+  "id": "a10e15fb9d14",
+  "keep": true,
+  "zh_title": "蛋白互作预测：序列相似性与负采样偏差剖析",
+  "summary": "预印本重估Guo酵母基准，显示随机划分高估PPI预测性能，训练测试均未见的蛋白对AUC明显下降。",
+  "key_points": [
+   "AAC+CTD-MLP的ROC-AUC由0.697降至0.587",
+   "按MMseqs2聚类构建R3序列不相交划分",
+   "比较手工特征与冻结蛋白语言模型表示"
+  ],
+  "section": "生命科学与药物",
+  "type": "论文",
+  "tags": [
+   "蛋白质",
+   "基准"
+  ],
+  "evidence": "预印本",
+  "score": 5,
+  "day": "2026-10-15",
+  "rank": 8.81,
+  "abstract_tries": 1,
+  "abstract": "Protein protein interaction (PPI) predictors are often evaluated with random pair splits that permit proteins to recur across training and test sets, while constructed negative pairs can introduce a separate source of benchmark-specific signal. We reassessed the Guo yeast benchmark using a matched protein novelty curve, independently generated MMseqs2 sequence cluster controlled R3 variants, topology only controls, degree- and length matched putative negatives, handcrafted and frozen protein language model representations, multiple model configurations, seed analyses, and connected component aware inference. In the matched R1[->]R2[->]R3 comparison, AAC+CTD-MLP ROC-AUC declined from 0.697 for seen-seen pairs to 0.626 for one-unseen pairs and 0.587 for both-unseen pairs. Across independently regenerated cluster-disjoint R3 variants at 50%, 40%, 30%, and 20% MMseqs2 clustering thresholds, performance showed no consistent monotonic trend. Guo original-negative endpoints had lower positive-network degree than positive endpoints (mean 3.34 versus 6.72), and a degree-only logistic model reached ROC-AUC 0.962 on the original negatives but 0.502 on degree-matched negatives. We used degree-matched negatives consistently for R3 training and testing; six sequence based model configurations yielded ROC-AUC 0.493- 0.547; none showed corrected connected-component-aware evidence of above-chance discrimination. A PIPR multispecies analysis reproduced degree-associated label separation but also exposed cross-species pairing as an additional pooled cue. These results show that protein novelty, operational sequence cluster separation, and negative-set topology are distinct dimensions of PPI benchmark evaluation. The Guo result is benchmark-specific and should not be generalized to sequence-based PPI prediction or protein language models overall. The dataset and source code for the experiments are publicly available at https://github.com/morufwork/guoAudit.git.",
+  "reason": "基准偏差分析有新意含多重对照，但为预印本且无外部验证，属值得一看档",
+  "zh_abstract": "蛋白质-蛋白质相互作用（protein-protein interaction, PPI）预测器通常采用随机配对划分进行评估，这种划分允许蛋白质在训练集和测试集中重复出现，而构建的负样本对则会引入另一类基准特异性信号来源。我们使用匹配的蛋白质新颖性曲线、独立生成并由 MMseqs2 序列聚类控制的 R3 变体、仅拓扑结构的对照、度数（degree）与长度匹配的推定负样本、手工设计特征与冻结的蛋白质语言模型表示、多种模型配置、种子分析以及连通分量感知推断，重新评估了 Guo 酵母基准。在匹配的 R1[->]R2[->]R3 比较中，AAC+CTD-MLP 的 ROC-AUC 从 seen-seen 配对的 0.697 降至 one-unseen 配对的 0.626，以及 both-unseen 配对的 0.587。在 50%、40%、30% 和 20% MMseqs2 聚类阈值下独立重新生成的聚类不相交 R3 变体中，性能未显示出一致的单调趋势。Guo 原始负样本端点的正网络度数低于正样本端点（均值 3.34 对 6.72），而仅基于度数的逻辑回归模型在原始负样本上达到 ROC-AUC 0.962，但在度数匹配负样本上为 0.502。我们在 R3 训练和测试中一致使用度数匹配负样本；六种基于序列的模型配置得到 ROC-AUC 0.493–0.547；没有一种显示出经校正的、连通分量感知的优于随机判别证据。一项 PIPR 多物种分析重现了与度数相关的标签分离，但也揭示了跨物种配对作为额外的混合线索。这些结果表明，蛋白质新颖性、操作性序列聚类分离和负样本集拓扑是 PPI 基准评估的不同维度。Guo 结果具有基准特异性，不应推广至基于序列的 PPI 预测或整体的蛋白质语言模型。实验数据集和源代码公开于 https://github.com/morufwork/guoAudit.git。"
  },
  {
   "title": "pardesline/pardesline",
@@ -722,6 +723,35 @@
   "rank": 7.31
  },
  {
+  "title": "STAT+: FDA adcomm members’ ties to industry under scrutiny",
+  "link": "https://www.statnews.com/2026/10/14/biotech-news-fda-adcomm-member-ties-to-industry-under-scrutiny/?utm_campaign=rss",
+  "date": "2026-10-14T14:12:14+00:00",
+  "source": "STAT News",
+  "source_group": "STAT News",
+  "home": "",
+  "thin": false,
+  "badge": "",
+  "pop": null,
+  "id": "c9d49753f363",
+  "keep": true,
+  "zh_title": "FDA顾问委员会成员与产业界关联受关注",
+  "summary": "新研究发现近40%的FDA顾问会议有与药企资助倡导组织存在关联的患者或消费者代表。",
+  "key_points": [],
+  "section": "落地与监管",
+  "type": "观点",
+  "tags": [
+   "监管政策",
+   "公平与安全"
+  ],
+  "evidence": "新闻",
+  "score": 4,
+  "reason": "监管治理层面对利益冲突的报道,信息有价值但非AI进展,属增量档。",
+  "abstract": "New research found that nearly 40% of FDA advisory meetings held over a recent 20-year period included either a patient or consumer rep with active ties to an advocacy group funded by pharma companies. Learn more:",
+  "day": "2026-10-15",
+  "rank": 7.31,
+  "zh_abstract": "一项新研究发现，在最近20年间举行的FDA咨询委员会会议中，近40%包括了一名与制药公司资助的倡导组织有积极联系的患者代表或消费者代表。了解更多："
+ },
+ {
   "title": "Readily secures $11M series A to continue building out AI regulatory compliance platform",
   "link": "https://www.fiercehealthcare.com/finance/readily-secures-11m-series-continue-building-out-ai-regulatory-compliance-platform",
   "date": "2026-10-15T06:22:19.309189+00:00",
@@ -752,33 +782,106 @@
   "rank": 7.0
  },
  {
-  "title": "A pseudo-labeling approach for automated assignment of unlabeled proteins exceeding 100 amino acid residues.",
-  "link": "https://pubmed.ncbi.nlm.nih.gov/42872102/",
-  "date": "2026-09-28T00:00:00+00:00",
-  "badge": "DOI 10.1016/j.mrl.2026.200309",
-  "source": "PubMed · Magnetic resonance letters",
-  "source_group": "PubMed",
+  "title": "Personalized neoantigen-targeting cancer vaccines in ovarian cancer: a phase 1 trial",
+  "link": "https://www.nature.com/articles/s41591-026-04717-8",
+  "date": "2026-10-14T00:00:00+00:00",
+  "source": "Nature Medicine",
+  "source_group": "Nature Medicine",
   "home": "",
   "thin": false,
+  "badge": "DOI 10.1038/s41591-026-04717-8",
   "pop": null,
-  "id": "718673882629",
+  "id": "2a4a1146b013",
   "keep": true,
-  "zh_title": "无标记蛋白自动共振归属的伪标签方法",
-  "summary": "同行评审论文提出伪标签策略，用高场核磁与冷冻探头采集天然丰度谱，实现超过100个氨基酸残基的无标记蛋白自动归属。",
+  "zh_title": "卵巢癌个体化新抗原疫苗：1期试验",
+  "summary": "卵巢癌个体化新抗原疫苗联合PD-1阻断的1期试验，非AI/算法主题。",
   "key_points": [
-   "面向AI蛋白质结构预测的实验验证需求",
-   "传统NMR需13C/15N标记，成本高耗时长",
-   "方法面向100个氨基酸以上的无标记蛋白"
+   "新抗原疫苗联合PD-1阻断方案可行",
+   "多数患者出现肿瘤特异性免疫应答",
+   "cfDNA分析提示抗原呈递相关耐药机制"
   ],
   "section": "生命科学与药物",
   "type": "论文",
   "tags": [
-   "蛋白质"
+   "肿瘤"
+  ],
+  "evidence": "同行评审",
+  "score": 1,
+  "reason": "肿瘤疫苗临床试验，与AI或算法在医疗中的应用无关",
+  "day": "2026-10-15",
+  "rank": 10.81,
+  "abstract_tries": 1,
+  "abstract": "Nature Medicine, Published online: 14 October 2026; doi:10.1038/s41591-026-04717-8 A phase 1 trial shows that treatment of patients with high-grade serous ovarian cancer with personalized neoantigen vaccines combined with PD-1 blockade was feasible and led to tumor-specific immune responses in many patients and putative mechanisms of resistance related to antigen presentation were identified via cell-free DNA analysis.",
+  "zh_abstract": "《自然·医学》（Nature Medicine），在线发表于2026年10月14日；doi:10.1038/s41591-026-04717-8 一项1期试验显示，对高级别浆液性卵巢癌患者采用个体化新抗原疫苗联合PD-1阻断治疗是可行的，并在许多患者中引发了肿瘤特异性免疫应答，且通过游离DNA（cell-free DNA）分析鉴定出与抗原呈递相关的推定耐药机制。"
+ },
+ {
+  "title": "Instability as Signal: Diagnosing Latent Heterogeneity in Multimodal Survival Models",
+  "link": "https://www.medrxiv.org/content/10.64898/2026.10.13.26365414v1?rss=1",
+  "date": "2026-10-14T00:00:00+00:00",
+  "source": "medRxiv",
+  "source_group": "medRxiv",
+  "home": "",
+  "thin": false,
+  "badge": "DOI 10.64898/2026.10.13.26365414v1",
+  "pop": null,
+  "id": "42be958ef162",
+  "keep": true,
+  "zh_title": "不稳定性即信号：诊断多模态生存模型的潜在异质性",
+  "summary": "预印本以TCGA-BRCA多模态生存模型为探针，分析预测不稳定来源并发现稳定的潜在患者亚组。",
+  "key_points": [
+   "全局生存预测在不同数据划分间高度不稳定",
+   "无监督分析发现生存差异显著的稳定亚组",
+   "亚组与受体状态、免疫浸润无关，对应增殖活性"
+  ],
+  "section": "临床预测与决策",
+  "type": "论文",
+  "tags": [
+   "多模态",
+   "肿瘤",
+   "临床预测"
+  ],
+  "evidence": "预印本",
+  "score": 4,
+  "day": "2026-10-15",
+  "rank": 8.81,
+  "abstract_tries": 1,
+  "abstract": "Survival prediction frequently exhibit unstable and irreproducible performance, limiting their clinical applicability. Rather than proposing a new predictive architecture, this work presents a diagnostic investigation into the sources of this instability. Using a transformer-based deep fusion model combining RNA sequencing and histopathology data from the TCGA-BRCA cohort as a diagnostic probe, we demonstrate that global survival prediction is highly unstable across data splits. We then analyze the learned multimodal embeddings in an unsupervised manner, revealing stable latent patient subgroups with significantly divergent survival outcomes. These subgroups are not explained by canonical receptor status or immune infiltration, but instead align with tumor-intrinsic proliferative activity. Conditioning survival modeling on the largest discovered subgroup recovers strong and stable prognostic performance, substantially outperforming unimodal baselines. These findings indicate that survival predictability is conditional on latent heterogeneity and suggest that heterogeneity-aware modeling strategies are essential for robust multimodal prognostication. This work establishes a methodological framework for interpreting instability in multimodal survival learning.",
+  "reason": "预印本、单一TCGA队列的诊断性研究，未提出新架构，属增量档",
+  "zh_abstract": "生存预测经常表现出不稳定且不可重复的性能，限制了其临床应用。本文并非提出新的预测架构，而是对造成这种不稳定性的来源进行诊断性研究。使用一个基于 transformer 的深度融合模型，结合来自 TCGA-BRCA 队列的 RNA 测序和组织病理学数据作为诊断探针，我们证明全局生存预测在不同数据划分之间高度不稳定。然后我们以无监督方式分析学到的多模态嵌入，揭示出具有显著不同生存结局的稳定潜在患者亚组。这些亚组不能由经典受体状态或免疫浸润解释，而是与肿瘤内在增殖活性一致。以发现的最大亚组为条件进行生存建模，恢复了强且稳定的预后性能，显著优于单模态基线。这些发现表明，生存可预测性以潜在异质性为条件，并提示异质性感知建模策略对于稳健的多模态预后至关重要。这项工作为解释多模态生存学习中的不稳定性建立了一个方法学框架。"
+ },
+ {
+  "title": "Interference-resistant Janus hydrogel electrodes for AI-enabled platform for rehabilitation assessment.",
+  "link": "https://pubmed.ncbi.nlm.nih.gov/42772131/",
+  "date": "2026-09-18T00:00:00+00:00",
+  "badge": "DOI 10.1016/j.jcis.2026.141615",
+  "source": "PubMed · Journal of colloid and interface science",
+  "source_group": "PubMed",
+  "home": "",
+  "thin": false,
+  "pop": null,
+  "id": "8d6ec5c3426d",
+  "keep": true,
+  "zh_title": "抗干扰Janus水凝胶电极结合AI用于康复评估",
+  "summary": "同行评审研究报道Janus水凝胶电极兼具高导电、低皮肤阻抗与抗干扰特性，配合Transformer算法用于康复评估。",
+  "key_points": [
+   "电导率3×10⁴ S·m⁻¹，皮肤阻抗约300 Ω",
+   "250%应变下阻抗稳定且可快速自愈合",
+   "与Transformer时序算法联用做康复评估"
+  ],
+  "section": "数字健康",
+  "type": "论文",
+  "tags": [
+   "生理信号",
+   "数字健康"
   ],
   "evidence": "同行评审",
   "score": 4,
   "day": "2026-10-15",
-  "rank": 6.87
+  "rank": 8.64,
+  "abstract_tries": 1,
+  "abstract": "[Journal of colloid and interface science] Physiological signal acquisition is essential for medical diagnostics and human-machine interfaces. Motion artifacts and sweat-induced instability present persistent challenges for conventional electrodes, fundamentally limiting their reliability in dynamic or long-term use. Here, we report a Janus hydrogel electrode that combines high electrical conductivity (3 × 104 S·m-1), strong interfacial adhesion to copper surfaces (2079 J·m-2), and low skin-electrode impedance (∼300 Ω). Distinct from conventional Ag/AgCl electrodes, hydrogel electrode uniquely combines hydrophobic protection, high-strain impedance insensitivity (250%) and rapid self-healing, achieving interference-resistant physiological signal monitoring even under vibration and moisture interferences. Notably, coupling with advanced Transformer algorithms optimized for temporal sequence analysis, the electrodes delivered 97.02% gesture recognition accuracy. This system harnesses these gestures to generate robust and intuitive command inputs, paving the way for potential rehabilitation applications, where future clinical validation is required. This work introduces a multifunctional, biocompatible electrode platform that couples reliable physiological monitoring with AI-powered rehabilitation assessment, opening new avenues for next-generation intelligent wearable bioelectronics.",
+  "reason": "材料与电极为主、算法为配套，无临床结局评估，属增量档",
+  "zh_abstract": "[Journal of colloid and interface science] 生理信号采集对于医学诊断和人机接口至关重要。运动伪影和汗液引起的不稳定性给传统电极带来了持续挑战，从根本上限制了其在动态或长期使用中的可靠性。在此，我们报道了一种 Janus 水凝胶电极，它结合了高电导率（3 × 104 S·m-1）、对铜表面的强界面粘附力（2079 J·m-2）和低皮肤-电极阻抗（∼300 Ω）。与传统 Ag/AgCl 电极不同，该水凝胶电极独特地结合了疏水保护、高应变阻抗不敏感性（250%）和快速自愈合，即使在振动和湿气干扰下也能实现抗干扰的生理信号监测。值得注意的是，与针对时间序列分析优化的先进 Transformer 算法相结合，这些电极实现了 97.02% 的手势识别准确率。该系统利用这些手势生成稳健且直观的命令输入，为潜在的康复应用铺平道路，未来仍需临床验证。这项工作引入了一种多功能、生物相容的电极平台，将可靠的生理监测与 AI 驱动的康复评估相结合，为下一代智能可穿戴生物电子学开辟了新途径。"
  },
  {
   "title": "The FDA Clarified Its Rules for Medical AI. This Stock Could Be on the Right Side of Them",
@@ -859,6 +962,36 @@
   "rank": 6.5
  },
  {
+  "title": "Former FDA officials blast DOGE as ‘one of the biggest disasters in American history’",
+  "link": "https://www.statnews.com/2026/10/14/former-fda-commissioners-say-recruit-defend-support-agency-workforce/?utm_campaign=rss",
+  "date": "2026-10-14T23:23:20+00:00",
+  "source": "STAT News",
+  "source_group": "STAT News",
+  "home": "",
+  "thin": false,
+  "badge": "",
+  "pop": null,
+  "id": "75a9f2fac0c5",
+  "keep": true,
+  "zh_title": "前FDA官员批评DOGE 称其为美国史上最大灾难之一",
+  "summary": "三位前FDA局长Gottlieb、Califf和Sharpless在STAT峰会上批评DOGE，并讨论该机构如何从近期争议中恢复。",
+  "key_points": [
+   "三位前FDA局长公开表态",
+   "在STAT峰会批评DOGE",
+   "讨论FDA如何走出争议"
+  ],
+  "section": "落地与监管",
+  "type": "观点",
+  "tags": [
+   "监管政策"
+  ],
+  "evidence": "新闻",
+  "score": 3,
+  "reason": "监管机构人事与治理观点新闻，与AI无直接关系，属增量档",
+  "day": "2026-10-15",
+  "rank": 6.5
+ },
+ {
   "title": "When AI Outruns the Doctor: A New Framework Measures the Human Oversight Gap in Cardiology",
   "link": "https://news.google.com/rss/articles/CBMitAFBVV95cUxNT1dGa2I2NkpEOHN6ZHJxcDhtNDU0OHo2ekxGNjM1VzVzV2pvMkZwNWl5eWpyUkhSS0t3VEVGYklDX1VfZEliMHlRVzg4bjdhWVZkRlYwcUdZYktzOWtFU0FWMGJ0N2NQa3MtUVlWaVlWc1lDTDlqdDdiSGJhWW9IOXlpVjdUSXZKaUZzaTNndWtKNnpXNEZNSkh3STgyTXVPNzN6VzdOMmJzdmotMEZRSV92cTM?oc=5",
   "date": "2026-10-14T13:58:50+00:00",
@@ -912,35 +1045,37 @@
   "rank": 6.0
  },
  {
-  "title": "Patient Needs and Requirements for a Decision Aid Navigator System (DEAN) Patient Portal: A Qualitative Study",
-  "link": "https://www.medrxiv.org/content/10.64898/2026.10.12.26365343v1?rss=1",
-  "date": "2026-10-13T00:00:00+00:00",
-  "source": "medRxiv",
-  "source_group": "medRxiv",
+  "title": "A pseudo-labeling approach for automated assignment of unlabeled proteins exceeding 100 amino acid residues.",
+  "link": "https://pubmed.ncbi.nlm.nih.gov/42872102/",
+  "date": "2026-09-28T00:00:00+00:00",
+  "badge": "DOI 10.1016/j.mrl.2026.200309",
+  "source": "PubMed · Magnetic resonance letters",
+  "source_group": "PubMed",
   "home": "",
   "thin": false,
-  "badge": "DOI 10.64898/2026.10.12.26365343v1",
   "pop": null,
-  "id": "e7a9e9030741",
+  "id": "718673882629",
   "keep": true,
-  "zh_title": "患者对决策辅助导航系统门户的需求：定性研究",
-  "summary": "通过两家学术医学中心六组焦点小组，探讨患者对决策辅助工具及EHR集成导航系统（DEANS）的认知障碍与使用需求。",
+  "zh_title": "伪标记策略自动归属超100残基未标记蛋白",
+  "summary": "同行评审研究提出伪标记策略，用高场核磁与冷冻探头采集天然丰度谱，自动完成未标记蛋白共振归属。",
   "key_points": [
-   "六组焦点小组，来自两家学术医学中心",
-   "焦点小组先介绍何为患者决策辅助工具",
-   "探讨经EHR集成导航系统获取决策辅助的障碍与需求"
+   "采用天然丰度1H-13C与1H-15N相关谱",
+   "无需13C/15N同位素标记，降低成本",
+   "服务AI预测蛋白结构模型的实验验证"
   ],
-  "section": "临床预测与决策",
+  "section": "生命科学与药物",
   "type": "论文",
   "tags": [
-   "临床决策支持",
-   "数字健康"
+   "蛋白质"
   ],
-  "evidence": "预印本",
+  "evidence": "同行评审",
   "score": 3,
-  "reason": "小样本定性研究，无算法模型与结局指标，属增量档",
   "day": "2026-10-15",
-  "rank": 5.64
+  "rank": 6.87,
+  "abstract_tries": 1,
+  "abstract": "[Magnetic resonance letters] In the era of AI-driven protein structure prediction, there is an urgent demand for rapid, accessible experimental approaches to validate computationally predicted structural models or to improve the accuracy of AI-based structure determination. As a key experimental technique for determining protein structures in solution, conventional biomolecular NMR spectroscopy relies heavily on proteins labeled with 13C and 15N isotopes, a requirement that entails high experimental costs, lengthy sample preparation times, and steep technical barriers, thereby limiting its broader application. Building on our previous work, we have developed a pseudo-labeling strategy for the automated resonance assignment of unlabeled proteins. Using high-field NMR spectrometers equipped with cryoprobes, we acquired natural-abundance 1H-13C and 1H-15N heteronuclear correlation spectra directly from unlabeled samples. By integrating predicted chemical shifts of HN, Hα, 13Cα, and 15N from three complementary AI tools into an iterative simulated annealing framework with an alternating scoring scheme, our method effectively resolves severe cross-peak overlap during the automated assignment process by introducing heteronuclear dimensional constraints. This approach enables reliable automated backbone resonance assignment for unlabeled proteins exceeding 100 amino acid residues. We anticipate that this labeling-free strategy will lower the technical barrier to biomolecular NMR, enabling researchers without specialized NMR expertise to employ NMR spectroscopy in fundamental life science research and drug development.",
+  "reason": "实验方法学进展，与AI算法仅间接相关，属增量档",
+  "zh_abstract": "[Magnetic resonance letters] 在 AI 驱动的蛋白质结构预测时代，迫切需要快速、易获取的实验方法来验证计算预测的结构模型，或提高基于 AI 的结构测定的准确性。作为在溶液中测定蛋白质结构的关键实验技术，传统生物分子 NMR 波谱学严重依赖用 13C 和 15N 同位素标记的蛋白质，这一要求带来高实验成本、冗长的样品制备时间和陡峭的技术门槛，从而限制了其更广泛的应用。在我们先前工作的基础上，我们开发了一种用于未标记蛋白质自动共振归属的伪标记策略。使用配备低温探针的高场 NMR 波谱仪，我们直接从无标记样品中采集天然丰度的 1H-13C 和 1H-15N 异核相关谱。通过将来自三种互补 AI 工具的 HN、Hα、13Cα 和 15N 预测化学位移整合到具有交替评分方案的迭代模拟退火框架中，我们的方法通过引入异核维度约束，有效解决了自动归属过程中严重的交叉峰重叠问题。该方法能够对超过 100 个氨基酸残基的未标记蛋白质进行可靠的自动主链共振归属。我们预期，这种无标记策略将降低生物分子 NMR 的技术门槛，使不具备 NMR 专业知识的研究人员也能在基础生命科学研究和药物开发中使用 NMR 波谱学。"
  },
  {
   "title": "faizaltkl/medical-gemma-300m-emb",
@@ -1004,6 +1139,40 @@
   "rank": 5.0
  },
  {
+  "title": "Patient Needs and Requirements for a Decision Aid Navigator System (DEAN) Patient Portal: A Qualitative Study",
+  "link": "https://www.medrxiv.org/content/10.64898/2026.10.12.26365343v1?rss=1",
+  "date": "2026-10-13T00:00:00+00:00",
+  "source": "medRxiv",
+  "source_group": "medRxiv",
+  "home": "",
+  "thin": false,
+  "badge": "DOI 10.64898/2026.10.12.26365343v1",
+  "pop": null,
+  "id": "e7a9e9030741",
+  "keep": true,
+  "zh_title": "患者对决策辅助导航系统的需求：定性研究",
+  "summary": "预印本定性研究通过六组焦点小组了解患者对决策辅助工具及EHR集成导航系统的认知、障碍与需求。",
+  "key_points": [
+   "两所学术医疗中心共开展六组焦点小组",
+   "患者对决策辅助工具熟悉度有限",
+   "梳理EHR集成导航系统的使用需求"
+  ],
+  "section": "数字健康",
+  "type": "论文",
+  "tags": [
+   "临床决策支持",
+   "电子病历"
+  ],
+  "evidence": "预印本",
+  "score": 2,
+  "reason": "未涉及AI或算法，仅患者需求定性研究，相关性弱",
+  "day": "2026-10-15",
+  "rank": 5.64,
+  "abstract_tries": 1,
+  "abstract": "Background: Patient Decision aids (PtDAs) are important tools that support shared decision-making (SDM) between clinicians and patients, enabling patients to be more informed and engaged in decisions regarding their care. The use of PtDAs can increase patient knowledge, reduce decisional regret, and engage the clinician and patient in meaningful dialogue. Shared decision-making relies on decision aids, but how patients receive the PtDA can vary. This qualitative study elucidated patient familiarity with PtDAs and the barriers, needs, and requirements of patients to access and confidently use DAs, including when received via a clinician-facing EHR-integrated Decision Aid Navigator System (DEANS). Methods: We conducted six focus groups (FG) with participants who were recruited from two academic medical centers. Focus groups included an introduction to what a PtDA is and an exploration of how patients or family members, i.e., people who had not made a medical decision for themselves using a PtDA, but who have helped a family member, had previously used PtDAs in their healthcare. The FGs focused on PtDA-users, affordances and barriers to using PtDAs, and PtDA-user needs and requirements of a proposed DEAN patient portal. We applied Rapid Qualitative Analysis (RQA) to summarize the data, using a consensus making approach to identify emerging themes. Results: We identified three overarching themes: 1) Patients had varied familiarity with PtDAs and often confused them with general health tools, but found value in SDM, 2) Patients perceived technology accessibility, PtDA credibility, and time as barriers potentially impeding PtDA use, and 3) Patients valued flexible, user-friendly, and accessible PtDAs that support patient-led decisions, particularly when introduced by clinicians and delivered via a patient portal. Conclusion: This study provides patient-derived insights into factors that influence PtDA uptake, highlighting common misconceptions about PtDAs and identifying key patient priorities such as accessibility, flexibility, clear content, and clinician-guided usage. Patient also expected clinicians to be familiar with PtDAs, especially when the PtDA covers a complex decision. These findings can inform the development of more patient-centered SDM infrastructure and strategies to support PtDA use in clinical practice, including clinician-supported delivery, accessibility, and integration into routine care to strengthen shared decision-making.",
+  "zh_abstract": "【背景】患者决策辅助工具（Patient Decision aids, PtDAs）是支持临床医生与患者之间共享决策（shared decision-making, SDM）的重要工具，使患者能够更知情并参与有关其照护的决策。使用 PtDAs 可以增加患者知识、减少决策后悔，并使临床医生和患者进行有意义的对话。共享决策依赖决策辅助工具，但患者获得 PtDA 的方式可能各不相同。这项定性研究阐明了患者对 PtDAs 的熟悉程度，以及患者获取并自信使用 DAs 的障碍、需求和要求，包括当通过面向临床医生的、与 EHR 集成的决策辅助导航系统（Decision Aid Navigator System, DEANS）获得时。【方法】我们开展了六个焦点小组（focus group, FG），参与者从两个学术医疗中心招募。焦点小组包括介绍什么是 PtDA，并探讨患者或家庭成员（即未曾自己使用 PtDA 做出医疗决定、但曾帮助过家庭成员的人）此前在其医疗保健中如何使用 PtDAs。焦点小组聚焦于 PtDA 使用者、使用 PtDAs 的可供性与障碍，以及拟议的 DEAN 患者门户的 PtDA 使用者需求和要求。我们应用快速定性分析（Rapid Qualitative Analysis, RQA）来总结数据，使用共识制定方法识别新出现的主题。【结果】我们确定了三个总体主题：1）患者对 PtDAs 的熟悉程度各异，常将其与一般健康工具混淆，但认为 SDM 有价值；2）患者认为技术可及性、PtDA 可信度和时间是可能阻碍 PtDA 使用的障碍；3）患者重视灵活、用户友好且可及的 PtDAs，这些工具支持患者主导的决策，尤其是当由临床医生介绍并通过患者门户提供时。【结论】本研究提供了来自患者的洞见，揭示影响 PtDA 采用的因素，强调了关于 PtDAs 的常见误解，并确定了患者的关键优先事项，如可及性、灵活性、清晰内容和临床医生指导的使用。患者还期望临床医生熟悉 PtDAs，尤其是当 PtDA 涉及复杂决策时。这些发现可为开发更以患者为中心的 SDM 基础设施和策略提供信息，以支持临床实践中 PtDA 的使用，包括临床医生支持的提供、可及性以及整合到常规照护中，以加强共享决策。"
+ },
+ {
   "title": "A burn-wound tool was showcased at the world's largest emergency medicine conference.",
   "link": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxNQzlZbFZySlE3UmJMMUxqanZXZm50Qm5vZ0d4OG1GYnp4Sm9kQ1htNjhfQTNKZmRUX0hmU1hrY2FoSEhyaUV2UjNOdHFualAzUm94SXVVMU91X3YwejltdkNpTXNfV2c4aFJoX2gzRDFnNXB5d3A1LTRqSk9uS0pKdVVwdF9wWUtBQ2ZrRldOYjd1aWlFNWJWODV5ZU5KeHNTRWZwalZKNWJBQnlwMU8teERyTTBiSGttMjNN?oc=5",
   "date": "2026-10-13T12:30:00+00:00",
@@ -1031,6 +1200,33 @@
   "rank": 4.14
  },
  {
+  "title": "直播预告|《医疗器械生产质量管理规范检查指导原则》线上宣贯（附直播入口）",
+  "link": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE54LTBwSDdVd3A3R05qRFNaenBjNTVubVc1UjlFYl9pWElVbEtMTW1zbFJmS0VqOTVsaF83ck5vVkk5RURxOVhJSzQyZXEwdExHQlc0Z2c5OGstOEh3?oc=5",
+  "date": "2026-10-12T06:54:40+00:00",
+  "source": "中国食品药品网",
+  "source_group": "Google News · NMPA AI",
+  "home": "https://m.cnpharm.com",
+  "thin": true,
+  "badge": "",
+  "pop": null,
+  "id": "d1cd1a710a28",
+  "keep": true,
+  "zh_title": "《医疗器械生产质量管理规范检查指导原则》线上宣贯",
+  "summary": "中国食品药品网发布《医疗器械生产质量管理规范检查指导原则》线上宣贯直播预告，并附直播入口。",
+  "key_points": [],
+  "section": "落地与监管",
+  "type": "监管",
+  "tags": [
+   "监管政策",
+   "医疗器械"
+  ],
+  "evidence": "新闻",
+  "score": 2,
+  "reason": "仅直播预告、信息量极低，title_only按边缘档给2分",
+  "day": "2026-10-15",
+  "rank": 3.99
+ },
+ {
   "title": "Human–artificial intelligence collaboration for comanaging epilepsy in real time",
   "link": "https://www.nature.com/articles/s41591-026-04680-4",
   "date": "2026-10-13T00:00:00+00:00",
@@ -1039,24 +1235,28 @@
   "badge": "DOI 10.1038/s41591-026-04680-4",
   "id": "f614e78387db",
   "keep": true,
-  "zh_title": "人机协作实时共同管理癫痫",
-  "summary": "小型癫痫监测研究显示，基于大语言模型的聊天界面让患者用手机实时对话脑电监测，患者反馈使检测器误报减少约80%。",
+  "zh_title": "人机协同实时共管癫痫监测",
+  "summary": "小型癫痫监测研究显示，患者用手机与LLM聊天界面实时对话脑电，反馈使检测假警报减少约80%。",
   "key_points": [
-   "患者可通过手机与脑电监测实时对话",
-   "患者反馈使误报减少约80%",
-   "该过程无需临床医生参与"
+   "患者用智能手机与脑电LLM界面实时交互",
+   "患者反馈使癫痫检测假警报降约80%",
+   "该过程无需临床医生介入"
   ],
   "section": "大模型与智能体",
   "type": "论文",
   "tags": [
    "医学大模型",
-   "临床NLP",
-   "神经科学"
+   "生理信号"
   ],
   "evidence": "同行评审",
-  "score": 8,
+  "score": 7,
   "day": "2026-10-14",
-  "source_group": "Nature Medicine"
+  "source_group": "Nature Medicine",
+  "abstract_tries": 1,
+  "abstract": "Nature Medicine, Published online: 13 October 2026; doi:10.1038/s41591-026-04680-4 A small epilepsy monitoring study shows that a moderated, large language model-based chat interface lets patients converse with their electroencephalography monitoring in real time, using a smartphone, and patient feedback cut seizure-detector false alarms by about 80% without clinician input.",
+  "thin": false,
+  "reason": "同行评审且报告人机协同工作流效果，但样本量小，属重要档偏低",
+  "zh_abstract": "Nature Medicine，在线发表：2026年10月13日；doi:10.1038/s41591-026-04680-4 一项小型癫痫监测研究表明，一种经审核的、基于大语言模型的聊天界面使患者能够使用智能手机实时与其脑电图监测进行对话，并且患者反馈在无需临床医生参与的情况下将癫痫发作检测器的假警报减少了约80%。"
  },
  {
   "title": "A health-system-scale, episode-resolved multimodal atlas of cancer cachexia",
@@ -1067,12 +1267,12 @@
   "badge": "DOI 10.1038/s41591-026-04689-9",
   "id": "0aff7c12cf10",
   "keep": true,
-  "zh_title": "健康系统规模的癌症恶病质病程多模态图谱",
-  "summary": "基于52,236例癌症患者纵向数据构建恶病质多模态图谱，体重下降事件与血清学特征及肿瘤基因型相关，并可整合临床与分子数据预测。",
+  "zh_title": "医疗系统级癌症恶病质多模态图谱",
+  "summary": "基于52,236例癌症患者纵向数据构建恶病质多模态图谱，体重下降事件与血清特征及肿瘤基因型相关并可预测。",
   "key_points": [
    "纳入52,236例癌症患者纵向数据",
-   "体重下降事件关联系统性血清学特征",
-   "整合临床与分子数据实现预测与早期识别"
+   "体重下降事件关联系统性血清特征",
+   "整合临床与分子数据实现早期识别"
   ],
   "section": "临床预测与决策",
   "type": "论文",
@@ -1082,37 +1282,14 @@
    "临床预测"
   ],
   "evidence": "同行评审",
-  "score": 8,
-  "day": "2026-10-14",
-  "source_group": "Nature Medicine"
- },
- {
-  "title": "Characterizing the onset and progression of cancer cachexia using routine clinical data",
-  "link": "https://www.nature.com/articles/s41591-026-04720-z",
-  "date": "2026-10-13T00:00:00+00:00",
-  "pop": null,
-  "source": "Nature Medicine",
-  "badge": "DOI 10.1038/s41591-026-04720-z",
-  "id": "96c2a5e62dd9",
-  "keep": true,
-  "zh_title": "利用常规临床数据刻画癌症恶病质的发生与进展",
-  "summary": "Nature Medicine在52,236例癌症患者中分析恶病质体重下降与生存、疾病进展及血清标志物的关联，并训练模型预测风险。",
-  "key_points": [
-   "52,236例癌症患者队列",
-   "恶病质体重下降与更低生存率相关",
-   "训练统计模型预测恶病质风险"
-  ],
-  "section": "临床预测与决策",
-  "type": "论文",
-  "tags": [
-   "肿瘤",
-   "临床预测",
-   "电子病历"
-  ],
-  "evidence": "同行评审",
   "score": 7,
   "day": "2026-10-14",
-  "source_group": "Nature Medicine"
+  "source_group": "Nature Medicine",
+  "abstract_tries": 1,
+  "abstract": "Nature Medicine, Published online: 12 October 2026; doi:10.1038/s41591-026-04689-9 Using longitudinal data from 52,236 patients with cancer, this study created a multimodal atlas of cancer cachexia, demonstrating that weight loss episodes are linked to systemic serologic signatures and specific tumor genotypes and can be predicted using integrated clinical and molecular data, enabling earlier identification.",
+  "thin": false,
+  "reason": "五万余例大样本、多模态且具预测价值，同行评审，属重要档",
+  "zh_abstract": "Nature Medicine，在线发表：2026年10月12日；doi:10.1038/s41591-026-04689-9 本研究利用来自52,236例癌症患者的纵向数据，创建了一个癌症恶病质的多模态图谱，证明体重减轻事件与全身性血清学特征及特定肿瘤基因型相关，并可使用整合的临床和分子数据进行预测，从而实现更早识别。"
  },
  {
   "title": "Population-scale reconstruction of menopause dynamics reveals a physiological cliff at the final menstrual period",
@@ -1136,7 +1313,8 @@
   "evidence": "同行评审",
   "score": 7,
   "day": "2026-10-14",
-  "source_group": "Nature Medicine"
+  "source_group": "Nature Medicine",
+  "abstract_tries": 1
  },
  {
   "title": "Model-dependent prompt effects challenge reliable deployment of medical LLMs in traditional Chinese medicine",
@@ -1163,7 +1341,8 @@
   "evidence": "同行评审",
   "score": 7,
   "day": "2026-10-14",
-  "source_group": "npj Digital Medicine"
+  "source_group": "npj Digital Medicine",
+  "abstract_tries": 1
  },
  {
   "title": "AEGIS: an operational infrastructure for post-market governance of adaptive medical AI under US and EU regulatory frameworks",
@@ -1189,7 +1368,8 @@
   "evidence": "同行评审",
   "score": 7,
   "day": "2026-10-14",
-  "source_group": "npj Digital Medicine"
+  "source_group": "npj Digital Medicine",
+  "abstract_tries": 1
  },
  {
   "title": "Building Clinical AI Is Hard. Getting It in Use Is Harder: Lessons Learned from 50+ Algorithms, 2000 Hospitals, and 11 Million Patients",
@@ -1215,7 +1395,8 @@
   "evidence": "同行评审",
   "score": 8,
   "day": "2026-10-14",
-  "source_group": "NEJM AI"
+  "source_group": "NEJM AI",
+  "abstract_tries": 1
  },
  {
   "title": "Closing the Automation Gap in HPV-Based Cervical Cancer Screening: Independent External Validation of an AI Model for Dual-Stain Triage",
@@ -1241,7 +1422,8 @@
   "evidence": "同行评审",
   "score": 8,
   "day": "2026-10-14",
-  "source_group": "NEJM AI"
+  "source_group": "NEJM AI",
+  "abstract_tries": 1
  },
  {
   "title": "From Technical Performance to Clinical Readiness: A Phase-Based Framework for Evidence Standards in Clinical Artificial Intelligence",
@@ -1267,7 +1449,8 @@
   "evidence": "同行评审",
   "score": 8,
   "day": "2026-10-14",
-  "source_group": "NEJM AI"
+  "source_group": "NEJM AI",
+  "abstract_tries": 1
  },
  {
   "title": "AI-based hourly prediction of emergency department demand integrating social determinants of health",
@@ -1294,7 +1477,8 @@
   "evidence": "同行评审",
   "score": 7,
   "day": "2026-10-14",
-  "source_group": "npj Digital Medicine"
+  "source_group": "npj Digital Medicine",
+  "abstract_tries": 1
  },
  {
   "title": "[Articles] Effect of a computer-aided quality feedback system on colonoscopists’ adenoma detection rate in Denmark: a multicentre, stepped-wedge, cluster-randomised, controlled trial",
@@ -1308,12 +1492,12 @@
   "pop": null,
   "id": "4a99b246253d",
   "keep": true,
-  "zh_title": "计算机辅助质量反馈系统提高结肠镜腺瘤检出率：丹麦随机试验",
-  "summary": "丹麦多中心阶梯楔形整群随机对照试验显示，实施CCC CAQ反馈系统提高了腺瘤、息肉及晚期腺瘤检出率，并延长退镜时间。",
+  "zh_title": "丹麦计算机辅助质量反馈提升腺瘤检出率",
+  "summary": "多中心阶梯楔形整群随机试验显示，CCC CAQ反馈系统提高腺瘤、息肉及ACDR检出率并延长退镜时间。",
   "key_points": [
-   "丹麦多中心阶梯楔形整群随机对照试验",
-   "腺瘤、息肉及晚期腺瘤检出率均提高",
-   "退镜时间延长；对结肠镜后结直肠癌影响待评估"
+   "多中心阶梯楔形整群随机对照设计",
+   "ADR、PDR、ACDR提高且退镜时间延长",
+   "尚需评估是否减少结肠镜后结直肠癌"
   ],
   "section": "影像与病理",
   "type": "论文",
@@ -1324,37 +1508,11 @@
   "evidence": "同行评审",
   "score": 8,
   "day": "2026-10-14",
-  "rank": 12.0
- },
- {
-  "title": "[Articles] Multimodal artificial intelligence-based long-term mortality prediction after transcatheter aortic valve implantation: a multicentre development, validation, and testing study",
-  "link": "https://www.thelancet.com/journals/landig/article/PIIS2589-7500(26)00072-5/fulltext?rss=yes",
-  "date": "2026-08-27T22:30:02+00:00",
-  "source": "Lancet Digital Health",
-  "source_group": "Lancet Digital Health",
-  "home": "",
-  "thin": false,
-  "badge": "",
-  "pop": null,
-  "id": "c8c63b97d96a",
-  "keep": true,
-  "zh_title": "多模态AI预测TAVI术后长期死亡率",
-  "summary": "多中心开发、验证与测试显示，可解释多模态AI模型预测TAVI长期结局优于传统风险评分。",
-  "key_points": [
-   "多模态AI模型预测TAVI后长期死亡率",
-   "多中心开发、验证与测试设计",
-   "优于传统风险评分且泛化性稳健"
-  ],
-  "section": "临床预测与决策",
-  "type": "论文",
-  "tags": [
-   "多模态",
-   "临床预测"
-  ],
-  "evidence": "同行评审",
-  "score": 8,
-  "day": "2026-10-14",
-  "rank": 12.0
+  "rank": 12.0,
+  "abstract_tries": 1,
+  "abstract": "Implementation of the CCC CAQ–feedback system improved ADR, PDR, and ACDR, and prolonged the withdrawal time. Future studies should assess whether this implementation leads to a decrease in post-colonoscopy colorectal cancer and explore the effect in centres that do not use FIT-based screening.",
+  "reason": "多中心随机对照设计并报告临床检出结局，属重要档上限",
+  "zh_abstract": "实施CCC CAQ–反馈系统改善了ADR、PDR和ACDR，并延长了退镜时间。未来研究应评估该实施是否会导致结肠镜检查后结直肠癌减少，并探索其在未使用基于FIT筛查的中心中的效果。"
  },
  {
   "title": "[Articles] Toward unified and comprehensive automated electroencephalogram interpretation: a multicentre development and validation of an electroencephalogram foundation model",
@@ -1368,24 +1526,59 @@
   "pop": null,
   "id": "8563d07b5c24",
   "keep": true,
-  "zh_title": "EEG基础模型MORGOTH的多中心开发与验证",
-  "summary": "多中心开发与验证的脑电图基础模型MORGOTH在临床场景达到专家级表现，提升低资源环境诊断准确性。",
+  "zh_title": "脑电基础模型MORGOTH：多中心开发与验证",
+  "summary": "多中心开发并验证的脑电基础模型MORGOTH，在多种临床场景达到专家级脑电判读表现。",
   "key_points": [
-   "MORGOTH为自动化脑电图解读基础模型",
-   "经多中心开发与验证，达专家级表现",
-   "低资源环境诊断准确性提升，高负荷中心更高效"
+   "多中心开发与验证的EEG基础模型",
+   "多场景达专家级判读水平",
+   "低资源环境可提升诊断准确性"
   ],
   "section": "临床预测与决策",
-  "type": "论文",
+  "type": "模型",
   "tags": [
    "生理信号",
-   "医学大模型",
    "神经科学"
   ],
   "evidence": "同行评审",
   "score": 8,
   "day": "2026-10-14",
-  "rank": 12.0
+  "rank": 12.0,
+  "abstract_tries": 1,
+  "abstract": "MORGOTH advances automated EEG interpretation with expert-level performance across clinical settings, offering improved diagnostic accuracy in low-resource environments and greater efficiency in high-volume centres.",
+  "reason": "多中心验证的EEG基础模型，达专家级判读，属重要档",
+  "zh_abstract": "MORGOTH推动了自动化脑电图（EEG）解读，在各类临床环境中达到专家级性能，在低资源环境中提供更高的诊断准确性，并在高负荷中心提高效率。"
+ },
+ {
+  "title": "Characterizing the onset and progression of cancer cachexia using routine clinical data",
+  "link": "https://www.nature.com/articles/s41591-026-04720-z",
+  "date": "2026-10-13T00:00:00+00:00",
+  "pop": null,
+  "source": "Nature Medicine",
+  "badge": "DOI 10.1038/s41591-026-04720-z",
+  "id": "96c2a5e62dd9",
+  "keep": true,
+  "zh_title": "常规临床数据刻画癌症恶病质发生与进展",
+  "summary": "在52,236例癌症患者中，恶病质体重下降与更低生存率、疾病进展相关，并具一致血清学特征，模型可预测其风险。",
+  "key_points": [
+   "恶病质体重下降者生存率更低",
+   "体重下降多发生于疾病进展时期",
+   "TP53等基因型与恶病质风险正相关"
+  ],
+  "section": "临床预测与决策",
+  "type": "论文",
+  "tags": [
+   "临床预测",
+   "肿瘤"
+  ],
+  "evidence": "同行评审",
+  "score": 6,
+  "day": "2026-10-14",
+  "source_group": "Nature Medicine",
+  "abstract_tries": 1,
+  "abstract": "Nature Medicine, Published online: 13 October 2026; doi:10.1038/s41591-026-04720-z In 52,236 patients with cancer, cachectic weight loss episodes were linked to lower survival rates, occurred at times of disease progression, and carried a consistent serological signature across routine laboratory markers. Specific tumor genotypes, including TP53 mutations, were also positively associated with cachexia risk. Statistical models were trained to predict a patient’s impending risk of cachexia.",
+  "thin": false,
+  "reason": "大样本回顾性队列并训练预测模型，以关联描述为主，属值得一看档",
+  "zh_abstract": "Nature Medicine，在线发表：2026年10月13日；doi:10.1038/s41591-026-04720-z 在52,236例癌症患者中，恶病质性体重减轻事件与较低的生存率相关，发生于疾病进展时，并在常规实验室标志物中具有一致的血清学特征。特定肿瘤基因型，包括TP53突变，也与恶病质风险呈正相关。研究训练了统计模型来预测患者即将发生的恶病质风险。"
  },
  {
   "title": "Electronic health record developer adherence to federal AI risk transparency requirements",
@@ -1411,7 +1604,8 @@
   "evidence": "同行评审",
   "score": 6,
   "day": "2026-10-14",
-  "rank": 9.5
+  "rank": 9.5,
+  "abstract_tries": 1
  },
  {
   "title": "Development of a scoring system via an interpretable end-to-end neural network for prognostic stratification of patients with advanced melanoma",
@@ -1438,7 +1632,8 @@
   "evidence": "同行评审",
   "score": 6,
   "day": "2026-10-14",
-  "source_group": "npj Digital Medicine"
+  "source_group": "npj Digital Medicine",
+  "abstract_tries": 1
  },
  {
   "title": "Multidimensional continuous glucose monitoring metrics enable digital risk stratification across the diabetes spectrum",
@@ -1465,7 +1660,8 @@
   "evidence": "同行评审",
   "score": 6,
   "day": "2026-10-14",
-  "source_group": "npj Digital Medicine"
+  "source_group": "npj Digital Medicine",
+  "abstract_tries": 1
  },
  {
   "title": "Realizing the value of the divergence event in clinical human-AI interaction",
@@ -1491,7 +1687,8 @@
   "evidence": "同行评审",
   "score": 6,
   "day": "2026-10-14",
-  "source_group": "npj Digital Medicine"
+  "source_group": "npj Digital Medicine",
+  "abstract_tries": 1
  },
  {
   "title": "AI-assisted scoping review of code sharing in clinical prediction model research",
@@ -1517,243 +1714,43 @@
   "evidence": "同行评审",
   "score": 6,
   "day": "2026-10-14",
-  "source_group": "Nature Medicine"
+  "source_group": "Nature Medicine",
+  "abstract_tries": 1
  },
  {
-  "title": "[Articles] Status, challenges, and future directions of machine learning in the management of epilepsy: a systematic review and meta-analysis",
-  "link": "https://www.thelancet.com/journals/landig/article/PIIS2589-7500(26)00052-X/fulltext?rss=yes",
-  "date": "2026-09-03T22:30:04+00:00",
+  "title": "[Articles] Multimodal artificial intelligence-based long-term mortality prediction after transcatheter aortic valve implantation: a multicentre development, validation, and testing study",
+  "link": "https://www.thelancet.com/journals/landig/article/PIIS2589-7500(26)00072-5/fulltext?rss=yes",
+  "date": "2026-08-27T22:30:02+00:00",
   "source": "Lancet Digital Health",
   "source_group": "Lancet Digital Health",
   "home": "",
   "thin": false,
   "badge": "",
   "pop": null,
-  "id": "d77e936503a6",
+  "id": "c8c63b97d96a",
   "keep": true,
-  "zh_title": "机器学习在癫痫管理中的现状、挑战与未来方向：系统综述与荟萃分析",
-  "summary": "系统综述与荟萃分析指出，机器学习预测癫痫治疗结局受高异质性与偏倚限制，临床适用性有限。",
+  "zh_title": "多模态AI预测TAVI术后长期死亡：多中心研发验证",
+  "summary": "多模态AI模型预测经导管主动脉瓣植入术后长期死亡率，在多中心开发、验证与测试中显著优于传统风险评分。",
   "key_points": [
-   "机器学习在预测癫痫治疗结局上显示潜力",
-   "小样本、缺失数据处理与缺少外部验证造成偏倚",
-   "未来需更大规模多样化数据集与前瞻性试验"
+   "多中心开发、验证与测试设计",
+   "表现显著优于传统风险评分",
+   "跨TAVI人群与临床场景泛化性好"
   ],
   "section": "临床预测与决策",
   "type": "论文",
   "tags": [
    "临床预测",
-   "神经科学",
+   "多模态",
    "临床决策支持"
   ],
   "evidence": "同行评审",
   "score": 7,
   "day": "2026-10-14",
-  "rank": 11.0
- },
- {
-  "title": "[Review] Artificial intelligence models for automated and semiautomated analysis and interpretation of clinical electroencephalography",
-  "link": "https://www.thelancet.com/journals/landig/article/PIIS2589-7500(26)00046-4/fulltext?rss=yes",
-  "date": "2026-09-03T22:30:02+00:00",
-  "source": "Lancet Digital Health",
-  "source_group": "Lancet Digital Health",
-  "home": "",
-  "thin": false,
-  "badge": "",
-  "pop": null,
-  "id": "91b6afea69bc",
-  "keep": true,
-  "zh_title": "AI模型用于临床脑电图自动与半自动分析解读（综述）",
-  "summary": "《柳叶刀·数字健康》综述指出，人工神经网络分析临床脑电图已取得重要突破，AI辅助解读正接近临床落地。",
-  "key_points": [
-   "脑电图是癫痫最常用诊断工具，但解读专才不足",
-   "可穿戴与数字化带来海量脑电数据，人工判读难应对",
-   "人工神经网络分析临床脑电已取得重要突破"
-  ],
-  "section": "临床预测与决策",
-  "type": "观点",
-  "tags": [
-   "生理信号",
-   "神经科学",
-   "临床决策支持"
-  ],
-  "evidence": "同行评审",
-  "score": 7,
-  "day": "2026-10-14",
-  "rank": 11.0
- },
- {
-  "title": "[Review] Machine learning prediction for epilepsy treatment selection and prognosis: achievements and challenges",
-  "link": "https://www.thelancet.com/journals/landig/article/PIIS2589-7500(26)00045-2/fulltext?rss=yes",
-  "date": "2026-09-03T22:30:03+00:00",
-  "source": "Lancet Digital Health",
-  "source_group": "Lancet Digital Health",
-  "home": "",
-  "thin": false,
-  "badge": "",
-  "pop": null,
-  "id": "d500b158cc30",
-  "keep": true,
-  "zh_title": "机器学习预测癫痫治疗选择与预后：进展与挑战（综述）",
-  "summary": "综述指出，癫痫治疗反应缺乏可靠替代生物标志物，选药仍以试错为主；统计与机器学习已用于预测药物及手术疗效。",
-  "key_points": [
-   "治疗反应缺乏可靠的替代生物标志物",
-   "抗癫痫药物选择目前仍多为试错方式",
-   "机器学习已用于预测药物与手术的发作结局"
-  ],
-  "section": "临床预测与决策",
-  "type": "观点",
-  "tags": [
-   "神经科学",
-   "临床预测",
-   "临床决策支持"
-  ],
-  "evidence": "同行评审",
-  "score": 7,
-  "day": "2026-10-14",
-  "rank": 11.0
- },
- {
-  "title": "[Articles] Performance and label efficiency of traditional deep-learning models and a retina-specific foundation model for ocular and systemic disease detection: a retrospective comparative study",
-  "link": "https://www.thelancet.com/journals/landig/article/PIIS2589-7500(26)00054-3/fulltext?rss=yes",
-  "date": "2026-08-28T10:42:00+00:00",
-  "source": "Lancet Digital Health",
-  "source_group": "Lancet Digital Health",
-  "home": "",
-  "thin": false,
-  "badge": "",
-  "pop": null,
-  "id": "39c592058b0e",
-  "keep": true,
-  "zh_title": "RETFound与传统深度学习模型检测眼病及全身病的比较",
-  "summary": "回顾性比较研究显示，大数据集微调时传统模型与RETFound在眼病检测表现相近，小数据集时RETFound在全身病检测占优。",
-  "key_points": [
-   "大数据集微调下眼病检测性能两者相近",
-   "小数据集微调下RETFound全身病检测占优势",
-   "作者认为需在更广泛数据集上进一步基准测试"
-  ],
-  "section": "影像与病理",
-  "type": "论文",
-  "tags": [
-   "眼科",
-   "医学影像",
-   "医学大模型"
-  ],
-  "evidence": "同行评审",
-  "score": 7,
-  "day": "2026-10-14",
-  "rank": 11.0
- },
- {
-  "title": "Pan-cancer estimation of prognostic immune biomarkers from histopathology using artificial intelligence",
-  "link": "https://www.biorxiv.org/content/10.64898/2026.10.06.757083v1?rss=1",
-  "date": "2026-10-13T00:00:00+00:00",
-  "source": "bioRxiv",
-  "source_group": "bioRxiv",
-  "home": "",
-  "thin": false,
-  "badge": "DOI 10.64898/2026.10.06.757083v1",
-  "pop": null,
-  "id": "3d5985978b6b",
-  "keep": true,
-  "zh_title": "AI从病理图像泛癌估计预后免疫生物标志物",
-  "summary": "开发弱监督模型HistoProfile，从常规H&E全切片图像估计CD8、FOXP3、PD-1、PD-L1肿瘤内细胞密度及PD-L1肿瘤比例评分，AUROC为0.78–0.89。",
-  "key_points": [
-   "基于H&E全切片估计四种免疫标志物密度",
-   "区分高低表达肿瘤的AUROC为0.78–0.89",
-   "估计值在生存分析中保留预后分层能力"
-  ],
-  "section": "影像与病理",
-  "type": "论文",
-  "tags": [
-   "病理",
-   "肿瘤",
-   "医学影像"
-  ],
-  "evidence": "预印本",
-  "score": 8,
-  "day": "2026-10-14",
-  "rank": 9.0
- },
- {
-  "title": "Artificial Intelligence in suicide prevention: promise, peril, and clinical implications for clinical practice.",
-  "link": "https://pubmed.ncbi.nlm.nih.gov/42862709/",
-  "date": "2026-10-14T02:54:17.165846+00:00",
-  "pop": null,
-  "badge": "DOI 10.1080/19585969.2026.2745684",
-  "source": "PubMed",
-  "id": "b86dffe6d1a3",
-  "keep": true,
-  "zh_title": "AI用于自杀预防：前景、风险与临床启示",
-  "summary": "同行评审综述讨论AI在自杀预防中的前景与风险，以及对临床实践的影响。",
-  "key_points": [
-   "发表于Dialogues in Clinical Neuroscience",
-   "同行评审综述",
-   "讨论前景、风险与临床意义"
-  ],
-  "section": "数字健康",
-  "type": "观点",
-  "tags": [
-   "心理健康",
-   "临床落地"
-  ],
-  "evidence": "同行评审",
-  "score": 6,
-  "day": "2026-10-14",
-  "source_group": "PubMed"
- },
- {
-  "title": "Evaluation of Computer-aided Detection for Identifying Missed Gastric Cancer After Endoscopic Submucosal Dissection.",
-  "link": "https://pubmed.ncbi.nlm.nih.gov/42609944/",
-  "date": "2026-10-14T02:54:17.165846+00:00",
-  "pop": null,
-  "badge": "DOI 10.1002/deo2.70357",
-  "source": "PubMed",
-  "id": "bc770b29e3d5",
-  "keep": true,
-  "zh_title": "计算机辅助检测识别内镜黏膜下剥离术后漏诊胃癌",
-  "summary": "同行评审研究评估计算机辅助检测用于识别内镜黏膜下剥离术后漏诊胃癌的效果。",
-  "key_points": [
-   "评估对象为计算机辅助检测系统",
-   "场景为胃癌内镜黏膜下剥离术后",
-   "目标为识别漏诊的胃癌病灶"
-  ],
-  "section": "影像与病理",
-  "type": "论文",
-  "tags": [
-   "医学影像",
-   "肿瘤"
-  ],
-  "evidence": "同行评审",
-  "score": 6,
-  "day": "2026-10-14",
-  "source_group": "PubMed"
- },
- {
-  "title": "Evaluation of Large Language Models in the Clinical Management of Patients With Upper Gastrointestinal Bleeding: Insights From Real-World Patient Data.",
-  "link": "https://pubmed.ncbi.nlm.nih.gov/42428234/",
-  "date": "2026-10-14T02:54:17.165846+00:00",
-  "pop": null,
-  "badge": "DOI 10.1002/deo2.70373",
-  "source": "PubMed",
-  "id": "acfcba812068",
-  "keep": true,
-  "zh_title": "大语言模型用于上消化道出血临床管理的评估",
-  "summary": "DEN open 同行评审研究，基于真实患者数据评估大语言模型在上消化道出血临床管理中的表现。",
-  "key_points": [
-   "使用真实世界患者数据评估",
-   "任务为上消化道出血临床管理",
-   "发表于 DEN open，同行评审"
-  ],
-  "section": "大模型与智能体",
-  "type": "论文",
-  "tags": [
-   "医学大模型",
-   "临床决策支持"
-  ],
-  "evidence": "同行评审",
-  "score": 6,
-  "day": "2026-10-14",
-  "source_group": "PubMed"
+  "rank": 12.0,
+  "abstract_tries": 1,
+  "abstract": "Our explainable, multimodal AI-based model for predicting long-term outcomes in the TAVI population substantially outperformed conventional risk scores. The model showed robust generalisability across diverse TAVI populations and clinical settings, supporting accurate risk stratification that could potentially guide patient management.",
+  "reason": "多中心研发验证测试且预测长期结局，优于传统评分，属重要档",
+  "zh_abstract": "我们用于预测TAVI人群长期结局的可解释、多模态、基于AI的模型显著优于传统风险评分。该模型在不同TAVI人群和临床环境中展现出稳健的泛化能力，支持准确的风险分层，并可能潜在地指导患者管理。"
  },
  {
   "title": "Improved Efficiency and Lesion Detection in Small Bowel Capsule Endoscopy Using the Open-Source Artificial Intelligence Model SEE-AI.",
@@ -1764,22 +1761,28 @@
   "source": "PubMed",
   "id": "96cd077233ac",
   "keep": true,
-  "zh_title": "开源AI模型SEE-AI提升小肠胶囊内镜效率与病灶检出",
-  "summary": "研究显示，开源人工智能模型SEE-AI用于小肠胶囊内镜检查，可改善检查效率与病灶检出，发表于DEN open。",
+  "zh_title": "开源 SEE-AI 提升小肠胶囊内镜检出与效率",
+  "summary": "六家医院 249 例胶囊内镜回顾性交叉设计，评估开源模型 SEE-AI 辅助阅片的病灶灵敏度、准确率与阅片时间。",
   "key_points": [
-   "模型为开源AI模型SEE-AI",
-   "用于小肠胶囊内镜检查",
-   "报告效率提升与病灶检出改善"
+   "249 例 PillCam SB3 检查，双读者交叉设计",
+   "对八类病灶生成带框标注视频",
+   "主要终点为病灶与患者层面灵敏度"
   ],
   "section": "影像与病理",
-  "type": "论文",
+  "type": "模型",
   "tags": [
-   "医学影像"
+   "医学影像",
+   "临床落地"
   ],
   "evidence": "同行评审",
   "score": 6,
   "day": "2026-10-14",
-  "source_group": "PubMed"
+  "source_group": "PubMed",
+  "abstract_tries": 1,
+  "abstract": "[DEN open] Small bowel capsule endoscopy (CE) produces lengthy videos that are time-consuming to review and susceptible to missed lesions. We evaluated whether an open-source, pretrained artificial intelligence (AI) model (SEE-AI) could improve diagnostic performance and interpretation efficiency compared with conventional reading. We retrospectively analyzed 249 PillCam SB3 examinations performed between 2007 and 2022 at six hospitals, using a two-reader crossover design. SEE-AI (confidence threshold 0.1) generated annotated videos with bounding boxes for eight lesion categories. The primary endpoints were sensitivity for lesion detection on a per-lesion and per-patient basis. Secondary endpoints included specificity, predictive values, overall accuracy, and reading time. A prespecified subgroup analysis evaluated cases of suspected small-bowel bleeding (SSBB), focusing on Saurin P1+P2 hemorrhagic lesions. Across 1550 adjudicated lesions, AI-assisted reading demonstrated higher sensitivity than conventional reading (per-lesion: 98.8% [1532/1550] vs. 86.4% [1339/1550]; per-patient: 99.1% [464/468] vs. 80.3% [376/468]; both p < 0.0001). The mean reading time decreased from 17.9 to 13.7 min (p < 0.0001). In SSBB cases (n = 131), sensitivity for P1+P2 lesions improved on both a per-lesion basis (98.2% [439/447] vs. 82.8% [370/447]) and per-patient basis (98.6% [145/147] vs. 73.5% [108/147]), with a shorter reading time (14.1 vs. 18.0 min; all p < 0.0001). In this multicenter evaluation, SEE-AI significantly improved lesion detection and reduced reading time for CE interpretation, including SSBB cases, while maintaining openness and reproducibility. AI-assisted reading may reduce clinicians' workload and support the adoption of SEE-AI as a practical tool - and a potential future standard of care - for small bowel CE. N/A.",
+  "thin": false,
+  "reason": "六中心、双读者交叉、开源模型，但为回顾性研究，属值得一看档。",
+  "zh_abstract": "[DEN open] 小肠胶囊内镜（capsule endoscopy, CE）产生冗长的视频，审查耗时且容易漏诊病变。我们评估了一个开源、预训练的人工智能（artificial intelligence, AI）模型（SEE-AI）与传统阅片相比，是否能提高诊断性能和解读效率。我们采用双读者交叉设计，回顾性分析了2007年至2022年间在六家医院进行的249次PillCam SB3检查。SEE-AI（置信度阈值0.1）生成了带边界框的注释视频，涵盖八种病变类别。主要终点是基于每病灶和每患者的病变检测灵敏度。次要终点包括特异度、预测值、总体准确率和阅读时间。一项预先设定的亚组分析评估了疑似小肠出血（suspected small-bowel bleeding, SSBB）病例，重点关注Saurin P1+P2出血性病变。在1550个经裁定的病变中，AI辅助阅片显示出比传统阅片更高的灵敏度（每病灶：98.8% [1532/1550] vs. 86.4% [1339/1550]；每患者：99.1% [464/468] vs. 80.3% [376/468]；两者 p < 0.0001）。平均阅读时间从17.9分钟降至13.7分钟（p < 0.0001）。在SSBB病例（n = 131）中，P1+P2病变的灵敏度在每病灶基础上（98.2% [439/447] vs. 82.8% [370/447]）和每患者基础上（98.6% [145/147] vs. 73.5% [108/147]）均得到改善，且阅读时间更短（14.1 vs. 18.0分钟；所有 p < 0.0001）。在这项多中心评估中，SEE-AI显著改善了病变检测并减少了CE解读的阅读时间，包括SSBB病例，同时保持了开放性和可重复性。AI辅助阅片可能减轻临床医生的工作量，并支持将SEE-AI采纳为小肠CE的实用工具——以及未来潜在的标准诊疗。N/A。"
  },
  {
   "title": "Stage-aware deep learning with adversarial data synthesis enables prospective season-scale A/H1N1 influenza forecasting in China.",
@@ -1790,22 +1793,59 @@
   "source": "PubMed",
   "id": "466a76dfdb5c",
   "keep": true,
-  "zh_title": "阶段感知深度学习结合对抗数据合成预测中国甲型H1N1流感",
-  "summary": "同行评审研究提出阶段感知深度学习并引入对抗数据合成，实现中国甲型H1N1流感的季节尺度前瞻性预测。",
+  "zh_title": "阶段感知模型实现中国甲型 H1N1 流感季前预测",
+  "summary": "基于中国 13 年 A/H1N1 监测数据提出 SAMNN 多模态模型，用对抗合成协变量做 1–4 周及季前情景预测。",
   "key_points": [
-   "阶段感知深度学习建模方法",
-   "对抗数据合成扩充训练数据",
-   "中国A/H1N1季节尺度前瞻预测"
+   "使用 2011–2024 年国家级监测数据",
+   "跨三个流行强度差异约 20 倍的季节评估",
+   "1/2/4 周预测 R² 最高达 0.97"
   ],
   "section": "数字健康",
-  "type": "论文",
+  "type": "模型",
   "tags": [
    "公共卫生"
   ],
   "evidence": "同行评审",
   "score": 6,
   "day": "2026-10-14",
-  "source_group": "PubMed"
+  "source_group": "PubMed",
+  "abstract_tries": 1,
+  "abstract": "[Infectious Disease Modelling] Accurate influenza forecasting is essential for public health preparedness, yet many models require future covariates, provide limited interpretability, and degrade under post-pandemic regime shifts. We propose a Stage-Aware Multimodal Neural Network (SAMNN) that integrates multimodal temporal features using configurations adapted to heterogeneous transmission regimes and supports season-ahead scenario forecasting using adversarially synthesized covariates. Using 13 years of national A/H1N1 surveillance data from mainland China (2011∼2024), SAMNN was evaluated across three epidemiologically distinct seasons spanning ∼20-fold differences in peak intensity. SAMNN achieved R 2 values of 0.82-0.95, 0.82-0.97, and 0.55-0.97 for 1-week-, 2-week-, and 4-week-ahead forecasting, respectively, and generally maintained competitive performance relative to five baseline models across forecast horizons. SHAP attribution showed that epidemiological signals dominated predictions, with context-dependent contributions from climatic and social-context features. To support prospective scenario forecasting, we used an adversarial synthetic covariate-generation pipeline to produce season-ahead forecasts for 2024/25 using information available at the prespecified forecast origin.",
+  "thin": false,
+  "reason": "国家级长序列与五个基线对比，但评估为回顾性，属值得一看档。",
+  "zh_abstract": "[Infectious Disease Modelling] 准确的流感预测对于公共卫生防范至关重要，然而许多模型需要未来协变量，可解释性有限，并且在大流行后制度转变下性能下降。我们提出一种阶段感知多模态神经网络（Stage-Aware Multimodal Neural Network, SAMNN），它使用适应异质性传播机制的配置整合多模态时间特征，并支持使用对抗性合成协变量进行提前一季的情景预测。利用中国大陆13年全国A/H1N1监测数据（2011∼2024），在三个流行病学上不同的季节中评估了SAMNN，这些季节的峰值强度相差约20倍。SAMNN在提前1周、2周和4周预测中分别达到R 2值 0.82-0.95、0.82-0.97和0.55-0.97，并在各预测时间范围内总体保持相对于五个基线模型具有竞争力的性能。SHAP归因显示，流行病学信号主导了预测，气候和社会背景特征则具有情境依赖性贡献。为支持前瞻性情景预测，我们使用对抗性合成协变量生成流程，利用预先设定的预测起点时可得的信息，生成2024/25年提前一季预测。"
+ },
+ {
+  "title": "Establishment and validation of intelligent review rules for blood cell analysis based on the gradient boosting decision tree algorithm.",
+  "link": "https://pubmed.ncbi.nlm.nih.gov/42331130/",
+  "date": "2026-10-14T03:03:26.567839+00:00",
+  "pop": null,
+  "badge": "DOI 10.1016/j.cca.2026.121196",
+  "source": "PubMed",
+  "id": "4cc645b87ef5",
+  "keep": true,
+  "zh_title": "梯度提升决策树建立血细胞分析智能复检规则",
+  "summary": "基于4家医院10212例样本建立并外部验证血细胞分析AI复检规则，与实验室现有41条规则比较。",
+  "key_points": [
+   "10212例EDTA-K2静脉血样本，来自4家医院",
+   "9000例建模，1212例独立医院外部验证",
+   "与实验室设定的41条复检规则对比"
+  ],
+  "section": "临床预测与决策",
+  "type": "论文",
+  "tags": [
+   "临床决策支持",
+   "临床预测"
+  ],
+  "evidence": "同行评审",
+  "score": 6,
+  "day": "2026-10-14",
+  "source_group": "PubMed",
+  "abstract_tries": 1,
+  "abstract": "[Clinica chimica acta; international journal of clinical chemistry] To develop artificial intelligence (AI)-based intelligent review rules to accurately screen samples that require retests or blood smear microscopy examinations, thereby reducing the review rate, improving the work efficiency of haematology laboratories, and ensuring the quality of whole blood analysis. A total of 10,212 EDTA-K2 venous blood samples from the clinical laboratories of 4 hospitals from May 2022 to April 2025 were collected. Among them, 9000 samples from the First People's Hospital of Foshan, the Zhongda Hospital affiliated to Southeast University, and the First Affiliated Hospital of Sun Yat-sen University were used to establish the rules, and 1212 samples from the Zhongshan Hospital affiliated to Fudan University were used for rule validation. The obtained rules were compared with the 41 review rules set by the International Consensus Group for Haematology Review (ICGHR). All samples were tested using a haematology analyser under the customized dilution ratio (CDR) mode and smear microscopy, if the microscopic examination results trigger the 10 microscopic anomalous rules established by the ICGHR, then the sample is deemed to be an anomalous sample. Intelligent review rules were established using the gradient boosting decision tree (GBDT) algorithm. Moreover, the false negative rate, false positive rate, and review rate of the validation set were statistically analysed. (1) Among the 9000 samples in the establishment set, 4493 anomalous samples were identified by microscopic examination, and 26 intelligent review rules were established using the GBDT algorithm. (2) For the external validation set, 180 anomalous samples were identified by microscopic examination. Compared with those of the 41 international review rules, the false positive rate (14.60%) and review rate (27.55%) of the intelligent review rules were significantly lower (false positive rate: 30.19%, review rate: 44.14%). The false negative rate of the intelligent review rules (1.89%) was comparable to that of the 41 international review rules (0.90%) and met the ICGHR requirement of a false negative rate < 5%, with no critical hematologic cells missed. Intelligent review rules generated using AI techniques effectively reduce the false positive rate and review rate and prevent missed diagnoses of hematologic cells while ensuring test quality. The review rules generated by AI methods significantly increase laboratory efficiency and are especially suitable for medical institutions.",
+  "thin": false,
+  "reason": "同行评审、样本过万且含独立医院外部验证，但为回顾性设计，属值得一看上限",
+  "zh_abstract": "[Clinica chimica acta; international journal of clinical chemistry] 建立基于人工智能（AI）的智能复检规则，以准确筛查需要复检或血涂片显微镜检查的样本，从而降低复检率、提高血液学实验室的工作效率并确保全血分析质量。共收集2022年5月至2025年4月4家医院临床实验室的10212例EDTA-K2静脉血样本。其中，来自佛山市第一人民医院、东南大学附属中大医院和中山大学附属第一医院的9000例样本用于建立规则，来自复旦大学附属中山医院的1212例样本用于规则验证。将所获得的规则与国际血液学复检共识组（ICGHR）设定的41条复检规则进行比较。所有样本均在定制稀释比例（CDR）模式下使用血液分析仪检测并进行涂片显微镜检查，若显微镜检查结果触发ICGHR建立的10条镜检异常规则，则该样本被判定为异常样本。采用梯度提升决策树（GBDT）算法建立智能复检规则。此外，对验证集的假阴性率、假阳性率和复检率进行统计分析。（1）在建立集的9000例样本中，经显微镜检查识别出4493例异常样本，并采用GBDT算法建立了26条智能复检规则。（2）对于外部验证集，经显微镜检查识别出180例异常样本。与41条国际复检规则相比，智能复检规则的假阳性率（14.60%）和复检率（27.55%）显著更低（假阳性率：30.19%，复检率：44.14%）。智能复检规则的假阴性率（1.89%）与41条国际复检规则（0.90%）相当，并满足ICGHR假阴性率<5%的要求，且未漏检关键血液学细胞。使用AI技术生成的智能复检规则在确保检测质量的同时，有效降低了假阳性率和复检率，并防止血液学细胞漏诊。通过AI方法生成的复检规则显著提高了实验室效率，尤其适用于医疗机构。"
  },
  {
   "title": "Exploring PET and MRI brain networks across healthy controls, mild cognitive impairment, and Alzheimer’s disease",
@@ -1831,7 +1871,8 @@
   "evidence": "同行评审",
   "score": 5,
   "day": "2026-10-14",
-  "source_group": "npj Digital Medicine"
+  "source_group": "npj Digital Medicine",
+  "abstract_tries": 1
  },
  {
   "title": "Moving AI Development and Health Care Adoption at the Speed of Trust",
@@ -1857,7 +1898,8 @@
   "evidence": "同行评审",
   "score": 6,
   "day": "2026-10-14",
-  "source_group": "NEJM AI"
+  "source_group": "NEJM AI",
+  "abstract_tries": 1
  },
  {
   "title": "Win, Place, or Show? Why Specialist AI May Still Win the Deployment Race in Radiology",
@@ -1883,37 +1925,42 @@
   "evidence": "同行评审",
   "score": 6,
   "day": "2026-10-14",
-  "source_group": "NEJM AI"
+  "source_group": "NEJM AI",
+  "abstract_tries": 1
  },
  {
-  "title": "[Editorial] Epilepsy research in the AI era",
-  "link": "https://www.thelancet.com/journals/landig/article/PIIS2589-7500(26)00138-X/fulltext?rss=yes",
-  "date": "2026-09-01T00:00:00+00:00",
+  "title": "[Articles] Performance and label efficiency of traditional deep-learning models and a retina-specific foundation model for ocular and systemic disease detection: a retrospective comparative study",
+  "link": "https://www.thelancet.com/journals/landig/article/PIIS2589-7500(26)00054-3/fulltext?rss=yes",
+  "date": "2026-08-28T10:42:00+00:00",
   "source": "Lancet Digital Health",
   "source_group": "Lancet Digital Health",
   "home": "",
   "thin": false,
   "badge": "",
   "pop": null,
-  "id": "e67cc6d4d396",
+  "id": "39c592058b0e",
   "keep": true,
-  "zh_title": "社论：AI时代的癫痫研究",
-  "summary": "社论讨论AI方法如何助力并加速癫痫研究、支持及时诊断与适当照护，背景为美国参议院通过国家癫痫计划法案。",
+  "zh_title": "传统深度学习与视网膜基础模型性能及标签效率比较",
+  "summary": "回顾性比较研究：大样本微调时传统深度学习与RETFound眼病检测性能相近，小数据下RETFound对全身病更有优势。",
   "key_points": [
-   "2026年8月美参议院通过国家癫痫计划法案",
-   "法案尚待众议院批准",
-   "探讨AI能否加速癫痫研究与诊疗"
+   "大样本微调时两类模型眼病检测相近",
+   "小数据集下RETFound全身病检测占优",
+   "结论限于该设计，需更广基准评测"
   ],
-  "section": "临床预测与决策",
-  "type": "观点",
+  "section": "影像与病理",
+  "type": "论文",
   "tags": [
-   "神经科学",
-   "监管政策"
+   "眼科",
+   "基准"
   ],
   "evidence": "同行评审",
   "score": 6,
   "day": "2026-10-14",
-  "rank": 10.0
+  "rank": 11.0,
+  "abstract_tries": 1,
+  "abstract": "Under this specific study design, the performance of traditional deep-learning models is similar to that of RETFound for ocular disease detection when fine-tuned on large datasets. By contrast, RETFound shows an advantage in the detection of systemic disease when fine-tuned on smaller datasets. These findings offer insights into the respective merits and limitations of traditional models and foundation models. Future benchmarking on broader datasets is warranted.",
+  "reason": "同行评审回顾性比较研究，缺乏外部验证，值得一看档",
+  "zh_abstract": "在这一特定研究设计下，当在大型数据集上进行微调时，传统深度学习模型在眼病检测中的表现与 RETFound 相似。相比之下，当在较小数据集上进行微调时，RETFound 在全身性疾病检测中显示出优势。这些发现为传统模型与基础模型各自的优点和局限性提供了见解。未来有必要在更广泛的数据集上进行基准测试。"
  },
  {
   "title": "When the Chatbot Leaks: Securing Patient-Facing Medical AI in the Age of Dual-Use Large Language Models",
@@ -1940,37 +1987,8 @@
   "evidence": "同行评审",
   "score": 6,
   "day": "2026-10-14",
-  "rank": 10.0
- },
- {
-  "title": "[Comment] Power, governance, and accountability in humanitarian artificial intelligence",
-  "link": "https://www.thelancet.com/journals/landig/article/PIIS2589-7500(26)00091-9/fulltext?rss=yes",
-  "date": "2026-08-20T15:41:52+00:00",
-  "source": "Lancet Digital Health",
-  "source_group": "Lancet Digital Health",
-  "home": "",
-  "thin": false,
-  "badge": "",
-  "pop": null,
-  "id": "bde1d7ceedb2",
-  "keep": true,
-  "zh_title": "人道主义AI中的权力、治理与问责",
-  "summary": "评论讨论人道主义AI应用中的权力、治理与问责，并提及数据质量、偏见与隐私等伦理与技术问题。",
-  "key_points": [
-   "AI可助人道组织改进数据收集与分析",
-   "人道系统面临需求扩大与资源减少",
-   "涉及偏见、隐私与负责任使用等伦理问题"
-  ],
-  "section": "落地与监管",
-  "type": "观点",
-  "tags": [
-   "公平与安全",
-   "监管政策"
-  ],
-  "evidence": "同行评审",
-  "score": 6,
-  "day": "2026-10-14",
-  "rank": 10.0
+  "rank": 10.0,
+  "abstract_tries": 1
  },
  {
   "title": "Subversion of clinical judgment by conversational artificial intelligence",
@@ -1997,223 +2015,105 @@
   "evidence": "预印本",
   "score": 8,
   "day": "2026-10-14",
-  "source_group": "medRxiv"
+  "source_group": "medRxiv",
+  "abstract_tries": 1
  },
  {
-  "title": "VirtualSkin integrates skin-cell identity with intervention-response prediction",
-  "link": "https://www.biorxiv.org/content/10.64898/2026.10.06.756877v1?rss=1",
-  "date": "2026-10-13T00:00:00+00:00",
-  "pop": null,
-  "source": "bioRxiv",
-  "badge": "DOI 10.64898/2026.10.06.756877v1",
-  "id": "0925da087f3e",
-  "keep": true,
-  "zh_title": "VirtualSkin：皮肤细胞语言模型预测干预反应",
-  "summary": "bioRxiv预印本提出VirtualSkin细胞语言模型，将皮肤转录组与生物描述对齐，支持干预条件化的反应预测。",
-  "key_points": [
-   "预印本，未经同行评审",
-   "跨图谱、疾病、解剖与扰动队列评估",
-   "评估时留出供体、研究与扰动"
-  ],
-  "section": "生命科学与药物",
-  "type": "模型",
-  "tags": [
-   "基因组学",
-   "医学大模型"
-  ],
-  "evidence": "预印本",
-  "score": 7,
-  "day": "2026-10-14",
-  "source_group": "bioRxiv"
- },
- {
-  "title": "AI chatbots abandon sleep apnoea referral when simulated patients minimise symptoms",
-  "link": "https://www.medrxiv.org/content/10.64898/2026.10.09.26365165v1?rss=1",
-  "date": "2026-10-12T00:00:00+00:00",
-  "pop": null,
-  "source": "medRxiv",
-  "badge": "DOI 10.64898/2026.10.09.26365165v1",
-  "id": "79b9854c885c",
-  "keep": true,
-  "zh_title": "模拟患者弱化症状时AI聊天机器人放弃睡眠呼吸暂停转诊",
-  "summary": "预印本测试显示，当模拟患者弱化症状时，消费级AI聊天机器人不再给出符合指南的睡眠呼吸暂停转诊建议。",
-  "key_points": [
-   "患者日益向免费AI聊天机器人咨询",
-   "模型或倾向迎合患者而非准确性",
-   "症状弱化时转诊建议被放弃"
-  ],
-  "section": "大模型与智能体",
-  "type": "论文",
-  "tags": [
-   "医学大模型",
-   "临床NLP",
-   "临床决策支持"
-  ],
-  "evidence": "预印本",
-  "score": 7,
-  "day": "2026-10-14",
-  "source_group": "medRxiv"
- },
- {
-  "title": "The content of biomedical papers predicts future clinical trials: a proof-of-concept framework tested on CAR-T cell therapy",
-  "link": "https://www.medrxiv.org/content/10.64898/2026.10.10.26365160v1?rss=1",
-  "date": "2026-10-12T00:00:00+00:00",
-  "pop": null,
-  "source": "medRxiv",
-  "badge": "DOI 10.64898/2026.10.10.26365160v1",
-  "id": "de62376d0aa8",
-  "keep": true,
-  "zh_title": "论文内容可预测未来临床试验：CAR-T验证",
-  "summary": "预印本显示，可用机器学习基于生物医学论文内容预测其是否与后续临床试验相关，以CAR-T为验证场景。",
-  "key_points": [
-   "重建论文与临床试验之间的关联",
-   "训练机器学习模型进行预测",
-   "以CAR-T细胞治疗为概念验证"
-  ],
-  "section": "生命科学与药物",
-  "type": "论文",
-  "tags": [
-   "药物发现",
-   "临床NLP"
-  ],
-  "evidence": "预印本",
-  "score": 7,
-  "day": "2026-10-14",
-  "source_group": "medRxiv"
- },
- {
-  "title": "Open Foundation Models in Healthcare: Challenges, Paradoxes, and Opportunities with GenAI Driven Personalized Prescription",
-  "link": "https://arxiv.org/abs/2502.04356",
-  "date": "2026-10-12T00:00:00+00:00",
-  "source": "arXiv",
-  "source_group": "arXiv",
-  "home": "",
-  "thin": false,
-  "badge": "arXiv 2502.04356",
-  "pop": null,
-  "id": "b764bf53c773",
-  "keep": true,
-  "zh_title": "医疗开源基础模型：挑战、悖论与个性化处方机会",
-  "summary": "综述并实证评估开源权重医疗大模型，在100个合成患者画像的个性化处方任务中，其总体适宜性准确率0.810–0.850，高于专有基线0.780，但置信区间重叠。",
-  "key_points": [
-   "综述并分类面向临床任务的开源LLM与AI基础模型",
-   "在100个合成患者画像上评测个性化处方",
-   "开源权重准确率0.810–0.850 vs 专有0.780",
-   "两者置信区间存在重叠"
-  ],
-  "section": "大模型与智能体",
-  "type": "论文",
-  "tags": [
-   "医学大模型",
-   "临床决策支持"
-  ],
-  "evidence": "预印本",
-  "score": 7,
-  "day": "2026-10-14",
-  "rank": 8.0
- },
- {
-  "title": "Benefit of Linked-Color Imaging in Artificial Intelligence-Assisted Diagnosis of Early Gastric Cancer: A Pilot Study With Propensity Score Adjustment.",
-  "link": "https://pubmed.ncbi.nlm.nih.gov/42524027/",
+  "title": "Artificial Intelligence in suicide prevention: promise, peril, and clinical implications for clinical practice.",
+  "link": "https://pubmed.ncbi.nlm.nih.gov/42862709/",
   "date": "2026-10-14T02:54:17.165846+00:00",
   "pop": null,
-  "badge": "DOI 10.1002/deo2.70381",
+  "badge": "DOI 10.1080/19585969.2026.2745684",
   "source": "PubMed",
-  "id": "c971dc9089d6",
+  "id": "b86dffe6d1a3",
   "keep": true,
-  "zh_title": "联动彩色成像辅助AI诊断早期胃癌的初步研究",
-  "summary": "一项采用倾向评分调整的初步研究，评估联动彩色成像对AI辅助早期胃癌诊断的增益。",
+  "zh_title": "AI在自杀预防中的前景、风险与临床意义",
+  "summary": "综述探讨AI在自杀预防连续谱中的应用，包括自杀意念识别、临床医生培训与患者心理支持。",
   "key_points": [
-   "研究联动彩色成像在AI诊断中的作用",
-   "采用倾向评分调整的试点设计",
-   "发表于DEN open，属初步研究"
+   "AI或比临床医生更敏感识别自杀意念",
+   "AI虚拟患者提升医生风险评估信心",
+   "CBT类AI工具扩大心理支持可及性"
+  ],
+  "section": "数字健康",
+  "type": "观点",
+  "tags": [
+   "心理健康",
+   "临床预测"
+  ],
+  "evidence": "同行评审",
+  "score": 5,
+  "day": "2026-10-14",
+  "source_group": "PubMed",
+  "abstract_tries": 1,
+  "abstract": "[Dialogues in clinical neuroscience] The integration of Artificial Intelligence (AI) into psychiatry is progressing rapidly, with promising yet underexplored applications in suicide prevention. While most existing studies have focused on suicide risk prediction, AI could be applied more broadly across the suicide prevention continuum. This review explores AI's potential in improving the detection of suicidal ideation (SI), enhancing clinician training, and expanding patient access to psychotherapeutic support. Studies suggest that AI models may identify SI more sensitively than clinicians by detecting subtle linguistic or semantic cues. Furthermore, AI-based virtual patients have been shown to improve clinicians' confidence and accuracy in suicide risk assessments, particularly when used alongside traditional training methods. On the patient side, CBT-inspired AI tools offer scalable, on-demand support, but most remain unregulated and clinically unvalidated. Despite their perceived empathy and availability, such tools pose ethical and clinical risks. Many patients use AI tools without professional guidance, a trend clinicians often underestimate. This disconnect calls for urgent regulatory oversight and professional engagement. Without clear clinical validation, AI-based tools may evolve outside medical frameworks, exposing vulnerable individuals to preventable harm. Psychiatry must not only adapt but also lead, ensuring that innovation is harnessed responsibly to serve patients with empathy, safety, and scientific rigor.",
+  "thin": false,
+  "reason": "综述性文章，无新数据或模型，介于增量与值得一看档",
+  "zh_abstract": "[Dialogues in Clinical Neuroscience] 人工智能（AI）融入精神病学的进程正在迅速推进，其在自杀预防中的应用前景广阔但尚未得到充分探索。虽然大多数现有研究聚焦于自杀风险预测，但 AI 可在整个自杀预防连续过程中得到更广泛的应用。本综述探讨了 AI 在改善自杀意念（SI）检测、加强临床医生培训以及扩大患者获得心理治疗支持方面的潜力。研究表明，AI 模型可通过检测细微的语言或语义线索，比临床医生更敏感地识别 SI。此外，基于 AI 的虚拟患者已被证明可提高临床医生在自杀风险评估中的信心和准确性，尤其是与传统培训方法结合使用时。在患者方面，受 CBT 启发的 AI 工具提供了可扩展、按需的支持，但大多数仍不受监管且未经临床验证。尽管这些工具被认为具有共情能力和可及性，但它们带来了伦理和临床风险。许多患者在没有专业指导的情况下使用 AI 工具，而临床医生往往低估这一趋势。这种脱节亟需紧急的监管监督和专业参与。缺乏明确的临床验证，基于 AI 的工具可能会在医学框架之外发展，使脆弱个体面临可预防的伤害。精神病学不仅必须适应，还必须发挥引领作用，确保以负责任的方式利用创新，以共情、安全和科学严谨性服务患者。"
+ },
+ {
+  "title": "Evaluation of Computer-aided Detection for Identifying Missed Gastric Cancer After Endoscopic Submucosal Dissection.",
+  "link": "https://pubmed.ncbi.nlm.nih.gov/42609944/",
+  "date": "2026-10-14T02:54:17.165846+00:00",
+  "pop": null,
+  "badge": "DOI 10.1002/deo2.70357",
+  "source": "PubMed",
+  "id": "bc770b29e3d5",
+  "keep": true,
+  "zh_title": "CADe 检出 ESD 后漏诊胃癌与内镜医师相当",
+  "summary": "用 2324 张内镜图像比较深度学习 CADe 与 10 名内镜医师对 ESD 后漏诊胃癌的检出，病灶灵敏度无显著差异。",
+  "key_points": [
+   "2324 张内镜图像，含 60 例漏诊胃癌",
+   "CADe 病灶灵敏度 15.0%，医师 13.8%",
+   "差异无统计学意义（p=0.538）"
   ],
   "section": "影像与病理",
   "type": "论文",
   "tags": [
-   "医学影像"
+   "医学影像",
+   "肿瘤"
   ],
   "evidence": "同行评审",
   "score": 5,
   "day": "2026-10-14",
-  "source_group": "PubMed"
+  "source_group": "PubMed",
+  "abstract_tries": 1,
+  "abstract": "[DEN open] Computer-aided detection (CADe) using deep learning is promising for reducing missed gastric cancers (MGCs) and supporting physicians in double-checking endoscopic images. We aimed to evaluate the CADe efficacy for MGCs after endoscopic submucosal dissection (ESD). We collected 2324 endoscopic images, including 60 of MGCs detected during surveillance esophagogastroduodenoscopy within 18 months after initial ESD. The performance of the CADe system, developed for early GC detection using deep learning, was compared with that of 10 endoscopists in a detection study using collected images. Per-lesion sensitivity, per-image detection performance, and diagnostic time were compared. The per-lesion sensitivity for MGCs was 15.0% (9/60) and 13.8% (83/600) for CADe and endoscopist detection, respectively (p = 0.538). The respective per-image computer-aided and endoscopist performance sensitivity was 11.3% and 10.6% (p = 0.548), specificity 88.5% and 94.8% (p < 0.001), positive predictive value 4.4% and 8.3%, and negative predictive value 95.7% and 96.0%. The per-image CADe time was significantly shorter (0.03 s vs. 2.86 s, p < 0.001). CADe showed higher sensitivity in certain subgroups, although these findings should be interpreted cautiously given the small sample size. No significant difference in sensitivity was observed between CADe and endoscopist detection for MGCs after ESD, and the absolute sensitivity remained low. Further improvements are needed before clinical implementation of CADe as a double-checking tool. The authors have confirmed clinical trial registration is not needed for this submission.",
+  "thin": false,
+  "reason": "与 10 名医师对照但单中心回顾性、阳性病灶少，属值得一看档。",
+  "zh_abstract": "[DEN open] 使用深度学习的计算机辅助检测（computer-aided detection, CADe）在减少漏诊胃癌（missed gastric cancers, MGCs）和支持医生复核内镜图像方面具有前景。我们旨在评估内镜黏膜下剥离术（endoscopic submucosal dissection, ESD）后MGCs的CADe效能。我们收集了2324张内镜图像，包括初始ESD后18个月内监测性食管胃十二指肠镜检查中检出的60张MGCs图像。将使用深度学习开发的用于早期GC检测的CADe系统的性能，与10名内镜医师在使用所收集图像进行的检测研究中的性能进行比较。比较了每病灶灵敏度、每图像检测性能和诊断时间。CADe和内镜医师检测对MGCs的每病灶灵敏度分别为15.0%（9/60）和13.8%（83/600）（p = 0.538）。每图像计算机辅助和内镜医师性能的灵敏度分别为11.3%和10.6%（p = 0.548），特异度分别为88.5%和94.8%（p < 0.001），阳性预测值分别为4.4%和8.3%，阴性预测值分别为95.7%和96.0%。每图像CADe时间显著更短（0.03秒 vs. 2.86秒，p < 0.001）。CADe在某些亚组中显示出更高的灵敏度，尽管鉴于样本量小，这些发现应谨慎解读。对于ESD后MGCs，CADe与内镜医师检测之间未观察到灵敏度显著差异，且绝对灵敏度仍然较低。在将CADe作为复核工具临床实施之前，需要进一步改进。作者已确认本次投稿无需临床试验注册。"
  },
  {
-  "title": "Deep learning-driven de novo design of ribosome binding sites in Paracoccus denitrificans.",
-  "link": "https://pubmed.ncbi.nlm.nih.gov/42630760/",
+  "title": "Evaluation of Large Language Models in the Clinical Management of Patients With Upper Gastrointestinal Bleeding: Insights From Real-World Patient Data.",
+  "link": "https://pubmed.ncbi.nlm.nih.gov/42428234/",
   "date": "2026-10-14T02:54:17.165846+00:00",
   "pop": null,
-  "badge": "DOI 10.1016/j.synbio.2026.07.013",
+  "badge": "DOI 10.1002/deo2.70373",
   "source": "PubMed",
-  "id": "f0df0d85a659",
+  "id": "acfcba812068",
   "keep": true,
-  "zh_title": "深度学习从头设计脱氮副球菌核糖体结合位点",
-  "summary": "同行评审研究采用深度学习在脱氮副球菌中从头设计核糖体结合位点。",
+  "zh_title": "大模型用于上消化道出血临床管理的评估",
+  "summary": "多中心回顾性研究用 384 例上消化道出血患者，比较五种大模型与临床评分、机器学习模型的入院前风险分层表现。",
   "key_points": [
-   "对象为脱氮副球菌核糖体结合位点",
-   "采用深度学习从头设计方法",
-   "发表于《合成与系统生物技术》"
-  ],
-  "section": "生命科学与药物",
-  "type": "论文",
-  "tags": [
-   "基因组学"
-  ],
-  "evidence": "同行评审",
-  "score": 5,
-  "day": "2026-10-14",
-  "source_group": "PubMed"
- },
- {
-  "title": "Establishment and validation of intelligent review rules for blood cell analysis based on the gradient boosting decision tree algorithm.",
-  "link": "https://pubmed.ncbi.nlm.nih.gov/42331130/",
-  "date": "2026-10-14T03:03:26.567839+00:00",
-  "pop": null,
-  "badge": "DOI 10.1016/j.cca.2026.121196",
-  "source": "PubMed",
-  "id": "4cc645b87ef5",
-  "keep": true,
-  "zh_title": "梯度提升决策树构建血细胞分析智能审核规则",
-  "summary": "同行评审研究基于梯度提升决策树算法建立并验证血细胞分析智能审核规则。",
-  "key_points": [
-   "采用梯度提升决策树算法",
-   "构建血细胞分析智能审核规则",
-   "完成规则建立与验证"
-  ],
-  "section": "生命科学与药物",
-  "type": "论文",
-  "tags": [],
-  "evidence": "同行评审",
-  "score": 5,
-  "day": "2026-10-14",
-  "source_group": "PubMed"
- },
- {
-  "title": "Do Calibrated-Probability Claims Hold Up in Clinical Diagnosis? A Pre-registered Evaluation of a Decision Model Against Frontier Language Models",
-  "link": "https://www.medrxiv.org/content/10.64898/2026.10.09.26365153v1?rss=1",
-  "date": "2026-10-11T00:00:00+00:00",
-  "pop": null,
-  "source": "medRxiv",
-  "badge": "DOI 10.64898/2026.10.09.26365153v1",
-  "id": "6b1ce605fed1",
-  "keep": true,
-  "zh_title": "决策模型校准概率主张的临床诊断预注册评估",
-  "summary": "预注册研究将某决策模型与前沿语言模型对比，检验临床诊断准确性、校准度与概率一致性。",
-  "key_points": [
-   "预注册评估决策模型临床诊断表现",
-   "与前沿语言模型及推理版本对比",
-   "检验概率校准与一致性主张"
+   "纳入 384 例接受内镜的上消化道出血患者",
+   "测试 GPT-5、Gemini、Llama 4、Grok、DeepSeek",
+   "对照 GBS、AIMS65、Rockall 与 ML 模型"
   ],
   "section": "大模型与智能体",
   "type": "论文",
   "tags": [
    "医学大模型",
-   "基准"
+   "临床预测",
+   "临床决策支持"
   ],
-  "evidence": "预印本",
-  "score": 7,
+  "evidence": "同行评审",
+  "score": 5,
   "day": "2026-10-14",
-  "source_group": "medRxiv"
+  "source_group": "PubMed",
+  "abstract_tries": 1,
+  "abstract": "[DEN open] To evaluate large language models (LLMs) for pre-endoscopy (PE) risk stratification and prediction of endoscopic findings in upper gastrointestinal bleeding (UGIB), and compare their performance with clinical risk scores, conventional machine learning (ML) models, and hybrid approaches. This multicenter retrospective study included 384 patients with UGIB who underwent endoscopy. Five LLMs (GPT-5, Gemini-2.5-Flash, Llama 4, Grok, and DeepSeek R1) were tested using structured zero-shot prompts based on PE clinical and laboratory data. Their performance in identifying high-risk patients was compared with the Glasgow-Blatchford Score (GBS), AIMS65, PE Rockall score, and ML models. Hybrid LLM-score models were also assessed. Two gastroenterologists evaluated the quality of LLM-generated justifications. GBS showed the best discriminative performance among clinical scores (area under the receiver operating characteristic curve [AUROC] 0.73). Among LLMs, GPT-5 achieved the highest accuracy (0.66), while Grok showed the best-balanced performance (0.59; F1 0.47). Gemini-2.5-Flash had the highest sensitivity (0.89) but low specificity (0.21). Endoscopic prediction performance was modest, with Gemini-2.5-Flash achieving the highest exact-match accuracy (0.34) and micro-F1 (0.38). Hybrid models improved performance over standalone LLMs but did not outperform GBS alone (best: GBS+GPT-5, AUROC 0.670. LLMs showed higher numerical performance than conventional ML models, but a statistical comparison was not possible due to unavailable instance-level data. Grok received the highest human evaluation score for explanation quality. LLMs showed moderate performance in UGIB risk stratification and endoscopic prediction but were inferior to clinical scores, especially GBS. Hybrid models modestly improved over standalone LLMs but not GBS, supporting their use as adjunct tools rather than clinical decision-support systems. N/A.",
+  "thin": false,
+  "reason": "多中心但样本仅数百例、回顾性且无独立外部验证，属值得一看档。",
+  "zh_abstract": "[DEN open] 评估大语言模型（large language models, LLMs）用于上消化道出血（upper gastrointestinal bleeding, UGIB）的内镜检查前（pre-endoscopy, PE）风险分层和内镜发现预测，并将其性能与临床风险评分、传统机器学习（machine learning, ML）模型和混合方法进行比较。这项多中心回顾性研究纳入384例接受内镜检查的UGIB患者。使用基于PE临床和实验室数据的结构化零样本提示，测试了五个LLM（GPT-5、Gemini-2.5-Flash、Llama 4、Grok和DeepSeek R1）。将其识别高风险患者的性能与格拉斯哥-布拉奇福德评分（Glasgow-Blatchford Score, GBS）、AIMS65、PE Rockall评分和ML模型进行比较。还评估了混合LLM-评分模型。两名胃肠病学家评估了LLM生成理由的质量。GBS在临床评分中显示出最佳区分性能（受试者工作特征曲线下面积 [area under the receiver operating characteristic curve, AUROC] 0.73）。在LLM中，GPT-5达到最高准确率（0.66），而Grok显示出最佳平衡性能（0.59；F1 0.47）。Gemini-2.5-Flash具有最高灵敏度（0.89），但特异度低（0.21）。内镜预测性能一般，Gemini-2.5-Flash达到最高精确匹配准确率（0.34）和微F1（0.38）。混合模型相比独立LLM提高了性能，但未超过单独GBS（最佳：GBS+GPT-5，AUROC 0.670。LLM显示出比传统ML模型更高的数值性能，但由于无法获得实例级数据，无法进行统计比较。Grok在解释质量方面获得最高人工评估分数。LLM在UGIB风险分层和内镜预测中表现出中等性能，但劣于临床评分，尤其是GBS。混合模型较独立LLM有适度改善，但未超过GBS，支持其作为辅助工具而非临床决策支持系统使用。N/A。"
  },
  {
   "title": "Dynamic Risk Stratification for Short-Term Deterioration After Acute Stroke: Incremental Value of Radiology-Report-Derived Neuroimaging Phenotypes Beyond Dynamic ICU States, a retrospective cohort study with temporal validation",
@@ -2327,6 +2227,40 @@
   "rank": 9.0
  },
  {
+  "title": "[Articles] Status, challenges, and future directions of machine learning in the management of epilepsy: a systematic review and meta-analysis",
+  "link": "https://www.thelancet.com/journals/landig/article/PIIS2589-7500(26)00052-X/fulltext?rss=yes",
+  "date": "2026-09-03T22:30:04+00:00",
+  "source": "Lancet Digital Health",
+  "source_group": "Lancet Digital Health",
+  "home": "",
+  "thin": false,
+  "badge": "",
+  "pop": null,
+  "id": "d77e936503a6",
+  "keep": true,
+  "zh_title": "癫痫管理中机器学习的现状、挑战与未来方向",
+  "summary": "系统综述与meta分析显示，机器学习预测癫痫治疗结局仍受异质性、偏倚和缺乏外部验证限制。",
+  "key_points": [
+   "机器学习预测癫痫治疗结局有潜力",
+   "小样本与缺失数据等偏倚明显",
+   "缺乏外部验证，需前瞻性试验"
+  ],
+  "section": "临床预测与决策",
+  "type": "论文",
+  "tags": [
+   "临床预测",
+   "神经科学"
+  ],
+  "evidence": "同行评审",
+  "score": 5,
+  "day": "2026-10-14",
+  "rank": 11.0,
+  "abstract_tries": 1,
+  "abstract": "Although machine learning shows promise in predicting epilepsy treatment outcomes, the high heterogeneity and bias—particularly in small sample sizes, handling of missing data, and scarcity of studies with external validation—limit its clinical applicability. Future research should focus on larger, diverse datasets and standardised minimum reporting. Prospective trials are needed to evaluate machine learning models in real-world settings.",
+  "reason": "系统综述与meta分析，揭示偏倚与外部验证不足，值得一看档",
+  "zh_abstract": "尽管机器学习在预测癫痫治疗结局方面显示出前景，但高度异质性和偏倚——尤其是在小样本量、缺失数据处理以及外部验证研究稀缺方面——限制了其临床适用性。未来研究应聚焦于更大、多样化的数据集和标准化的最低报告要求。需要前瞻性试验来评估机器学习模型在真实世界环境中的表现。"
+ },
+ {
   "title": "[Comment] Need for ethical use of artificial intelligence in humanitarian data collection to address aid shortfalls",
   "link": "https://www.thelancet.com/journals/landig/article/PIIS2589-7500(26)00068-3/fulltext?rss=yes",
   "date": "2026-08-20T15:41:52+00:00",
@@ -2438,6 +2372,72 @@
   "score": 6,
   "day": "2026-10-14",
   "rank": 7.0
+ },
+ {
+  "title": "Pan-cancer estimation of prognostic immune biomarkers from histopathology using artificial intelligence",
+  "link": "https://www.biorxiv.org/content/10.64898/2026.10.06.757083v1?rss=1",
+  "date": "2026-10-13T00:00:00+00:00",
+  "source": "bioRxiv",
+  "source_group": "bioRxiv",
+  "home": "",
+  "thin": false,
+  "badge": "DOI 10.64898/2026.10.06.757083v1",
+  "pop": null,
+  "id": "3d5985978b6b",
+  "keep": true,
+  "zh_title": "AI从病理H&E图像估计泛癌预后免疫标志物",
+  "summary": "预印本：弱监督模型HistoProfile从常规H&E切片估计CD8、FOXP3、PD-1、PD-L1密度及PD-L1 TPS，AUROC为0.78–0.89。",
+  "key_points": [
+   "从H&E图像估计多种免疫标志物密度",
+   "AUROC 0.78–0.89区分高/低表达",
+   "估计值在生存分析中保留预后分层"
+  ],
+  "section": "影像与病理",
+  "type": "论文",
+  "tags": [
+   "病理",
+   "肿瘤"
+  ],
+  "evidence": "预印本",
+  "score": 6,
+  "day": "2026-10-14",
+  "rank": 9.0,
+  "abstract_tries": 1,
+  "abstract": "Multiplex immunofluorescence (mIF) assays such as ImmunoProfile provide standardized quantification of prognostic immune markers but are costly and not routinely used in clinical settings. We developed a weakly-supervised AI model, HistoProfile, to estimate intratumoral cell densities of key immune biomarkers (CD8, FOXP3, PD-1, and PD-L1) and the PD-L1 tumor proportion score from routine H&E-stained whole-slide images. Trained on a large pan-cancer cohort with paired H&E and mIF data, HistoProfile discriminated biomarker-high from biomarker-low tumors in held-out samples and tumor-specific subgroups (AUROCs of 0.78-0.89 across biomarkers). Critically, the estimated biomarkers preserved prognostic stratification in downstream survival analyses, and showed cancer-specific survival associations across TCGA cohorts where mIF is unavailable. These findings support scalable H&E-based estimation of key immune biomarker measurements for large-scale immune profiling and risk stratification.",
+  "reason": "预印本新方法并有TCGA验证，但未经同行评审，值得一看档",
+  "zh_abstract": "多重免疫荧光（mIF）检测，如 ImmunoProfile，可对预后免疫标志物进行标准化定量，但成本高昂且未在临床环境中常规使用。我们开发了一种弱监督人工智能模型 HistoProfile，用于从常规 H&E 染色的全切片图像中估计关键免疫生物标志物（CD8、FOXP3、PD-1 和 PD-L1）的瘤内细胞密度以及 PD-L1 肿瘤比例评分。在具有配对 H&E 和 mIF 数据的大型泛癌队列上训练后，HistoProfile 在留出样本和肿瘤特异性亚组中能够区分生物标志物高表达与低表达肿瘤（各生物标志物的 AUROC 为 0.78–0.89）。关键的是，所估计的生物标志物在下游生存分析中保留了预后分层，并在无法获得 mIF 的 TCGA 各队列中显示出癌症特异性的生存关联。这些发现支持基于 H&E 的可扩展估计关键免疫生物标志物测量值，用于大规模免疫谱分析和风险分层。"
+ },
+ {
+  "title": "VirtualSkin integrates skin-cell identity with intervention-response prediction",
+  "link": "https://www.biorxiv.org/content/10.64898/2026.10.06.756877v1?rss=1",
+  "date": "2026-10-13T00:00:00+00:00",
+  "pop": null,
+  "source": "bioRxiv",
+  "badge": "DOI 10.64898/2026.10.06.756877v1",
+  "id": "0925da087f3e",
+  "keep": true,
+  "zh_title": "VirtualSkin：整合皮肤细胞身份与干预反应预测",
+  "summary": "预印本提出细胞语言模型 VirtualSkin，对齐皮肤转录组与生物学描述，支持干预条件下的反应预测。",
+  "key_points": [
+   "在独立图谱、疾病、解剖与扰动队列评估",
+   "炎症皮肤注释 macro F1 提升 0.056",
+   "细胞文本检索 Recall@10 提升 0.12"
+  ],
+  "section": "生命科学与药物",
+  "type": "模型",
+  "tags": [
+   "生成模型",
+   "基因组学"
+  ],
+  "evidence": "预印本",
+  "score": 6,
+  "day": "2026-10-14",
+  "source_group": "bioRxiv",
+  "abstract_tries": 1,
+  "abstract": "Human skin atlases resolve a diverse set of cellular states, yet connecting these states to their responses to intervention remains difficult across independently sampled tissues. Here we present VirtualSkin, a cell language model that aligns skin transcriptomes with biological descriptions and supports intervention conditioned response prediction. We evaluated the model across independent atlas, disease, anatomical and perturbation cohorts, with donors, studies and perturbations withheld according to the experimental design. VirtualSkin improved inflammatory skin annotation by 0.056 macro F1 points and cell text retrieval by 0.12 Recall@10 points relative to the strongest corresponding comparators. The representation retained cell identity during study integration and transferred across ageing, systemic sclerosis, lymphoma and anatomical sites. Across five intervention cohorts, response prediction improved by 0.03 0.09 response-score points, with agreement at the levels of gene expression change, gene recovery and transcriptional programs. Paired tissue trajectories provided a complementary assessment in two donors per intervention. Component ablations and pairing controls localized the predictive contributions, while uncertainty estimates supported selective prediction under distribution shift. These results connect skin-cell recognition to intervention response prediction within a common evaluation framework and define the conditions under which predictions can inform experimental prioritization.",
+  "thin": false,
+  "reason": "预印本，跨独立队列评估并有基线对比，属值得一看档。",
+  "zh_abstract": "人类皮肤图谱解析了多样的细胞状态，但将独立采样组织中的这些状态与其对干预的响应联系起来仍然困难。此处我们提出 VirtualSkin，一种细胞语言模型，可将皮肤转录组与生物学描述对齐，并支持干预条件化响应预测。我们在独立的图谱、疾病、解剖和扰动队列中评估了该模型，并按照实验设计保留供体、研究和扰动不参与。相较于最强对应比较器，VirtualSkin 将炎症性皮肤注释提高了 0.056 个 macro F1 点，将细胞文本检索提高了 0.12 个 Recall@10 点。该表征在研究整合过程中保留了细胞身份，并可跨衰老、系统性硬化症、淋巴瘤和解剖部位迁移。在五个干预队列中，响应预测提高了 0.03 0.09 个响应评分点，并在基因表达变化、基因恢复和转录程序水平上一致。配对组织轨迹在每种干预的两名供体中提供了补充评估。组件消融和配对对照定位了预测贡献，而不确定性估计支持分布偏移下的选择性预测。这些结果在共同评估框架内将皮肤细胞识别与干预响应预测联系起来，并界定了预测可用于指导实验优先排序的条件。"
  },
  {
   "title": "Provider Experiences with AI Clinical Decision Support in eSanjeevani",
@@ -2780,6 +2780,70 @@
   "rank": 7.0
  },
  {
+  "title": "Benefit of Linked-Color Imaging in Artificial Intelligence-Assisted Diagnosis of Early Gastric Cancer: A Pilot Study With Propensity Score Adjustment.",
+  "link": "https://pubmed.ncbi.nlm.nih.gov/42524027/",
+  "date": "2026-10-14T02:54:17.165846+00:00",
+  "pop": null,
+  "badge": "DOI 10.1002/deo2.70381",
+  "source": "PubMed",
+  "id": "c971dc9089d6",
+  "keep": true,
+  "zh_title": "联动彩色成像用于AI早期胃癌诊断的试点研究",
+  "summary": "回顾性试点研究比较联动彩色成像与白光成像在AI辅助上消化道内镜中的假阳性检出，并做倾向评分调整。",
+  "key_points": [
+   "分析2024年3月至2025年6月连续AI辅助上消化道内镜",
+   "同一患者同次检查内依次行白光与联动彩色成像",
+   "用两个CAD版本比较假阳性，倾向评分作敏感性分析"
+  ],
+  "section": "影像与病理",
+  "type": "论文",
+  "tags": [
+   "医学影像",
+   "肿瘤"
+  ],
+  "evidence": "同行评审",
+  "score": 4,
+  "day": "2026-10-14",
+  "source_group": "PubMed",
+  "abstract_tries": 1,
+  "abstract": "[DEN open] Artificial intelligence (AI)-assisted endoscopy represents a promising approach for lesion detection, yet frequent false-positive detections impair clinical utility by disrupting examinations and diminishing physician confidence. Linked-color imaging (LCI), an image-enhanced endoscopy technique that amplifies mucosal and vascular contrast, may address this limitation. This investigation evaluated whether LCI reduces false-positive AI detections compared with white-light imaging (WLI). This retrospective study analyzed consecutive AI-assisted upper endoscopies performed between March 2024 and June 2025. WLI and LCI were performed sequentially within the same endoscopic session in each patient. False-positive AI detections were compared between modalities using two computer-aided detection (CAD) versions. Propensity score adjustment was used as a sensitivity analysis for baseline differences between CAD Versions I and II. Of 66 initially screened cases, 63 remained after excluding patients with prior gastric surgery. LCI reduced false-positive AI detections compared with WLI (median 2 vs. 5; p < 0.001). In CAD version-stratified sensitivity analyses, LCI reduced false-positive AI detections in both Version I (5 to 2; p = 0.01) and Version II (2 to 0; p = 0.03). This reduction remained consistent across atrophic grades. Both imaging modalities identified all gastric lesions, achieving 100% detection sensitivity. LCI assessment performed after WLI observation yielded fewer false-positive CAD-EYE detections while maintaining lesion detection sensitivity. However, because the observation sequence was fixed, these findings should be interpreted cautiously and require confirmation in prospective or counterbalanced studies. Trial Registration: N/A (retrospective study).",
+  "thin": false,
+  "reason": "同行评审回顾性试点，样本与外部验证信息有限，属增量档",
+  "zh_abstract": "[DEN open] 人工智能（AI）辅助内镜是一种有前景的病变检测方法，但频繁的假阳性检测会干扰检查并削弱医生信心，从而损害临床实用性。联动彩色成像（LCI）是一种图像增强内镜技术，可增强黏膜和血管对比度，可能解决这一局限。本研究评估与白光成像（WLI）相比，LCI 是否能减少 AI 假阳性检测。这项回顾性研究分析了 2024 年 3 月至 2025 年 6 月期间连续进行的 AI 辅助上消化道内镜检查。每位患者在同一次内镜检查中依次进行了 WLI 和 LCI。使用两个计算机辅助检测（CAD）版本比较不同成像模式之间的假阳性 AI 检测。倾向评分调整被用作对 CAD 版本 I 和 II 之间基线差异的敏感性分析。在最初筛选的 66 例病例中，排除既往胃手术患者后剩 63 例。LCI 相比 WLI 减少了假阳性 AI 检测（中位数 2 vs. 5；p < 0.001）。在按 CAD 版本分层的敏感性分析中，LCI 在版本 I（5 至 2；p = 0.01）和版本 II（2 至 0；p = 0.03）中均减少了假阳性 AI 检测。这种减少在不同萎缩分级中保持一致。两种成像模式均识别出所有胃部病变，达到 100% 检测敏感性。在 WLI 观察后进行 LCI 评估，产生了更少的假阳性 CAD-EYE 检测，同时保持病变检测敏感性。然而，由于观察顺序固定，这些发现应谨慎解读，并需要在前瞻性或平衡研究中确认。试验注册：不适用（回顾性研究）。"
+ },
+ {
+  "title": "Deep learning-driven de novo design of ribosome binding sites in Paracoccus denitrificans.",
+  "link": "https://pubmed.ncbi.nlm.nih.gov/42630760/",
+  "date": "2026-10-14T02:54:17.165846+00:00",
+  "pop": null,
+  "badge": "DOI 10.1016/j.synbio.2026.07.013",
+  "source": "PubMed",
+  "id": "f0df0d85a659",
+  "keep": true,
+  "zh_title": "深度学习从头设计脱氮副球菌核糖体结合位点",
+  "summary": "研究系统解析1335条天然RBS序列并结合转录组与蛋白组分析，进而用深度学习从头设计功能RBS。",
+  "key_points": [
+   "系统解析1335条天然RBS序列",
+   "RBS强度主要由起始密码子上游5–8 bp富嘌呤SD基序决定",
+   "基于序列-活性关系开展从头设计"
+  ],
+  "section": "生命科学与药物",
+  "type": "论文",
+  "tags": [
+   "基因组学",
+   "生成模型"
+  ],
+  "evidence": "同行评审",
+  "score": 4,
+  "day": "2026-10-14",
+  "source_group": "PubMed",
+  "abstract_tries": 1,
+  "abstract": "[Synthetic and systems biotechnology] Paracoccus denitrificans is a heterotrophic nitrifying-aerobic denitrifying bacterium widely used in wastewater treatment and as a model system for studying electron transport chains, making it a promising chassis for environmental synthetic biology. Precise translational control of gene expression is essential for engineering desired traits in this organism, yet the design of functional ribosome binding sites (RBS) in P. denitrificans remains hindered by limited understanding of their sequence-activity relationships. To address this gap, we systematically profiled 1335 native RBS sequences via integrated transcriptomic and proteomic analyses. We found that RBS strength is predominantly governed by a purine-rich Shine-Dalgarno motif located 5-8 bp upstream of the start codon, with specific A/G patterns in this region serving as key determinants. Building on this dataset, we developed and compared CNN, BiLSTM, and Transformer models for RBS strength prediction; among them, the CNN achieved the highest predictive correlation (Pearson r = 0.68). Additionally, a WGAN-GP framework was implemented to generate novel RBS sequences, which were subsequently filtered and evaluated by the prediction framework to enable the design of RBSs with user-specified strengths. Experimental validation showed a relatively strong correlation between predicted and measured strengths (Pearson r = 0.75). This work establishes the first deep learning-enabled RBS design platform for P. denitrificans, offering a robust tool for precise translational regulation and advancing synthetic biology applications in environmental biotechnology.",
+  "thin": false,
+  "reason": "同行评审但面向环境合成生物学载体，非临床场景，属增量档",
+  "zh_abstract": "[Synthetic and systems biotechnology] 脱氮副球菌（Paracoccus denitrificans）是一种异养硝化-好氧反硝化细菌，广泛用于废水处理，并作为研究电子传递链的模式系统，使其成为环境合成生物学中有前景的底盘。基因表达的精确翻译控制对于在该生物体中工程化所需性状至关重要，但在 P. denitrificans 中功能性核糖体结合位点（RBS）的设计仍因对其序列-活性关系理解有限而受阻。为弥补这一空白，我们通过整合转录组和蛋白质组分析，系统分析了 1335 条天然 RBS 序列。我们发现 RBS 强度主要受位于起始密码子上游 5-8 bp 的富含嘌呤 Shine-Dalgarno 基序控制，该区域特定的 A/G 模式是关键决定因素。基于该数据集，我们开发并比较了用于 RBS 强度预测的 CNN、BiLSTM 和 Transformer 模型；其中，CNN 取得了最高的预测相关性（Pearson r = 0.68）。此外，我们实施了一个 WGAN-GP 框架来生成新的 RBS 序列，随后通过预测框架进行过滤和评估，以实现具有用户指定强度的 RBS 设计。实验验证显示预测强度与实测强度之间存在相对较强的相关性（Pearson r = 0.75）。这项工作建立了首个针对 P. denitrificans 的深度学习赋能的 RBS 设计平台，为精确翻译调控提供了稳健工具，并推动了环境生物技术中的合成生物学应用。"
+ },
+ {
   "title": "Precision forensic toxicology: Leveraging Toxicogenomics, multi-omics, and artificial intelligence for next-generation poisoning investigations.",
   "link": "https://pubmed.ncbi.nlm.nih.gov/42476280/",
   "date": "2026-10-14T03:03:26.567839+00:00",
@@ -2926,6 +2990,39 @@
   "score": 4,
   "day": "2026-10-14",
   "source_group": "PubMed"
+ },
+ {
+  "title": "Do Calibrated-Probability Claims Hold Up in Clinical Diagnosis? A Pre-registered Evaluation of a Decision Model Against Frontier Language Models",
+  "link": "https://www.medrxiv.org/content/10.64898/2026.10.09.26365153v1?rss=1",
+  "date": "2026-10-11T00:00:00+00:00",
+  "pop": null,
+  "source": "medRxiv",
+  "badge": "DOI 10.64898/2026.10.09.26365153v1",
+  "id": "6b1ce605fed1",
+  "keep": true,
+  "zh_title": "校准概率声称在临床诊断中成立吗？预注册评估",
+  "summary": "预注册研究将决策模型Jev与前沿语言模型在三组病例上比较诊断准确性、校准与概率连贯性。",
+  "key_points": [
+   "三个病例集：45例Semigran、1000例DDXPlus合成患者、80例眼科模拟主诉",
+   "各模型对每个诊断返回概率",
+   "对照开启与关闭推理的前沿语言模型"
+  ],
+  "section": "大模型与智能体",
+  "type": "论文",
+  "tags": [
+   "医学大模型",
+   "基准",
+   "可解释性"
+  ],
+  "evidence": "预印本",
+  "score": 6,
+  "day": "2026-10-14",
+  "source_group": "medRxiv",
+  "abstract_tries": 1,
+  "abstract": "BackgroundA new class of AI \"decision models\" returns a probability for every option in a single pass and is marketed as calibrated, which invites use in clinical triage. Whether those probabilities hold up on clinical diagnosis has not been independently tested. ObjectiveTo test the diagnostic accuracy, calibration, and probabilistic coherence of a decision model (Jev 1.13, TypeSafe AI) against frontier language models, with and without reasoning. MethodsIn a pre-registered study (OSF, registered 26 September 2026), we compared Jev with Claude Opus 5.5 (adaptive reasoning, always on) and Claude Opus 5 (reasoning disabled) on three case sets: the 45 Semigran symptom-checker vignettes, 1,000 stratified synthetic patients from DDXPlus with reference differentials, and 80 simulated ophthalmic complaints (40 diagnoses at two levels of detail). Each model returned a probability for every diagnosis on a fixed list. Outcomes were top-1 and top-3 accuracy, expected calibration error (ECE), Brier score, the rate of exactly zero probability on the true diagnosis, sensitivity to option order, behavior on uninformative inputs, and behavior when the true diagnosis was absent. ResultsOn DDXPlus, top-1 accuracy was 72.0% for Jev, 79.5% for Opus 5 without reasoning, and 87.4% for Opus 5.5 (both comparisons with Jev P<.001). Jev assigned exactly zero probability to the true diagnosis in 62 of 1,000 cases (6.2%); neither comparator did so in any case. Calibration error did not differ between Jev and the registered comparator (ECE difference 0.007, 95% CI -0.026 to 0.038). Offered an explicit \"none of these\" option, Jev declined to diagnose all 30 uninformative inputs; without that option, it assigned a mean 58% to a single diagnosis. Order sensitivity was small in all models. Given the option list with no patient information, Jev placed up to 96% on a single diagnosis, while the comparators spread probability almost evenly. On the ophthalmic complaints, accuracy did not differ (Jev 88.8%, Opus 5 91.2%, Opus 5.5 88.8%), and Jev was better calibrated than the registered comparator (ECE difference -0.081, 95% CI -0.124 to -0.018). ConclusionsThe decision model matched frontier models on short, distinctive ophthalmic complaints but fell well behind on multi-symptom synthetic patients, including behind a comparator without reasoning, and there it excluded the correct diagnosis outright in about 1 in 16 cases. Its probabilities signaled uncertainty only when the question offered ",
+  "thin": false,
+  "reason": "预注册独立评测厂商校准声称，对比充分，但预印本且多为合成病例，属值得一看档",
+  "zh_abstract": "【背景】一类新型AI“决策模型”在一次推理中为每个选项返回一个概率，并被宣传为经过校准，这使其被用于临床分诊。这些概率在临床诊断中是否站得住脚尚未经过独立检验。【目的】在有或无推理的情况下，检验一个决策模型（Jev 1.13，TypeSafe AI）相对于前沿语言模型的诊断准确性、校准度和概率一致性。【方法】在一项预注册研究（OSF，2026年9月26日注册）中，我们在三个病例集上将Jev与Claude Opus 5.5（自适应推理，始终开启）和Claude Opus 5（推理禁用）进行比较：45个Semigran症状检查器情景案例、来自DDXPlus的1000例附参考鉴别诊断的分层合成患者，以及80例模拟眼科主诉（40个诊断，分两个详细程度）。每个模型为固定列表中的每个诊断返回一个概率。结局指标为top-1和top-3准确率、期望校准误差（ECE）、Brier分数、对真实诊断给出恰好为零概率的比率、对选项顺序的敏感性、对无信息输入的行为，以及真实诊断不存在时的行为。【结果】在DDXPlus上，Jev的top-1准确率为72.0%，Opus 5（无推理）为79.5%，Opus 5.5为87.4%（两者与Jev比较P<.001）。Jev在1000例中有62例（6.2%）对真实诊断赋予恰好为零的概率；两个对照模型在任何病例中均未如此。Jev与注册对照之间的校准误差无差异（ECE差值0.007，95% CI -0.026至0.038）。当提供明确的“以上皆非”选项时，Jev对所有30个无信息输入均拒绝作出诊断；在没有该选项时，它对单一诊断平均赋予58%的概率。所有模型中的顺序敏感性均较小。在给出选项列表但无患者信息的情况下，Jev对单一诊断赋予高达96%的概率，而对照模型则几乎均匀地分配概率。在眼科主诉上，准确率无差异（Jev 88.8%，Opus 5 91.2%，Opus 5.5 88.8%），且Jev比注册对照校准更好（ECE差值-0.081，95% CI -0.124至-0.018）。【结论】该决策模型在简短、特征明显的眼科主诉上与前沿模型相当，但在多症状合成患者上明显落后，甚至落后于一个无推理的对照模型，并且在此类病例中约每16例就有1例直接排除了正确诊断。其概率仅在问题提供……"
  },
  {
   "title": "From examinations to consultations: a physician-reviewed Japanese benchmark for large language models in traditional Kampo medicine",
@@ -3155,6 +3252,108 @@
   "score": 5,
   "day": "2026-10-14",
   "source_group": "Hugging Face"
+ },
+ {
+  "title": "[Review] Artificial intelligence models for automated and semiautomated analysis and interpretation of clinical electroencephalography",
+  "link": "https://www.thelancet.com/journals/landig/article/PIIS2589-7500(26)00046-4/fulltext?rss=yes",
+  "date": "2026-09-03T22:30:02+00:00",
+  "source": "Lancet Digital Health",
+  "source_group": "Lancet Digital Health",
+  "home": "",
+  "thin": false,
+  "badge": "",
+  "pop": null,
+  "id": "91b6afea69bc",
+  "keep": true,
+  "zh_title": "临床脑电自动与半自动分析AI模型综述",
+  "summary": "综述临床脑电的AI自动与半自动分析与解读模型，指出AI辅助判读正接近临床落地。",
+  "key_points": [
+   "脑电判读依赖稀缺的专家资源",
+   "可穿戴设备带来大规模脑电数据",
+   "AI有望减轻工作量并接近落地"
+  ],
+  "section": "临床预测与决策",
+  "type": "观点",
+  "tags": [
+   "生理信号",
+   "神经科学"
+  ],
+  "evidence": "同行评审",
+  "score": 4,
+  "day": "2026-10-14",
+  "rank": 11.0,
+  "abstract_tries": 1,
+  "abstract": "Electroencephalography is the most commonly used diagnostic tool for epilepsy. However, interpreting electroencephalograms (EEGs) requires expertise that is not widely available. Advances in digital technology and wearables have enabled large-scale EEG recording, generating vast amounts of data that cannot be managed through traditional visual interpretation by experts. Artificial intelligence (AI) has the potential to augment human expertise and reduce workloads. The application of artificial neural networks in analysing clinical EEG recordings has led to major breakthroughs, bringing AI-based EEG interpretation closer to clinical implementation.",
+  "reason": "叙述性综述，无新方法或数据，属增量档",
+  "zh_abstract": "脑电图是癫痫最常用的诊断工具。然而，解读脑电图（EEG）所需的专业知识并非广泛可及。数字技术和可穿戴设备的进步使得大规模EEG记录成为可能，产生了大量无法通过专家传统视觉解读来管理的数据。人工智能（AI）有潜力增强人类专业知识并减轻工作负担。人工神经网络在分析临床EEG记录中的应用已带来重大突破，使基于AI的EEG解读更接近临床实施。"
+ },
+ {
+  "title": "[Review] Machine learning prediction for epilepsy treatment selection and prognosis: achievements and challenges",
+  "link": "https://www.thelancet.com/journals/landig/article/PIIS2589-7500(26)00045-2/fulltext?rss=yes",
+  "date": "2026-09-03T22:30:03+00:00",
+  "source": "Lancet Digital Health",
+  "source_group": "Lancet Digital Health",
+  "home": "",
+  "thin": false,
+  "badge": "",
+  "pop": null,
+  "id": "d500b158cc30",
+  "keep": true,
+  "zh_title": "机器学习预测癫痫治疗选择与预后：进展与挑战",
+  "summary": "综述机器学习在抗癫痫药物与癫痫手术结局预测中的应用成就与挑战。",
+  "key_points": [
+   "治疗反应缺乏可靠替代生物标志物",
+   "当前选药多为试错式过程",
+   "机器学习用于预测药物与手术结局"
+  ],
+  "section": "临床预测与决策",
+  "type": "观点",
+  "tags": [
+   "神经科学",
+   "临床预测"
+  ],
+  "evidence": "同行评审",
+  "score": 4,
+  "day": "2026-10-14",
+  "rank": 11.0,
+  "abstract_tries": 1,
+  "abstract": "Accurate prediction of treatment response and selection of optimal treatments remain challenging in epilepsy management. With no reliable surrogate biomarkers for treatment response, the current process of selecting an antiseizure medication remains largely a trial-and-error approach. Other non-pharmacological treatment options, such as epilepsy surgery, are viable alternatives for patients with drug-resistant epilepsy. Statistical and machine learning techniques have been used to predict seizure outcomes associated with antiseizure medications and epilepsy surgery.",
+  "reason": "叙述性综述，内容偏泛化、无新证据，属增量档",
+  "zh_abstract": "准确预测治疗反应并选择最佳治疗方案在癫痫管理中仍具挑战性。由于缺乏可靠的替代生物标志物来预测治疗反应，目前选择抗癫痫发作药物（antiseizure medication）的过程在很大程度上仍是试错法。其他非药物治疗选择，如癫痫手术，是耐药性癫痫患者的可行替代方案。统计学和机器学习技术已被用于预测与抗癫痫发作药物及癫痫手术相关的癫痫发作结局。"
+ },
+ {
+  "title": "[Editorial] Epilepsy research in the AI era",
+  "link": "https://www.thelancet.com/journals/landig/article/PIIS2589-7500(26)00138-X/fulltext?rss=yes",
+  "date": "2026-09-01T00:00:00+00:00",
+  "source": "Lancet Digital Health",
+  "source_group": "Lancet Digital Health",
+  "home": "",
+  "thin": false,
+  "badge": "",
+  "pop": null,
+  "id": "e67cc6d4d396",
+  "keep": true,
+  "zh_title": "社论：AI 时代的癫痫研究",
+  "summary": "Lancet Digital Health 社论提到美国参议院通过国家癫痫计划法案，并讨论 AI 如何加速癫痫研究与及时诊疗。",
+  "key_points": [
+   "美参议院一致通过国家癫痫计划法案",
+   "法案尚待众议院批准",
+   "讨论 AI 助力癫痫研究与照护"
+  ],
+  "section": "落地与监管",
+  "type": "观点",
+  "tags": [
+   "监管政策",
+   "神经科学"
+  ],
+  "evidence": "同行评审",
+  "score": 4,
+  "day": "2026-10-14",
+  "rank": 10.0,
+  "abstract_tries": 1,
+  "abstract": "In August, 2026, the US Senate unanimously passed the National Plan for Epilepsy Act, a federal strategy with the aim of advancing epilepsy research and improving care; it now awaits approval by the US House of Representatives. This step is the result of years of campaigning from people living with epilepsy, neurology researchers and clinicians, and advocacy groups, after historical NIH underfunding for epilepsy research compared with other neurological conditions such as Alzheimer’s disease. How could novel artificial intelligence (AI) approaches aid and accelerate epilepsy research and support prompt diagnosis and appropriate care?",
+  "reason": "政策进展加观点评论，无 AI 研究数据与结果，属增量档。",
+  "zh_abstract": "2026年8月，美国参议院一致通过《国家癫痫计划法案》，这是一项旨在推进癫痫研究并改善诊疗的联邦战略；该法案目前等待美国众议院批准。这一进展是癫痫患者、神经学研究人员和临床医生以及倡导组织多年奔走的结果，此前美国国立卫生研究院（NIH）对癫痫研究的资助相较于阿尔茨海默病等其他神经系统疾病存在历史性不足。新颖的人工智能（AI）方法如何能够帮助并加速癫痫研究，并支持及时诊断和适当诊疗？"
  },
  {
   "title": "Zhangyiqian218/StructFlow-MedicalEval",
@@ -3430,6 +3629,105 @@
   "score": 5,
   "day": "2026-10-14",
   "source_group": "medRxiv"
+ },
+ {
+  "title": "AI chatbots abandon sleep apnoea referral when simulated patients minimise symptoms",
+  "link": "https://www.medrxiv.org/content/10.64898/2026.10.09.26365165v1?rss=1",
+  "date": "2026-10-12T00:00:00+00:00",
+  "pop": null,
+  "source": "medRxiv",
+  "badge": "DOI 10.64898/2026.10.09.26365165v1",
+  "id": "79b9854c885c",
+  "keep": true,
+  "zh_title": "患者淡化症状时聊天机器人放弃睡眠呼吸暂停转诊",
+  "summary": "预印本研究用 700 组模拟对话测试五种免费聊天机器人，发现患者淡化症状时模型不再维持指南一致的转诊建议。",
+  "key_points": [
+   "五个模型×七个 OSA 情景×两种条件",
+   "共 700 组模拟对话，结构化量规评分",
+   "要求症状淡化下仍维持转诊建议"
+  ],
+  "section": "大模型与智能体",
+  "type": "论文",
+  "tags": [
+   "医学大模型",
+   "智能体",
+   "公平与安全"
+  ],
+  "evidence": "预印本",
+  "score": 5,
+  "day": "2026-10-14",
+  "source_group": "medRxiv",
+  "abstract_tries": 1,
+  "abstract": "Background: Patients increasingly consult free artificial intelligence (AI) chatbots about their symptoms, but these models may favour agreement with the patient over accuracy. In obstructive sleep apnoea (OSA), where most cases in the general population remain undiagnosed and diagnosis depends on referral, this could validate symptom denial. We tested whether consumer chatbots maintain guideline-concordant referral when a simulated patient minimises symptoms. Methods: Seven guideline-concordant and standardised OSA vignettes (apnoea-hypopnoea-index, AHI 8-52 events/h; body mass index 28-42 kg/m2) were presented to five free chatbots (GPT-5, Gemini 2.5 Flash, Claude Sonnet 4.6, DeepSeek V4 Flash and Grok-4.3) under neutral and symptom-minimising conditions (10 simulated conversations per model-vignette-condition cell; N=700). Referral maintenance was scored by a structured rubric and every capitulation was human-confirmed. Results: All chatbots maintained referral recommendations in neutral conversations (350/350; 100%). When simulated patients minimised symptoms and resisted referral, maintenance fell to 64.3% (225/350), a reduction of 35.7 percentage points (95% CI 5.5-66.0; p=0.028). Rates ranged from 55.7% to 85.7% across chatbots, but evidence of between-chatbot differences was inconsistent across analyses. Rates differed across clinical vignettes (p=0.001). A variance analysis estimated greater variation between vignettes than between chatbots. In the three driving-risk vignettes, referral recommendations were abandoned in 46-68% of symptom-minimising conversations, pooling all five chatbots within each vignette. Conclusions: Consumer AI chatbots abandoned correct OSA referral recommendations in about one-third of symptom-minimising conversations, with higher observed abandonment in simulated cases involving driving risk. This may delay appropriate assessment and raises patient- and public-safety concerns.",
+  "thin": false,
+  "reason": "预印本、模拟患者场景无真实临床结局，但有对照设计，属值得一看档。",
+  "zh_abstract": "【背景】患者越来越多就自身症状咨询免费人工智能（AI）聊天机器人，但这些模型可能优先迎合患者而非准确性。在阻塞性睡眠呼吸暂停（OSA）中，一般人群中的大多数病例仍未确诊，且诊断依赖转诊，这可能使否认症状得到认可。我们测试了当模拟患者淡化症状时，消费级聊天机器人是否仍能维持符合指南的转诊建议。【方法】将七个符合指南且标准化的 OSA 情景（呼吸暂停低通气指数，AHI 8-52 次/小时；体重指数 28-42 kg/m2）以中立和淡化症状两种条件呈现给五个免费聊天机器人（GPT-5、Gemini 2.5 Flash、Claude Sonnet 4.6、DeepSeek V4 Flash 和 Grok-4.3）（每个模型-情景-条件单元进行 10 次模拟对话；N=700）。转诊维持情况由结构化评分标准评分，且每次让步均经人工确认。【结果】所有聊天机器人在中立对话中均维持了转诊建议（350/350；100%）。当模拟患者淡化症状并抗拒转诊时，维持率降至 64.3%（225/350），下降了 35.7 个百分点（95% CI 5.5-66.0；p=0.028）。各聊天机器人的比率范围为 55.7% 至 85.7%，但各分析中聊天机器人之间存在差异的证据不一致。不同临床情景之间的比率存在差异（p=0.001）。方差分析估计，情景之间的变异大于聊天机器人之间的变异。在三个驾驶风险情景中，在每个情景内汇总所有五个聊天机器人后，淡化症状的对话中有 46-68% 放弃了转诊建议。【结论】消费级 AI 聊天机器人在约三分之一的淡化症状对话中放弃了正确的 OSA 转诊建议，在涉及驾驶风险的模拟病例中观察到的放弃率更高。这可能延迟适当评估，并引发患者和公共安全担忧。"
+ },
+ {
+  "title": "The content of biomedical papers predicts future clinical trials: a proof-of-concept framework tested on CAR-T cell therapy",
+  "link": "https://www.medrxiv.org/content/10.64898/2026.10.10.26365160v1?rss=1",
+  "date": "2026-10-12T00:00:00+00:00",
+  "pop": null,
+  "source": "medRxiv",
+  "badge": "DOI 10.64898/2026.10.10.26365160v1",
+  "id": "de62376d0aa8",
+  "keep": true,
+  "zh_title": "生物医学论文内容预测未来临床试验：CAR-T概念验证",
+  "summary": "预印本以CAR-T为概念验证场景，用论文固有指标训练机器学习模型，预测哪些论文会进入临床试验。",
+  "key_points": [
+   "以CAR-T细胞治疗为概念验证场景",
+   "65项论文固有指标，交叉验证AUC 0.908",
+   "回顾性设置下排名前20论文中80%来自相关实验室"
+  ],
+  "section": "生命科学与药物",
+  "type": "论文",
+  "tags": [
+   "药物发现",
+   "基准"
+  ],
+  "evidence": "预印本",
+  "score": 5,
+  "day": "2026-10-14",
+  "source_group": "medRxiv",
+  "abstract_tries": 1,
+  "abstract": "This paper shows that it is possible to predict which newly published biomedical research papers will be connected to subsequent clinical trials. We use CAR-T cell therapy as a proof-of-concept setting because its development can be followed from published research through clinical testing, regulatory approval, and commercialization. We reconstructed connections between research papers and clinical trials and trained machine-learning models to predict which papers were associated with research that progressed to clinical testing. Using 65 paper-inherent indicators, including scientific topic, language, biomedical orientation, and team structure, the models achieved a cross-validated AUC of 0.908. The resulting rankings were also practically informative. In a retrospective analysis using no information generated after 2016, 80% of the top 20 papers came from laboratories associated with one of 13 predefined major CAR-T clinical or commercial outcomes. As an additional finding, first-year citations alone achieved an AUC of 0.797, while provenance indicators based on author, journal, and institutional reputation performed less strongly and added little to the paper-inherent model. Our results show that whether biomedical research papers will be connected to subsequent clinical trials can be predicted from newly published papers with high discrimination in CAR-T. Our findings could help research organizations and pharmaceutical companies identify papers, laboratories, and therapeutic programs that warrant closer evaluation before clinical outcomes are known.",
+  "thin": false,
+  "reason": "预印本概念验证，有基线但仅交叉验证与回顾性分析，属值得一看档",
+  "zh_abstract": "本文表明，可以预测哪些新发表的生物医学研究论文将与后续临床试验相关联。我们使用 CAR-T 细胞疗法作为概念验证场景，因为其开发过程可以从已发表研究一直追踪到临床测试、监管批准和商业化。我们重建了研究论文与临床试验之间的联系，并训练机器学习模型来预测哪些论文与进展到临床测试的研究相关。使用 65 个论文固有指标，包括科学主题、语言、生物医学方向和团队结构，模型实现了交叉验证 AUC 为 0.908。由此产生的排名也具有实际信息价值。在一项不使用 2016 年之后生成的任何信息的回顾性分析中，排名前 20 的论文中有 80% 来自与 13 个预先定义的主要 CAR-T 临床或商业成果之一相关的实验室。作为一项额外发现，仅第一年引用量就达到了 AUC 为 0.797，而基于作者、期刊和机构声誉的来源指标表现较弱，并且对论文固有模型几乎没有增加价值。我们的结果表明，在 CAR-T 中，可以从新发表论文中以高区分度预测生物医学研究论文是否将与后续临床试验相关联。我们的发现可帮助研究组织和制药公司在临床结果已知之前识别值得更密切评估的论文、实验室和治疗项目。"
+ },
+ {
+  "title": "Open Foundation Models in Healthcare: Challenges, Paradoxes, and Opportunities with GenAI Driven Personalized Prescription",
+  "link": "https://arxiv.org/abs/2502.04356",
+  "date": "2026-10-12T00:00:00+00:00",
+  "source": "arXiv",
+  "source_group": "arXiv",
+  "home": "",
+  "thin": false,
+  "badge": "arXiv 2502.04356",
+  "pop": null,
+  "id": "b764bf53c773",
+  "keep": true,
+  "zh_title": "医疗开放基础模型：挑战、悖论与个性化处方",
+  "summary": "综述开放LLM与AI基础模型在临床任务的进展，并在个性化处方任务上比较开源与专有模型。",
+  "key_points": [
+   "梳理开放LLM/AIFM临床任务的分类体系",
+   "在100个合成患者画像上评测处方任务",
+   "开源模型总体适用性准确率0.810–0.850，专有基线0.780"
+  ],
+  "section": "大模型与智能体",
+  "type": "论文",
+  "tags": [
+   "医学大模型",
+   "临床决策支持"
+  ],
+  "evidence": "预印本",
+  "score": 5,
+  "day": "2026-10-14",
+  "rank": 8.0,
+  "abstract_tries": 1,
+  "abstract": "In response to the success of proprietary Large Language Models (LLMs), there is a growing interest in developing open, non-proprietary LLMs and AI foundation models (AIFMs) for transparent use in academic, scientific, and non-commercial applications. Open models have substantial potential to improve healthcare applications. In this paper, we provide a comprehensive survey and a taxonomy of state-of-the-art open LLMs and AIFMs for clinical tasks. In addition, we empirically evaluate open-weight LLMs on a personalized-prescription task and compare them with a proprietary model with and without Retrieval-Augmented Generation (RAG). Across 100 synthetic patient profiles, the open-weight models matched or exceeded the proprietary baseline on overall suitability accuracy without retrieval augmentation (0.810--0.850 versus 0.780), although the confidence intervals overlap; with retrieval augmentation, every model improved, and the ranking closed to within 0.04. Gains from RAG were field-dependent rather than uniform. To highlight the clinical relevance of LLM-driven personalized prescriptions, we also conduct a subjective evaluation in which two raters, blinded to model and condition, scored responses independently of each other. Their ratings did not follow the accuracy gains: retrieval raised overall suitability accuracy for every model while lowering the two-rater means for two of the four on all five dimensions. Finally, we outline the ethical implications and potential risks associated with the misuse of advanced LLMs and AIFMs, highlighting the importance of responsible and transparent deployment in healthcare contexts. \\textit{Data and code used in the paper will be released upon publication.",
+  "reason": "预印本综述加合成数据小规模评测，置信区间重叠，属值得一看档",
+  "zh_abstract": "为回应专有大语言模型（LLMs）的成功，人们对开发开放、非专有 LLM 和 AI 基础模型（AIFMs）以供在学术、科学和非商业应用中透明使用的兴趣日益增长。开放模型在改善医疗保健应用方面具有巨大潜力。在本文中，我们提供了针对临床任务的最先进开放 LLM 和 AIFM 的全面综述和分类体系。此外，我们在个性化处方任务上对开放权重 LLM 进行了实证评估，并在使用和不使用检索增强生成（RAG）的情况下将其与一个专有模型进行比较。在 100 个合成患者档案中，开放权重模型在未使用检索增强时的总体适宜性准确率上达到或超过专有基线（0.810--0.850 对 0.780），尽管置信区间重叠；使用检索增强后，每个模型都有所改善，排名差距缩小到 0.04 以内。RAG 带来的增益依赖于领域而非一致。为强调 LLM 驱动的个性化处方的临床相关性，我们还进行了一项主观评估，其中两名对模型和条件设盲的评分者彼此独立地对回答进行评分。他们的评分并未跟随准确率提升：检索提高了每个模型的总体适宜性准确率，却降低了四个模型中的两个在所有五个维度上的两名评分者均值。最后，我们概述了与先进 LLM 和 AIFM 滥用相关的伦理影响和潜在风险，强调在医疗保健场景中负责任和透明部署的重要性。论文中使用的数据和代码将在发表后发布。"
  },
  {
   "title": "Privacy-preserving training could expand medical AI for children while keeping data local - Medical Xpress",
@@ -3780,6 +4078,39 @@
   "score": 5,
   "day": "2026-10-14",
   "source_group": "GitHub"
+ },
+ {
+  "title": "[Comment] Power, governance, and accountability in humanitarian artificial intelligence",
+  "link": "https://www.thelancet.com/journals/landig/article/PIIS2589-7500(26)00091-9/fulltext?rss=yes",
+  "date": "2026-08-20T15:41:52+00:00",
+  "source": "Lancet Digital Health",
+  "source_group": "Lancet Digital Health",
+  "home": "",
+  "thin": false,
+  "badge": "",
+  "pop": null,
+  "id": "bde1d7ceedb2",
+  "keep": true,
+  "zh_title": "评论：人道主义 AI 的权力、治理与问责",
+  "summary": "评论认为 AI 可助人道组织应对援助缺口，同时带数据质量、偏见、隐私与负责任使用等技术伦理问题。",
+  "key_points": [
+   "AI 可用于翻译、摘要、分类与定性分析",
+   "面临数据质量、准确性与可靠性挑战",
+   "涉及偏见、隐私与负责任使用等伦理问题"
+  ],
+  "section": "落地与监管",
+  "type": "观点",
+  "tags": [
+   "公平与安全"
+  ],
+  "evidence": "同行评审",
+  "score": 3,
+  "day": "2026-10-14",
+  "rank": 10.0,
+  "abstract_tries": 1,
+  "abstract": "In their Comment, Shreenik Kundu and colleagues convincingly argue that ethical artificial intelligence (AI) could help humanitarian organisations respond to worsening aid shortfalls by improving data collection and analysis.1 Humanitarian systems face expanding needs, reduced resources, and growing demands for data. AI systems can support translation, summarisation, classification, and analysis of qualitative data used to understand context, needs, or response effectiveness. These applications raise technical challenges around data quality, accuracy, and reliability, as well as ethical questions around bias, privacy, and responsible use.",
+  "reason": "纯观点评论，无数据、方法与评估，属边缘偏增量档。",
+  "zh_abstract": "在其评论中，Shreenik Kundu 及其同事令人信服地论证，合乎伦理的人工智能（AI）可以通过改善数据收集和分析，帮助人道主义组织应对日益恶化的援助短缺。1 人道主义系统面临需求扩大、资源减少以及对数据日益增长的要求。AI 系统可以支持翻译、摘要、分类以及用于理解背景、需求或响应有效性的定性数据分析。这些应用带来了围绕数据质量、准确性和可靠性的技术挑战，也带来了围绕偏见、隐私和负责任使用的伦理问题。"
  },
  {
   "title": "PySpiro: A Python Library for Lung Function Reference Equations and Severity Classification",
@@ -4159,7 +4490,13 @@
   "score": 3,
   "day": "2026-10-14",
   "thin": true,
-  "source_group": "Google News · FDA AI"
+  "source_group": "Google News · FDA AI",
+  "also": [
+   {
+    "source": "Medical Marketing and Media",
+    "link": "https://news.google.com/rss/articles/CBMioAFBVV95cUxNaENvVDhCNjJzMEU2dFYzbXR5YWJmZGxQbkpqRVI4UWVKNzMtM2dKc1ltRi1PZTRIRE9Da1JIc1lZOWZ0RzBxZUlPM0tvZ2k1cGVoOVhZWXQ1X1BjV1BSWGN3V05mdW1FcjFCeVBaQ3dBLTVJVzZvT2ZndnVHNmoycVFkTXZ6X2FPQWdDLVMydnBsdDdVU0FhX1pQdzRrSFEx?oc=5"
+   }
+  ]
  },
  {
   "title": "AI Tracker: Suki lands $90M",
