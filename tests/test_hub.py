@@ -47,6 +47,15 @@ def test_stratified_covers_groups():
     out = evalset.stratified(pool, 6)
     assert len(out) == 6 and {r["source_group"] for r in out} == {"A", "B"} and any(not r["model_keep"] for r in out)
 
+def test_score_display():
+    it = dict(score=8, source="NEJM AI", evidence="同行评审", day="2026-10-14", date="2026-10-14T00:00:00Z", id="x", title="t", link="l",
+              reason="多中心外部验证", tags=[], section="研究论文", type="论文")
+    assert hub.tier(8) == ("重要", "hi") and hub.tier(5)[0] == "值得一看" and hub.tier(None)[0] == "边缘"
+    assert abs(sum(hub.rank_parts(it).values()) - hub.rank(it)) < 0.01 and "综合排序分" in hub.score_tip(it)
+    assert "评分 8" in hub.card(it) and "评分理由" in hub.card(it)
+    f = hub.card(it, featured=True)
+    assert "scorecard" in f and "多中心外部验证" in f
+
 if __name__ == "__main__":
     for k, f in list(globals().items()):
         if k.startswith("test_"): f(); print("ok", k)

@@ -80,10 +80,20 @@ def age_days(it):
     except ValueError: day = NOW.astimezone(CST).date()
     return max(0, (day - parse_date(it.get("date") or "").astimezone(CST).date()).days)
 
+def rank_parts(it):
+    return {"内容": it.get("score") or 5, "来源": WEIGHTS.get(it.get("source"), WEIGHTS.get(it.get("source_group"), 1.0)),
+            "证据": EV_BONUS.get(it.get("evidence"), 0), "热度": min(2.0, 0.6 * math.log10(signal(it) + 1)),
+            "新鲜度": FRESH_BONUS * 0.5 ** (age_days(it) / FRESH_HALF_LIFE)}
+
 def rank(it):
-    w = WEIGHTS.get(it.get("source"), WEIGHTS.get(it.get("source_group"), 1.0))
-    fresh = FRESH_BONUS * 0.5 ** (age_days(it) / FRESH_HALF_LIFE)
-    return round((it.get("score") or 5) + w + EV_BONUS.get(it.get("evidence"), 0) + min(2.0, 0.6 * math.log10(signal(it) + 1)) + fresh, 2)
+    return round(sum(rank_parts(it).values()), 2)
+
+TIERS = [(9, "里程碑", "hi"), (7, "重要", "hi"), (5, "值得一看", "mid"), (3, "增量", "lo"), (0, "边缘", "lo")]
+def tier(score):
+    return next((name, cls) for lo, name, cls in TIERS if (score or 0) >= lo)
+
+def score_tip(it):
+    return f"综合排序分 {rank(it)} = " + " + ".join(f"{k} {round(v, 1):g}" for k, v in rank_parts(it).items())
 
 def top_picks(items, n=5):
     """Highest-ranked recent items; older backfill only fills the gap when there aren't enough recent ones."""
@@ -183,6 +193,23 @@ def f_pubmed(src):
                         badge=("DOI " + doi) if doi else f"PMID {pmid}", outlet=f"PubMed · {journal}" if journal else None))
     return out
 
+META_KEYS = ("citation_abstract", "dc.description", "og:description", "description")
+NO_META = ("github.com", "huggingface.co", "news.google.com", "medrxiv.org", "biorxiv.org", "pubmed.ncbi.nlm.nih.gov")
+def fill_abstract(it):
+    """RSS often carries only a one-line teaser (e.g. Nature journals); pull the abstract from the article page's meta tags."""
+    host = urllib.parse.urlparse(it["link"]).hostname or ""
+    if it.get("thin_src") or len(it.get("desc") or "") >= 300 or any(host.endswith(h) for h in NO_META): return it
+    try: s = get(it["link"], timeout=15).decode("utf-8", "ignore")
+    except Exception: return it
+    best = it.get("desc") or ""
+    for k in META_KEYS:
+        m = re.search(r'<meta[^>]+(?:name|property)="' + re.escape(k) + r'"[^>]+content="([^"]*)"', s, re.I)
+        txt = clean(m.group(1), 1500) if m else ""
+        if len(txt) > len(best) and not txt.lower().startswith("abstract page for"): best = txt
+    if len(best) > len(it.get("desc") or ""):
+        it["desc"] = best; it["thin"] = len(best) < 80
+    return it
+
 FETCH = dict(rss=f_rss, arxiv=f_arxiv, github=f_github, hf=f_hf, pubmed=f_pubmed)
 
 def fetch_source(src):
@@ -196,7 +223,8 @@ def fetch_source(src):
         it["source"] = it.pop("outlet", None) or src["name"]; it["source_group"] = src["name"]
         it["home"] = it.pop("outlet_home", "") or ""
         it["evidence_hint"] = src.get("evidence", "")
-        it["thin"] = bool(src.get("title_only")) or len(it.get("desc", "")) < 80
+        it["thin_src"] = bool(src.get("title_only"))
+        it["thin"] = it["thin_src"] or len(it.get("desc", "")) < 80
         it.setdefault("badge", ""); it.setdefault("pop", None)
         if not it["badge"]:
             m = re.search(r"arxiv\.org/abs/([\d.]+)", it["link"]) or re.search(r"(10\.\d{4,}/[^\s?#%]+)", it["link"])
@@ -324,10 +352,11 @@ def main():
         for k in list(by):
             if by[k] and len(pick) < MAX_NEW: pick.append(by[k].pop(0))
     print(f"new candidates {len(new)}, processing {len(pick)}", file=sys.stderr)
+    with cf.ThreadPoolExecutor(6) as ex: list(ex.map(fill_abstract, pick))
     done = enrich_all(pick)
     save_pool(pick, {d["id"] for d in done})
     for d in done:
-        d["day"] = TODAY; d.pop("desc", None); d.pop("evidence_hint", None); d["rank"] = rank(d)
+        d["day"] = TODAY; d.pop("desc", None); d.pop("evidence_hint", None); d.pop("thin_src", None); d["rank"] = rank(d)
     recent = [d for d in db if d.get("day", "") >= (NOW - dt.timedelta(days=3)).strftime("%Y-%m-%d")]
     done = cluster(done, recent)
     cutoff = (NOW - dt.timedelta(days=KEEP_DAYS)).strftime("%Y-%m-%d")
@@ -368,6 +397,9 @@ def card(i, featured=False, top=False):
     chips = ""
     if health:
         ev = i.get("evidence") or ""
+        if i.get("score"):
+            tn, tc = tier(i["score"])
+            chips += f'<span class="chip sc {tc}" title="{E(score_tip(i))}">评分 {E(i["score"])} · {tn}</span>'
         chips += f'<span class="chip {"p" if i.get("type")=="论文" else ""}">{E(i.get("type"))}</span>' if i.get("type") else ""
         if ev: chips += f'<span class="chip w">{"预印本 · 未经同行评审" if ev=="预印本" else E(ev)}</span>'
     chips += "".join(f'<button class="chip tag {"p" if not health and "AI" in t_ else ""}" data-tag="{E(t_)}">{E(t_)}</button>' for t_ in tags)
@@ -380,11 +412,14 @@ def card(i, featured=False, top=False):
     if health and (i.get("type") == "论文" or i.get("badge")):
         extra += f'<button class="cite" data-cite="{E(cite_text(i))}">复制引用 / DOI</button>'
     why = f'<div class="why">有意思在哪：{E(i["why"])}</div>' if not health and i.get("why") else ""
+    if health and i.get("reason") and not featured: why = f'<div class="why">评分理由：{E(i["reason"])}</div>'
     cls = "card" + (" reg" if i.get("type") == "监管" else "")
     body = meta + t + s + kp + f'<div class="chips">{chips}</div>' + why + extra
     if health and featured:
-        side = (f'<div class="img" style="background-image:url(\'{E(i["image"])}\')"></div>' if i.get("image") else
-                f'<div class="img logo"><img src="{fav(i["link"], i.get("home")).replace("sz=32", "sz=64")}" alt="" onerror="this.remove()"><div>{E(i["source"])}</div><div class="ev">{E(i.get("evidence") or "")}</div></div>')
+        tn, tc = tier(i.get("score"))
+        side = (f'<div class="img scorecard {tc}" title="{E(score_tip(i))}"><div class="big"><b>{E(i.get("score") or "–")}</b><span>/10</span></div>'
+                f'<div class="tn">{tn}</div><div class="ev">{E(i.get("evidence") or "")} · {E(i["source"])}</div>' +
+                (f'<p class="rs">{E(i["reason"])}</p>' if i.get("reason") else "") + "</div>")
         return f'<article class="{cls} feat" {attrs}>{side}<div class="txt">{body}</div></article>'
     if not health and featured:
         gm = re.match(r"https://github\.com/([\w.-]+/[\w.-]+)/?$", i["link"])
