@@ -225,8 +225,11 @@ def fill_abstract(it):
     """RSS often carries only a one-line teaser (e.g. Nature journals); pull the abstract from the article page's meta tags."""
     host = urllib.parse.urlparse(it["link"]).hostname or ""
     if it.get("thin_src") or len(it.get("desc") or "") >= 300 or any(host.endswith(h) for h in NO_META): return it
-    try: s = get(it["link"], timeout=15).decode("utf-8", "ignore")
-    except Exception: return it
+    s = None
+    for a in range(2):  # publishers drop some requests under load; one polite retry
+        try: s = get(it["link"], timeout=15).decode("utf-8", "ignore"); break
+        except Exception: time.sleep(2)
+    if s is None: return it
     best = it.get("desc") or ""
     for k in META_KEYS:
         m = re.search(r'<meta[^>]+(?:name|property)="' + re.escape(k) + r'"[^>]+content="([^"]*)"', s, re.I)
@@ -357,6 +360,53 @@ def save_archive_day(day, items):
     json.dump(items, open(f"data/archive/{day}.json", "w"), ensure_ascii=False, indent=0)
 
 POOL_FIELDS = ("id", "title", "link", "date", "source", "source_group", "desc", "evidence_hint", "thin")
+BACKFILL_MAX = int(os.getenv("BACKFILL_MAX", "60"))  # older paper items re-processed per run once an abstract is found
+
+def europepmc_abstract(doi):
+    q = urllib.parse.quote(f'DOI:"{doi}"')
+    r = json.loads(get(f"https://www.ebi.ac.uk/europepmc/webservices/rest/search?query={q}&resultType=core&format=json", timeout=20))
+    hit = (r.get("resultList") or {}).get("result") or []
+    return clean(hit[0].get("abstractText") or "", ABS_MAX) if hit else ""
+
+def pubmed_abstract(pmid):
+    root = ET.fromstring(get("https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&retmode=xml&id=" + pmid, timeout=20))
+    return clean(" ".join("".join(x.itertext()) for x in root.iter("AbstractText")), ABS_MAX)
+
+def find_abstract(it, fresh):
+    """Abstract for an item collected before abstracts were stored: same-run feed entry > article page meta > Europe PMC / PubMed."""
+    f = fresh.get(it["id"])
+    if f and len(f.get("desc") or "") >= 200: return f["desc"]
+    x = dict(link=it["link"], desc="")
+    fill_abstract(x)
+    if len(x["desc"]) >= 200: return x["desc"]
+    try:
+        m = re.search(r"pubmed\.ncbi\.nlm\.nih\.gov/(\d+)", it["link"])
+        if m: return pubmed_abstract(m.group(1))
+        doi = (it.get("badge") or "")[4:] if (it.get("badge") or "").startswith("DOI ") else ""
+        if doi: return europepmc_abstract(doi)
+    except Exception as ex:
+        print(f"[backfill] {it['id']}: {ex}", file=sys.stderr)
+    return ""
+
+def backfill(db, results):
+    """Paper items collected before abstracts were kept: find the abstract, redo summary/score from it, translate. Each item gets up to 3 runs."""
+    fresh = {it["id"]: it for _, res, _ in results for it in res}
+    todo = [d for d in db if not d.get("abstract") and d.get("abstract_tries", 0) < 3 and (d.get("source_group") or d.get("source")) in PAPER_SOURCES]
+    todo = sorted(todo, key=lambda d: d.get("day", ""), reverse=True)[:BACKFILL_MAX]
+    with cf.ThreadPoolExecutor(3) as ex: abstracts = list(ex.map(lambda d: find_abstract(d, fresh), todo))
+    got = []
+    for d, ab in zip(todo, abstracts):
+        d["abstract_tries"] = d.get("abstract_tries", 0) + 1
+        if len(ab) >= 200: d["abstract"] = ab; d["thin"] = False; got.append(d)
+    redo = [dict(title=d["title"], source=d["source"], desc=d["abstract"][:900], evidence_hint=d.get("evidence") or "", thin=False, _pid=d["id"]) for d in got]
+    by = {d["id"]: d for d in got}
+    for r in enrich_all(redo) if redo else []:
+        d = by[r["_pid"]]
+        for k in ("zh_title", "summary", "key_points", "tags", "section", "type", "score", "reason"):
+            if r.get(k) not in (None, "", []): d[k] = r[k]
+    translate_all(got)
+    print(f"backfill: tried {len(todo)}, found abstracts {len(got)}", file=sys.stderr)
+
 def save_pool(pick, kept_ids):
     """Raw LLM inputs + the model's verdict, for building the evaluation set (see evalset.py). Kept KEEP_DAYS days."""
     os.makedirs("data/pool", exist_ok=True)
@@ -401,6 +451,7 @@ def main():
         if not d.get("thin") and len(ab) >= 200: d["abstract"] = ab
         d["day"] = TODAY; d.pop("evidence_hint", None); d.pop("thin_src", None); d["rank"] = rank(d)
     translate_all(done)
+    backfill(db, results)
     recent = [d for d in db if d.get("day", "") >= (NOW - dt.timedelta(days=3)).strftime("%Y-%m-%d")]
     done = cluster(done, recent)
     cutoff = (NOW - dt.timedelta(days=KEEP_DAYS)).strftime("%Y-%m-%d")

@@ -91,6 +91,19 @@ def test_conf_paper_uses_shared_card():
     p = hub.item_page(it, [], "https://example.org/")
     assert "中文摘要" in p and "返回论文库" in p and "收录于" not in p
 
+def test_backfill_uses_feed_and_redoes_summary():
+    old = dict(id="p1", title="T", source="Lancet Digital Health", source_group="Lancet Digital Health", link="https://x/1", summary="old", score=5, day="2026-10-15")
+    news = dict(id="n1", title="N", source="STAT News", source_group="STAT News", link="https://x/2", summary="s", day="2026-10-15")
+    fresh = dict(id="p1", desc="Background: " + "x" * 300)
+    calls = {}
+    e, t = hub.enrich_all, hub.translate_all
+    hub.enrich_all = lambda items: [dict(i, summary="new", score=8, reason="r") for i in items]
+    hub.translate_all = lambda items: calls.setdefault("t", [i["id"] for i in items])
+    try: hub.backfill([old, news], [(None, [fresh], None)])
+    finally: hub.enrich_all, hub.translate_all = e, t
+    assert old["abstract"].startswith("Background") and old["summary"] == "new" and old["score"] == 8 and calls["t"] == ["p1"]
+    assert "abstract_tries" not in news and old["abstract_tries"] == 1   # news sources are never backfilled
+
 if __name__ == "__main__":
     for k, f in list(globals().items()):
         if k.startswith("test_"): f(); print("ok", k)
