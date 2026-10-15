@@ -1,6 +1,6 @@
 import os, sys
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-import hub
+import hub, evalset
 
 def test_kw_ok_case_insensitive():
     assert hub.kw_ok("New MRI model for stroke", ["MRI"])
@@ -30,6 +30,22 @@ def test_freshness():
     weak_fresh = dict(base, id="c", score=4, source="medRxiv", evidence="预印本", date="2026-10-14T00:00:00Z")
     assert [i["id"] for i in hub.top_picks([old, weak_fresh], n=1)] == ["c"]
     assert [i["id"] for i in hub.top_picks([old], n=5)] == ["b"]
+
+def test_rubric_in_prompt():
+    assert "评分标准" in hub.C.RUBRIC
+
+def test_eval_metrics():
+    pairs = [(2, True, 8), (2, True, 5), (1, True, 6), (0, True, 7), (0, False, None)]
+    m = evalset.metrics(pairs, threshold=7)
+    assert m["n"] == 5 and m["false_keep"] == 1 and m["false_drop"] == 0
+    assert m["precision"] == 0.5 and m["recall"] == 0.5
+    assert abs(evalset.spearman([1, 2, 3], [10, 20, 30]) - 1) < 1e-9
+    assert evalset.spearman([1, 1, 1], [1, 2, 3]) is None
+
+def test_stratified_covers_groups():
+    pool = [dict(id=str(i), source_group="A" if i % 2 else "B", model_keep=i % 3 > 0, model_score=i % 10) for i in range(40)]
+    out = evalset.stratified(pool, 6)
+    assert len(out) == 6 and {r["source_group"] for r in out} == {"A", "B"} and any(not r["model_keep"] for r in out)
 
 if __name__ == "__main__":
     for k, f in list(globals().items()):

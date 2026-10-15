@@ -1,0 +1,21 @@
+name: Scoring Eval
+on:
+  workflow_dispatch:
+    inputs:
+      threshold: { description: "精选门槛 (score >=)", default: "7" }
+jobs:
+  eval:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - run: pip install feedparser
+      - name: Re-score labeled items with the current prompt + rubric
+        run: python evalset.py run --threshold "${{ inputs.threshold }}"
+        env:
+          LLM_API_KEY: ${{ secrets.LLM_API_KEY }}
+          LLM_BASE_URL: ${{ secrets.LLM_BASE_URL }}
+          LLM_MODEL: ${{ vars.LLM_MODEL || 'deepseek-v4-flash' }}
+      - uses: actions/upload-artifact@v4
+        with: { name: eval-report, path: eval/last_report.md }

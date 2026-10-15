@@ -226,7 +226,8 @@ def enrich(batch):
     payload = [dict(i=k, title=b["title"], source=b["source"], desc=(b.get("desc") or "")[:900], evidence_hint=b.get("evidence_hint", ""), title_only=b.get("thin", False)) for k, b in enumerate(batch)]
     sysmsg = (PROMPT + "\n\n可选 section: " + " / ".join(SECTIONS) + "\n可选 tags（只能从中选择 1-3 个，不得自创）: " + "、".join(TAGS) +
               "\n若 title_only=true（只有标题、无正文），summary 只能复述标题信息，key_points 必须为空数组 []。" +
-              "\n每条输出 JSON 对象，字段: i, " + FIELDS + "。只输出一个 JSON 数组，不要其他文字。")
+              "\n每条输出 JSON 对象，字段: i, " + FIELDS + "。只输出一个 JSON 数组，不要其他文字。" +
+              "\n\n" + getattr(C, "RUBRIC", ""))
     res = llm_raw([{"role": "system", "content": sysmsg}, {"role": "user", "content": json.dumps(payload, ensure_ascii=False)}])
     out = []
     for r in res or []:
@@ -287,6 +288,19 @@ def save_archive_day(day, items):
     os.makedirs("data/archive", exist_ok=True)
     json.dump(items, open(f"data/archive/{day}.json", "w"), ensure_ascii=False, indent=0)
 
+POOL_FIELDS = ("id", "title", "link", "date", "source", "source_group", "desc", "evidence_hint", "thin")
+def save_pool(pick, kept_ids):
+    """Raw LLM inputs + the model's verdict, for building the evaluation set (see evalset.py). Kept KEEP_DAYS days."""
+    os.makedirs("data/pool", exist_ok=True)
+    with open(f"data/pool/{TODAY}.jsonl", "a", encoding="utf-8") as f:
+        for it in pick:
+            row = {k: it.get(k) for k in POOL_FIELDS}
+            row.update(day=TODAY, model_keep=it["id"] in kept_ids, model_score=it.get("score") if it["id"] in kept_ids else None)
+            f.write(json.dumps(row, ensure_ascii=False) + "\n")
+    cutoff = (NOW - dt.timedelta(days=KEEP_DAYS)).strftime("%Y-%m-%d")
+    for p in glob.glob("data/pool/*.jsonl"):
+        if os.path.basename(p)[:10] < cutoff: os.remove(p)
+
 def main():
     os.makedirs("data", exist_ok=True)
     db = json.load(open("data/items.json")) if os.path.exists("data/items.json") else []
@@ -311,6 +325,7 @@ def main():
             if by[k] and len(pick) < MAX_NEW: pick.append(by[k].pop(0))
     print(f"new candidates {len(new)}, processing {len(pick)}", file=sys.stderr)
     done = enrich_all(pick)
+    save_pool(pick, {d["id"] for d in done})
     for d in done:
         d["day"] = TODAY; d.pop("desc", None); d.pop("evidence_hint", None); d["rank"] = rank(d)
     recent = [d for d in db if d.get("day", "") >= (NOW - dt.timedelta(days=3)).strftime("%Y-%m-%d")]

@@ -28,3 +28,13 @@ Secrets: `LLM_API_KEY`, `LLM_BASE_URL`；可选变量 `LLM_MODEL`（默认 deeps
 - RSS：`feed.xml`、各分区 `feed-<section>.xml`、周报 `weekly/feed.xml`。
 - `weekly.py` + `.github/workflows/weekly.yml`：每周一生成周报 `/weekly/YYYY-Www/`。
 - 测试：`python tests/test_hub.py`。
+
+## 打分标准与评测集
+- 评分标准写在 [`prompts/score_rubric.md`](prompts/score_rubric.md)，会拼进 LLM 的系统提示。改标准只改这个文件。
+- `hub.py` 每天把送进 LLM 的原始输入和模型判定（收 / 不收、分数）存到 `data/pool/YYYY-MM-DD.jsonl`（保留 30 天），包括被模型丢掉的条目。
+- 评测流程：
+  1. `python evalset.py sample --n 100`：从 pool（为空时退回归档）按来源 × 分数段分层抽样，追加到 `eval/labels.csv`。
+  2. 用 Excel / Numbers 打开 `eval/labels.csv`，在 `label` 列填 **精选 / 收录 / 不收**（`note` 列可写理由），保存后提交。建议先标 100–200 条。
+  3. `python evalset.py run --offline`：评测生产环境当时打的分，不需要 API Key。
+  4. 改了 `score_rubric.md` 后，在 Actions 里手动运行 **Scoring Eval**（或本地设好 `LLM_*` 后 `python evalset.py run`），用新提示词重新打分，对比报告里的精选 precision / recall、Spearman 和「主要分歧」列表。
+- 报告写到 `eval/last_report.md`，在 Actions 里也会显示在运行摘要页。
