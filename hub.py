@@ -1,6 +1,6 @@
 """Shared pipeline: fetch -> dedupe -> LLM summarize -> rank -> static build (pre-rendered HTML, archives, RSS, weekly).
 Concept inspired by AISafetyHot-Hub (CC BY-NC 4.0) and AIHOT (MIT); code written from scratch."""
-import json, os, re, sys, time, math, glob, html, hashlib, difflib, datetime as dt, urllib.request, urllib.parse, urllib.error
+import json, os, re, shutil, sys, time, math, glob, html, hashlib, difflib, datetime as dt, urllib.request, urllib.parse, urllib.error
 import xml.etree.ElementTree as ET, concurrent.futures as cf
 import config as C
 try:
@@ -221,14 +221,36 @@ def f_pubmed(src):
 
 META_KEYS = ("citation_abstract", "dc.description", "og:description", "description")
 NO_META = ("github.com", "huggingface.co", "news.google.com", "medrxiv.org", "biorxiv.org", "pubmed.ncbi.nlm.nih.gov")
+BROWSER = {"User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0 Safari/537.36",
+           "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8", "Accept-Language": "en-US,en;q=0.9"}
+_HOST_LOCKS, _HOST_LOCK = {}, __import__("threading").Lock()
+
+def fetch_page(url, tries=3):
+    """Article page for abstract meta tags. Publishers (notably nature.com) throttle CI runners, so: one request per host at a time,
+    browser-like headers, backoff on 403/429/503 and timeouts, and log the final failure instead of dropping it silently."""
+    host = urllib.parse.urlparse(url).hostname or ""
+    with _HOST_LOCK: lock = _HOST_LOCKS.setdefault(host, __import__("threading").Lock())
+    err = None
+    for a in range(tries):
+        with lock:
+            try:
+                s = get(url, timeout=20, headers=BROWSER).decode("utf-8", "ignore")
+                time.sleep(0.5); return s
+            except urllib.error.HTTPError as ex:
+                err = f"HTTP {ex.code}"
+                if ex.code not in (403, 429, 503): break
+                wait = int(ex.headers.get("Retry-After") or 0) or 3 * 2 ** a
+            except Exception as ex:
+                err = repr(ex)[:80]; wait = 3 * 2 ** a
+        if a < tries - 1: time.sleep(min(wait, 30))
+    print(f"[abstract] page fetch failed ({err}): {url}", file=sys.stderr)
+    return None
+
 def fill_abstract(it):
     """RSS often carries only a one-line teaser (e.g. Nature journals); pull the abstract from the article page's meta tags."""
     host = urllib.parse.urlparse(it["link"]).hostname or ""
     if it.get("thin_src") or len(it.get("desc") or "") >= 300 or any(host.endswith(h) for h in NO_META): return it
-    s = None
-    for a in range(2):  # publishers drop some requests under load; one polite retry
-        try: s = get(it["link"], timeout=15).decode("utf-8", "ignore"); break
-        except Exception: time.sleep(2)
+    s = fetch_page(it["link"])
     if s is None: return it
     best = it.get("desc") or ""
     for k in META_KEYS:
@@ -368,6 +390,15 @@ def europepmc_abstract(doi):
     hit = (r.get("resultList") or {}).get("result") or []
     return clean(hit[0].get("abstractText") or "", ABS_MAX) if hit else ""
 
+def openalex_abstract(doi):
+    """OpenAlex rebuilds abstracts from an inverted index; indexes new papers a few days late, but is reachable from CI."""
+    try: r = json.loads(get("https://api.openalex.org/works/doi:" + urllib.parse.quote(doi), timeout=20))
+    except urllib.error.HTTPError as ex:
+        if ex.code == 404: return ""
+        raise
+    words = sorted((p, w) for w, ps in (r.get("abstract_inverted_index") or {}).items() for p in ps)
+    return clean(" ".join(w for _, w in words), ABS_MAX)
+
 def pubmed_abstract(pmid):
     root = ET.fromstring(get("https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&retmode=xml&id=" + pmid, timeout=20))
     return clean(" ".join("".join(x.itertext()) for x in root.iter("AbstractText")), ABS_MAX)
@@ -383,15 +414,21 @@ def find_abstract(it, fresh):
         m = re.search(r"pubmed\.ncbi\.nlm\.nih\.gov/(\d+)", it["link"])
         if m: return pubmed_abstract(m.group(1))
         doi = (it.get("badge") or "")[4:] if (it.get("badge") or "").startswith("DOI ") else ""
-        if doi: return europepmc_abstract(doi)
+        if doi:
+            for f in (europepmc_abstract, openalex_abstract):
+                try:
+                    ab = f(doi)
+                    if len(ab) >= 200: return ab
+                except Exception as ex:
+                    print(f"[backfill] {it['id']} {f.__name__}: {ex}", file=sys.stderr)
     except Exception as ex:
         print(f"[backfill] {it['id']}: {ex}", file=sys.stderr)
     return ""
 
 def backfill(db, results):
-    """Paper items collected before abstracts were kept: find the abstract, redo summary/score from it, translate. Each item gets up to 3 runs."""
+    """Paper items collected before abstracts were kept: find the abstract, redo summary/score from it, translate. Each item gets up to 5 runs (OpenAlex indexes new papers a few days late)."""
     fresh = {it["id"]: it for _, res, _ in results for it in res}
-    todo = [d for d in db if not d.get("abstract") and d.get("abstract_tries", 0) < 3 and (d.get("source_group") or d.get("source")) in PAPER_SOURCES]
+    todo = [d for d in db if not d.get("abstract") and d.get("abstract_tries", 0) < 5 and (d.get("source_group") or d.get("source")) in PAPER_SOURCES]
     todo = sorted(todo, key=lambda d: d.get("day", ""), reverse=True)[:BACKFILL_MAX]
     with cf.ThreadPoolExecutor(3) as ex: abstracts = list(ex.map(lambda d: find_abstract(d, fresh), todo))
     got = []
@@ -467,9 +504,37 @@ def main():
     print(f"added {len(done)}, total {len(db)}", file=sys.stderr)
 
 # ---------------------------------------------------------------- render
-def fav(link, home=""):
-    h = urllib.parse.urlparse(home or link).hostname or ""
-    return f"https://www.google.com/s2/favicons?sz=32&domain={h}"
+FAV_DIR = "data/fav"  # favicons cached at build time and served from the site itself (google.com is unreachable in mainland China)
+FAVS = set()  # hosts with a cached icon; filled by sync_favicons()
+
+def host_of(link, home=""):
+    return (urllib.parse.urlparse(home or link).hostname or "").lower()
+
+def fav_img(link, home="", base=""):
+    h = host_of(link, home)
+    return f'<img src="{base}fav/{E(h)}.png" alt="" loading="lazy" width="16" height="16" onerror="this.remove()">' if h in FAVS else ""
+
+def sync_favicons(items, workers=16):
+    """Fetch missing favicons once per host into data/fav/ (an empty file marks a host with no icon), then copy them into site/fav/."""
+    os.makedirs(FAV_DIR, exist_ok=True)
+    hosts = {host_of(i["link"], i.get("home")) for i in items if i.get("link")} - {""}
+    def one(h):
+        p = f"{FAV_DIR}/{h}.png"
+        if os.path.exists(p): return
+        try:
+            b = get(f"https://www.google.com/s2/favicons?sz=32&domain={urllib.parse.quote(h)}", timeout=8)
+            open(p, "wb").write(b)
+        except urllib.error.HTTPError as ex:
+            if ex.code == 404: open(p, "wb").close()
+        except Exception: pass  # offline / transient: try again next build
+    if os.getenv("FAV_FETCH", "1") != "0":
+        with cf.ThreadPoolExecutor(workers) as ex: list(ex.map(one, sorted(hosts)))
+    os.makedirs("site/fav", exist_ok=True)
+    FAVS.clear()
+    for h in hosts:
+        p = f"{FAV_DIR}/{h}.png"
+        if os.path.exists(p) and os.path.getsize(p):
+            shutil.copyfile(p, f"site/fav/{h}.png"); FAVS.add(h)
 
 def cite_text(i):
     ref = i.get("badge") or i["link"]
@@ -481,7 +546,7 @@ def card(i, featured=False, top=False, base=""):
     title = (i.get("zh_title") or i["title"]) if health else (i.get("name") or i["title"])
     txt = " ".join([title, i["title"], i.get("summary") or "", i["source"], " ".join(tags)]).lower()
     attrs = ('data-top="1" ' if top else '') + f'data-sec="{E(section_of(i))}" data-form="{E(form_of(i))}" data-tags="{E("|".join(tags))}" data-text="{E(txt)}"'
-    meta = (f'<div class="meta"><img src="{fav(i["link"], i.get("home"))}" alt="" loading="lazy" onerror="this.remove()"><span>{E(i["source"])}</span>'
+    meta = (f'<div class="meta">{fav_img(i["link"], i.get("home"), base)}<span>{E(i["source"])}</span>'
             f'<span>·</span><span>发布于 {zh_date(i.get("date",""))}</span>' + (f'<span>·</span><span class="mono">{E(i["pop"])}</span>' if i.get("pop") else "") +
             (f'<span class="badge" title="{E(i["badge"])}">{E(i["badge"])}</span>' if health and i.get("badge") else "") +
             f'<a class="ext" href="{E(i["link"])}" target="_blank" rel="noopener" title="打开原文">原文 ↗</a></div>')
@@ -531,14 +596,27 @@ def day_label(d):
     if d == TODAY: return f"今日收录 · {zh_date(d)}"
     return f"{zh_date(d)} 收录"
 
+ASSETS = ("app.css", "app.js")  # shared by every page, so browsers cache them once instead of re-downloading inline CSS/JS per page
+_TPL = {}
+
+def template():
+    if not _TPL:
+        _TPL["html"] = open("template.html", encoding="utf-8").read()
+        _TPL["v"] = hashlib.sha1(b"".join(open(f"assets/{a}", "rb").read() for a in ASSETS)).hexdigest()[:8]
+    return _TPL["html"], _TPL["v"]
+
+def copy_assets():
+    os.makedirs("site/assets", exist_ok=True)
+    for a in ASSETS: shutil.copyfile(f"assets/{a}", f"site/assets/{a}")
+
 def page(title, desc, url, body, depth=0, extra_head=""):
     base = "../" * depth
-    tpl = open("template.html", encoding="utf-8").read()
+    tpl, ver = template()
     head = (f'<title>{E(title)}</title><meta name="description" content="{E(desc)}"><link rel="canonical" href="{E(url)}">'
             f'<meta property="og:type" content="website"><meta property="og:title" content="{E(title)}"><meta property="og:description" content="{E(desc)}">'
             f'<meta property="og:url" content="{E(url)}"><meta property="og:site_name" content="{E(SITE["title"])}"><meta name="twitter:card" content="summary">'
             f'<link rel="alternate" type="application/rss+xml" title="{E(SITE["title"])}" href="{base}feed.xml">' + extra_head)
-    return tpl.replace("{{HEAD}}", head).replace("{{MODE}}", SITE["mode"]).replace("{{BODY}}", body).replace("{{BASE}}", base)
+    return tpl.replace("{{HEAD}}", head).replace("{{MODE}}", SITE["mode"]).replace("{{V}}", ver).replace("{{BASE}}", base).replace("{{BODY}}", body)
 
 ICONS = {  # 18px line icons, stroke = currentColor
   "hot": '<path d="M12 3c1 3.5 5 5.5 5 10a5 5 0 0 1-10 0c0-2 1-3.5 2-4.5.3 1.6 1 2.6 2 3 0-3 0-5.5 1-8.5z"/>',
@@ -598,6 +676,8 @@ def build(db=None, conf_items=None):
         i["tags"] = norm_tags(i.get("tags")); i["section"] = section_of(i); i["rank"] = rank(i)
         if i.get("thin"): i["key_points"] = []
     os.makedirs("site", exist_ok=True)
+    copy_assets()
+    sync_favicons(db + [i for d in load_archive().values() for i in d] + (conf_items or []))
     url = SITE["url"]
     feat, latest, n = featured(db)
     tools = ('<div class="tools"><input id="q" type="search" placeholder="搜索标题、摘要、来源、标签…" aria-label="搜索"><span id="tagf" class="tagf" hidden></span></div>')
@@ -647,7 +727,7 @@ def zh_paras(txt):
 def item_page(i, related, url):
     tn, tc = tier(i.get("score"))
     title = i.get("zh_title") or i.get("name") or i["title"]
-    meta = (f'<div class="meta"><img src="{fav(i["link"], i.get("home"))}" alt="" onerror="this.remove()"><span>{E(i["source"])}</span><span>·</span><span>发布于 {zh_date(i.get("date", ""))}</span>' +
+    meta = (f'<div class="meta">{fav_img(i["link"], i.get("home"), "../../")}<span>{E(i["source"])}</span><span>·</span><span>发布于 {zh_date(i.get("date", ""))}</span>' +
             (f'<span>·</span><span class="mono">{E(i["pop"])}</span>' if i.get("pop") else "") +
             (f'<span>·</span><span>收录于 <a href="../../{E(i["day"])}/">{E(i["day"])}</a></span>' if i.get("day") else "") + "</div>")
     digest = f'<p>{E(i.get("summary"))}</p>' + (f'<ul class="kp">' + "".join(f"<li>{E(k)}</li>" for k in i["key_points"][:3]) + "</ul>" if i.get("key_points") and not i.get("thin") else "")
