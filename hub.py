@@ -19,6 +19,7 @@ TAGS = getattr(C, "TAGS", []); SYN = getattr(C, "TAG_SYNONYMS", {}); WEIGHTS = g
 EV_BONUS = {"已获批": 1.5, "同行评审": 1.0, "预印本": 0.0, "新闻": 0.0}
 FRESH_BONUS, FRESH_HALF_LIFE = 2.0, 7  # rank bonus for newly published items, halves every N days
 FEATURED_MAX_AGE = 14  # 今日精选 only picks items published within N days of the day they were collected
+ABS_MAX = 2500  # stored original abstract length (shown + translated on the item page)
 E = lambda s: html.escape(str(s if s is not None else ""), quote=True)
 
 # ---------------------------------------------------------------- helpers
@@ -144,7 +145,7 @@ def f_rss(src):
     for e in f.entries[: src.get("limit", 40)]:
         pub = e.get("published_parsed") or e.get("updated_parsed")
         d = dt.datetime(*pub[:6], tzinfo=dt.timezone.utc) if pub else NOW
-        it = dict(title=clean(e.get("title"), 300), link=e.get("link", ""), desc=clean(e.get("summary", "")), date=d.isoformat())
+        it = dict(title=clean(e.get("title"), 300), link=e.get("link", ""), desc=clean(e.get("summary", ""), ABS_MAX), date=d.isoformat())
         m = re.search(r"Points: (\d+)", e.get("summary", ""))
         if m: it["pop"] = f"▲ {m.group(1)} points"
         s = e.get("source") or {}
@@ -160,7 +161,7 @@ def f_arxiv(src):
     try:
         f = feedparser.parse(get_polite(src["url"]))
         if f.entries:
-            return [dict(title=clean(e.title, 300), link=e.link.split("v")[0] if re.search(r"v\d+$", e.link) else e.link, desc=clean(e.get("summary")),
+            return [dict(title=clean(e.title, 300), link=e.link.split("v")[0] if re.search(r"v\d+$", e.link) else e.link, desc=clean(e.get("summary"), ABS_MAX),
                          date=dt.datetime(*e.published_parsed[:6], tzinfo=dt.timezone.utc).isoformat()) for e in f.entries]
     except Exception as ex:
         print(f"[warn] arXiv API: {ex}; trying OAI-PMH", file=sys.stderr)
@@ -205,7 +206,7 @@ def f_pubmed(src):
     for art in root.iter("PubmedArticle"):
         pmid = art.findtext(".//PMID")
         title = clean("".join(art.find(".//ArticleTitle").itertext()) if art.find(".//ArticleTitle") is not None else "")
-        abstract = clean(" ".join("".join(x.itertext()) for x in art.findall(".//Abstract/AbstractText")), 1200)
+        abstract = clean(" ".join("".join(x.itertext()) for x in art.findall(".//Abstract/AbstractText")), ABS_MAX)
         journal = art.findtext(".//Journal/Title", "")
         d = None
         for path in (".//ArticleDate", ".//JournalIssue/PubDate", ".//PubMedPubDate[@PubStatus='pubmed']"):
@@ -229,7 +230,7 @@ def fill_abstract(it):
     best = it.get("desc") or ""
     for k in META_KEYS:
         m = re.search(r'<meta[^>]+(?:name|property)="' + re.escape(k) + r'"[^>]+content="([^"]*)"', s, re.I)
-        txt = clean(m.group(1), 1500) if m else ""
+        txt = clean(m.group(1), ABS_MAX) if m else ""
         if len(txt) > len(best) and not txt.lower().startswith("abstract page for"): best = txt
     if len(best) > len(it.get("desc") or ""):
         it["desc"] = best; it["thin"] = len(best) < 80
@@ -293,6 +294,20 @@ def enrich(batch):
             out.append(b)
         except Exception: pass
     return out
+
+TRANSLATE = """你是严谨的医学翻译。把每条英文摘要忠实、完整地译成中文：不增删信息、不总结、不评论；保留所有数字、单位、统计量（如 AUROC、95% CI、P 值）；基因、药物、模型、数据集等专有名词首次出现时可用括号保留英文。
+若原文含 Background/Methods/Findings/Results/Interpretation/Conclusions 等小标题，用【背景】【方法】【结果】【结论】等分段标记开头。原文已是中文则原样返回。
+只输出一个 JSON 数组，每项 {"i": 序号, "zh": 译文}，不要其他文字。"""
+def translate(batch):
+    res = llm_raw([{"role": "system", "content": TRANSLATE}, {"role": "user", "content": json.dumps([dict(i=k, text=b["abstract"]) for k, b in enumerate(batch)], ensure_ascii=False)}])
+    for r in res or []:
+        try: batch[int(r["i"])]["zh_abstract"] = str(r["zh"]).strip()
+        except Exception: pass
+
+def translate_all(items, workers=4):
+    todo = [i for i in items if len(i.get("abstract") or "") >= 200 and not i.get("zh_abstract")]
+    with cf.ThreadPoolExecutor(workers) as ex: list(ex.map(translate, [todo[k:k + 4] for k in range(0, len(todo), 4)]))
+    print(f"translated {sum(1 for i in todo if i.get('zh_abstract'))}/{len(todo)} abstracts", file=sys.stderr)
 
 def enrich_all(items, workers=4):
     with cf.ThreadPoolExecutor(workers) as ex:
@@ -382,7 +397,10 @@ def main():
     done = enrich_all(pick)
     save_pool(pick, {d["id"] for d in done})
     for d in done:
-        d["day"] = TODAY; d.pop("desc", None); d.pop("evidence_hint", None); d.pop("thin_src", None); d["rank"] = rank(d)
+        ab = d.pop("desc", None) or ""
+        if not d.get("thin") and len(ab) >= 200: d["abstract"] = ab
+        d["day"] = TODAY; d.pop("evidence_hint", None); d.pop("thin_src", None); d["rank"] = rank(d)
+    translate_all(done)
     recent = [d for d in db if d.get("day", "") >= (NOW - dt.timedelta(days=3)).strftime("%Y-%m-%d")]
     done = cluster(done, recent)
     cutoff = (NOW - dt.timedelta(days=KEEP_DAYS)).strftime("%Y-%m-%d")
@@ -406,7 +424,7 @@ def cite_text(i):
     ref = i.get("badge") or i["link"]
     return f"{i['title']}. {i['source']}, {(i.get('date') or '')[:10]}. {ref.replace('DOI ', 'https://doi.org/') if ref.startswith('DOI ') else ref}"
 
-def card(i, featured=False, top=False):
+def card(i, featured=False, top=False, base=""):
     health = SITE["mode"] == "health"
     tags = i.get("tags") or []
     title = (i.get("zh_title") or i["title"]) if health else (i.get("name") or i["title"])
@@ -414,8 +432,9 @@ def card(i, featured=False, top=False):
     attrs = ('data-top="1" ' if top else '') + f'data-sec="{E(section_of(i))}" data-form="{E(form_of(i))}" data-tags="{E("|".join(tags))}" data-text="{E(txt)}"'
     meta = (f'<div class="meta"><img src="{fav(i["link"], i.get("home"))}" alt="" loading="lazy" onerror="this.remove()"><span>{E(i["source"])}</span>'
             f'<span>·</span><span>发布于 {zh_date(i.get("date",""))}</span>' + (f'<span>·</span><span class="mono">{E(i["pop"])}</span>' if i.get("pop") else "") +
-            (f'<span class="badge" title="{E(i["badge"])}">{E(i["badge"])}</span>' if health and i.get("badge") else "") + "</div>")
-    t = f'<a class="t stretch" href="{E(i["link"])}" target="_blank" rel="noopener">{E(title)}</a>'
+            (f'<span class="badge" title="{E(i["badge"])}">{E(i["badge"])}</span>' if health and i.get("badge") else "") +
+            f'<a class="ext" href="{E(i["link"])}" target="_blank" rel="noopener" title="打开原文">原文 ↗</a></div>')
+    t = f'<a class="t stretch" href="{base}items/{E(i["id"])}/">{E(title)}</a>'
     if health and title != i["title"]: t += f'<div class="orig">{E(i["title"])}</div>'
     s = f'<p class="s">{E(i.get("summary"))}</p>'
     kp = "".join(f"<li>{E(k)}</li>" for k in (i.get("key_points") or [])[:3])
@@ -506,7 +525,7 @@ def featured(db):
 def rss(path, title, link, items):
     def fmt(iso):
         return parse_date(iso).strftime("%a, %d %b %Y %H:%M:%S +0000")
-    xs = "".join(f'<item><title>{E(i.get("zh_title") or i.get("name") or i["title"])}</title><link>{E(i["link"])}</link><guid isPermaLink="false">{SITE["repo"]}#{i["id"]}</guid>'
+    xs = "".join(f'<item><title>{E(i.get("zh_title") or i.get("name") or i["title"])}</title><link>{E(SITE["url"] + "items/" + i["id"] + "/" if i.get("zh_title") else i["link"])}</link><guid isPermaLink="false">{SITE["repo"]}#{i["id"]}</guid>'
                  f'<pubDate>{fmt(i.get("date") or NOW.isoformat())}</pubDate><category>{E(i.get("section"))}</category>' + "".join(f"<category>{E(t)}</category>" for t in i.get("tags") or []) +
                  f'<description>{E((i.get("summary") or "") + " — " + i["source"])}</description></item>' for i in items[:80])
     open(path, "w").write(f'<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"><channel><title>{E(title)}</title><link>{E(link)}</link><description>{E(SITE["tagline"])}</description>'
@@ -532,6 +551,7 @@ def build(db=None, conf_items=None):
         for c in conf_items: c["sec"] = section_of(dict(tags=c.get("tg"), title=c.get("t"), zh_title=c.get("zt"), summary=c.get("s")))
         json.dump(conf_items, open("site/conf.json", "w"), ensure_ascii=False, separators=(",", ":"))
     build_papers(url, conf_items, tools)
+    build_items(url, load_archive())
     # RSS: all + per topic section + per form (papers / models / opinion keep their pre-v3 URLs)
     rss("site/feed.xml", SITE["title"], url, db)
     for k, s in enumerate(SECTIONS):
@@ -547,7 +567,7 @@ def build(db=None, conf_items=None):
         for i in items: i["tags"] = norm_tags(i.get("tags"))
         items = sorted(items, key=rank, reverse=True)
         os.makedirs(f"site/{day}", exist_ok=True)
-        b = header("../", tabs=False) + f'<main class="wrap"><section class="hero"><div><h1><span class="mono">{day}</span></h1><p>{E(SITE["tagline"])} · 当日收录 {len(items)} 条 · <a href="../archive/">全部归档</a></p></div></section><div class="feed">' + "".join(card(i) for i in items) + "</div></main>" + footer("../")
+        b = header("../", tabs=False) + f'<main class="wrap"><section class="hero"><div><h1><span class="mono">{day}</span></h1><p>{E(SITE["tagline"])} · 当日收录 {len(items)} 条 · <a href="../archive/">全部归档</a></p></div></section><div class="feed">' + "".join(card(i, base="../") for i in items) + "</div></main>" + footer("../")
         open(f"site/{day}/index.html", "w").write(page(f'{day} · {SITE["title"]}', f'{day} 收录 {len(items)} 条', url + day + "/", b, 1))
     rows = "".join(f'<li><a href="../{d}/"><span class="mono">{d}</span> · {len(arc[d])} 条</a></li>' for d in sorted(arc, reverse=True))
     os.makedirs("site/archive", exist_ok=True)
@@ -555,6 +575,54 @@ def build(db=None, conf_items=None):
     build_weekly(url)
     build_status(url)
     open("site/.nojekyll", "w").write("")
+
+def zh_paras(txt):
+    parts = [p.strip() for p in re.split(r"\n+|(?=【)", txt or "") if p.strip()]
+    return "".join(f'<p>{E(p)}</p>' if not p.startswith("【") else f'<p><b>{E(p[:p.find("】") + 1])}</b>{E(p[p.find("】") + 1:])}</p>' for p in parts)
+
+def item_page(i, related, url):
+    tn, tc = tier(i.get("score"))
+    title = i.get("zh_title") or i.get("name") or i["title"]
+    meta = (f'<div class="meta"><img src="{fav(i["link"], i.get("home"))}" alt="" onerror="this.remove()"><span>{E(i["source"])}</span><span>·</span><span>发布于 {zh_date(i.get("date", ""))}</span>'
+            f'<span>·</span><span>收录于 <a href="../../{E(i["day"])}/">{E(i["day"])}</a></span></div>')
+    digest = f'<p>{E(i.get("summary"))}</p>' + (f'<ul class="kp">' + "".join(f"<li>{E(k)}</li>" for k in i["key_points"][:3]) + "</ul>" if i.get("key_points") and not i.get("thin") else "")
+    abstract = ""
+    if i.get("zh_abstract"):
+        abstract = f'<h2>中文摘要</h2><div class="abs">{zh_paras(i["zh_abstract"])}</div>'
+        if i.get("abstract"): abstract += f'<details class="orig-abs"><summary>查看英文原文摘要</summary><p>{E(i["abstract"])}</p></details>'
+    elif i.get("abstract"):
+        abstract = f'<h2>原文摘要</h2><div class="abs"><p>{E(i["abstract"])}</p></div>'
+    else:
+        abstract = '<p class="muted note">此条目暂无原文摘要（新闻 / 仅标题条目，或收录于摘要功能上线前），请阅读原文。</p>'
+    also = ""
+    if i.get("also"):
+        also = "<h2>其他来源报道</h2><ul class=\"list\">" + "".join(f'<li><a href="{E(a["link"])}" target="_blank" rel="noopener">{E(a["source"])} ↗</a></li>' for a in i["also"]) + "</ul>"
+    side = (f'<a class="btn" href="{E(i["link"])}" target="_blank" rel="noopener">阅读原文 ↗</a>'
+            f'<div class="box scorecard {tc}"><div class="big"><b>{E(i.get("score") or "–")}</b><span>/10</span></div><div class="tn">{tn}</div>' +
+            (f'<p class="rs">{E(i["reason"])}</p>' if i.get("reason") else "") + f'<div class="ev">{E(score_tip(i))}</div></div>'
+            f'<dl class="box kv"><dt>方向</dt><dd><a href="../../#tab={urllib.parse.quote(section_of(i))}">{E(section_of(i))}</a></dd><dt>形式</dt><dd>{E(form_of(i))}</dd>'
+            f'<dt>证据</dt><dd>{E(i.get("evidence") or "—")}</dd><dt>来源</dt><dd>{E(i["source"])}</dd>' +
+            (f'<dt>标识</dt><dd class="mono">{E(i["badge"])}</dd>' if i.get("badge") else "") + "</dl>" +
+            ('<div class="chips">' + "".join(f'<span class="chip">{E(t)}</span>' for t in i.get("tags") or []) + "</div>" if i.get("tags") else "") +
+            (f'<button class="cite" data-cite="{E(cite_text(i))}">复制引用 / DOI</button>' if i.get("badge") or i.get("type") == "论文" else ""))
+    rel = ('<h2 class="relh">同方向的其他条目</h2><div class="feed">' + "".join(card(r, base="../../") for r in related) + "</div>") if related else ""
+    body = (header("../../", False) + f'<main class="wrap item"><a class="back" href="../../">← 返回首页</a><div class="igrid"><article class="imain">{meta}<h1>{E(title)}</h1>'
+            + (f'<div class="orig">{E(i["title"])}</div>' if title != i["title"] else "") +
+            f'<h2>AI 导读</h2>{digest}{abstract}{also}<p class="muted note">导读与中文摘要由 AI 生成 / 翻译，仅供参考，请以原文为准；不构成医疗建议。</p></article>'
+            f'<aside class="iside">{side}</aside></div>{rel}</main>' + footer("../../"))
+    return page(f'{title} · {SITE["title"]}', i.get("summary") or title, url + f'items/{i["id"]}/', body, 2)
+
+def build_items(url, arc):
+    """One static page per item (permanent: every archived day), with Chinese abstract and a link out to the original."""
+    n = 0
+    for day, items in arc.items():
+        for i in items:
+            i["tags"] = norm_tags(i.get("tags")); i["section"] = section_of(i)
+        for i in items:
+            related = sorted([r for r in items if r["id"] != i["id"] and r["section"] == i["section"]], key=rank, reverse=True)[:4]
+            os.makedirs(f'site/items/{i["id"]}', exist_ok=True)
+            open(f'site/items/{i["id"]}/index.html', "w").write(item_page(i, related, url)); n += 1
+    print(f"item pages {n}", file=sys.stderr)
 
 def build_papers(url, conf_items, tools):
     """顶会论文库: its own page (not a daily feed), filtered by the same topic tabs; data loaded from conf.json on demand."""

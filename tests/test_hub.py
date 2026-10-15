@@ -71,6 +71,16 @@ def test_sections_and_forms():
     assert {f(type=t, source_group=g) for t in ("论文", "模型", "监管", "融资", "观点") for g in ("arXiv", "GitHub", "STAT News")} <= set(hub.C.FORMS)
     assert len(hub.C.SECTION_SLUGS) == len(hub.SECTIONS)
 
+def test_item_page():
+    it = dict(score=8, source="NEJM AI", evidence="同行评审", day="2026-10-14", date="2026-10-14T00:00:00Z", id="abc123", title="Orig title", link="https://x.org/a",
+              zh_title="中文标题", summary="导读", key_points=["要点一"], reason="外部验证", tags=["医学影像"], type="论文", source_group="NEJM AI",
+              abstract="Background: x. " * 20, zh_abstract="【背景】背景内容。【结果】结果内容。")
+    assert 'href="items/abc123/"' in hub.card(it) and 'href="../items/abc123/"' in hub.card(it, base="../") and "原文 ↗" in hub.card(it)
+    h = hub.item_page(it, [], "https://example.org/")
+    assert "中文摘要" in h and "<b>【结果】</b>" in h and "阅读原文" in h and "查看英文原文摘要" in h and "https://x.org/a" in h
+    h2 = hub.item_page(dict(it, zh_abstract=None, abstract=None), [], "https://example.org/")
+    assert "暂无原文摘要" in h2
+
 if __name__ == "__main__":
     for k, f in list(globals().items()):
         if k.startswith("test_"): f(); print("ok", k)
