@@ -100,7 +100,7 @@ def report(rows, preds, threshold, mode):
         if p is None: continue
         g, (k, s) = LEVEL[r["label"].strip()], p
         pairs.append((g, k, s))
-        if (g == 2 and (not k or (s or 0) < threshold - 1)) or (g == 0 and k and (s or 0) >= threshold - 1) or (g == 1 and not k):
+        if (g == 2 and (not k or (s or 0) < threshold - 1)) or (g == 0 and k and (s or 0) >= threshold - 1) or (g == 1 and (not k or (s or 0) >= threshold)):
             bad.append((g, k, s, r))
     m = metrics(pairs, threshold)
     f = lambda x: "—" if x is None else f"{x:.2f}"
