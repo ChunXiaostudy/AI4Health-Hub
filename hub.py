@@ -17,6 +17,8 @@ KEEP_DAYS = 30
 MAX_NEW = int(os.getenv("MAX_NEW", "60"))
 TAGS = getattr(C, "TAGS", []); SYN = getattr(C, "TAG_SYNONYMS", {}); WEIGHTS = getattr(C, "SOURCE_WEIGHTS", {})
 EV_BONUS = {"已获批": 1.5, "同行评审": 1.0, "预印本": 0.0, "新闻": 0.0}
+FRESH_BONUS, FRESH_HALF_LIFE = 2.0, 7  # rank bonus for newly published items, halves every N days
+FEATURED_MAX_AGE = 14  # 今日精选 only picks items published within N days of the day they were collected
 E = lambda s: html.escape(str(s if s is not None else ""), quote=True)
 
 # ---------------------------------------------------------------- helpers
@@ -72,9 +74,21 @@ def signal(it):
     m = re.search(r"([\d,]+)", it.get("pop") or "")
     return int(m.group(1).replace(",", "")) if m else 0
 
+def age_days(it):
+    """Days between publication and the day the item was collected (stable over time, so archive pages don't reshuffle)."""
+    try: day = dt.date.fromisoformat(it.get("day") or TODAY)
+    except ValueError: day = NOW.astimezone(CST).date()
+    return max(0, (day - parse_date(it.get("date") or "").astimezone(CST).date()).days)
+
 def rank(it):
     w = WEIGHTS.get(it.get("source"), WEIGHTS.get(it.get("source_group"), 1.0))
-    return round((it.get("score") or 5) + w + EV_BONUS.get(it.get("evidence"), 0) + min(2.0, 0.6 * math.log10(signal(it) + 1)), 2)
+    fresh = FRESH_BONUS * 0.5 ** (age_days(it) / FRESH_HALF_LIFE)
+    return round((it.get("score") or 5) + w + EV_BONUS.get(it.get("evidence"), 0) + min(2.0, 0.6 * math.log10(signal(it) + 1)) + fresh, 2)
+
+def top_picks(items, n=5):
+    """Highest-ranked recent items; older backfill only fills the gap when there aren't enough recent ones."""
+    ranked = sorted(items, key=rank, reverse=True)
+    return ([i for i in ranked if age_days(i) <= FEATURED_MAX_AGE] + [i for i in ranked if age_days(i) > FEATURED_MAX_AGE])[:n]
 
 def zh_date(iso):
     try: d = dt.datetime.fromisoformat(iso.replace("Z", "+00:00"))
@@ -399,13 +413,13 @@ def feed_list(db, conf_items):
     h = ""
     for d in days:
         g = sorted([i for i in db if i["day"] == d], key=rank, reverse=True)
-        topids = {i["id"] for i in sorted([i for i in db if i["day"] == days[0]], key=rank, reverse=True)[:5]}
+        topids = {i["id"] for i in top_picks([i for i in db if i["day"] == days[0]])}
         h += f'<section class="dayg" data-day="{d}"><div class="day">{E(day_label(d))} · <span class="n">{len(g)}</span> 条</div><div class="feed">' + "".join(card(i, top=i["id"] in topids) for i in g) + "</div></section>"
     return h
 
 def featured(db):
     latest = max((d["day"] for d in db), default=TODAY)
-    top = sorted([i for i in db if i["day"] == latest], key=rank, reverse=True)[:5]
+    top = top_picks([i for i in db if i["day"] == latest])
     if not top: return "", latest, 0
     if SITE["mode"] == "health":
         h = card(top[0], True) + '<div class="mini">' + "".join(card(i) for i in top[1:]) + "</div>"

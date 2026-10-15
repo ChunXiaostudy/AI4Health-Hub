@@ -22,6 +22,15 @@ def test_norm_tags():
         t = hub.TAGS[0]
         assert hub.norm_tags([t, t, "不存在的标签"]) == [t]
 
+def test_freshness():
+    base = dict(score=8, source="NEJM AI", evidence="同行评审", day="2026-10-14")
+    fresh, old = dict(base, id="a", date="2026-10-13T00:00:00Z"), dict(base, id="b", date="2026-08-25T00:00:00Z")
+    assert hub.age_days(fresh) == 1 and hub.age_days(old) == 50
+    assert hub.rank(fresh) > hub.rank(old)
+    weak_fresh = dict(base, id="c", score=4, source="medRxiv", evidence="预印本", date="2026-10-14T00:00:00Z")
+    assert [i["id"] for i in hub.top_picks([old, weak_fresh], n=1)] == ["c"]
+    assert [i["id"] for i in hub.top_picks([old], n=5)] == ["b"]
+
 if __name__ == "__main__":
     for k, f in list(globals().items()):
         if k.startswith("test_"): f(); print("ok", k)
