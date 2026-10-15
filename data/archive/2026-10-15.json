@@ -18,7 +18,7 @@
 "doi:10.1038/s41746-026-03281-2",
 "主题为胃肠内镜影像联邦基础模型"
 ],
-"section": "模型与开源",
+"section": "影像与病理",
 "type": "模型",
 "tags": [
 "医学影像",
@@ -49,7 +49,7 @@
 "汇集不同场景的实践经验",
 "讨论部署中的挑战与经验教训"
 ],
-"section": "观点与综述",
+"section": "落地与监管",
 "type": "观点",
 "tags": [
 "临床落地"
@@ -78,7 +78,7 @@
 "主题为从研究到临床实践的转化",
 "发表于npj Digital Medicine"
 ],
-"section": "临床落地与监管",
+"section": "落地与监管",
 "type": "监管",
 "tags": [
 "医学影像",
@@ -109,7 +109,7 @@
 "采用序列模型建模诊断累积过程",
 "识别共病负担之外的诊断路径"
 ],
-"section": "研究论文",
+"section": "大模型与智能体",
 "type": "论文",
 "tags": [
 "电子病历",
@@ -139,7 +139,7 @@
 "战略监督、基础设施与评估发展不足",
 "框架主张院校、教师与学生共同担责"
 ],
-"section": "观点与综述",
+"section": "落地与监管",
 "type": "观点",
 "tags": [
 "监管政策"
@@ -164,7 +164,7 @@
 "zh_title": "CorVista系统及肺毛细血管楔压附加功能获FDA许可",
 "summary": "CorVista系统连同肺毛细血管楔压附加功能获得FDA许可。",
 "key_points": [],
-"section": "临床落地与监管",
+"section": "落地与监管",
 "type": "监管",
 "tags": [
 "医疗器械",
@@ -190,7 +190,7 @@
 "zh_title": "ThinkSono 超声 AI 血栓检测软件获 FDA 许可",
 "summary": "ThinkSono 的超声 AI 软件获得 FDA 许可，用于血栓（血凝块）检测。",
 "key_points": [],
-"section": "临床落地与监管",
+"section": "落地与监管",
 "type": "监管",
 "tags": [
 "医疗器械",
@@ -221,7 +221,7 @@
 "以同细胞其他基因作为上下文学习",
 "整合基因功能先验与细胞形态；预印本未经同行评审"
 ],
-"section": "研究论文",
+"section": "生命科学与药物",
 "type": "论文",
 "tags": [
 "基因组学",
@@ -247,7 +247,7 @@
 "zh_title": "没有机器就没有精通——临床AI时代的医学教育",
 "summary": "NEJM AI预发表观点文章，讨论临床AI时代的医学教育，题为《没有机器就没有精通》。",
 "key_points": [],
-"section": "观点与综述",
+"section": "落地与监管",
 "type": "观点",
 "tags": [
 "临床落地"
@@ -272,7 +272,7 @@
 "zh_title": "人工智能与自动化在静脉输液系统中的现状与展望",
 "summary": "npj Digital Medicine刊文评述人工智能与自动化在静脉输液系统中的应用现状与未来展望。",
 "key_points": [],
-"section": "观点与综述",
+"section": "落地与监管",
 "type": "观点",
 "tags": [
 "临床落地",
@@ -302,7 +302,7 @@
 "干预为心理健康成长型思维",
 "结局为启动App自助的可能性"
 ],
-"section": "研究论文",
+"section": "数字健康",
 "type": "论文",
 "tags": [
 "心理健康",
@@ -332,7 +332,7 @@
 "此前9月宣布1000万美元A轮",
 "用于扩展端到端医疗运营AI平台"
 ],
-"section": "产业与融资",
+"section": "产业动态",
 "type": "融资",
 "tags": [
 "融资与并购",
@@ -362,7 +362,7 @@
 "无监督分析发现预后差异显著的稳定潜在亚组",
 "亚组与受体状态、免疫浸润无关，与增殖活性一致"
 ],
-"section": "研究论文",
+"section": "临床预测与决策",
 "type": "论文",
 "tags": [
 "多模态",
@@ -393,7 +393,7 @@
 "用强化学习按细胞本体距离与元程序一致性打分",
 "目标包括识别未见的新细胞类型"
 ],
-"section": "研究论文",
+"section": "大模型与智能体",
 "type": "论文",
 "tags": [
 "医学大模型",
@@ -423,7 +423,7 @@
 "整合 104,819 张影像（2012–2025）",
 "覆盖 10 个表型中心、6,306 个敲除"
 ],
-"section": "模型与开源",
+"section": "影像与病理",
 "type": "模型",
 "tags": [
 "数据集",
@@ -453,7 +453,7 @@
 "未见蛋白配对性能随蛋白新颖性下降",
 "在50%至20% MMseqs2聚类阈值下重生成R3变体"
 ],
-"section": "研究论文",
+"section": "生命科学与药物",
 "type": "论文",
 "tags": [
 "蛋白质",
@@ -484,7 +484,7 @@
 "皮肤-电极阻抗约300 Ω，250%应变下阻抗不敏感",
 "具疏水保护与快速自愈，抗振动与汗液干扰"
 ],
-"section": "研究论文",
+"section": "临床预测与决策",
 "type": "论文",
 "tags": [
 "生理信号",
@@ -516,7 +516,7 @@
 "论文题为Experience Makes Skillful",
 "面向可泛化医学智能体推理"
 ],
-"section": "模型与开源",
+"section": "大模型与智能体",
 "type": "模型",
 "tags": [
 "智能体",
@@ -552,7 +552,7 @@
 "行业贸易组织亦在幕后运作",
 "焦点为各州医疗AI监管方式"
 ],
-"section": "临床落地与监管",
+"section": "落地与监管",
 "type": "监管",
 "tags": [
 "监管政策"
@@ -583,7 +583,7 @@
 "支持Open3D、SimpleITK、PyVista",
 "提供面向AI智能体的MCP服务器"
 ],
-"section": "模型与开源",
+"section": "影像与病理",
 "type": "模型",
 "tags": [
 "医学影像",
@@ -610,7 +610,7 @@
 "zh_title": "eyonis将于CHEST 2026公布LCS研究结果",
 "summary": "Median Technologies旗下eyonis公司将在CHEST 2026公布支持eyonis® LCS性能主张的研究结果。",
 "key_points": [],
-"section": "临床落地与监管",
+"section": "影像与病理",
 "type": "模型",
 "tags": [
 "医学影像",
@@ -620,7 +620,13 @@
 "evidence": "新闻",
 "score": 5,
 "day": "2026-10-15",
-"rank": 7.5
+"rank": 7.5,
+"also": [
+{
+"source": "BioSpace",
+"link": "https://news.google.com/rss/articles/CBMi8gFBVV95cUxPS0NseTBrSzRaRWZLNG1IQlY2VDZmVlZEV3ViN1ZOV3BEeU1KRVJPTGcxVUJPNmptNk5iY2dZTE1SWVdSRnFvQ0ZRcWhwVUsxVGlrX1J3cWNQRzJISlM5UTc1d1A1c0o4Z1I5V0ZHRUluT1dDRjY5N2JFNENtNTY1OGNBME40V0VKTFJ3U3BfUEVXcEdyVDZ4RnVEOXFkWnQ5aFZTaWMtOUU4Z09ubm9mRGQyVFRlbkRmYnJzMWlPSjY3Rl9kcXd0UlcwTkE3QkJpbE9tUnJ3Ym8yaW1YME00c1J6OWVqRmFvYkhYU3pJaDJpdw?oc=5"
+}
+]
 },
 {
 "title": "STAT+: The startup chasing ‘general biological intelligence’",
@@ -641,7 +647,7 @@
 "CEO为Eric Nguyen",
 "方向为通用生物智能"
 ],
-"section": "产业与融资",
+"section": "产业动态",
 "type": "融资",
 "tags": [
 "融资与并购"
@@ -670,7 +676,7 @@
 "用于企业监督平台开发",
 "聚焦 AI 监管合规"
 ],
-"section": "产业与融资",
+"section": "产业动态",
 "type": "融资",
 "tags": [
 "监管政策",
@@ -700,7 +706,7 @@
 "传统NMR需13C/15N标记，成本高耗时长",
 "方法面向100个氨基酸以上的无标记蛋白"
 ],
-"section": "研究论文",
+"section": "生命科学与药物",
 "type": "论文",
 "tags": [
 "蛋白质"
@@ -725,7 +731,7 @@
 "zh_title": "FDA澄清医疗AI规则，某股票或处于有利一侧",
 "summary": "报道称FDA澄清了其医疗AI相关规则，并称某只股票可能处于这些规则的有利一侧。",
 "key_points": [],
-"section": "临床落地与监管",
+"section": "落地与监管",
 "type": "监管",
 "tags": [
 "医疗器械",
@@ -751,7 +757,7 @@
 "zh_title": "质量团队已用AI起草合规文档",
 "summary": "文章标题指出，质量团队已在用AI起草合规文档。",
 "key_points": [],
-"section": "临床落地与监管",
+"section": "落地与监管",
 "type": "观点",
 "tags": [
 "监管政策",
@@ -777,7 +783,7 @@
 "zh_title": "AdvaMed医疗科技大会：AI监管与真实世界证据入议程",
 "summary": "AdvaMed医疗科技大会监管议程涵盖QMSR早期经验、AI监督与真实世界证据等议题。",
 "key_points": [],
-"section": "临床落地与监管",
+"section": "落地与监管",
 "type": "监管",
 "tags": [
 "监管政策",
@@ -803,7 +809,7 @@
 "zh_title": "当AI超越医生：新框架衡量心脏病学中的人类监督差距",
 "summary": "报道称有新框架用于衡量心脏病学领域中AI与医生之间的人类监督差距。",
 "key_points": [],
-"section": "观点与综述",
+"section": "临床预测与决策",
 "type": "观点",
 "tags": [
 "临床决策支持",
@@ -829,7 +835,7 @@
 "zh_title": "2026融资追踪：Ours Privacy、Arintra与Happy Health",
 "summary": "融资追踪报道Ours Privacy、Arintra与Happy Health三家公司的融资动态。",
 "key_points": [],
-"section": "产业与融资",
+"section": "产业动态",
 "type": "融资",
 "tags": [
 "数字健康",
@@ -840,6 +846,37 @@
 "reason": "标题仅列公司名，信息量低且非AI专指，属增量档上限",
 "day": "2026-10-15",
 "rank": 6.0
+},
+{
+"title": "Patient Needs and Requirements for a Decision Aid Navigator System (DEAN) Patient Portal: A Qualitative Study",
+"link": "https://www.medrxiv.org/content/10.64898/2026.10.12.26365343v1?rss=1",
+"date": "2026-10-13T00:00:00+00:00",
+"source": "medRxiv",
+"source_group": "medRxiv",
+"home": "",
+"thin": false,
+"badge": "DOI 10.64898/2026.10.12.26365343v1",
+"pop": null,
+"id": "e7a9e9030741",
+"keep": true,
+"zh_title": "患者对决策辅助导航系统门户的需求：定性研究",
+"summary": "通过两家学术医学中心六组焦点小组，探讨患者对决策辅助工具及EHR集成导航系统（DEANS）的认知障碍与使用需求。",
+"key_points": [
+"六组焦点小组，来自两家学术医学中心",
+"焦点小组先介绍何为患者决策辅助工具",
+"探讨经EHR集成导航系统获取决策辅助的障碍与需求"
+],
+"section": "临床预测与决策",
+"type": "论文",
+"tags": [
+"临床决策支持",
+"数字健康"
+],
+"evidence": "预印本",
+"score": 3,
+"reason": "小样本定性研究，无算法模型与结局指标，属增量档",
+"day": "2026-10-15",
+"rank": 5.64
 },
 {
 "title": "faizaltkl/medical-gemma-300m-emb",
@@ -860,7 +897,7 @@
 "采用MultipleNegativesRankingLoss训练",
 "用于句子相似度与特征提取任务"
 ],
-"section": "模型与开源",
+"section": "大模型与智能体",
 "type": "模型",
 "tags": [
 "医学大模型",
@@ -870,5 +907,63 @@
 "score": 3,
 "day": "2026-10-15",
 "rank": 5.51
+},
+{
+"title": "Fierce Healthcare Fundraising Tracker '26: Allswell nabs $7M to expand LGBTQ therapy; Outro clinches $7M for deprescribing",
+"link": "https://www.fiercehealthcare.com/health-tech/fierce-healthcare-fundraising-tracker-26",
+"date": "2026-10-15T06:57:11.806720+00:00",
+"source": "Fierce Healthcare",
+"source_group": "Fierce Healthcare",
+"home": "",
+"thin": false,
+"badge": "",
+"pop": null,
+"id": "94e71ae2762b",
+"keep": true,
+"zh_title": "健康科技融资追踪：Allswell与Outro各获700万美元",
+"summary": "数字健康风投追踪：Allswell获700万美元扩展LGBTQ心理治疗，Outro获700万美元用于减药服务。",
+"key_points": [
+"Allswell融资700万美元拓展LGBTQ心理治疗",
+"Outro融资700万美元用于减药（deprescribing）服务",
+"属健康科技与数字健康风投汇总报道"
+],
+"section": "产业动态",
+"type": "融资",
+"tags": [
+"融资与并购",
+"心理健康"
+],
+"evidence": "新闻",
+"score": 2,
+"reason": "小额融资且为泛化追踪清单，信息量低，属边缘档",
+"day": "2026-10-15",
+"rank": 5.0
+},
+{
+"title": "A burn-wound tool was showcased at the world's largest emergency medicine conference.",
+"link": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxNQzlZbFZySlE3UmJMMUxqanZXZm50Qm5vZ0d4OG1GYnp4Sm9kQ1htNjhfQTNKZmRUX0hmU1hrY2FoSEhyaUV2UjNOdHFualAzUm94SXVVMU91X3YwejltdkNpTXNfV2c4aFJoX2gzRDFnNXB5d3A1LTRqSk9uS0pKdVVwdF9wWUtBQ2ZrRldOYjd1aWlFNWJWODV5ZU5KeHNTRWZwalZKNWJBQnlwMU8teERyTTBiSGttMjNN?oc=5",
+"date": "2026-10-13T12:30:00+00:00",
+"source": "Stock Titan",
+"source_group": "Google News · FDA AI",
+"home": "https://www.stocktitan.net",
+"thin": true,
+"badge": "",
+"pop": null,
+"id": "ee5d1fe5d1db",
+"keep": true,
+"zh_title": "烧伤创面工具在全球最大急诊医学会议展示",
+"summary": "仅有标题：一款烧伤创面工具在全球最大急诊医学会议上进行了展示。",
+"key_points": [],
+"section": "影像与病理",
+"type": "观点",
+"tags": [
+"医疗器械",
+"临床落地"
+],
+"evidence": "新闻",
+"score": 2,
+"reason": "仅标题、无正文与性能信息，属边缘档",
+"day": "2026-10-15",
+"rank": 4.14
 }
 ]
