@@ -29,7 +29,7 @@
 "score": 7,
 "day": "2026-10-15",
 "rank": 12.31,
-"abstract_tries": 2
+"abstract_tries": 3
 },
 {
 "title": "From research to clinical practice: Expert consensus on Neuroimaging AI tools for the Memory clinic (Neuro-AIM)",
@@ -61,7 +61,7 @@
 "score": 6,
 "day": "2026-10-15",
 "rank": 11.31,
-"abstract_tries": 2
+"abstract_tries": 3
 },
 {
 "title": "CorVista System With Pulmonary Capillary Wedge Pressure Add-On Earns FDA Clearance",
@@ -173,7 +173,7 @@
 "score": 4,
 "day": "2026-10-15",
 "rank": 9.64,
-"abstract_tries": 2
+"abstract_tries": 3
 },
 {
 "title": "Characterizing time-of-day physical activity patterns across cognitive trajectories in older adults: a longitudinal cohort study",
@@ -330,7 +330,7 @@
 "score": 4,
 "day": "2026-10-15",
 "rank": 9.31,
-"abstract_tries": 2
+"abstract_tries": 3
 },
 {
 "title": "A “growth mindset of mental health” intervention increases the likelihood of initiating self-help on a mental health app: a randomized controlled trial",
@@ -361,7 +361,7 @@
 "score": 4,
 "day": "2026-10-15",
 "rank": 9.14,
-"abstract_tries": 2
+"abstract_tries": 3
 },
 {
 "title": "Confido Health nabs $12.5M to scale agentic AI across PE-backed medical groups",
@@ -1174,6 +1174,33 @@
 "score": 3,
 "day": "2026-10-15",
 "rank": 5.51
+},
+{
+"title": "World's First AI System That Prescribes Medications Directly Without Doctor Oversight: Is It a Revolutionary Breakthrough or a Hidden Risk?",
+"link": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE5JTDRpZHNjWElLMmhvRFBjMkJ6Z3BKVEd6N05QbTlIZVd5bkhqZTd2cnZjWlYtRFBFSlUwQmxFNmxmOGx5cm9JX0RCWlJaWFV6SFVz?oc=5",
+"date": "2026-10-15T09:32:20+00:00",
+"source": "36 Kr",
+"source_group": "Google News · FDA AI",
+"home": "https://eu.36kr.com",
+"thin": true,
+"badge": "",
+"pop": null,
+"id": "d3c5b0569b10",
+"keep": true,
+"zh_title": "全球首个无需医生监督直接处方开药的AI系统",
+"summary": "有报道称出现全球首个无需医生监督即可直接处方开药的 AI 系统，其究竟是突破还是潜在风险引发讨论。",
+"key_points": [],
+"section": "落地与监管",
+"type": "观点",
+"tags": [
+"监管政策",
+"公平与安全"
+],
+"evidence": "新闻",
+"score": 3,
+"reason": "仅标题无正文，涉 AI 处方与监管议题但信息量近零，属增量档",
+"day": "2026-10-15",
+"rank": 5.5
 },
 {
 "title": "Fierce Healthcare Fundraising Tracker '26: Allswell nabs $7M to expand LGBTQ therapy; Outro clinches $7M for deprescribing",

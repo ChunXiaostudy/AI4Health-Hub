@@ -87,7 +87,7 @@
 "score": 7,
 "day": "2026-10-14",
 "source_group": "Nature Medicine",
-"abstract_tries": 2
+"abstract_tries": 3
 },
 {
 "title": "Model-dependent prompt effects challenge reliable deployment of medical LLMs in traditional Chinese medicine",
@@ -115,7 +115,7 @@
 "score": 7,
 "day": "2026-10-14",
 "source_group": "npj Digital Medicine",
-"abstract_tries": 2
+"abstract_tries": 3
 },
 {
 "title": "AEGIS: an operational infrastructure for post-market governance of adaptive medical AI under US and EU regulatory frameworks",
@@ -142,7 +142,7 @@
 "score": 7,
 "day": "2026-10-14",
 "source_group": "npj Digital Medicine",
-"abstract_tries": 2
+"abstract_tries": 3
 },
 {
 "title": "Building Clinical AI Is Hard. Getting It in Use Is Harder: Lessons Learned from 50+ Algorithms, 2000 Hospitals, and 11 Million Patients",
@@ -169,7 +169,7 @@
 "score": 8,
 "day": "2026-10-14",
 "source_group": "NEJM AI",
-"abstract_tries": 2
+"abstract_tries": 3
 },
 {
 "title": "Closing the Automation Gap in HPV-Based Cervical Cancer Screening: Independent External Validation of an AI Model for Dual-Stain Triage",
@@ -196,7 +196,7 @@
 "score": 8,
 "day": "2026-10-14",
 "source_group": "NEJM AI",
-"abstract_tries": 2
+"abstract_tries": 3
 },
 {
 "title": "From Technical Performance to Clinical Readiness: A Phase-Based Framework for Evidence Standards in Clinical Artificial Intelligence",
@@ -223,7 +223,7 @@
 "score": 8,
 "day": "2026-10-14",
 "source_group": "NEJM AI",
-"abstract_tries": 2
+"abstract_tries": 3
 },
 {
 "title": "AI-based hourly prediction of emergency department demand integrating social determinants of health",
@@ -251,7 +251,7 @@
 "score": 7,
 "day": "2026-10-14",
 "source_group": "npj Digital Medicine",
-"abstract_tries": 2
+"abstract_tries": 3
 },
 {
 "title": "[Articles] Effect of a computer-aided quality feedback system on colonoscopists’ adenoma detection rate in Denmark: a multicentre, stepped-wedge, cluster-randomised, controlled trial",
@@ -378,7 +378,7 @@
 "score": 6,
 "day": "2026-10-14",
 "rank": 9.5,
-"abstract_tries": 2
+"abstract_tries": 3
 },
 {
 "title": "Development of a scoring system via an interpretable end-to-end neural network for prognostic stratification of patients with advanced melanoma",
@@ -406,7 +406,7 @@
 "score": 6,
 "day": "2026-10-14",
 "source_group": "npj Digital Medicine",
-"abstract_tries": 2
+"abstract_tries": 3
 },
 {
 "title": "Multidimensional continuous glucose monitoring metrics enable digital risk stratification across the diabetes spectrum",
@@ -434,7 +434,7 @@
 "score": 6,
 "day": "2026-10-14",
 "source_group": "npj Digital Medicine",
-"abstract_tries": 2
+"abstract_tries": 3
 },
 {
 "title": "Realizing the value of the divergence event in clinical human-AI interaction",
@@ -461,7 +461,7 @@
 "score": 6,
 "day": "2026-10-14",
 "source_group": "npj Digital Medicine",
-"abstract_tries": 2
+"abstract_tries": 3
 },
 {
 "title": "AI-assisted scoping review of code sharing in clinical prediction model research",
@@ -488,7 +488,7 @@
 "score": 6,
 "day": "2026-10-14",
 "source_group": "Nature Medicine",
-"abstract_tries": 2
+"abstract_tries": 3
 },
 {
 "title": "[Articles] Multimodal artificial intelligence-based long-term mortality prediction after transcatheter aortic valve implantation: a multicentre development, validation, and testing study",
@@ -645,7 +645,7 @@
 "score": 5,
 "day": "2026-10-14",
 "source_group": "npj Digital Medicine",
-"abstract_tries": 2
+"abstract_tries": 3
 },
 {
 "title": "Moving AI Development and Health Care Adoption at the Speed of Trust",
@@ -672,7 +672,7 @@
 "score": 6,
 "day": "2026-10-14",
 "source_group": "NEJM AI",
-"abstract_tries": 2
+"abstract_tries": 3
 },
 {
 "title": "Win, Place, or Show? Why Specialist AI May Still Win the Deployment Race in Radiology",
@@ -699,7 +699,7 @@
 "score": 6,
 "day": "2026-10-14",
 "source_group": "NEJM AI",
-"abstract_tries": 2
+"abstract_tries": 3
 },
 {
 "title": "[Articles] Performance and label efficiency of traditional deep-learning models and a retina-specific foundation model for ocular and systemic disease detection: a retrospective comparative study",
@@ -761,7 +761,7 @@
 "score": 6,
 "day": "2026-10-14",
 "rank": 10.0,
-"abstract_tries": 2
+"abstract_tries": 3
 },
 {
 "title": "Subversion of clinical judgment by conversational artificial intelligence",
@@ -789,7 +789,7 @@
 "score": 8,
 "day": "2026-10-14",
 "source_group": "medRxiv",
-"abstract_tries": 2
+"abstract_tries": 3
 },
 {
 "title": "Label-free, low-cost AI ranking for systematic review screening",
@@ -1009,7 +1009,7 @@
 "score": 5,
 "day": "2026-10-14",
 "rank": 9.0,
-"abstract_tries": 1
+"abstract_tries": 2
 },
 {
 "title": "[Articles] Status, challenges, and future directions of machine learning in the management of epilepsy: a systematic review and meta-analysis",
@@ -1190,7 +1190,7 @@
 "score": 6,
 "day": "2026-10-14",
 "source_group": "bioRxiv",
-"abstract_tries": 1
+"abstract_tries": 2
 },
 {
 "title": "Effects of Dish Name, Visible Amount, Persona, and Explicit Instruction on Energy Estimates From Food Photographs by 26 Vision-Language Models: Comparative Evaluation Study",
@@ -1314,7 +1314,7 @@
 "score": 6,
 "day": "2026-10-14",
 "source_group": "bioRxiv",
-"abstract_tries": 1
+"abstract_tries": 2
 },
 {
 "title": "Representing biological concepts as directions in foundation model embeddings",
@@ -1343,7 +1343,7 @@
 "score": 6,
 "day": "2026-10-14",
 "source_group": "bioRxiv",
-"abstract_tries": 1
+"abstract_tries": 2
 },
 {
 "title": "Decision models can offload structured clinical tasks from large language models",
@@ -1714,7 +1714,7 @@
 "score": 4,
 "day": "2026-10-14",
 "source_group": "NEJM AI",
-"abstract_tries": 1
+"abstract_tries": 2
 },
 {
 "title": "AI Adoption in Clinical Trials Hindered by Validation, Governance Gaps - The Clinical Trial Vanguard",
@@ -2327,7 +2327,7 @@
 "score": 2,
 "day": "2026-10-14",
 "rank": 5.5,
-"abstract_tries": 1
+"abstract_tries": 2
 },
 {
 "title": "From examinations to consultations: a physician-reviewed Japanese benchmark for large language models in traditional Kampo medicine",
@@ -2408,22 +2408,26 @@
 "id": "75d69cd4f824",
 "keep": true,
 "zh_title": "GATTACA：图神经网络强化学习控制生物网络",
-"summary": "研究提出GATTACA框架，用深度强化学习控制布尔网络模型，针对细胞重编程中的异步更新控制问题并强调可扩展性。",
+"summary": "研究用深度强化学习控制基因调控与信号通路等布尔网络模型，提出可扩展框架 GATTACA，服务细胞重编程等应用。",
 "key_points": [
-"将细胞重编程建模为布尔网络异步更新控制问题",
-"采用深度强化学习求解并引入伪吸引子概念",
-"框架名为GATTACA，以可扩展性为设计目标"
+"以布尔网络建模基因调控与信号通路",
+"提出可扩展控制框架 GATTACA",
+"引入伪吸引子概念并改进求解流程"
 ],
 "section": "生命科学与药物",
 "type": "论文",
 "tags": [
-"基因组学",
-"智能体"
+"智能体",
+"基因组学"
 ],
 "evidence": "预印本",
 "score": 5,
 "day": "2026-10-14",
-"rank": 6.0
+"rank": 6.0,
+"abstract_tries": 1,
+"abstract": "Cellular reprogramming, the artificial transformation of one cell type into another, has been attracting increasing research attention due to its therapeutic potential for complex diseases. However, identifying effective reprogramming strategies through classical wet-lab experiments is hindered by lengthy time commitments and high costs. In this study, we explore the use of deep reinforcement learning (DRL) to control Boolean network models of complex biological systems, such as gene regulatory and signalling pathway networks. We formulate a novel control problem for Boolean network models under the asynchronous update mode, specifically in the context of cellular reprogramming. To solve it, we devise GATTACA, a scalable computational framework. To facilitate scalability of our framework, we consider previously introduced concept of a pseudo-attractor and improve the procedure for effective identification of pseudo-attractor states. We then incorporate graph neural networks with graph convolution operations into the artificial neural network approximator of the DRL agent's action-value function. This allows us to leverage the available knowledge on the structure of a biological system and to indirectly, yet effectively, encode the system's modelled dynamics into a latent representation. Experiments on several large-scale, real-world biological networks from the literature demonstrate the scalability and effectiveness of our approach.",
+"reason": "预印本新方法，提出可扩展框架但无外部验证，属值得一看档",
+"zh_abstract": "细胞重编程，即人工将一种细胞类型转化为另一种细胞类型，因其对复杂疾病的治疗潜力而受到越来越多的研究关注。然而，通过经典湿实验识别有效的重编程策略受到耗时长和成本高的阻碍。在本研究中，我们探索使用深度强化学习（DRL）来控制复杂生物系统的布尔网络模型，例如基因调控和信号通路网络。我们针对异步更新模式下的布尔网络模型，特别是在细胞重编程背景下，构建了一个新的控制问题。为解决该问题，我们设计了GATTACA，一个可扩展的计算框架。为促进我们框架的可扩展性，我们考虑先前引入的伪吸引子（pseudo-attractor）概念，并改进有效识别伪吸引子状态的过程。随后，我们将带有图卷积运算的图神经网络纳入DRL智能体动作价值函数的人工神经网络近似器中。这使我们能够利用关于生物系统结构的已有知识，并间接而有效地将系统的建模动态编码为潜在表示。对文献中若干大规模、真实世界生物网络的实验证明了我们方法的可扩展性和有效性。"
 },
 {
 "title": "AI-Enabled Medical Devices Require an Integrated FDA and IP Strategy - JD Supra",
@@ -2614,33 +2618,6 @@
 "thin": false,
 "reason": "回顾性研究仅内部时间队列验证，无外部验证，值得一看",
 "zh_abstract": "【目的】开发并评估一个动态模型，该模型在免疫检查点抑制剂（ICI）治疗期间反复估计首次[≥]2级免疫相关不良事件（irAE）的30天风险。\n【材料与方法】2015-2022年期间开始ICI治疗的成人组成开发队列；2023年开始治疗者组成非重叠的内部时间评估队列。在治疗第一年期间每21天，模型使用可获得的EHR信息预测未来30天内首次由结构化表型定义的[≥]2级irAE。评估包括合并和标志点内区分度、精确率-召回率性能、校准以及患者聚簇自助法置信区间。特征状态消融和替代更新计划检查了动态信息的贡献。\n【结果】开发队列包含1,522例患者和18,744个可评估标志点；时间评估队列包含526例患者和6,263个标志点，其中184个为阳性（2.94%）。多尺度XGBoost模型达到合并AUROC 0.716（95% CI，0.676-0.755）、AUPRC 0.067、标志点内AUROC 0.672（95% CI，0.631-0.716）、Brier评分0.0281和对数损失0.1245。时间感知基线达到AUROC 0.631和标志点内AUROC 0.536。更新后的治疗暴露和实验室轨迹解释了大部分增益。完整状态扩展达到AUROC 0.719和AUPRC 0.073。在测试的节奏中，21天计划具有最高区分度。\n【结论】纵向EHR更新改善了近期irAE预测，超越了治疗前特征和治疗时间。在实施前，需要进行表型判定以及校准、可迁移性和临床效用的独立评估。"
-},
-{
-"title": "Sense and Sensibility: Sensible Quality Control and Data Decision-Making in Passive Sensing Data for Adolescent Substance Use Risk Prediction",
-"link": "https://www.medrxiv.org/content/10.64898/2026.10.06.26364884v1?rss=1",
-"date": "2026-10-08T00:00:00+00:00",
-"pop": null,
-"source": "medRxiv",
-"badge": "DOI 10.64898/2026.10.06.26364884v1",
-"id": "f47aceb0f6f7",
-"keep": true,
-"zh_title": "被动感知数据质控与青少年物质使用风险预测",
-"summary": "探讨智能手机与可穿戴被动感知数据的质控和特征工程决策如何影响青少年物质使用障碍风险预测分析结果。",
-"key_points": [
-"被动感知联合基因组信息识别青少年风险",
-"自然场景数据异质，需大量预处理",
-"清洗与特征工程决策常缺少披露"
-],
-"section": "生命科学与药物",
-"type": "论文",
-"tags": [
-"数据集",
-"基因组学"
-],
-"evidence": "预印本",
-"score": 5,
-"day": "2026-10-14",
-"source_group": "medRxiv"
 },
 {
 "title": "amitpuri/multiagent-retrieval-gaps",
@@ -2862,7 +2839,8 @@
 "evidence": "预印本",
 "score": 5,
 "day": "2026-10-14",
-"source_group": "medRxiv"
+"source_group": "medRxiv",
+"abstract_tries": 1
 },
 {
 "title": "Introducing Infrastructure as Code for deployment and governance of medical AI: A case study",
@@ -2922,31 +2900,8 @@
 "evidence": "预印本",
 "score": 4,
 "day": "2026-10-14",
-"source_group": "bioRxiv"
-},
-{
-"title": "NESTApp: A GUI-Based MATLAB Application for Auditable TMS-EEG Preprocessing with EEGLAB",
-"link": "https://www.medrxiv.org/content/10.64898/2026.10.11.26365251v1?rss=1",
-"date": "2026-10-13T00:00:00+00:00",
-"pop": null,
-"source": "medRxiv",
-"badge": "DOI 10.64898/2026.10.11.26365251v1",
-"id": "09ab06a2a181",
-"keep": true,
-"zh_title": "NESTApp：基于MATLAB的TMS-EEG预处理工具",
-"summary": "研究团队开发NESTApp，基于EEGLAB对TMS-EEG进行可审计的预处理，以提升可复现性。",
-"key_points": [
-"针对TMS-EEG伪迹较大的问题",
-"提供可审计的预处理流程",
-"基于MATLAB与EEGLAB实现"
-],
-"section": "临床预测与决策",
-"type": "模型",
-"tags": [],
-"evidence": "预印本",
-"score": 4,
-"day": "2026-10-14",
-"source_group": "medRxiv"
+"source_group": "bioRxiv",
+"abstract_tries": 1
 },
 {
 "title": "ajinkyabarapatre/CareFlow-Clinical-Pathway-Process-Mining",
@@ -3201,36 +3156,6 @@
 "zh_abstract": "RNA的亚细胞定位，包括长链非编码RNA（lncRNAs）、信使RNA（mRNAs）、微小RNA（miRNAs）和其他较小RNA，在决定其生物学功能方面起着关键作用。例如，lncRNAs主要与染色质相关，并作为基因转录和染色质结构的调控因子，而mRNAs分布于细胞核和细胞质中，促进用于蛋白质合成的遗传信息运输。理解RNA定位有助于阐明诸如以空间和时间精度调控基因表达等过程。然而，用于确定RNA定位的传统湿实验方法，如原位杂交，通常耗时、耗费资源且成本高昂。为克服这些挑战，利用人工智能（AI）和机器学习（ML）的计算方法已成为强有力的替代方案，能够大规模预测RNA亚细胞定位。本文全面综述了基于AI的RNA亚细胞定位预测方法的最新进展，涵盖多种RNA类型，并重点关注基于序列、基于图像以及结合两类数据的混合方法。我们强调了这些方法在加速RNA研究、揭示分子通路和指导靶向疾病治疗方面的潜力。此外，我们批判性地讨论了AI/ML方法用于RNA亚细胞定位所面临的挑战，如数据稀缺和缺乏基准，以及解决这些问题的机会。本综述旨在为寻求在RNA亚细胞定位及相关领域开发创新解决方案的研究人员提供有价值的资源。"
 },
 {
-"title": "Understanding clinician engagement with electronic health records: a mixed-methods study of structured data entry using the Theory of Planned Behaviour",
-"link": "https://www.medrxiv.org/content/10.64898/2026.10.08.26365036v1?rss=1",
-"date": "2026-10-11T00:00:00+00:00",
-"source": "medRxiv",
-"source_group": "medRxiv",
-"home": "",
-"thin": false,
-"badge": "DOI 10.64898/2026.10.08.26365036v1",
-"pop": null,
-"id": "af18a8ba147a",
-"keep": true,
-"zh_title": "英国NHS医生电子病历结构化数据录入参与度的混合方法研究",
-"summary": "伦敦NHS教学医院混合方法研究，基于计划行为理论分析医生对电子病历结构化数据录入的参与。",
-"key_points": [
-"研究在伦敦NHS教学医院Epic电子病历环境开展",
-"研究1为非顾问级医生横断面问卷调查",
-"作者称首次将计划行为理论用于结构化数据录入"
-],
-"section": "大模型与智能体",
-"type": "论文",
-"tags": [
-"电子病历",
-"临床落地"
-],
-"evidence": "预印本",
-"score": 4,
-"day": "2026-10-14",
-"rank": 5.0
-},
-{
 "title": "ShubhThadani17/DiabetesPredictor",
 "link": "https://github.com/ShubhThadani17/DiabetesPredictor",
 "date": "2026-10-05T18:56:57Z",
@@ -3277,6 +3202,38 @@
 "day": "2026-10-14",
 "thin": true,
 "source_group": "Google News · NMPA AI"
+},
+{
+"title": "Sense and Sensibility: Sensible Quality Control and Data Decision-Making in Passive Sensing Data for Adolescent Substance Use Risk Prediction",
+"link": "https://www.medrxiv.org/content/10.64898/2026.10.06.26364884v1?rss=1",
+"date": "2026-10-08T00:00:00+00:00",
+"pop": null,
+"source": "medRxiv",
+"badge": "DOI 10.64898/2026.10.06.26364884v1",
+"id": "f47aceb0f6f7",
+"keep": true,
+"zh_title": "被动感知数据质量控制与决策建议",
+"summary": "面向青少年物质使用风险预测，梳理手机与可穿戴被动感知数据的预处理、纳入标准与特征工程决策建议。",
+"key_points": [
+"被动感知数据异质性强，需大量预处理",
+"清洗与特征工程决策会影响分析结果",
+"给出纳入标准与跨操作系统差异处理建议"
+],
+"section": "数字健康",
+"type": "论文",
+"tags": [
+"数字健康",
+"心理健康"
+],
+"evidence": "预印本",
+"score": 4,
+"day": "2026-10-14",
+"source_group": "medRxiv",
+"abstract_tries": 1,
+"abstract": "BackgroundPassively collected smartphone and wearable data, combined with genomic information, may enable scalable early identification of youth who are at risk for substance use disorder. However, heterogeneous data collected in naturalistic settings limit researcher control over data quality, requiring substantial preprocessing. Data cleaning and feature engineering decisions can meaningfully influence analytic outcomes yet are often minimally described or omitted in published work. ObjectivesWe provide rationales and recommendations for common preprocessing challenges in passive sensing research, including establishing inclusion criteria when \"outliers\" may reflect true behavioral variability, analyzing differences across smartphone operating systems, handling observations collected outside protocol windows, and engineering features for machine learning applications. MethodsWe illustrate principled approaches to these challenges using smartphone and Fitbit data from the Adolescent Brain Cognitive DevelopmentSM Study (ABCD). The sample was drawn from the available half of the year-4 follow-up (data release 5.1; N = 4,754; ages 13-14). ResultsExtreme outlying observations were concentrated among low-engagement participants with few observed days. Smartphone usage among Apple users appeared under-recorded relative to Android users when compared with self-report measures. Fitbit-derived behavior differed systematically between observations collected within versus outside protocol windows. We also identified potential errors in the studys default preprocessing pipeline. ConclusionWe recommend prioritizing person-level inclusion criteria that preserve meaningful behavioral variability, examining temporal distributions rather than assuming observations are exchangeable, and thoroughly investigating and reporting data quality issues. Although illustrated using the ABCD Study, these principles broadly apply to research using smartphones, wearables, and other digital data sources.",
+"thin": false,
+"reason": "方法学建议类预印本，未报告验证结果，属增量档",
+"zh_abstract": "【背景】被动采集的智能手机和可穿戴设备数据，结合基因组信息，可能有助于可扩展地早期识别有物质使用障碍风险的青少年。然而，在自然环境中采集的异质性数据限制了研究者对数据质量的控制，需要大量预处理。数据清洗和特征工程决策可能对分析结果产生有意义的影响，但在已发表工作中往往描述极少或被省略。【目的】我们为被动传感研究中常见的预处理挑战提供依据和建议，包括当“离群值”可能反映真实行为变异性时确立纳入标准、分析不同智能手机操作系统之间的差异、处理在方案窗口之外收集的观测，以及为机器学习应用进行特征工程。【方法】我们使用来自青少年大脑认知发展SM研究（Adolescent Brain Cognitive DevelopmentSM Study，ABCD）的智能手机和Fitbit数据来说明应对这些挑战的原则性方法。样本抽取自第4年随访可用的一半（数据发布5.1；N = 4,754；年龄13–14岁）。【结果】极端离群观测集中在参与度低、可观测天数少的参与者中。与自我报告测量相比，苹果用户的智能手机使用似乎相对于安卓用户被记录不足。在方案窗口内与窗口外收集的观测之间，来自Fitbit的行为存在系统性差异。我们还识别出该研究默认预处理流程中的潜在错误。【结论】我们建议优先采用保留有意义行为变异性的个体层面纳入标准，检查时间分布而非假设观测可交换，并彻底调查和报告数据质量问题。尽管以ABCD研究为例进行说明，这些原则广泛适用于使用智能手机、可穿戴设备和其他数字数据源的研究。"
 },
 {
 "title": "Implementing AI-assisted, patient-friendly imaging report summaries to enhance oncology care delivery: protocol for a randomized mixed-methods quality improvement study",
@@ -3600,6 +3557,37 @@
 "zh_abstract": "环境暴露塑造疾病风险，但基于循环蛋白的暴露读出指标在不同人群中的可推广性仍未知。利用“All of Us研究计划”中10,043名参与者的5,416种蛋白质的血浆蛋白质组谱，我们评估了与100多种暴露的关联及复合评分，涵盖肥胖、空气污染、环境温度和物质使用。我们发现，蛋白质组暴露特征在不同人群和社会经济阶层之间大体一致，<1%的蛋白质显示出显著的跨人群异质性，其中BMI是一个例外，而瘦素是最具异质性的关联。人群特异性的瘦素轨迹、肥胖，结合BMI调整后残余的瘦素-2型糖尿病关联，揭示了仅靠BMI无法捕捉的性别特异性代谢风险。聚合蛋白质评分在很大程度上具有暴露特异性，但物质使用评分显示出交叉预测，SES评分则广泛相关。PM2.5蛋白质评分捕捉了区域内暴露变异，并优于地理和社会经济相关因素，但空间混杂因素仍嵌入蛋白质-环境关联之中。在英国生物银行（UK Biobank）中训练的评分可迁移至All of Us，用于生物学上相近的暴露，支持跨生物样本库的可移植性。这些发现将血浆蛋白质组学确立为一种可扩展框架，用于在不同人群中测量暴露，同时强调负责任的应用需要仔细考虑生物学背景、社会模式以及队列结构。"
 },
 {
+"title": "NESTApp: A GUI-Based MATLAB Application for Auditable TMS-EEG Preprocessing with EEGLAB",
+"link": "https://www.medrxiv.org/content/10.64898/2026.10.11.26365251v1?rss=1",
+"date": "2026-10-13T00:00:00+00:00",
+"pop": null,
+"source": "medRxiv",
+"badge": "DOI 10.64898/2026.10.11.26365251v1",
+"id": "09ab06a2a181",
+"keep": true,
+"zh_title": "NESTApp：TMS-EEG 可审计预处理工具",
+"summary": "基于 EEGLAB 的 MATLAB 图形界面工具，用于构建与记录 TMS-EEG 预处理流程，提升可重复性。",
+"key_points": [
+"针对TMS-EEG伪迹较大的问题",
+"提供可审计的预处理流程",
+"基于MATLAB与EEGLAB实现"
+],
+"section": "数字健康",
+"type": "模型",
+"tags": [
+"生理信号"
+],
+"evidence": "预印本",
+"score": 2,
+"day": "2026-10-14",
+"source_group": "medRxiv",
+"abstract_tries": 1,
+"abstract": "Electroencephalography (EEG) preprocessing determines signal quality and interpretation, particularly for transcranial magnetic stimulation combined with EEG (TMS-EEG), where recordings are affected by large and complex stimulation-related artifacts. Several preprocessing approaches have been developed, but substantial variability remains in how pipelines are implemented, documented, and evaluated across recordings, limiting reproducibility and comparability across studies. We developed NESTApp, a MATLAB-based graphical interface built on EEGLAB, to provide an accessible and reproducible framework for implementing and evaluating TMS-EEG preprocessing pipelines. Rather than prescribing a specific pipeline, NESTApp allows users to construct and consistently apply customisable workflows incorporating established EEGLAB and TMS-EEG processing tools, while automatically documenting processing decisions and parameters. Integrated quality-control procedures track data removal and flag recordings based on user-defined criteria, facilitating systematic evaluation across participants. The application also supports group-level visualisation and export of processed TMS-EEG measures for subsequent analyses. Applied to 29 recordings from 16 participants, NESTApp processed 27 and identified those requiring further inspection. By integrating pipeline implementation, documentation, quality control, and group-level evaluation within a single interface, NESTApp provides a transparent framework for TMS-EEG preprocessing that may improve reproducibility, facilitate consistent processing across cohorts, and lower technical barriers to the implementation of established preprocessing approaches.",
+"thin": false,
+"reason": "信号预处理工具，未涉及AI或算法建模，与AI医疗相关性弱",
+"zh_abstract": "脑电图（EEG）预处理决定信号质量和解释，特别是对于经颅磁刺激联合EEG（TMS-EEG），其中记录受到大型且复杂的刺激相关伪迹影响。已开发出若干预处理方法，但在不同记录中，流程的实施、记录和评估方式仍存在很大差异，限制了研究的可重复性和可比性。我们开发了NESTApp，一个基于MATLAB、构建于EEGLAB之上的图形界面，为实施和评估TMS-EEG预处理流程提供可访问且可重复的框架。NESTApp并非规定某一特定流程，而是允许用户构建并一致地应用可定制工作流，其中纳入既有的EEGLAB和TMS-EEG处理工具，同时自动记录处理决策和参数。集成的质量控制程序追踪数据剔除情况，并根据用户定义的标准标记记录，便于对参与者进行系统评估。该应用还支持组水平可视化以及导出处理后的TMS-EEG测量值以供后续分析。应用于来自16名参与者的29份记录时，NESTApp处理了27份，并识别出需要进一步检查的记录。通过将流程实施、记录、质量控制和组水平评估整合到单一界面中，NESTApp为TMS-EEG预处理提供了一个透明框架，可能提高可重复性，促进跨队列的一致处理，并降低实施既有预处理方法的技术门槛。"
+},
+{
 "title": "tawdesangeeta1973-coder/cancer-therapy-design-concept",
 "link": "https://github.com/tawdesangeeta1973-coder/cancer-therapy-design-concept",
 "date": "2026-10-08T11:06:57Z",
@@ -3625,6 +3613,39 @@
 "score": 2,
 "day": "2026-10-14",
 "source_group": "GitHub"
+},
+{
+"title": "Understanding clinician engagement with electronic health records: a mixed-methods study of structured data entry using the Theory of Planned Behaviour",
+"link": "https://www.medrxiv.org/content/10.64898/2026.10.08.26365036v1?rss=1",
+"date": "2026-10-11T00:00:00+00:00",
+"source": "medRxiv",
+"source_group": "medRxiv",
+"home": "",
+"thin": false,
+"badge": "DOI 10.64898/2026.10.08.26365036v1",
+"pop": null,
+"id": "af18a8ba147a",
+"keep": true,
+"zh_title": "NHS医生电子病历结构化录入行为研究",
+"summary": "在伦敦某NHS教学医院以计划行为理论与语料库语言学，混合方法分析医生电子病历结构化数据录入行为。",
+"key_points": [
+"研究在伦敦NHS教学医院Epic电子病历环境开展",
+"研究1为非顾问级医生横断面问卷调查",
+"作者称首次将计划行为理论用于结构化数据录入"
+],
+"section": "落地与监管",
+"type": "论文",
+"tags": [
+"电子病历"
+],
+"evidence": "预印本",
+"score": 2,
+"day": "2026-10-14",
+"rank": 5.0,
+"abstract_tries": 1,
+"abstract": "BackgroundElectronic health records (EHRs) are central to NHS clinical practice, and the value of the data they hold depends on clinicians entering structured data. Structured data entry (SDE) is nonetheless used inconsistently, and most evidence comes from US settings documenting barriers rather than the mechanisms interventions must target. This is, to our knowledge, the first study to apply the Theory of Planned Behaviour (TPB) to SDE, to examine SDE behaviour among UK NHS doctors, and to apply corpus linguistics to clinicians free-text accounts of EHR use. MethodsA two-part mixed-methods study was conducted at a large NHS teaching hospital in central London using the Epic EHR. Study 1 was a cross-sectional survey of non-consultant grade doctors comprising the System Usability Scale (SUS), a purpose-designed TPB questionnaire, and two open-text questions analysed using corpus linguistics. Study 2 was an Interpretative Phenomenological Analysis (IPA) of semi-structured interviews with six resident doctors. ResultsEighty-three doctors responded; 65 completed the SUS and 49 the TPB questionnaire. Mean SUS score was 62.1 (95% CI 58.3-65.9), below the benchmark of 68 and equivalent to a grade of \"D\". Structured features were used markedly less often than narrative notes. TPB constructs explained 56% of the variance in intention (F(3,45) = 18.95, p < .001); attitudes (p = .003) and subjective norms (p = .009) predicted intention independently, whereas perceived behavioural control did not (p = .14). Intention predicted self-reported use of problem lists, event-specific templates and standardised documents, but not narrative notes. Corpus analysis identified time pressure and interface friction as dominant barriers. IPA generated four themes: structured documentation as cognitive relief; as fragile collective infrastructure; as a practice clinicians are expected to perform but not enabled to learn; and as a format that can flatten clinical reasoning. ConclusionsEngagement with SDE is driven principally by attitudes and social norms rather than by perceived control, and the barriers clinicians describe arise from the intersection of interface design, training, team norms and institutional expectation. Interventions addressing usability alone are unlikely to succeed: sustained change requires team-level normative reinforcement, specialty-relevant training that explains both how and why, and systems that preserve space for clinical narrative.",
+"reason": "行为调查与语料分析，未使用AI方法，属边缘档",
+"zh_abstract": "【背景】电子健康记录（EHR）是NHS临床实践的核心，其所含数据的价值取决于临床医生录入结构化数据。尽管如此，结构化数据录入（SDE）的使用仍不一致，且大多数证据来自美国环境，记录的是障碍而非干预必须针对的机制。据我们所知，这是首个将计划行为理论（TPB）应用于SDE、考察英国NHS医生SDE行为，并将语料库语言学应用于临床医生关于EHR使用的自由文本叙述的研究。【方法】在伦敦市中心一家使用Epic EHR的大型NHS教学医院开展了一项由两部分组成的混合方法研究。研究1是对非顾问级别医生进行的横断面调查，包括系统可用性量表（SUS）、专门设计的TPB问卷，以及两个使用语料库语言学分析的开放文本问题。研究2是对六名住院医生半结构化访谈进行的解释现象学分析（IPA）。【结果】83名医生作出回应；65名完成了SUS，49名完成了TPB问卷。平均SUS得分为62.1（95% CI 58.3–65.9），低于68的基准，相当于“D”级。结构化功能的使用频率明显低于叙述性记录。TPB构念解释了意向方差的56%（F(3,45) = 18.95，p < .001）；态度（p = .003）和主观规范（p = .009）独立预测意向，而感知行为控制则没有（p = .14）。意向预测了自我报告的问题列表、事件特定模板和标准化文档的使用，但不能预测叙述性记录的使用。语料库分析确定时间压力和界面摩擦是主要障碍。IPA产生了四个主题：结构化记录作为认知缓解；作为脆弱的集体基础设施；作为一种临床医生被期望执行但未被赋能学习的实践；以及作为一种可能压平临床推理的格式。【结论】对SDE的参与主要由态度和社会规范而非感知控制驱动，临床医生描述的障碍源于界面设计、培训、团队规范和机构期望的交叉。仅解决可用性的干预不太可能成功：持续改变需要团队层面的规范强化、解释如何做以及为何做的专科相关培训，以及为临床叙事保留空间的系统。"
 },
 {
 "title": "krishankumawat027-cmd/PulseMD",
