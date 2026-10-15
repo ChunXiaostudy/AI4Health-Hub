@@ -1,6 +1,6 @@
 import os, sys
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-import hub, evalset
+import hub, evalset, conf
 
 def test_kw_ok_case_insensitive():
     assert hub.kw_ok("New MRI model for stroke", ["MRI"])
@@ -80,6 +80,16 @@ def test_item_page():
     assert "中文摘要" in h and "<b>【结果】</b>" in h and "阅读原文" in h and "查看英文原文摘要" in h and "https://x.org/a" in h
     h2 = hub.item_page(dict(it, zh_abstract=None, abstract=None), [], "https://example.org/")
     assert "暂无原文摘要" in h2
+
+def test_conf_paper_uses_shared_card():
+    c = dict(pid="a" * 40, title="Paper", zh_title="论文", link="https://doi.org/10.1/x", date="2025-05-31", conf="NeurIPS", conf_label="NeurIPS 2025",
+             rank="CCF-A", year="2025", cites=49, summary="导读", key_points=["k"], tags=["医学影像"], score=8, abstract="A" * 300, zh_abstract="【背景】中文")
+    it = conf.as_item(c)
+    assert hub.form_of(it) == "研究论文" and hub.section_of(it) == "影像与病理"
+    h = hub.card(it, base="../")
+    assert 'href="../items/caaaaaaaaaaa/"' in h and "评分 8" in h and "原文 ↗" in h and "引用 49" in h and "NeurIPS 2025 · CCF-A" in h
+    p = hub.item_page(it, [], "https://example.org/")
+    assert "中文摘要" in p and "返回论文库" in p and "收录于" not in p
 
 if __name__ == "__main__":
     for k, f in list(globals().items()):

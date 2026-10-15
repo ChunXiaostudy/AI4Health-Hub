@@ -1,6 +1,6 @@
 """Top-conference (CCF-A + MICCAI) health/medical-AI papers via Semantic Scholar bulk search.
 Persistent store data/conf.json (no 30-day expiry). Only items with LLM enrichment are shown."""
-import json, os, re, sys, time, urllib.request, urllib.parse, hashlib
+import json, math, os, re, sys, time, urllib.request, urllib.parse, hashlib
 VENUES = {  # short: (S2 venue name, CCF rank)
  "ACL": ("Annual Meeting of the Association for Computational Linguistics", "CCF-A"),
  "EMNLP": ("Conference on Empirical Methods in Natural Language Processing", "CCF-B"),
@@ -22,6 +22,7 @@ YEARS = "2025-2026"
 TITLE_RE = re.compile(r"\b(medical|medicine|clinical|clinic|health|healthcare|patient|patients|disease|diagnos\w*|radiolog\w*|patholog\w*|biomedical|EHR|electronic health|hospital|surgical|surgery|cancer|tumou?r|MRI|CT|X-ray|chest|ECG|EEG|drug|molecul\w*|protein|genom\w*|cell|mental health|depression|alzheimer\w*|oncolog\w*|dermatolog\w*|ophthalm\w*|retina\w*|histopatholog\w*|lesion|ultrasound|endoscop\w*|pharma\w*|therap\w*)\b", re.I)
 Q = "medical | clinical | healthcare | health | patient | radiology | pathology | biomedical | disease | diagnosis | surgical | drug | protein | EHR"
 CAP = int(os.getenv("CONF_MAX", "120"))  # LLM-enrich at most this many new papers per run
+TRANSLATE_CAP = int(os.getenv("CONF_TRANSLATE", "100"))  # translate this many abstracts per run (highest score first), backfilling gradually
 
 def s2(params):
     url = "https://api.semanticscholar.org/graph/v1/paper/search/bulk?" + urllib.parse.urlencode(params)
@@ -60,7 +61,7 @@ def fetch_all():
         print(f"[conf] {short}: {n}", file=sys.stderr)
     return out
 
-def run(llm_enrich):
+def run(llm_enrich, translate=None):
     path = "data/conf.json"
     store = json.load(open(path)) if os.path.exists(path) else {}
     fetched = fetch_all()
@@ -79,20 +80,28 @@ def run(llm_enrich):
     for r in llm_enrich(items):
         c = store[r["_pid"]]
         if r.get("keep") is False: c["skip"] = True; continue
-        for k in ("zh_title", "summary", "key_points", "tags"): c[k] = r.get(k)
+        for k in ("zh_title", "summary", "key_points", "tags", "reason", "section"): c[k] = r.get(k)
         c["score"] = r.get("score", 5)
+    if translate:
+        todo = [c for c in store.values() if "zh_title" in c and not c.get("skip") and not c.get("zh_abstract") and len(c.get("abstract") or "") >= 200]
+        todo.sort(key=lambda c: (-(c.get("score") or 0), -(c.get("cites") or 0)))
+        translate(todo[:TRANSLATE_CAP])
     json.dump(store, open(path, "w"), ensure_ascii=False, indent=0)
     return shown(store)
 
-def shown(store):
+def as_item(c):
+    """A stored conference paper in the same shape as a daily item, so it renders with hub.card() and gets an item page."""
     from hub import norm_tags
-    out = []
-    for c in store.values():
-        if "zh_title" not in c or c.get("skip"): continue
-        thin = not c.get("abstract")
-        doi = next(iter(re.findall(r"doi\.org/(.+)$", c["link"])), "")
-        out.append(dict(id="c" + c["pid"][:11], t=c["title"], zt=c["zh_title"], s=c.get("summary"), kp=[] if thin else (c.get("key_points") or [])[:3], tg=norm_tags(c.get("tags")),
-                        l=c["link"], d=c["date"], c=c["conf"], cl=c["conf_label"], r=c["rank"], y=c.get("year"), ci=c.get("cites", 0), th=thin, doi=doi,
-                        sc=round((c.get("score") or 5) + min(2, 0.6 * __import__("math").log10((c.get("cites") or 0) + 1)), 2)))
+    thin = not c.get("abstract")
+    cites = c.get("cites") or 0
+    return dict(id="c" + c["pid"][:11], title=c["title"], zh_title=c["zh_title"], link=c["link"], date=c.get("date") or "", source=c["conf_label"],
+                source_group="顶会论文", conf=c["conf"], ccf=c["rank"], year=c.get("year"), cites=cites, evidence="同行评审", type="论文",
+                summary=c.get("summary"), key_points=[] if thin else (c.get("key_points") or [])[:3], tags=norm_tags(c.get("tags")),
+                score=c.get("score") or 5, reason=c.get("reason"), section=c.get("section"), thin=thin, badge=f'{c["conf_label"]} · {c["rank"]}',
+                pop=f"引用 {cites}" if cites else None, abstract=None if thin else c["abstract"], zh_abstract=c.get("zh_abstract"),
+                sc=round((c.get("score") or 5) + min(2, 0.6 * math.log10(cites + 1)), 2))
+
+def shown(store):
+    out = [as_item(c) for c in store.values() if "zh_title" in c and not c.get("skip")]
     out.sort(key=lambda x: -x["sc"])
     return out

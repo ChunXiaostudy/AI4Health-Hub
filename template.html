@@ -79,19 +79,15 @@ function apply(){const fw=$('#featWrap');if(fw)fw.hidden=!!(sec!=='全部'||form
  if(conf){loadConf();n=1}else{$$('#feed .dayg').forEach(g=>{let k=0;const fv=fw&&!fw.hidden;g.querySelectorAll('article').forEach(a=>{const m=match(a)&&!(fv&&a.dataset.top);a.hidden=!m;k+=m});g.hidden=!k;const s=g.querySelector('.n');if(s)s.textContent=k;n+=k})}
  const em=$('#empty');if(em)em.hidden=!!n}
 function loadConf(){if(C){renderConf();return}$('#confPanel').innerHTML='<div class="sk"></div><div class="sk"></div>';
- fetch($('#confPanel').dataset.src||'conf.json').then(r=>r.json()).then(d=>{C=d;const cs=[...new Set(d.map(x=>x.c))].sort(),ys=[...new Set(d.map(x=>x.y))].sort().reverse(),ts=[...new Set(d.flatMap(x=>x.tg))].sort();
-  const opt=(id,l,a)=>`<select id="${id}"><option value="">${l}</option>${a.map(v=>`<option>${E(v)}</option>`).join('')}</select>`;
+ fetch($('#confPanel').dataset.src||'conf.json').then(r=>r.json()).then(d=>{C=d;const cs=[...new Set(d.map(x=>x.c))].sort(),ys=[...new Set(d.map(x=>String(x.y)))].sort().reverse(),ts=[...new Set(d.flatMap(x=>x.tg))].sort();
+  const opt=(id,all,xs)=>`<select id="${id}"><option value="">${all}</option>${xs.map(x=>`<option>${E(x)}</option>`).join('')}</select>`;
   $('#confPanel').innerHTML=`<div class="filters">${opt('fc','全部会议',cs)}${opt('fy','全部年份',ys)}${opt('ft','全部标签',ts)}<span class="muted" id="fn" style="font-size:12px;align-self:center"></span></div><div class="feed" id="cl"></div><div class="pager" id="pg"></div>`;
   ['fc','fy','ft'].forEach(i=>$('#'+i).onchange=()=>{page=0;renderConf()});renderConf()}).catch(()=>{$('#confPanel').innerHTML='<div class="empty">加载失败</div>'})}
-function ccard(x){const cite=`${x.t}. ${x.cl}. ${x.doi?'https://doi.org/'+x.doi:x.l}`;
- return `<article class="card"><div class="meta"><span>${E(x.cl)}</span><span>·</span><span>发布于 ${E((x.d||'').slice(0,10))}</span>${x.ci?`<span>·</span><span class="mono">引用 ${x.ci}</span>`:''}<span class="badge">${E(x.cl)} · ${E(x.r)}</span></div>
- <a class="t stretch" href="${E(x.l)}" target="_blank" rel="noopener">${E(x.zt)}</a><div class="orig">${E(x.t)}</div><p class="s">${E(x.s)}</p>${x.kp&&x.kp.length?`<ul class="kp">${x.kp.map(k=>`<li>${E(k)}</li>`).join('')}</ul>`:''}
- <div class="chips"><span class="chip p">论文</span><span class="chip w">同行评审</span>${x.tg.map(t=>`<button class="chip tag" data-tag="${E(t)}">${E(t)}</button>`).join('')}${x.th?'<span class="chip w">仅基于标题</span>':''}</div>
- <button class="cite" data-cite="${E(cite)}">${x.doi?'复制引用 / DOI':'复制引用'}</button></article>`}
+// cards are pre-rendered by hub.card() at build time (x.h) — same markup as the daily feed
 function renderConf(){const fc=$('#fc').value,fy=$('#fy').value,ft=$('#ft').value||tag;
- const L=C.filter(x=>(sec==='全部'||x.sec===sec)&&(!fc||x.c===fc)&&(!fy||String(x.y)===fy)&&(!ft||x.tg.includes(ft))&&(!q||(x.t+' '+x.zt+' '+x.s+' '+x.cl+' '+x.tg.join(' ')).toLowerCase().includes(q)));
+ const L=C.filter(x=>(sec==='全部'||x.sec===sec)&&(!fc||x.c===fc)&&(!fy||String(x.y)===fy)&&(!ft||x.tg.includes(ft))&&(!q||x.q.includes(q)));
  const P=Math.max(1,Math.ceil(L.length/PER));page=Math.min(page,P-1);$('#fn').textContent=`共 ${L.length} 篇`;
- $('#cl').innerHTML=L.slice(page*PER,(page+1)*PER).map(ccard).join('')||'<div class="empty">没有匹配的论文</div>';
+ $('#cl').innerHTML=L.slice(page*PER,(page+1)*PER).map(x=>x.h).join('')||'<div class="empty">没有匹配的论文</div>';
  $('#pg').innerHTML=`<button id="pp" ${page?'':'disabled'}>上一页</button><span class="mono">${page+1} / ${P}</span><button id="pn" ${page<P-1?'':'disabled'}>下一页</button>`;
  $('#pp').onclick=()=>{page--;renderConf();$('#confPanel').scrollIntoView()};$('#pn').onclick=()=>{page++;renderConf();$('#confPanel').scrollIntoView()}}
 apply();

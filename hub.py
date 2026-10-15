@@ -117,7 +117,7 @@ def section_of(it):
         if any(k in txt for k in kws): return sec
     return "落地与监管" if it.get("type") == "观点" else "临床预测与决策"
 
-PAPER_SOURCES = {s["name"] for s in SOURCES if s.get("evidence") in ("预印本", "同行评审")}
+PAPER_SOURCES = {s["name"] for s in SOURCES if s.get("evidence") in ("预印本", "同行评审")} | {"顶会论文"}
 def form_of(it):
     """Mutually exclusive content form: 开源 by source, then 综述与观点 by type, then 研究论文 by source, else 新闻与监管."""
     g = it.get("source_group") or it.get("source")
@@ -411,7 +411,7 @@ def main():
     for day in {d["day"] for d in db}: save_archive_day(day, [d for d in db if d["day"] == day])
     conf_items = None
     if os.path.exists("conf.py"):
-        import conf; conf_items = conf.run(enrich_all)
+        import conf; conf_items = conf.run(enrich_all, translate_all)
     build(db, conf_items)
     print(f"added {len(done)}, total {len(db)}", file=sys.stderr)
 
@@ -548,10 +548,13 @@ def build(db=None, conf_items=None):
     open("site/index.html", "w").write(page(SITE["title"], SITE["tagline"] + "：" + "、".join(SECTIONS), url, body))
     # conference data, loaded on demand
     if conf_items is not None:
-        for c in conf_items: c["sec"] = section_of(dict(tags=c.get("tg"), title=c.get("t"), zh_title=c.get("zt"), summary=c.get("s")))
-        json.dump(conf_items, open("site/conf.json", "w"), ensure_ascii=False, separators=(",", ":"))
+        for c in conf_items: c["section"] = section_of(c)
+        # same card() as the daily feed, pre-rendered; the library page only filters and paginates these
+        rows = [dict(id=c["id"], sec=c["section"], c=c["conf"], y=c.get("year"), tg=c["tags"], h=re.sub(r' data-text="[^"]*"', "", card(c, base="../")),
+                     q=" ".join([c["zh_title"], c["title"], c.get("summary") or "", c["source"], " ".join(c["tags"])]).lower()) for c in conf_items]
+        json.dump(rows, open("site/conf.json", "w"), ensure_ascii=False, separators=(",", ":"))
     build_papers(url, conf_items, tools)
-    build_items(url, load_archive())
+    build_items(url, load_archive(), conf_items)
     # RSS: all + per topic section + per form (papers / models / opinion keep their pre-v3 URLs)
     rss("site/feed.xml", SITE["title"], url, db)
     for k, s in enumerate(SECTIONS):
@@ -583,8 +586,9 @@ def zh_paras(txt):
 def item_page(i, related, url):
     tn, tc = tier(i.get("score"))
     title = i.get("zh_title") or i.get("name") or i["title"]
-    meta = (f'<div class="meta"><img src="{fav(i["link"], i.get("home"))}" alt="" onerror="this.remove()"><span>{E(i["source"])}</span><span>·</span><span>发布于 {zh_date(i.get("date", ""))}</span>'
-            f'<span>·</span><span>收录于 <a href="../../{E(i["day"])}/">{E(i["day"])}</a></span></div>')
+    meta = (f'<div class="meta"><img src="{fav(i["link"], i.get("home"))}" alt="" onerror="this.remove()"><span>{E(i["source"])}</span><span>·</span><span>发布于 {zh_date(i.get("date", ""))}</span>' +
+            (f'<span>·</span><span class="mono">{E(i["pop"])}</span>' if i.get("pop") else "") +
+            (f'<span>·</span><span>收录于 <a href="../../{E(i["day"])}/">{E(i["day"])}</a></span>' if i.get("day") else "") + "</div>")
     digest = f'<p>{E(i.get("summary"))}</p>' + (f'<ul class="kp">' + "".join(f"<li>{E(k)}</li>" for k in i["key_points"][:3]) + "</ul>" if i.get("key_points") and not i.get("thin") else "")
     abstract = ""
     if i.get("zh_abstract"):
@@ -605,16 +609,23 @@ def item_page(i, related, url):
             (f'<dt>标识</dt><dd class="mono">{E(i["badge"])}</dd>' if i.get("badge") else "") + "</dl>" +
             ('<div class="chips">' + "".join(f'<span class="chip">{E(t)}</span>' for t in i.get("tags") or []) + "</div>" if i.get("tags") else "") +
             (f'<button class="cite" data-cite="{E(cite_text(i))}">复制引用 / DOI</button>' if i.get("badge") or i.get("type") == "论文" else ""))
-    rel = ('<h2 class="relh">同方向的其他条目</h2><div class="feed">' + "".join(card(r, base="../../") for r in related) + "</div>") if related else ""
-    body = (header("../../", False) + f'<main class="wrap item"><a class="back" href="../../">← 返回首页</a><div class="igrid"><article class="imain">{meta}<h1>{E(title)}</h1>'
+    relh = "同方向的高分顶会论文" if i.get("source_group") == "顶会论文" else "同方向的其他条目"
+    rel = (f'<h2 class="relh">{relh}</h2><div class="feed">' + "".join(card(r, base="../../") for r in related) + "</div>") if related else ""
+    body = (header("../../", False) + f'<main class="wrap item"><a class="back" href="../../{"papers/" if i.get("source_group") == "顶会论文" else ""}">← 返回{"论文库" if i.get("source_group") == "顶会论文" else "首页"}</a><div class="igrid"><article class="imain">{meta}<h1>{E(title)}</h1>'
             + (f'<div class="orig">{E(i["title"])}</div>' if title != i["title"] else "") +
             f'<h2>AI 导读</h2>{digest}{abstract}{also}<p class="muted note">导读与中文摘要由 AI 生成 / 翻译，仅供参考，请以原文为准；不构成医疗建议。</p></article>'
             f'<aside class="iside">{side}</aside></div>{rel}</main>' + footer("../../"))
     return page(f'{title} · {SITE["title"]}', i.get("summary") or title, url + f'items/{i["id"]}/', body, 2)
 
-def build_items(url, arc):
-    """One static page per item (permanent: every archived day), with Chinese abstract and a link out to the original."""
+def build_items(url, arc, conf_items=None):
+    """One static page per item (permanent: every archived day, plus every conference paper), with Chinese abstract and a link out."""
     n = 0
+    by_sec = {}
+    for c in conf_items or []: by_sec.setdefault(c["section"], []).append(c)
+    for sec, cs in by_sec.items():
+        for c in cs:
+            os.makedirs(f'site/items/{c["id"]}', exist_ok=True)
+            open(f'site/items/{c["id"]}/index.html', "w").write(item_page(c, [r for r in cs if r["id"] != c["id"]][:4], url)); n += 1
     for day, items in arc.items():
         for i in items:
             i["tags"] = norm_tags(i.get("tags")); i["section"] = section_of(i)
