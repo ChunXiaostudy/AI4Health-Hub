@@ -62,7 +62,13 @@ def test_sections_and_forms():
     assert hub.section_of(dict(section="临床落地与监管", type="监管", tags=["医学影像"])) == "落地与监管"
     assert hub.section_of(dict(section="产业与融资", tags=[])) == "产业动态"
     assert hub.section_of(dict(section="研究论文", tags=[], zh_title="单细胞基因调控")) == "生命科学与药物"
-    assert hub.form_of(dict(type="论文")) == "论文" and hub.form_of(dict(type="融资")) == "新闻" and hub.form_of(dict(type="模型")) == "模型与代码"
+    f = lambda **k: hub.form_of(k)
+    assert f(type="模型", source_group="bioRxiv") == "研究论文"          # a paper proposing a model is still a paper
+    assert f(type="模型", source_group="GitHub") == "开源模型与代码"
+    assert f(type="观点", source_group="NEJM AI") == "综述与观点"
+    assert f(type="监管", source_group="Google News · FDA AI") == "新闻与监管"
+    assert f(type="融资", source_group="Fierce Healthcare") == "新闻与监管"
+    assert {f(type=t, source_group=g) for t in ("论文", "模型", "监管", "融资", "观点") for g in ("arXiv", "GitHub", "STAT News")} <= set(hub.C.FORMS)
     assert len(hub.C.SECTION_SLUGS) == len(hub.SECTIONS)
 
 if __name__ == "__main__":

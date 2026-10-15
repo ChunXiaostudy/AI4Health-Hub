@@ -116,8 +116,14 @@ def section_of(it):
         if any(k in txt for k in kws): return sec
     return "落地与监管" if it.get("type") == "观点" else "临床预测与决策"
 
+PAPER_SOURCES = {s["name"] for s in SOURCES if s.get("evidence") in ("预印本", "同行评审")}
 def form_of(it):
-    return getattr(C, "FORMS", {}).get(it.get("type"), "新闻")
+    """Mutually exclusive content form: 开源 by source, then 综述与观点 by type, then 研究论文 by source, else 新闻与监管."""
+    g = it.get("source_group") or it.get("source")
+    if g in getattr(C, "OPEN_SOURCES", ()): return "开源模型与代码"
+    if it.get("type") == "观点": return "综述与观点"
+    if g in PAPER_SOURCES: return "研究论文"
+    return "新闻与监管"
 
 def zh_date(iso):
     try: d = dt.datetime.fromisoformat(iso.replace("Z", "+00:00"))
@@ -469,7 +475,7 @@ def header(base, tabs=True):
     if tabs:
         t = '<nav class="tabs" id="tabs">' + "".join(f'<button class="tab{" on" if s=="全部" else ""}" data-s="{E(s)}">{E(s)}</button>' for s in ["全部"] + SECTIONS) + "</nav>"
     else: t = '<nav class="tabs"></nav>'
-    return (f'<header><div class="wrap"><a class="brand" href="{base}./">{SITE["wordmark"]}</a>{t}<div class="links"><a href="{base}weekly/">周报</a><a href="{base}archive/">归档</a>'
+    return (f'<header><div class="wrap"><a class="brand" href="{base}./">{SITE["wordmark"]}</a>{t}<div class="links"><a href="{base}papers/">论文库</a><a href="{base}weekly/">周报</a><a href="{base}archive/">归档</a>'
             f'<a href="{base}feed.xml">RSS</a><a href="{SITE["repo"]}" target="_blank" rel="noopener">GitHub</a></div></div></header>')
 
 def footer(base, st=None):
@@ -515,10 +521,8 @@ def build(db=None, conf_items=None):
     url = SITE["url"]
     feat, latest, n = featured(db)
     tools = ('<div class="tools"><input id="q" type="search" placeholder="搜索标题、摘要、来源、标签…" aria-label="搜索"><span id="tagf" class="tagf" hidden></span></div>')
-    has_conf = conf_items is not None or os.path.exists("site/conf.json")
-    forms = ["全部形式"] + list(dict.fromkeys(getattr(C, "FORMS", {}).values()))
-    sub = ('<div id="formBar" class="sub">' + "".join(f'<button data-f="{E(f)}"{" class=on" if k == 0 else ""}>{E(f)}</button>' for k, f in enumerate(forms)) +
-           ('<button data-f="conf">顶会论文</button>' if has_conf else "") + '</div>' + ('<div id="confPanel" hidden></div>' if has_conf else ""))
+    forms = ["全部形式"] + list(getattr(C, "FORMS", []))
+    sub = '<div id="formBar" class="sub">' + "".join(f'<button data-f="{E(f)}"{" class=on" if k == 0 else ""}>{E(f)}</button>' for k, f in enumerate(forms)) + '</div>'
     random_btn = '<button class="pill" id="rnd">随机看一个</button>' if SITE["mode"] == "apps" else ""
     hero = (f'<section class="hero"><div><h1><span class="mono">{latest}</span></h1><p>{E(SITE["tagline"])} · 今日 {n} 条</p></div>{random_btn}</section>')
     body = header("") + f'<main class="wrap">{hero}{tools}{sub}{feat}<div id="feed">{feed_list(db, conf_items)}</div><div id="empty" class="empty" hidden>没有匹配的内容</div></main>' + footer("")
@@ -527,6 +531,7 @@ def build(db=None, conf_items=None):
     if conf_items is not None:
         for c in conf_items: c["sec"] = section_of(dict(tags=c.get("tg"), title=c.get("t"), zh_title=c.get("zt"), summary=c.get("s")))
         json.dump(conf_items, open("site/conf.json", "w"), ensure_ascii=False, separators=(",", ":"))
+    build_papers(url, conf_items, tools)
     # RSS: all + per topic section + per form (papers / models / opinion keep their pre-v3 URLs)
     rss("site/feed.xml", SITE["title"], url, db)
     for k, s in enumerate(SECTIONS):
@@ -550,6 +555,15 @@ def build(db=None, conf_items=None):
     build_weekly(url)
     build_status(url)
     open("site/.nojekyll", "w").write("")
+
+def build_papers(url, conf_items, tools):
+    """顶会论文库: its own page (not a daily feed), filtered by the same topic tabs; data loaded from conf.json on demand."""
+    if conf_items is None and not os.path.exists("site/conf.json"): return
+    n = len(conf_items) if conf_items is not None else len(json.load(open("site/conf.json")))
+    os.makedirs("site/papers", exist_ok=True)
+    b = (header("../") + f'<main class="wrap"><section class="hero"><div><h1>顶会论文库</h1><p>2025–2026 年 AI / 数据挖掘 / 视觉 / NLP 顶会中的医疗 AI 论文 · 共 {n} 篇 · 按方向、会议、年份、标签筛选</p></div></section>'
+         f'{tools}<div id="confPanel" data-src="../conf.json"></div></main>' + footer("../"))
+    open("site/papers/index.html", "w").write(page(f'顶会论文库 · {SITE["title"]}', f"医疗 AI 顶会论文 {n} 篇", url + "papers/", b, 1))
 
 def build_weekly(url):
     os.makedirs("site/weekly", exist_ok=True)

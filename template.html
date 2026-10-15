@@ -69,16 +69,16 @@ const tf=$('#tagf');if(tf)tf.onclick=()=>{tag='';apply()};
 const setForm=f=>{form=f;$$('#formBar button').forEach(x=>x.classList.toggle('on',x.dataset.f===f))};
 $$('#formBar button').forEach(b=>b.onclick=()=>{setForm(b.dataset.f);page=0;apply()});
 const rnd=$('#rnd');if(rnd)rnd.onclick=()=>{const a=$$('#feed article .stretch');if(a.length)window.open(a[Math.floor(Math.random()*a.length)].href,'_blank','noopener')};
-const H=new URLSearchParams(location.hash.slice(1));if(H.get('tab')){sec=H.get('tab');$$('.tab').forEach(x=>x.classList.toggle('on',x.dataset.s===sec))}if(H.get('form'))setForm(H.get('form'));if(H.get('sub')==='conf')setForm('conf');
+const H=new URLSearchParams(location.hash.slice(1));if(H.get('tab')){sec=H.get('tab');$$('.tab').forEach(x=>x.classList.toggle('on',x.dataset.s===sec))}if(H.get('form'))setForm(H.get('form'));if(H.get('sub')==='conf'&&$('#feed'))location.replace('papers/');
 function match(el){return (sec==='全部'||el.dataset.sec===sec)&&(form==='全部形式'||el.dataset.form===form)&&(!q||el.dataset.text.includes(q))&&(!tag||el.dataset.tags.split('|').includes(tag))}
 function apply(){const fw=$('#featWrap');if(fw)fw.hidden=!!(sec!=='全部'||form!=='全部形式'||q||tag);
  if(tf){tf.hidden=!tag;tf.textContent='标签：'+tag+' ✕'}
  const cp=$('#confPanel'),feed=$('#feed');
- const conf=form==='conf'&&!!cp;if(cp)cp.hidden=!conf;feed.hidden=conf;let n=0;
+ const conf=!!cp&&!feed;let n=0;
  if(conf){loadConf();n=1}else{$$('#feed .dayg').forEach(g=>{let k=0;const fv=fw&&!fw.hidden;g.querySelectorAll('article').forEach(a=>{const m=match(a)&&!(fv&&a.dataset.top);a.hidden=!m;k+=m});g.hidden=!k;const s=g.querySelector('.n');if(s)s.textContent=k;n+=k})}
  const em=$('#empty');if(em)em.hidden=!!n}
 function loadConf(){if(C){renderConf();return}$('#confPanel').innerHTML='<div class="sk"></div><div class="sk"></div>';
- fetch('conf.json').then(r=>r.json()).then(d=>{C=d;const cs=[...new Set(d.map(x=>x.c))].sort(),ys=[...new Set(d.map(x=>x.y))].sort().reverse(),ts=[...new Set(d.flatMap(x=>x.tg))].sort();
+ fetch($('#confPanel').dataset.src||'conf.json').then(r=>r.json()).then(d=>{C=d;const cs=[...new Set(d.map(x=>x.c))].sort(),ys=[...new Set(d.map(x=>x.y))].sort().reverse(),ts=[...new Set(d.flatMap(x=>x.tg))].sort();
   const opt=(id,l,a)=>`<select id="${id}"><option value="">${l}</option>${a.map(v=>`<option>${E(v)}</option>`).join('')}</select>`;
   $('#confPanel').innerHTML=`<div class="filters">${opt('fc','全部会议',cs)}${opt('fy','全部年份',ys)}${opt('ft','全部标签',ts)}<span class="muted" id="fn" style="font-size:12px;align-self:center"></span></div><div class="feed" id="cl"></div><div class="pager" id="pg"></div>`;
   ['fc','fy','ft'].forEach(i=>$('#'+i).onchange=()=>{page=0;renderConf()});renderConf()}).catch(()=>{$('#confPanel').innerHTML='<div class="empty">加载失败</div>'})}
