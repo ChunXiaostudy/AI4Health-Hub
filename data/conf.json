@@ -83,7 +83,7 @@
 "year": 2025,
 "date": "2025-01-01",
 "link": "https://doi.org/10.18653/v1/2025.findings-acl.751",
-"cites": 70,
+"cites": 71,
 "zh_title": "用可验证医学问题提升大模型复杂推理",
 "summary": "该研究提出以可验证的医学问题训练与评估大模型，提升其医学复杂推理能力。",
 "key_points": [
@@ -493,7 +493,7 @@
 "year": 2025,
 "date": "2025-10-13",
 "link": "https://doi.org/10.48550/arXiv.2510.11423",
-"cites": 18,
+"cites": 19,
 "zh_title": "超越众包：LLM增强社区笔记治理健康虚假信息",
 "summary": "分析3.08万条健康相关社区笔记，提出LLM增强框架CrowdNotes+以提升响应速度。",
 "key_points": [
@@ -1234,7 +1234,7 @@
 "year": 2025,
 "date": "2025-07-20",
 "link": "https://doi.org/10.18653/v1/2026.findings-acl.562",
-"cites": 6,
+"cites": 7,
 "skip": true
 },
 "a9141b4705b9d25ca1972a24403588d750380299": {
@@ -6585,7 +6585,7 @@
 "year": 2025,
 "date": "2025-06-04",
 "link": "https://doi.org/10.48550/arXiv.2506.04078",
-"cites": 43,
+"cites": 44,
 "zh_title": "LLMEval-Med：经医生验证的真实临床医学大模型基准",
 "summary": "提出基于真实临床场景并由医生验证的医学大模型评测基准，旨在改进题目设计、数据来源和复杂推理评估。",
 "key_points": [
@@ -8043,7 +8043,7 @@
 "year": 2025,
 "date": "2025-09-12",
 "link": "https://doi.org/10.48550/arXiv.2509.10685",
-"cites": 4,
+"cites": 5,
 "zh_title": "面向医疗的多元对齐：角色驱动框架",
 "summary": "针对医疗领域价值观多元性，提出轻量、可泛化的角色驱动对齐框架。",
 "key_points": [
@@ -9955,7 +9955,7 @@
 "year": 2025,
 "date": "2025-08-07",
 "link": "https://doi.org/10.48550/arXiv.2508.05772",
-"cites": 30,
+"cites": 31,
 "zh_title": "MAISI-v2：整流流加速三维高分辨医学图像合成",
 "summary": "AAAI 2025提出MAISI-v2，用整流流与区域对比损失加速三维医学图像合成。",
 "key_points": [
@@ -10599,7 +10599,7 @@
 "year": 2025,
 "date": "2025-06-01",
 "link": "https://doi.org/10.48550/arXiv.2506.00942",
-"cites": 10,
+"cites": 11,
 "zh_title": "anyECG-chat：通用心电图多模态大模型",
 "summary": "构建支持灵活心电图输入与多任务理解的通用心电图多模态大语言模型，突破单导联短时程限制。",
 "key_points": [
@@ -12793,7 +12793,7 @@
 "year": 2026,
 "date": "2026-01-09",
 "link": "https://doi.org/10.48550/arXiv.2601.05855",
-"cites": 3,
+"cites": 4,
 "zh_title": "双向通道选择语义交互的半监督医学分割",
 "summary": "提出双向通道选择语义交互框架BCSI，缓解半监督医学图像分割中的误差累积并加强标注与未标注流交互。",
 "key_points": [
@@ -18440,7 +18440,7 @@
 "year": 2025,
 "date": "2025-03-08",
 "link": "https://doi.org/10.48550/arXiv.2503.06073",
-"cites": 52,
+"cites": 53,
 "zh_title": "GEM：面向心电时序与图像的循证理解多模态大模型",
 "summary": "GEM 统一心电时序信号、12 导联图像与文本，实现特征可溯源、与临床医生对齐的心电图解读。",
 "key_points": [
@@ -22194,7 +22194,7 @@
 "year": 2025,
 "date": "2025-02-14",
 "link": "https://doi.org/10.48550/arXiv.2502.09838",
-"cites": 139,
+"cites": 140,
 "zh_title": "HealthGPT：统一医学视觉理解与生成的LVLM",
 "summary": "提出医学大视觉语言模型HealthGPT，以异构低秩适配H-LoRA在统一自回归范式中整合医学视觉理解与生成。",
 "key_points": [
@@ -24617,7 +24617,7 @@
 "year": 2025,
 "date": "2025-01-13",
 "link": "https://doi.org/10.1109/CVPR52734.2025.01837",
-"cites": 55,
+"cites": 56,
 "zh_title": "BIOMEDICA：开放生物医学图像-文本档案与模型",
 "summary": "BIOMEDICA 从科学文献中抽取并标注图像-文本数据，构建开放数据集并衍生视觉-语言模型。",
 "key_points": [
@@ -26559,7 +26559,7 @@
 "year": 2025,
 "date": "2025-10-19",
 "link": "https://doi.org/10.1109/ICCV51701.2025.01992",
-"cites": 2,
+"cites": 3,
 "zh_title": "自适应学习高价值区域用于半监督医学图像分割",
 "summary": "该研究聚焦半监督医学图像分割中高价值区域的自适应学习，无摘要仅依据标题。",
 "key_points": [
@@ -32901,7 +32901,7 @@
 "year": 2025,
 "date": "2025-01-01",
 "link": "https://doi.org/10.1007/978-3-032-04981-0_60",
-"cites": 9,
+"cites": 10,
 "zh_title": "面向不完整文本提示的鲁棒医学图像指代分割",
 "summary": "研究在文本提示不完整条件下提升医学图像指代分割的鲁棒性；来源仅提供标题，无摘要信息。",
 "key_points": [
@@ -33094,7 +33094,7 @@
 "year": 2025,
 "date": "2025-01-01",
 "link": "https://doi.org/10.1007/978-3-032-05127-1_54",
-"cites": 8,
+"cites": 9,
 "zh_title": "TGSAM-2：文本引导SAM 2的医学图像分割",
 "summary": "TGSAM-2提出以文本引导Segment Anything Model 2进行医学图像分割（来源仅提供标题）。",
 "key_points": [
