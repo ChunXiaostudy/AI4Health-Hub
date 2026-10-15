@@ -221,14 +221,36 @@ def f_pubmed(src):
 
 META_KEYS = ("citation_abstract", "dc.description", "og:description", "description")
 NO_META = ("github.com", "huggingface.co", "news.google.com", "medrxiv.org", "biorxiv.org", "pubmed.ncbi.nlm.nih.gov")
+BROWSER = {"User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0 Safari/537.36",
+           "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8", "Accept-Language": "en-US,en;q=0.9"}
+_HOST_LOCKS, _HOST_LOCK = {}, __import__("threading").Lock()
+
+def fetch_page(url, tries=3):
+    """Article page for abstract meta tags. Publishers (notably nature.com) throttle CI runners, so: one request per host at a time,
+    browser-like headers, backoff on 403/429/503 and timeouts, and log the final failure instead of dropping it silently."""
+    host = urllib.parse.urlparse(url).hostname or ""
+    with _HOST_LOCK: lock = _HOST_LOCKS.setdefault(host, __import__("threading").Lock())
+    err = None
+    for a in range(tries):
+        with lock:
+            try:
+                s = get(url, timeout=20, headers=BROWSER).decode("utf-8", "ignore")
+                time.sleep(0.5); return s
+            except urllib.error.HTTPError as ex:
+                err = f"HTTP {ex.code}"
+                if ex.code not in (403, 429, 503): break
+                wait = int(ex.headers.get("Retry-After") or 0) or 3 * 2 ** a
+            except Exception as ex:
+                err = repr(ex)[:80]; wait = 3 * 2 ** a
+        if a < tries - 1: time.sleep(min(wait, 30))
+    print(f"[abstract] page fetch failed ({err}): {url}", file=sys.stderr)
+    return None
+
 def fill_abstract(it):
     """RSS often carries only a one-line teaser (e.g. Nature journals); pull the abstract from the article page's meta tags."""
     host = urllib.parse.urlparse(it["link"]).hostname or ""
     if it.get("thin_src") or len(it.get("desc") or "") >= 300 or any(host.endswith(h) for h in NO_META): return it
-    s = None
-    for a in range(2):  # publishers drop some requests under load; one polite retry
-        try: s = get(it["link"], timeout=15).decode("utf-8", "ignore"); break
-        except Exception: time.sleep(2)
+    s = fetch_page(it["link"])
     if s is None: return it
     best = it.get("desc") or ""
     for k in META_KEYS:
@@ -368,6 +390,15 @@ def europepmc_abstract(doi):
     hit = (r.get("resultList") or {}).get("result") or []
     return clean(hit[0].get("abstractText") or "", ABS_MAX) if hit else ""
 
+def openalex_abstract(doi):
+    """OpenAlex rebuilds abstracts from an inverted index; indexes new papers a few days late, but is reachable from CI."""
+    try: r = json.loads(get("https://api.openalex.org/works/doi:" + urllib.parse.quote(doi), timeout=20))
+    except urllib.error.HTTPError as ex:
+        if ex.code == 404: return ""
+        raise
+    words = sorted((p, w) for w, ps in (r.get("abstract_inverted_index") or {}).items() for p in ps)
+    return clean(" ".join(w for _, w in words), ABS_MAX)
+
 def pubmed_abstract(pmid):
     root = ET.fromstring(get("https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&retmode=xml&id=" + pmid, timeout=20))
     return clean(" ".join("".join(x.itertext()) for x in root.iter("AbstractText")), ABS_MAX)
@@ -383,15 +414,21 @@ def find_abstract(it, fresh):
         m = re.search(r"pubmed\.ncbi\.nlm\.nih\.gov/(\d+)", it["link"])
         if m: return pubmed_abstract(m.group(1))
         doi = (it.get("badge") or "")[4:] if (it.get("badge") or "").startswith("DOI ") else ""
-        if doi: return europepmc_abstract(doi)
+        if doi:
+            for f in (europepmc_abstract, openalex_abstract):
+                try:
+                    ab = f(doi)
+                    if len(ab) >= 200: return ab
+                except Exception as ex:
+                    print(f"[backfill] {it['id']} {f.__name__}: {ex}", file=sys.stderr)
     except Exception as ex:
         print(f"[backfill] {it['id']}: {ex}", file=sys.stderr)
     return ""
 
 def backfill(db, results):
-    """Paper items collected before abstracts were kept: find the abstract, redo summary/score from it, translate. Each item gets up to 3 runs."""
+    """Paper items collected before abstracts were kept: find the abstract, redo summary/score from it, translate. Each item gets up to 5 runs (OpenAlex indexes new papers a few days late)."""
     fresh = {it["id"]: it for _, res, _ in results for it in res}
-    todo = [d for d in db if not d.get("abstract") and d.get("abstract_tries", 0) < 3 and (d.get("source_group") or d.get("source")) in PAPER_SOURCES]
+    todo = [d for d in db if not d.get("abstract") and d.get("abstract_tries", 0) < 5 and (d.get("source_group") or d.get("source")) in PAPER_SOURCES]
     todo = sorted(todo, key=lambda d: d.get("day", ""), reverse=True)[:BACKFILL_MAX]
     with cf.ThreadPoolExecutor(3) as ex: abstracts = list(ex.map(lambda d: find_abstract(d, fresh), todo))
     got = []
