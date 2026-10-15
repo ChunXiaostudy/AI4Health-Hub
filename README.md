@@ -28,6 +28,8 @@ Secrets: `LLM_API_KEY`, `LLM_BASE_URL`；可选变量 `LLM_MODEL`（默认 deeps
 - `data/status.json` 记录每次各来源条数 → `/status.html`；连续 3 次为 0 自动开/更新 issue。
 - RSS：`feed.xml`；按方向 `feed-{imaging,llm-agents,clinical-prediction,life-science,digital-health,regulation,industry}.xml`；按形式 `feed-{papers,models,news,opinion}.xml`；周报 `weekly/feed.xml`。旧的 `feed-clinical-regulatory.xml` 继续生成（= 落地与监管）。
 - `weekly.py` + `.github/workflows/weekly.yml`：每周一生成周报 `/weekly/YYYY-Www/`。
+- 样式与脚本在 `assets/app.css`、`assets/app.js`，所有页面共用（带内容哈希 `?v=` 防缓存），`template.html` 只是外壳。
+- 来源图标在构建时下载到 `data/fav/<host>.png`（只下载一次；空文件表示该站没有图标），由站点自己提供，不再让访客直连 google.com。设 `FAV_FETCH=0` 跳过下载。
 - 测试：`python tests/test_hub.py`。
 
 ## 打分标准与评测集

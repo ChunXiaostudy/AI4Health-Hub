@@ -1,6 +1,6 @@
 """Shared pipeline: fetch -> dedupe -> LLM summarize -> rank -> static build (pre-rendered HTML, archives, RSS, weekly).
 Concept inspired by AISafetyHot-Hub (CC BY-NC 4.0) and AIHOT (MIT); code written from scratch."""
-import json, os, re, sys, time, math, glob, html, hashlib, difflib, datetime as dt, urllib.request, urllib.parse, urllib.error
+import json, os, re, shutil, sys, time, math, glob, html, hashlib, difflib, datetime as dt, urllib.request, urllib.parse, urllib.error
 import xml.etree.ElementTree as ET, concurrent.futures as cf
 import config as C
 try:
@@ -467,9 +467,37 @@ def main():
     print(f"added {len(done)}, total {len(db)}", file=sys.stderr)
 
 # ---------------------------------------------------------------- render
-def fav(link, home=""):
-    h = urllib.parse.urlparse(home or link).hostname or ""
-    return f"https://www.google.com/s2/favicons?sz=32&domain={h}"
+FAV_DIR = "data/fav"  # favicons cached at build time and served from the site itself (google.com is unreachable in mainland China)
+FAVS = set()  # hosts with a cached icon; filled by sync_favicons()
+
+def host_of(link, home=""):
+    return (urllib.parse.urlparse(home or link).hostname or "").lower()
+
+def fav_img(link, home="", base=""):
+    h = host_of(link, home)
+    return f'<img src="{base}fav/{E(h)}.png" alt="" loading="lazy" width="16" height="16" onerror="this.remove()">' if h in FAVS else ""
+
+def sync_favicons(items, workers=16):
+    """Fetch missing favicons once per host into data/fav/ (an empty file marks a host with no icon), then copy them into site/fav/."""
+    os.makedirs(FAV_DIR, exist_ok=True)
+    hosts = {host_of(i["link"], i.get("home")) for i in items if i.get("link")} - {""}
+    def one(h):
+        p = f"{FAV_DIR}/{h}.png"
+        if os.path.exists(p): return
+        try:
+            b = get(f"https://www.google.com/s2/favicons?sz=32&domain={urllib.parse.quote(h)}", timeout=8)
+            open(p, "wb").write(b)
+        except urllib.error.HTTPError as ex:
+            if ex.code == 404: open(p, "wb").close()
+        except Exception: pass  # offline / transient: try again next build
+    if os.getenv("FAV_FETCH", "1") != "0":
+        with cf.ThreadPoolExecutor(workers) as ex: list(ex.map(one, sorted(hosts)))
+    os.makedirs("site/fav", exist_ok=True)
+    FAVS.clear()
+    for h in hosts:
+        p = f"{FAV_DIR}/{h}.png"
+        if os.path.exists(p) and os.path.getsize(p):
+            shutil.copyfile(p, f"site/fav/{h}.png"); FAVS.add(h)
 
 def cite_text(i):
     ref = i.get("badge") or i["link"]
@@ -481,7 +509,7 @@ def card(i, featured=False, top=False, base=""):
     title = (i.get("zh_title") or i["title"]) if health else (i.get("name") or i["title"])
     txt = " ".join([title, i["title"], i.get("summary") or "", i["source"], " ".join(tags)]).lower()
     attrs = ('data-top="1" ' if top else '') + f'data-sec="{E(section_of(i))}" data-form="{E(form_of(i))}" data-tags="{E("|".join(tags))}" data-text="{E(txt)}"'
-    meta = (f'<div class="meta"><img src="{fav(i["link"], i.get("home"))}" alt="" loading="lazy" onerror="this.remove()"><span>{E(i["source"])}</span>'
+    meta = (f'<div class="meta">{fav_img(i["link"], i.get("home"), base)}<span>{E(i["source"])}</span>'
             f'<span>·</span><span>发布于 {zh_date(i.get("date",""))}</span>' + (f'<span>·</span><span class="mono">{E(i["pop"])}</span>' if i.get("pop") else "") +
             (f'<span class="badge" title="{E(i["badge"])}">{E(i["badge"])}</span>' if health and i.get("badge") else "") +
             f'<a class="ext" href="{E(i["link"])}" target="_blank" rel="noopener" title="打开原文">原文 ↗</a></div>')
@@ -531,14 +559,27 @@ def day_label(d):
     if d == TODAY: return f"今日收录 · {zh_date(d)}"
     return f"{zh_date(d)} 收录"
 
+ASSETS = ("app.css", "app.js")  # shared by every page, so browsers cache them once instead of re-downloading inline CSS/JS per page
+_TPL = {}
+
+def template():
+    if not _TPL:
+        _TPL["html"] = open("template.html", encoding="utf-8").read()
+        _TPL["v"] = hashlib.sha1(b"".join(open(f"assets/{a}", "rb").read() for a in ASSETS)).hexdigest()[:8]
+    return _TPL["html"], _TPL["v"]
+
+def copy_assets():
+    os.makedirs("site/assets", exist_ok=True)
+    for a in ASSETS: shutil.copyfile(f"assets/{a}", f"site/assets/{a}")
+
 def page(title, desc, url, body, depth=0, extra_head=""):
     base = "../" * depth
-    tpl = open("template.html", encoding="utf-8").read()
+    tpl, ver = template()
     head = (f'<title>{E(title)}</title><meta name="description" content="{E(desc)}"><link rel="canonical" href="{E(url)}">'
             f'<meta property="og:type" content="website"><meta property="og:title" content="{E(title)}"><meta property="og:description" content="{E(desc)}">'
             f'<meta property="og:url" content="{E(url)}"><meta property="og:site_name" content="{E(SITE["title"])}"><meta name="twitter:card" content="summary">'
             f'<link rel="alternate" type="application/rss+xml" title="{E(SITE["title"])}" href="{base}feed.xml">' + extra_head)
-    return tpl.replace("{{HEAD}}", head).replace("{{MODE}}", SITE["mode"]).replace("{{BODY}}", body).replace("{{BASE}}", base)
+    return tpl.replace("{{HEAD}}", head).replace("{{MODE}}", SITE["mode"]).replace("{{V}}", ver).replace("{{BASE}}", base).replace("{{BODY}}", body)
 
 ICONS = {  # 18px line icons, stroke = currentColor
   "hot": '<path d="M12 3c1 3.5 5 5.5 5 10a5 5 0 0 1-10 0c0-2 1-3.5 2-4.5.3 1.6 1 2.6 2 3 0-3 0-5.5 1-8.5z"/>',
@@ -598,6 +639,8 @@ def build(db=None, conf_items=None):
         i["tags"] = norm_tags(i.get("tags")); i["section"] = section_of(i); i["rank"] = rank(i)
         if i.get("thin"): i["key_points"] = []
     os.makedirs("site", exist_ok=True)
+    copy_assets()
+    sync_favicons(db + [i for d in load_archive().values() for i in d] + (conf_items or []))
     url = SITE["url"]
     feat, latest, n = featured(db)
     tools = ('<div class="tools"><input id="q" type="search" placeholder="搜索标题、摘要、来源、标签…" aria-label="搜索"><span id="tagf" class="tagf" hidden></span></div>')
@@ -647,7 +690,7 @@ def zh_paras(txt):
 def item_page(i, related, url):
     tn, tc = tier(i.get("score"))
     title = i.get("zh_title") or i.get("name") or i["title"]
-    meta = (f'<div class="meta"><img src="{fav(i["link"], i.get("home"))}" alt="" onerror="this.remove()"><span>{E(i["source"])}</span><span>·</span><span>发布于 {zh_date(i.get("date", ""))}</span>' +
+    meta = (f'<div class="meta">{fav_img(i["link"], i.get("home"), "../../")}<span>{E(i["source"])}</span><span>·</span><span>发布于 {zh_date(i.get("date", ""))}</span>' +
             (f'<span>·</span><span class="mono">{E(i["pop"])}</span>' if i.get("pop") else "") +
             (f'<span>·</span><span>收录于 <a href="../../{E(i["day"])}/">{E(i["day"])}</a></span>' if i.get("day") else "") + "</div>")
     digest = f'<p>{E(i.get("summary"))}</p>' + (f'<ul class="kp">' + "".join(f"<li>{E(k)}</li>" for k in i["key_points"][:3]) + "</ul>" if i.get("key_points") and not i.get("thin") else "")
