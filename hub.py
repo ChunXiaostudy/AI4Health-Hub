@@ -489,17 +489,27 @@ def page(title, desc, url, body, depth=0, extra_head=""):
             f'<link rel="alternate" type="application/rss+xml" title="{E(SITE["title"])}" href="{base}feed.xml">' + extra_head)
     return tpl.replace("{{HEAD}}", head).replace("{{MODE}}", SITE["mode"]).replace("{{BODY}}", body).replace("{{BASE}}", base)
 
-def header(base, tabs=True):
-    t = ""
-    if tabs:
-        t = '<nav class="tabs" id="tabs">' + "".join(f'<button class="tab{" on" if s=="全部" else ""}" data-s="{E(s)}">{E(s)}</button>' for s in ["全部"] + SECTIONS) + "</nav>"
-    else: t = '<nav class="tabs"></nav>'
-    return (f'<header><div class="wrap"><a class="brand" href="{base}./">{SITE["wordmark"]}</a>{t}<div class="links"><a href="{base}papers/">论文库</a><a href="{base}weekly/">周报</a><a href="{base}archive/">归档</a>'
-            f'<a href="{base}feed.xml">RSS</a><a href="{SITE["repo"]}" target="_blank" rel="noopener">GitHub</a></div></div></header>')
+ICONS = {  # 18px line icons, stroke = currentColor
+  "hot": '<path d="M12 3c1 3.5 5 5.5 5 10a5 5 0 0 1-10 0c0-2 1-3.5 2-4.5.3 1.6 1 2.6 2 3 0-3 0-5.5 1-8.5z"/>',
+  "papers": '<path d="M4 5.5A1.5 1.5 0 0 1 5.5 4H11v16H5.5A1.5 1.5 0 0 1 4 18.5zM20 5.5A1.5 1.5 0 0 0 18.5 4H13v16h5.5a1.5 1.5 0 0 0 1.5-1.5z"/>',
+  "weekly": '<rect x="4" y="5" width="16" height="15" rx="2"/><path d="M4 9h16M8 3v4M16 3v4M8 13h3M8 16h6"/>',
+  "archive": '<rect x="3" y="4" width="18" height="5" rx="1"/><path d="M5 9v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V9M10 13h4"/>',
+}
+NAV = [("hot", "每日 HOT", "./"), ("papers", "论文库", "papers/"), ("weekly", "周报", "weekly/"), ("archive", "归档", "archive/")]
+
+def header(base, tabs=True, active=""):
+    """Left sidebar (desktop) / bottom bar (phone) switch pages; the sticky top bar only holds the topic tabs that filter the current page."""
+    ico = lambda k: f'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">{ICONS[k]}</svg>'
+    links = "".join(f'<a href="{base}{href}"{" class=on aria-current=page" if k == active else ""}>{ico(k)}<span>{name}</span></a>' for k, name, href in NAV)
+    side = (f'<aside class="side"><a class="brand" href="{base}./">{SITE["wordmark"]}</a><nav class="snav">{links}</nav>'
+            f'<div class="sfoot"><a href="{base}feed.xml">RSS 订阅</a><a href="{base}status.html">数据源状态</a><a href="{SITE["repo"]}" target="_blank" rel="noopener">GitHub</a></div></aside>'
+            f'<nav class="bnav">{links}</nav>')
+    t = ('<nav class="tabs" id="tabs">' + "".join(f'<button class="tab{" on" if s=="全部" else ""}" data-s="{E(s)}">{E(s)}</button>' for s in ["全部"] + SECTIONS) + "</nav>") if tabs else ""
+    return side + f'<header{"" if tabs else " class=notabs"}><div class="wrap"><a class="brand" href="{base}./">{SITE["wordmark"]}</a>{t}</div></header>'
 
 def footer(base, st=None):
     srcs = "、".join(sorted({s["name"] for s in SOURCES}))
-    return (f'<footer><div class="wrap">{E(SITE.get("disclaimer",""))}<br>数据来源：{E(srcs)} · <a href="{base}status.html">数据源状态</a><br>'
+    return (f'<footer><div class="wrap">{E(SITE.get("disclaimer",""))}<br>数据来源：{E(srcs)} · <a href="{base}status.html">数据源状态</a> · <a href="{base}feed.xml">RSS</a><br>'
             f'更新于 <span class="mono">{NOW.astimezone(CST).strftime("%Y-%m-%d %H:%M")} (UTC+8)</span> · <a href="{SITE["repo"]}" target="_blank">{SITE["repo"]}</a> · '
             f'灵感来自 <a href="https://github.com/wuyoscar/AISafetyHot-Hub" target="_blank">AISafetyHot-Hub</a> 与 <a href="https://github.com/KKKKhazix/AIHOT" target="_blank">AIHOT</a></div></footer>')
 
@@ -544,7 +554,7 @@ def build(db=None, conf_items=None):
     sub = '<div id="formBar" class="sub">' + "".join(f'<button data-f="{E(f)}"{" class=on" if k == 0 else ""}>{E(f)}</button>' for k, f in enumerate(forms)) + '</div>'
     random_btn = '<button class="pill" id="rnd">随机看一个</button>' if SITE["mode"] == "apps" else ""
     hero = (f'<section class="hero"><div><h1><span class="mono">{latest}</span></h1><p>{E(SITE["tagline"])} · 今日 {n} 条</p></div>{random_btn}</section>')
-    body = header("") + f'<main class="wrap">{hero}{tools}{sub}{feat}<div id="feed">{feed_list(db, conf_items)}</div><div id="empty" class="empty" hidden>没有匹配的内容</div></main>' + footer("")
+    body = header("", active="hot") + f'<main class="wrap">{hero}{tools}{sub}{feat}<div id="feed">{feed_list(db, conf_items)}</div><div id="empty" class="empty" hidden>没有匹配的内容</div></main>' + footer("")
     open("site/index.html", "w").write(page(SITE["title"], SITE["tagline"] + "：" + "、".join(SECTIONS), url, body))
     # conference data, loaded on demand
     if conf_items is not None:
@@ -570,11 +580,11 @@ def build(db=None, conf_items=None):
         for i in items: i["tags"] = norm_tags(i.get("tags"))
         items = sorted(items, key=rank, reverse=True)
         os.makedirs(f"site/{day}", exist_ok=True)
-        b = header("../", tabs=False) + f'<main class="wrap"><section class="hero"><div><h1><span class="mono">{day}</span></h1><p>{E(SITE["tagline"])} · 当日收录 {len(items)} 条 · <a href="../archive/">全部归档</a></p></div></section><div class="feed">' + "".join(card(i, base="../") for i in items) + "</div></main>" + footer("../")
+        b = header("../", tabs=False, active="archive") + f'<main class="wrap"><section class="hero"><div><h1><span class="mono">{day}</span></h1><p>{E(SITE["tagline"])} · 当日收录 {len(items)} 条 · <a href="../archive/">全部归档</a></p></div></section><div class="feed">' + "".join(card(i, base="../") for i in items) + "</div></main>" + footer("../")
         open(f"site/{day}/index.html", "w").write(page(f'{day} · {SITE["title"]}', f'{day} 收录 {len(items)} 条', url + day + "/", b, 1))
     rows = "".join(f'<li><a href="../{d}/"><span class="mono">{d}</span> · {len(arc[d])} 条</a></li>' for d in sorted(arc, reverse=True))
     os.makedirs("site/archive", exist_ok=True)
-    open("site/archive/index.html", "w").write(page(f'归档 · {SITE["title"]}', "每日收录归档", url + "archive/", header("../", False) + f'<main class="wrap"><section class="hero"><div><h1>每日归档</h1><p>共 {len(arc)} 天</p></div></section><ul class="list">{rows}</ul></main>' + footer("../"), 1))
+    open("site/archive/index.html", "w").write(page(f'归档 · {SITE["title"]}', "每日收录归档", url + "archive/", header("../", False, "archive") + f'<main class="wrap"><section class="hero"><div><h1>每日归档</h1><p>共 {len(arc)} 天</p></div></section><ul class="list">{rows}</ul></main>' + footer("../"), 1))
     build_weekly(url)
     build_status(url)
     open("site/.nojekyll", "w").write("")
@@ -611,7 +621,7 @@ def item_page(i, related, url):
             (f'<button class="cite" data-cite="{E(cite_text(i))}">复制引用 / DOI</button>' if i.get("badge") or i.get("type") == "论文" else ""))
     relh = "同方向的高分顶会论文" if i.get("source_group") == "顶会论文" else "同方向的其他条目"
     rel = (f'<h2 class="relh">{relh}</h2><div class="feed">' + "".join(card(r, base="../../") for r in related) + "</div>") if related else ""
-    body = (header("../../", False) + f'<main class="wrap item"><a class="back" href="../../{"papers/" if i.get("source_group") == "顶会论文" else ""}">← 返回{"论文库" if i.get("source_group") == "顶会论文" else "首页"}</a><div class="igrid"><article class="imain">{meta}<h1>{E(title)}</h1>'
+    body = (header("../../", False, "papers" if i.get("source_group") == "顶会论文" else "hot") + f'<main class="wrap item"><a class="back" href="../../{"papers/" if i.get("source_group") == "顶会论文" else ""}">← 返回{"论文库" if i.get("source_group") == "顶会论文" else "首页"}</a><div class="igrid"><article class="imain">{meta}<h1>{E(title)}</h1>'
             + (f'<div class="orig">{E(i["title"])}</div>' if title != i["title"] else "") +
             f'<h2>AI 导读</h2>{digest}{abstract}{also}<p class="muted note">导读与中文摘要由 AI 生成 / 翻译，仅供参考，请以原文为准；不构成医疗建议。</p></article>'
             f'<aside class="iside">{side}</aside></div>{rel}</main>' + footer("../../"))
@@ -640,7 +650,7 @@ def build_papers(url, conf_items, tools):
     if conf_items is None and not os.path.exists("site/conf.json"): return
     n = len(conf_items) if conf_items is not None else len(json.load(open("site/conf.json")))
     os.makedirs("site/papers", exist_ok=True)
-    b = (header("../") + f'<main class="wrap"><section class="hero"><div><h1>顶会论文库</h1><p>2025–2026 年 AI / 数据挖掘 / 视觉 / NLP 顶会中的医疗 AI 论文 · 共 {n} 篇 · 按方向、会议、年份、标签筛选</p></div></section>'
+    b = (header("../", active="papers") + f'<main class="wrap"><section class="hero"><div><h1>顶会论文库</h1><p>2025–2026 年 AI / 数据挖掘 / 视觉 / NLP 顶会中的医疗 AI 论文 · 共 {n} 篇 · 按方向、会议、年份、标签筛选</p></div></section>'
          f'{tools}<div id="confPanel" data-src="../conf.json"></div></main>' + footer("../"))
     open("site/papers/index.html", "w").write(page(f'顶会论文库 · {SITE["title"]}', f"医疗 AI 顶会论文 {n} 篇", url + "papers/", b, 1))
 
@@ -654,11 +664,11 @@ def build_weekly(url):
         paras = "".join(f"<p>{E(x)}</p>" for x in w["summary"].split("\n") if x.strip())
         paras = re.sub(r"\[(\d+)\]", r'<a href="#r\1">[\1]</a>', paras)
         os.makedirs(f"site/weekly/{wk}", exist_ok=True)
-        b = header("../../", False) + f'<main class="wrap"><section class="hero"><div><h1>周报 <span class="mono">{wk}</span></h1><p>{E(w["range"])}{" · 进行中" if w.get("partial") else ""} · <a href="../">全部周报</a></p></div></section><article class="card prose">{paras}<h2>本周条目</h2><ol class="refs">{refs}</ol></article></main>' + footer("../../")
+        b = header("../../", False, "weekly") + f'<main class="wrap"><section class="hero"><div><h1>周报 <span class="mono">{wk}</span></h1><p>{E(w["range"])}{" · 进行中" if w.get("partial") else ""} · <a href="../">全部周报</a></p></div></section><article class="card prose">{paras}<h2>本周条目</h2><ol class="refs">{refs}</ol></article></main>' + footer("../../")
         open(f"site/weekly/{wk}/index.html", "w").write(page(f'周报 {wk} · {SITE["title"]}', w["summary"][:120], url + f"weekly/{wk}/", b, 2))
         rows += f'<li><a href="{wk}/"><span class="mono">{wk}</span> · {E(w["range"])}</a></li>'
         ritems.append(dict(id="w" + wk, title=f'周报 {wk}', link=url + f"weekly/{wk}/", date=w["generated"], section="周报", summary=w["summary"][:300], source=SITE["title"], tags=[]))
-    open("site/weekly/index.html", "w").write(page(f'周报 · {SITE["title"]}', "每周综述", url + "weekly/", header("../", False) + f'<main class="wrap"><section class="hero"><div><h1>周报</h1><p><a href="feed.xml">周报 RSS</a></p></div></section><ul class="list">{rows or "<li>暂无</li>"}</ul></main>' + footer("../"), 1))
+    open("site/weekly/index.html", "w").write(page(f'周报 · {SITE["title"]}', "每周综述", url + "weekly/", header("../", False, "weekly") + f'<main class="wrap"><section class="hero"><div><h1>周报</h1><p><a href="feed.xml">周报 RSS</a></p></div></section><ul class="list">{rows or "<li>暂无</li>"}</ul></main>' + footer("../"), 1))
     rss("site/weekly/feed.xml", f'{SITE["title"]} · 周报', url + "weekly/", ritems)
 
 def build_status(url):
