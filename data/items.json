@@ -121,6 +121,37 @@
   "rank": 11.31
  },
  {
+  "title": "Personalized neoantigen-targeting cancer vaccines in ovarian cancer: a phase 1 trial",
+  "link": "https://www.nature.com/articles/s41591-026-04717-8",
+  "date": "2026-10-14T00:00:00+00:00",
+  "source": "Nature Medicine",
+  "source_group": "Nature Medicine",
+  "home": "",
+  "thin": false,
+  "badge": "DOI 10.1038/s41591-026-04717-8",
+  "pop": null,
+  "id": "2a4a1146b013",
+  "keep": true,
+  "zh_title": "卵巢癌个体化新抗原疫苗1期试验",
+  "summary": "1期试验显示个体化新抗原疫苗联合PD-1阻断治疗高级别浆液性卵巢癌可行，多数患者产生肿瘤特异性免疫应答。",
+  "key_points": [
+   "新抗原疫苗联合PD-1阻断方案可行",
+   "多数患者出现肿瘤特异性免疫应答",
+   "cfDNA分析提示抗原呈递相关耐药机制"
+  ],
+  "section": "生命科学与药物",
+  "type": "论文",
+  "tags": [
+   "肿瘤",
+   "基因组学"
+  ],
+  "evidence": "同行评审",
+  "score": 5,
+  "reason": "同行评审1期试验、样本小、无AI方法，属值得一看档",
+  "day": "2026-10-15",
+  "rank": 10.81
+ },
+ {
   "title": "From compliance to competence: a multi-level model for AI governance in undergraduate medical education",
   "link": "https://www.nature.com/articles/s41746-026-03390-y",
   "date": "2026-10-14T00:00:00+00:00",
