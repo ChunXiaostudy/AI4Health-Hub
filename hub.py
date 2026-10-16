@@ -223,24 +223,57 @@ def f_pubmed(src):
 
 META_KEYS = ("citation_abstract", "dc.description", "og:description", "description")
 NO_META = ("github.com", "huggingface.co", "news.google.com", "medrxiv.org", "biorxiv.org", "pubmed.ncbi.nlm.nih.gov")
+TEASER_RE = re.compile(r"^[^,]{2,80}, Published online: \d{1,2} \w+ \d{4}; doi:\S+", re.I)
+def is_teaser(s):
+    """Nature-family RSS description ("<journal>, Published online: <date>; doi:<doi> <title> <standfirst>"): not an abstract."""
+    return bool(TEASER_RE.match(s or ""))
+
+PREPRINT_HOSTS = ("biorxiv.org", "medrxiv.org")
+def norm_badge(it):
+    """bioRxiv / medRxiv links end in a version (…/10.64898/2026.10.05.756921v1); the DOI itself has no version."""
+    host = urllib.parse.urlparse(it.get("link") or "").hostname or ""
+    if (it.get("badge") or "").startswith("DOI ") and host.endswith(PREPRINT_HOSTS): it["badge"] = re.sub(r"v\d+$", "", it["badge"])
+    return it
+
+def springer_abstract(doi):
+    """Springer Nature citation export (RIS). Small and reliable from CI, unlike nature.com article pages, which get
+    throttled to a ~3 KB stub when fetched in parallel from GitHub Actions."""
+    ris = get(f"https://citation-needed.springer.com/v2/references/{doi}?format=refman&flavour=citation", timeout=20).decode("utf-8", "ignore")
+    return clean(" ".join(l[6:] for l in ris.splitlines() if l.startswith("AB  -")), ABS_MAX)
+
 def fill_abstract(it):
-    """RSS often carries only a one-line teaser (e.g. Nature journals); pull the abstract from the article page's meta tags."""
+    """RSS often carries only a one-line teaser (e.g. Nature journals); get the abstract from Springer's citation export
+    (Nature journals) or the article page's meta tags."""
     host = urllib.parse.urlparse(it["link"]).hostname or ""
-    if it.get("thin_src") or len(it.get("desc") or "") >= 300 or any(host.endswith(h) for h in NO_META): return it
-    s = None
+    cur = "" if is_teaser(it.get("desc")) else (it.get("desc") or "")
+    if it.get("thin_src") or len(cur) >= 300 or any(host.endswith(h) for h in NO_META): return it
+    errs = []
+    m = re.search(r"nature\.com/articles/([\w.-]+)", it["link"])
+    if m:
+        try:
+            ab = springer_abstract("10.1038/" + m.group(1))
+            if len(ab) >= 200: it["desc"] = ab; it["thin"] = False; it.pop("_abs_err", None); return it
+            errs.append("springer: empty")
+        except Exception as ex: errs.append(f"springer: {str(ex)[:60]}")
+    s, page_err = None, ""
     for a in range(2):  # publishers drop some requests under load; one polite retry
         try: s = get(it["link"], timeout=15).decode("utf-8", "ignore"); break
-        except Exception as ex: it["_abs_err"] = f"page: {str(ex)[:80]}"; time.sleep(2)
-    if s is None: return it
-    it.pop("_abs_err", None)
-    best = it.get("desc") or ""
-    for k in META_KEYS:
-        m = re.search(r'<meta[^>]+(?:name|property)="' + re.escape(k) + r'"[^>]+content="([^"]*)"', s, re.I)
-        txt = clean(m.group(1), ABS_MAX) if m else ""
-        if len(txt) > len(best) and not txt.lower().startswith("abstract page for"): best = txt
-    if len(best) > len(it.get("desc") or ""):
-        it["desc"] = best; it["thin"] = len(best) < 80
-    if len(best) < 200: it["_abs_err"] = f"page: no abstract in meta ({len(s)} bytes, best {len(best)} chars)"
+        except Exception as ex: page_err = f"page: {str(ex)[:80]}"; time.sleep(2)
+    best = cur
+    if s is not None:
+        for k in META_KEYS:
+            mm = re.search(r'<meta[^>]+(?:name|property)="' + re.escape(k) + r'"[^>]+content="([^"]*)"', s, re.I)
+            txt = clean(mm.group(1), ABS_MAX) if mm else ""
+            if len(txt) > len(best) and not txt.lower().startswith("abstract page for"): best = txt
+        if len(best) > len(cur):
+            it["desc"] = best; it["thin"] = len(best) < 80
+        if len(best) < 200:  # keep what the page actually was (e.g. a stub served to CI), to tell blocking from layout changes
+            t = re.search(r"<title[^>]*>(.*?)</title>", s, re.I | re.S)
+            body = clean(re.sub(r"<(script|style)[^>]*>.*?</\1>", " ", s, flags=re.I | re.S), 100)
+            page_err = f"page: no abstract in meta ({len(s)} bytes; title: {clean(t.group(1), 60) if t else '-'}; text: {body})"
+    errs += [page_err] if page_err else []
+    if errs: it["_abs_err"] = "; ".join(errs)
+    else: it.pop("_abs_err", None)
     return it
 
 FETCH = dict(rss=f_rss, arxiv=f_arxiv, github=f_github, hf=f_hf, pubmed=f_pubmed)
@@ -263,6 +296,7 @@ def fetch_source(src):
             m = re.search(r"arxiv\.org/abs/([\d.]+)", it["link"]) or re.search(r"(10\.\d{4,}/[^\s?#%]+)", it["link"])
             if m: it["badge"] = ("arXiv " if "arxiv" in it["link"] else "DOI ") + m.group(1)
             elif "nature.com/articles/" in it["link"]: it["badge"] = "DOI 10.1038/" + it["link"].rsplit("/", 1)[-1]
+        norm_badge(it)
         it["id"] = hashlib.sha1((it["link"] or it["title"]).encode()).hexdigest()[:12]
         res.append(it)
     print(f"[src] {src['name']}: {len(res)}" + (f" (error: {err})" if err else ""), file=sys.stderr)
@@ -384,18 +418,24 @@ def openalex_abstract(doi):
     pos = sorted((p, w) for w, ps in (r.get("abstract_inverted_index") or {}).items() for p in ps)
     return clean(" ".join(w for _, w in pos), ABS_MAX)
 
+def preprint_abstract(server, doi):
+    c = json.loads(get(f"https://api.biorxiv.org/details/{server}/{re.sub(r'v\d+$', '', doi)}", timeout=20)).get("collection") or []
+    return clean(c[-1].get("abstract") or "", ABS_MAX) if c else ""  # last entry = latest version
+
 def find_abstract(it, fresh):
-    """Abstract for a paper item: same-run feed entry > article page meta > PubMed > Europe PMC > OpenAlex.
+    """Abstract for a paper item: same-run feed entry > article page meta > bioRxiv/medRxiv API > PubMed > Europe PMC > OpenAlex.
     Returns (abstract, why it failed); the reason is kept on the item so CI failures are visible in items.json."""
     f = fresh.get(it["id"])
-    if f and len(f.get("desc") or "") >= 200: return f["desc"], ""
+    if f and len(f.get("desc") or "") >= 200 and not is_teaser(f["desc"]): return f["desc"], ""
     x = dict(link=it["link"], desc="")
     fill_abstract(x)
     if len(x["desc"]) >= 200: return x["desc"], ""
     errs = [x.get("_abs_err") or "page: skipped"]
     m = re.search(r"pubmed\.ncbi\.nlm\.nih\.gov/(\d+)", it["link"])
     doi = (it.get("badge") or "")[4:] if (it.get("badge") or "").startswith("DOI ") else ""
-    tries = ([("pubmed", pubmed_abstract, m.group(1))] if m else []) + ([("europepmc", europepmc_abstract, doi), ("openalex", openalex_abstract, doi)] if doi else [])
+    pre = re.search(r"(biorxiv|medrxiv)\.org/", it["link"])
+    tries = (([(pre.group(1) + "-api", lambda d: preprint_abstract(pre.group(1), d), doi)] if pre and doi else []) +
+             ([("pubmed", pubmed_abstract, m.group(1))] if m else []) + ([("europepmc", europepmc_abstract, doi), ("openalex", openalex_abstract, doi)] if doi else []))
     for name, fn, key in tries:
         try:
             ab = fn(key)
@@ -471,7 +511,10 @@ def save_rejected(rej, pick):
 def main():
     os.makedirs("data", exist_ok=True)
     db = json.load(open("data/items.json")) if os.path.exists("data/items.json") else []
-    for d in db: d["section"] = section_of(d)
+    for d in db:
+        d["section"] = section_of(d); norm_badge(d)
+        if is_teaser(d.get("abstract")):  # RSS teaser stored as abstract by older runs: drop it so backfill looks for the real one
+            for k in ("abstract", "zh_abstract", "abstract_days", "abstract_err"): d.pop(k, None)
     with cf.ThreadPoolExecutor(8) as ex: results = list(ex.map(fetch_source, SOURCES))
     update_status(results)
     rejected = load_rejected()
@@ -502,10 +545,10 @@ def main():
     for d in done:
         d.pop("_verdict", None)
         ab = d.pop("desc", None) or ""
-        if not d.get("thin") and len(ab) >= 200: d["abstract"] = ab
+        if not d.get("thin") and len(ab) >= 200 and not is_teaser(ab): d["abstract"] = ab
         d["day"] = TODAY; d.pop("evidence_hint", None); d.pop("thin_src", None); d["rank"] = rank(d)
     translate_all(done)
-    backfill(db, results)
+    backfill(db + done, results)  # new papers whose page fetch failed get the API fallbacks in the same run
     recent = [d for d in db if d.get("day", "") >= (NOW - dt.timedelta(days=3)).strftime("%Y-%m-%d")]
     done = cluster(done, recent)
     cutoff = (NOW - dt.timedelta(days=KEEP_DAYS)).strftime("%Y-%m-%d")
@@ -669,7 +712,7 @@ def rss(path, title, link, items):
 def build(db=None, conf_items=None):
     if db is None: db = json.load(open("data/items.json"))
     for i in db:  # normalize legacy items
-        i["tags"] = norm_tags(i.get("tags")); i["section"] = section_of(i); i["rank"] = rank(i)
+        i["tags"] = norm_tags(i.get("tags")); i["section"] = section_of(i); i["rank"] = rank(i); norm_badge(i)
         if i.get("thin"): i["key_points"] = []
     os.makedirs("site", exist_ok=True)
     fetch_favicons({fav_host(i["link"], i.get("home")) for i in db + (conf_items or []) + [x for v in load_archive().values() for x in v]})
@@ -703,7 +746,7 @@ def build(db=None, conf_items=None):
     # archive pages (permanent store)
     arc = load_archive()
     for day, items in arc.items():
-        for i in items: i["tags"] = norm_tags(i.get("tags"))
+        for i in items: i["tags"] = norm_tags(i.get("tags")); norm_badge(i)
         items = sorted(items, key=rank, reverse=True)
         os.makedirs(f"site/{day}", exist_ok=True)
         b = header("../", tabs=False, active="archive") + f'<main class="wrap"><section class="hero"><div><h1><span class="mono">{day}</span></h1><p>{E(SITE["tagline"])} · 当日收录 {len(items)} 条 · <a href="../archive/">全部归档</a></p></div></section><div class="feed">' + "".join(card(i, base="../") for i in items) + "</div></main>" + footer("../")
@@ -764,7 +807,7 @@ def build_items(url, arc, conf_items=None):
             open(f'site/items/{c["id"]}/index.html', "w").write(item_page(c, [r for r in cs if r["id"] != c["id"]][:4], url)); n += 1
     for day, items in arc.items():
         for i in items:
-            i["tags"] = norm_tags(i.get("tags")); i["section"] = section_of(i)
+            i["tags"] = norm_tags(i.get("tags")); i["section"] = section_of(i); norm_badge(i)
         for i in items:
             related = sorted([r for r in items if r["id"] != i["id"] and r["section"] == i["section"]], key=rank, reverse=True)[:4]
             os.makedirs(f'site/items/{i["id"]}', exist_ok=True)
