@@ -311,6 +311,12 @@ def test_pmlr_venues():
     assert c["conf_label"] == "ML4H 2025" and c["date"] == "2025-12-01" and len(c["pid"]) == 40   # conference year, not bib year
     assert conf.as_item(dict(c, zh_title="x"))["id"] == "c" + c["pid"][:11]
 
+def test_visit_counter_markup():
+    it = dict(score=8, source="NEJM AI", evidence="同行评审", day="2026-10-14", date="2026-10-14T00:00:00Z", id="abc123", title="t", link="https://x.org/a", tags=[], type="论文")
+    h = hub.item_page(it, [], "https://example.org/")
+    assert h.count('id="busuanzi_value_page_pv"') == 1 and h.count('id="busuanzi_value_site_pv"') == 1 and "busuanzi.pure.mini.js" in h
+    assert 'data-k="site_uv"' in hub.footer("")
+
 if __name__ == "__main__":
     for k, f in list(globals().items()):
         if k.startswith("test_"): f(); print("ok", k)

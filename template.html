@@ -1,4 +1,4 @@
-<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">{{HEAD}}<style>
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">{{HEAD}}<script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><style>
 .health{--warn:#A8650C;--bg:#F6F8F7;--sf:#FFFFFF;--tx:#14201C;--mu:#5B6B65;--bd:#E3E9E6;--ac:#0E8A6E;--ac2:#2F6FDB;--acr:14,138,110;--ac2r:47,111,219}
 .apps{--bg:#FBF8F3;--sf:#FFFFFF;--tx:#1F1B16;--mu:#6E665C;--bd:#ECE5DA;--ac:#FF6A3D;--ac2:#7A5AF8;--acr:255,106,61;--ac2r:122,90,248}
 @media (prefers-color-scheme:dark){
@@ -100,6 +100,7 @@ h2 small{font-size:12px;font-weight:500;color:var(--mu);letter-spacing:.02em}
 .tr .spk{width:100%;height:20px;color:var(--ac)}.tr .spk polyline{fill:none;stroke:currentColor;stroke-width:1.6;stroke-linejoin:round;stroke-linecap:round;vector-effect:non-scaling-stroke}
 #featWrap .mini{margin-top:0}
 @media(max-width:640px){.trends{grid-template-columns:repeat(2,minmax(0,1fr))}.tr:nth-child(n+7){display:none}.tr{grid-template-columns:minmax(0,1fr);padding:10px 12px}.tr .spk{width:100%}.tr .tv b{font-size:18px}h2{flex-wrap:wrap;row-gap:2px}h2::after{display:none}}
+.bsz{line-height:1.7;margin-bottom:6px;padding-bottom:8px;border-bottom:1px solid var(--bd)}.bsz b,.bszm b{font:600 12px "JetBrains Mono",ui-monospace,monospace;color:var(--tx)}@media(min-width:900px){.bszm{display:none!important}}
 [hidden]{display:none!important}
 </style></head><body class="{{MODE}}">{{BODY}}<script>
 (function(){
@@ -137,5 +138,7 @@ function renderConf(){const fc=$('#fc').value,fy=$('#fy').value,ft=$('#ft').valu
  $('#pg').innerHTML=`<button id="pp" ${page?'':'disabled'}>上一页</button><span class="mono">${page+1} / ${P}</span><button id="pn" ${page<P-1?'':'disabled'}>下一页</button>`;
  $('#pp').onclick=()=>{page--;renderConf();$('#confPanel').scrollIntoView()};$('#pn').onclick=()=>{page++;renderConf();$('#confPanel').scrollIntoView()}}
 apply();
+// mirror busuanzi's sidebar numbers into the footer line shown on phones
+const bv=$('#busuanzi_value_site_pv'),bm=$('.bszm');if(bv&&bm){const sync=()=>{if(!bv.textContent.trim())return;bm.querySelectorAll('[data-k]').forEach(x=>{const v=$('#busuanzi_value_'+x.dataset.k);x.textContent=v?v.textContent:''});bm.hidden=false};new MutationObserver(sync).observe(bv,{childList:true,characterData:true,subtree:true});sync()}
 })();
 </script></body></html>
