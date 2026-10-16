@@ -187,7 +187,7 @@
 "abstract_days": [
 "2026-10-16"
 ],
-"abstract_err": "springer: empty; page: no abstract in meta (3036 bytes; title: Client Challenge; text: Client Challenge JavaScript is disabled in your browser. Please enable JavaScript to proceed. A requ); europepmc: empty; openalex: HTTP Error 404: Not Found"
+"abstract_err": "springer-api: empty; springer: empty; page: Client Challenge (bot check) from www.nature.com; europepmc: empty; openalex: HTTP Error 404: Not Found"
 },
 {
 "title": "No Mastery without the Machine — Medical Education in the Age of Clinical AI",
@@ -220,72 +220,6 @@
 "abstract_err": "page: HTTP Error 403: Forbidden; europepmc: empty; openalex: empty"
 },
 {
-"title": "Characterizing time-of-day physical activity patterns across cognitive trajectories in older adults: a longitudinal cohort study",
-"link": "https://www.nature.com/articles/s41746-026-03370-2",
-"date": "2026-10-15T00:00:00+00:00",
-"source": "npj Digital Medicine",
-"source_group": "npj Digital Medicine",
-"home": "",
-"thin": false,
-"badge": "DOI 10.1038/s41746-026-03370-2",
-"pop": null,
-"id": "52f525dc0a40",
-"keep": true,
-"zh_title": "老年人认知轨迹与一天中体力活动模式：纵向队列研究",
-"summary": "一项纵向队列研究刻画老年人一天中不同时段的体力活动模式，并按认知轨迹分层进行比较。",
-"key_points": [
-"纵向队列研究设计",
-"按认知轨迹分层比较活动模式",
-"关注一天中时段分布特征"
-],
-"section": "数字健康",
-"type": "论文",
-"tags": [
-"数字健康",
-"神经科学"
-],
-"evidence": "同行评审",
-"score": 4,
-"reason": "纵向队列但仅见标题级信息，无AI方法细节，属增量档",
-"day": "2026-10-15",
-"rank": 9.5,
-"abstract_days": [
-"2026-10-16"
-],
-"abstract_err": "springer: empty; page: no abstract in meta (3036 bytes; title: Client Challenge; text: Client Challenge JavaScript is disabled in your browser. Please enable JavaScript to proceed. A requ); europepmc: empty; openalex: HTTP Error 404: Not Found"
-},
-{
-"title": "Implementation and effectiveness of a smartphone app targeted at improving physicians adherence to antimicrobial treatment guidelines",
-"link": "https://www.nature.com/articles/s41746-026-03401-y",
-"date": "2026-10-15T00:00:00+00:00",
-"source": "npj Digital Medicine",
-"source_group": "npj Digital Medicine",
-"home": "",
-"thin": false,
-"badge": "DOI 10.1038/s41746-026-03401-y",
-"pop": null,
-"id": "e84bdc4ba132",
-"keep": true,
-"zh_title": "智能手机App提升医生抗菌治疗指南依从性",
-"summary": "npj Digital Medicine刊文报告一款提高医生对抗菌治疗指南依从性的智能手机应用的实施与效果。",
-"key_points": [],
-"section": "数字健康",
-"type": "论文",
-"tags": [
-"数字健康",
-"临床决策支持"
-],
-"evidence": "同行评审",
-"score": 4,
-"reason": "仅有标题信息，无数据与设计细节，属增量档",
-"day": "2026-10-15",
-"rank": 9.5,
-"abstract_days": [
-"2026-10-16"
-],
-"abstract_err": "springer: empty; page: no abstract in meta (3036 bytes; title: Client Challenge; text: Client Challenge JavaScript is disabled in your browser. Please enable JavaScript to proceed. A requ); europepmc: empty; openalex: HTTP Error 404: Not Found"
-},
-{
 "title": "From compliance to competence: a multi-level model for AI governance in undergraduate medical education",
 "link": "https://www.nature.com/articles/s41746-026-03390-y",
 "date": "2026-10-14T00:00:00+00:00",
@@ -297,28 +231,25 @@
 "pop": null,
 "id": "65e4346d23e3",
 "keep": true,
-"zh_title": "从合规到胜任：本科医学教育AI治理多层次模型",
-"summary": "针对本科医学院AI治理提出基于问责、胜任与共同责任的多层次框架。",
+"zh_title": "本科医学教育AI治理的多层次框架",
+"summary": "提出覆盖院校、教师与学生的问责、胜任力与共责多层次框架，以推进本科医学教育中的AI治理。",
 "key_points": [
-"现有院校政策多为即时行为限制",
-"战略监督、基础设施与评估发展不足",
-"提出机构、教师、学生多层次问责框架"
+"指出院校现有政策多聚焦即时行为限制",
+"战略监督、基础设施与评估仍不完善",
+"提出问责、胜任力、共责三原则框架"
 ],
 "section": "落地与监管",
 "type": "观点",
 "tags": [
-"监管政策",
-"临床落地"
+"监管政策"
 ],
 "evidence": "同行评审",
 "score": 4,
 "day": "2026-10-15",
 "rank": 10.31,
-"reason": "观点型治理框架，无实证数据或评估结果，属增量档",
-"abstract_days": [
-"2026-10-16"
-],
-"abstract_err": "springer: empty; page: no abstract in meta (3036 bytes; title: Client Challenge; text: Client Challenge JavaScript is disabled in your browser. Please enable JavaScript to proceed. A requ); europepmc: empty; openalex: empty"
+"reason": "观点类框架文章，按观点上限档位取增量分",
+"abstract": "AI's fast-paced irruption in medicine and education has challenged undergraduate medical colleges, with institutions documenting policies emphasizing immediate conduct restrictions, while strategic oversight, infrastructure and evaluation remain less consistently developed. We propose a multi-level framework for AI governance in undergraduate medical education based on accountability, competence and co-responsibility across institutions, educators and students, designed to turn a fast-evolving technology from a threat into an opportunity for collective progress.",
+"zh_abstract": "人工智能在医学和教育中的快速涌入对本科医学院校构成了挑战，各机构制定了强调即时行为限制的政策，而战略监督、基础设施和评估的发展则仍较不一致。我们提出了一个本科医学教育中人工智能治理的多层次框架，该框架基于机构、教育者和学生之间的问责、能力和共同责任，旨在将快速演进的技术从威胁转变为集体进步的机会。"
 },
 {
 "title": "Current status and future outlook of artificial intelligence and automation in intravenous infusion systems",
@@ -707,6 +638,72 @@
 "rank": 10.81,
 "abstract": "Personalized neoantigen-targeting cancer vaccines in the adjuvant setting are of increasing interest across malignancies. Here we report the results of a phase 1 clinical trial testing the feasibility and safety of personalized neoantigen-targeting cancer vaccines for high-grade epithelial ovarian cancer. ‘NeoVax’ consisted of pools of synthetic long peptides targeting patient-specific neoantigens admixed with the immunostimulant poly-ICLC, was combined with delayed administration of anti-PD-1 antibody, and was tested in ten patients (one newly diagnosed patient (Cohort A) and nine patients at first recurrence (Cohort B)) with platinum-sensitive ovarian cancer following standard-of-care platinum doublet chemotherapy. Nine of 12 evaluable Cohort B patients were vaccinated (75%, 90% CI 47–93%) and 1 of 9 Cohort A patients (11%, 90% CI 0.6–43%). No unexpected safety signals were encountered and no patients discontinued treatment due to toxicity. Across patients, >70% selected targets remained detectable by noninvasive cell-free DNA analysis despite a median of 6.5 months from the time of diagnostic biopsy to vaccine administration, during which, patients received standard-of-care chemotherapy. Biomarker analysis was suggestive of biologic activity of the vaccine in six of ten patients and this was associated with broader tumor and vaccine-specific immune responses in blood and tumor following vaccination. Resistant tumor clones reflected diverse mechanisms affecting antigen presentation, indicative of immune-selective pressure exerted by vaccination. Overall, the interplay between the repertoire of antigens presented by the tumor and the breadth of induced immunity seemed to dictate clinical efficacy following vaccination. ClinicalTrials.gov identifier: NCT04024878.",
 "zh_abstract": "在辅助治疗背景下，靶向新抗原的个性化癌症疫苗在多种恶性肿瘤中日益受到关注。在此，我们报告一项 1 期临床试验的结果，该试验在高级别上皮性卵巢癌中检验靶向新抗原的个性化癌症疫苗的可行性和安全性。“NeoVax”由靶向患者特异性新抗原的合成长肽库与免疫刺激剂 poly-ICLC 混合组成，与延迟给予的抗 PD-1 抗体联合，并在十例铂敏感卵巢癌患者（一例新诊断患者（队列 A）和九例首次复发患者（队列 B））中，于标准治疗铂类双药化疗后进行了测试。队列 B 中 12 例可评估患者中有 9 例接种了疫苗（75%，90% CI 47–93%），队列 A 中 9 例中有 1 例接种（11%，90% CI 0.6–43%）。未遇到意外的安全性信号，且没有患者因毒性停止治疗。在患者中，尽管从诊断活检到疫苗接种的中位时间为 6.5 个月，在此期间患者接受了标准治疗化疗，>70% 的所选靶标仍可通过无创游离 DNA 分析检测到。生物标志物分析提示疫苗在十例患者中的六例具有生物学活性，并且这与接种后血液和肿瘤中更广泛的肿瘤及疫苗特异性免疫反应相关。耐药肿瘤克隆反映了影响抗原呈递的多种机制，提示疫苗接种施加的免疫选择压力。总体而言，肿瘤所呈递抗原库与诱导免疫广度之间的相互作用似乎决定了疫苗接种后的临床疗效。ClinicalTrials.gov 标识符：NCT04024878。"
+},
+{
+"title": "Characterizing time-of-day physical activity patterns across cognitive trajectories in older adults: a longitudinal cohort study",
+"link": "https://www.nature.com/articles/s41746-026-03370-2",
+"date": "2026-10-15T00:00:00+00:00",
+"source": "npj Digital Medicine",
+"source_group": "npj Digital Medicine",
+"home": "",
+"thin": false,
+"badge": "DOI 10.1038/s41746-026-03370-2",
+"pop": null,
+"id": "52f525dc0a40",
+"keep": true,
+"zh_title": "老年人认知轨迹与一天中体力活动时段特征",
+"summary": "ARIC队列811名老年人中，认知下降较慢与中午时段活动更多、久坐更少相关，短窗口指标与全天相近。",
+"key_points": [
+"ARIC队列811名认知未受损老年人",
+"认知下降慢者10–15点活动更多、久坐更少",
+"11–13点短窗口与24小时指标关联相近"
+],
+"section": "数字健康",
+"type": "论文",
+"tags": [
+"数字健康",
+"生理信号"
+],
+"evidence": "同行评审",
+"score": 2,
+"reason": "未涉及AI/算法方法，仅纵向关联分析，与AI主题关系很弱",
+"day": "2026-10-15",
+"rank": 9.5,
+"abstract": "Declining cognitive function is a growing health challenge, yet how cognitive decline influences time-of-day physical activity (PA) patterns remains underexplored. Among cognitively unimpaired participants from the Atherosclerosis Risk in Communities Study, we modeled general and domain-specific cognitive trajectories and related them to accelerometry-derived PA a median of 8.2 years later in 811 participants (mean baseline age 73.1 years) using function-on-scalar and multivariable regression. Slower cognitive decline was associated with more favorable midday PA (10 AM–3 PM), including higher movement volume, less sedentary time, fewer interruptions to active periods, and greater activity variability. In adjusted linear regression models, associations with PA patterns derived from a window as short as 11 AM-1 PM were comparable to those with 24-hour measures. The executive function trajectory exhibited the strongest associations with PA patterns, and over the longest period of the day; the language trajectory showed non-linear associations, and the peak association for the memory trajectory with PA occurred in the late morning (10:30–11:30 AM). Associations between cognitive decline and activity variability were stronger than for other PA metrics. Our findings highlight the potential of PA patterns, particularly activity variability, as a non-invasive way to help monitor cognitive decline before clinical impairment emerges.",
+"zh_abstract": "认知功能下降是一个日益严峻的健康挑战，但认知下降如何影响一天中不同时段的身体活动（PA）模式仍未得到充分探索。在社区动脉粥样硬化风险研究（Atherosclerosis Risk in Communities Study）中认知未受损的参与者中，我们对一般认知和领域特异性认知轨迹进行建模，并使用 function-on-scalar 回归和多变量回归，将其与中位 8.2 年后 811 名参与者（基线平均年龄 73.1 岁）通过加速度计得出的 PA 相关联。较慢的认知下降与更有利的午间 PA（上午 10 点至下午 3 点）相关，包括更高的活动量、更少的久坐时间、活动期更少的中断以及更大的活动变异性。在调整后的线性回归模型中，来自短至上午 11 点至下午 1 点时间窗的 PA 模式关联与 24 小时测量的关联相当。执行功能轨迹与 PA 模式的关联最强，且覆盖一天中最长的时间段；语言轨迹显示出非线性关联；记忆轨迹与 PA 的关联峰值出现在上午晚些时候（上午 10:30 至 11:30）。认知下降与活动变异性之间的关联强于其他 PA 指标。我们的发现凸显了 PA 模式，特别是活动变异性，作为一种非侵入性方式帮助在临床损害出现前监测认知下降的潜力。"
+},
+{
+"title": "Implementation and effectiveness of a smartphone app targeted at improving physicians adherence to antimicrobial treatment guidelines",
+"link": "https://www.nature.com/articles/s41746-026-03401-y",
+"date": "2026-10-15T00:00:00+00:00",
+"source": "npj Digital Medicine",
+"source_group": "npj Digital Medicine",
+"home": "",
+"thin": false,
+"badge": "DOI 10.1038/s41746-026-03401-y",
+"pop": null,
+"id": "e84bdc4ba132",
+"keep": true,
+"zh_title": "智能手机指南App提升抗菌药物指南依从性：整群随机试验",
+"summary": "埃塞俄比亚20家医院整群随机试验，App加培训对比纸质指南，以1433份病历评估处方指南依从性。",
+"key_points": [
+"埃塞俄比亚20家医院整群随机对照试验",
+"主要结局为1433份病历的指南依从处方",
+"含抗生素总体使用与广谱用药等次要结局"
+],
+"section": "数字健康",
+"type": "论文",
+"tags": [
+"数字健康",
+"临床落地"
+],
+"evidence": "同行评审",
+"score": 2,
+"reason": "移动健康干预试验，无AI/算法要素，与AI主题关系很弱",
+"day": "2026-10-15",
+"rank": 9.5,
+"abstract": "The effectiveness of mHealth interventions for improving antimicrobial guideline adherence remains insufficiently understood in resource-limited settings. This study evaluated a context-adapted smartphone Standard Treatment Guideline (STG) app designed to improve physicians’ adherence to antimicrobial treatment guidelines in Ethiopia. A type 1 hybrid effectiveness–implementation cluster-randomized trial was conducted in 20 hospitals randomized to a smartphone app plus training or paper-based guidelines and retrospectively registered (PACTR202504495116733). The primary outcome was guideline-adherent prescribing, defined as correct antibiotic selection, dose, frequency, and duration when treatment was indicated, or appropriately documented non-prescribing when antibiotics were not indicated across 1433 patient charts. Secondary outcomes included overall antibiotic use and broad-spectrum antibiotic use. Guideline adherence improved by 26.7 percentage points in crude difference-in-differences analysis, and the adjusted intervention-by-endline effect showed higher odds of guideline-adherent prescribing (aOR 3.89; 95% CI: 1.96–7.73). Overall, antibiotic use declined from 96.9% to 82.2% in the intervention arm. In a post-hoc sensitivity analysis using all eligible charts, broad-spectrum antibiotic use declined from 83.9 to 57.5%. These findings support the potential value of a multicomponent intervention combining an offline STG app with training and implementation support for improving guideline-concordant antimicrobial prescribing; however, the independent contribution of the mobile application cannot be determined.",
+"zh_abstract": "在资源有限环境中，移动健康（mHealth）干预对改善抗菌药物指南依从性的有效性仍未被充分了解。本研究评估了一款适应具体情境的智能手机标准治疗指南（Standard Treatment Guideline, STG）应用程序，该应用程序旨在提高埃塞俄比亚医生对抗菌药物治疗指南的依从性。研究在20家医院开展了一项1型混合效果-实施整群随机试验，医院被随机分配至智能手机应用程序加培训组或纸质指南组，并进行了回顾性注册（PACTR202504495116733）。主要结局是指南依从性处方，其定义为：在1433份患者病历中，当有治疗指征时正确选择抗生素、剂量、频率和疗程，或当无抗生素指征时适当记录不处方。次要结局包括总体抗生素使用和广谱抗生素使用。在粗双重差分分析中，指南依从性提高了26.7个百分点，校正后的干预×终点效应显示，指南依从性处方的几率更高（aOR 3.89；95% CI：1.96–7.73）。总体上，干预组抗生素使用率从96.9%降至82.2%。在一项使用所有合格病历的事后敏感性分析中，广谱抗生素使用率从83.9%降至57.5%。这些发现支持一种多组分干预的潜在价值，该干预将离线STG应用程序与培训及实施支持相结合，以改善与指南一致的抗菌药物处方；然而，移动应用程序的独立贡献无法确定。"
 },
 {
 "title": "eyonis Inc., a Median Technologies Company, to Present Study Results Supporting eyonis® LCS Performance Claims at CHEST 2026",

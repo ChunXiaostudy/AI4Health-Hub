@@ -293,28 +293,26 @@
 "id": "96c2a5e62dd9",
 "keep": true,
 "zh_title": "常规临床数据刻画癌症恶病质发生与进展",
-"summary": "在52,236例癌症患者中，恶病质体重下降与更低生存率、疾病进展相关，并具一致血清学特征，模型可预测其风险。",
+"summary": "在52,236例癌症患者中，恶病质体重下降与生存降低、疾病进展相关，并具跨常规化验指标的一致血清学特征。",
 "key_points": [
-"恶病质体重下降者生存率更低",
-"体重下降多发生于疾病进展时期",
-"TP53等基因型与恶病质风险正相关"
+"52,236例癌症患者队列分析",
+"体重下降发作与生存降低、疾病进展相关",
+"训练统计模型预测患者恶病质风险"
 ],
 "section": "临床预测与决策",
 "type": "论文",
 "tags": [
-"临床预测",
-"肿瘤"
+"肿瘤",
+"临床预测"
 ],
 "evidence": "同行评审",
 "score": 6,
 "day": "2026-10-14",
 "source_group": "Nature Medicine",
 "thin": false,
-"reason": "大样本回顾性队列并训练预测模型，以关联描述为主，属值得一看档",
-"abstract_days": [
-"2026-10-16"
-],
-"abstract_err": "springer: empty; page: no abstract in meta (3036 bytes; title: Client Challenge; text: Client Challenge JavaScript is disabled in your browser. Please enable JavaScript to proceed. A requ); europepmc: empty; openalex: empty"
+"reason": "大样本预测模型但未见外部队列验证，属值得一看档",
+"abstract": "In 52,236 patients with cancer, cachectic weight loss episodes were linked to lower survival rates, occurred at times of disease progression, and carried a consistent serological signature across routine laboratory markers. Specific tumor genotypes, including TP53 mutations, were also positively associated with cachexia risk. Statistical models were trained to predict a patient’s impending risk of cachexia.",
+"zh_abstract": "在52,236例癌症患者中，恶病质体重减轻事件与较低生存率相关，发生于疾病进展时，并在常规实验室标志物中具有一致的血清学特征。特定肿瘤基因型，包括TP53突变，也与恶病质风险呈正相关。统计模型经过训练，用于预测患者即将发生的恶病质风险。"
 },
 {
 "title": "Electronic health record developer adherence to federal AI risk transparency requirements",
@@ -3420,6 +3418,10 @@
 {
 "source": "Medical Marketing and Media",
 "link": "https://news.google.com/rss/articles/CBMioAFBVV95cUxNaENvVDhCNjJzMEU2dFYzbXR5YWJmZGxQbkpqRVI4UWVKNzMtM2dKc1ltRi1PZTRIRE9Da1JIc1lZOWZ0RzBxZUlPM0tvZ2k1cGVoOVhZWXQ1X1BjV1BSWGN3V05mdW1FcjFCeVBaQ3dBLTVJVzZvT2ZndnVHNmoycVFkTXZ6X2FPQWdDLVMydnBsdDdVU0FhX1pQdzRrSFEx?oc=5"
+},
+{
+"source": "Fierce Healthcare",
+"link": "https://news.google.com/rss/articles/CBMixwFBVV95cUxONlhKc1ZCTXJJaG11alVIamxabWM3Z1RiRVRaY2JXSEZUSHdnb3pfcnVpWjAxNFQxdkJxWWU1OGtFejEydU5zUmVZM2pOeXY2STBBU2FVWDdqYzlWX1djV0tRay1tN2pSazBYNk5XeU02N252c0NLN05CZlN0Mm9iOGRVZ0hiRzFCQ1MwcDlkWlZoZzBROU5YcmtfdWZ0Qi04VEJzcGlGUnV0Xzd5VmR5U21nTnBaNWp3dnNmTmlwc0dSVEdPbXFn?oc=5"
 }
 ]
 },

@@ -1,6 +1,67 @@
 {
  "runs": [
   {
+   "time": "2026-10-16T02:49:34.469594+00:00",
+   "sources": {
+    "arXiv": {
+     "fetched": 268,
+     "error": null
+    },
+    "medRxiv": {
+     "fetched": 30,
+     "error": null
+    },
+    "bioRxiv": {
+     "fetched": 8,
+     "error": null
+    },
+    "PubMed": {
+     "fetched": 25,
+     "error": null
+    },
+    "Nature Medicine": {
+     "fetched": 0,
+     "error": "Client Challenge (bot check) from www.nature.com"
+    },
+    "npj Digital Medicine": {
+     "fetched": 8,
+     "error": null
+    },
+    "Lancet Digital Health": {
+     "fetched": 12,
+     "error": null
+    },
+    "NEJM AI": {
+     "fetched": 9,
+     "error": null
+    },
+    "Hugging Face": {
+     "fetched": 15,
+     "error": null
+    },
+    "GitHub": {
+     "fetched": 15,
+     "error": null
+    },
+    "STAT News": {
+     "fetched": 6,
+     "error": null
+    },
+    "Fierce Healthcare": {
+     "fetched": 5,
+     "error": null
+    },
+    "Google News · FDA AI": {
+     "fetched": 15,
+     "error": null
+    },
+    "Google News · NMPA AI": {
+     "fetched": 10,
+     "error": null
+    }
+   }
+  },
+  {
    "time": "2026-10-16T02:30:50.188546+00:00",
    "sources": {
     "arXiv": {
@@ -792,67 +853,6 @@
      "error": null
     }
    }
-  },
-  {
-   "time": "2026-10-15T06:22:19.309189+00:00",
-   "sources": {
-    "arXiv": {
-     "fetched": 54,
-     "error": null
-    },
-    "medRxiv": {
-     "fetched": 30,
-     "error": null
-    },
-    "bioRxiv": {
-     "fetched": 6,
-     "error": null
-    },
-    "PubMed": {
-     "fetched": 25,
-     "error": null
-    },
-    "Nature Medicine": {
-     "fetched": 8,
-     "error": null
-    },
-    "npj Digital Medicine": {
-     "fetched": 8,
-     "error": null
-    },
-    "Lancet Digital Health": {
-     "fetched": 12,
-     "error": null
-    },
-    "NEJM AI": {
-     "fetched": 9,
-     "error": null
-    },
-    "Hugging Face": {
-     "fetched": 15,
-     "error": null
-    },
-    "GitHub": {
-     "fetched": 15,
-     "error": null
-    },
-    "STAT News": {
-     "fetched": 6,
-     "error": null
-    },
-    "Fierce Healthcare": {
-     "fetched": 5,
-     "error": null
-    },
-    "Google News · FDA AI": {
-     "fetched": 15,
-     "error": null
-    },
-    "Google News · NMPA AI": {
-     "fetched": 10,
-     "error": null
-    }
-   }
   }
  ],
  "streak": {
@@ -860,7 +860,7 @@
   "medRxiv": 0,
   "bioRxiv": 0,
   "PubMed": 0,
-  "Nature Medicine": 0,
+  "Nature Medicine": 1,
   "npj Digital Medicine": 0,
   "Lancet Digital Health": 0,
   "NEJM AI": 0,
