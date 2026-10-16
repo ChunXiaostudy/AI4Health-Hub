@@ -67,6 +67,39 @@
 "zh_abstract": "表型分型是罕见病诊断的基础，但从临床笔记中人工整理结构化表型费力且难以扩展。现有的人工智能（AI）方法优化表型分型的各个组成部分，但通常未将完整工作流付诸实施，即从临床文本中提取特征、将其标准化为人类表型本体（HPO）术语，并对罕见病相关 HPO 术语进行优先级排序。我们开发了 RARE-PHENIX，一个用于罕见病表型分型的端到端 AI 框架，整合了基于大语言模型的表型提取、基于本体的 HPO 术语标准化以及对 HPO 术语的监督排序。我们使用来自 11 个未诊断疾病网络（Undiagnosed Diseases Network）临床中心的 2671 名患者数据训练 RARE-PHENIX，并在范德堡大学医学中心（Vanderbilt University Medical Center）143 名患者的 16,357 份真实世界临床笔记上进行外部验证。我们的发现表明，RARE-PHENIX 生成的结构化、优先排序的 HPO 术语与临床医生整理高度一致，展示出潜在的下游疾病优先级排序信号，并可能支持真实世界环境中人在回路（human-in-the-loop）的罕见病表型分型。"
 },
 {
+"title": "Artificial intelligence-enabled clinical phenotyping of human brown fat.",
+"link": "https://pubmed.ncbi.nlm.nih.gov/42875491/",
+"date": "2026-10-14T00:00:00+00:00",
+"badge": "DOI 10.1038/s41586-026-11162-7",
+"source": "PubMed · Nature",
+"source_group": "PubMed",
+"home": "",
+"thin": false,
+"pop": null,
+"id": "c74e6b520505",
+"keep": true,
+"zh_title": "人工智能实现人棕色脂肪临床表型分析",
+"summary": "Nature研究用大数据与机器学习在101,243例患者中量化棕色脂肪活性，发现其与心血管及精神疾病患病率较低相关。",
+"key_points": [
+"基于大型癌症中心101,243例患者队列",
+"机器学习半自动量化约8,700例患者的棕色脂肪活性",
+"分析显示有棕色脂肪者心血管与精神疾病患病率更低"
+],
+"section": "生命科学与药物",
+"type": "论文",
+"tags": [
+"多模态",
+"临床预测"
+],
+"evidence": "同行评审",
+"score": 8,
+"reason": "同行评审、十万例级大队列并有客观量化表型，属重要档",
+"abstract": "[Nature] Adipose tissue has a central role in systemic energy balance and the pathogenesis of obesity and its sequelae1,2. In contrast to white adipose tissue, brown adipose tissue (BAT) uses energy to produce heat3. Detectable BAT in humans is associated with decreased prevalence of cardiometabolic diseases4. However, the complete spectrum of health conditions associated with BAT remains unknown, and high-throughput methods to quantify BAT activity in humans are lacking5,6. Here we leveraged big data and artificial intelligence to systematically define the clinical impact of BAT in a cohort of 101,243 patients from a large cancer centre. Our unbiased analyses revealed that, across all diagnoses, cardiovascular and psychiatric diseases were less prevalent in people with BAT. Using a machine learning approach, we semi-automatically quantified BAT activity in approximately 8,700 patients and demonstrated that higher BAT activity, especially in the axillary depot, is associated with lower odds of cardiometabolic diseases and healthier white fat distribution. People with BAT also exhibited more favourable glycaemic parameters, lipid profiles, inflammatory markers and echocardiographic indices. Analysis of medication usage demonstrated that angiotensin receptor blocker use was positively associated with BAT presence. As proof of concept, we showed that the angiotensin receptor blocker losartan increased brown adipocyte activity and whole-body energy expenditure. Altogether, our studies harnessing artificial intelligence and big data identify new clinical phenotypes linked to BAT and serve as a platform for drug repurposing to activate this tissue in humans.",
+"day": "2026-10-16",
+"rank": 12.14,
+"zh_abstract": "《自然》脂肪组织在全身能量平衡以及肥胖及其后遗症的发病机制中具有核心作用1,2。与白色脂肪组织相比，棕色脂肪组织（BAT）利用能量产热3。在人类中可检测到的 BAT 与心血管代谢疾病患病率降低相关4。然而，与 BAT 相关的完整健康状况谱仍未知，且缺乏高通量方法量化人类 BAT 活性5,6。在此，我们利用大数据和人工智能，在一个来自大型癌症中心的 101,243 名患者队列中系统定义 BAT 的临床影响。我们的无偏分析显示，在所有诊断中，心血管和精神疾病在具有 BAT 的人群中患病率较低。使用机器学习方法，我们半自动量化了约 8,700 名患者的 BAT 活性，并证明较高的 BAT 活性，尤其是在腋窝脂肪库，与心脏代谢疾病几率降低和更健康的白色脂肪分布相关。具有 BAT 的人也表现出更有利的血糖参数、血脂谱、炎症标志物和超声心动图指标。对药物使用的分析表明，血管紧张素受体阻滞剂使用与 BAT 存在正相关。作为概念验证，我们显示血管紧张素受体阻滞剂氯沙坦（losartan）增加了棕色脂肪细胞活性和全身能量消耗。总之，我们利用人工智能和大数据的研究识别了与 BAT 相关的新临床表型，并作为药物重定位平台，以在人类中激活该组织。"
+},
+{
 "title": "An all-in-one foundation model for multimodal medical image restoration and enhancement",
 "link": "https://www.nature.com/articles/s42256-026-01310-z",
 "date": "2026-10-13T00:00:00+00:00",
@@ -572,6 +605,39 @@
 "day": "2026-10-16",
 "rank": 10.14,
 "zh_abstract": "[Journal of biomedical optics] 近年来，用于光声计算机断层成像（PACT）的基于深度学习（DL）的图像重建方法发展迅速。然而，大多数现有方法尚未采用标准化数据集，其评估依赖于可能缺乏临床相关性的传统图像质量（IQ）指标。缺乏用于具有临床意义的IQ评估的标准化框架，阻碍了公平比较，并引发了人们对PACT中已报告进展的可重复性和可靠性的担忧。提出了一种基准测试框架，为PACT中基于DL的声学反演方法提供开源、解剖学上合理的合成数据集和评估策略。这些数据集每个都包含超过10,000个带有临床相关病灶的二维（2D）随机乳腺对象，以及在不同建模复杂度下的配对测量。评估策略纳入传统IQ指标和基于任务的IQ指标，以评估保真度和临床实用性。开展了一项初步基准测试研究，通过比较基于DL和基于物理的重建方法来展示该框架的实用性。该基准测试研究表明，所提出的框架能够对重建性能进行全面、定量比较，并揭示了某些基于DL方法的重要局限性。尽管根据传统IQ指标它们表现良好，但它们往往无法准确恢复病灶。这突显了传统指标的不足，并促使人们需要基于任务的评估。所提出的基准测试框架能够对2D PACT中基于DL的声学反演方法进行系统比较。通过将临床相关合成数据集与严格评估协议相结合，它能够实现可重复、客观的评估，并促进PACT中的方法开发和系统优化。"
+},
+{
+"title": "Artificial Intelligence for Predicting Amputation and Related Outcomes in Peripheral Artery Disease: A Systematic Review and Meta-Analysis.",
+"link": "https://pubmed.ncbi.nlm.nih.gov/42874860/",
+"date": "2026-10-14T00:00:00+00:00",
+"badge": "DOI 10.1016/j.avsg.2026.10.003",
+"source": "PubMed · Annals of vascular surgery",
+"source_group": "PubMed",
+"home": "",
+"thin": false,
+"pop": null,
+"id": "de26f769c306",
+"keep": true,
+"zh_title": "AI预测外周动脉疾病截肢及肢体结局的系统综述与meta分析",
+"summary": "首个量化评估机器学习预后模型预测外周动脉疾病截肢等不良肢体结局性能、方法学质量与证据确定性的meta分析。",
+"key_points": [
+"遵循PRISMA规范检索四大数据库至2026年3月",
+"双人独立筛选、提取数据并用PROBAST评估偏倚风险",
+"采用随机效应模型合并判别性能并评定证据确定性"
+],
+"section": "临床预测与决策",
+"type": "论文",
+"tags": [
+"临床预测",
+"临床决策支持"
+],
+"evidence": "同行评审",
+"score": 6,
+"reason": "系统综述与meta分析，方法学规范但纳入研究数与结论明确度未明",
+"abstract": "[Annals of vascular surgery] Peripheral artery disease (PAD) affects over 236 million individuals globally and carries substantial risks of amputation, major adverse limb events (MALE), and mortality. Existing clinical scoring systems focus on short-term surgical outcomes and lack generalizability. Machine learning (ML) has emerged as a promising tool for PAD outcome prediction. To conduct the first quantitative meta-analysis evaluating the discriminative performance, methodological rigor, and certainty of evidence of ML-based prognostic models for adverse limb outcomes in PAD. Following PRISMA/PRISMA-S guidelines, PubMed, Embase, Cochrane Library, and Web of Science were searched from inception through March 15, 2026. Two reviewers independently performed study selection, data extraction, and PROBAST risk-of-bias assessment. Random-effects meta-analysis (DerSimonian-Laird with Hartung-Knapp-Sidik-Jonkman correction) and hierarchical summary ROC (HSROC) analysis were performed; certainty was rated with GRADE. Ten studies were included. The pooled AUC for amputation-related outcomes was 0.88 (95% CI, 0.83-0.94; prediction interval, 0.79-0.98) with substantial heterogeneity (I2 = 95.4%). HSROC yielded pooled sensitivity 0.855 and specificity 0.836. Registry-based studies showed higher pooled AUC than non-registry studies (0.92 vs 0.80; p = 0.004). All models had high or unclear risk of bias in the analysis domain; none underwent independent external validation. GRADE certainty was very low. ML models demonstrate high discriminative performance for predicting amputation-related outcomes in PAD, but very low certainty of evidence, absence of external validation, and high risk of bias currently limit clinical implementation. Prospective multicenter validation and adherence to AI reporting guidelines are essential before clinical translation.",
+"day": "2026-10-16",
+"rank": 10.14,
+"zh_abstract": "[Annals of vascular surgery] 外周动脉疾病（PAD）影响全球超过 2.36 亿人，并带来截肢、主要不良肢体事件（MALE）和死亡的重大风险。现有临床评分系统关注短期手术结局，缺乏可推广性。机器学习（ML）已成为预测 PAD 结局的有前景工具。旨在进行首个定量荟萃分析，评估基于 ML 的 PAD 不良肢体结局预后模型的判别性能、方法学严谨性和证据确定性。遵循 PRISMA/PRISMA-S 指南，检索了 PubMed、Embase、Cochrane Library 和 Web of Science，从建库至 2026 年 3 月 15 日。两名评价者独立进行研究选择、数据提取和 PROBAST 偏倚风险评估。进行了随机效应荟萃分析（DerSimonian-Laird 法，采用 Hartung-Knapp-Sidik-Jonkman 校正）和分层汇总 ROC（HSROC）分析；使用 GRADE 评定确定性。共纳入 10 项研究。截肢相关结局的合并 AUC 为 0.88（95% CI，0.83-0.94；预测区间，0.79-0.98），存在显著异质性（I2 = 95.4%）。HSROC 得出合并灵敏度 0.855 和特异度 0.836。基于注册登记的研究比非注册登记研究显示更高的合并 AUC（0.92 对 0.80；p = 0.004）。所有模型在分析域均具有高或不明确的偏倚风险；均未进行独立外部验证。GRADE 确定性极低。ML 模型在预测 PAD 截肢相关结局方面表现出高判别性能，但极低的证据确定性、缺乏外部验证和高偏倚风险目前限制了临床实施。在临床转化之前，前瞻性多中心验证和遵守 AI 报告指南至关重要。"
 },
 {
 "title": "UPER: A Unified Polyhedral Representation for universal multi-dimensional diffusion MRI image modeling",
@@ -4598,6 +4664,72 @@
 "zh_abstract": "[Insights into imaging] 确保CT特征在不同成像方案和重建算法间的可重复性，对于影像组学（radiomics）应用的可泛化性至关重要。本研究旨在评估在不同辐射剂量下，使用深度学习图像重建（DLIR）与传统重建技术相比，肺结节CT影像组学特征的可重复性。我们纳入了2023年3月至6月期间的94例患者。扫描标准和低剂量CT图像，以评估剂量降低对特征可重复性的影响。将低（DLIR-L）、中（DLIR-M）和高（DLIR-H）强度的DLIR——代表逐步提高的噪声抑制水平——与滤波反投影（FBP）以及50%强度的自适应统计迭代重建-V（ASIR-V-50%）重建进行比较。从肺结节中提取了2264个特征。使用一致性相关系数（CCC）和变异系数（CV）评估剂量间可重复性、重建间可重复性和特征变异性。使用DLIR-H、ASIR-V-50%和FBP时，剂量间可重复性的平均CCC分别为0.934 ± 0.104、0.922 ± 0.128和0.922 ± 0.113（p = 0.055），分别有29.8%、27.9%和20.2%的特征显示出近乎完美的一致性。在低剂量CT中，DLIR-L相对于ASIR-V-50%取得了最高的重建间可重复性（0.950 ± 0.094），有39.4%的特征显示出近乎完美的一致性。跨重建的总体CV为9.87 ± 20.32%，其中74.0%的特征高度稳定。部分实性结节表现出最低的变异性（7.17 ± 13.48%，p < 0.001）。可重复性随结节尺寸增大而显著改善（p < 0.001）。DLIR提高了肺结节影像组学特征的可重复性，使其特别适用于低剂量CT方案。然而，稳健性倾向于随DLIR强度升高而降低。结节特征显著影响变异性。【问题】在不同辐射剂量和重建方法下，DLIR对肺结节影像组学特征可重复性的影响仍不清楚。【发现】DLIR-H表现出高的剂量间可重复性，而DLIR-L取得了最高的重建间可重复性；特征变异性随结节尺寸增大而显著降低，并识别出21个稳健特征。【关键相关性声明】本研究批判性评估CT影像组学中与重建相关的不稳定性，并 id"
 },
 {
+"title": "Current applications and challenges of artificial intelligence in orthopedic imaging: A narrative review.",
+"link": "https://pubmed.ncbi.nlm.nih.gov/42870426/",
+"date": "2026-10-13T00:00:00+00:00",
+"badge": "DOI 10.1177/10225536261466359",
+"source": "PubMed · Journal of orthopaedic surgery (Hong Kong)",
+"source_group": "PubMed",
+"home": "",
+"thin": false,
+"pop": null,
+"id": "148bde655418",
+"keep": true,
+"zh_title": "骨科影像人工智能应用与挑战的叙述性综述",
+"summary": "叙述性综述检索并分析85篇同行评审文献，梳理AI在骨科影像中的当前应用、薄弱环节与临床局限。",
+"key_points": [
+"检索PubMed，经题摘筛选后纳入85篇文献",
+"按影像模态、临床应用、AI技术分类并评定证据级别",
+"侧重指出临床应用中的不足与限制"
+],
+"section": "影像与病理",
+"type": "观点",
+"tags": [
+"医学影像"
+],
+"evidence": "同行评审",
+"score": 4,
+"reason": "叙述性综述，无原始数据与外部验证，按综述上限档取低",
+"abstract": "[Journal of orthopaedic surgery (Hong Kong)] BackgroundArtificial intelligence (AI), especially machine and deep learning, is an emerging tool in medicine with growing applications in orthopedic imaging. Given imaging's central role in diagnosis, surgical planning, and treatment monitoring, this narrative review maps the current and potential uses of AI in orthopedics, identifies underdevelopment sections, and emphasizes limitations in clinical practice.MethodsA PubMed search used the terms \"Orthopedic,\" \"Imaging,\" and \"Artificial Intelligence.\" Studies were screened by title and abstract, excluding non-orthopedic or non-AI studies, animal research, pediatric populations, and robotics or pharmacology papers. Eighty-five peer-reviewed articles were analyzed for imaging modality, clinical application, AI technique, and assigned a level of evidence. They were selected based on relevance to AI in orthopedic imaging.ResultsAI applications spanned radiography, CT, MRI, DTI, and ultrasound. For bone pathology, AI aided fracture detection and osteoarthritis prediction with clinician-level accuracy. In soft tissue injuries, models assisted in rotator cuff and meniscus tear detection and muscle segmentation. AI-driven 3D reconstructions and virtual reduction models enhanced surgical planning, particularly in joint replacement and trauma. Spine imaging benefited from vertebral segmentation, disc degeneration classification, and paraspinal muscle analysis, improving preoperative planning and outcome prediction. radiography, CT, MRI, DTI, and ultrasound. An important distinction is that many of these models generated outputs that surrounded conditional probabilities rather than categorical diagnoses. Many pitfalls remain including single-center overfitting, data leakage, and inter-reader variability.ConclusionsAI demonstrates potential to enhance diagnostic accuracy, streamline surgical planning, and improve workflow efficiency. Challenges remain, including data bias, regulatory constraints, and ethical considerations, warranting caution to its blanket application in medicine. Continued integration and validation are needed for optimal clinical use.Clinical RelevanceAI may serve as an adjunct to clinicians, supporting imaging interpretation and surgical decision-making while preserving human judgment.",
+"day": "2026-10-16",
+"rank": 7.99,
+"zh_abstract": "《骨科手术杂志（香港）》【背景】人工智能（AI），尤其是机器学习和深度学习，是医学中一种新兴工具，在骨科影像中的应用日益增多。鉴于影像在诊断、手术规划和治疗监测中的核心作用，本叙述性综述梳理了 AI 在骨科中的当前及潜在用途，识别发展不足的部分，并强调临床实践中的局限。【方法】在 PubMed 中使用 “Orthopedic”、“Imaging” 和 “Artificial Intelligence” 进行检索。研究通过标题和摘要筛选，排除非骨科或非 AI 研究、动物研究、儿科人群以及机器人或药理学论文。共分析 85 篇同行评议文章，针对影像模态、临床应用、AI 技术，并赋予证据等级。这些文章基于与骨科影像中 AI 的相关性而被选择。【结果】AI 应用涵盖 X 线摄影（radiography）、CT、MRI、DTI 和超声。对于骨病理，AI 以临床医生水平的准确度辅助骨折检测和骨关节炎预测。在软组织损伤中，模型辅助肩袖和半月板撕裂检测以及肌肉分割。AI 驱动的三维重建和虚拟复位模型增强了手术规划，尤其是在关节置换和创伤中。脊柱影像受益于椎体分割、椎间盘退变分类和椎旁肌分析，从而改善术前规划和结果预测。X 线摄影、CT、MRI、DTI 和超声。一个重要区别是，这些模型中的许多生成的是围绕条件概率的输出，而非分类诊断。仍存在许多陷阱，包括单中心过拟合、数据泄漏和读片者间变异。【结论】AI 显示出提高诊断准确性、简化手术规划并改善工作流程效率的潜力。挑战仍然存在，包括数据偏倚、监管限制和伦理考量，因此对其在医学中的一概而论应用需要谨慎。需要持续整合和验证以实现最佳临床使用。【临床相关性】AI 可作为临床医生的辅助工具，支持影像解读和手术决策，同时保留人类判断。"
+},
+{
+"title": "Wearable Technologies for Cancer Therapy and Monitoring: A Comprehensive Review.",
+"link": "https://pubmed.ncbi.nlm.nih.gov/42868569/",
+"date": "2026-10-13T00:00:00+00:00",
+"badge": "DOI 10.1615/CritRevBiomedEng.2025059902",
+"source": "PubMed · Critical reviews in biomedical engineering",
+"source_group": "PubMed",
+"home": "",
+"thin": false,
+"pop": null,
+"id": "07a3874a158d",
+"keep": true,
+"zh_title": "用于肿瘤治疗与监测的可穿戴技术综述",
+"summary": "综述梳理可穿戴设备结合AI在肿瘤治疗与监测中的应用，包括化疗心脏毒性与血管异常识别。",
+"key_points": [
+"涵盖ECG、PPG、红外测温、皮电与血氧等可穿戴设备",
+"提及ECG衍生AI模型预测心肌病风险、PPG识别血管异常",
+"强调连续无创生理监测在肿瘤管理中的作用"
+],
+"section": "数字健康",
+"type": "观点",
+"tags": [
+"数字健康",
+"生理信号",
+"肿瘤"
+],
+"evidence": "同行评审",
+"score": 4,
+"reason": "综述类，未提供原始验证数据，属增量信息",
+"abstract": "[Critical reviews in biomedical engineering] Wearable devices have emerged as pivotal innovations in oncology, revolutionizing cancer therapy and monitoring through continuous, non-invasive physiological tracking. This comprehensive review examines the integration of advanced wearable technologies-such as electrocardiography (ECG), photoplethysmography (PPG), infrared thermometers, galvanic skin response (GSR) meters, and pulse oximeters-in detecting biomarkers associated with cancer progression and treatment efficacy. By leveraging real-time data acquisition, these devices enable early identification of conditions like chemotherapy-induced cardiotoxicity, evidenced by ECG-derived AI models predicting cardiomyopathy risks with 2-5-fold accuracy, and PPG-based systems detecting vascular anomalies indicative of malignancies. The incorporation of artificial intelligence (AI) and machine learning (ML) algorithms further enhances diagnostic precision, exemplified by AI-ECG tools that dynamically forecast cardiotoxicity 12-24 months prior to clinical onset. Additionally, wearable drug delivery mechanisms, including microneedle patches for localized chemotherapy and programmable ambulatory pumps, are explored for their capacity to optimize therapeutic outcomes while mitigating adverse effects. A systematic analysis of literature sourced from Google Scholar, PubMed, and ScienceDirect underscores the transformative potential of these technologies in fostering personalized oncology care, as demonstrated by clinical trials such as the EMBRaCE program, which reported enhanced patient recovery through continuous monitoring. Despite these advancements, challenges related to motion artifact interference, data heterogeneity, and ethical concerns regarding AI transparency necessitate resolution for widespread clinical adoption. Future trajectories highlight the convergence of multimodal sensor networks with AI-driven analytics to establish autonomous monitoring systems, thereby redefining precision oncology. This review underscores the critical role of wearable devices in advancing theranostic paradigms, advocating for their integration into mainstream oncology to improve early detection, treatment personalization, and overall patient prognoses.",
+"day": "2026-10-16",
+"rank": 7.99,
+"zh_abstract": "《生物医学工程批判性评论》可穿戴设备已成为肿瘤学中的关键创新，通过连续、非侵入性生理追踪革新癌症治疗和监测。本综合综述考察了先进可穿戴技术——如心电图（ECG）、光电容积脉搏波描记法（PPG）、红外体温计、皮肤电反应（GSR）计和脉搏血氧仪——在检测与癌症进展和治疗疗效相关的生物标志物中的整合应用。通过利用实时数据采集，这些设备能够早期识别诸如化疗诱导的心脏毒性等状况，其证据为：基于 ECG 的 AI 模型以 2-5 倍的准确度预测心肌病风险，基于 PPG 的系统检测提示恶性肿瘤的血管异常。人工智能（AI）和机器学习（ML）算法的纳入进一步增强诊断精度，例如 AI-ECG 工具可在临床发病前 12-24 个月动态预测心脏毒性。此外，还探讨了可穿戴药物递送机制，包括用于局部化疗的微针贴片和可编程便携式泵，其优化治疗结果同时减轻不良反应的能力。对来自 Google Scholar、PubMed 和 ScienceDirect 的文献进行的系统分析强调了这些技术在促进个性化肿瘤护理方面的变革潜力，正如 EMBRaCE 项目等临床试验所证明，该项目报告通过连续监测增强了患者康复。尽管有这些进展，与运动伪影干扰、数据异质性以及 AI 透明度相关伦理问题有关的挑战仍需解决，才能实现广泛临床采用。未来轨迹强调多模态传感器网络与 AI 驱动分析的融合，以建立自主监测系统，从而重新定义精准肿瘤学。本综述强调可穿戴设备在推进诊疗一体化范式中的关键作用，倡导将其整合到主流肿瘤学中，以改善早期检测、治疗个性化和整体患者预后。"
+},
+{
 "title": "A multi-agent large language model (LLM) platform for structured medical anamnesis in outpatient care.",
 "link": "https://pubmed.ncbi.nlm.nih.gov/42877149/",
 "date": "2026-09-30T00:00:00+00:00",
@@ -6769,6 +6901,38 @@
 "rank": 7.64
 },
 {
+"title": "Deep learning-based super-resolution reconstruction for improved image quality in shoulder MRI.",
+"link": "https://pubmed.ncbi.nlm.nih.gov/42874216/",
+"date": "2026-10-10T00:00:00+00:00",
+"badge": "DOI 10.1016/j.ejrad.2026.113282",
+"source": "PubMed · European journal of radiology",
+"source_group": "PubMed",
+"home": "",
+"thin": false,
+"pop": null,
+"id": "0a5f9592cd7c",
+"keep": true,
+"zh_title": "深度学习超分辨重建提升肩关节MRI图像质量",
+"summary": "回顾性研究比较并行成像、压缩感知与深度学习超分辨重建的肩关节MRI图像质量及阅片者偏好。",
+"key_points": [
+"回顾性纳入60例患者，覆盖六个扫描序列",
+"由三名放射科医师经两周洗脱期选择偏好序列",
+"超分辨重建组多项定量与定性指标显著更优"
+],
+"section": "影像与病理",
+"type": "论文",
+"tags": [
+"医学影像"
+],
+"evidence": "同行评审",
+"score": 4,
+"reason": "单中心小样本回顾性研究，仅内部比较、无外部验证",
+"abstract": "[European journal of radiology] To compare the image quality of shoulder Magnetic Resonance Imaging (MRI) using three imaging acquisition or reconstruction approaches-Parallel Imaging (PI), Compressed Sensing (CS), and Deep Learning-Based Super-Resolution Reconstruction (SR)-and to evaluate reader-assessed image quality and preference. A retrospective study included 60 patients (27 males, 33 females; mean age 53.67 ± 12.11 years). Shoulder MRI was performed with PI, CS and SR (reconstructed from CS data) across six sequences. Quantitative and qualitative assessments were conducted by experienced observers. Three radiologists selected clinically preferred sequences after a 2-week washout. Consistency and inter-group comparisons were statistically analyzed. The quantitative and qualitative assessment between observers showed good consistency. The SR group showed significantly higher quantitative measurements across all six sequences of structures [e.g. SNR: Supraspinatus tendon SR 14.03 (10.60, 20.26), CS 11.87 (8.39, 15.96), PI 8.75 (5.18, 13.51), P < 0.001] than PI and CS. SR images generally showed lower edge rise distance (ERD) values, significant overall differences among PI, CS, and SR (P < 0.01), Qualitative assessment revealed that SR overall differences among PI, CS and SR, with statistically significant differences (P < 0.001). Furthermore, three reader preference results indicated a preference for SR images that all readers preferred SR images (86 %, 92 %, and 93 %). Compared to PI and CS, SR significantly improves image quality in shoulder MRI without increasing acquisition time. SR enhances the visualization of fine anatomical structures, providing improved image quality and supporting its potential application in clinical shoulder MRI.",
+"day": "2026-10-16",
+"rank": 7.6,
+"zh_abstract": "[European journal of radiology] 比较使用三种成像采集或重建方法——并行成像（PI）、压缩感知（CS）和基于深度学习的超分辨率重建（SR）——的肩部磁共振成像（MRI）图像质量，并评估读者评估的图像质量和偏好。一项回顾性研究纳入 60 例患者（27 例男性，33 例女性；平均年龄 53.67 ± 12.11 岁）。肩部 MRI 在六个序列中采用 PI、CS 和 SR（由 CS 数据重建）进行。由经验丰富的观察者进行定量和定性评估。三名放射科医师在 2 周洗脱期后选择临床偏好的序列。对一致性和组间比较进行统计学分析。观察者之间的定量和定性评估显示良好一致性。SR 组在所有六个结构的序列中显示出显著更高的定量测量值[例如 SNR：冈上肌腱 SR 14.03（10.60，20.26），CS 11.87（8.39，15.96），PI 8.75（5.18，13.51），P < 0.001]，高于 PI 和 CS。SR 图像通常显示更低的边缘上升距离（ERD）值，PI、CS 和 SR 之间存在显著总体差异（P < 0.01）。定性评估显示，PI、CS 和 SR 之间存在总体差异，差异具有统计学意义（P < 0.001）。此外，三名读者的偏好结果表明对 SR 图像的偏好，所有读者均偏好 SR 图像（86%、92% 和 93%）。与 PI 和 CS 相比，SR 在不增加采集时间的情况下显著改善肩部 MRI 的图像质量。SR 增强了对精细解剖结构的可视化，提供了改善的图像质量，并支持其在临床肩部 MRI 中的潜在应用。"
+},
+{
 "title": "The Impact of AI-Assisted Diagnosis and Treatment on Physicians' Potential Legal Liability: An Expert Perspective",
 "link": "https://clinicaltrials.gov/study/NCT07869303",
 "date": "2026-10-09T00:00:00+00:00",
@@ -8276,6 +8440,73 @@
 "zh_abstract": "[Frontiers in public health] 生物医学可视化日益涵盖传统医学插图、合成医学成像、视觉-语言系统以及患者特异性3D重建。这篇叙述性综述考察人工智能（AI）在这一领域中的应用，特别关注医学教育以及科学和临床传播。我们检索了 PubMed/MEDLINE 和 IEEE Xplore 中2017年1月至2026年9月发表的英文文献，并以对出版商数据库的定向检索和参考文献列表筛查作为补充。纳入的出版物涉及AI赋能的医学或解剖学插图、文本到图像生成、合成医学成像、视觉-语言模型、3D重建或沉浸式生物医学可视化。当前证据表明，扩散模型可以快速生成在视觉上有说服力且可定制的草稿，而分割引导的合成和解剖结构感知的3D方法在特定任务中提供更强的结构控制。然而，对通用文本到图像系统的直接评估一致发现：虚构的解剖结构、错误标签、依赖于提示和模型的可变性、人口统计学偏倚，以及对复杂结构或操作可靠性有限。视觉-语言模型可以支持提示细化、注释和一致性检查，但它们无法确保科学准确性，并可能比人类专家更倾向于正面评价有缺陷的AI输出。支持AI生成教育插图的证据仍不如支持传统3D和虚拟现实学习环境的证据成熟。因此，我们区分已确立的应用与新兴或前瞻性用途，并提出一种专家监督的工作流程，纳入有记录的提示和模型版本、结构特异性验证、人工校正以及透明披露。目前应将AI视为起草和可视化辅助工具，在教育、临床或科学使用前需要领域专家验证。"
 },
 {
+"title": "Operationalizing clinical artificial intelligence through secure FHIR pipelines: a zero-trust cloud reference architecture for EHR interoperability.",
+"link": "https://pubmed.ncbi.nlm.nih.gov/42871199/",
+"date": "2026-09-29T00:00:00+00:00",
+"badge": "DOI 10.3389/fdgth.2026.1953969",
+"source": "PubMed · Frontiers in digital health",
+"source_group": "PubMed",
+"home": "",
+"thin": false,
+"pop": null,
+"id": "f406e8464ef9",
+"keep": true,
+"zh_title": "基于安全FHIR管线的临床AI零信任云参考架构",
+"summary": "理论文章提出以证据连续边界控制为核心、面向EHR互操作的零信任云参考架构，用于治理临床AI的数据与模型流转。",
+"key_points": [
+"指出FHIR仅标准化交换，未保证AI使用被授权与可问责",
+"提出数据、模型或流程变更须有策略决策与版本化证据",
+"归纳八项需求并组织为五个功能层"
+],
+"section": "落地与监管",
+"type": "观点",
+"tags": [
+"电子病历",
+"隐私与联邦学习",
+"临床落地"
+],
+"evidence": "同行评审",
+"score": 4,
+"reason": "架构设想与理论推导，无实现或评估数据",
+"abstract": "[Frontiers in digital health] Fast Healthcare Interoperability Resources (FHIR) standardizes clinical exchange but does not establish that a downstream artificial intelligence (AI) use remains authorized, semantically consistent, or accountable. This Hypothesis and Theory article proposes evidence-continuous boundary control: a material data, model, or workflow transition is governed by an applicable policy decision and linked to versioned evidence of its prerequisites, execution, and disposition. The framework arose from continuing healthcare-interoperability research and was formalized through standards analysis, targeted evidence synthesis, and explicit design inference. Documented revision searches distinguish external evidence from architectural decisions. Eight requirements are organized into five functional layers: clinical sources, an interoperability edge, a zero-trust control plane, a segregated cloud data and AI plane, and governance and monitoring. Applications are consumers, not a sixth layer. An illustrative adult readmission-risk workflow connects identity, policy, source versions, features, model release, scoring, presentation, and human action. Its symbolic FHIR R4 evidence linkage includes explicit R5 translation cautions and policy-aware authorization, including consent where applicable. Six propositions test incremental value against a well-run contemporary platform without removing its native safeguards; simulated ablations isolate particular links. Independent reference standards, denominators, support, counterevidence, and inconclusive conditions expose operational and human-factors trade-offs. A bounded synthetic-data companion implementation makes selected exchange controls inspectable; it does not implement the complete clinical-AI architecture or validate its propositions. No empirical architecture evaluation, patient dataset, clinical effectiveness, or independent expert validation is reported. Staged future studies must establish incremental benefit without disproportionate burden or inappropriate reliance.",
+"day": "2026-10-16",
+"rank": 6.87,
+"zh_abstract": "[Frontiers in digital health] Fast Healthcare Interoperability Resources（FHIR）规范了临床交换，但并未确立下游人工智能（AI）使用仍获授权、语义一致或可问责。这篇《假设与理论》文章提出证据连续性边界控制：实质性的数据、模型或工作流转换由适用的策略决策进行管控，并链接到其先决条件、执行和处置的版本化证据。该框架源于持续进行的医疗互操作性研究，并通过标准分析、针对性证据综合和明确的设计推断得以形式化。有记录的修订检索将外部证据与架构决策区分开。八项要求被组织为五个功能层：临床来源、互操作性边缘、零信任控制平面、隔离的云数据与 AI 平面，以及治理与监控。应用是消费者，而非第六层。一个示例性成人再入院风险工作流连接身份、策略、来源版本、特征、模型发布、评分、呈现和人工行动。其符号化 FHIR R4 证据链接包括明确的 R5 转换注意事项和策略感知授权，在适用时包括同意。六项命题在未移除其原生保障措施的情况下，测试相对于运行良好的当代平台的增量价值；模拟消融分离特定链接。独立参考标准、分母、支持、反证和不确定条件揭示运行和人为因素的权衡。一个有界的合成数据伴随实现使选定的交换控制可检查；它未实现完整的临床 AI 架构，也未验证其命题。未报告实证架构评估、患者数据集、临床有效性或独立专家验证。分阶段的未来研究必须在不造成不成比例负担或不适当依赖的情况下确立增量获益。"
+},
+{
+"title": "Human β defensin type 2 based novel antimicrobial peptide prediction using both molecular dynamics simulation and artificial intelligence methods.",
+"link": "https://pubmed.ncbi.nlm.nih.gov/42872126/",
+"date": "2026-09-29T00:00:00+00:00",
+"badge": "DOI 10.3389/fchem.2026.1913090",
+"source": "PubMed · Frontiers in chemistry",
+"source_group": "PubMed",
+"home": "",
+"thin": false,
+"pop": null,
+"id": "57ee502328b7",
+"keep": true,
+"zh_title": "分子动力学结合AI预测hBD-2衍生抗菌肽",
+"summary": "研究设计32个hBD-2多位点突变体，结合既往247个点突变数据训练AI模型，预测其与SARS-CoV-2 RBD的结合稳定性与结合能。",
+"key_points": [
+"以hBD-2为骨架设计32个多位点突变体",
+"结合既往247个点突变数据训练AI模型",
+"预测突变体与RBD的结构稳定性与结合能"
+],
+"section": "生命科学与药物",
+"type": "论文",
+"tags": [
+"药物发现",
+"蛋白质"
+],
+"evidence": "同行评审",
+"score": 4,
+"reason": "纯计算设计，样本仅数百突变体，无外部或湿实验验证，属增量档",
+"abstract": "[Frontiers in chemistry] The global health crisis triggered by SARS-CoV-2 has highlighted the urgent need for effective treatments. Although several anti-viral drugs targeting SARS-CoV-2 have been developed, there remains considerable interest in exploring natural antimicrobial peptides (AMPs) secreted by the human innate immune system as alternative therapeutic agents. Human β defensin type 2 (hBD-2) has been found to bind to the receptor-binding domain (RBD) of SARS-CoV-2 and block the virus entry. In order to design effective anti-virial drugs based on hBD-2, 32 block-mutants (mutation at more than one site simultaneously) were designed, and their interaction with RBD were predicted in terms of structural stability and binding energy. In combination with data from a total of 247 hBD-2 point-mutants reported in our previous work, artificial intelligence (AI) models were trained to design more efficient hBD-2 variants. With that, advanced AI approaches, including convolutional neural network (CNN) and long short-term memory (LSTM) models were employed to predict hBD-2 mutant sequences with potentially enhanced binding affinity with RBD compared with the wildtype peptide. Based on the predicted sequences, the AlphaFold program was applied to predict the structures of AMPs, and then all-atom molecular dynamics (MD) simulations were performed to calculate the binding interaction energies between each hBD-2-based AMP and the RBD as a measure of binding affinity. Structural stability was also evaluated through analyses of Root Mean Square Deviation (RMSD), Root Mean Squared Fluctuation (RMSF), the number of hydrogen bonds formed, and buried surface area. The results indicate that several AMPs exhibited more stable binding with RBD than the wildtype, highlighting their potential as novel hBD-2-derived antiviral candidates against SARS-CoV-2. Furthermore, based on the obtained results, the LSTM model demonstrated greater effectiveness than the CNN model in designing novel hBD-2-based anti-virial drugs against CoV-2.",
+"day": "2026-10-16",
+"rank": 6.87,
+"zh_abstract": "[Frontiers in chemistry] 由 SARS-CoV-2 引发的全球卫生危机凸显了对有效治疗的迫切需求。尽管已开发出若干靶向 SARS-CoV-2 的抗病毒药物，但探索由人类先天免疫系统分泌的天然抗菌肽（AMPs）作为替代治疗剂仍有相当大的兴趣。已发现人β防御素2型（hBD-2）可结合 SARS-CoV-2 的受体结合域（RBD）并阻断病毒进入。为了基于 hBD-2 设计有效的抗病毒药物，设计了 32 个区块突变体（block-mutants，即同时在多个位点发生突变），并从结构稳定性和结合能方面预测了它们与 RBD 的相互作用。结合我们先前工作中报告的共 247 个 hBD-2 点突变体的数据，训练了人工智能（AI）模型以设计更有效的 hBD-2 变体。据此，采用包括卷积神经网络（CNN）和长短期记忆（LSTM）模型在内的先进 AI 方法，预测与野生型肽相比可能具有增强的 RBD 结合亲和力的 hBD-2 突变体序列。基于预测序列，应用 AlphaFold 程序预测 AMPs 的结构，然后进行全原子分子动力学（MD）模拟，计算每个基于 hBD-2 的 AMP 与 RBD 之间的结合相互作用能，作为结合亲和力的量度。还通过分析均方根偏差（RMSD）、均方根波动（RMSF）、形成的氢键数量和埋藏表面积来评估结构稳定性。结果表明，若干 AMPs 与 RBD 的结合比野生型更稳定，突显了它们作为针对 SARS-CoV-2 的新型 hBD-2 衍生抗病毒候选物的潜力。此外，基于所获得的结果，在设计针对 CoV-2 的新型基于 hBD-2 的抗病毒药物方面，LSTM 模型比 CNN 模型表现出更大的有效性。"
+},
+{
 "title": "Beyond binary dentistry: Should artificial intelligence think more like clinicians?",
 "link": "https://pubmed.ncbi.nlm.nih.gov/42865032/",
 "date": "2026-10-12T00:00:00+00:00",
@@ -8374,6 +8605,39 @@
 "day": "2026-10-16",
 "rank": 6.84,
 "zh_abstract": "[Frontiers in systems biology] 精神分裂症是一种慢性且严重的精神障碍，影响全球近1%的人口，其特征为阳性症状（如幻觉和妄想）、阴性症状（包括意志缺乏和情感平淡）以及损害社会和职业功能的认知障碍。尽管精神病学取得了进展，诊断仍主要基于症状，依赖《精神障碍诊断与统计手册（DSM-5）》和《国际疾病分类（ICD-11）》的标准，这凸显了对客观生物标志物和改进的临床决策支持的需求。神经影像学模态，包括结构和功能磁共振成像（MRI/fMRI）、弥散张量成像（DTI）、正电子发射断层扫描（PET），以及电生理技术如脑电图（EEG）和脑磁图（MEG），已揭示与精神分裂症相关的脑连接、多巴胺能信号传导、感觉处理和网络功能障碍的异常。人工智能（AI），特别是机器学习（ML）的近期进展，使得利用多模态临床、神经影像和遗传数据预测诊断、治疗反应和复发风险成为可能。然而，许多AI模型的“黑箱”性质限制了透明度、可解释性和临床医生的信任，制约了其转化为实践。可解释人工智能（XAI）通过提供可解释、透明且临床可问责的模型来应对这些挑战，这些模型在支持决策的同时维护伦理和监管标准。通过将可解释模型与多模态数据整合，临床医生可将其作为精准精神病学的辅助手段，促进生物标志物发现、个性化治疗策略以及可信且可操作的决策，最终提高精神分裂症照护的透明度并改善结局。"
+},
+{
+"title": "Applications of artificial intelligence in personalized nutrition interventions.",
+"link": "https://pubmed.ncbi.nlm.nih.gov/42865996/",
+"date": "2026-09-28T00:00:00+00:00",
+"badge": "DOI 10.3389/fnut.2026.1974199",
+"source": "PubMed · Frontiers in nutrition",
+"source_group": "PubMed",
+"home": "",
+"thin": false,
+"pop": null,
+"id": "54e7f512369e",
+"keep": true,
+"zh_title": "人工智能在个性化营养干预中的应用综述",
+"summary": "综述从营养基因组、代谢组与肠道菌群三个层面，探讨AI用于个性化营养干预的路径。",
+"key_points": [
+"个体对相同食物反应差异大，通用膳食建议效果有限",
+"生物学层面涵盖营养基因组、代谢标志物与肠道菌群",
+"技术层面讨论AI如何整合上述多组学信息"
+],
+"section": "数字健康",
+"type": "观点",
+"tags": [
+"数字健康",
+"公共卫生"
+],
+"evidence": "同行评审",
+"score": 4,
+"reason": "综述类文章，无原始研究与外部验证，按综述上限取低档",
+"abstract": "[Frontiers in nutrition] Unhealthy dietary patterns remain a major modifiable contributor to the global burden of obesity, type 2 diabetes mellitus (T2DM), cardiovascular disease, and cancer. However, individuals can respond markedly differently to identical foods, limiting the effectiveness of one-size-fits-all dietary guidance. This review examines the application of artificial intelligence (AI) to personalized nutrition interventions across three interconnected layers. At the biological level, inter-individual variability can be characterized by three mechanistic dimensions: nutrigenomic variation, which influences nutrient metabolism and disease susceptibility; metabolomic biomarkers, which objectively capture dietary exposure and early metabolic alterations; and the gut microbiome, which bidirectionally mediates diet-host interactions. At the technological level, AI integrates these dimensions into multimodal digital profiles. Machine learning models predict individual postprandial glycemic and lipemic responses, with reported correlations of up to r = 0.77 in large cohorts; deep learning and computer vision automate dietary assessment; natural language processing and large language models (LLMs) support nutrition counseling; knowledge graphs enable constraint-aware food recommendations; and digital-twin and adaptive closed-loop systems incorporating continuous glucose monitoring and wearable-device data support real-time nutritional interventions. However, the strength of clinical evidence varies across disease domains. Glycemic management in T2DM and prediabetes currently has the most mature randomized controlled trial evidence: an AI-enabled personalized intervention combining algorithmic dietary personalization with CGM-linked feedback improved glycemic endpoints compared with a Mediterranean diet, while a fully automated AI-delivered diabetes prevention program achieved outcomes non-inferior to those of human coaching. In obesity, cardiovascular disease, oncology, and gastrointestinal disorders, the evidence remains mixed or preliminary. Clinical translation also faces substantial challenges, including biased and inconsistently standardized dietary and multi-omics data; the underrepresentation of non-European populations, which limits model generalizability and raises concerns about health equity; limited model explainability; privacy and data-governance challenges; immature regulatory pathways for adaptive software as a medical device; and specific risks associated with",
+"day": "2026-10-16",
+"rank": 6.84,
+"zh_abstract": "《营养学前沿》不健康饮食模式仍是全球肥胖、2 型糖尿病（T2DM）、心血管疾病和癌症负担的主要可改变促成因素。然而，个体对相同食物的反应可能显著不同，限制了“一刀切”饮食指导的有效性。本综述考察人工智能（AI）在三个相互关联层面应用于个性化营养干预。在生物学层面，个体间差异可通过三个机制维度来表征：营养基因组学变异，它影响营养素代谢和疾病易感性；代谢组学生物标志物，它客观捕捉饮食暴露和早期代谢改变；以及肠道微生物组，它双向介导饮食-宿主相互作用。在技术层面，AI 将这些维度整合为多模态数字画像。机器学习模型预测个体餐后血糖和血脂反应，在大型队列中报告的相关系数最高达 r = 0.77；深度学习和计算机视觉自动化饮食评估；自然语言处理和大语言模型（LLM）支持营养咨询；知识图谱实现约束感知的食物推荐；结合连续血糖监测和可穿戴设备数据的数字孪生和自适应闭环系统支持实时营养干预。然而，临床证据强度在不同疾病领域存在差异。T2DM 和糖尿病前期的血糖管理目前拥有最成熟的随机对照试验证据：一项 AI 赋能的个性化干预将算法饮食个性化与 CGM 关联反馈相结合，与地中海饮食相比改善了血糖终点，而一项全自动 AI 实施的糖尿病预防项目取得了不劣于人类教练指导的结果。在肥胖、心血管疾病、肿瘤学和胃肠道疾病中，证据仍然混杂或处于初步阶段。临床转化还面临重大挑战，包括有偏倚且标准化不一致的饮食和多组学数据；非欧洲人群代表性不足，这限制了模型可泛化性并引发健康公平关切；模型可解释性有限；隐私和数据治理挑战；作为医疗器械的自适应软件的监管路径不成熟；以及与……相关的特定风险。"
 },
 {
 "title": "PanoDiff-SR: Synthesizing Dental Panoramic Radiographs using Diffusion and Super-resolution",
