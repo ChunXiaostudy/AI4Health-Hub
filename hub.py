@@ -23,10 +23,15 @@ ABS_MAX = 2500  # stored original abstract length (shown + translated on the ite
 E = lambda s: html.escape(str(s if s is not None else ""), quote=True)
 
 # ---------------------------------------------------------------- helpers
+class Challenged(Exception): pass
+
 def get(url, timeout=60, headers=None):
     req = urllib.request.Request(url, headers=dict(UA, **(headers or {})))
     with urllib.request.urlopen(req, timeout=timeout) as r:
-        return r.read()
+        body = r.read()
+    if b"Client Challenge" in body[:4000]:  # bot-check page served with 200 (nature.com / springer.com from CI): an error, not content
+        raise Challenged("Client Challenge (bot check) from " + (urllib.parse.urlparse(url).hostname or ""))
+    return body
 
 def get_polite(url, tries=4, delay=3):
     """GET honoring 429/503 Retry-After with exponential backoff."""
@@ -235,9 +240,24 @@ def norm_badge(it):
     if (it.get("badge") or "").startswith("DOI ") and host.endswith(PREPRINT_HOSTS): it["badge"] = re.sub(r"v\d+$", "", it["badge"])
     return it
 
+SPRINGER_PREFIXES = ("10.1038/", "10.1007/", "10.1186/")  # Nature, Springer, BioMed Central
+def springer_api_abstract(doi):
+    """Springer Nature Meta API (needs SPRINGER_API_KEY). The official programmatic route: nature.com pages and the
+    citation export intermittently answer GitHub Actions with a "Client Challenge" bot check, the API does not."""
+    key = os.getenv("SPRINGER_API_KEY")
+    if not key: return ""
+    url = "https://api.springernature.com/meta/v2/json?" + urllib.parse.urlencode({"q": "doi:" + doi, "api_key": key})
+    try: recs = json.loads(get(url, timeout=20)).get("records") or []
+    except urllib.error.HTTPError as ex: raise RuntimeError(f"HTTP Error {ex.code}") from None  # never let the URL (with the key) reach logs
+    except urllib.error.URLError as ex: raise RuntimeError(f"URL error {str(ex.reason)[:40]}") from None
+    def text(v):  # "abstract" is a string or a nested {"h1": "Abstract", "p": [...]} structure
+        if isinstance(v, dict): return " ".join(text(x) for k, x in v.items() if k != "h1")
+        if isinstance(v, list): return " ".join(text(x) for x in v)
+        return str(v or "")
+    return clean(text(recs[0].get("abstract")), ABS_MAX) if recs else ""
+
 def springer_abstract(doi):
-    """Springer Nature citation export (RIS). Small and reliable from CI, unlike nature.com article pages, which get
-    throttled to a ~3 KB stub when fetched in parallel from GitHub Actions."""
+    """Springer Nature citation export (RIS): no key needed, but like nature.com pages it sometimes serves a bot check to CI."""
     ris = get(f"https://citation-needed.springer.com/v2/references/{doi}?format=refman&flavour=citation", timeout=20).decode("utf-8", "ignore")
     return clean(" ".join(l[6:] for l in ris.splitlines() if l.startswith("AB  -")), ABS_MAX)
 
@@ -250,14 +270,16 @@ def fill_abstract(it):
     errs = []
     m = re.search(r"nature\.com/articles/([\w.-]+)", it["link"])
     if m:
-        try:
-            ab = springer_abstract("10.1038/" + m.group(1))
-            if len(ab) >= 200: it["desc"] = ab; it["thin"] = False; it.pop("_abs_err", None); return it
-            errs.append("springer: empty")
-        except Exception as ex: errs.append(f"springer: {str(ex)[:60]}")
+        for name, fn in ([("springer-api", springer_api_abstract)] if os.getenv("SPRINGER_API_KEY") else []) + [("springer", springer_abstract)]:
+            try:
+                ab = fn("10.1038/" + m.group(1))
+                if len(ab) >= 200: it["desc"] = ab; it["thin"] = False; it.pop("_abs_err", None); return it
+                errs.append(f"{name}: empty")
+            except Exception as ex: errs.append(f"{name}: {str(ex)[:60]}")
     s, page_err = None, ""
     for a in range(2):  # publishers drop some requests under load; one polite retry
         try: s = get(it["link"], timeout=15).decode("utf-8", "ignore"); break
+        except Challenged as ex: page_err = f"page: {ex}"; break
         except Exception as ex: page_err = f"page: {str(ex)[:80]}"; time.sleep(2)
     best = cur
     if s is not None:
@@ -423,7 +445,8 @@ def preprint_abstract(server, doi):
     return clean(c[-1].get("abstract") or "", ABS_MAX) if c else ""  # last entry = latest version
 
 def find_abstract(it, fresh):
-    """Abstract for a paper item: same-run feed entry > article page meta > bioRxiv/medRxiv API > PubMed > Europe PMC > OpenAlex.
+    """Abstract for a paper item: same-run feed entry > Springer Nature API / citation export or article page meta >
+    bioRxiv/medRxiv API > Springer Nature API (Springer DOIs not on nature.com) > PubMed > Europe PMC > OpenAlex.
     Returns (abstract, why it failed); the reason is kept on the item so CI failures are visible in items.json."""
     f = fresh.get(it["id"])
     if f and len(f.get("desc") or "") >= 200 and not is_teaser(f["desc"]): return f["desc"], ""
@@ -434,7 +457,9 @@ def find_abstract(it, fresh):
     m = re.search(r"pubmed\.ncbi\.nlm\.nih\.gov/(\d+)", it["link"])
     doi = (it.get("badge") or "")[4:] if (it.get("badge") or "").startswith("DOI ") else ""
     pre = re.search(r"(biorxiv|medrxiv)\.org/", it["link"])
+    spr = doi.startswith(SPRINGER_PREFIXES) and os.getenv("SPRINGER_API_KEY") and not re.search(r"nature\.com/articles/", it["link"])  # nature links: done in fill_abstract
     tries = (([(pre.group(1) + "-api", lambda d: preprint_abstract(pre.group(1), d), doi)] if pre and doi else []) +
+             ([("springer-api", springer_api_abstract, doi)] if spr else []) +
              ([("pubmed", pubmed_abstract, m.group(1))] if m else []) + ([("europepmc", europepmc_abstract, doi), ("openalex", openalex_abstract, doi)] if doi else []))
     for name, fn, key in tries:
         try:
@@ -448,17 +473,19 @@ def find_abstract(it, fresh):
 
 def backfill(db, results):
     """Paper items without an abstract: find it, redo summary/score from it, translate.
-    Each item is tried at most once a day, on up to BACKFILL_DAYS distinct days."""
+    Each item is tried at most once a day, on up to BACKFILL_DAYS distinct days; a bot-check failure is transient and
+    does not use up the day."""
     fresh = {it["id"]: it for _, res, _ in results for it in res}
     for d in db:  # the old per-run counter was used up within hours by repeated manual runs; restart under the per-day budget
         d.pop("abstract_tries", None)
     todo = [d for d in db if not d.get("abstract") and (d.get("source_group") or d.get("source")) in PAPER_SOURCES
-            and TODAY not in d.get("abstract_days", []) and len(d.get("abstract_days", [])) < BACKFILL_DAYS]
+            and (TODAY not in d.get("abstract_days", []) or "Challenge" in (d.get("abstract_err") or ""))
+            and len(d.get("abstract_days", [])) < BACKFILL_DAYS]
     todo = sorted(todo, key=lambda d: d.get("day", ""), reverse=True)[:BACKFILL_MAX]
     with cf.ThreadPoolExecutor(3) as ex: found = list(ex.map(lambda d: find_abstract(d, fresh), todo))
     got, errs = [], {}
     for d, (ab, err) in zip(todo, found):
-        d["abstract_days"] = d.get("abstract_days", []) + [TODAY]
+        if TODAY not in d.get("abstract_days", []): d["abstract_days"] = d.get("abstract_days", []) + [TODAY]
         if len(ab) >= 200:
             d["abstract"] = ab; d["thin"] = False; d.pop("abstract_err", None); d.pop("abstract_days", None); got.append(d)
         else:

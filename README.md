@@ -11,7 +11,7 @@
 pip install feedparser
 LLM_API_KEY=... LLM_BASE_URL=... python hub.py   # 输出到 site/
 ```
-Secrets: `LLM_API_KEY`, `LLM_BASE_URL`；可选变量 `LLM_MODEL`（默认 deepseek-v4-flash）。
+Secrets: `LLM_API_KEY`, `LLM_BASE_URL`；可选 `SPRINGER_API_KEY`（[dev.springernature.com](https://dev.springernature.com) 免费申请的 Meta API key，用于 Nature / Springer 论文摘要；nature.com 会对 GitHub Actions 时不时弹机器人验证页）；可选变量 `LLM_MODEL`（默认 deepseek-v4-flash）。
 
 ## 致谢
 思路参考 [wuyoscar/AISafetyHot-Hub](https://github.com/wuyoscar/AISafetyHot-Hub)（内容 CC BY-NC 4.0）与 [KKKKhazix/AIHOT](https://github.com/KKKKhazix/AIHOT)（MIT）。本仓库代码为独立重写，未复制其内容。条目版权归原始来源所有。
@@ -23,7 +23,7 @@ Secrets: `LLM_API_KEY`, `LLM_BASE_URL`；可选变量 `LLM_MODEL`（默认 deeps
 
 ## 结构（v2）
 - `hub.py`：抓取 → 去重（标题相似度 + 事件合并，显示「N 个来源报道」）→ LLM 摘要（固定标签枚举）→ 综合排序（LLM 分 + 来源权重 + 证据级别 + 星标/引用/HN 分）→ 预渲染静态 HTML。
-- 每个条目有站内详情页 `/items/<id>/`：AI 导读、原文摘要的中文全文翻译（结构化摘要保留【背景】【方法】【结果】【结论】）、评分卡、方向/形式/证据、复制引用、「阅读原文」按钮。原文摘要（≤2500 字）存为 `abstract`，译文存为 `zh_abstract`（`hub.translate_all`，只翻译 ≥200 字的摘要）。摘要功能上线前收录的论文类条目由 `hub.backfill()` 逐步补齐（每次最多 60 条，依次尝试：本次抓到的同一条 RSS 全文 → Nature 系期刊用 Springer 引用导出（RIS）/ 其他文章页 meta → bioRxiv / medRxiv 官方 API → PubMed / Europe PMC / OpenAlex），补到摘要后重新生成导读与评分并翻译。新收录的论文在同一次运行里就会进入补摘要；Nature 系 RSS 的「期刊名, Published online: …; doi:…」简介不算摘要。依次尝试的来源还包括 OpenAlex；每条每天最多尝试一次，最多尝试 7 个不同的日子（新刊文章要过几天才会进 OpenAlex 等索引），失败原因记在条目的 `abstract_err` 字段。NEJM AI 因 RSS 只有一句话且站点拒绝抓取，通常补不到。
+- 每个条目有站内详情页 `/items/<id>/`：AI 导读、原文摘要的中文全文翻译（结构化摘要保留【背景】【方法】【结果】【结论】）、评分卡、方向/形式/证据、复制引用、「阅读原文」按钮。原文摘要（≤2500 字）存为 `abstract`，译文存为 `zh_abstract`（`hub.translate_all`，只翻译 ≥200 字的摘要）。摘要功能上线前收录的论文类条目由 `hub.backfill()` 逐步补齐（每次最多 60 条，依次尝试：本次抓到的同一条 RSS 全文 → Nature 系期刊用 Springer Nature Meta API（需 `SPRINGER_API_KEY`，没有则跳过）→ Springer 引用导出（RIS）/ 其他文章页 meta → bioRxiv / medRxiv 官方 API → PubMed / Europe PMC / OpenAlex），补到摘要后重新生成导读与评分并翻译。新收录的论文在同一次运行里就会进入补摘要；Nature 系 RSS 的「期刊名, Published online: …; doi:…」简介不算摘要。依次尝试的来源还包括 OpenAlex；每条每天最多尝试一次，最多尝试 7 个不同的日子（新刊文章要过几天才会进 OpenAlex 等索引），失败原因记在条目的 `abstract_err` 字段。NEJM AI 因 RSS 只有一句话且站点拒绝抓取，通常补不到。
 - `data/items.json` 滚动 30 天；`data/archive/YYYY-MM-DD.json` 永久归档 → `/YYYY-MM-DD/` 与 `/archive/`。
 - `data/status.json` 记录每次各来源条数 → `/status.html`；连续 3 次为 0 自动开/更新 issue。
 - RSS：`feed.xml`；按方向 `feed-{imaging,llm-agents,clinical-prediction,life-science,digital-health,regulation,industry}.xml`；按形式 `feed-{papers,models,news,opinion}.xml`；周报 `weekly/feed.xml`。旧的 `feed-clinical-regulatory.xml` 继续生成（= 落地与监管）。
