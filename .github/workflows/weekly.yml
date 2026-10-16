@@ -26,7 +26,8 @@ jobs:
           LLM_BASE_URL: ${{ secrets.LLM_BASE_URL }}
           LLM_MODEL: ${{ vars.LLM_MODEL || 'deepseek-v4-flash' }}
       - name: Commit
-        run: bash .github/scripts/push-data.sh "weekly: $(date -u +%F)"
+        run: |
+          bash .github/scripts/push-data.sh "weekly: $(date -u +%F)"
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with: { path: site }

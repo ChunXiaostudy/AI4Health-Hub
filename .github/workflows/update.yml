@@ -38,7 +38,8 @@ jobs:
             if [ -n "$n" ]; then gh issue comment "$n" --body-file data/alerts.md; else gh issue create --title "数据源告警：来源连续为 0" --body-file data/alerts.md; fi
           fi
       - name: Commit data
-        run: bash .github/scripts/push-data.sh "data: $(date -u +%F)"
+        run: |
+          bash .github/scripts/push-data.sh "data: $(date -u +%F)"
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with: { path: site }
