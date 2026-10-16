@@ -186,6 +186,25 @@ def test_select_round_robin_best_first():
     assert [p["source_group"] for p in pick] == ["NEJM AI", "arXiv", "arXiv"]   # heavier source first in the round
     assert pick[1]["title"] == "deep learning for clinical radiology"            # best candidate of a source first
 
+def test_teasers_badges_and_publisher_apis():
+    teaser = "npj Digital Medicine, Published online: 15 October 2026; doi:10.1038/s41746-026-03377-9 TrajOnco: a framework " + "x" * 300
+    assert hub.is_teaser(teaser) and not hub.is_teaser("Background: we studied " + "y" * 300)
+    pre = dict(link="https://www.biorxiv.org/content/10.64898/2026.10.05.756921v1?rss=1", badge="DOI 10.64898/2026.10.05.756921v1")
+    assert hub.norm_badge(pre)["badge"] == "DOI 10.64898/2026.10.05.756921"
+    assert hub.norm_badge(dict(link="https://doi.org/10.1/abcv2", badge="DOI 10.1/abcv2"))["badge"] == "DOI 10.1/abcv2"   # only preprint hosts
+    saved = hub.springer_abstract, hub.get, hub.preprint_abstract
+    calls = []
+    hub.springer_abstract = lambda doi: calls.append(doi) or "Real abstract. " * 30
+    hub.get = lambda *a, **k: (_ for _ in ()).throw(AssertionError("article page must not be fetched"))
+    try:
+        it = dict(link="https://www.nature.com/articles/s41746-026-03377-9", desc=teaser)
+        hub.fill_abstract(it)       # a long teaser does not count as an abstract; Springer export is used, not the page
+        assert it["desc"].startswith("Real abstract") and calls == ["10.1038/s41746-026-03377-9"]
+        hub.preprint_abstract = lambda server, doi: calls.append((server, doi)) or "Preprint abstract. " * 20
+        ab, err = hub.find_abstract(dict(id="b1", link=pre["link"], badge=pre["badge"]), {})
+        assert ab.startswith("Preprint abstract") and calls[-1] == ("biorxiv", "10.64898/2026.10.05.756921")
+    finally: hub.springer_abstract, hub.get, hub.preprint_abstract = saved
+
 if __name__ == "__main__":
     for k, f in list(globals().items()):
         if k.startswith("test_"): f(); print("ok", k)

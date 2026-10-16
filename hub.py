@@ -310,24 +310,57 @@ def f_pubmed(src):
 
 META_KEYS = ("citation_abstract", "dc.description", "og:description", "description")
 NO_META = ("github.com", "huggingface.co", "news.google.com", "medrxiv.org", "biorxiv.org", "pubmed.ncbi.nlm.nih.gov")
+TEASER_RE = re.compile(r"^[^,]{2,80}, Published online: \d{1,2} \w+ \d{4}; doi:\S+", re.I)
+def is_teaser(s):
+    """Nature-family RSS description ("<journal>, Published online: <date>; doi:<doi> <title> <standfirst>"): not an abstract."""
+    return bool(TEASER_RE.match(s or ""))
+
+PREPRINT_HOSTS = ("biorxiv.org", "medrxiv.org")
+def norm_badge(it):
+    """bioRxiv / medRxiv links end in a version (…/10.64898/2026.10.05.756921v1); the DOI itself has no version."""
+    host = urllib.parse.urlparse(it.get("link") or "").hostname or ""
+    if (it.get("badge") or "").startswith("DOI ") and host.endswith(PREPRINT_HOSTS): it["badge"] = re.sub(r"v\d+$", "", it["badge"])
+    return it
+
+def springer_abstract(doi):
+    """Springer Nature citation export (RIS). Small and reliable from CI, unlike nature.com article pages, which get
+    throttled to a ~3 KB stub when fetched in parallel from GitHub Actions."""
+    ris = get(f"https://citation-needed.springer.com/v2/references/{doi}?format=refman&flavour=citation", timeout=20).decode("utf-8", "ignore")
+    return clean(" ".join(l[6:] for l in ris.splitlines() if l.startswith("AB  -")), ABS_MAX)
+
 def fill_abstract(it):
-    """RSS often carries only a one-line teaser (e.g. Nature journals); pull the abstract from the article page's meta tags."""
+    """RSS often carries only a one-line teaser (e.g. Nature journals); get the abstract from Springer's citation export
+    (Nature journals) or the article page's meta tags."""
     host = urllib.parse.urlparse(it["link"]).hostname or ""
-    if it.get("thin_src") or len(it.get("desc") or "") >= 300 or any(host.endswith(h) for h in NO_META): return it
-    s = None
+    cur = "" if is_teaser(it.get("desc")) else (it.get("desc") or "")
+    if it.get("thin_src") or len(cur) >= 300 or any(host.endswith(h) for h in NO_META): return it
+    errs = []
+    m = re.search(r"nature\.com/articles/([\w.-]+)", it["link"])
+    if m:
+        try:
+            ab = springer_abstract("10.1038/" + m.group(1))
+            if len(ab) >= 200: it["desc"] = ab; it["thin"] = False; it.pop("_abs_err", None); return it
+            errs.append("springer: empty")
+        except Exception as ex: errs.append(f"springer: {str(ex)[:60]}")
+    s, page_err = None, ""
     for a in range(2):  # publishers drop some requests under load; one polite retry
         try: s = get(it["link"], timeout=15).decode("utf-8", "ignore"); break
-        except Exception as ex: it["_abs_err"] = f"page: {str(ex)[:80]}"; time.sleep(2)
-    if s is None: return it
-    it.pop("_abs_err", None)
-    best = it.get("desc") or ""
-    for k in META_KEYS:
-        m = re.search(r'<meta[^>]+(?:name|property)="' + re.escape(k) + r'"[^>]+content="([^"]*)"', s, re.I)
-        txt = clean(m.group(1), ABS_MAX) if m else ""
-        if len(txt) > len(best) and not txt.lower().startswith("abstract page for"): best = txt
-    if len(best) > len(it.get("desc") or ""):
-        it["desc"] = best; it["thin"] = len(best) < 80
-    if len(best) < 200: it["_abs_err"] = f"page: no abstract in meta ({len(s)} bytes, best {len(best)} chars)"
+        except Exception as ex: page_err = f"page: {str(ex)[:80]}"; time.sleep(2)
+    best = cur
+    if s is not None:
+        for k in META_KEYS:
+            mm = re.search(r'<meta[^>]+(?:name|property)="' + re.escape(k) + r'"[^>]+content="([^"]*)"', s, re.I)
+            txt = clean(mm.group(1), ABS_MAX) if mm else ""
+            if len(txt) > len(best) and not txt.lower().startswith("abstract page for"): best = txt
+        if len(best) > len(cur):
+            it["desc"] = best; it["thin"] = len(best) < 80
+        if len(best) < 200:  # keep what the page actually was (e.g. a stub served to CI), to tell blocking from layout changes
+            t = re.search(r"<title[^>]*>(.*?)</title>", s, re.I | re.S)
+            body = clean(re.sub(r"<(script|style)[^>]*>.*?</\1>", " ", s, flags=re.I | re.S), 100)
+            page_err = f"page: no abstract in meta ({len(s)} bytes; title: {clean(t.group(1), 60) if t else '-'}; text: {body})"
+    errs += [page_err] if page_err else []
+    if errs: it["_abs_err"] = "; ".join(errs)
+    else: it.pop("_abs_err", None)
     return it
 
 FETCH = dict(rss=f_rss, arxiv=f_arxiv, github=f_github, hf=f_hf, pubmed=f_pubmed, hf_papers=f_hf_papers, hn=f_hn, ctgov=f_ctgov, fda_ai=f_fda_ai)
@@ -350,6 +383,7 @@ def fetch_source(src):
             m = re.search(r"arxiv\.org/abs/([\d.]+)", it["link"]) or re.search(r"(10\.\d{4,}/[^\s?#%]+)", it["link"])
             if m: it["badge"] = ("arXiv " if "arxiv" in it["link"] else "DOI ") + m.group(1)
             elif "nature.com/articles/" in it["link"]: it["badge"] = "DOI 10.1038/" + it["link"].rsplit("/", 1)[-1]
+        norm_badge(it)
         it["id"] = hashlib.sha1((it["link"] or it["title"]).encode()).hexdigest()[:12]
         res.append(it)
     print(f"[src] {src['name']}: {len(res)}" + (f" (error: {err})" if err else ""), file=sys.stderr)
@@ -494,18 +528,24 @@ def openalex_abstract(doi):
     pos = sorted((p, w) for w, ps in (r.get("abstract_inverted_index") or {}).items() for p in ps)
     return clean(" ".join(w for _, w in pos), ABS_MAX)
 
+def preprint_abstract(server, doi):
+    c = json.loads(get(f"https://api.biorxiv.org/details/{server}/{re.sub(r'v\d+$', '', doi)}", timeout=20)).get("collection") or []
+    return clean(c[-1].get("abstract") or "", ABS_MAX) if c else ""  # last entry = latest version
+
 def find_abstract(it, fresh):
-    """Abstract for a paper item: same-run feed entry > article page meta > PubMed > Europe PMC > OpenAlex.
+    """Abstract for a paper item: same-run feed entry > article page meta > bioRxiv/medRxiv API > PubMed > Europe PMC > OpenAlex.
     Returns (abstract, why it failed); the reason is kept on the item so CI failures are visible in items.json."""
     f = fresh.get(it["id"])
-    if f and len(f.get("desc") or "") >= 200: return f["desc"], ""
+    if f and len(f.get("desc") or "") >= 200 and not is_teaser(f["desc"]): return f["desc"], ""
     x = dict(link=it["link"], desc="")
     fill_abstract(x)
     if len(x["desc"]) >= 200: return x["desc"], ""
     errs = [x.get("_abs_err") or "page: skipped"]
     m = re.search(r"pubmed\.ncbi\.nlm\.nih\.gov/(\d+)", it["link"])
     doi = (it.get("badge") or "")[4:] if (it.get("badge") or "").startswith("DOI ") else ""
-    tries = ([("pubmed", pubmed_abstract, m.group(1))] if m else []) + ([("europepmc", europepmc_abstract, doi), ("openalex", openalex_abstract, doi)] if doi else [])
+    pre = re.search(r"(biorxiv|medrxiv)\.org/", it["link"])
+    tries = (([(pre.group(1) + "-api", lambda d: preprint_abstract(pre.group(1), d), doi)] if pre and doi else []) +
+             ([("pubmed", pubmed_abstract, m.group(1))] if m else []) + ([("europepmc", europepmc_abstract, doi), ("openalex", openalex_abstract, doi)] if doi else []))
     for name, fn, key in tries:
         try:
             ab = fn(key)
@@ -601,7 +641,10 @@ def select(new, n):
 def main():
     os.makedirs("data", exist_ok=True)
     db = json.load(open("data/items.json")) if os.path.exists("data/items.json") else []
-    for d in db: d["section"] = section_of(d)
+    for d in db:
+        d["section"] = section_of(d); norm_badge(d)
+        if is_teaser(d.get("abstract")):  # RSS teaser stored as abstract by older runs: drop it so backfill looks for the real one
+            for k in ("abstract", "zh_abstract", "abstract_days", "abstract_err"): d.pop(k, None)
     with cf.ThreadPoolExecutor(8) as ex: results = list(ex.map(fetch_source, SOURCES))
     update_status(results)
     rejected = load_rejected()
@@ -627,10 +670,10 @@ def main():
     for d in done:
         d.pop("_verdict", None)
         ab = d.pop("desc", None) or ""
-        if not d.get("thin") and len(ab) >= 200: d["abstract"] = ab
+        if not d.get("thin") and len(ab) >= 200 and not is_teaser(ab): d["abstract"] = ab
         d["day"] = TODAY; d.pop("evidence_hint", None); d.pop("thin_src", None); d["rank"] = rank(d)
     translate_all(done)
-    backfill(db, results)
+    backfill(db + done, results)  # new papers whose page fetch failed get the API fallbacks in the same run
     recent = [d for d in db if d.get("day", "") >= (NOW - dt.timedelta(days=3)).strftime("%Y-%m-%d")]
     done = cluster(done, recent)
     cutoff = (NOW - dt.timedelta(days=KEEP_DAYS)).strftime("%Y-%m-%d")
@@ -680,36 +723,43 @@ def card(i, featured=False, top=False, base=""):
     title = (i.get("zh_title") or i["title"]) if health else (i.get("name") or i["title"])
     txt = " ".join([title, i["title"], i.get("summary") or "", i["source"], " ".join(tags)]).lower()
     attrs = ('data-top="1" ' if top else '') + f'data-sec="{E(section_of(i))}" data-form="{E(form_of(i))}" data-tags="{E("|".join(tags))}" data-text="{E(txt)}"'
-    meta = (f'<div class="meta">{fav_img(i, base)}<span>{E(i["source"])}</span>'
-            f'<span>·</span><span>发布于 {zh_date(i.get("date",""))}</span>' + (f'<span>·</span><span class="mono">{E(i["pop"])}</span>' if i.get("pop") else "") +
+    ev = (i.get("evidence") or "") if health else ""
+    tn, tc = tier(i.get("score"))
+    # health cards: score badge leads the meta row; evidence is a quiet marker next to the date, not a chip
+    sb = (f'<span class="sb {tc}" title="评分 {E(i["score"])} · {tn}｜{E(score_tip(i))}"><b>{E(i["score"])}</b>{tn}</span>'
+          if health and i.get("score") and not featured else "")
+    evm = ""
+    if ev: evm = f'<span class="evm {"ok" if ev == "同行评审" else "warn" if ev == "预印本" else ""}">{"预印本 · 未经同行评审" if ev == "预印本" else E(ev)}</span>'
+    if health and i.get("thin"): evm += '<span class="evm thin" title="原始来源只有标题，摘要仅依据标题生成">仅基于标题</span>'
+    meta = (f'<div class="meta">{sb}{fav_img(i, base)}<span>{E(i["source"])}</span>'
+            f'<span>·</span><span>发布于 {zh_date(i.get("date",""))}</span>' + (f'<span>·</span><span class="mono">{E(i["pop"])}</span>' if i.get("pop") else "") + evm +
             (f'<span class="badge" title="{E(i["badge"])}">{E(i["badge"])}</span>' if health and i.get("badge") else "") +
             f'<a class="ext" href="{E(i["link"])}" target="_blank" rel="noopener" title="打开原文">原文 ↗</a></div>')
     t = f'<a class="t stretch" href="{base}items/{E(i["id"])}/">{E(title)}</a>'
-    if health and title != i["title"]: t += f'<div class="orig">{E(i["title"])}</div>'
+    orig = f'<div class="orig">{E(i["title"])}</div>' if health and title != i["title"] else ""
     s = f'<p class="s">{E(i.get("summary"))}</p>'
     kp = "".join(f"<li>{E(k)}</li>" for k in (i.get("key_points") or [])[:3])
     kp = f'<ul class="kp">{kp}</ul>' if kp and not i.get("thin") else ""
     chips = ""
-    if health:
-        ev = i.get("evidence") or ""
-        if i.get("score"):
-            tn, tc = tier(i["score"])
-            chips += f'<span class="chip sc {tc}" title="{E(score_tip(i))}">评分 {E(i["score"])} · {tn}</span>'
-        chips += f'<span class="chip {"p" if i.get("type")=="论文" else ""}">{E(i.get("type"))}</span>' if i.get("type") else ""
-        if ev: chips += f'<span class="chip w">{"预印本 · 未经同行评审" if ev=="预印本" else E(ev)}</span>'
+    if health and i.get("type"): chips += f'<span class="chip ty">{E(i["type"])}</span>'
     chips += "".join(f'<button class="chip tag {"p" if not health and "AI" in t_ else ""}" data-tag="{E(t_)}">{E(t_)}</button>' for t_ in tags)
     if not health:
         chips += "".join(f'<span class="chip w">{E(p)}</span>' for p in (i.get("platform") or [])) + (f'<span class="chip w">{E(i["pricing"])}</span>' if i.get("pricing") and i["pricing"] != "未知" else "")
-    if i.get("thin"): chips += '<span class="chip w" title="原始来源只有标题，摘要仅依据标题生成">仅基于标题</span>'
+        if i.get("thin"): chips += '<span class="chip w" title="原始来源只有标题，摘要仅依据标题生成">仅基于标题</span>'
     extra = ""
     if i.get("also"):
         extra += f'<div class="also">{len(i["also"]) + 1} 个来源报道：' + " ".join(f'<a href="{E(a["link"])}" target="_blank" rel="noopener">{E(a["source"])}</a>' for a in [dict(source=i["source"], link=i["link"])] + i["also"][:6]) + "</div>"
-    if health and (i.get("type") == "论文" or i.get("badge")):
-        extra += f'<button class="cite" data-cite="{E(cite_text(i))}">复制引用 / DOI</button>'
+    cite = f'<button class="cite" data-cite="{E(cite_text(i))}">复制引用 / DOI</button>' if health and (i.get("type") == "论文" or i.get("badge")) else ""
     why = f'<div class="why">有意思在哪：{E(i["why"])}</div>' if not health and i.get("why") else ""
     if health and i.get("reason") and not featured: why = f'<div class="why">评分理由：{E(i["reason"])}</div>'
-    cls = "card" + (" reg" if i.get("type") == "监管" else "")
-    body = meta + t + s + kp + f'<div class="chips">{chips}</div>' + why + extra
+    cls = "card" + (f" t-{tc}" if health else "") + (" thin" if health and i.get("thin") else "")
+    if health and not featured:
+        # secondary detail (English title, key points, reasoning, citation) folds away so the feed scans quickly
+        more = orig + kp + why + (f'<div class="mf">{cite}</div>' if cite else "")
+        more = f'<details class="more"><summary>{"要点与评分理由" if kp else "详情"}</summary>{more}</details>' if more else ""
+        body = meta + t + s + f'<div class="chips">{chips}</div>' + extra + more
+    else:
+        body = meta + t + orig + s + kp + f'<div class="chips">{chips}</div>' + why + extra + cite
     if health and featured:
         tn, tc = tier(i.get("score"))
         side = (f'<div class="img scorecard {tc}" title="{E(score_tip(i))}"><div class="big"><b>{E(i.get("score") or "–")}</b><span>/10</span></div>'
@@ -777,7 +827,7 @@ def featured(db):
     top = top_picks([i for i in db if i["day"] == latest])
     if not top: return "", latest, 0
     if SITE["mode"] == "health":
-        h = card(top[0], True) + '<div class="mini">' + "".join(card(i) for i in top[1:]) + "</div>"
+        h = card(top[0], True) + '<div class="mini duo">' + "".join(card(i) for i in top[1:]) + "</div>"
     else:
         h = '<div class="grid">' + "".join(card(i, True) for i in top[:4]) + "</div>" + ('<div class="mini">' + card(top[4]) + "</div>" if len(top) > 4 else "")
     return f'<div id="featWrap"><h2>今日精选 · Top 5</h2>{h}</div>', latest, len([i for i in db if i["day"] == latest])
@@ -794,17 +844,19 @@ def rss(path, title, link, items):
 def build(db=None, conf_items=None):
     if db is None: db = json.load(open("data/items.json"))
     for i in db:  # normalize legacy items
-        i["tags"] = norm_tags(i.get("tags")); i["section"] = section_of(i); i["rank"] = rank(i)
+        i["tags"] = norm_tags(i.get("tags")); i["section"] = section_of(i); i["rank"] = rank(i); norm_badge(i)
         if i.get("thin"): i["key_points"] = []
     os.makedirs("site", exist_ok=True)
     fetch_favicons({fav_host(i["link"], i.get("home")) for i in db + (conf_items or []) + [x for v in load_archive().values() for x in v]})
     url = SITE["url"]
     feat, latest, n = featured(db)
-    tools = ('<div class="tools"><input id="q" type="search" placeholder="搜索标题、摘要、来源、标签…" aria-label="搜索"><span id="tagf" class="tagf" hidden></span></div>')
+    tools = ('<div class="tools"><label class="search"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><input id="q" type="search" placeholder="搜索标题、摘要、来源、标签…" aria-label="搜索"><kbd>/</kbd></label><span id="tagf" class="tagf" hidden></span></div>')
     forms = ["全部形式"] + list(getattr(C, "FORMS", []))
     sub = '<div id="formBar" class="sub">' + "".join(f'<button data-f="{E(f)}"{" class=on" if k == 0 else ""}>{E(f)}</button>' for k, f in enumerate(forms)) + '</div>'
     random_btn = '<button class="pill" id="rnd">随机看一个</button>' if SITE["mode"] == "apps" else ""
-    hero = (f'<section class="hero"><div><h1><span class="mono">{latest}</span></h1><p>{E(SITE["tagline"])} · 今日 {n} 条</p></div>{random_btn}</section>')
+    ld = dt.date.fromisoformat(latest)
+    hero = (f'<section class="hero"><div><h1>{ld.month}月{ld.day}日<small>周{"一二三四五六日"[ld.weekday()]} · {ld.year}</small></h1>'
+            f'<p>{E(SITE["tagline"])} · 今日 <b>{n}</b> 条</p></div>{random_btn}</section>')
     body = header("", active="hot") + f'<main class="wrap">{hero}{tools}{sub}{feat}<div id="feed">{feed_list(db, conf_items)}</div><div id="empty" class="empty" hidden>没有匹配的内容</div></main>' + footer("")
     open("site/index.html", "w").write(page(SITE["title"], SITE["tagline"] + "：" + "、".join(SECTIONS), url, body))
     # conference data, loaded on demand
@@ -828,7 +880,7 @@ def build(db=None, conf_items=None):
     # archive pages (permanent store)
     arc = load_archive()
     for day, items in arc.items():
-        for i in items: i["tags"] = norm_tags(i.get("tags"))
+        for i in items: i["tags"] = norm_tags(i.get("tags")); norm_badge(i)
         items = sorted(items, key=rank, reverse=True)
         os.makedirs(f"site/{day}", exist_ok=True)
         b = header("../", tabs=False, active="archive") + f'<main class="wrap"><section class="hero"><div><h1><span class="mono">{day}</span></h1><p>{E(SITE["tagline"])} · 当日收录 {len(items)} 条 · <a href="../archive/">全部归档</a></p></div></section><div class="feed">' + "".join(card(i, base="../") for i in items) + "</div></main>" + footer("../")
@@ -889,7 +941,7 @@ def build_items(url, arc, conf_items=None):
             open(f'site/items/{c["id"]}/index.html', "w").write(item_page(c, [r for r in cs if r["id"] != c["id"]][:4], url)); n += 1
     for day, items in arc.items():
         for i in items:
-            i["tags"] = norm_tags(i.get("tags")); i["section"] = section_of(i)
+            i["tags"] = norm_tags(i.get("tags")); i["section"] = section_of(i); norm_badge(i)
         for i in items:
             related = sorted([r for r in items if r["id"] != i["id"] and r["section"] == i["section"]], key=rank, reverse=True)[:4]
             os.makedirs(f'site/items/{i["id"]}', exist_ok=True)
