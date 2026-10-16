@@ -212,6 +212,20 @@ def test_challenged_item_retried_same_day():
     finally: hub.find_abstract, hub.enrich_all, hub.translate_all = saved, e, t
     assert p.get("abstract") and not q.get("abstract")   # bot check doesn't use up the day; a real failure does
 
+def test_trends_and_must_read():
+    mk = lambda k, day, tags, score=5: dict(id=f"{day}-{k}", day=day, date=day + "T00:00:00Z", tags=tags, score=score, title="t", link="l", source="s")
+    days = [f"2026-10-{d:02d}" for d in range(1, 15)]
+    db = [mk(k, d, ["医学影像"]) for d in days for k in range(3)]                       # evergreen, flat
+    db += [mk(k, d, ["智能体"]) for d in days[7:] for k in range(2)] + [mk("a", days[0], ["智能体"])]  # rising
+    rows, full, nd = hub.trends(db, days[-1])
+    assert full and nd == 7 and rows[0]["tag"] == "智能体" and rows[0]["delta"] == 1300 and len(rows[0]["spark"]) == 7
+    rows, full, nd = hub.trends([i for i in db if i["day"] >= days[-3]], days[-1])
+    assert not full and nd == 3 and rows[0]["tag"] == "医学影像" and rows[0]["delta"] is None
+    assert "data-tag=\"智能体\"" in hub.trend_block(db, days[-1]) and "↑ 1300%" in hub.trend_block(db, days[-1])
+    today = [mk("x", days[-1], [], 6), mk("y", days[-1], [], 8)]
+    assert [i["id"] for i in hub.picks(today)] == [days[-1] + "-y"]
+    assert hub.picks([mk("x", days[-1], [], 6)]) == []
+
 if __name__ == "__main__":
     for k, f in list(globals().items()):
         if k.startswith("test_"): f(); print("ok", k)

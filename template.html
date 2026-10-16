@@ -90,12 +90,23 @@ h2{font-size:15px;font-weight:700;letter-spacing:.01em;color:var(--tx);text-tran
 @media(min-width:1180px){.mini.duo{display:grid;grid-template-columns:1fr 1fr;gap:12px}}
 @media(max-width:899px){.tabs{-webkit-mask-image:linear-gradient(90deg,#000 82%,transparent);mask-image:linear-gradient(90deg,#000 82%,transparent);padding-right:24px}}
 @media(max-width:640px){.card .meta .badge{display:none}h1 small{display:block;margin:4px 0 0}.sub{display:flex}.sub button{flex:1 0 auto}}
+h2 small{font-size:12px;font-weight:500;color:var(--mu);letter-spacing:.02em}
+.trends{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}@media(max-width:1100px){.trends{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.tr{display:grid;grid-template-columns:1fr auto;grid-template-rows:auto auto;gap:4px 10px;align-items:end;text-align:left;padding:12px 14px;border:1px solid var(--bd);border-radius:12px;background:var(--sf);color:var(--tx);font-family:inherit;cursor:pointer;transition:border-color .15s,transform .15s}
+.tr:hover{border-color:rgba(var(--acr),.4);transform:translateY(-1px)}.tr.on{border-color:var(--ac);background:rgba(var(--acr),.06)}
+.tr .tn{grid-column:1/-1;font-size:14px;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.tr .tv{display:flex;align-items:baseline;gap:3px;font-size:12px;color:var(--mu);white-space:nowrap}.tr .tv b{font:700 20px/1 "JetBrains Mono",ui-monospace,monospace;color:var(--tx)}
+.tr .dl{margin-left:6px;font:600 11.5px/1 "JetBrains Mono",ui-monospace,monospace;color:var(--mu)}.tr .dl.up{color:var(--ac)}.tr .dl.dn{color:var(--warn)}
+.tr .spk{width:72px;height:20px;color:var(--ac)}.tr .spk polyline{fill:none;stroke:currentColor;stroke-width:1.6;stroke-linejoin:round;stroke-linecap:round;vector-effect:non-scaling-stroke}
+#featWrap .mini{margin-top:0}
+@media(max-width:640px){.tr:nth-child(n+7){display:none}.tr{grid-template-columns:minmax(0,1fr);padding:10px 12px}.tr .spk{width:100%}.tr .tv b{font-size:18px}h2{flex-wrap:wrap;row-gap:2px}h2::after{display:none}}
 [hidden]{display:none!important}
 </style></head><body class="{{MODE}}">{{BODY}}<script>
 (function(){
 const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)],E=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 let sec='全部',q='',tag='',form='全部形式',C=null,page=0;const PER=30;
-document.addEventListener('click',e=>{const t=e.target.closest('.chip.tag');if(t){e.preventDefault();tag=t.dataset.tag;page=0;apply();window.scrollTo({top:0,behavior:'smooth'});return}
+document.addEventListener('click',e=>{const r=e.target.closest('.tr');if(r){tag=tag===r.dataset.tag?'':r.dataset.tag;page=0;apply();return}
+ const t=e.target.closest('.chip.tag');if(t){e.preventDefault();tag=t.dataset.tag;page=0;apply();window.scrollTo({top:0,behavior:'smooth'});return}
  const c=e.target.closest('.cite');if(c){e.preventDefault();navigator.clipboard&&navigator.clipboard.writeText(c.dataset.cite).then(()=>{const o=c.textContent;c.textContent='已复制';setTimeout(()=>c.textContent=o,1200)});}});
 $$('.tab').forEach(b=>b.onclick=()=>{sec=b.dataset.s;$$('.tab').forEach(x=>x.classList.toggle('on',x===b));page=0;apply()});
 const qi=$('#q');if(qi)qi.oninput=()=>{q=qi.value.trim().toLowerCase();page=0;apply()};
@@ -108,6 +119,7 @@ const H=new URLSearchParams(location.hash.slice(1));if(H.get('tab')){sec=H.get('
 function match(el){return (sec==='全部'||el.dataset.sec===sec)&&(form==='全部形式'||el.dataset.form===form)&&(!q||el.dataset.text.includes(q))&&(!tag||el.dataset.tags.split('|').includes(tag))}
 function apply(){const fw=$('#featWrap');if(fw)fw.hidden=!!(sec!=='全部'||form!=='全部形式'||q||tag);
  if(tf){tf.hidden=!tag;tf.textContent='标签：'+tag+' ✕'}
+ $$('.tr').forEach(x=>x.classList.toggle('on',x.dataset.tag===tag));
  const cp=$('#confPanel'),feed=$('#feed');
  const conf=!!cp&&!feed;let n=0;
  if(conf){loadConf();n=1}else{$$('#feed .dayg').forEach(g=>{let k=0;const fv=fw&&!fw.hidden;g.querySelectorAll('article').forEach(a=>{const m=match(a)&&!(fv&&a.dataset.top);a.hidden=!m;k+=m});g.hidden=!k;const s=g.querySelector('.n');if(s)s.textContent=k;n+=k})}

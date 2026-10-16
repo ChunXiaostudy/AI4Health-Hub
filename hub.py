@@ -18,7 +18,9 @@ MAX_NEW = int(os.getenv("MAX_NEW", "60"))
 TAGS = getattr(C, "TAGS", []); SYN = getattr(C, "TAG_SYNONYMS", {}); WEIGHTS = getattr(C, "SOURCE_WEIGHTS", {})
 EV_BONUS = {"已获批": 1.5, "同行评审": 1.0, "预印本": 0.0, "新闻": 0.0}
 FRESH_BONUS, FRESH_HALF_LIFE = 2.0, 7  # rank bonus for newly published items, halves every N days
-FEATURED_MAX_AGE = 14  # 今日精选 only picks items published within N days of the day they were collected
+FEATURED_MAX_AGE = 14  # 今日精选 / 今日必读 only pick items published within N days of the day they were collected
+MUST_READ_MIN, MUST_READ_N = 7, 3  # 今日必读 appears only when the latest day has items scored >= 7 (重要 / 里程碑)
+TREND_WINDOW, TREND_N, TREND_MIN = 7, 8, 3  # 话题趋势: compare the last 7 days with the 7 before; show 8 tags with >= 3 items
 ABS_MAX = 2500  # stored original abstract length (shown + translated on the item page)
 E = lambda s: html.escape(str(s if s is not None else ""), quote=True)
 
@@ -715,24 +717,71 @@ def footer(base, st=None):
             f'更新于 <span class="mono">{NOW.astimezone(CST).strftime("%Y-%m-%d %H:%M")} (UTC+8)</span> · <a href="{SITE["repo"]}" target="_blank">{SITE["repo"]}</a> · '
             f'灵感来自 <a href="https://github.com/wuyoscar/AISafetyHot-Hub" target="_blank">AISafetyHot-Hub</a> 与 <a href="https://github.com/KKKKhazix/AIHOT" target="_blank">AIHOT</a></div></footer>')
 
+def picks(items):
+    """Items pinned above the feed: health shows 今日必读 only when something scores >= MUST_READ_MIN; apps keeps Top 5."""
+    if SITE["mode"] != "health": return top_picks(items)
+    return [i for i in top_picks(items, n=len(items)) if (i.get("score") or 0) >= MUST_READ_MIN and age_days(i) <= FEATURED_MAX_AGE][:MUST_READ_N]
+
 def feed_list(db, conf_items):
     days = sorted({d["day"] for d in db}, reverse=True)
+    topids = {i["id"] for i in picks([i for i in db if i["day"] == days[0]])} if days else set()
     h = ""
     for d in days:
         g = sorted([i for i in db if i["day"] == d], key=rank, reverse=True)
-        topids = {i["id"] for i in top_picks([i for i in db if i["day"] == days[0]])}
         h += f'<section class="dayg" data-day="{d}"><div class="day">{E(day_label(d))} · <span class="n">{len(g)}</span> 条</div><div class="feed">' + "".join(card(i, top=i["id"] in topids) for i in g) + "</div></section>"
     return h
 
+def trends(db, latest, n=TREND_N, win=TREND_WINDOW):
+    """Tag counts over the last `win` collection days vs the `win` days before. Ranked by growth once two full
+    windows of history exist; until then by volume (evergreen tags like 医学影像 dominate raw counts, so growth is the signal)."""
+    end = dt.date.fromisoformat(latest)
+    span = [(end - dt.timedelta(days=k)).isoformat() for k in range(2 * win - 1, -1, -1)]  # oldest → latest
+    have = sorted({i["day"] for i in db})
+    full = bool(have) and have[0] <= span[0]
+    shown = span[win:] if full else [d for d in span if d >= (have[0] if have else latest)][-win:]
+    daily = {}
+    for i in db:
+        if i["day"] in span:
+            for t in set(i.get("tags") or []):
+                daily.setdefault(t, dict.fromkeys(span, 0))[i["day"]] += 1
+    rows = []
+    for t, c in daily.items():
+        now, before = sum(c[d] for d in span[win:]), sum(c[d] for d in span[:win])
+        if now < TREND_MIN: continue
+        rows.append(dict(tag=t, n=now, prev=before, spark=[c[d] for d in shown],
+                         delta=None if not full else ("新" if not before else round((now - before) / before * 100))))
+    key = (lambda r: ((r["n"] - r["prev"]) / math.sqrt(r["prev"] + 4), r["n"])) if full else (lambda r: (r["n"], r["tag"]))
+    return sorted(rows, key=key, reverse=True)[:n], full, len(shown)
+
+def spark(vals, w=72, h=20):
+    if len(vals) < 2: return ""
+    m = max(vals) or 1
+    pts = " ".join(f"{k * w / (len(vals) - 1):.1f},{h - 2 - v / m * (h - 4):.1f}" for k, v in enumerate(vals))
+    return f'<svg class="spk" viewBox="0 0 {w} {h}" preserveAspectRatio="none" aria-hidden="true"><polyline points="{pts}"/></svg>'
+
+def trend_block(db, latest):
+    rows, full, ndays = trends(db, latest)
+    if not rows: return ""
+    def delta(r):
+        d = r["delta"]
+        if d is None: return ""
+        if d == "新": return '<span class="dl up">新出现</span>'
+        return f'<span class="dl {"up" if d > 0 else "dn" if d < 0 else ""}">{"↑" if d > 0 else "↓" if d < 0 else "–"} {abs(d)}%</span>'
+    cards = "".join(f'<button class="tr" data-tag="{E(r["tag"])}" title="近 {ndays} 天 {r["n"]} 条' + (f'，前 {TREND_WINDOW} 天 {r["prev"]} 条' if full else "") + f'｜点击筛选">'
+                    f'<span class="tn">{E(r["tag"])}</span><span class="tv"><b>{r["n"]}</b>条{delta(r)}</span>{spark(r["spark"])}</button>' for r in rows)
+    sub = f"近 {TREND_WINDOW} 天 · 按热度变化排序" if full else f"近 {ndays} 天 · 按条数排序（数据满 {2 * TREND_WINDOW} 天后显示变化）"
+    return f'<section id="trendWrap"><h2>话题趋势<small>{sub}</small></h2><div class="trends">{cards}</div></section>'
+
 def featured(db):
     latest = max((d["day"] for d in db), default=TODAY)
-    top = top_picks([i for i in db if i["day"] == latest])
-    if not top: return "", latest, 0
+    day = [i for i in db if i["day"] == latest]
+    top = picks(day)
     if SITE["mode"] == "health":
-        h = card(top[0], True) + '<div class="mini duo">' + "".join(card(i) for i in top[1:]) + "</div>"
-    else:
-        h = '<div class="grid">' + "".join(card(i, True) for i in top[:4]) + "</div>" + ('<div class="mini">' + card(top[4]) + "</div>" if len(top) > 4 else "")
-    return f'<div id="featWrap"><h2>今日精选 · Top 5</h2>{h}</div>', latest, len([i for i in db if i["day"] == latest])
+        must = f'<div id="featWrap"><h2>今日必读<small>评分 ≥ {MUST_READ_MIN}</small></h2><div class="mini">' + "".join(card(i) for i in top) + "</div></div>" if top else ""
+        return trend_block(db, latest) + must, latest, len(day)
+    if not top: return "", latest, 0
+    h = '<div class="grid">' + "".join(card(i, True) for i in top[:4]) + "</div>" + ('<div class="mini">' + card(top[4]) + "</div>" if len(top) > 4 else "")
+    return f'<div id="featWrap"><h2>今日精选 · Top 5</h2>{h}</div>', latest, len(day)
 
 def rss(path, title, link, items):
     def fmt(iso):
