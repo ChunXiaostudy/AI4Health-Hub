@@ -1,6 +1,167 @@
 {
  "runs": [
   {
+   "time": "2026-10-16T03:59:21.409054+00:00",
+   "sources": {
+    "arXiv": {
+     "fetched": 60,
+     "error": null
+    },
+    "medRxiv": {
+     "fetched": 30,
+     "error": null
+    },
+    "bioRxiv": {
+     "fetched": 8,
+     "error": null
+    },
+    "PubMed": {
+     "fetched": 60,
+     "error": null
+    },
+    "Nature Medicine": {
+     "fetched": 8,
+     "error": null
+    },
+    "npj Digital Medicine": {
+     "fetched": 0,
+     "error": "Client Challenge (bot check) from www.nature.com"
+    },
+    "Lancet Digital Health": {
+     "fetched": 12,
+     "error": null
+    },
+    "NEJM AI": {
+     "fetched": 9,
+     "error": null
+    },
+    "Hugging Face": {
+     "fetched": 1,
+     "error": null
+    },
+    "GitHub": {
+     "fetched": 15,
+     "error": null
+    },
+    "STAT News": {
+     "fetched": 6,
+     "error": null
+    },
+    "Fierce Healthcare": {
+     "fetched": 5,
+     "error": null
+    },
+    "Google News · FDA AI": {
+     "fetched": 15,
+     "error": null
+    },
+    "Google News · NMPA AI": {
+     "fetched": 10,
+     "error": null
+    },
+    "PubMed · 重点期刊": {
+     "fetched": 6,
+     "error": null
+    },
+    "Nature Biomedical Engineering": {
+     "fetched": 0,
+     "error": "Client Challenge (bot check) from www.nature.com"
+    },
+    "Nature Machine Intelligence": {
+     "fetched": 2,
+     "error": null
+    },
+    "eClinicalMedicine": {
+     "fetched": 1,
+     "error": null
+    },
+    "Cell Reports Medicine": {
+     "fetched": 1,
+     "error": null
+    },
+    "Medical Image Analysis": {
+     "fetched": 40,
+     "error": null
+    },
+    "Hugging Face Daily Papers": {
+     "fetched": 9,
+     "error": null
+    },
+    "Google Research": {
+     "fetched": 5,
+     "error": null
+    },
+    "Google DeepMind": {
+     "fetched": 2,
+     "error": null
+    },
+    "Microsoft Research": {
+     "fetched": 3,
+     "error": null
+    },
+    "OpenAI": {
+     "fetched": 1,
+     "error": null
+    },
+    "NVIDIA Blog": {
+     "fetched": 1,
+     "error": null
+    },
+    "Google News · AI 公司动态": {
+     "fetched": 1,
+     "error": null
+    },
+    "FDA 新闻稿": {
+     "fetched": 0,
+     "error": null
+    },
+    "FDA AI 器械清单": {
+     "fetched": 1,
+     "error": null
+    },
+    "EMA": {
+     "fetched": 0,
+     "error": null
+    },
+    "MHRA": {
+     "fetched": 1,
+     "error": null
+    },
+    "WHO": {
+     "fetched": 0,
+     "error": null
+    },
+    "Google News · 中文医疗AI": {
+     "fetched": 11,
+     "error": null
+    },
+    "Google News · 中文医疗AI融资": {
+     "fetched": 7,
+     "error": null
+    },
+    "Google News · 行业媒体": {
+     "fetched": 20,
+     "error": null
+    },
+    "MedCity News": {
+     "fetched": 7,
+     "error": null
+    },
+    "Hacker News": {
+     "fetched": 0,
+     "error": null
+    },
+    "ClinicalTrials.gov": {
+     "fetched": 24,
+     "error": null
+    },
+    "Hugging Face 数据集": {
+     "fetched": 2,
+     "error": null
+    }
+   }
+  },
+  {
    "time": "2026-10-16T03:23:51.329559+00:00",
    "sources": {
     "arXiv": {
@@ -992,67 +1153,6 @@
      "error": null
     }
    }
-  },
-  {
-   "time": "2026-10-15T07:06:59.870690+00:00",
-   "sources": {
-    "arXiv": {
-     "fetched": 54,
-     "error": null
-    },
-    "medRxiv": {
-     "fetched": 30,
-     "error": null
-    },
-    "bioRxiv": {
-     "fetched": 6,
-     "error": null
-    },
-    "PubMed": {
-     "fetched": 25,
-     "error": null
-    },
-    "Nature Medicine": {
-     "fetched": 8,
-     "error": null
-    },
-    "npj Digital Medicine": {
-     "fetched": 8,
-     "error": null
-    },
-    "Lancet Digital Health": {
-     "fetched": 12,
-     "error": null
-    },
-    "NEJM AI": {
-     "fetched": 9,
-     "error": null
-    },
-    "Hugging Face": {
-     "fetched": 15,
-     "error": null
-    },
-    "GitHub": {
-     "fetched": 15,
-     "error": null
-    },
-    "STAT News": {
-     "fetched": 6,
-     "error": null
-    },
-    "Fierce Healthcare": {
-     "fetched": 5,
-     "error": null
-    },
-    "Google News · FDA AI": {
-     "fetched": 15,
-     "error": null
-    },
-    "Google News · NMPA AI": {
-     "fetched": 10,
-     "error": null
-    }
-   }
   }
  ],
  "streak": {
@@ -1061,7 +1161,7 @@
   "bioRxiv": 0,
   "PubMed": 0,
   "Nature Medicine": 0,
-  "npj Digital Medicine": 1,
+  "npj Digital Medicine": 2,
   "Lancet Digital Health": 0,
   "NEJM AI": 0,
   "Hugging Face": 0,
@@ -1070,8 +1170,8 @@
   "Fierce Healthcare": 0,
   "Google News · FDA AI": 0,
   "Google News · NMPA AI": 0,
-  "PubMed · 重点期刊": 2,
-  "Nature Biomedical Engineering": 0,
+  "PubMed · 重点期刊": 0,
+  "Nature Biomedical Engineering": 1,
   "Nature Machine Intelligence": 0,
   "eClinicalMedicine": 0,
   "Cell Reports Medicine": 0,
@@ -1083,16 +1183,16 @@
   "OpenAI": 0,
   "NVIDIA Blog": 0,
   "Google News · AI 公司动态": 0,
-  "FDA 新闻稿": 2,
+  "FDA 新闻稿": 3,
   "FDA AI 器械清单": 0,
-  "EMA": 2,
+  "EMA": 3,
   "MHRA": 0,
-  "WHO": 2,
+  "WHO": 3,
   "Google News · 中文医疗AI": 0,
   "Google News · 中文医疗AI融资": 0,
   "Google News · 行业媒体": 0,
   "MedCity News": 0,
-  "Hacker News": 2,
+  "Hacker News": 3,
   "ClinicalTrials.gov": 0,
   "Hugging Face 数据集": 0
  }
