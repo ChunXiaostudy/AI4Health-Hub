@@ -846,7 +846,7 @@ def header(base, tabs=True, active=""):
     ico = lambda k: f'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">{ICONS[k]}</svg>'
     links = "".join(f'<a href="{base}{href}"{" class=on aria-current=page" if k == active else ""}>{ico(k)}<span>{name}</span></a>' for k, name, href in NAV)
     side = (f'<aside class="side"><a class="brand" href="{base}./">{SITE["wordmark"]}</a><nav class="snav">{links}</nav>'
-            f'<div class="sfoot"><a href="{base}feed.xml">RSS 订阅</a><a href="{base}status.html">数据源状态</a><a href="{SITE["repo"]}" target="_blank" rel="noopener">GitHub</a></div></aside>'
+            f'<div class="sfoot"><span id="busuanzi_container_site_pv" class="bsz" style="display:none">总访问 <b id="busuanzi_value_site_pv"></b> 次<br>访客 <b id="busuanzi_value_site_uv"></b> 人</span><a href="{base}feed.xml">RSS 订阅</a><a href="{base}status.html">数据源状态</a><a href="{SITE["repo"]}" target="_blank" rel="noopener">GitHub</a></div></aside>'
             f'<nav class="bnav">{links}</nav>')
     t = ('<nav class="tabs" id="tabs">' + "".join(f'<button class="tab{" on" if s=="全部" else ""}" data-s="{E(s)}">{E(s)}</button>' for s in ["全部"] + SECTIONS) + "</nav>") if tabs else ""
     return side + f'<header{"" if tabs else " class=notabs"}><div class="wrap"><a class="brand" href="{base}./">{SITE["wordmark"]}</a>{t}</div></header>'
@@ -854,6 +854,7 @@ def header(base, tabs=True, active=""):
 def footer(base, st=None):
     srcs = "、".join(sorted({s["name"] for s in SOURCES}))
     return (f'<footer><div class="wrap">{E(SITE.get("disclaimer",""))}<br>数据来源：{E(srcs)} · <a href="{base}status.html">数据源状态</a> · <a href="{base}feed.xml">RSS</a><br>'
+            '<span class="bszm" hidden>总访问 <b data-k="site_pv"></b> 次 · 访客 <b data-k="site_uv"></b> 人<br></span>'
             f'更新于 <span class="mono">{NOW.astimezone(CST).strftime("%Y-%m-%d %H:%M")} (UTC+8)</span> · <a href="{SITE["repo"]}" target="_blank">{SITE["repo"]}</a> · '
             f'灵感来自 <a href="https://github.com/wuyoscar/AISafetyHot-Hub" target="_blank">AISafetyHot-Hub</a> 与 <a href="https://github.com/KKKKhazix/AIHOT" target="_blank">AIHOT</a></div></footer>')
 
@@ -992,7 +993,8 @@ def item_page(i, related, url):
     title = i.get("zh_title") or i.get("name") or i["title"]
     meta = (f'<div class="meta">{fav_img(i, "../../", lazy=False)}<span>{E(i["source"])}</span><span>·</span><span>发布于 {zh_date(i.get("date", ""))}</span>' +
             (f'<span>·</span><span class="mono">{E(i["pop"])}</span>' if i.get("pop") else "") +
-            (f'<span>·</span><span>收录于 <a href="../../{E(i["day"])}/">{E(i["day"])}</a></span>' if i.get("day") else "") + "</div>")
+            (f'<span>·</span><span>收录于 <a href="../../{E(i["day"])}/">{E(i["day"])}</a></span>' if i.get("day") else "") +
+            '<span id="busuanzi_container_page_pv" style="display:none"><span>·</span> 阅读 <span id="busuanzi_value_page_pv" class="mono"></span> 次</span></div>')
     digest = f'<p>{E(i.get("summary"))}</p>' + (f'<ul class="kp">' + "".join(f"<li>{E(k)}</li>" for k in i["key_points"][:3]) + "</ul>" if i.get("key_points") and not i.get("thin") else "")
     abstract = ""
     if i.get("zh_abstract"):
