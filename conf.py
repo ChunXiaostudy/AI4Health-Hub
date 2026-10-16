@@ -1,6 +1,7 @@
-"""Top-conference (CCF-A + MICCAI) and medical-AI venue (ISBI / MIDL / CHIL / ML4H) papers via Semantic Scholar bulk search.
+"""Top-conference (CCF-A + MICCAI) and medical-AI venue (ISBI / MIDL / CHIL / ML4H) papers via Semantic Scholar bulk search
+(MIDL / ML4H from PMLR proceedings).
 Persistent store data/conf.json (no 30-day expiry). Only items with LLM enrichment are shown."""
-import json, math, os, re, sys, time, urllib.request, urllib.parse, hashlib
+import json, math, os, re, sys, time, urllib.request, urllib.parse, hashlib, html
 VENUES = {  # short: (S2 venue name, CCF rank)
  "ACL": ("Annual Meeting of the Association for Computational Linguistics", "CCF-A"),
  "EMNLP": ("Conference on Empirical Methods in Natural Language Processing", "CCF-B"),
@@ -19,10 +20,13 @@ VENUES = {  # short: (S2 venue name, CCF rank)
  "MICCAI": ("International Conference on Medical Image Computing and Computer-Assisted Intervention", "CCF-B"),
  # 医疗 AI 专门会议：论文本身都属医疗领域，不再按标题关键词过滤。S2 的 venue 参数接受逗号分隔的多个名称
  "ISBI": ("IEEE International Symposium on Biomedical Imaging", "无CCF评级"),
- "MIDL": ("International Conference on Medical Imaging with Deep Learning", "无CCF评级"),
  "CHIL": ("ACM Conference on Health, Inference, and Learning (CHIL)", "无CCF评级"),
- "ML4H": ("Machine Learning for Health,ML4H@NeurIPS", "无CCF评级"),
+ # MIDL / ML4H 论文在 S2 上多被记成 arXiv 预印本（venue / publicationVenue 均为 "arXiv.org"），按 venue 只能搜到 1 篇；
+ # 两者都只在 PMLR 出版，改为直接读 PMLR 卷的 bibliography.bib（一卷一个请求，带摘要，无引用数）
+ "MIDL": (None, "无CCF评级"),
+ "ML4H": (None, "无CCF评级"),
 }
+PMLR = {"MIDL": r"\bMIDL\b|Medical Imaging with Deep Learning", "ML4H": r"\bML4H\b|Machine Learning for Health Symposium"}  # PMLR index title patterns
 MED_VENUES = {"MICCAI", "ISBI", "MIDL", "CHIL", "ML4H"}
 YEARS = "2025-2026"
 TITLE_RE = re.compile(r"\b(medical|medicine|clinical|clinic|health|healthcare|patient|patients|disease|diagnos\w*|radiolog\w*|patholog\w*|biomedical|EHR|electronic health|hospital|surgical|surgery|cancer|tumou?r|MRI|CT|X-ray|chest|ECG|EEG|drug|molecul\w*|protein|genom\w*|cell|mental health|depression|alzheimer\w*|oncolog\w*|dermatolog\w*|ophthalm\w*|retina\w*|histopatholog\w*|lesion|ultrasound|endoscop\w*|pharma\w*|therap\w*)\b", re.I)
@@ -40,6 +44,67 @@ def s2(params):
             print(f"[s2 retry {a}] {ex}", file=sys.stderr); time.sleep(5 * (a + 1))
     return {}
 
+def http(url, tries=3):
+    for a in range(tries):
+        try:
+            with urllib.request.urlopen(urllib.request.Request(url, headers={"User-Agent": "AI4Health-Hub"}), timeout=60) as r:
+                return r.read().decode("utf-8", "replace")
+        except Exception as ex:
+            if a == tries - 1: raise
+            print(f"[pmlr retry {a}] {ex}", file=sys.stderr); time.sleep(5 * (a + 1))
+
+def bib_entries(text):
+    """@InProceedings entries of a PMLR bibliography.bib as dicts (brace-balanced values, outer braces dropped)."""
+    out = []
+    for m in re.finditer(r"@InProceedings\{([^,]+),", text):
+        e, i = {"key": m.group(1).strip()}, m.end()
+        while True:
+            f = re.compile(r"\s*(\w+)\s*=\s*\{").match(text, i)
+            if not f: break
+            depth, j = 1, f.end()
+            while depth and j < len(text):
+                depth += {"{": 1, "}": -1}.get(text[j], 0); j += 1
+            e[f.group(1).lower()] = text[f.end():j - 1]
+            i = j + (text[j] == "," if j < len(text) else 0)
+        out.append(e)
+    return out
+
+def tex(s):
+    return re.sub(r"\s+", " ", html.unescape(re.sub(r"\\[`'^\"~]|[{}]", "", s or ""))).strip()
+
+def pmlr_volumes(index):
+    """{short: [(volume, conference year or None)]} for MIDL / ML4H volumes on the PMLR index page, newest first."""
+    vols = {k: [] for k in PMLR}
+    for li in re.findall(r"<li>(.*?)</li>", index, re.S):
+        v = re.search(r'href="v(\d+)"', li)
+        t = " ".join(re.sub(r"<[^>]+>", " ", li).split())
+        for short, pat in PMLR.items():
+            if v and re.search(pat, t):
+                y = re.search(r"\b(20\d\d)\b", t)
+                vols[short].append((int(v.group(1)), int(y.group(1)) if y else None))
+    return {k: sorted(x, reverse=True) for k, x in vols.items()}
+
+def fetch_pmlr(short, rank, vols):
+    """Papers of one PMLR-only venue within YEARS. The index title's year is the conference year (ML4H 2025 is
+    published in 2026); volumes without a year in the title are judged by the bib year."""
+    lo, hi = (int(x) for x in YEARS.split("-"))
+    out = {}
+    for vol, year in vols[:4]:
+        if year is not None and not lo <= year <= hi: continue
+        try: entries = bib_entries(http(f"https://proceedings.mlr.press/v{vol}/assets/bib/bibliography.bib"))
+        except Exception as ex: print(f"[conf] {short} v{vol}: {ex}", file=sys.stderr); continue
+        time.sleep(1)
+        for e in entries:
+            y, title = year or int(e.get("year") or 0), tex(e.get("title"))
+            if not lo <= y <= hi or not title or title.lower() in ("preface", "front matter"): continue
+            url = e.get("url") or f"https://proceedings.mlr.press/v{vol}/{e['key'].split('-')[-1]}.html"
+            mo = (re.search(r"(jan|feb|mar|apr|may|jun|jul|aug|sep|oct|nov|dec)", (e.get("month") or "").lower()) or [None])[0]
+            mon = "%02d" % (["jan","feb","mar","apr","may","jun","jul","aug","sep","oct","nov","dec"].index(mo) + 1) if mo else "01"
+            pid = hashlib.sha1(url.encode()).hexdigest()   # 40 hex like an S2 paperId, so as_item ids stay unique
+            out[pid] = dict(pid=pid, title=title, abstract=tex(e.get("abstract"))[:900], conf=short, rank=rank, conf_label=f"{short} {y}",
+                            year=y, date=f"{y}-{mon}-01", link=url, cites=0)
+    return out
+
 def label(p, short):
     ids = p.get("externalIds") or {}
     doi = ids.get("DOI", "") or ""
@@ -49,7 +114,12 @@ def label(p, short):
 
 def fetch_all():
     out = {}
+    try: vols = pmlr_volumes(http("https://proceedings.mlr.press/"))
+    except Exception as ex: print(f"[conf] PMLR index: {ex}", file=sys.stderr); vols = {k: [] for k in PMLR}
     for short, (venue, rank) in VENUES.items():
+        if venue is None:
+            got = fetch_pmlr(short, rank, vols[short]); out.update(got)
+            print(f"[conf] {short}: {len(got)} (PMLR v{','.join(str(v) for v, _ in vols[short][:4])})", file=sys.stderr); continue
         token, n = None, 0
         while True:
             prm = dict(query=Q, venue=venue, year=YEARS, fields="title,venue,year,externalIds,publicationDate,abstract,url,citationCount", sort="citationCount:desc")
@@ -71,9 +141,10 @@ def run(llm_enrich, translate=None):
     path = "data/conf.json"
     store = json.load(open(path)) if os.path.exists(path) else {}
     fetched = fetch_all()
+    seen = {(c["conf"], c["title"].lower()) for c in store.values()}   # same paper found earlier under another id (S2 vs PMLR)
     for pid, c in fetched.items():
         if pid in store: store[pid]["cites"] = c["cites"]
-        else: store[pid] = c
+        elif (c["conf"], c["title"].lower()) not in seen: store[pid] = c
     todo = [c for c in store.values() if "zh_title" not in c and not c.get("skip")]
     todo.sort(key=lambda c: -c["cites"]); by = {}
     for c in todo: by.setdefault(c["conf_label"], []).append(c)

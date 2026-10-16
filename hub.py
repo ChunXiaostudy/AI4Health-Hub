@@ -1,7 +1,7 @@
 """Shared pipeline: fetch -> dedupe -> LLM summarize -> rank -> static build (pre-rendered HTML, archives, RSS, weekly).
 Concept inspired by AISafetyHot-Hub (CC BY-NC 4.0) and AIHOT (MIT); code written from scratch."""
 import json, os, re, sys, time, math, glob, gzip, html, hashlib, difflib, shutil, datetime as dt, urllib.request, urllib.parse, urllib.error
-import xml.etree.ElementTree as ET, concurrent.futures as cf
+import xml.etree.ElementTree as ET, concurrent.futures as cf, threading
 import config as C
 try:
     import feedparser
@@ -36,12 +36,13 @@ def get(url, timeout=60, headers=None):
         raise Challenged("Client Challenge (bot check) from " + (urllib.parse.urlparse(url).hostname or ""))
     return body
 
-def get_polite(url, tries=4, delay=3):
-    """GET honoring 429/503 Retry-After with exponential backoff."""
+def get_polite(url, tries=4, delay=3, timeout=60, before=None):
+    """GET honoring 429/503 Retry-After with exponential backoff. `before()` runs ahead of every attempt (rate limiter)."""
     for a in range(tries):
         try:
             time.sleep(delay if a else 0)
-            return get(url)
+            if before: before()
+            return get(url, timeout=timeout)
         except urllib.error.HTTPError as ex:
             if ex.code not in (429, 503) or a == tries - 1: raise
             wait = int(ex.headers.get("Retry-After") or 0) or delay * 2 ** (a + 1)
@@ -289,15 +290,29 @@ def f_fda_ai(src):
                  desc=f"Official FDA list of AI-enabled devices (total {len(rows)}). By panel: " + ", ".join(f"{k} {v}" for k, v in sorted(panels.items(), key=lambda x: -x[1])) + ". Devices: " + lines,
                  date=updated, badge=f"FDA list · {last:%Y-%m-%d}")]
 
+NCBI_LOCK, NCBI_LAST = threading.Lock(), [0.0]
+def ncbi_pace():
+    """Space E-utilities calls across all threads: NCBI allows 3 req/s without an API key, 10 with one."""
+    with NCBI_LOCK:
+        gap = 0.12 if os.getenv("NCBI_API_KEY") else 0.5
+        wait = NCBI_LAST[0] + gap - time.monotonic()
+        if wait > 0: time.sleep(wait)
+        NCBI_LAST[0] = time.monotonic()
+
+def ncbi(url, timeout=60, tries=4):
+    """E-utilities GET: paced by ncbi_pace, 429 backs off via get_polite, NCBI_API_KEY appended when set."""
+    key = os.getenv("NCBI_API_KEY")
+    return get_polite(url + ("&api_key=" + urllib.parse.quote(key) if key else ""), tries=tries, timeout=timeout, before=ncbi_pace)
+
 MON = {m: i for i, m in enumerate(["jan","feb","mar","apr","may","jun","jul","aug","sep","oct","nov","dec"], 1)}
 def f_pubmed(src):
     base = "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/"
     # sort=pub_date put future-dated print issues first and most hits fell outside max_age; take what PubMed added in the last
     # `reldate` days instead (Entrez date), most relevant first
-    ids = json.loads(get(base + "esearch.fcgi?db=pubmed&retmode=json&sort=relevance&datetype=edat&reldate=%d&retmax=%d&term=%s" % (
+    ids = json.loads(ncbi(base + "esearch.fcgi?db=pubmed&retmode=json&sort=relevance&datetype=edat&reldate=%d&retmax=%d&term=%s" % (
         src.get("reldate", 3), src.get("limit", 60), urllib.parse.quote(src["term"]))))["esearchresult"]["idlist"]
     if not ids: return []
-    root = ET.fromstring(get(base + "efetch.fcgi?db=pubmed&retmode=xml&id=" + ",".join(ids)))
+    root = ET.fromstring(ncbi(base + "efetch.fcgi?db=pubmed&retmode=xml&id=" + ",".join(ids)))
     out = []
     for art in root.iter("PubmedArticle"):
         pmid = art.findtext(".//PMID")
@@ -544,7 +559,7 @@ def europepmc_abstract(doi):
     return clean(hit[0].get("abstractText") or "", ABS_MAX) if hit else ""
 
 def pubmed_abstract(pmid):
-    root = ET.fromstring(get("https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&retmode=xml&id=" + pmid, timeout=20))
+    root = ET.fromstring(ncbi("https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&retmode=xml&id=" + pmid, timeout=20, tries=2))
     return clean(" ".join("".join(x.itertext()) for x in root.iter("AbstractText")), ABS_MAX)
 
 def openalex_abstract(doi):

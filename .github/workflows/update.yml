@@ -28,6 +28,7 @@ jobs:
           LLM_MODEL: ${{ vars.LLM_MODEL || 'deepseek-v4-flash' }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           SPRINGER_API_KEY: ${{ secrets.SPRINGER_API_KEY }}
+          NCBI_API_KEY: ${{ secrets.NCBI_API_KEY }}
           MAX_NEW: "200"
       - name: Source health alert (0 items for 3+ runs)
         env: { GH_TOKEN: "${{ github.token }}" }
@@ -38,16 +39,7 @@ jobs:
           fi
       - name: Commit data
         run: |
-          git config user.name "github-actions[bot]"; git config user.email "41898299+github-actions[bot]@users.noreply.github.com"
-          git add data
-          git diff --cached --quiet && exit 0
-          git commit -m "data: $(date -u +%F)"
-          # main may have moved during the run (e.g. a PR merged); replay this data commit on top instead of losing it
-          for i in 1 2 3; do
-            git pull --rebase origin "$GITHUB_REF_NAME" && git push origin "HEAD:$GITHUB_REF_NAME" && exit 0
-            echo "push attempt $i failed; retrying"; git rebase --abort 2>/dev/null || true; sleep $((i * 10))
-          done
-          exit 1
+          bash .github/scripts/push-data.sh "data: $(date -u +%F)"
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with: { path: site }
