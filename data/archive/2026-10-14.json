@@ -93,37 +93,6 @@
 "zh_abstract": "绝经重塑女性生理，但当前理解受到小型纵向队列的限制，这些队列将其描述为一种逐渐过渡。大规模生物医学数据集仍未得到充分利用，因为末次月经（final menstrual period, FMP）年龄很少被记录。在此，我们提出一个受天文学启发的计算框架，通过去除个体间 FMP 年龄差异所造成的模糊，从横断面数据中重建以 FMP 为锚点的轨迹。将其应用于两个独立队列、总计 3 亿次实验室检测，揭示了在 FMP 处存在阶梯式生理断崖，包括内分泌、骨骼、肝脏、肾脏和脂质系统。这些不连续性在男性个体中不存在，在不同人群中一致，并且似乎被绝经激素治疗显著减弱。失调在 FMP 前十余年就开始。这些发现支持一种系统性、可量化的绝经观，并提供了一种可推广的策略，用于恢复隐藏的生物学轨迹，适用于其他转变，如青春期或疾病进展。通过使用一种新颖的计算框架，对来自两个独立队列的实验室数据进行横断面分析，揭示末次月经标志着一种突然的多系统生理转变，性激素变化在绝经开始前超过 10 年就已出现。"
 },
 {
-"title": "Model-dependent prompt effects challenge reliable deployment of medical LLMs in traditional Chinese medicine",
-"link": "https://www.nature.com/articles/s41746-026-03397-5",
-"date": "2026-10-13T00:00:00+00:00",
-"pop": null,
-"source": "npj Digital Medicine",
-"badge": "DOI 10.1038/s41746-026-03397-5",
-"id": "269c93f43d17",
-"keep": true,
-"zh_title": "提示词模型依赖性影响中医医疗大模型可靠部署",
-"summary": "《npj Digital Medicine》研究指出提示词效应因模型而异，给中医医疗大模型的可靠部署带来挑战。",
-"key_points": [
-"提示词效应因模型不同而异",
-"给可靠部署带来挑战",
-"场景为中医医疗大模型"
-],
-"section": "大模型与智能体",
-"type": "论文",
-"tags": [
-"医学大模型",
-"临床NLP"
-],
-"evidence": "同行评审",
-"score": 7,
-"day": "2026-10-14",
-"source_group": "npj Digital Medicine",
-"abstract_days": [
-"2026-10-15"
-],
-"abstract_err": "page: no abstract in meta (3036 bytes, best 0 chars); europepmc: empty; openalex: empty"
-},
-{
 "title": "Development of a scoring system via an interpretable end-to-end neural network for prognostic stratification of patients with advanced melanoma",
 "link": "https://www.nature.com/articles/s41746-026-03379-7",
 "date": "2026-10-13T00:00:00+00:00",
@@ -181,7 +150,8 @@
 "day": "2026-10-14",
 "source_group": "NEJM AI",
 "abstract_days": [
-"2026-10-15"
+"2026-10-15",
+"2026-10-16"
 ],
 "abstract_err": "page: HTTP Error 403: Forbidden; europepmc: empty; openalex: HTTP Error 404: Not Found"
 },
@@ -211,7 +181,8 @@
 "day": "2026-10-14",
 "source_group": "NEJM AI",
 "abstract_days": [
-"2026-10-15"
+"2026-10-15",
+"2026-10-16"
 ],
 "abstract_err": "page: HTTP Error 403: Forbidden; europepmc: empty; openalex: empty"
 },
@@ -272,7 +243,8 @@
 "day": "2026-10-14",
 "source_group": "NEJM AI",
 "abstract_days": [
-"2026-10-15"
+"2026-10-15",
+"2026-10-16"
 ],
 "abstract_err": "page: HTTP Error 403: Forbidden; europepmc: empty; openalex: empty"
 },
@@ -399,9 +371,41 @@
 "day": "2026-10-14",
 "rank": 9.5,
 "abstract_days": [
-"2026-10-15"
+"2026-10-15",
+"2026-10-16"
 ],
 "abstract_err": "page: no abstract in meta (3036 bytes, best 0 chars); europepmc: empty; openalex: empty"
+},
+{
+"title": "Model-dependent prompt effects challenge reliable deployment of medical LLMs in traditional Chinese medicine",
+"link": "https://www.nature.com/articles/s41746-026-03397-5",
+"date": "2026-10-13T00:00:00+00:00",
+"pop": null,
+"source": "npj Digital Medicine",
+"badge": "DOI 10.1038/s41746-026-03397-5",
+"id": "269c93f43d17",
+"keep": true,
+"zh_title": "模型依赖的提示效应挑战中医医疗大模型可靠部署",
+"summary": "在2025年台湾中医师执照考试475题上评测16个LLM与7种提示策略，无提示工程时准确率35.4%–85.9%，约半数通过。",
+"key_points": [
+"评测16个LLM、7种提示策略",
+"475题来自2025台湾中医师执照考试",
+"无提示工程准确率35.4%–85.9%，约半数通过"
+],
+"section": "大模型与智能体",
+"type": "论文",
+"tags": [
+"医学大模型",
+"基准"
+],
+"evidence": "同行评审",
+"score": 6,
+"day": "2026-10-14",
+"source_group": "npj Digital Medicine",
+"abstract": "Although contemporary large language models (LLMs) have achieved satisfactory results in Western medical knowledge, their performance on traditional Chinese medicine (TCM) remains underexplored, and the determinants of performance variation are poorly understood. We evaluated 16 LLMs under seven prompt strategies on 475 questions from the 2025 Taiwan national TCM licensing examination, a public benchmark of TCM knowledge. Without prompt engineering, accuracy ranged from 35.4% to 85.9%, with approximately half passing. Among the evaluated model versions, adjusted accuracy differed substantially when models were grouped by family (for example, Claude-family models, 84% vs. GPT-4, 43%); these family-grouped comparisons were descriptive because only 16 individual models were evaluated. Paired prompt analyses showed modest average absolute effects, ranging from a 2.03-percentage-point decrease with implicit CoT to a 3.04-percentage-point increase with explicit CoT. However, prompt–model interactions produced substantial model-level divergence: prompt optimization reversed failing performance in one model (87.4% vs. 49.7%) while reducing accuracy in others. No single prompt strategy yielded consistent benefits across the evaluated models. Among five selected lower-performing models evaluated under explicit CoT prompting, misunderstanding of foundational TCM concepts was the most frequent error. These findings indicate that reliable LLM deployment in TCM requires empirical validation of both model choice and prompt strategy: model selection strongly shapes baseline capability, while prompt-model interactions can materially alter performance.",
+"thin": false,
+"reason": "同行评审基准评测，公开题库475题、16模型对比，但无外部临床验证，属值得一看档。",
+"zh_abstract": "尽管当代大型语言模型（LLMs）在西方医学知识方面已取得令人满意的结果，但其在中医（TCM）方面的表现仍未被充分探索，且对表现差异的决定因素了解甚少。我们在2025年台湾全国中医师执照考试的475道题（中医知识的公共基准）上，使用七种提示策略评估了16个LLM。在没有提示工程的情况下，准确率范围为35.4%至85.9%，约有一半通过。在所评估的模型版本中，当按模型家族分组时，调整后准确率差异很大（例如，Claude家族模型为84%，而GPT-4为43%）；这些按家族分组的比较是描述性的，因为仅评估了16个单独模型。配对提示分析显示平均绝对效应不大，范围从使用隐式CoT时下降2.03个百分点到使用显式CoT时提高3.04个百分点。然而，提示-模型交互产生了显著的模型层面差异：提示优化在一个模型中逆转了不及格表现（87.4% vs. 49.7%），而在其他模型中降低了准确率。在所评估的模型中，没有单一提示策略产生一致的益处。在显式CoT提示下评估的五个选定的表现较低模型中，对中医基础概念的误解是最常见的错误。这些发现表明，在中医中可靠部署LLM需要对模型选择和提示策略二者进行实证验证：模型选择强烈影响基线能力，而提示-模型交互可以实质性改变表现。"
 },
 {
 "title": "AEGIS: an operational infrastructure for post-market governance of adaptive medical AI under US and EU regulatory frameworks",
@@ -466,6 +470,38 @@
 "thin": false,
 "reason": "大样本单队列研究，仅内部验证，属值得一看档",
 "zh_abstract": "摘要 尽管连续葡萄糖监测（CGM）提供高维数据，但多模态和昼夜血糖谱用于疾病表征和风险分层的实用性仍属未知。在此，我们在 90,757 名参与者的 iCanNet 队列中，检查了 48 项 CGM 衍生指标与糖尿病前期、T2D 和 T1D 的关联，并与血糖正常进行比较。我们进一步采用高斯混合模型（Gaussian Mixture Model）定义血糖表型，并建立数字血糖风险评分（DGRS）以量化 T2D 中的并发症风险。与血糖正常个体相比，糖尿病前期、T2D 或 T1D 参与者表现出不同的 CGM 特征（所有 P < 0.001）。整合排名前五的指标显著改善了糖尿病分类，校准分析显示预测风险与观察风险之间一致。在 T2D 中识别出四种血糖表型，其中持续性高血糖与急性并发症风险增加 59% 相关，高血糖变异性分别与急性和慢性并发症风险增加 75% 和 41% 相关。DGRS 识别出达到目标范围内时间 ≥70% 的患者中的残余风险，并将这些个体中的 25.0% 和 22.3% 分别重新分类为急性和慢性并发症高风险组。总之，本研究揭示了不同糖尿病状态下不同的 CGM 衍生特征，并建立了一个多模态框架，用于识别可能被传统生物标志物忽视的 T2D 高风险个体。"
+},
+{
+"title": "Exploring PET and MRI brain networks across healthy controls, mild cognitive impairment, and Alzheimer’s disease",
+"link": "https://www.nature.com/articles/s41746-026-03354-2",
+"date": "2026-10-13T00:00:00+00:00",
+"pop": null,
+"source": "npj Digital Medicine",
+"badge": "DOI 10.1038/s41746-026-03354-2",
+"id": "20d3df812ff6",
+"keep": true,
+"zh_title": "PET与MRI脑网络在健康、轻度认知障碍与阿尔茨海默病中的研究",
+"summary": "回顾性纳入651名受试者的FDG PET与MRI，构建群体与个体化脑网络，并用45人外部队列验证预测能力。",
+"key_points": [
+"回顾性纳入651例，含PET与MRI",
+"以32个AD相关脑区为节点构建SUVR与影像组学网络",
+"45人外部队列验证网络特征的预测表现"
+],
+"section": "影像与病理",
+"type": "论文",
+"tags": [
+"医学影像",
+"神经科学",
+"多模态"
+],
+"evidence": "同行评审",
+"score": 6,
+"day": "2026-10-14",
+"source_group": "npj Digital Medicine",
+"abstract": "This study aimed to characterize population-level and individual-level metabolic and radiomics-derived structural brain networks across healthy controls (HC), mild cognitive impairment (MCI), and Alzheimer’s disease (AD) using multimodal PET and MRI. A total of 651 participants with both [ 18 F]FDG PET and MRI were retrospectively included, with an external cohort of 45 participants used for validation. Thirty-two AD-relevant regions of interest were retained as network nodes and characterized using PET standardized uptake value ratios (SUVRs) and a selected MRI radiomics descriptor. Population-level networks were constructed using probability density function-based similarity with Jensen–Shannon divergence, and individualized perturbation networks were derived relative to an HC reference. Network-derived features were evaluated for prediction. Both SUVR-based and radiomics-based networks showed distinct patterns in MCI and AD compared with HC. Fused network features improved discrimination compared with either modality alone, achieving one-vs-rest AUCs of 0.894 [0.868–0.917] for HC, 0.888 [0.862–0.912] for AD, and 0.814 [0.783–0.844] for MCI. These findings indicate graded network disorganization across the HC–MCI–AD spectrum and support multimodal prediction.",
+"thin": false,
+"reason": "回顾性多模态影像研究，651例样本可观并有小规模外部验证，但外部队列仅45人。",
+"zh_abstract": "本研究旨在利用多模态PET和MRI，刻画健康对照（HC）、轻度认知障碍（MCI）和阿尔茨海默病（AD）中群体水平和个体水平的代谢及放射组学衍生的结构性脑网络。回顾性纳入651名同时具有[18F]FDG PET和MRI的参与者，并使用一个45名参与者的外部队列进行验证。保留32个AD相关感兴趣区作为网络节点，并使用PET标准化摄取值比（SUVR）和一个选定的MRI放射组学描述符进行表征。使用基于概率密度函数的相似性及Jensen–Shannon散度构建群体水平网络，并相对于HC参考推导个体化扰动网络。评估网络衍生特征用于预测。基于SUVR和基于放射组学的网络在MCI和AD中与HC相比均显示出不同模式。融合网络特征相比单独任一模态改善了区分能力，达到one-vs-rest AUC：HC为0.894 [0.868–0.917]，AD为0.888 [0.862–0.912]，MCI为0.814 [0.783–0.844]。这些发现表明沿HC–MCI–AD谱存在分级网络失组织，并支持多模态预测。"
 },
 {
 "title": "[Articles] Multimodal artificial intelligence-based long-term mortality prediction after transcatheter aortic valve implantation: a multicentre development, validation, and testing study",
@@ -594,36 +630,6 @@
 "zh_abstract": "[Clinica chimica acta; international journal of clinical chemistry] 建立基于人工智能（AI）的智能复检规则，以准确筛查需要复检或血涂片显微镜检查的样本，从而降低复检率、提高血液学实验室的工作效率并确保全血分析质量。共收集2022年5月至2025年4月4家医院临床实验室的10212例EDTA-K2静脉血样本。其中，来自佛山市第一人民医院、东南大学附属中大医院和中山大学附属第一医院的9000例样本用于建立规则，来自复旦大学附属中山医院的1212例样本用于规则验证。将所获得的规则与国际血液学复检共识组（ICGHR）设定的41条复检规则进行比较。所有样本均在定制稀释比例（CDR）模式下使用血液分析仪检测并进行涂片显微镜检查，若显微镜检查结果触发ICGHR建立的10条镜检异常规则，则该样本被判定为异常样本。采用梯度提升决策树（GBDT）算法建立智能复检规则。此外，对验证集的假阴性率、假阳性率和复检率进行统计分析。（1）在建立集的9000例样本中，经显微镜检查识别出4493例异常样本，并采用GBDT算法建立了26条智能复检规则。（2）对于外部验证集，经显微镜检查识别出180例异常样本。与41条国际复检规则相比，智能复检规则的假阳性率（14.60%）和复检率（27.55%）显著更低（假阳性率：30.19%，复检率：44.14%）。智能复检规则的假阴性率（1.89%）与41条国际复检规则（0.90%）相当，并满足ICGHR假阴性率<5%的要求，且未漏检关键血液学细胞。使用AI技术生成的智能复检规则在确保检测质量的同时，有效降低了假阳性率和复检率，并防止血液学细胞漏诊。通过AI方法生成的复检规则显著提高了实验室效率，尤其适用于医疗机构。"
 },
 {
-"title": "Exploring PET and MRI brain networks across healthy controls, mild cognitive impairment, and Alzheimer’s disease",
-"link": "https://www.nature.com/articles/s41746-026-03354-2",
-"date": "2026-10-13T00:00:00+00:00",
-"pop": null,
-"source": "npj Digital Medicine",
-"badge": "DOI 10.1038/s41746-026-03354-2",
-"id": "20d3df812ff6",
-"keep": true,
-"zh_title": "健康对照、轻度认知障碍与阿尔茨海默病的PET与MRI脑网络探索",
-"summary": "研究在健康对照、轻度认知障碍与阿尔茨海默病人群中，探索PET与MRI脑网络特征。",
-"key_points": [
-"覆盖健康对照、MCI与AD三类人群",
-"同时使用PET与MRI影像数据",
-"聚焦脑网络层面的探索"
-],
-"section": "影像与病理",
-"type": "论文",
-"tags": [
-"医学影像"
-],
-"evidence": "同行评审",
-"score": 5,
-"day": "2026-10-14",
-"source_group": "npj Digital Medicine",
-"abstract_days": [
-"2026-10-15"
-],
-"abstract_err": "page: no abstract in meta (3036 bytes, best 0 chars); europepmc: empty; openalex: empty"
-},
-{
 "title": "Moving AI Development and Health Care Adoption at the Speed of Trust",
 "link": "https://ai.nejm.org/doi/full/10.1056/AI-S2600964%4010.1056/ai_2026.3.issue-10?af=R&rss=currentIssue",
 "date": "2026-09-24T04:00:00+00:00",
@@ -649,7 +655,8 @@
 "day": "2026-10-14",
 "source_group": "NEJM AI",
 "abstract_days": [
-"2026-10-15"
+"2026-10-15",
+"2026-10-16"
 ],
 "abstract_err": "page: HTTP Error 403: Forbidden; europepmc: empty; openalex: HTTP Error 404: Not Found"
 },
@@ -679,7 +686,8 @@
 "day": "2026-10-14",
 "source_group": "NEJM AI",
 "abstract_days": [
-"2026-10-15"
+"2026-10-15",
+"2026-10-16"
 ],
 "abstract_err": "page: HTTP Error 403: Forbidden; europepmc: empty; openalex: empty"
 },
@@ -775,7 +783,8 @@
 "day": "2026-10-14",
 "rank": 10.0,
 "abstract_days": [
-"2026-10-15"
+"2026-10-15",
+"2026-10-16"
 ],
 "abstract_err": "page: HTTP Error 403: Forbidden; europepmc: empty; openalex: empty"
 },
@@ -806,7 +815,8 @@
 "day": "2026-10-14",
 "source_group": "medRxiv",
 "abstract_days": [
-"2026-10-15"
+"2026-10-15",
+"2026-10-16"
 ],
 "abstract_err": "page: skipped; europepmc: empty; openalex: HTTP Error 404: Not Found"
 },
@@ -1055,7 +1065,8 @@
 "day": "2026-10-14",
 "rank": 9.0,
 "abstract_days": [
-"2026-10-15"
+"2026-10-15",
+"2026-10-16"
 ],
 "abstract_err": "page: HTTP Error 403: Forbidden; europepmc: empty; openalex: empty"
 },
@@ -1236,7 +1247,8 @@
 "day": "2026-10-14",
 "source_group": "bioRxiv",
 "abstract_days": [
-"2026-10-15"
+"2026-10-15",
+"2026-10-16"
 ],
 "abstract_err": "page: skipped; europepmc: empty; openalex: HTTP Error 404: Not Found"
 },
@@ -1361,7 +1373,8 @@
 "day": "2026-10-14",
 "source_group": "bioRxiv",
 "abstract_days": [
-"2026-10-15"
+"2026-10-15",
+"2026-10-16"
 ],
 "abstract_err": "page: skipped; europepmc: empty; openalex: HTTP Error 404: Not Found"
 },
@@ -1393,7 +1406,8 @@
 "day": "2026-10-14",
 "source_group": "bioRxiv",
 "abstract_days": [
-"2026-10-15"
+"2026-10-15",
+"2026-10-16"
 ],
 "abstract_err": "page: skipped; europepmc: empty; openalex: HTTP Error 404: Not Found"
 },
@@ -1757,7 +1771,8 @@
 "day": "2026-10-14",
 "source_group": "NEJM AI",
 "abstract_days": [
-"2026-10-15"
+"2026-10-15",
+"2026-10-16"
 ],
 "abstract_err": "page: HTTP Error 403: Forbidden; europepmc: empty; openalex: empty"
 },
@@ -2865,7 +2880,8 @@
 "day": "2026-10-14",
 "source_group": "medRxiv",
 "abstract_days": [
-"2026-10-15"
+"2026-10-15",
+"2026-10-16"
 ],
 "abstract_err": "page: skipped; europepmc: empty; openalex: HTTP Error 404: Not Found"
 },
@@ -2928,7 +2944,8 @@
 "day": "2026-10-14",
 "source_group": "bioRxiv",
 "abstract_days": [
-"2026-10-15"
+"2026-10-15",
+"2026-10-16"
 ],
 "abstract_err": "page: skipped; europepmc: empty; openalex: HTTP Error 404: Not Found"
 },

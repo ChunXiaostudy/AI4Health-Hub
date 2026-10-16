@@ -30,7 +30,8 @@
 "day": "2026-10-15",
 "rank": 12.31,
 "abstract_days": [
-"2026-10-15"
+"2026-10-15",
+"2026-10-16"
 ],
 "abstract_err": "page: no abstract in meta (3036 bytes, best 0 chars); europepmc: empty; openalex: HTTP Error 404: Not Found"
 },
@@ -178,7 +179,8 @@
 "day": "2026-10-15",
 "rank": 9.64,
 "abstract_days": [
-"2026-10-15"
+"2026-10-15",
+"2026-10-16"
 ],
 "abstract_err": "page: HTTP Error 403: Forbidden; europepmc: empty; openalex: empty"
 },
