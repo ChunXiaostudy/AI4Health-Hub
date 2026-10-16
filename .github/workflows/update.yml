@@ -28,6 +28,7 @@ jobs:
           LLM_MODEL: ${{ vars.LLM_MODEL || 'deepseek-v4-flash' }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           SPRINGER_API_KEY: ${{ secrets.SPRINGER_API_KEY }}
+          NCBI_API_KEY: ${{ secrets.NCBI_API_KEY }}
           MAX_NEW: "200"
       - name: Source health alert (0 items for 3+ runs)
         env: { GH_TOKEN: "${{ github.token }}" }
@@ -37,9 +38,7 @@ jobs:
             if [ -n "$n" ]; then gh issue comment "$n" --body-file data/alerts.md; else gh issue create --title "数据源告警：来源连续为 0" --body-file data/alerts.md; fi
           fi
       - name: Commit data
-        run: |
-          git config user.name "github-actions[bot]"; git config user.email "41898299+github-actions[bot]@users.noreply.github.com"
-          git add data && (git diff --cached --quiet || (git commit -m "data: $(date -u +%F)" && git push))
+        run: bash .github/scripts/push-data.sh "data: $(date -u +%F)"
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with: { path: site }

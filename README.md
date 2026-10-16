@@ -13,7 +13,7 @@
 pip install feedparser
 LLM_API_KEY=... LLM_BASE_URL=... python hub.py   # 输出到 site/
 ```
-Secrets: `LLM_API_KEY`, `LLM_BASE_URL`；可选 `SPRINGER_API_KEY`（[dev.springernature.com](https://dev.springernature.com) 免费申请的 Meta API key，用于 Nature / Springer 论文摘要；nature.com 会对 GitHub Actions 时不时弹机器人验证页）；可选变量 `LLM_MODEL`（默认 deepseek-v4-flash）。
+Secrets: `LLM_API_KEY`, `LLM_BASE_URL`；可选 `SPRINGER_API_KEY`（[dev.springernature.com](https://dev.springernature.com) 免费申请的 Meta API key，用于 Nature / Springer 论文摘要；nature.com 会对 GitHub Actions 时不时弹机器人验证页）；可选 `NCBI_API_KEY`（NCBI 账号设置里免费生成，PubMed E-utilities 限速从 3 次/秒升到 10 次/秒；无 key 时所有 PubMed 请求全局串行、间隔 0.5s，429 自动退避）；可选变量 `LLM_MODEL`（默认 deepseek-v4-flash）。
 
 ## 致谢
 思路参考 [wuyoscar/AISafetyHot-Hub](https://github.com/wuyoscar/AISafetyHot-Hub)（内容 CC BY-NC 4.0）与 [KKKKhazix/AIHOT](https://github.com/KKKKhazix/AIHOT)（MIT）。本仓库代码为独立重写，未复制其内容。条目版权归原始来源所有。
@@ -21,7 +21,7 @@ Secrets: `LLM_API_KEY`, `LLM_BASE_URL`；可选 `SPRINGER_API_KEY`（[dev.spring
 代码以 MIT 许可发布。
 
 ## 顶会论文
-`conf.py` 通过 Semantic Scholar bulk search API 检索 2025–2026 年顶会（ACL/AAAI/IJCAI/NeurIPS/ICML/CVPR/ICCV/KDD/WWW/SIGIR/MM，及 EMNLP/NAACL/ICLR/MICCAI；CCF 等级按实际标注）中标题含医疗/临床/生物医学关键词的论文，以及医疗 AI 专门会议 ISBI / MIDL / CHIL / ML4H 的论文（这几个会议不按标题过滤），持久保存在 `data/conf.json`（不过期），每日刷新，每次最多新摘要 120 篇（`CONF_MAX`）。展示时经 `conf.as_item()` 转成与每日条目相同的结构，用同一个 `hub.card()` 渲染（预渲染进 `site/conf.json`，论文库页只做筛选和分页），并同样生成 `/items/<id>/` 详情页；摘要中文翻译每次按分数从高到低补 100 篇（`CONF_TRANSLATE`），未翻译的先显示英文原文摘要。
+`conf.py` 通过 Semantic Scholar bulk search API 检索 2025–2026 年顶会（ACL/AAAI/IJCAI/NeurIPS/ICML/CVPR/ICCV/KDD/WWW/SIGIR/MM，及 EMNLP/NAACL/ICLR/MICCAI；CCF 等级按实际标注）中标题含医疗/临床/生物医学关键词的论文，以及医疗 AI 专门会议 ISBI / MIDL / CHIL / ML4H 的论文（这几个会议不按标题过滤；MIDL / ML4H 在 S2 上 venue 写法不统一，改为直接读 PMLR 对应卷的 `bibliography.bib`，卷号从 PMLR 首页按名称自动发现，无引用数），持久保存在 `data/conf.json`（不过期），每日刷新，每次最多新摘要 120 篇（`CONF_MAX`）。展示时经 `conf.as_item()` 转成与每日条目相同的结构，用同一个 `hub.card()` 渲染（预渲染进 `site/conf.json`，论文库页只做筛选和分页），并同样生成 `/items/<id>/` 详情页；摘要中文翻译每次按分数从高到低补 100 篇（`CONF_TRANSLATE`），未翻译的先显示英文原文摘要。
 
 ## 结构（v2）
 - `hub.py`：抓取 → 去重（标题相似度 + 事件合并，显示「N 个来源报道」）→ LLM 摘要（固定标签枚举）→ 综合排序（LLM 分 + 来源权重 + 证据级别 + 星标/引用/HN 分）→ 预渲染静态 HTML。

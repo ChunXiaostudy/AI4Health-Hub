@@ -255,6 +255,62 @@ def test_trends_and_must_read():
     assert [i["id"] for i in hub.picks(today)] == [days[-1] + "-y"]
     assert hub.picks([mk("x", days[-1], [], 6)]) == []
 
+def test_ncbi_paced_backoff_and_key():
+    import threading, time, urllib.error
+    saved_get, saved_sleep, env = hub.get, time.sleep, os.environ.pop("NCBI_API_KEY", None)
+    stamps, urls, lock = [], [], threading.Lock()
+    def fake(url, *a, **k):
+        with lock: stamps.append(time.monotonic()); urls.append(url)
+        return b'{"esearchresult": {"idlist": []}}'
+    try:
+        hub.get = fake
+        src = dict(name="PubMed", kind="pubmed", term="ai")
+        threads = [threading.Thread(target=hub.f_pubmed, args=(src,)) for _ in range(4)]   # two pubmed sources fetched in parallel
+        for t in threads: t.start()
+        for t in threads: t.join()
+        gaps = [b - a for a, b in zip(stamps, stamps[1:])]
+        assert len(stamps) == 4 and min(gaps) >= 0.39, gaps        # never faster than ~2.5 req/s across threads
+        assert not any("api_key" in u for u in urls)
+        os.environ["NCBI_API_KEY"] = "k123"
+        hub.f_pubmed(src)
+        assert urls[-1].endswith("&api_key=k123")
+        calls, slept = [], []
+        def throttled(url, *a, **k):
+            calls.append(url)
+            if len(calls) < 3: raise urllib.error.HTTPError(url, 429, "Too Many Requests", {"Retry-After": "2"}, None)
+            return b'{"esearchresult": {"idlist": []}}'
+        hub.get, time.sleep = throttled, lambda s: slept.append(s)
+        assert hub.f_pubmed(src) == [] and len(calls) == 3 and 2 in slept   # 429 retried honoring Retry-After
+    finally:
+        hub.get, time.sleep = saved_get, saved_sleep
+        if env is None: os.environ.pop("NCBI_API_KEY", None)
+        else: os.environ["NCBI_API_KEY"] = env
+
+def test_pmlr_venues():
+    index = ('<ul><li><a href="v315">Volume 315</a> Proceedings of MIDL 2026</li><li><a href="v297">Volume 297</a> Proceedings of ML4H 2025</li>'
+             '<li><a href="v219">Volume 219</a> Proceedings of Machine Learning for Healthcare 2023</li>'
+             '<li><a href="v250">Volume 250</a> Proceedings of MIDL 2024</li></ul>')
+    vols = conf.pmlr_volumes(index)
+    assert vols == {"MIDL": [(315, 2026), (250, 2024)], "ML4H": [(297, 2025)]}     # MLHC is not ML4H
+    bib = """@Proceedings{ML4H2025, title = {Proceedings}, volume = 297}
+@InProceedings{pmlr-v297-preface26a, title = {Preface}, year = {2026}, url = {https://proceedings.mlr.press/v297/preface26a.html}}
+@InProceedings{pmlr-v297-mandyam26a,
+  title = 	 {{APRIL}: Annotations from {LLM}s},
+  year = 	 {2026},
+  month = 	 {13--14 Dec},
+  url = 	 {https://proceedings.mlr.press/v297/mandyam26a.html},
+  abstract = 	 {Off-policy evaluation {(OPE)} with nested {braces {x}}.}
+}"""
+    saved, urls = conf.http, []
+    conf.http = lambda url, *a: urls.append(url) or bib
+    try: got = list(conf.fetch_pmlr("ML4H", "无CCF评级", vols["ML4H"]).values())
+    finally: conf.http = saved
+    assert urls == ["https://proceedings.mlr.press/v297/assets/bib/bibliography.bib"] and len(got) == 1   # preface dropped
+    c = got[0]
+    assert c["title"] == "APRIL: Annotations from LLMs" and c["abstract"] == "Off-policy evaluation (OPE) with nested braces x."
+    assert c["conf_label"] == "ML4H 2025" and c["date"] == "2025-12-01" and len(c["pid"]) == 40   # conference year, not bib year
+    assert conf.as_item(dict(c, zh_title="x"))["id"] == "c" + c["pid"][:11]
+
 if __name__ == "__main__":
     for k, f in list(globals().items()):
         if k.startswith("test_"): f(); print("ok", k)

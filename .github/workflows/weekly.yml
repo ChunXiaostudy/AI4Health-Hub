@@ -26,9 +26,7 @@ jobs:
           LLM_BASE_URL: ${{ secrets.LLM_BASE_URL }}
           LLM_MODEL: ${{ vars.LLM_MODEL || 'deepseek-v4-flash' }}
       - name: Commit
-        run: |
-          git config user.name "github-actions[bot]"; git config user.email "41898299+github-actions[bot]@users.noreply.github.com"
-          git add data && (git diff --cached --quiet || (git commit -m "weekly: $(date -u +%F)" && git push))
+        run: bash .github/scripts/push-data.sh "weekly: $(date -u +%F)"
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with: { path: site }
