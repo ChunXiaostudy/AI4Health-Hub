@@ -1,6 +1,6 @@
 """Shared pipeline: fetch -> dedupe -> LLM summarize -> rank -> static build (pre-rendered HTML, archives, RSS, weekly).
 Concept inspired by AISafetyHot-Hub (CC BY-NC 4.0) and AIHOT (MIT); code written from scratch."""
-import json, os, re, sys, time, math, glob, html, hashlib, difflib, shutil, datetime as dt, urllib.request, urllib.parse, urllib.error
+import json, os, re, sys, time, math, glob, gzip, html, hashlib, difflib, shutil, datetime as dt, urllib.request, urllib.parse, urllib.error
 import xml.etree.ElementTree as ET, concurrent.futures as cf
 import config as C
 try:
@@ -31,6 +31,7 @@ def get(url, timeout=60, headers=None):
     req = urllib.request.Request(url, headers=dict(UA, **(headers or {})))
     with urllib.request.urlopen(req, timeout=timeout) as r:
         body = r.read()
+    if body[:2] == b"\x1f\x8b": body = gzip.decompress(body)  # some servers (deepmind.google) gzip even without Accept-Encoding
     if b"Client Challenge" in body[:4000]:  # bot-check page served with 200 (nature.com / springer.com from CI): an error, not content
         raise Challenged("Client Challenge (bot check) from " + (urllib.parse.urlparse(url).hostname or ""))
     return body
@@ -165,12 +166,16 @@ def f_rss(src):
         out.append(it)
     return out
 
+def arxiv_link(link):
+    """http://arxiv.org/abs/2610.01234v2 -> https://arxiv.org/abs/2610.01234 (same id as the OAI-PMH fallback)."""
+    return re.sub(r"v\d+$", "", link.replace("http://", "https://", 1))
+
 def f_arxiv(src):
     """arXiv API (polite, backoff); fallback to OAI-PMH recent records."""
     try:
         f = feedparser.parse(get_polite(src["url"]))
         if f.entries:
-            return [dict(title=clean(e.title, 300), link=e.link.split("v")[0] if re.search(r"v\d+$", e.link) else e.link, desc=clean(e.get("summary"), ABS_MAX),
+            return [dict(title=clean(e.title, 300), link=arxiv_link(e.link), desc=clean(e.get("summary"), ABS_MAX),
                          date=dt.datetime(*e.published_parsed[:6], tzinfo=dt.timezone.utc).isoformat()) for e in f.entries]
     except Exception as ex:
         print(f"[warn] arXiv API: {ex}; trying OAI-PMH", file=sys.stderr)
@@ -202,13 +207,95 @@ def f_github(src):
                  date=r["created_at"], pop=f"★ {r['stargazers_count']}", image=r["owner"]["avatar_url"], shot=f"https://opengraph.githubassets.com/1/{r['full_name']}") for r in j.get("items", [])]
 
 def f_hf(src):
-    return [dict(title=m["id"], link=f"https://huggingface.co/{m['id']}", desc="Hugging Face model; tags: " + ", ".join(m.get("tags", [])[:15]),
-                 date=m.get("createdAt") or NOW.isoformat(), pop=f"♥ {m.get('likes',0)}") for m in json.loads(get(src["url"]))]
+    """Name search sorted by trendingScore is dominated by years-old models and personal fine-tunes:
+    run several queries, keep models created in the last `days` days with at least `min_likes` likes."""
+    since = (NOW - dt.timedelta(days=src.get("days", 30))).isoformat()
+    out, seen = [], set()
+    repo = src.get("repo", "models")  # models | datasets
+    prefix, what = ("datasets/", "dataset") if repo == "datasets" else ("", "model")
+    for q in src.get("queries", ["medical"]):
+        for m in json.loads(get(f"https://huggingface.co/api/{repo}?search={urllib.parse.quote(q)}&sort=trendingScore&limit=100")):
+            if m["id"] in seen or (m.get("createdAt") or "") < since or m.get("likes", 0) < src.get("min_likes", 3): continue
+            seen.add(m["id"])
+            out.append(dict(title=m["id"], link=f"https://huggingface.co/{prefix}{m['id']}", desc=f"Hugging Face {what}; tags: " + ", ".join(m.get("tags", [])[:15]),
+                            date=m["createdAt"], pop=f"♥ {m.get('likes',0)}"))
+    return out
+
+def f_hf_papers(src):
+    """Hugging Face Daily Papers: community-upvoted arXiv papers; the upvotes show which papers people are paying attention to."""
+    out = []
+    for p in json.loads(get("https://huggingface.co/api/daily_papers?limit=100")):
+        pp = p.get("paper") or {}
+        if not pp.get("id"): continue
+        out.append(dict(title=clean(pp.get("title") or p.get("title"), 300), link=f"https://huggingface.co/papers/{pp['id']}", desc=clean(pp.get("summary"), ABS_MAX),
+                        date=pp.get("publishedAt") or p.get("publishedAt") or NOW.isoformat(), pop=f"▲ {pp.get('upvotes', 0)} upvotes", badge=f"arXiv {pp['id']}"))
+    return out
+
+def f_hn(src):
+    """Hacker News stories via the Algolia API (keyword queries, points threshold)."""
+    since = int((NOW - dt.timedelta(days=src.get("days", 7))).timestamp())
+    out, seen = [], set()
+    for q in src.get("queries", ["medical AI"]):
+        j = json.loads(get("https://hn.algolia.com/api/v1/search?tags=story&query=%s&numericFilters=%s" % (
+            urllib.parse.quote(q), urllib.parse.quote(f"points>={src.get('min_points', 30)},created_at_i>{since}"))))
+        for h in j.get("hits", []):
+            if h["objectID"] in seen: continue
+            seen.add(h["objectID"])
+            out.append(dict(title=clean(h.get("title"), 300), link=h.get("url") or f"https://news.ycombinator.com/item?id={h['objectID']}",
+                            desc="", date=h["created_at"], pop=f"▲ {h.get('points', 0)} points · {h.get('num_comments') or 0} comments"))
+    return out
+
+def f_ctgov(src):
+    """ClinicalTrials.gov API v2: studies first posted in the last `days` days whose interventions mention AI."""
+    since = (NOW - dt.timedelta(days=src.get("days", 7))).strftime("%Y-%m-%d")
+    q = urllib.parse.urlencode({"query.intr": src["term"], "filter.advanced": f"AREA[StudyFirstPostDate]RANGE[{since},MAX]", "pageSize": src.get("limit", 50),
+                                "fields": "NCTId,BriefTitle,BriefSummary,StudyFirstPostDate,OverallStatus,LeadSponsorName,Condition,StudyType,Phase,EnrollmentCount"})
+    out = []
+    for st in json.loads(get("https://clinicaltrials.gov/api/v2/studies?" + q)).get("studies", []):
+        ps = st.get("protocolSection", {})
+        ident, stat = ps.get("identificationModule", {}), ps.get("statusModule", {})
+        nct = ident.get("nctId")
+        if not nct: continue
+        design = ps.get("designModule", {})
+        meta = "; ".join(x for x in (
+            "sponsor: " + ps.get("sponsorCollaboratorsModule", {}).get("leadSponsor", {}).get("name", ""),
+            "conditions: " + ", ".join(ps.get("conditionsModule", {}).get("conditions", [])[:5]),
+            "type: " + (design.get("studyType") or ""), "phase: " + ", ".join(design.get("phases") or []),
+            "enrollment: " + str((design.get("enrollmentInfo") or {}).get("count") or ""), "status: " + (stat.get("overallStatus") or "")) if not x.endswith(": "))
+        out.append(dict(title=clean(ident.get("briefTitle"), 300), link=f"https://clinicaltrials.gov/study/{nct}",
+                        desc=f"[Newly registered clinical trial, no results yet; {meta}] " + clean(ps.get("descriptionModule", {}).get("briefSummary"), ABS_MAX),
+                        date=(stat.get("studyFirstPostDateStruct") or {}).get("date", "") + "T00:00:00+00:00", badge=nct))
+    return out
+
+def f_fda_ai(src):
+    """FDA's list of AI-enabled medical devices (an HTML table refreshed every few months). One item per list update:
+    the devices whose final decision falls in the `window` days before the newest one. Dated by the page's
+    "Content current as of", so with max_age the item only shows up right after a refresh."""
+    s = get(src["url"]).decode("utf-8", "ignore")
+    m = re.search(r'current as of:.*?<time datetime="([^"]+)"', s, re.S)
+    updated = m.group(1) if m else NOW.isoformat()
+    rows = []
+    for tr in re.findall(r"<tr[^>]*>(.*?)</tr>", s, re.S):
+        c = [html.unescape(re.sub(r"<[^>]+>", "", x)).replace("\xa0", " ").strip() for x in re.findall(r"<td[^>]*>(.*?)</td>", tr, re.S)]
+        if len(c) >= 5 and re.match(r"\d\d/\d\d/\d{4}$", c[0]): rows.append((dt.datetime.strptime(c[0], "%m/%d/%Y"), c))
+    if not rows: raise ValueError("FDA AI device table not found")
+    last = max(d for d, _ in rows)
+    batch = sorted((r for r in rows if r[0] >= last - dt.timedelta(days=src.get("window", 90))), key=lambda r: r[0], reverse=True)
+    panels = {}
+    for _, c in batch: panels[c[4]] = panels.get(c[4], 0) + 1
+    lines = "; ".join(f"{c[2]} ({c[3]}, {c[1]}, {c[4]})" for _, c in batch[:40])
+    return [dict(title=f"FDA AI-enabled medical device list updated: {len(batch)} devices with final decisions in the {src.get('window', 90)} days to {last:%Y-%m-%d}",
+                 link=src["url"] + "#" + last.strftime("%Y%m%d"),
+                 desc=f"Official FDA list of AI-enabled devices (total {len(rows)}). By panel: " + ", ".join(f"{k} {v}" for k, v in sorted(panels.items(), key=lambda x: -x[1])) + ". Devices: " + lines,
+                 date=updated, badge=f"FDA list · {last:%Y-%m-%d}")]
 
 MON = {m: i for i, m in enumerate(["jan","feb","mar","apr","may","jun","jul","aug","sep","oct","nov","dec"], 1)}
 def f_pubmed(src):
     base = "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/"
-    ids = json.loads(get(base + "esearch.fcgi?db=pubmed&retmode=json&sort=pub_date&retmax=%d&term=%s" % (src.get("limit", 25), urllib.parse.quote(src["term"]))))["esearchresult"]["idlist"]
+    # sort=pub_date put future-dated print issues first and most hits fell outside max_age; take what PubMed added in the last
+    # `reldate` days instead (Entrez date), most relevant first
+    ids = json.loads(get(base + "esearch.fcgi?db=pubmed&retmode=json&sort=relevance&datetype=edat&reldate=%d&retmax=%d&term=%s" % (
+        src.get("reldate", 3), src.get("limit", 60), urllib.parse.quote(src["term"]))))["esearchresult"]["idlist"]
     if not ids: return []
     root = ET.fromstring(get(base + "efetch.fcgi?db=pubmed&retmode=xml&id=" + ",".join(ids)))
     out = []
@@ -218,7 +305,7 @@ def f_pubmed(src):
         abstract = clean(" ".join("".join(x.itertext()) for x in art.findall(".//Abstract/AbstractText")), ABS_MAX)
         journal = art.findtext(".//Journal/Title", "")
         d = None
-        for path in (".//ArticleDate", ".//JournalIssue/PubDate", ".//PubMedPubDate[@PubStatus='pubmed']"):
+        for path in (".//ArticleDate", ".//PubMedPubDate[@PubStatus='entrez']", ".//JournalIssue/PubDate"):
             n = art.find(path)
             if n is not None and n.findtext("Year"):
                 mo = n.findtext("Month") or "1"; mo = int(mo) if mo.isdigit() else MON.get(mo[:3].lower(), 1)
@@ -300,7 +387,7 @@ def fill_abstract(it):
     else: it.pop("_abs_err", None)
     return it
 
-FETCH = dict(rss=f_rss, arxiv=f_arxiv, github=f_github, hf=f_hf, pubmed=f_pubmed)
+FETCH = dict(rss=f_rss, arxiv=f_arxiv, github=f_github, hf=f_hf, pubmed=f_pubmed, hf_papers=f_hf_papers, hn=f_hn, ctgov=f_ctgov, fda_ai=f_fda_ai)
 
 def fetch_source(src):
     out, err = [], None
@@ -327,6 +414,25 @@ def fetch_source(src):
     return src, res, err
 
 # ---------------------------------------------------------------- LLM
+def parse_array(txt):
+    """Model reply -> list. Tolerates code fences / prose around the array and anything after it ("Extra data");
+    if the array itself is malformed (e.g. an unescaped quote in one item), keeps the objects that do parse."""
+    dec = json.JSONDecoder()
+    i = txt.find("[")
+    if i >= 0:
+        try:
+            v, _ = dec.raw_decode(txt, i)
+            if isinstance(v, list): return v
+        except ValueError: pass
+    out, pos = [], txt.find("{")
+    while pos >= 0:
+        try: v, end = dec.raw_decode(txt, pos)
+        except ValueError: end, v = pos + 1, None
+        if isinstance(v, dict): out.append(v)
+        pos = txt.find("{", end)
+    if not out: raise ValueError("no JSON array or object in reply: " + txt[:80])
+    return out
+
 def llm_raw(messages, want="array"):
     base = os.environ["LLM_BASE_URL"].rstrip("/")
     body = json.dumps({"model": os.getenv("LLM_MODEL", "deepseek-v4-flash"), "messages": messages, "temperature": 0.2}).encode()
@@ -336,7 +442,7 @@ def llm_raw(messages, want="array"):
             with urllib.request.urlopen(req, timeout=240) as r:
                 txt = json.loads(r.read())["choices"][0]["message"]["content"]
             if want == "text": return txt
-            return json.loads(re.search(r"\[.*\]", txt, re.S).group(0))
+            return parse_array(txt)
         except Exception as ex:
             print(f"[llm retry {a}] {ex}", file=sys.stderr); time.sleep(5)
     return None
@@ -378,7 +484,11 @@ def translate_all(items, workers=4):
 
 def enrich_all(items, workers=4):
     with cf.ThreadPoolExecutor(workers) as ex:
-        return [i for lst in ex.map(enrich, [items[i:i + 8] for i in range(0, len(items), 8)]) for i in lst]
+        done = [i for lst in ex.map(enrich, [items[i:i + 8] for i in range(0, len(items), 8)]) for i in lst]
+        # items the model skipped or whose object did not parse: one more try in small batches instead of waiting a day
+        miss = [i for i in items if i.get("_verdict") is None]
+        if miss: done += [i for lst in ex.map(enrich, [miss[i:i + 2] for i in range(0, len(miss), 2)]) for i in lst]
+    return done
 
 # ---------------------------------------------------------------- dedupe / merge
 def add_also(target, it):
@@ -537,6 +647,26 @@ def save_rejected(rej, pick):
     json.dump(rej, open(REJECTED, "w"), indent=0, sort_keys=True)
     return rej
 
+PRE_AI = ["AI", "artificial intelligence", "machine learning", "deep learning", "LLM", "language model", "foundation model", "neural network", "agent", "人工智能", "大模型"]
+def prescore(it):
+    """Cheap pre-LLM relevance: AI + medical keyword hits, a usable abstract, community signal (stars / likes / points)."""
+    t = it["title"] + " " + (it.get("desc") or "")
+    s = sum(kw_ok(t, [k]) for k in PRE_AI) + sum(kw_ok(t, [k]) for k in C.MED) + (2 if len(it.get("desc") or "") >= 300 else 0)
+    m = re.search(r"(\d+)", it.get("pop") or "")
+    return s + (min(3, math.log10(int(m.group(1)) + 1)) if m else 0)
+
+def select(new, n):
+    """Round-robin over sources so no single feed fills the LLM budget; high-weight sources go first in each round and
+    each source offers its best candidates (prescore) first. Candidates left over stay unseen and are retried next run."""
+    by = {}
+    for it in sorted(new, key=prescore, reverse=True): by.setdefault(it["source_group"], []).append(it)
+    order = sorted(by, key=lambda k: -WEIGHTS.get(k, 1.0))
+    pick = []
+    while len(pick) < n and any(by.values()):
+        for k in order:
+            if by[k] and len(pick) < n: pick.append(by[k].pop(0))
+    return pick
+
 def main():
     os.makedirs("data", exist_ok=True)
     db = json.load(open("data/items.json")) if os.path.exists("data/items.json") else []
@@ -558,12 +688,7 @@ def main():
             seen.add(it["id"])
             if dup: add_also(dup, it); continue
             new.append(it)
-    by = {}
-    for it in new: by.setdefault(it["source_group"], []).append(it)
-    pick = []
-    while len(pick) < MAX_NEW and any(by.values()):
-        for k in list(by):
-            if by[k] and len(pick) < MAX_NEW: pick.append(by[k].pop(0))
+    pick = select(new, MAX_NEW)
     print(f"new candidates {len(new)}, processing {len(pick)}", file=sys.stderr)
     with cf.ThreadPoolExecutor(6) as ex: list(ex.map(fill_abstract, pick))
     done = enrich_all(pick)
@@ -904,7 +1029,7 @@ def build_papers(url, conf_items, tools):
     if conf_items is None and not os.path.exists("site/conf.json"): return
     n = len(conf_items) if conf_items is not None else len(json.load(open("site/conf.json")))
     os.makedirs("site/papers", exist_ok=True)
-    b = (header("../", active="papers") + f'<main class="wrap"><section class="hero"><div><h1>顶会论文库</h1><p>2025–2026 年 AI / 数据挖掘 / 视觉 / NLP 顶会中的医疗 AI 论文 · 共 {n} 篇 · 按方向、会议、年份、标签筛选</p></div></section>'
+    b = (header("../", active="papers") + f'<main class="wrap"><section class="hero"><div><h1>顶会论文库</h1><p>2025–2026 年 AI / 数据挖掘 / 视觉 / NLP 顶会及医疗 AI 专门会议（MICCAI / ISBI / MIDL / CHIL / ML4H）中的医疗 AI 论文 · 共 {n} 篇 · 按方向、会议、年份、标签筛选</p></div></section>'
          f'{tools}<div id="confPanel" data-src="../conf.json"></div></main>' + footer("../"))
     open("site/papers/index.html", "w").write(page(f'顶会论文库 · {SITE["title"]}', f"医疗 AI 顶会论文 {n} 篇", url + "papers/", b, 1))
 

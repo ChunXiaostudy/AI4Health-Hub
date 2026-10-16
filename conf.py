@@ -1,4 +1,4 @@
-"""Top-conference (CCF-A + MICCAI) health/medical-AI papers via Semantic Scholar bulk search.
+"""Top-conference (CCF-A + MICCAI) and medical-AI venue (ISBI / MIDL / CHIL / ML4H) papers via Semantic Scholar bulk search.
 Persistent store data/conf.json (no 30-day expiry). Only items with LLM enrichment are shown."""
 import json, math, os, re, sys, time, urllib.request, urllib.parse, hashlib
 VENUES = {  # short: (S2 venue name, CCF rank)
@@ -17,7 +17,13 @@ VENUES = {  # short: (S2 venue name, CCF rank)
  "SIGIR": ("Annual International ACM SIGIR Conference on Research and Development in Information Retrieval", "CCF-A"),
  "MM": ("ACM Multimedia", "CCF-A"),
  "MICCAI": ("International Conference on Medical Image Computing and Computer-Assisted Intervention", "CCF-B"),
+ # 医疗 AI 专门会议：论文本身都属医疗领域，不再按标题关键词过滤。S2 的 venue 参数接受逗号分隔的多个名称
+ "ISBI": ("IEEE International Symposium on Biomedical Imaging", "无CCF评级"),
+ "MIDL": ("International Conference on Medical Imaging with Deep Learning", "无CCF评级"),
+ "CHIL": ("ACM Conference on Health, Inference, and Learning (CHIL)", "无CCF评级"),
+ "ML4H": ("Machine Learning for Health,ML4H@NeurIPS", "无CCF评级"),
 }
+MED_VENUES = {"MICCAI", "ISBI", "MIDL", "CHIL", "ML4H"}
 YEARS = "2025-2026"
 TITLE_RE = re.compile(r"\b(medical|medicine|clinical|clinic|health|healthcare|patient|patients|disease|diagnos\w*|radiolog\w*|patholog\w*|biomedical|EHR|electronic health|hospital|surgical|surgery|cancer|tumou?r|MRI|CT|X-ray|chest|ECG|EEG|drug|molecul\w*|protein|genom\w*|cell|mental health|depression|alzheimer\w*|oncolog\w*|dermatolog\w*|ophthalm\w*|retina\w*|histopatholog\w*|lesion|ultrasound|endoscop\w*|pharma\w*|therap\w*)\b", re.I)
 Q = "medical | clinical | healthcare | health | patient | radiology | pathology | biomedical | disease | diagnosis | surgical | drug | protein | EHR"
@@ -50,7 +56,7 @@ def fetch_all():
             if token: prm["token"] = token
             j = s2(prm); time.sleep(1.2)
             for p in j.get("data", []):
-                if not p.get("title") or not TITLE_RE.search(p["title"]): continue
+                if not p.get("title") or (short not in MED_VENUES and not TITLE_RE.search(p["title"])): continue
                 ids = p.get("externalIds") or {}
                 link = f"https://doi.org/{ids['DOI']}" if ids.get("DOI") else (f"https://arxiv.org/abs/{ids['ArXiv']}" if ids.get("ArXiv") else p.get("url"))
                 out[p["paperId"]] = dict(pid=p["paperId"], title=p["title"], abstract=(p.get("abstract") or "")[:900], conf=short, rank=rank, conf_label=label(p, short),
