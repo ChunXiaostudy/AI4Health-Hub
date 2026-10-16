@@ -205,6 +205,42 @@ def test_teasers_badges_and_publisher_apis():
         assert ab.startswith("Preprint abstract") and calls[-1] == ("biorxiv", "10.64898/2026.10.05.756921")
     finally: hub.springer_abstract, hub.get, hub.preprint_abstract = saved
 
+def test_springer_api_and_challenge():
+    import urllib.error
+    saved_get, saved_ris, env = hub.get, hub.springer_abstract, os.environ.pop("SPRINGER_API_KEY", None)
+    urls = []
+    try:
+        hub.springer_abstract = lambda doi: ""
+        it = dict(link="https://www.nature.com/articles/s41746-026-03377-9", desc="")
+        hub.get = lambda url, *a, **k: urls.append(url) or (_ for _ in ()).throw(hub.Challenged("Client Challenge (bot check) from www.nature.com"))
+        hub.fill_abstract(it)                      # no key: API skipped, page challenge recorded
+        assert not any("springernature" in u for u in urls) and "Client Challenge" in it["_abs_err"]
+        os.environ["SPRINGER_API_KEY"] = "test-key"
+        rec = {"records": [{"abstract": {"h1": "Abstract", "p": ["Accurate estimation of cancer risk " * 10]}}]}
+        hub.get = lambda url, *a, **k: urls.append(url) or json.dumps(rec).encode()
+        it = dict(link="https://www.nature.com/articles/s41746-026-03377-9", desc="")
+        hub.fill_abstract(it)                      # key set: Meta API first, nested abstract flattened, "Abstract" heading dropped
+        assert it["desc"].startswith("Accurate estimation") and "doi%3A10.1038%2Fs41746-026-03377-9" in urls[-1]
+        def denied(url, *a, **k): raise urllib.error.HTTPError(url, 401, "Unauthorized", {}, None)
+        hub.get = denied
+        try: hub.springer_api_abstract("10.1038/x"); assert False
+        except RuntimeError as ex: assert str(ex) == "HTTP Error 401" and "test-key" not in str(ex)   # key never in errors
+    finally:
+        hub.get, hub.springer_abstract = saved_get, saved_ris
+        if env is None: os.environ.pop("SPRINGER_API_KEY", None)
+        else: os.environ["SPRINGER_API_KEY"] = env
+
+def test_challenged_item_retried_same_day():
+    p = dict(id="c1", title="T", source="npj Digital Medicine", source_group="npj Digital Medicine", link="https://www.nature.com/articles/s1",
+             badge="DOI 10.1038/s1", day="2026-10-16", abstract_days=[hub.TODAY], abstract_err="page: Client Challenge (bot check) from www.nature.com")
+    q = dict(p, id="c2", abstract_err="page: HTTP Error 404: Not Found")
+    saved, e, t = hub.find_abstract, hub.enrich_all, hub.translate_all
+    hub.find_abstract = lambda d, fresh: ("Background: " + "z" * 300, "")
+    hub.enrich_all = lambda items: []; hub.translate_all = lambda items: None
+    try: hub.backfill([p, q], [])
+    finally: hub.find_abstract, hub.enrich_all, hub.translate_all = saved, e, t
+    assert p.get("abstract") and not q.get("abstract")   # bot check doesn't use up the day; a real failure does
+
 if __name__ == "__main__":
     for k, f in list(globals().items()):
         if k.startswith("test_"): f(); print("ok", k)
