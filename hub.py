@@ -598,36 +598,43 @@ def card(i, featured=False, top=False, base=""):
     title = (i.get("zh_title") or i["title"]) if health else (i.get("name") or i["title"])
     txt = " ".join([title, i["title"], i.get("summary") or "", i["source"], " ".join(tags)]).lower()
     attrs = ('data-top="1" ' if top else '') + f'data-sec="{E(section_of(i))}" data-form="{E(form_of(i))}" data-tags="{E("|".join(tags))}" data-text="{E(txt)}"'
-    meta = (f'<div class="meta">{fav_img(i, base)}<span>{E(i["source"])}</span>'
-            f'<span>·</span><span>发布于 {zh_date(i.get("date",""))}</span>' + (f'<span>·</span><span class="mono">{E(i["pop"])}</span>' if i.get("pop") else "") +
+    ev = (i.get("evidence") or "") if health else ""
+    tn, tc = tier(i.get("score"))
+    # health cards: score badge leads the meta row; evidence is a quiet marker next to the date, not a chip
+    sb = (f'<span class="sb {tc}" title="评分 {E(i["score"])} · {tn}｜{E(score_tip(i))}"><b>{E(i["score"])}</b>{tn}</span>'
+          if health and i.get("score") and not featured else "")
+    evm = ""
+    if ev: evm = f'<span class="evm {"ok" if ev == "同行评审" else "warn" if ev == "预印本" else ""}">{"预印本 · 未经同行评审" if ev == "预印本" else E(ev)}</span>'
+    if health and i.get("thin"): evm += '<span class="evm thin" title="原始来源只有标题，摘要仅依据标题生成">仅基于标题</span>'
+    meta = (f'<div class="meta">{sb}{fav_img(i, base)}<span>{E(i["source"])}</span>'
+            f'<span>·</span><span>发布于 {zh_date(i.get("date",""))}</span>' + (f'<span>·</span><span class="mono">{E(i["pop"])}</span>' if i.get("pop") else "") + evm +
             (f'<span class="badge" title="{E(i["badge"])}">{E(i["badge"])}</span>' if health and i.get("badge") else "") +
             f'<a class="ext" href="{E(i["link"])}" target="_blank" rel="noopener" title="打开原文">原文 ↗</a></div>')
     t = f'<a class="t stretch" href="{base}items/{E(i["id"])}/">{E(title)}</a>'
-    if health and title != i["title"]: t += f'<div class="orig">{E(i["title"])}</div>'
+    orig = f'<div class="orig">{E(i["title"])}</div>' if health and title != i["title"] else ""
     s = f'<p class="s">{E(i.get("summary"))}</p>'
     kp = "".join(f"<li>{E(k)}</li>" for k in (i.get("key_points") or [])[:3])
     kp = f'<ul class="kp">{kp}</ul>' if kp and not i.get("thin") else ""
     chips = ""
-    if health:
-        ev = i.get("evidence") or ""
-        if i.get("score"):
-            tn, tc = tier(i["score"])
-            chips += f'<span class="chip sc {tc}" title="{E(score_tip(i))}">评分 {E(i["score"])} · {tn}</span>'
-        chips += f'<span class="chip {"p" if i.get("type")=="论文" else ""}">{E(i.get("type"))}</span>' if i.get("type") else ""
-        if ev: chips += f'<span class="chip w">{"预印本 · 未经同行评审" if ev=="预印本" else E(ev)}</span>'
+    if health and i.get("type"): chips += f'<span class="chip ty">{E(i["type"])}</span>'
     chips += "".join(f'<button class="chip tag {"p" if not health and "AI" in t_ else ""}" data-tag="{E(t_)}">{E(t_)}</button>' for t_ in tags)
     if not health:
         chips += "".join(f'<span class="chip w">{E(p)}</span>' for p in (i.get("platform") or [])) + (f'<span class="chip w">{E(i["pricing"])}</span>' if i.get("pricing") and i["pricing"] != "未知" else "")
-    if i.get("thin"): chips += '<span class="chip w" title="原始来源只有标题，摘要仅依据标题生成">仅基于标题</span>'
+        if i.get("thin"): chips += '<span class="chip w" title="原始来源只有标题，摘要仅依据标题生成">仅基于标题</span>'
     extra = ""
     if i.get("also"):
         extra += f'<div class="also">{len(i["also"]) + 1} 个来源报道：' + " ".join(f'<a href="{E(a["link"])}" target="_blank" rel="noopener">{E(a["source"])}</a>' for a in [dict(source=i["source"], link=i["link"])] + i["also"][:6]) + "</div>"
-    if health and (i.get("type") == "论文" or i.get("badge")):
-        extra += f'<button class="cite" data-cite="{E(cite_text(i))}">复制引用 / DOI</button>'
+    cite = f'<button class="cite" data-cite="{E(cite_text(i))}">复制引用 / DOI</button>' if health and (i.get("type") == "论文" or i.get("badge")) else ""
     why = f'<div class="why">有意思在哪：{E(i["why"])}</div>' if not health and i.get("why") else ""
     if health and i.get("reason") and not featured: why = f'<div class="why">评分理由：{E(i["reason"])}</div>'
-    cls = "card" + (" reg" if i.get("type") == "监管" else "")
-    body = meta + t + s + kp + f'<div class="chips">{chips}</div>' + why + extra
+    cls = "card" + (f" t-{tc}" if health else "") + (" thin" if health and i.get("thin") else "")
+    if health and not featured:
+        # secondary detail (English title, key points, reasoning, citation) folds away so the feed scans quickly
+        more = orig + kp + why + (f'<div class="mf">{cite}</div>' if cite else "")
+        more = f'<details class="more"><summary>{"要点与评分理由" if kp else "详情"}</summary>{more}</details>' if more else ""
+        body = meta + t + s + f'<div class="chips">{chips}</div>' + extra + more
+    else:
+        body = meta + t + orig + s + kp + f'<div class="chips">{chips}</div>' + why + extra + cite
     if health and featured:
         tn, tc = tier(i.get("score"))
         side = (f'<div class="img scorecard {tc}" title="{E(score_tip(i))}"><div class="big"><b>{E(i.get("score") or "–")}</b><span>/10</span></div>'
@@ -695,7 +702,7 @@ def featured(db):
     top = top_picks([i for i in db if i["day"] == latest])
     if not top: return "", latest, 0
     if SITE["mode"] == "health":
-        h = card(top[0], True) + '<div class="mini">' + "".join(card(i) for i in top[1:]) + "</div>"
+        h = card(top[0], True) + '<div class="mini duo">' + "".join(card(i) for i in top[1:]) + "</div>"
     else:
         h = '<div class="grid">' + "".join(card(i, True) for i in top[:4]) + "</div>" + ('<div class="mini">' + card(top[4]) + "</div>" if len(top) > 4 else "")
     return f'<div id="featWrap"><h2>今日精选 · Top 5</h2>{h}</div>', latest, len([i for i in db if i["day"] == latest])
@@ -718,11 +725,13 @@ def build(db=None, conf_items=None):
     fetch_favicons({fav_host(i["link"], i.get("home")) for i in db + (conf_items or []) + [x for v in load_archive().values() for x in v]})
     url = SITE["url"]
     feat, latest, n = featured(db)
-    tools = ('<div class="tools"><input id="q" type="search" placeholder="搜索标题、摘要、来源、标签…" aria-label="搜索"><span id="tagf" class="tagf" hidden></span></div>')
+    tools = ('<div class="tools"><label class="search"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><input id="q" type="search" placeholder="搜索标题、摘要、来源、标签…" aria-label="搜索"><kbd>/</kbd></label><span id="tagf" class="tagf" hidden></span></div>')
     forms = ["全部形式"] + list(getattr(C, "FORMS", []))
     sub = '<div id="formBar" class="sub">' + "".join(f'<button data-f="{E(f)}"{" class=on" if k == 0 else ""}>{E(f)}</button>' for k, f in enumerate(forms)) + '</div>'
     random_btn = '<button class="pill" id="rnd">随机看一个</button>' if SITE["mode"] == "apps" else ""
-    hero = (f'<section class="hero"><div><h1><span class="mono">{latest}</span></h1><p>{E(SITE["tagline"])} · 今日 {n} 条</p></div>{random_btn}</section>')
+    ld = dt.date.fromisoformat(latest)
+    hero = (f'<section class="hero"><div><h1>{ld.month}月{ld.day}日<small>周{"一二三四五六日"[ld.weekday()]} · {ld.year}</small></h1>'
+            f'<p>{E(SITE["tagline"])} · 今日 <b>{n}</b> 条</p></div>{random_btn}</section>')
     body = header("", active="hot") + f'<main class="wrap">{hero}{tools}{sub}{feat}<div id="feed">{feed_list(db, conf_items)}</div><div id="empty" class="empty" hidden>没有匹配的内容</div></main>' + footer("")
     open("site/index.html", "w").write(page(SITE["title"], SITE["tagline"] + "：" + "、".join(SECTIONS), url, body))
     # conference data, loaded on demand
