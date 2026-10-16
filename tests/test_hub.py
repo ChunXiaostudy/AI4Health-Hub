@@ -157,6 +157,35 @@ def test_local_favicons():
         assert "google.com" not in hub.card(dict(id="x", title="t", link="https://www.nature.com/a", source="s", tags=[]))
     finally: os.chdir(cwd)
 
+def test_arxiv_link_keeps_id():
+    assert hub.arxiv_link("http://arxiv.org/abs/2610.01234v2") == "https://arxiv.org/abs/2610.01234"
+    assert hub.arxiv_link("https://arxiv.org/abs/2610.01234") == "https://arxiv.org/abs/2610.01234"
+
+def test_parse_array_tolerates_bad_replies():
+    assert hub.parse_array('```json\n[{"i": 0}, {"i": 1}]\n```') == [{"i": 0}, {"i": 1}]
+    assert hub.parse_array('[{"i": 0}]\n\n[{"i": 9}]') == [{"i": 0}]                      # "Extra data"
+    assert hub.parse_array('[{"i": 0, "s": "a"}, {"i": 1, "s": "说"好""}, {"i": 2}]') == [{"i": 0, "s": "a"}, {"i": 2}]  # one broken item
+    try: hub.parse_array("sorry"); assert False
+    except ValueError: pass
+
+def test_enrich_all_retries_missing():
+    batch = [dict(id=k, title=k, source="arXiv", desc="d") for k in "abc"]
+    raw, calls = hub.llm_raw, []
+    def fake(msgs, **k):
+        n = len(json.loads(msgs[1]["content"])); calls.append(n)
+        return [dict(i=0, keep=True, score=6, tags=[])] if n == 3 else [dict(i=j, keep=True, score=6, tags=[]) for j in range(n)]
+    hub.llm_raw = fake
+    try: out = hub.enrich_all(batch)
+    finally: hub.llm_raw = raw
+    assert calls == [3, 2] and sorted(b["id"] for b in out) == ["a", "b", "c"]
+
+def test_select_round_robin_best_first():
+    mk = lambda g, t, d="": dict(source_group=g, title=t, desc=d)
+    new = [mk("arXiv", "weather forecasting"), mk("arXiv", "deep learning for clinical radiology", "x" * 300), mk("arXiv", "a third"), mk("NEJM AI", "trial")]
+    pick = hub.select(new, 3)
+    assert [p["source_group"] for p in pick] == ["NEJM AI", "arXiv", "arXiv"]   # heavier source first in the round
+    assert pick[1]["title"] == "deep learning for clinical radiology"            # best candidate of a source first
+
 if __name__ == "__main__":
     for k, f in list(globals().items()):
         if k.startswith("test_"): f(); print("ok", k)

@@ -27,7 +27,7 @@ jobs:
           LLM_BASE_URL: ${{ secrets.LLM_BASE_URL }}
           LLM_MODEL: ${{ vars.LLM_MODEL || 'deepseek-v4-flash' }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          MAX_NEW: "80"
+          MAX_NEW: "200"
       - name: Source health alert (0 items for 3+ runs)
         env: { GH_TOKEN: "${{ github.token }}" }
         run: |
