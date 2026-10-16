@@ -28,7 +28,15 @@ jobs:
       - name: Commit
         run: |
           git config user.name "github-actions[bot]"; git config user.email "41898299+github-actions[bot]@users.noreply.github.com"
-          git add data && (git diff --cached --quiet || (git commit -m "weekly: $(date -u +%F)" && git push))
+          git add data
+          git diff --cached --quiet && exit 0
+          git commit -m "weekly: $(date -u +%F)"
+          # main may have moved during the run (e.g. a PR merged); replay this data commit on top instead of losing it
+          for i in 1 2 3; do
+            git pull --rebase origin "$GITHUB_REF_NAME" && git push origin "HEAD:$GITHUB_REF_NAME" && exit 0
+            echo "push attempt $i failed; retrying"; git rebase --abort 2>/dev/null || true; sleep $((i * 10))
+          done
+          exit 1
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with: { path: site }
