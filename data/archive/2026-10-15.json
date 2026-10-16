@@ -36,6 +36,39 @@
 "abstract_err": "page: no abstract in meta (3036 bytes, best 0 chars); europepmc: empty; openalex: HTTP Error 404: Not Found"
 },
 {
+"title": "Sequence models reveal diagnosis accumulation pathways beyond comorbidity burden in population-scale hospital data",
+"link": "https://www.nature.com/articles/s41746-026-03265-2",
+"date": "2026-10-14T00:00:00+00:00",
+"source": "npj Digital Medicine",
+"source_group": "npj Digital Medicine",
+"home": "",
+"thin": false,
+"badge": "DOI 10.1038/s41746-026-03265-2",
+"pop": null,
+"id": "707f20405212",
+"keep": true,
+"zh_title": "序列模型揭示住院诊断累积路径",
+"summary": "基于奥地利13年740万住院患者数据训练对比式Transformer编码诊断序列与入院时间，提升院内死亡预测（AUC 0.879 对 0.866）。",
+"key_points": [
+"奥地利13年住院数据，覆盖740万患者",
+"对比式Transformer编码诊断序列与时间间隔",
+"170万队列中院内死亡AUC 0.879对0.866"
+],
+"section": "临床预测与决策",
+"type": "论文",
+"tags": [
+"电子病历",
+"临床预测"
+],
+"evidence": "同行评审",
+"score": 7,
+"day": "2026-10-15",
+"rank": 11.31,
+"reason": "人群级大样本同行评审并有临床结局预测，但AUC增益小，属重要档",
+"abstract": "Aging trajectories vary among individuals of similar age and disease burden. Comorbidity indices, e.g. the Elixhauser index, aggregate recorded conditions into a single score, but discard the timing, sequence, and pace of morbidity accumulation. Here we ask whether longitudinal hospital diagnosis histories contain information beyond age, sex, and comorbidity burden, and where it is concentrated. Using 13 years of Austrian inpatient data covering 7.4 million patients, we trained a visit-level contrastive transformer to encode diagnosis sequences and inter-admission timing into patient-history embeddings. In a downstream cohort of 1.7 million individuals, the embedding model improved prediction of in-hospital death over the Elixhauser-based comorbidity model, with an area under the curve (AUC) of 0.879 versus 0.866 (AUC gain = 0.0132, 95% CI 0.0118–0.0144). Across 130 incident ICD-10 disease-block outcomes, the embedding model had higher AUC for 93 outcomes, with a modest median gain of 0.006. Gains were concentrated in mental, musculoskeletal, nervous system, and metabolic disorders. We then evaluated event-free survival, defined as remaining alive without accumulating a second unrecorded ICD-10 disease block. The embedding model achieved an AUC of 0.726 versus 0.722 for the comorbidity model. However, among patients with similar age, sex, and comorbidity-model risk, those assigned high residual risk had 127–181 fewer event-free days over five years and observed event rates comparable to low-residual-risk patients more than a decade older. Together, these findings link the embedding’s signal to the breadth, recency, and pace of prior disease accumulation.",
+"zh_abstract": "衰老轨迹在年龄和疾病负担相似的个体之间存在差异。合并症指数，例如 Elixhauser 指数，将记录的疾病汇总为单一评分，但丢弃了发病累积的时间、顺序和速度。在此，我们探讨纵向住院诊断史是否包含年龄、性别和合并症负担之外的信息，以及这些信息集中于何处。利用覆盖 740 万患者的 13 年奥地利住院数据，我们训练了一个就诊层面的对比 transformer，将诊断序列和住院间隔时间编码为患者病史嵌入。在一个由 170 万个体组成的下游队列中，嵌入模型较基于 Elixhauser 的合并症模型改善了院内死亡预测，曲线下面积（AUC）为 0.879 对 0.866（AUC 增益 = 0.0132，95% CI 0.0118–0.0144）。在 130 个新发 ICD-10 疾病区块结局中，嵌入模型对 93 个结局具有更高的 AUC，中位增益不大，为 0.006。增益集中于精神、肌肉骨骼、神经系统和代谢性疾病。随后我们评估了无事件生存，定义为仍存活且未累积第二个未记录的 ICD-10 疾病区块。嵌入模型达到 AUC 0.726，而合并症模型为 0.722。然而，在年龄、性别和合并症模型风险相似的患者中，被分配为高残余风险者五年内无事件天数少 127–181 天，其观察到的事件率与年龄大十岁以上的低残余风险患者相当。总之，这些发现将嵌入的信号与既往疾病累积的广度、近期性和速度联系起来。"
+},
+{
 "title": "From research to clinical practice: Expert consensus on Neuroimaging AI tools for the Memory clinic (Neuro-AIM)",
 "link": "https://www.nature.com/articles/s41746-026-03296-9",
 "date": "2026-10-14T00:00:00+00:00",
@@ -150,9 +183,11 @@
 "score": 4,
 "day": "2026-10-15",
 "rank": 11.81,
-"abstract": "Nature Medicine, Published online: 14 October 2026; doi:10.1038/s41591-026-04726-7 Drawing on experiences across diverse settings, this issue of Nature Medicine explores the challenges of and lessons learned from the deployment of artificial intelligence models into healthcare.",
 "reason": "期刊专刊编者按，仅概述主题与经验，无具体数据或结论，属增量档",
-"zh_abstract": "《自然·医学》（Nature Medicine），在线发表于2026年10月14日；doi:10.1038/s41591-026-04726-7 本期《自然·医学》借鉴不同场景下的经验，探讨将人工智能模型部署到医疗保健中所面临的挑战和汲取的教训。"
+"abstract_days": [
+"2026-10-16"
+],
+"abstract_err": "springer: empty; page: no abstract in meta (3036 bytes; title: Client Challenge; text: Client Challenge JavaScript is disabled in your browser. Please enable JavaScript to proceed. A requ); europepmc: empty; openalex: HTTP Error 404: Not Found"
 },
 {
 "title": "No Mastery without the Machine — Medical Education in the Age of Clinical AI",
@@ -212,10 +247,12 @@
 "evidence": "同行评审",
 "score": 4,
 "reason": "纵向队列但仅见标题级信息，无AI方法细节，属增量档",
-"abstract": "npj Digital Medicine, Published online: 15 October 2026; doi:10.1038/s41746-026-03370-2 Characterizing time-of-day physical activity patterns across cognitive trajectories in older adults: a longitudinal cohort study",
 "day": "2026-10-15",
 "rank": 9.5,
-"zh_abstract": "npj Digital Medicine，在线发表：2026年10月15日；doi:10.1038/s41746-026-03370-2 表征老年人不同认知轨迹中的一天内身体活动模式：一项纵向队列研究"
+"abstract_days": [
+"2026-10-16"
+],
+"abstract_err": "springer: empty; page: no abstract in meta (3036 bytes; title: Client Challenge; text: Client Challenge JavaScript is disabled in your browser. Please enable JavaScript to proceed. A requ); europepmc: empty; openalex: HTTP Error 404: Not Found"
 },
 {
 "title": "Implementation and effectiveness of a smartphone app targeted at improving physicians adherence to antimicrobial treatment guidelines",
@@ -241,43 +278,12 @@
 "evidence": "同行评审",
 "score": 4,
 "reason": "仅有标题信息，无数据与设计细节，属增量档",
-"abstract": "npj Digital Medicine, Published online: 15 October 2026; doi:10.1038/s41746-026-03401-y Implementation and effectiveness of a smartphone app targeted at improving physicians adherence to antimicrobial treatment guidelines",
 "day": "2026-10-15",
 "rank": 9.5,
-"zh_abstract": "npj Digital Medicine，在线发表：2026年10月15日；doi:10.1038/s41746-026-03401-y 一款旨在提高医生对抗微生物治疗指南依从性的智能手机应用程序的实施与有效性"
-},
-{
-"title": "Sequence models reveal diagnosis accumulation pathways beyond comorbidity burden in population-scale hospital data",
-"link": "https://www.nature.com/articles/s41746-026-03265-2",
-"date": "2026-10-14T00:00:00+00:00",
-"source": "npj Digital Medicine",
-"source_group": "npj Digital Medicine",
-"home": "",
-"thin": false,
-"badge": "DOI 10.1038/s41746-026-03265-2",
-"pop": null,
-"id": "707f20405212",
-"keep": true,
-"zh_title": "序列模型揭示人群医院数据中超越共病负担的诊断累积路径",
-"summary": "基于人群规模医院数据，用序列模型刻画超越共病负担的诊断累积路径。",
-"key_points": [
-"使用人群规模的医院数据",
-"采用序列模型建模诊断累积",
-"发现超出共病负担的路径"
+"abstract_days": [
+"2026-10-16"
 ],
-"section": "临床预测与决策",
-"type": "论文",
-"tags": [
-"电子病历",
-"临床预测"
-],
-"evidence": "同行评审",
-"score": 4,
-"day": "2026-10-15",
-"rank": 11.31,
-"abstract": "npj Digital Medicine, Published online: 14 October 2026; doi:10.1038/s41746-026-03265-2 Sequence models reveal diagnosis accumulation pathways beyond comorbidity burden in population-scale hospital data",
-"reason": "仅有标题级信息，虽为人群规模数据但缺细节，属增量档",
-"zh_abstract": "npj Digital Medicine，在线发表于2026年10月14日；doi:10.1038/s41746-026-03265-2 序列模型在人口规模医院数据中揭示超越共病负担的诊断累积路径"
+"abstract_err": "springer: empty; page: no abstract in meta (3036 bytes; title: Client Challenge; text: Client Challenge JavaScript is disabled in your browser. Please enable JavaScript to proceed. A requ); europepmc: empty; openalex: HTTP Error 404: Not Found"
 },
 {
 "title": "From compliance to competence: a multi-level model for AI governance in undergraduate medical education",
@@ -308,9 +314,11 @@
 "score": 4,
 "day": "2026-10-15",
 "rank": 10.31,
-"abstract": "npj Digital Medicine, Published online: 14 October 2026; doi:10.1038/s41746-026-03390-y AI's fast-paced irruption in medicine and education has challenged undergraduate medical colleges, with institutions documenting policies emphasizing immediate conduct restrictions, while strategic oversight, infrastructure and evaluation remain less consistently developed. We propose a multi-level framework for AI governance in undergraduate medical education based on accountability, competence and co-responsibility across institutions, educators and students, designed to turn a fast-evolving technology from a threat into an opportunity for collective progress.",
 "reason": "观点型治理框架，无实证数据或评估结果，属增量档",
-"zh_abstract": "npj Digital Medicine，在线发表于2026年10月14日；doi:10.1038/s41746-026-03390-y 人工智能在医学和教育中的快速突入给本科医学院校带来了挑战，各机构记录的政策强调即时行为限制，而战略监督、基础设施和评估则发展得较不一致。我们提出一个基于院校、教育者和学生之间问责、能力和共同责任的本科医学教育人工智能治理多层次框架，旨在将快速演进的技术从威胁转变为集体进步的机会。"
+"abstract_days": [
+"2026-10-16"
+],
+"abstract_err": "springer: empty; page: no abstract in meta (3036 bytes; title: Client Challenge; text: Client Challenge JavaScript is disabled in your browser. Please enable JavaScript to proceed. A requ); europepmc: empty; openalex: empty"
 },
 {
 "title": "Current status and future outlook of artificial intelligence and automation in intravenous infusion systems",
@@ -384,7 +392,7 @@
 "source_group": "bioRxiv",
 "home": "",
 "thin": false,
-"badge": "DOI 10.64898/2026.10.07.757287v1",
+"badge": "DOI 10.64898/2026.10.07.757287",
 "pop": null,
 "id": "bd0f9eb649df",
 "keep": true,
@@ -511,7 +519,7 @@
 "source_group": "bioRxiv",
 "home": "",
 "thin": false,
-"badge": "DOI 10.64898/2026.10.07.757319v1",
+"badge": "DOI 10.64898/2026.10.07.757319",
 "pop": null,
 "id": "13393b70cbbb",
 "keep": true,
@@ -544,7 +552,7 @@
 "source_group": "bioRxiv",
 "home": "",
 "thin": false,
-"badge": "DOI 10.64898/2026.10.07.757371v1",
+"badge": "DOI 10.64898/2026.10.07.757371",
 "pop": null,
 "id": "bb6f3dad16c8",
 "keep": true,
@@ -577,7 +585,7 @@
 "source_group": "bioRxiv",
 "home": "",
 "thin": false,
-"badge": "DOI 10.64898/2026.10.07.757352v1",
+"badge": "DOI 10.64898/2026.10.07.757352",
 "pop": null,
 "id": "628a556df6d0",
 "keep": true,
@@ -610,7 +618,7 @@
 "source_group": "bioRxiv",
 "home": "",
 "thin": false,
-"badge": "DOI 10.64898/2026.10.06.757125v1",
+"badge": "DOI 10.64898/2026.10.06.757125",
 "pop": null,
 "id": "a10e15fb9d14",
 "keep": true,
@@ -667,6 +675,38 @@
 "score": 5,
 "day": "2026-10-15",
 "rank": 7.81
+},
+{
+"title": "Personalized neoantigen-targeting cancer vaccines in ovarian cancer: a phase 1 trial",
+"link": "https://www.nature.com/articles/s41591-026-04717-8",
+"date": "2026-10-14T00:00:00+00:00",
+"source": "Nature Medicine",
+"source_group": "Nature Medicine",
+"home": "",
+"thin": false,
+"badge": "DOI 10.1038/s41591-026-04717-8",
+"pop": null,
+"id": "2a4a1146b013",
+"keep": true,
+"zh_title": "卵巢癌个体化新抗原疫苗1期试验",
+"summary": "Nature Medicine报道10例铂敏感卵巢癌患者接受个体化新抗原疫苗NeoVax联合延迟抗PD-1的安全性1期试验。",
+"key_points": [
+"新抗原疫苗联合PD-1阻断方案可行",
+"多数患者出现肿瘤特异性免疫应答",
+"cfDNA分析提示抗原呈递相关耐药机制"
+],
+"section": "生命科学与药物",
+"type": "论文",
+"tags": [
+"肿瘤"
+],
+"evidence": "同行评审",
+"score": 2,
+"reason": "条目未涉及AI/算法，10例1期安全性试验，与医疗AI关联弱",
+"day": "2026-10-15",
+"rank": 10.81,
+"abstract": "Personalized neoantigen-targeting cancer vaccines in the adjuvant setting are of increasing interest across malignancies. Here we report the results of a phase 1 clinical trial testing the feasibility and safety of personalized neoantigen-targeting cancer vaccines for high-grade epithelial ovarian cancer. ‘NeoVax’ consisted of pools of synthetic long peptides targeting patient-specific neoantigens admixed with the immunostimulant poly-ICLC, was combined with delayed administration of anti-PD-1 antibody, and was tested in ten patients (one newly diagnosed patient (Cohort A) and nine patients at first recurrence (Cohort B)) with platinum-sensitive ovarian cancer following standard-of-care platinum doublet chemotherapy. Nine of 12 evaluable Cohort B patients were vaccinated (75%, 90% CI 47–93%) and 1 of 9 Cohort A patients (11%, 90% CI 0.6–43%). No unexpected safety signals were encountered and no patients discontinued treatment due to toxicity. Across patients, >70% selected targets remained detectable by noninvasive cell-free DNA analysis despite a median of 6.5 months from the time of diagnostic biopsy to vaccine administration, during which, patients received standard-of-care chemotherapy. Biomarker analysis was suggestive of biologic activity of the vaccine in six of ten patients and this was associated with broader tumor and vaccine-specific immune responses in blood and tumor following vaccination. Resistant tumor clones reflected diverse mechanisms affecting antigen presentation, indicative of immune-selective pressure exerted by vaccination. Overall, the interplay between the repertoire of antigens presented by the tumor and the breadth of induced immunity seemed to dictate clinical efficacy following vaccination. ClinicalTrials.gov identifier: NCT04024878.",
+"zh_abstract": "在辅助治疗背景下，靶向新抗原的个性化癌症疫苗在多种恶性肿瘤中日益受到关注。在此，我们报告一项 1 期临床试验的结果，该试验在高级别上皮性卵巢癌中检验靶向新抗原的个性化癌症疫苗的可行性和安全性。“NeoVax”由靶向患者特异性新抗原的合成长肽库与免疫刺激剂 poly-ICLC 混合组成，与延迟给予的抗 PD-1 抗体联合，并在十例铂敏感卵巢癌患者（一例新诊断患者（队列 A）和九例首次复发患者（队列 B））中，于标准治疗铂类双药化疗后进行了测试。队列 B 中 12 例可评估患者中有 9 例接种了疫苗（75%，90% CI 47–93%），队列 A 中 9 例中有 1 例接种（11%，90% CI 0.6–43%）。未遇到意外的安全性信号，且没有患者因毒性停止治疗。在患者中，尽管从诊断活检到疫苗接种的中位时间为 6.5 个月，在此期间患者接受了标准治疗化疗，>70% 的所选靶标仍可通过无创游离 DNA 分析检测到。生物标志物分析提示疫苗在十例患者中的六例具有生物学活性，并且这与接种后血液和肿瘤中更广泛的肿瘤及疫苗特异性免疫反应相关。耐药肿瘤克隆反映了影响抗原呈递的多种机制，提示疫苗接种施加的免疫选择压力。总体而言，肿瘤所呈递抗原库与诱导免疫广度之间的相互作用似乎决定了疫苗接种后的临床疗效。ClinicalTrials.gov 标识符：NCT04024878。"
 },
 {
 "title": "eyonis Inc., a Median Technologies Company, to Present Study Results Supporting eyonis® LCS Performance Claims at CHEST 2026",
@@ -823,38 +863,6 @@
 "rank": 7.0
 },
 {
-"title": "Personalized neoantigen-targeting cancer vaccines in ovarian cancer: a phase 1 trial",
-"link": "https://www.nature.com/articles/s41591-026-04717-8",
-"date": "2026-10-14T00:00:00+00:00",
-"source": "Nature Medicine",
-"source_group": "Nature Medicine",
-"home": "",
-"thin": false,
-"badge": "DOI 10.1038/s41591-026-04717-8",
-"pop": null,
-"id": "2a4a1146b013",
-"keep": true,
-"zh_title": "卵巢癌个体化新抗原疫苗：1期试验",
-"summary": "卵巢癌个体化新抗原疫苗联合PD-1阻断的1期试验，非AI/算法主题。",
-"key_points": [
-"新抗原疫苗联合PD-1阻断方案可行",
-"多数患者出现肿瘤特异性免疫应答",
-"cfDNA分析提示抗原呈递相关耐药机制"
-],
-"section": "生命科学与药物",
-"type": "论文",
-"tags": [
-"肿瘤"
-],
-"evidence": "同行评审",
-"score": 1,
-"reason": "肿瘤疫苗临床试验，与AI或算法在医疗中的应用无关",
-"day": "2026-10-15",
-"rank": 10.81,
-"abstract": "Nature Medicine, Published online: 14 October 2026; doi:10.1038/s41591-026-04717-8 A phase 1 trial shows that treatment of patients with high-grade serous ovarian cancer with personalized neoantigen vaccines combined with PD-1 blockade was feasible and led to tumor-specific immune responses in many patients and putative mechanisms of resistance related to antigen presentation were identified via cell-free DNA analysis.",
-"zh_abstract": "《自然·医学》（Nature Medicine），在线发表于2026年10月14日；doi:10.1038/s41591-026-04717-8 一项1期试验显示，对高级别浆液性卵巢癌患者采用个体化新抗原疫苗联合PD-1阻断治疗是可行的，并在许多患者中引发了肿瘤特异性免疫应答，且通过游离DNA（cell-free DNA）分析鉴定出与抗原呈递相关的推定耐药机制。"
-},
-{
 "title": "Instability as Signal: Diagnosing Latent Heterogeneity in Multimodal Survival Models",
 "link": "https://www.medrxiv.org/content/10.64898/2026.10.13.26365414v1?rss=1",
 "date": "2026-10-14T00:00:00+00:00",
@@ -862,7 +870,7 @@
 "source_group": "medRxiv",
 "home": "",
 "thin": false,
-"badge": "DOI 10.64898/2026.10.13.26365414v1",
+"badge": "DOI 10.64898/2026.10.13.26365414",
 "pop": null,
 "id": "42be958ef162",
 "keep": true,
@@ -1282,7 +1290,7 @@
 "source_group": "medRxiv",
 "home": "",
 "thin": false,
-"badge": "DOI 10.64898/2026.10.12.26365343v1",
+"badge": "DOI 10.64898/2026.10.12.26365343",
 "pop": null,
 "id": "e7a9e9030741",
 "keep": true,
