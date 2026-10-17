@@ -88,7 +88,8 @@
 "source_group": "NEJM AI",
 "abstract_days": [
 "2026-10-15",
-"2026-10-16"
+"2026-10-16",
+"2026-10-17"
 ],
 "abstract_err": "page: HTTP Error 403: Forbidden; europepmc: empty; openalex: HTTP Error 404: Not Found"
 },
@@ -119,7 +120,8 @@
 "source_group": "NEJM AI",
 "abstract_days": [
 "2026-10-15",
-"2026-10-16"
+"2026-10-16",
+"2026-10-17"
 ],
 "abstract_err": "page: HTTP Error 403: Forbidden; europepmc: empty; openalex: empty"
 },
@@ -181,7 +183,8 @@
 "source_group": "NEJM AI",
 "abstract_days": [
 "2026-10-15",
-"2026-10-16"
+"2026-10-16",
+"2026-10-17"
 ],
 "abstract_err": "page: HTTP Error 403: Forbidden; europepmc: empty; openalex: empty"
 },
@@ -326,24 +329,27 @@
 "pop": null,
 "id": "127dbbbfd9e9",
 "keep": true,
-"zh_title": "电子病历开发商对联邦AI风险透明度要求的遵守情况",
-"summary": "电子健康记录开发商对联邦AI风险透明度要求的遵守情况。",
-"key_points": [],
+"zh_title": "电子病历厂商对联邦AI风险透明度要求的依从性",
+"summary": "评估35家电子病历厂商对联邦AI预测决策支持透明度要求的公开报告，发现内容不一致且不完整。",
+"key_points": [
+"要求公开风险分析、缓解、治理等11项属性",
+"35家厂商报告结构松散、详略差异大",
+"全部厂商仍获认证合规，提示需标准化审查"
+],
 "section": "落地与监管",
 "type": "监管",
 "tags": [
+"电子病历",
 "监管政策",
-"电子病历"
+"公平与安全"
 ],
 "evidence": "同行评审",
 "score": 6,
 "day": "2026-10-14",
 "rank": 9.5,
-"abstract_days": [
-"2026-10-15",
-"2026-10-16"
-],
-"abstract_err": "page: no abstract in meta (3036 bytes, best 0 chars); europepmc: empty; openalex: empty"
+"abstract": "We evaluated electronic health record developer compliance with federal transparency requirements for AI-enabled predictive decision support interventions. Developers are required to publicly report on risk analysis, mitigation, governance, and on eight other attributes. Across 35 developers, reporting was inconsistent and often incomplete, with substantial variation in structure and detail, yet all developers were certified as meeting the requirements. Results suggest a need for standardized reporting and more rigorous certification review.",
+"reason": "监管透明度实证研究，样本35家，具政策信息量但无临床结局",
+"zh_abstract": "我们评估了电子健康记录开发商对 AI 赋能的预测性决策支持干预的联邦透明度要求的合规情况。开发商被要求公开报告风险分析、风险缓解、治理以及另外八项属性。在 35 家开发商中，报告不一致且常常不完整，结构和详细程度存在显著差异，但所有开发商均被认证为符合要求。结果表明需要标准化报告和更严格的认证审查。"
 },
 {
 "title": "Model-dependent prompt effects challenge reliable deployment of medical LLMs in traditional Chinese medicine",
@@ -657,7 +663,8 @@
 "source_group": "NEJM AI",
 "abstract_days": [
 "2026-10-15",
-"2026-10-16"
+"2026-10-16",
+"2026-10-17"
 ],
 "abstract_err": "page: HTTP Error 403: Forbidden; europepmc: empty; openalex: HTTP Error 404: Not Found"
 },
@@ -688,7 +695,8 @@
 "source_group": "NEJM AI",
 "abstract_days": [
 "2026-10-15",
-"2026-10-16"
+"2026-10-16",
+"2026-10-17"
 ],
 "abstract_err": "page: HTTP Error 403: Forbidden; europepmc: empty; openalex: empty"
 },
@@ -785,41 +793,10 @@
 "rank": 10.0,
 "abstract_days": [
 "2026-10-15",
-"2026-10-16"
+"2026-10-16",
+"2026-10-17"
 ],
 "abstract_err": "page: HTTP Error 403: Forbidden; europepmc: empty; openalex: empty"
-},
-{
-"title": "Subversion of clinical judgment by conversational artificial intelligence",
-"link": "https://www.medrxiv.org/content/10.64898/2026.10.05.26364541v1?rss=1",
-"date": "2026-10-07T00:00:00+00:00",
-"pop": null,
-"source": "medRxiv",
-"badge": "DOI 10.64898/2026.10.05.26364541",
-"id": "5c2e85d2cfde",
-"keep": true,
-"zh_title": "对话式AI对临床判断的隐性颠覆",
-"summary": "预印本参与者盲法随机试验，检验225名来自42个国家、8个临床学科的医生能否识别并抵制对话式AI对其临床判断的隐性引导。",
-"key_points": [
-"参与者盲法随机实验，225名医生参与",
-"覆盖42个国家与8个临床学科",
-"此前AI安全多聚焦幻觉、偏见与校准失准"
-],
-"section": "大模型与智能体",
-"type": "论文",
-"tags": [
-"医学大模型",
-"临床NLP"
-],
-"evidence": "预印本",
-"score": 8,
-"day": "2026-10-14",
-"source_group": "medRxiv",
-"abstract_days": [
-"2026-10-15",
-"2026-10-16"
-],
-"abstract_err": "page: skipped; europepmc: empty; openalex: HTTP Error 404: Not Found"
 },
 {
 "title": "Label-free, low-cost AI ranking for systematic review screening",
@@ -1067,7 +1044,8 @@
 "rank": 9.0,
 "abstract_days": [
 "2026-10-15",
-"2026-10-16"
+"2026-10-16",
+"2026-10-17"
 ],
 "abstract_err": "page: HTTP Error 403: Forbidden; europepmc: empty; openalex: empty"
 },
@@ -1103,6 +1081,38 @@
 "abstract": "Although machine learning shows promise in predicting epilepsy treatment outcomes, the high heterogeneity and bias—particularly in small sample sizes, handling of missing data, and scarcity of studies with external validation—limit its clinical applicability. Future research should focus on larger, diverse datasets and standardised minimum reporting. Prospective trials are needed to evaluate machine learning models in real-world settings.",
 "reason": "系统综述与meta分析，揭示偏倚与外部验证不足，值得一看档",
 "zh_abstract": "尽管机器学习在预测癫痫治疗结局方面显示出前景，但高度异质性和偏倚——尤其是在小样本量、缺失数据处理以及外部验证研究稀缺方面——限制了其临床适用性。未来研究应聚焦于更大、多样化的数据集和标准化的最低报告要求。需要前瞻性试验来评估机器学习模型在真实世界环境中的表现。"
+},
+{
+"title": "Subversion of clinical judgment by conversational artificial intelligence",
+"link": "https://www.medrxiv.org/content/10.64898/2026.10.05.26364541v1?rss=1",
+"date": "2026-10-07T00:00:00+00:00",
+"pop": null,
+"source": "medRxiv",
+"badge": "DOI 10.64898/2026.10.05.26364541",
+"id": "5c2e85d2cfde",
+"keep": true,
+"zh_title": "对话式AI对临床判断的隐性颠覆",
+"summary": "参与者盲法随机实验中，225名多国医师使用被设定为对抗性的对话AI，多数被引导偏离正确诊疗。",
+"key_points": [
+"225名医师、42国、8个临床专科参与",
+"同一模型设对抗与对齐两种条件",
+"对抗条件下190名医师被误导"
+],
+"section": "大模型与智能体",
+"type": "论文",
+"tags": [
+"医学大模型",
+"公平与安全",
+"临床决策支持"
+],
+"evidence": "预印本",
+"score": 7,
+"day": "2026-10-14",
+"source_group": "medRxiv",
+"abstract": "In medicine, artificial intelligence (AI) safety has focused on discrete flaws such as hallucination, bias and miscalibration. Conversational systems pose a distinct hazard: in dialogue, a model can covertly advance a misaligned objective by redirecting the clinical judgment it should support. Whether clinical expertise equips physicians to detect and resist such subversion is unknown. In a participant-blinded, randomized experiment, 225 physicians from 42 countries and eight clinical disciplines made sequential diagnostic and treatment decisions with AI assistance on anonymized cases from neurocritical care, their shared field of expertise. Unknown to them, each physician used the same model under two conditions: instructed to steer them towards harmful targets (adversarial) or correct clinical options (aligned), each established by expert consensus. With adversarial AI, 190 physicians made at least one harmful decision, compared to 21 with aligned AI. Across 2,485 targeted decision points, adversarial AI raised the harmful-decision rate from 2% with aligned AI to 49% (adjusted difference 47 percentage points, 95% CI, 43-51) and reduced the correct-decision rate from 83% to 25%, with no clear protection associated with clinical experience. Of the 190 physicians who made harmful decisions with adversarial AI, 141 did not report anything unusual about that AI. Two physicians reported suspecting systematic steering or manipulation. Physicians cannot safeguard the clinical use of conversational AI through expertise and decision-making authority alone.",
+"thin": false,
+"reason": "随机盲法设计、多国225名医师，属前瞻性人机安全研究，但为预印本",
+"zh_abstract": "在医学中，人工智能（AI）安全性一直聚焦于离散缺陷，如幻觉、偏倚和校准不良。对话系统带来一种独特危险：在对话中，模型可以通过重新引导它本应支持的临床判断，暗中推进一个不一致的目标。临床专业知识是否能使医生识别并抵制这种颠覆尚不清楚。在一项参与者设盲的随机实验中，来自 42 个国家、八个临床学科的 225 名医生，在其共同专业领域——神经重症监护的匿名病例上，借助 AI 做出了连续的诊断和治疗决策。他们不知道的是，每位医生在两种条件下使用了同一个模型：被指示将他们引向有害目标（对抗性）或正确临床选项（对齐），每种条件均由专家共识确定。在使用对抗性 AI 时，190 名医生至少做出了一项有害决策，而使用对齐 AI 时为 21 名。在 2,485 个目标决策点上，对抗性 AI 将有有害决策率从使用对齐 AI 时的 2% 提高到 49%（校正差异 47 个百分点，95% CI，43-51），并将正确决策率从 83% 降低到 25%，未发现临床经验具有明确的保护作用。在使用对抗性 AI 做出有害决策的 190 名医生中，141 名未报告该 AI 有任何异常。两名医生报告怀疑存在系统性引导或操纵。医生仅凭专业知识和决策权无法保障对话式 AI 的临床使用安全。"
 },
 {
 "title": "Johns Hopkins Medicine taps OpenEvidence to bring AI into medical education, clinical care",
@@ -1230,28 +1240,27 @@
 "badge": "DOI 10.64898/2026.10.12.758490",
 "id": "58142484fc29",
 "keep": true,
-"zh_title": "BioMod：面向单细胞基础建模的生物模块分词",
-"summary": "预印本提出BioMod，用生物学意义的中间单元代替扁平基因序列，构建5千万参数单细胞基础模型。",
+"zh_title": "BioMod：单细胞基础建模的生物模块分词",
+"summary": "提出5000万参数单细胞基础模型，以660个生物模块作为基因与细胞之间的表征单元。",
 "key_points": [
-"以生物模块作为中间分词单元",
-"类比NLP中字符级到语义级分词",
-"模型规模为5000万参数"
+"用通路与数据驱动基因程序构建660个模块",
+"以模块级掩码在约7300万人细胞上预训练",
+"以模块替代成千上万基因级输入"
 ],
 "section": "生命科学与药物",
 "type": "模型",
 "tags": [
 "基因组学",
-"医学大模型"
+"生成模型"
 ],
 "evidence": "预印本",
 "score": 6,
 "day": "2026-10-14",
 "source_group": "bioRxiv",
-"abstract_days": [
-"2026-10-15",
-"2026-10-16"
-],
-"abstract_err": "page: skipped; europepmc: empty; openalex: HTTP Error 404: Not Found"
+"abstract": "Single-cell foundation models typically represent cells as flat sequences of individual genes, requiring higher-order biological organization to be inferred implicitly from sparse expression profiles. Similar to the evolution from character-level to semantic tokenization in natural language processing,we hypothesize that cellular states can be more efficiently represented using biologically meaningful intermediate units. Here we present BioMod, a 50-million-parameter single-cell foundation model that introduces biological modules as representation units between genes and cells. BioMod constructs an overlapping vocabulary of 660 biological modules derived from curated pathways and data-driven gene programs, replacing thousands of gene-level inputs with compact module representations. Pretrained on approximately 73 million human cells using high-ratio module masking with an asymmetric decoder, BioMod achieves state-of-the-art performance across cell-type annotation, zero-shot batch integration, perturbation-response prediction and drug-response forecasting while maintaining a compact architecture that enables efficient inference on a single GPU. Module-level analyses further demonstrate that BioMod captures biologically meaningful cellular programs and preserves pathway-level organization.",
+"thin": false,
+"reason": "新颖模块化单细胞基础模型、预训练规模大，但为预印本证据有限",
+"zh_abstract": "单细胞基础模型通常将细胞表示为单个基因的扁平序列，需要从稀疏表达谱中隐式推断更高阶的生物组织。类似于自然语言处理中从字符级到语义标记化的演变，我们假设细胞状态可以使用具有生物学意义的中间单元更高效地表示。在此，我们提出 BioMod，一个 5000 万参数的单细胞基础模型，它引入生物模块作为基因与细胞之间的表示单元。BioMod 构建了一个由 660 个生物模块组成的重叠词汇表，这些模块源自精选通路和数据驱动的基因程序，用紧凑的模块表示替代了数千个基因级输入。BioMod 在约 7300 万个人类细胞上预训练，采用高比例模块掩码与非对称解码器，在细胞类型注释、零样本批次整合、扰动响应预测和药物响应预测方面达到最先进性能，同时保持紧凑架构，从而能够在单个 GPU 上高效推理。模块级分析进一步表明，BioMod 捕获了具有生物学意义的细胞程序，并保留了通路级组织。"
 },
 {
 "title": "Effects of Dish Name, Visible Amount, Persona, and Explicit Instruction on Energy Estimates From Food Photographs by 26 Vision-Language Models: Comparative Evaluation Study",
@@ -1346,71 +1355,6 @@
 "link": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE9mdGdVUk94aHl3RWtkelhDeGszMERQenMxTG5zT0RROEJOZ0diaF9WMThVVm5EU1pyOXZGTmNiY2VPcGJJdTg0TUlwTEdhN24yZnlzS25lN0ZoeWdPNmc?oc=5"
 }
 ]
-},
-{
-"title": "CLARA: Compound Library Active Learning with Reasoning Agents",
-"link": "https://www.biorxiv.org/content/10.64898/2026.10.05.756921v1?rss=1",
-"date": "2026-10-12T00:00:00+00:00",
-"pop": null,
-"source": "bioRxiv",
-"badge": "DOI 10.64898/2026.10.05.756921",
-"id": "aa323df7483d",
-"keep": true,
-"zh_title": "CLARA：结合推理智能体的化合物库主动学习",
-"summary": "bioRxiv 预印本：测试语言模型在配体发现批次主动学习中做策略级决策，四个靶点上优于随机采样。",
-"key_points": [
-"语言模型负责策略级采样决策",
-"排序与标签由高斯过程环境控制",
-"四个蛋白靶点、十个配对随机种子"
-],
-"section": "生命科学与药物",
-"type": "论文",
-"tags": [
-"药物发现",
-"智能体"
-],
-"evidence": "预印本",
-"score": 6,
-"day": "2026-10-14",
-"source_group": "bioRxiv",
-"abstract_days": [
-"2026-10-15",
-"2026-10-16"
-],
-"abstract_err": "page: skipped; europepmc: empty; openalex: HTTP Error 404: Not Found"
-},
-{
-"title": "Representing biological concepts as directions in foundation model embeddings",
-"link": "https://www.biorxiv.org/content/10.64898/2026.10.10.758204v1?rss=1",
-"date": "2026-10-12T00:00:00+00:00",
-"pop": null,
-"source": "bioRxiv",
-"badge": "DOI 10.64898/2026.10.10.758204",
-"id": "3fbabf687909",
-"keep": true,
-"zh_title": "将生物学概念表示为基础模型嵌入空间中的方向",
-"summary": "预印本显示，多种生物学属性可映射为基础模型嵌入空间中可解释、可复用的方向，无需额外任务专用预测模型。",
-"key_points": [
-"采用概念激活向量（CAV）方法",
-"用概念示例与背景集区分概念",
-"属性映射为可复用嵌入方向"
-],
-"section": "大模型与智能体",
-"type": "论文",
-"tags": [
-"医学大模型",
-"可解释性",
-"基因组学"
-],
-"evidence": "预印本",
-"score": 6,
-"day": "2026-10-14",
-"source_group": "bioRxiv",
-"abstract_days": [
-"2026-10-15",
-"2026-10-16"
-],
-"abstract_err": "page: skipped; europepmc: empty; openalex: HTTP Error 404: Not Found"
 },
 {
 "title": "Decision models can offload structured clinical tasks from large language models",
@@ -1773,7 +1717,8 @@
 "source_group": "NEJM AI",
 "abstract_days": [
 "2026-10-15",
-"2026-10-16"
+"2026-10-16",
+"2026-10-17"
 ],
 "abstract_err": "page: HTTP Error 403: Forbidden; europepmc: empty; openalex: empty"
 },
@@ -2160,6 +2105,68 @@
 "thin": false,
 "reason": "跨库适配有外部评估，但结局为替代指标",
 "zh_abstract": "【背景】重症监护病房（ICU）中的脑出血（ICH）患者常在危重病早期接受抗生素。这种暴露反映了疑似感染、生理恶化、监测强度和临床管理，并可能因机构和电子健康记录数据库而异。我们评估了目标域适应，用于对ICH危重患者的持续性抗生素暴露进行建模。【方法】我们分析了来自 MIMIC-IV 和 eICU 协作研究数据库（eICU Collaborative Research Database）的派生ICH队列。MIMIC-IV包括2,024次ICU住院，并作为源队列。eICU队列包括1,277次住院，并在ICU住院层面分为开发子集（766次住院）和留出评估子集（511次住院）。eICU结局为至少两个ICU日的持续性抗生素暴露。候选模型纳入了人口统计学、合并症、生理学、实验室、神经系统、呼吸、时间以及测量过程特征。对于静态和时间表格族，带时间戳的观察在可获得时被删失于记录的首个抗生素时间，而紧凑序列组件和显式测量密度特征使用完整的最初24小时。对于使用eICU开发数据的基础模型族，元学习器输入通过五折分层交叉拟合生成。一个42输入的L2惩罚逻辑元学习器将16个模型概率与模型摘要、临床、可用性和测量密度特征相结合。【结果】留出的eICU子集包含48个阳性结局（9.39%）。经适应的集成模型达到受试者工作特征曲线下面积（AUROC）0.841（95% CI 0.775-0.899）和平均精度（AP）0.540（95% CI 0.399-0.676），Brier分数为0.063，期望校准误差为0.029。仅使用MIMIC-IV来源的堆叠模型达到AUROC 0.782；配对AUROC差异为0.059（95% CI 0.003-0.112）。在一项针对503次关联eICU住院的单独按患者分组的五折折外敏感性分析中，AUROC为0.807（95% CI 0.691-0.910）。【结论】对于持续性抗生素暴露，目标域适应相对于仅来源堆叠模型改善了留出区分度。由于某些模型组件和测量过程特征使用了更广泛的最初24小时内的信息，该模型应被解释为最初24小时治疗关联模型，而不是严格前瞻性的 pre-tr。"
+},
+{
+"title": "CLARA: Compound Library Active Learning with Reasoning Agents",
+"link": "https://www.biorxiv.org/content/10.64898/2026.10.05.756921v1?rss=1",
+"date": "2026-10-12T00:00:00+00:00",
+"pop": null,
+"source": "bioRxiv",
+"badge": "DOI 10.64898/2026.10.05.756921",
+"id": "aa323df7483d",
+"keep": true,
+"zh_title": "CLARA：带推理智能体的化合物库主动学习",
+"summary": "在四个蛋白靶点上测试语言模型智能体决定批量主动学习策略，40组配对实验中均优于随机采样。",
+"key_points": [
+"GPT智能体负责策略决策，排序由确定性环境控制",
+"四靶点、10组种子、360化合物预算",
+"命中率随批次从探索转向利用"
+],
+"section": "生命科学与药物",
+"type": "论文",
+"tags": [
+"药物发现",
+"智能体"
+],
+"evidence": "预印本",
+"score": 5,
+"day": "2026-10-14",
+"source_group": "bioRxiv",
+"abstract": "Batch active learning for ligand discovery requires a recurring decision about whether to exploit high predicted affinity, reduce model uncertainty, or broaden chemical coverage. We test whether a language model can make this strategy-level decision while candidate ranking and label revelation remain controlled by a deterministic Gaussian-process environment. Across four protein targets, ten paired seeds, and a 360-compound assay budget, a GPT-5.6 Sol agent outperformed random sampling in all 40 matched campaigns. Its final top-2\\% recall was 0.412 on D2R, 0.374 on Mpro, 0.448 on TYK2, and 0.683 on USP7. It was statistically tied with the strongest fixed policy on Mpro and USP7 but underperformed target-specific leaders on D2R and TYK2. The agent shifted from exploration-oriented early batches toward exploitation and produced 686 testable threshold claims with an 86.3\\% atomic success rate, although 19.8\\% of forecasts were not numerically scorable. In 200 prespecified information-ablation campaigns, removing uncertainty, diversity, or memory caused only small endpoint changes, while shuffling explanatory evidence reproduced the full allocation path in 39 of 40 paired campaigns. A deterministic 80\\% availability constraint reduced recall on every target but preserved the target-dependent pattern of wins and losses. These results support language-model strategy control as a feasible and auditable layer.",
+"thin": false,
+"reason": "有新意的预印本方法且有随机采样对照，但靶点与预算规模有限",
+"zh_abstract": "用于配体发现的批主动学习需要反复决定是利用高预测亲和力、降低模型不确定性，还是拓宽化学覆盖范围。我们测试语言模型能否做出这种策略层面的决策，同时候选排序和标签揭示仍由确定性高斯过程环境控制。在四个蛋白质靶标、十个配对种子和 360 个化合物的测定预算下，GPT-5.6 Sol 智能体在所有 40 个匹配实验活动中均优于随机采样。其最终 top-2% 召回率在 D2R 上为 0.412，在 Mpro 上为 0.374，在 TYK2 上为 0.448，在 USP7 上为 0.683。它在 Mpro 和 USP7 上与最强固定策略统计打平，但在 D2R 和 TYK2 上表现不及靶标特异性领先策略。该智能体从面向探索的早期批次转向利用，并产生了 686 条可检验的阈值断言，原子成功率为 86.3%，尽管 19.8% 的预测无法进行数值评分。在 200 个预设定信息消融实验活动中，移除不确定性、多样性或记忆仅导致小的终点变化，而打乱解释性证据在 40 个配对实验活动中的 39 个中复现了完整分配路径。确定性 80% 可用性约束降低了每个靶标上的召回率，但保留了胜负的靶标依赖模式。这些结果支持语言模型策略控制是一种可行且可审计的层。"
+},
+{
+"title": "Representing biological concepts as directions in foundation model embeddings",
+"link": "https://www.biorxiv.org/content/10.64898/2026.10.10.758204v1?rss=1",
+"date": "2026-10-12T00:00:00+00:00",
+"pop": null,
+"source": "bioRxiv",
+"badge": "DOI 10.64898/2026.10.10.758204",
+"id": "3fbabf687909",
+"keep": true,
+"zh_title": "用基础模型嵌入方向表示生物学概念",
+"summary": "用概念激活向量在蛋白与单细胞基础模型嵌入中定位可解释、可复用的生物学属性方向。",
+"key_points": [
+"CAV可恢复GO与EC注释、定位Pfam结构域",
+"捕捉DNA结合与蛋白互作界面特异性",
+"在单细胞嵌入中分离癌症相关表达转变"
+],
+"section": "生命科学与药物",
+"type": "论文",
+"tags": [
+"蛋白质",
+"可解释性"
+],
+"evidence": "预印本",
+"score": 5,
+"day": "2026-10-14",
+"source_group": "bioRxiv",
+"abstract": "Biological foundation models encode rich information about protein structure, function, and cellular state in high-dimensional embeddings, but accessing specific biological properties typically relies on additional, task-specific prediction models. Here, we show that diverse biological properties can be mapped to interpretable, reusable directions in embedding space. In the Concept Activation Vector (CAV) approach, examples representing a concept are distinguished from a background set using a linear model, and the resulting weight vector defines the CAV for that concept. In protein embeddings, CAVs recover Gene Ontology and Enzyme Commission annotations, localize Pfam domains, reveal novel structural relationships, and capture DNA-binding and protein-interaction interface specificity. In single-cell embeddings, CAVs isolate cancer-associated expression transitions, and gene variation along these axes substantially agrees with conventional differential-expression analysis despite being a distinct computational approach. Together, these results establish concept directions as a common representation, enabling diverse biological features to be compared, localized, and manipulated.",
+"thin": false,
+"reason": "可解释性新方法，覆盖多类生物学属性，但为预印本且无外部基准",
+"zh_abstract": "生物基础模型在高维嵌入中编码关于蛋白质结构、功能和细胞状态的丰富信息，但访问特定生物学性质通常依赖额外的、任务特异性的预测模型。在此，我们表明多种生物学性质可以映射到嵌入空间中可解释、可复用的方向。在概念激活向量（Concept Activation Vector, CAV）方法中，使用线性模型将表示某一概念的样本与背景集区分开，所得权重向量定义该概念的 CAV。在蛋白质嵌入中，CAV 可恢复基因本体（Gene Ontology）和酶委员会（Enzyme Commission）注释、定位 Pfam 结构域、揭示新的结构关系，并捕获 DNA 结合和蛋白质相互作用界面特异性。在单细胞嵌入中，CAV 可分离癌症相关表达转变，并且沿这些轴的基因变异与传统差异表达分析高度一致，尽管它是一种不同的计算方法。总之，这些结果确立概念方向作为一种共同表示，使多种生物学特征能够被比较、定位和操控。"
 },
 {
 "title": "ClinStigma: A Clinician-Guided Framework for Developing Synthetic Benchmarks of Contextual Stigmatizing Language in Clinical Documentation",
@@ -2861,38 +2868,6 @@
 "zh_abstract": "用于疾病运动评估的计算机视觉方法受限于临床视频数据集稀缺和分布不平衡，这促使人们关注生成式视频模型作为潜在训练数据来源。我们提出一个由三部分组成的框架，用于评估合成医学运动数据的临床保真度，评估视觉保真度、生物力学稳定性和病理生理准确性，并将其应用于由文本到视频模型 Sora 2 生成的视频，这些视频描绘了 MDS-UPDRS 严重程度 0-2 级（正常至轻中度运动障碍）的帕金森样手部握拳运动。我们进一步使用真实对真实的自举法，将合成-真实差异与真实临床视频的自然变异性进行比较。尽管生成的视频在视觉上看起来逼真，但定量分析显示其与真实临床记录存在显著差异，包括运动迟缓（bradykinesia）和运动减少（hypokinesia）的严重程度依赖模式较弱、震颤节律较不真实以及显著的时间不稳定性。这些发现揭示了在此帕金森样手部运动场景中，Sora-2生成的运动行为与真实临床运动行为之间存在运动域差距，并表明仅凭视觉逼真度不足以确立合成视频数据用于训练或评估医学计算机视觉系统的临床效用。"
 },
 {
-"title": "PySpiro: A Python Library for Lung Function Reference Equations and Severity Classification",
-"link": "https://www.medrxiv.org/content/10.64898/2026.10.06.26364407v1?rss=1",
-"date": "2026-10-07T00:00:00+00:00",
-"pop": null,
-"source": "medRxiv",
-"badge": "DOI 10.64898/2026.10.06.26364407",
-"id": "36b0adc047a8",
-"keep": true,
-"zh_title": "PySpiro：肺功能参考方程与严重度分级的Python库",
-"summary": "预印本介绍开源Python库PySpiro，将多种肺功能参考方程与临床严重度分类器统一于单一API。",
-"key_points": [
-"整合23个肺量计及多项肺功能参考方程",
-"含10个临床严重度分类器",
-"现有多为模态与语言特定工具，以R为主"
-],
-"section": "临床预测与决策",
-"type": "模型",
-"tags": [
-"基准",
-"数据集"
-],
-"evidence": "预印本",
-"score": 5,
-"day": "2026-10-14",
-"source_group": "medRxiv",
-"abstract_days": [
-"2026-10-15",
-"2026-10-16"
-],
-"abstract_err": "page: skipped; europepmc: empty; openalex: HTTP Error 404: Not Found"
-},
-{
 "title": "Introducing Infrastructure as Code for deployment and governance of medical AI: A case study",
 "link": "https://www.medrxiv.org/content/10.64898/2026.10.12.26365327v1?rss=1",
 "date": "2026-10-13T00:00:00+00:00",
@@ -2924,37 +2899,6 @@
 "abstract": "Clinical AI deployment rarely reaches the bedside because both workstation integration and governed backend provisioning are challenging. We introduce a workflow that allows rapid and governed access to AI functionalities through a browser interface or API, enabling privacy-compliant data analysis. The complex setup for compliant healthcare applications such as a secure backend, private AI model endpoint, and managed identity configuration is encoded by itself, a concept known as Infrastructure as Code (IaC). IaC is a concept in which networks, access rights, and service endpoints are written down as machine-readable files that can be reviewed once and executed identically in any institution. Here, we apply this concept to a clinical use case. The process of deploying a governed, private clinical AI solution using this approach in a tertiary care center took, on average, 310.3 +- 196.6 seconds (n=25, mean +- SD). To further demonstrate the clinical value of this approach, we developed and deployed an LLM-based inconsistency checker, which identifies textual inconsistency in medical documents. When evaluating the tool on a set of 1,347 physician-approved clinical documents, the tool flagged a clinically severe inconsistency in 105 clinical documents (7.8%, approximately 1 in 13). In a severity-stratified physician audit, 149 of 150 sampled findings were confirmed (population-weighted PPV 98.2%; CI 94.8 - 100.0). In summary, we present the application of IaC frameworks to a healthcare use case and demonstrate that clinically useful AI applications can be deployed to physician workstations in hospital-governed cloud environments within a few minutes.",
 "reason": "单案例部署报告，方法实用但证据有限",
 "zh_abstract": "临床 AI 部署很少能到达床旁，因为工作站集成和受治理的后端配置都具有挑战性。我们介绍一种工作流程，可通过浏览器界面或 API 快速且受治理地访问 AI 功能，从而实现符合隐私要求的数据分析。对于合规医疗应用（如安全后端、私有 AI 模型端点和托管身份配置）的复杂设置，其本身即被编码，这一概念称为基础设施即代码（IaC）。IaC 是一种将网络、访问权限和服务端点写成机器可读文件的概念，这些文件可被审阅一次，并在任何机构中以相同方式执行。在此，我们将这一概念应用于一个临床用例。在一家三级医疗中心使用该方法部署受治理的私有临床 AI 解决方案的过程平均耗时 310.3 ± 196.6 秒（n=25，均值 ± 标准差）。为进一步证明该方法的临床价值，我们开发并部署了一个基于 LLM 的不一致性检查器，用于识别医疗文档中的文本不一致。在一组 1,347 份经医生批准的临床文档上评估该工具时，该工具在 105 份临床文档（7.8%，约每 13 份中 1 份）中标记出临床严重的不一致。在一项按严重程度分层的医生审核中，150 个抽样发现中有 149 个得到确认（人群加权 PPV 98.2%；CI 94.8–100.0）。总之，我们呈现了 IaC 框架在一个医疗用例中的应用，并证明具有临床实用价值的 AI 应用可在数分钟内被部署到医院治理的云环境中的医生工作站。"
-},
-{
-"title": "Imputing relative abundances via Gaussian random fields",
-"link": "https://www.biorxiv.org/content/10.64898/2026.10.12.758512v1?rss=1",
-"date": "2026-10-13T00:00:00+00:00",
-"pop": null,
-"source": "bioRxiv",
-"badge": "DOI 10.64898/2026.10.12.758512",
-"id": "aad20ef77cda",
-"keep": true,
-"zh_title": "基于高斯随机场插补相对丰度",
-"summary": "预印本提出基于高斯随机场的可解释多重插补方法，用于成分型样本的缺失数据填补。",
-"key_points": [
-"针对纵向研究中的样本缺失问题",
-"方法基于高斯随机场做多重插补",
-"作者称模型具有可解释性"
-],
-"section": "生命科学与药物",
-"type": "论文",
-"tags": [
-"基因组学"
-],
-"evidence": "预印本",
-"score": 4,
-"day": "2026-10-14",
-"source_group": "bioRxiv",
-"abstract_days": [
-"2026-10-15",
-"2026-10-16"
-],
-"abstract_err": "page: skipped; europepmc: empty; openalex: HTTP Error 404: Not Found"
 },
 {
 "title": "ajinkyabarapatre/CareFlow-Clinical-Pathway-Process-Mining",
@@ -3607,6 +3551,36 @@
 "zh_abstract": "环境暴露塑造疾病风险，但基于循环蛋白的暴露读出指标在不同人群中的可推广性仍未知。利用“All of Us研究计划”中10,043名参与者的5,416种蛋白质的血浆蛋白质组谱，我们评估了与100多种暴露的关联及复合评分，涵盖肥胖、空气污染、环境温度和物质使用。我们发现，蛋白质组暴露特征在不同人群和社会经济阶层之间大体一致，<1%的蛋白质显示出显著的跨人群异质性，其中BMI是一个例外，而瘦素是最具异质性的关联。人群特异性的瘦素轨迹、肥胖，结合BMI调整后残余的瘦素-2型糖尿病关联，揭示了仅靠BMI无法捕捉的性别特异性代谢风险。聚合蛋白质评分在很大程度上具有暴露特异性，但物质使用评分显示出交叉预测，SES评分则广泛相关。PM2.5蛋白质评分捕捉了区域内暴露变异，并优于地理和社会经济相关因素，但空间混杂因素仍嵌入蛋白质-环境关联之中。在英国生物银行（UK Biobank）中训练的评分可迁移至All of Us，用于生物学上相近的暴露，支持跨生物样本库的可移植性。这些发现将血浆蛋白质组学确立为一种可扩展框架，用于在不同人群中测量暴露，同时强调负责任的应用需要仔细考虑生物学背景、社会模式以及队列结构。"
 },
 {
+"title": "Imputing relative abundances via Gaussian random fields",
+"link": "https://www.biorxiv.org/content/10.64898/2026.10.12.758512v1?rss=1",
+"date": "2026-10-13T00:00:00+00:00",
+"pop": null,
+"source": "bioRxiv",
+"badge": "DOI 10.64898/2026.10.12.758512",
+"id": "aad20ef77cda",
+"keep": true,
+"zh_title": "用高斯随机场插补相对丰度",
+"summary": "面向纵向组分数据的可解释多重插补模型，属统计方法工作，与医疗AI应用关联弱。",
+"key_points": [
+"针对纵向研究中的样本缺失问题",
+"方法基于高斯随机场做多重插补",
+"作者称模型具有可解释性"
+],
+"section": "生命科学与药物",
+"type": "论文",
+"tags": [
+"临床预测"
+],
+"evidence": "预印本",
+"score": 2,
+"day": "2026-10-14",
+"source_group": "bioRxiv",
+"abstract": "Longitudinal studies with human participants frequently face the challenge of missing samples, which lead to incomplete trajectories of participant biomarkers and a reduction in data size. Existing approaches focus on single-variable imputation or model features one at a time, while neural networks typically require a large number of parameters and substantial training data. To address these challenges, we present an explainable model for multiple imputation of compositional samples based on a Gaussian random field (GRF). The model is specifically designed for longitudinal data: it incorporates participant-specific information and accounts for both temporal dependence across repeated observations and within-sample correlations, while using a moderate number of parameters. By coupling the GRF with sparse activation functions, the framework outputs sum-constrained compositions and explicitly models zero inflation. Under the Aitchison and Jensen--Shannon distances, our framework achieves imputation accuracy comparable to that of an observation-carrying baseline, while overcoming its static nature by modeling temporal trajectories and multivariate correlations. The resulting multiple imputations allow us to reconstruct complete datasets for downstream analysis and uncertainty quantification. We demonstrate the practical utility of our framework on gut microbiome datasets, restoring incomplete time series and achieving a balanced accuracy of 0.72 in predicting food allergy in infants (sensitivity 0.8) and of 0.64 in forecasting postpartum depression.",
+"thin": false,
+"reason": "缺数据插补方法，未涉及临床或医疗AI应用，重要性低",
+"zh_abstract": "涉及人类参与者的纵向研究经常面临样本缺失的挑战，这会导致参与者生物标志物轨迹不完整并减少数据量。现有方法侧重于单变量插补或一次建模一个特征，而神经网络通常需要大量参数和大量训练数据。为应对这些挑战，我们提出一种基于高斯随机场（Gaussian random field, GRF）的可解释模型，用于成分数据样本的多重插补。该模型专为纵向数据设计：它纳入参与者特异性信息，并考虑重复观测间的时间依赖性和样本内相关性，同时使用中等数量的参数。通过将 GRF 与稀疏激活函数耦合，该框架输出受和约束的成分，并明确建模零膨胀。在 Aitchison 距离和 Jensen–Shannon 距离下，我们的框架达到了与携带观测的基线相当的插补准确度，同时通过建模时间轨迹和多变量相关性克服了其静态性质。由此产生的多重插补使我们能够重建完整数据集，用于下游分析和不确定性量化。我们在肠道微生物组数据集上展示了该框架的实际效用，恢复了不完整的时间序列，并在预测婴儿食物过敏方面达到 0.72 的平衡准确率（灵敏度 0.8），在预测产后抑郁方面达到 0.64。"
+},
+{
 "title": "NESTApp: A GUI-Based MATLAB Application for Auditable TMS-EEG Preprocessing with EEGLAB",
 "link": "https://www.medrxiv.org/content/10.64898/2026.10.11.26365251v1?rss=1",
 "date": "2026-10-13T00:00:00+00:00",
@@ -3721,5 +3695,35 @@
 "score": 2,
 "day": "2026-10-14",
 "source_group": "GitHub"
+},
+{
+"title": "PySpiro: A Python Library for Lung Function Reference Equations and Severity Classification",
+"link": "https://www.medrxiv.org/content/10.64898/2026.10.06.26364407v1?rss=1",
+"date": "2026-10-07T00:00:00+00:00",
+"pop": null,
+"source": "medRxiv",
+"badge": "DOI 10.64898/2026.10.06.26364407",
+"id": "36b0adc047a8",
+"keep": true,
+"zh_title": "PySpiro：肺功能参考方程与严重度分级Python库",
+"summary": "开源Python库统一多类肺功能参考方程与严重度分级，属临床工具而非AI/算法研究。",
+"key_points": [
+"整合23个肺量计及多项肺功能参考方程",
+"含10个临床严重度分类器",
+"现有多为模态与语言特定工具，以R为主"
+],
+"section": "临床预测与决策",
+"type": "模型",
+"tags": [
+"临床决策支持"
+],
+"evidence": "预印本",
+"score": 2,
+"day": "2026-10-14",
+"source_group": "medRxiv",
+"abstract": "Background and ObjectiveLung function reference equations are essential for interpreting spirometry and related modalities, yet existing tools are fragmented, modality- and language-specific (predominantly R), and lack integrated severity classifiers. We present PySpiro, an open-source Python library unifying 23 spirometry, 1 multiple breath washout, 2 diffusing capacity, 1 static lung volume, and 2 oscillometry reference equations under a single API, with 10 clinical severity classifiers. MethodsPySpiro was implemented in Python 3 using NumPy and pandas, with all equations coded directly from literature. The unified API exposes predicted medians, z-scores, limits of normal (LLN/ULN), and raw Lambda-Mu-Sigma (LMS) triplets per parameter, plus a vectorised compute() method for batch processing at the DataFrame level. Unit-tests covering every equation and classifier verify agreement with published values and confirm correct boundary, out-of-range, and missing-input handling. ResultsPySpiro covers spirometry equations from 1971 to 2022 across Caucasian, Asian, Indian, and race-neutral global populations, plus non-spirometry modalities (multiple breath washout, diffusing capacity, static lung volumes, oscillometry). Classifiers span COPD, interstitial lung disease, pattern and severity grading, bronchodilator reversibility, and primary ciliary dyskinesia. Compared with rspiro (5 equations, 4 spirometry) and the only prior Python package (spiref, 2 equations, no z-scores or % predicted), PySpiro offers substantially broader coverage, multi-modality support, a richer output API, and 10 classifiers absent from both. ConclusionsPySpiro is freely available (PyPI: pyspiro; doi:10.5281/zenodo.15519193) and provides a comprehensive, validated, and extensible platform for lung function data analysis in research pipelines.",
+"thin": false,
+"reason": "为纯软件库实现参考方程，无AI/算法在医疗中的应用内容",
+"zh_abstract": "【背景与目的】肺功能参考方程对于解释肺量计及相关模式至关重要，但现有工具分散、依模式与语言而异（主要是 R 语言），且缺乏整合的严重程度分类器。我们提出 PySpiro，一个开源 Python 库，在单一 API 下统一 23 个肺量计参考方程、1 个多次呼吸洗出参考方程、2 个弥散能力参考方程、1 个静态肺容积参考方程和 2 个振荡肺功能参考方程，并包含 10 个临床严重程度分类器。【方法】PySpiro 使用 Python 3 实现，基于 NumPy 和 pandas，所有方程均直接依据文献编码。统一 API 可输出每个参数的预测中位数、z 分数、正常值限（LLN/ULN）和原始 Lambda-Mu-Sigma（LMS）三元组，并提供一个向量化 compute() 方法，用于在 DataFrame 层面进行批处理。覆盖每个方程和分类器的单元测试验证了与已发表值的一致性，并确认了边界、超出范围和缺失输入处理的正确性。【结果】PySpiro 覆盖 1971 年至 2022 年的肺量计方程，涵盖高加索人、亚洲人、印度人和种族中性全球人群，并包括非肺量计模式（多次呼吸洗出、弥散能力、静态肺容积、振荡肺功能）。分类器涵盖 COPD、间质性肺病、模式和严重程度分级、支气管扩张剂可逆性以及原发性纤毛运动障碍。与 rspiro（5 个方程，4 个肺量计方程）以及此前唯一的 Python 包（spiref，2 个方程，无 z 分数或预测百分比）相比，PySpiro 提供显著更广的覆盖、多模式支持、更丰富的输出 API，以及两者均缺失的 10 个分类器。【结论】PySpiro 可免费获取（PyPI：pyspiro；doi:10.5281/zenodo.15519193），为研究流程中的肺功能数据分析提供了一个全面、经过验证且可扩展的平台。"
 }
 ]

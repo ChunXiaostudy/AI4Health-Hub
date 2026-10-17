@@ -1,41 +1,5 @@
 [
 {
-"title": "FedFound: Federated Foundation Model for GI endoscopy imaging",
-"link": "https://www.nature.com/articles/s41746-026-03281-2",
-"date": "2026-10-14T00:00:00+00:00",
-"source": "npj Digital Medicine",
-"source_group": "npj Digital Medicine",
-"home": "",
-"thin": false,
-"badge": "DOI 10.1038/s41746-026-03281-2",
-"pop": null,
-"id": "160552a264d5",
-"keep": true,
-"zh_title": "FedFound：胃肠道内镜影像的联邦基础模型",
-"summary": "npj Digital Medicine 在线发表 FedFound，一个面向胃肠道内镜影像的联邦基础模型。",
-"key_points": [
-"发表于 npj Digital Medicine",
-"doi:10.1038/s41746-026-03281-2",
-"主题为胃肠内镜影像联邦基础模型"
-],
-"section": "影像与病理",
-"type": "模型",
-"tags": [
-"医学影像",
-"隐私与联邦学习",
-"医学大模型"
-],
-"evidence": "同行评审",
-"score": 7,
-"day": "2026-10-15",
-"rank": 12.31,
-"abstract_days": [
-"2026-10-15",
-"2026-10-16"
-],
-"abstract_err": "page: no abstract in meta (3036 bytes, best 0 chars); europepmc: empty; openalex: HTTP Error 404: Not Found"
-},
-{
 "title": "Sequence models reveal diagnosis accumulation pathways beyond comorbidity burden in population-scale hospital data",
 "link": "https://www.nature.com/articles/s41746-026-03265-2",
 "date": "2026-10-14T00:00:00+00:00",
@@ -67,6 +31,39 @@
 "reason": "人群级大样本同行评审并有临床结局预测，但AUC增益小，属重要档",
 "abstract": "Aging trajectories vary among individuals of similar age and disease burden. Comorbidity indices, e.g. the Elixhauser index, aggregate recorded conditions into a single score, but discard the timing, sequence, and pace of morbidity accumulation. Here we ask whether longitudinal hospital diagnosis histories contain information beyond age, sex, and comorbidity burden, and where it is concentrated. Using 13 years of Austrian inpatient data covering 7.4 million patients, we trained a visit-level contrastive transformer to encode diagnosis sequences and inter-admission timing into patient-history embeddings. In a downstream cohort of 1.7 million individuals, the embedding model improved prediction of in-hospital death over the Elixhauser-based comorbidity model, with an area under the curve (AUC) of 0.879 versus 0.866 (AUC gain = 0.0132, 95% CI 0.0118–0.0144). Across 130 incident ICD-10 disease-block outcomes, the embedding model had higher AUC for 93 outcomes, with a modest median gain of 0.006. Gains were concentrated in mental, musculoskeletal, nervous system, and metabolic disorders. We then evaluated event-free survival, defined as remaining alive without accumulating a second unrecorded ICD-10 disease block. The embedding model achieved an AUC of 0.726 versus 0.722 for the comorbidity model. However, among patients with similar age, sex, and comorbidity-model risk, those assigned high residual risk had 127–181 fewer event-free days over five years and observed event rates comparable to low-residual-risk patients more than a decade older. Together, these findings link the embedding’s signal to the breadth, recency, and pace of prior disease accumulation.",
 "zh_abstract": "衰老轨迹在年龄和疾病负担相似的个体之间存在差异。合并症指数，例如 Elixhauser 指数，将记录的疾病汇总为单一评分，但丢弃了发病累积的时间、顺序和速度。在此，我们探讨纵向住院诊断史是否包含年龄、性别和合并症负担之外的信息，以及这些信息集中于何处。利用覆盖 740 万患者的 13 年奥地利住院数据，我们训练了一个就诊层面的对比 transformer，将诊断序列和住院间隔时间编码为患者病史嵌入。在一个由 170 万个体组成的下游队列中，嵌入模型较基于 Elixhauser 的合并症模型改善了院内死亡预测，曲线下面积（AUC）为 0.879 对 0.866（AUC 增益 = 0.0132，95% CI 0.0118–0.0144）。在 130 个新发 ICD-10 疾病区块结局中，嵌入模型对 93 个结局具有更高的 AUC，中位增益不大，为 0.006。增益集中于精神、肌肉骨骼、神经系统和代谢性疾病。随后我们评估了无事件生存，定义为仍存活且未累积第二个未记录的 ICD-10 疾病区块。嵌入模型达到 AUC 0.726，而合并症模型为 0.722。然而，在年龄、性别和合并症模型风险相似的患者中，被分配为高残余风险者五年内无事件天数少 127–181 天，其观察到的事件率与年龄大十岁以上的低残余风险患者相当。总之，这些发现将嵌入的信号与既往疾病累积的广度、近期性和速度联系起来。"
+},
+{
+"title": "FedFound: Federated Foundation Model for GI endoscopy imaging",
+"link": "https://www.nature.com/articles/s41746-026-03281-2",
+"date": "2026-10-14T00:00:00+00:00",
+"source": "npj Digital Medicine",
+"source_group": "npj Digital Medicine",
+"home": "",
+"thin": false,
+"badge": "DOI 10.1038/s41746-026-03281-2",
+"pop": null,
+"id": "160552a264d5",
+"keep": true,
+"zh_title": "FedFound：胃肠内镜联邦基础模型",
+"summary": "提出面向胃肠内镜的联邦学习基础模型框架，以在隐私与数据孤岛限制下利用多院数据训练通用表征。",
+"key_points": [
+"针对内镜数据隐私与机构数据碎片化问题",
+"用联邦学习训练胃肠内镜基础模型",
+"目标为可适配多任务的通用表征，缓解标注稀缺"
+],
+"section": "影像与病理",
+"type": "论文",
+"tags": [
+"医学影像",
+"隐私与联邦学习"
+],
+"evidence": "同行评审",
+"score": 6,
+"day": "2026-10-15",
+"rank": 12.31,
+"abstract": "Gastrointestinal (GI) endoscopy is essential for identifying abnormalities and enabling early diagnosis, thereby improving diagnostic accuracy and facilitating timely clinical intervention. While deep learning has shown promise in supporting GI diagnostics, most models require carefully labeled datasets that are costly to acquire and limited in scope. Foundation models offer a paradigm shift by learning general-purpose representations that can be adapted for diverse tasks, addressing data scarcity and variability. However, training such models on medical imaging data remains challenging due to privacy regulations, security concerns, and fragmented digital infrastructures that prevent centralized data aggregation, even as hospitals collectively generate vast amounts of endoscopic data. To overcome these barriers, we propose a federated learning (FL) framework for GI foundation models, allowing data to remain local while collaboratively training a shared model. We extensively evaluate multiple FL algorithms under both homogeneous and heterogeneous settings across three clinically relevant downstream tasks-classification, detection, and segmentation. We further evaluate our framework with a larger number of clients and across diverse pretraining strategies to assess its scalability and robustness. Our results demonstrate consistent performance gains, underscoring the potential of Federated Foundation Models to enable clinically validated AI applications and support secure, regulation-compliant deployment in real-world gastroendoscopy practice.",
+"reason": "同行评审的联邦内镜基础模型，方法新颖但摘要未提外部验证或临床结局",
+"zh_abstract": "胃肠道（GI）内窥镜检查对于识别异常和实现早期诊断至关重要，从而提高诊断准确性并促进及时的临床干预。尽管深度学习在支持 GI 诊断方面显示出前景，但大多数模型需要精心标注的数据集，这些数据集获取成本高昂且范围有限。基础模型通过学习可适配于多种任务的通用表示，提供了一种范式转变，解决了数据稀缺性和变异性问题。然而，由于隐私法规、安全问题以及阻止集中式数据聚合的碎片化数字基础设施，在医学影像数据上训练此类模型仍然具有挑战性，即使医院共同产生了大量内窥镜数据。为克服这些障碍，我们提出了一种用于 GI 基础模型的联邦学习（FL）框架，允许数据保持本地，同时协作训练一个共享模型。我们在同质和异质设置下，针对三个临床相关下游任务——分类、检测和分割——广泛评估了多种 FL 算法。我们进一步用更多客户端并在多种预训练策略下评估我们的框架，以评估其可扩展性和鲁棒性。我们的结果显示出持续的性能提升，凸显了联邦基础模型在实现经临床验证的 AI 应用以及支持真实世界胃肠内窥镜实践中安全、合规部署方面的潜力。"
 },
 {
 "title": "From research to clinical practice: Expert consensus on Neuroimaging AI tools for the Memory clinic (Neuro-AIM)",
@@ -185,9 +182,10 @@
 "rank": 11.81,
 "reason": "期刊专刊编者按，仅概述主题与经验，无具体数据或结论，属增量档",
 "abstract_days": [
-"2026-10-16"
+"2026-10-16",
+"2026-10-17"
 ],
-"abstract_err": "springer-api: empty; springer: Client Challenge (bot check) from citation-needed.springer.c; page: Client Challenge (bot check) from www.nature.com; europepmc: empty; openalex: HTTP Error 404: Not Found"
+"abstract_err": "springer-api: empty; springer: empty; page: Client Challenge (bot check) from www.nature.com; europepmc: empty; openalex: empty"
 },
 {
 "title": "No Mastery without the Machine — Medical Education in the Age of Clinical AI",
@@ -215,7 +213,8 @@
 "rank": 9.64,
 "abstract_days": [
 "2026-10-15",
-"2026-10-16"
+"2026-10-16",
+"2026-10-17"
 ],
 "abstract_err": "page: HTTP Error 403: Forbidden; europepmc: empty; openalex: empty"
 },
