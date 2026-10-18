@@ -89,7 +89,8 @@
 "abstract_days": [
 "2026-10-15",
 "2026-10-16",
-"2026-10-17"
+"2026-10-17",
+"2026-10-18"
 ],
 "abstract_err": "page: HTTP Error 403: Forbidden; europepmc: empty; openalex: HTTP Error 404: Not Found"
 },
@@ -121,7 +122,8 @@
 "abstract_days": [
 "2026-10-15",
 "2026-10-16",
-"2026-10-17"
+"2026-10-17",
+"2026-10-18"
 ],
 "abstract_err": "page: HTTP Error 403: Forbidden; europepmc: empty; openalex: empty"
 },
@@ -184,7 +186,8 @@
 "abstract_days": [
 "2026-10-15",
 "2026-10-16",
-"2026-10-17"
+"2026-10-17",
+"2026-10-18"
 ],
 "abstract_err": "page: HTTP Error 403: Forbidden; europepmc: empty; openalex: empty"
 },
@@ -664,7 +667,8 @@
 "abstract_days": [
 "2026-10-15",
 "2026-10-16",
-"2026-10-17"
+"2026-10-17",
+"2026-10-18"
 ],
 "abstract_err": "page: HTTP Error 403: Forbidden; europepmc: empty; openalex: HTTP Error 404: Not Found"
 },
@@ -696,7 +700,8 @@
 "abstract_days": [
 "2026-10-15",
 "2026-10-16",
-"2026-10-17"
+"2026-10-17",
+"2026-10-18"
 ],
 "abstract_err": "page: HTTP Error 403: Forbidden; europepmc: empty; openalex: empty"
 },
@@ -794,7 +799,8 @@
 "abstract_days": [
 "2026-10-15",
 "2026-10-16",
-"2026-10-17"
+"2026-10-17",
+"2026-10-18"
 ],
 "abstract_err": "page: HTTP Error 403: Forbidden; europepmc: empty; openalex: empty"
 },
@@ -1045,7 +1051,8 @@
 "abstract_days": [
 "2026-10-15",
 "2026-10-16",
-"2026-10-17"
+"2026-10-17",
+"2026-10-18"
 ],
 "abstract_err": "page: HTTP Error 403: Forbidden; europepmc: empty; openalex: empty"
 },
@@ -1718,7 +1725,8 @@
 "abstract_days": [
 "2026-10-15",
 "2026-10-16",
-"2026-10-17"
+"2026-10-17",
+"2026-10-18"
 ],
 "abstract_err": "page: HTTP Error 403: Forbidden; europepmc: empty; openalex: empty"
 },

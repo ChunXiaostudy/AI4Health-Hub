@@ -183,9 +183,10 @@
 "reason": "期刊专刊编者按，仅概述主题与经验，无具体数据或结论，属增量档",
 "abstract_days": [
 "2026-10-16",
-"2026-10-17"
+"2026-10-17",
+"2026-10-18"
 ],
-"abstract_err": "springer-api: empty; springer: empty; page: Client Challenge (bot check) from www.nature.com; europepmc: empty; openalex: empty"
+"abstract_err": "springer-api: empty; springer: Client Challenge (bot check) from citation-needed.springer.c; page: Client Challenge (bot check) from www.nature.com; europepmc: empty; openalex: empty"
 },
 {
 "title": "No Mastery without the Machine — Medical Education in the Age of Clinical AI",
@@ -214,7 +215,8 @@
 "abstract_days": [
 "2026-10-15",
 "2026-10-16",
-"2026-10-17"
+"2026-10-17",
+"2026-10-18"
 ],
 "abstract_err": "page: HTTP Error 403: Forbidden; europepmc: empty; openalex: empty"
 },
@@ -282,7 +284,13 @@
 "rank": 9.31,
 "abstract": "Abstract The combination of the Internet of Things (IoT), artificial intelligence (AI), and wearable biosensors is transforming healthcare by allowing continuous, real-time monitoring and more intelligent clinical decision-making. This review explores AI-driven monitoring, smart intravenous (IV) infusion automation, and wearable biosensors, and proposes Intelligent IV Automation and Smart Patient Synchronization (INFUSYNC), a conceptual framework synchronizing monitoring, automated fluid delivery, and predictive analytics. The literature shows meaningful progress: wearables increasingly support non-contact monitoring with near clinical-grade accuracy for select parameters, while infusion pumps with dose-error-reduction and AI-assisted decision support are reported to improve delivery precision and safety. Predictive models further support early detection of physiological decline. Progress remains uneven, however: most AI-enabled infusion systems are prototype-stage, closed-loop control remains rare, and interoperability, data security, and privacy remain underdeveloped. Future systems will need compatible, security-by-design, clinically validated, feedback-controlled architectures. Overall, this review outlines a clear but early-stage trajectory toward integrated smart-health environments for IV therapy.",
 "reason": "叙述性综述，仅提出概念框架无原始数据，属增量档",
-"zh_abstract": "摘要 物联网（Internet of Things, IoT）、人工智能（AI）和可穿戴生物传感器的结合，通过允许持续、实时监测和更智能的临床决策，正在改变医疗保健。本综述探讨了 AI 驱动的监测、智能静脉（IV）输注自动化和可穿戴生物传感器，并提出了智能静脉输注自动化与患者智能同步（Intelligent IV Automation and Smart Patient Synchronization, INFUSYNC），这是一个同步监测、自动液体输送和预测分析的概念框架。文献显示出有意义的进展：可穿戴设备日益支持非接触式监测，对某些参数具有接近临床级的准确性，而具有剂量错误减少和 AI 辅助决策支持的输注泵据报道可提高输送精度和安全性。预测模型进一步支持对生理衰退的早期检测。然而，进展仍不均衡：大多数 AI 赋能的输注系统处于原型阶段，闭环控制仍少见，互操作性、数据安全和隐私仍不完善。未来的系统将需要兼容、设计即安全、经临床验证、反馈控制的架构。总体而言，本综述概述了一条明确但处于早期阶段的轨迹，迈向用于静脉治疗的集成智能健康环境。"
+"zh_abstract": "摘要 物联网（Internet of Things, IoT）、人工智能（AI）和可穿戴生物传感器的结合，通过允许持续、实时监测和更智能的临床决策，正在改变医疗保健。本综述探讨了 AI 驱动的监测、智能静脉（IV）输注自动化和可穿戴生物传感器，并提出了智能静脉输注自动化与患者智能同步（Intelligent IV Automation and Smart Patient Synchronization, INFUSYNC），这是一个同步监测、自动液体输送和预测分析的概念框架。文献显示出有意义的进展：可穿戴设备日益支持非接触式监测，对某些参数具有接近临床级的准确性，而具有剂量错误减少和 AI 辅助决策支持的输注泵据报道可提高输送精度和安全性。预测模型进一步支持对生理衰退的早期检测。然而，进展仍不均衡：大多数 AI 赋能的输注系统处于原型阶段，闭环控制仍少见，互操作性、数据安全和隐私仍不完善。未来的系统将需要兼容、设计即安全、经临床验证、反馈控制的架构。总体而言，本综述概述了一条明确但处于早期阶段的轨迹，迈向用于静脉治疗的集成智能健康环境。",
+"also": [
+{
+"source": "PubMed · NPJ digital medicine",
+"link": "https://pubmed.ncbi.nlm.nih.gov/42875479/"
+}
+]
 },
 {
 "title": "Confido Health nabs $12.5M to scale agentic AI across PE-backed medical groups",
