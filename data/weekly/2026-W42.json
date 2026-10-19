@@ -1,19 +1,39 @@
 {
  "week": "2026-W42",
  "range": "2026-10-12 ~ 2026-10-18",
- "partial": true,
- "generated": "2026-10-14T07:11:28.646264+00:00",
- "summary": "本周文献显示，医疗AI的难点正从模型构建转向部署、证据与持续治理。NEJM AI 总结50多个算法在2000家医院、1100万患者中的落地经验，指出部署应用比构建模型更困难 [1]。NEJM AI 还提出从技术性能到临床可用性的阶段式证据标准框架 [5]；npj Digital Medicine 介绍面向美欧监管的自适应医疗AI上市后治理基础设施 AEGIS [11]。另有观点主张以信任为节奏推进AI研发与医疗采纳 [13]，并关注双重用途大语言模型时代面向患者医疗AI的安全 [17]；人道主义AI中的权力、治理与问责亦被讨论 [18]。\n\n神经领域，小型癫痫监测研究显示，基于大语言模型的聊天界面让患者用手机实时对话脑电监测，患者反馈使检测器误报减少约80% [2]。Lancet Digital Health 社论讨论AI方法如何助力并加速癫痫研究、支持及时诊断与适当照护，背景为美国参议院通过国家癫痫计划法案 [16]。同刊还报告多中心开发与验证的脑电图基础模型 MORGOTH，在临床场景达到专家级表现，并提升低资源环境诊断准确性 [6]。\n\n肿瘤与慢病风险分层方面，Nature Medicine 基于52,236例癌症患者纵向数据构建恶病质多模态图谱，体重下降事件与血清学特征及肿瘤基因型相关，并可整合临床与分子数据预测 [4]；另一项研究在52,236例癌症患者中分析恶病质体重下降与生存、疾病进展及血清标志物的关联，并训练模型预测风险 [7]。还有研究以可解释端到端神经网络构建晚期黑色素瘤预后评分 [19]，以及利用多维连续血糖监测指标进行糖尿病全谱系数字风险分层 [20]。\n\n筛查与模型可靠性方面，NEJM AI 对用于 HPV 筛查双染分流的 AI 模型进行独立外部验证，以缩小自动化差距 [3]。回顾性比较显示，大数据集微调时传统模型与 RETFound 在眼病检测表现相近，小数据集时 RETFound 在全身病检测占优 [9]。npj Digital Medicine 研究指出提示词效应因模型而异，给中医医疗大模型可靠部署带来挑战 [10]。研究还纳入健康社会决定因素实现急诊科需求逐小时预测 [12]；范围综述显示开放获取文献中临床预测模型代码共享仍有限，实践与文档质量差异显著 [15]。",
+ "partial": false,
+ "generated": "2026-10-19T05:48:34.603226+00:00",
+ "summary": "本周条目显示，临床人工智能的主线正从单点模型性能，转向多中心验证、基础模型适配与真实世界落地。影像与病理方向上，一项覆盖20个国家地区、30个新生儿ICU的国际回顾性研究，评估持续学习作为隐私保护方法，将成人气管插管评估模型适配至新生儿胸片[1]；AMIFound基础模型覆盖CT、MRI、PET、内镜、超声、眼底与X线7种模态，在376万对图像上训练评估，性能超越38个基线[15]。此外，T1结构MRI多中心模型用于区分健康对照、帕金森病与多系统萎缩，并在外部队列验证[9]；HPV筛查双染分流的AI模型也进行了独立外部验证[7]。脑电基础模型MORGOTH在多中心开发与验证中达到专家级判读表现[14]；丹麦多中心阶梯楔形整群随机试验则显示，计算机辅助质量反馈系统提高腺瘤、息肉及ACDR检出率并延长退镜时间[13]。\n\n临床预测与大模型应用更强调序列信息和验证链条。基于奥地利13年740万住院患者数据，对比式Transformer编码诊断序列与入院时间，将院内死亡预测AUC由0.866提升至0.879[3]。ScoreNet基于5项支持新药获批试验的2711例晚期黑色素瘤患者开发，并在另两项试验中验证OS与PFS分层[4]。RARE-PHENIX整合大模型表型抽取、HPO标准化与监督排序，用11家UDN中心数据训练并在外部真实病历验证[5]；多阶段可信验证框架则用于91万余份病历的成瘾诊断抽取[10]。在行为与交互层面，研究用超2.95亿条住院EHR审计日志微调Llama-3-8B，以动作预测检验临床医生工作流序列建模[17]；小样本研究探索患者通过与AI智能体对话微调自身癫痫发作检测器[18]，住院原型将头皮与颅内脑电接入基于大语言模型的AI，经手机应用与患者双向沟通，辅助癫痫实时管理[19]。\n\n落地与监管方面的经验更直接指向实施难题。NEJM AI刊文总结50多个算法在2000家医院、1100万患者中的落地经验，指出部署应用比构建模型更困难[6]。用大模型流水线筛查3967篇文献的范围综述发现，12.2%报告代码共享，为TRIPOD-Code报告规范提供依据[8]。同时，分阶段框架被提出，用于从技术性能到临床可用性评估临床人工智能证据标准[11]。\n\n生命科学与药物方向则展示了人群尺度数据与可解释模型的作用。受天文学启发的计算框架从横断面数据重建末次月经锚定轨迹，在两个队列3亿项检验中发现多系统生理断崖[2]。Nature研究在101,243例患者中量化棕色脂肪活性，发现其与心血管及精神疾病患病率较低相关[12]。SPACER从空间转录组数据解码基因水平细胞募集规则，在37个数据集上较现有方法提升4–21倍[16]。在52,236例癌症患者中，恶病质体重下降与生存降低、疾病进展相关，并具跨常规化验指标的一致血清学特征[20]。",
  "items": [
+  {
+   "title": "成人胸片AI模型经持续学习适配新生儿：国际多中心研究",
+   "link": "https://www.nature.com/articles/s41551-026-01812-6",
+   "source": "Nature Biomedical Engineering"
+  },
+  {
+   "title": "人群尺度重建绝经动态：末次月经的生理断崖",
+   "link": "https://www.nature.com/articles/s41591-026-04614-0",
+   "source": "Nature Medicine"
+  },
+  {
+   "title": "序列模型揭示住院诊断累积路径",
+   "link": "https://www.nature.com/articles/s41746-026-03265-2",
+   "source": "npj Digital Medicine"
+  },
+  {
+   "title": "可解释端到端神经网络构建晚期黑色素瘤预后分层评分",
+   "link": "https://www.nature.com/articles/s41746-026-03379-7",
+   "source": "npj Digital Medicine"
+  },
+  {
+   "title": "RARE-PHENIX：LLM端到端罕见病表型提取框架",
+   "link": "https://www.nature.com/articles/s41746-026-03275-0",
+   "source": "npj Digital Medicine"
+  },
   {
    "title": "临床AI落地比构建更难：50余算法、2000家医院的经验",
    "link": "https://ai.nejm.org/doi/full/10.1056/AI-S2601120%4010.1056/ai_2026.3.issue-10?af=R&rss=currentIssue",
    "source": "NEJM AI"
-  },
-  {
-   "title": "人机协作实时共同管理癫痫",
-   "link": "https://www.nature.com/articles/s41591-026-04680-4",
-   "source": "Nature Medicine"
   },
   {
    "title": "HPV 宫颈癌筛查：双染分流 AI 模型的独立外部验证",
@@ -21,9 +41,19 @@
    "source": "NEJM AI"
   },
   {
-   "title": "健康系统规模的癌症恶病质病程多模态图谱",
-   "link": "https://www.nature.com/articles/s41591-026-04689-9",
+   "title": "AI辅助范围综述：临床预测模型研究的代码共享",
+   "link": "https://www.nature.com/articles/s41591-026-04691-1",
    "source": "Nature Medicine"
+  },
+  {
+   "title": "临床结构 MRI 自动鉴别帕金森综合征：多中心研究",
+   "link": "https://www.nature.com/articles/s41746-026-03357-z",
+   "source": "npj Digital Medicine"
+  },
+  {
+   "title": "LLM 大规模临床信息抽取的多阶段可信验证框架",
+   "link": "https://www.nature.com/articles/s41746-026-03341-7",
+   "source": "npj Digital Medicine"
   },
   {
    "title": "从技术性能到临床可用：临床AI证据标准阶段式框架",
@@ -31,79 +61,49 @@
    "source": "NEJM AI"
   },
   {
-   "title": "EEG基础模型MORGOTH的多中心开发与验证",
+   "title": "人工智能实现人棕色脂肪临床表型分析",
+   "link": "https://pubmed.ncbi.nlm.nih.gov/42875491/",
+   "source": "PubMed · Nature"
+  },
+  {
+   "title": "丹麦计算机辅助质量反馈提升腺瘤检出率",
+   "link": "https://www.thelancet.com/journals/landig/article/PIIS2589-7500(26)00069-5/fulltext?rss=yes",
+   "source": "Lancet Digital Health"
+  },
+  {
+   "title": "脑电基础模型MORGOTH：多中心开发与验证",
    "link": "https://www.thelancet.com/journals/landig/article/PIIS2589-7500(26)00062-2/fulltext?rss=yes",
    "source": "Lancet Digital Health"
   },
   {
-   "title": "利用常规临床数据刻画癌症恶病质的发生与进展",
+   "title": "全能医学图像恢复与增强基础模型AMIFound",
+   "link": "https://www.nature.com/articles/s42256-026-01310-z",
+   "source": "Nature Machine Intelligence"
+  },
+  {
+   "title": "可解释 AI 模型 SPACER 解析组织细胞募集空间编码",
+   "link": "https://www.nature.com/articles/s41551-026-01804-6",
+   "source": "Nature Biomedical Engineering"
+  },
+  {
+   "title": "用语言模型对EHR审计日志做序列建模",
+   "link": "https://pubmed.ncbi.nlm.nih.gov/42862940/",
+   "source": "PubMed · Journal of the American Medical Informatics Association : JAMIA"
+  },
+  {
+   "title": "对话式脑 AI 用于自适应癫痫护理",
+   "link": "https://www.nature.com/articles/s41591-026-04719-6",
+   "source": "Nature Medicine"
+  },
+  {
+   "title": "人机协作实时共管癫痫",
+   "link": "https://www.nature.com/articles/s41591-026-04680-4",
+   "source": "Nature Medicine"
+  },
+  {
+   "title": "常规临床数据刻画癌症恶病质发生与进展",
    "link": "https://www.nature.com/articles/s41591-026-04720-z",
    "source": "Nature Medicine"
-  },
-  {
-   "title": "人口规模绝经动态重建揭示末次月经期生理骤变",
-   "link": "https://www.nature.com/articles/s41591-026-04614-0",
-   "source": "Nature Medicine"
-  },
-  {
-   "title": "RETFound与传统深度学习模型检测眼病及全身病的比较",
-   "link": "https://www.thelancet.com/journals/landig/article/PIIS2589-7500(26)00054-3/fulltext?rss=yes",
-   "source": "Lancet Digital Health"
-  },
-  {
-   "title": "提示词模型依赖性影响中医医疗大模型可靠部署",
-   "link": "https://www.nature.com/articles/s41746-026-03397-5",
-   "source": "npj Digital Medicine"
-  },
-  {
-   "title": "AEGIS：自适应医疗AI上市后治理基础设施",
-   "link": "https://www.nature.com/articles/s41746-026-03290-1",
-   "source": "npj Digital Medicine"
-  },
-  {
-   "title": "融合健康社会决定因素的AI急诊需求逐小时预测",
-   "link": "https://www.nature.com/articles/s41746-026-03378-8",
-   "source": "npj Digital Medicine"
-  },
-  {
-   "title": "以信任的速度推进AI研发与医疗采纳",
-   "link": "https://ai.nejm.org/doi/full/10.1056/AI-S2600964%4010.1056/ai_2026.3.issue-10?af=R&rss=currentIssue",
-   "source": "NEJM AI"
-  },
-  {
-   "title": "专才AI为何仍可能赢得放射学部署竞赛",
-   "link": "https://ai.nejm.org/doi/full/10.1056/AIltr2600389?af=R&rss=currentIssue",
-   "source": "NEJM AI"
-  },
-  {
-   "title": "临床预测模型代码共享的AI辅助范围综述",
-   "link": "https://www.nature.com/articles/s41591-026-04691-1",
-   "source": "Nature Medicine"
-  },
-  {
-   "title": "社论：AI时代的癫痫研究",
-   "link": "https://www.thelancet.com/journals/landig/article/PIIS2589-7500(26)00138-X/fulltext?rss=yes",
-   "source": "Lancet Digital Health"
-  },
-  {
-   "title": "当聊天机器人泄露：双重用途大模型时代面向患者医疗AI的安全",
-   "link": "https://ai.nejm.org/doi/full/10.1056/AIp2600583?af=R&rss=currentIssue",
-   "source": "NEJM AI"
-  },
-  {
-   "title": "人道主义AI中的权力、治理与问责",
-   "link": "https://www.thelancet.com/journals/landig/article/PIIS2589-7500(26)00091-9/fulltext?rss=yes",
-   "source": "Lancet Digital Health"
-  },
-  {
-   "title": "可解释端到端神经网络构建晚期黑色素瘤预后评分",
-   "link": "https://www.nature.com/articles/s41746-026-03379-7",
-   "source": "npj Digital Medicine"
-  },
-  {
-   "title": "多维连续血糖监测指标实现糖尿病全谱系数字风险分层",
-   "link": "https://www.nature.com/articles/s41746-026-03368-w",
-   "source": "npj Digital Medicine"
   }
  ]
 }
