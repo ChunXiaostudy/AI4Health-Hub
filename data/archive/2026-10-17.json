@@ -32,7 +32,8 @@
 "rank": 11.81,
 "abstract_days": [
 "2026-10-17",
-"2026-10-18"
+"2026-10-18",
+"2026-10-19"
 ],
 "abstract_err": "springer-api: empty; springer: Client Challenge (bot check) from citation-needed.springer.c; page: Client Challenge (bot check) from www.nature.com; europepmc: empty; openalex: empty"
 },
@@ -65,7 +66,8 @@
 "rank": 11.64,
 "abstract_days": [
 "2026-10-17",
-"2026-10-18"
+"2026-10-18",
+"2026-10-19"
 ],
 "abstract_err": "page: HTTP Error 403: Forbidden; europepmc: empty; openalex: empty"
 },
@@ -131,7 +133,8 @@
 "rank": 10.64,
 "abstract_days": [
 "2026-10-17",
-"2026-10-18"
+"2026-10-18",
+"2026-10-19"
 ],
 "abstract_err": "page: HTTP Error 403: Forbidden; europepmc: empty; openalex: empty"
 },
@@ -164,7 +167,8 @@
 "rank": 10.64,
 "abstract_days": [
 "2026-10-17",
-"2026-10-18"
+"2026-10-18",
+"2026-10-19"
 ],
 "abstract_err": "page: HTTP Error 403: Forbidden; europepmc: empty; openalex: empty"
 },
@@ -495,7 +499,8 @@
 "rank": 8.64,
 "abstract_days": [
 "2026-10-17",
-"2026-10-18"
+"2026-10-18",
+"2026-10-19"
 ],
 "abstract_err": "page: HTTP Error 403: Forbidden; europepmc: empty; openalex: empty"
 },
@@ -1227,7 +1232,13 @@
 "abstract": "[Journal of clinical medicine] Background/Objectives: Artificial intelligence (AI) and machine learning (ML) are increasingly used in periodontal assessment, image analysis, outcome prediction, and clinical decision support. However, evidence specifically addressing gingival recession (GR) and related periodontal soft-tissue parameters remains fragmented and predominantly technical. This scoping review aimed to map AI/ML applications for the detection, measurement, prediction, and treatment planning of GR and to identify methodological limitations and translational evidence gaps. Methods: This scoping review was conducted in accordance with the JBI methodology for scoping reviews and reported according to PRISMA-ScR. Eligibility was structured according to the Population-Concept-Context framework and included English-language original studies involving human participants or human-derived clinical data and evaluating AI/ML approaches directly related to GR or to periodontal soft-tissue or anatomical parameters relevant to its assessment or management. PubMed/MEDLINE, Scopus, and Embase were utilized as the core bibliographic databases, while Google Scholar was used as an additional search source with screening restricted to the first 200 results ranked by relevance. No restrictions on publication year or start date were applied. Study characteristics, AI methods, clinical applications, validation strategies, and performance metrics were charted and descriptively synthesized. Results: Twelve studies were included across four main clinical domains: detection and segmentation of gingival recession and related soft-tissue features, measurement and anatomical landmark localization, prediction and risk assessment, and treatment planning or clinical decision support. AI/ML models generally demonstrated promising technical performance, including high classification and segmentation accuracy and submillimeter localization of periodontal anatomical landmarks. However, datasets, reference standards, validation strategies, and reported performance metrics were heterogeneous. Independent external validation remained limited, and most studies assessed technical performance rather than clinical utility. No study prospectively demonstrated that AI-assisted assessment or decision support improved clinician decision-making or patient outcomes. Conclusions: AI shows potential to support objective GR assessment, prediction, and treatment planning in gingival recession management. However, current evidence r",
 "day": "2026-10-17",
 "rank": 6.69,
-"zh_abstract": "[Journal of clinical medicine] 【背景/目的】人工智能（AI）和机器学习（ML）越来越多地用于牙周评估、图像分析、结局预测和临床决策支持。然而，专门针对牙龈退缩（GR）及相关牙周软组织参数的证据仍然零散且以技术性为主。本范围综述旨在梳理AI/ML在GR检测、测量、预测和治疗计划中的应用，并识别方法学局限和转化证据缺口。【方法】本范围综述按照JBI范围综述方法学进行，并根据PRISMA-ScR报告。纳入标准依据人群-概念-情境框架构建，包括涉及人类参与者或源自人类的临床数据、评估与GR直接相关或与其评估或管理相关的牙周软组织或解剖参数的AI/ML方法的英文原创研究。PubMed/MEDLINE、Scopus和Embase作为核心书目数据库，Google Scholar作为附加检索来源，筛选仅限按相关性排序的前200条结果。对发表年份或起始日期未施加限制。对研究特征、AI方法、临床应用、验证策略和性能指标进行图表化和描述性综合。【结果】共纳入12项研究，涵盖四个主要临床领域：牙龈退缩及相关软组织特征的检测与分割、测量与解剖标志定位、预测与风险评估，以及治疗计划或临床决策支持。AI/ML模型总体表现出有前景的技术性能，包括高分类和分割准确率以及牙周解剖标志的亚毫米定位。然而，数据集、参考标准、验证策略和报告的性能指标存在异质性。独立外部验证仍然有限，大多数研究评估的是技术性能而非临床效用。没有研究前瞻性地证明AI辅助评估或决策支持改善了临床医生的决策或患者结局。【结论】AI在牙龈退缩管理中显示出支持客观GR评估、预测和治疗计划的潜力。然而，当前证据 r"
+"zh_abstract": "[Journal of clinical medicine] 【背景/目的】人工智能（AI）和机器学习（ML）越来越多地用于牙周评估、图像分析、结局预测和临床决策支持。然而，专门针对牙龈退缩（GR）及相关牙周软组织参数的证据仍然零散且以技术性为主。本范围综述旨在梳理AI/ML在GR检测、测量、预测和治疗计划中的应用，并识别方法学局限和转化证据缺口。【方法】本范围综述按照JBI范围综述方法学进行，并根据PRISMA-ScR报告。纳入标准依据人群-概念-情境框架构建，包括涉及人类参与者或源自人类的临床数据、评估与GR直接相关或与其评估或管理相关的牙周软组织或解剖参数的AI/ML方法的英文原创研究。PubMed/MEDLINE、Scopus和Embase作为核心书目数据库，Google Scholar作为附加检索来源，筛选仅限按相关性排序的前200条结果。对发表年份或起始日期未施加限制。对研究特征、AI方法、临床应用、验证策略和性能指标进行图表化和描述性综合。【结果】共纳入12项研究，涵盖四个主要临床领域：牙龈退缩及相关软组织特征的检测与分割、测量与解剖标志定位、预测与风险评估，以及治疗计划或临床决策支持。AI/ML模型总体表现出有前景的技术性能，包括高分类和分割准确率以及牙周解剖标志的亚毫米定位。然而，数据集、参考标准、验证策略和报告的性能指标存在异质性。独立外部验证仍然有限，大多数研究评估的是技术性能而非临床效用。没有研究前瞻性地证明AI辅助评估或决策支持改善了临床医生的决策或患者结局。【结论】AI在牙龈退缩管理中显示出支持客观GR评估、预测和治疗计划的潜力。然而，当前证据 r",
+"also": [
+{
+"source": "PubMed · Pain research & management",
+"link": "https://pubmed.ncbi.nlm.nih.gov/42893423/"
+}
+]
 },
 {
 "title": "Artificial Intelligence as a Catalyst for Novel Therapeutic Opportunities in Precision Oncology.",

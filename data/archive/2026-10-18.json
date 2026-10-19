@@ -195,7 +195,8 @@
 "day": "2026-10-18",
 "rank": 10.64,
 "abstract_days": [
-"2026-10-18"
+"2026-10-18",
+"2026-10-19"
 ],
 "abstract_err": "page: HTTP Error 403: Forbidden; europepmc: empty; openalex: empty"
 },
@@ -363,7 +364,8 @@
 "day": "2026-10-18",
 "rank": 9.64,
 "abstract_days": [
-"2026-10-18"
+"2026-10-18",
+"2026-10-19"
 ],
 "abstract_err": "page: HTTP Error 403: Forbidden; europepmc: empty; openalex: empty"
 },
@@ -819,7 +821,13 @@
 "score": 4,
 "reason": "机构与企业合作的智能体实验室，仅标题、无实质进展信息。",
 "day": "2026-10-18",
-"rank": 6.31
+"rank": 6.31,
+"also": [
+{
+"source": "搜狐网",
+"link": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxQM1N2U3hFT0QxTHZJQVNTaW42cUpFWTJLUjNoRC03NWtPblhIdGdBZVJaTWxTSTA3UjFJQy03Mk1vRXpKY042VnptTGJ4bnFCaHVWWjg0eG5scl92M09ad0F4N0ZJSEY2THNLNUEzY1lPRnVXWmtLaV9mejFld1dKTm16N3B1YXpLd3BF?oc=5"
+}
+]
 },
 {
 "title": "Medical data crunch poses challenges to ambient AI and clinical agents",
