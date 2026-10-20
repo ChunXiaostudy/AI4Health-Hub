@@ -164,7 +164,13 @@
 "abstract": "Understanding which molecular signals recruit specific cells to precise tissue locations is fundamental to tissue biology, immunity and disease. Existing computational tools for spatially resolved transcriptomics (SRT) describe where cells reside but cannot explain why. Here we introduce SPACER, a fully interpretable multi-instance learning framework that decodes gene-level recruitment rules directly from SRT data. Applied to 37 SRT datasets spanning multiple human tumour types and mouse heart, SPACER achieved 4–21-fold improvement over existing methods in various tasks of recovering biologically meaningful recruitment signals. SPACER revealed (1) that tumour-expressed mucins are associated with physical barriers to T cell engagement, which predicts resistance to immune checkpoint inhibitors and patient prognosis, (2) that local antigen presentation is the dominant correlate of T cell engagement across cancer types and (3) that Cd4^+ T cells are the dominant functional effectors in severe immune checkpoint inhibitor-induced myocarditis. These findings establish SPACER as a discovery engine for cellular recruitment biology with direct translational applications. A fully interpretable multi-instance learning framework, SPACER, helps elucidate which molecular signals recruit specific cells to their precise locations by decoding gene-level recruitment rules from spatially resolved transcriptomics data.",
 "day": "2026-10-16",
 "rank": 11.99,
-"zh_abstract": "理解哪些分子信号将特定细胞募集到精确的组织位置，是组织生物学、免疫学和疾病的基础。现有的空间分辨转录组学（SRT）计算工具描述了细胞驻留在何处，但无法解释原因。在此，我们介绍SPACER，一种完全可解释的多实例学习框架，可直接从SRT数据中解码基因水平的募集规则。应用于涵盖多种人类肿瘤类型和小鼠心脏的37个SRT数据集，SPACER在恢复具有生物学意义的募集信号的各种任务中，相比现有方法实现了4–21倍的提升。SPACER揭示：(1) 肿瘤表达的黏蛋白与T细胞接合的物理屏障相关，这预测了对免疫检查点抑制剂的耐药性和患者预后；(2) 局部抗原呈递是跨癌种T细胞接合的主要相关因素；(3) Cd4^+ T细胞是严重免疫检查点抑制剂诱导的心肌炎中的主要功能性效应细胞。这些发现确立了SPACER作为细胞募集生物学的发现引擎，具有直接的转化应用。一个完全可解释的多实例学习框架SPACER，通过从空间分辨转录组学数据中解码基因水平募集规则，帮助阐明哪些分子信号将特定细胞募集到其精确位置。"
+"zh_abstract": "理解哪些分子信号将特定细胞募集到精确的组织位置，是组织生物学、免疫学和疾病的基础。现有的空间分辨转录组学（SRT）计算工具描述了细胞驻留在何处，但无法解释原因。在此，我们介绍SPACER，一种完全可解释的多实例学习框架，可直接从SRT数据中解码基因水平的募集规则。应用于涵盖多种人类肿瘤类型和小鼠心脏的37个SRT数据集，SPACER在恢复具有生物学意义的募集信号的各种任务中，相比现有方法实现了4–21倍的提升。SPACER揭示：(1) 肿瘤表达的黏蛋白与T细胞接合的物理屏障相关，这预测了对免疫检查点抑制剂的耐药性和患者预后；(2) 局部抗原呈递是跨癌种T细胞接合的主要相关因素；(3) Cd4^+ T细胞是严重免疫检查点抑制剂诱导的心肌炎中的主要功能性效应细胞。这些发现确立了SPACER作为细胞募集生物学的发现引擎，具有直接的转化应用。一个完全可解释的多实例学习框架SPACER，通过从空间分辨转录组学数据中解码基因水平募集规则，帮助阐明哪些分子信号将特定细胞募集到其精确位置。",
+"also": [
+{
+"source": "Nature Biomedical Engineering",
+"link": "https://www.nature.com/articles/s41551-026-01803-7"
+}
+]
 },
 {
 "title": "A language model framework for sequence modeling of audit logs to characterize clinician-electronic health record interactions.",
@@ -505,7 +511,8 @@
 "2026-10-16",
 "2026-10-17",
 "2026-10-18",
-"2026-10-19"
+"2026-10-19",
+"2026-10-20"
 ],
 "abstract_err": "page: HTTP Error 403: Forbidden; no DOI / PMID"
 },
@@ -844,7 +851,8 @@
 "2026-10-16",
 "2026-10-17",
 "2026-10-18",
-"2026-10-19"
+"2026-10-19",
+"2026-10-20"
 ],
 "abstract_err": "page: HTTP Error 403: Forbidden; no DOI / PMID"
 },
@@ -882,7 +890,8 @@
 "2026-10-16",
 "2026-10-17",
 "2026-10-18",
-"2026-10-19"
+"2026-10-19",
+"2026-10-20"
 ],
 "abstract_err": "page: HTTP Error 403: Forbidden; no DOI / PMID"
 },
@@ -956,7 +965,8 @@
 "2026-10-16",
 "2026-10-17",
 "2026-10-18",
-"2026-10-19"
+"2026-10-19",
+"2026-10-20"
 ],
 "abstract_err": "page: HTTP Error 403: Forbidden; no DOI / PMID"
 },
@@ -996,7 +1006,8 @@
 "2026-10-16",
 "2026-10-17",
 "2026-10-18",
-"2026-10-19"
+"2026-10-19",
+"2026-10-20"
 ],
 "abstract_err": "page: HTTP Error 403: Forbidden; no DOI / PMID"
 },
@@ -1035,7 +1046,8 @@
 "2026-10-16",
 "2026-10-17",
 "2026-10-18",
-"2026-10-19"
+"2026-10-19",
+"2026-10-20"
 ],
 "abstract_err": "page: HTTP Error 403: Forbidden; no DOI / PMID"
 },
@@ -1074,7 +1086,8 @@
 "2026-10-16",
 "2026-10-17",
 "2026-10-18",
-"2026-10-19"
+"2026-10-19",
+"2026-10-20"
 ],
 "abstract_err": "page: HTTP Error 403: Forbidden; no DOI / PMID"
 },
@@ -1112,7 +1125,8 @@
 "2026-10-16",
 "2026-10-17",
 "2026-10-18",
-"2026-10-19"
+"2026-10-19",
+"2026-10-20"
 ],
 "abstract_err": "page: HTTP Error 403: Forbidden; no DOI / PMID"
 },
@@ -1185,7 +1199,8 @@
 "2026-10-16",
 "2026-10-17",
 "2026-10-18",
-"2026-10-19"
+"2026-10-19",
+"2026-10-20"
 ],
 "abstract_err": "page: HTTP Error 403: Forbidden; no DOI / PMID"
 },
@@ -1259,7 +1274,8 @@
 "2026-10-16",
 "2026-10-17",
 "2026-10-18",
-"2026-10-19"
+"2026-10-19",
+"2026-10-20"
 ],
 "abstract_err": "page: HTTP Error 403: Forbidden; no DOI / PMID"
 },
@@ -1299,7 +1315,8 @@
 "2026-10-16",
 "2026-10-17",
 "2026-10-18",
-"2026-10-19"
+"2026-10-19",
+"2026-10-20"
 ],
 "abstract_err": "page: HTTP Error 403: Forbidden; no DOI / PMID"
 },
@@ -1337,7 +1354,8 @@
 "2026-10-16",
 "2026-10-17",
 "2026-10-18",
-"2026-10-19"
+"2026-10-19",
+"2026-10-20"
 ],
 "abstract_err": "page: HTTP Error 403: Forbidden; no DOI / PMID"
 },
@@ -2414,7 +2432,8 @@
 "2026-10-16",
 "2026-10-17",
 "2026-10-18",
-"2026-10-19"
+"2026-10-19",
+"2026-10-20"
 ],
 "abstract_err": "page: HTTP Error 403: Forbidden; no DOI / PMID"
 },
@@ -2452,7 +2471,8 @@
 "2026-10-16",
 "2026-10-17",
 "2026-10-18",
-"2026-10-19"
+"2026-10-19",
+"2026-10-20"
 ],
 "abstract_err": "page: HTTP Error 403: Forbidden; no DOI / PMID"
 },
@@ -2490,7 +2510,8 @@
 "2026-10-16",
 "2026-10-17",
 "2026-10-18",
-"2026-10-19"
+"2026-10-19",
+"2026-10-20"
 ],
 "abstract_err": "page: HTTP Error 403: Forbidden; no DOI / PMID"
 },
@@ -2528,7 +2549,8 @@
 "2026-10-16",
 "2026-10-17",
 "2026-10-18",
-"2026-10-19"
+"2026-10-19",
+"2026-10-20"
 ],
 "abstract_err": "page: HTTP Error 403: Forbidden; no DOI / PMID"
 },
@@ -2567,7 +2589,8 @@
 "2026-10-16",
 "2026-10-17",
 "2026-10-18",
-"2026-10-19"
+"2026-10-19",
+"2026-10-20"
 ],
 "abstract_err": "page: HTTP Error 403: Forbidden; no DOI / PMID"
 },
@@ -2606,7 +2629,8 @@
 "2026-10-16",
 "2026-10-17",
 "2026-10-18",
-"2026-10-19"
+"2026-10-19",
+"2026-10-20"
 ],
 "abstract_err": "page: HTTP Error 403: Forbidden; no DOI / PMID"
 },
@@ -2681,7 +2705,8 @@
 "2026-10-16",
 "2026-10-17",
 "2026-10-18",
-"2026-10-19"
+"2026-10-19",
+"2026-10-20"
 ],
 "abstract_err": "page: HTTP Error 403: Forbidden; no DOI / PMID"
 },
@@ -2720,7 +2745,8 @@
 "2026-10-16",
 "2026-10-17",
 "2026-10-18",
-"2026-10-19"
+"2026-10-19",
+"2026-10-20"
 ],
 "abstract_err": "page: HTTP Error 403: Forbidden; no DOI / PMID"
 },
@@ -2754,7 +2780,8 @@
 "2026-10-16",
 "2026-10-17",
 "2026-10-18",
-"2026-10-19"
+"2026-10-19",
+"2026-10-20"
 ],
 "abstract_err": "page: HTTP Error 403: Forbidden; no DOI / PMID"
 },
@@ -2790,7 +2817,8 @@
 "2026-10-16",
 "2026-10-17",
 "2026-10-18",
-"2026-10-19"
+"2026-10-19",
+"2026-10-20"
 ],
 "abstract_err": "page: HTTP Error 403: Forbidden; no DOI / PMID"
 },
@@ -2887,7 +2915,8 @@
 "2026-10-16",
 "2026-10-17",
 "2026-10-18",
-"2026-10-19"
+"2026-10-19",
+"2026-10-20"
 ],
 "abstract_err": "page: HTTP Error 403: Forbidden; no DOI / PMID"
 },
@@ -2925,7 +2954,8 @@
 "2026-10-16",
 "2026-10-17",
 "2026-10-18",
-"2026-10-19"
+"2026-10-19",
+"2026-10-20"
 ],
 "abstract_err": "page: HTTP Error 403: Forbidden; no DOI / PMID"
 },
@@ -5033,7 +5063,8 @@
 "2026-10-16",
 "2026-10-17",
 "2026-10-18",
-"2026-10-19"
+"2026-10-19",
+"2026-10-20"
 ],
 "abstract_err": "page: HTTP Error 403: Forbidden; no DOI / PMID"
 },
@@ -5071,7 +5102,8 @@
 "2026-10-16",
 "2026-10-17",
 "2026-10-18",
-"2026-10-19"
+"2026-10-19",
+"2026-10-20"
 ],
 "abstract_err": "page: HTTP Error 403: Forbidden; no DOI / PMID"
 },
@@ -5376,7 +5408,8 @@
 "2026-10-16",
 "2026-10-17",
 "2026-10-18",
-"2026-10-19"
+"2026-10-19",
+"2026-10-20"
 ],
 "abstract_err": "page: skipped; pubmed: empty; europepmc: empty; openalex: empty"
 },
@@ -5409,7 +5442,8 @@
 "2026-10-16",
 "2026-10-17",
 "2026-10-18",
-"2026-10-19"
+"2026-10-19",
+"2026-10-20"
 ],
 "abstract_err": "page: skipped; pubmed: empty; europepmc: empty; openalex: empty"
 },

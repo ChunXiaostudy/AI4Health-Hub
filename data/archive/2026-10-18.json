@@ -196,7 +196,8 @@
 "rank": 10.64,
 "abstract_days": [
 "2026-10-18",
-"2026-10-19"
+"2026-10-19",
+"2026-10-20"
 ],
 "abstract_err": "page: HTTP Error 403: Forbidden; europepmc: empty; openalex: empty"
 },
@@ -365,7 +366,8 @@
 "rank": 9.64,
 "abstract_days": [
 "2026-10-18",
-"2026-10-19"
+"2026-10-19",
+"2026-10-20"
 ],
 "abstract_err": "page: HTTP Error 403: Forbidden; europepmc: empty; openalex: empty"
 },
@@ -826,6 +828,10 @@
 {
 "source": "搜狐网",
 "link": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxQM1N2U3hFT0QxTHZJQVNTaW42cUpFWTJLUjNoRC03NWtPblhIdGdBZVJaTWxTSTA3UjFJQy03Mk1vRXpKY042VnptTGJ4bnFCaHVWWjg0eG5scl92M09ad0F4N0ZJSEY2THNLNUEzY1lPRnVXWmtLaV9mejFld1dKTm16N3B1YXpLd3BF?oc=5"
+},
+{
+"source": "中国经济网",
+"link": "https://news.google.com/rss/articles/CBMickFVX3lxTE1YSEpsREFocUFhbjFwMjZJNFdpVHBKajhhc0tqaEowSWFtclMzSDlTbGI5dlNHdDl4elZCcDRRd1diSmdjQ05rQWc2UTltSXNVUjNiUnJHS1BhYk9JR3A1ZlhXNXhtQXBNX1NHbGdpcFBhdw?oc=5"
 }
 ]
 },
