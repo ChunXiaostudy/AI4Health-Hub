@@ -97,7 +97,13 @@
 "abstract": "[Newly registered clinical trial, no results yet; sponsor: Fondazione Policlinico Universitario Agostino Gemelli IRCCS; conditions: Breast Neoplasms; type: OBSERVATIONAL; enrollment: 200075; status: NOT_YET_RECRUITING] The goal of this observational study is to evaluate how artificial intelligence (AI) can be integrated into an organized breast cancer screening program for women aged 50-74 years undergoing mammography screening. The main questions it aims to answer are: * Can an AI-based workflow that identifies selected mammograms for review by a third radiologist improve or maintain the cancer detection rate compared with the current AI-supported double-reading workflow? * How would this AI-based workflow affect recall rates, biopsy referrals, false-positive results, interval cancers, radiologists' workload, and the number of cases requiring third-reader review? Researchers will compare the currently used screening strategy, in which mammograms are independently read by two radiologists with AI support, with an alternative AI-based strategy reconstructed using a target trial emulation approach. In the alternative strategy, predefined AI score thresholds will be used to identify selected cases for an offline review by an independent third radiologist. Participants will not be asked to undergo additional examinations or changes to their clinical care. Researchers will use routinely collected mammography screening data, AI scores, radiologists' readings, screening outcomes, and follow-up information. The alternative AI-based screening workflow will be evaluated retrospectively and will not affect participants' screening results or clinical management.",
 "day": "2026-10-20",
 "rank": 9.31,
-"zh_abstract": "[新注册临床试验，尚无结果；申办方：Fondazione Policlinico Universitario Agostino Gemelli IRCCS；疾病：乳腺肿瘤；类型：观察性；入组人数：200075；状态：尚未招募] 这项观察性研究的目标是评估如何将人工智能（AI）整合到一个有组织的乳腺癌筛查项目中，该项目针对接受乳腺X线摄影筛查的 50-74 岁女性。其旨在回答的主要问题是：* 与当前 AI 支持的双读工作流程相比，一种识别选定乳腺X线摄影片供第三位放射科医生复核的 AI 工作流程能否提高或维持癌症检出率？* 这种 AI 工作流程将如何影响召回率、活检转诊、假阳性结果、间期癌症、放射科医生的工作量以及需要第三读片者复核的病例数？研究人员将比较当前使用的筛查策略（即乳腺X线摄影片由两位放射科医生在 AI 支持下独立阅片）与使用目标试验模拟方法重建的替代 AI 策略。在替代策略中，将使用预定义的 AI 评分阈值来识别选定病例，供独立的第三位放射科医生进行离线复核。参与者不会被要求接受额外检查或改变其临床照护。研究人员将使用常规收集的乳腺X线摄影筛查数据、AI 评分、放射科医生阅片、筛查结局和随访信息。替代 AI 筛查工作流程将进行回顾性评估，不会影响参与者的筛查结果或临床管理。"
+"zh_abstract": "[新注册临床试验，尚无结果；申办方：Fondazione Policlinico Universitario Agostino Gemelli IRCCS；疾病：乳腺肿瘤；类型：观察性；入组人数：200075；状态：尚未招募] 这项观察性研究的目标是评估如何将人工智能（AI）整合到一个有组织的乳腺癌筛查项目中，该项目针对接受乳腺X线摄影筛查的 50-74 岁女性。其旨在回答的主要问题是：* 与当前 AI 支持的双读工作流程相比，一种识别选定乳腺X线摄影片供第三位放射科医生复核的 AI 工作流程能否提高或维持癌症检出率？* 这种 AI 工作流程将如何影响召回率、活检转诊、假阳性结果、间期癌症、放射科医生的工作量以及需要第三读片者复核的病例数？研究人员将比较当前使用的筛查策略（即乳腺X线摄影片由两位放射科医生在 AI 支持下独立阅片）与使用目标试验模拟方法重建的替代 AI 策略。在替代策略中，将使用预定义的 AI 评分阈值来识别选定病例，供独立的第三位放射科医生进行离线复核。参与者不会被要求接受额外检查或改变其临床照护。研究人员将使用常规收集的乳腺X线摄影筛查数据、AI 评分、放射科医生阅片、筛查结局和随访信息。替代 AI 筛查工作流程将进行回顾性评估，不会影响参与者的筛查结果或临床管理。",
+"also": [
+{
+"source": "ClinicalTrials.gov",
+"link": "https://clinicaltrials.gov/study/NCT07882420"
+}
+]
 },
 {
 "title": "Unwarranted Delegation to Artificial Intelligence of Prior Authorizations for Select Medicare Treatments.",
@@ -230,7 +236,8 @@
 "day": "2026-10-20",
 "rank": 9.0,
 "abstract_days": [
-"2026-10-20"
+"2026-10-20",
+"2026-10-21"
 ],
 "abstract_err": "page: HTTP Error 403: Forbidden; no DOI / PMID"
 },

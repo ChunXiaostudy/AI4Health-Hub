@@ -34,7 +34,8 @@
 "2026-10-17",
 "2026-10-18",
 "2026-10-19",
-"2026-10-20"
+"2026-10-20",
+"2026-10-21"
 ],
 "abstract_err": "springer-api: empty; springer: Client Challenge (bot check) from citation-needed.springer.c; page: Client Challenge (bot check) from www.nature.com; europepmc: empty; openalex: empty"
 },
@@ -69,7 +70,8 @@
 "2026-10-17",
 "2026-10-18",
 "2026-10-19",
-"2026-10-20"
+"2026-10-20",
+"2026-10-21"
 ],
 "abstract_err": "page: HTTP Error 403: Forbidden; europepmc: empty; openalex: empty"
 },
@@ -137,7 +139,8 @@
 "2026-10-17",
 "2026-10-18",
 "2026-10-19",
-"2026-10-20"
+"2026-10-20",
+"2026-10-21"
 ],
 "abstract_err": "page: HTTP Error 403: Forbidden; europepmc: empty; openalex: empty"
 },
@@ -172,7 +175,8 @@
 "2026-10-17",
 "2026-10-18",
 "2026-10-19",
-"2026-10-20"
+"2026-10-20",
+"2026-10-21"
 ],
 "abstract_err": "page: HTTP Error 403: Forbidden; europepmc: empty; openalex: empty"
 },
@@ -505,7 +509,8 @@
 "2026-10-17",
 "2026-10-18",
 "2026-10-19",
-"2026-10-20"
+"2026-10-20",
+"2026-10-21"
 ],
 "abstract_err": "page: HTTP Error 403: Forbidden; europepmc: empty; openalex: empty"
 },
