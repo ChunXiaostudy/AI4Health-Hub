@@ -237,9 +237,16 @@
 "rank": 9.0,
 "abstract_days": [
 "2026-10-20",
-"2026-10-21"
+"2026-10-21",
+"2026-10-22"
 ],
-"abstract_err": "page: HTTP Error 403: Forbidden; no DOI / PMID"
+"abstract_err": "page: HTTP Error 403: Forbidden; no DOI / PMID",
+"also": [
+{
+"source": "PubMed · Medical image analysis",
+"link": "https://pubmed.ncbi.nlm.nih.gov/42893626/"
+}
+]
 },
 {
 "title": "MedMCP: An Open Agentic Ecosystem for Medical Imaging Workflows",

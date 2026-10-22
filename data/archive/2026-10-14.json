@@ -2537,7 +2537,13 @@
 "score": 5,
 "day": "2026-10-14",
 "thin": true,
-"source_group": "Google News · FDA AI"
+"source_group": "Google News · FDA AI",
+"also": [
+{
+"source": "IAM Media",
+"link": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxOWFFFcWt1NHB4R01qc19IRkU4WGdQbG9mQzhmUUVhVG1CUHlNSUpJNURiUXppblRMYUd4dnAzRHk2aWNxSVg3cDZPVml3V2h0dC1QSG1ra05pbXUxVGZCQ3Z3b0RuWEVQVndobUd5WDZGMUFQTjY5X0ZSWm1VQXJreGNHaVhaTzh3ZUg0YVV5Q0hha04zUVo2WW9KMEV3VldFYVF5WHZYckU4U2k4VzFreVlHcWxwQjVEVDByMUtxZ3pHV2NJRDBaWk5MZ0FhVnItWU41VjdVQ2FPSTJBalVwZg?oc=5"
+}
+]
 },
 {
 "title": "AI Medical Device Certification Body Scarlet Raises $50M Series B - Wowtale",
