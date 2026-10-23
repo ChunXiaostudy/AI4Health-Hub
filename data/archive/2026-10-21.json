@@ -792,7 +792,13 @@
 "abstract": "Medical workflows often require multiple interdependent analyses, but existing specialist and generalist AI models are not designed to coordinate them. We introduce MMedAgent-Plus, a multimodal medical tool-use agent that combines a vision-language planner with 18 leading specialist models spanning 12 tasks and 8 modalities. Through a unified tool interface, the planner selects specialists, executes them in sequence, and synthesizes responses grounded in their outputs. The planner is instruction-tuned on 208,928 samples from 32 public medical benchmarks, covering single- and multi-tool interactions across single and multiple rounds. We separately evaluate tool orchestration, response synthesis, and end-to-end execution on held-out samples. MMedAgent-Plus achieves tool-call accuracies of 91.0%, 98.1%, and 80.7% in single-tool multi-round, multi-tool multi-round, and multi-tool single-round settings, respectively. Given correct tool outputs, MMedAgent-Plus achieves scores of 14.4-14.8 out of 15 for faithfulness, completeness, and conciseness across 600 evaluation samples. In end-to-end execution without pre-supplied tool outputs, MMedAgent-Plus correctly invokes the required specialist in 90.6% of 350 evaluation cases spanning seven tasks. Its final-answer accuracy reaches 0.98, matching the dedicated leading specialist and exceeding the strongest baseline (0.28).",
 "day": "2026-10-21",
 "rank": 8.81,
-"zh_abstract": "医疗工作流程通常需要多项相互依赖的分析，但现有的专科和通用 AI 模型并非为协调这些分析而设计。我们提出 MMedAgent-Plus，一种多模态医疗工具使用智能体，它将视觉-语言规划器与 18 个领先的专科模型相结合，覆盖 12 项任务和 8 种模态。通过统一的工具接口，规划器选择专科模型，按顺序执行它们，并基于其输出合成回答。规划器在来自 32 个公开医疗基准的 208,928 个样本上进行指令微调，涵盖单轮和多轮中的单工具和多工具交互。我们在留出样本上分别评估工具编排、回答合成和端到端执行。MMedAgent-Plus 在单工具多轮、多工具多轮和多工具单轮设置中分别达到 91.0%、98.1% 和 80.7% 的工具调用准确率。给定正确的工具输出，MMedAgent-Plus 在 600 个评估样本上在忠实性、完整性和简洁性方面获得 15 分中的 14.4–14.8 分。在未预先提供工具输出的端到端执行中，MMedAgent-Plus 在跨越七项任务的 350 个评估案例中，有 90.6% 正确调用了所需的专科模型。其最终答案准确率达到 0.98，与专门的领先专科模型相当，并超过最强基线（0.28）。"
+"zh_abstract": "医疗工作流程通常需要多项相互依赖的分析，但现有的专科和通用 AI 模型并非为协调这些分析而设计。我们提出 MMedAgent-Plus，一种多模态医疗工具使用智能体，它将视觉-语言规划器与 18 个领先的专科模型相结合，覆盖 12 项任务和 8 种模态。通过统一的工具接口，规划器选择专科模型，按顺序执行它们，并基于其输出合成回答。规划器在来自 32 个公开医疗基准的 208,928 个样本上进行指令微调，涵盖单轮和多轮中的单工具和多工具交互。我们在留出样本上分别评估工具编排、回答合成和端到端执行。MMedAgent-Plus 在单工具多轮、多工具多轮和多工具单轮设置中分别达到 91.0%、98.1% 和 80.7% 的工具调用准确率。给定正确的工具输出，MMedAgent-Plus 在 600 个评估样本上在忠实性、完整性和简洁性方面获得 15 分中的 14.4–14.8 分。在未预先提供工具输出的端到端执行中，MMedAgent-Plus 在跨越七项任务的 350 个评估案例中，有 90.6% 正确调用了所需的专科模型。其最终答案准确率达到 0.98，与专门的领先专科模型相当，并超过最强基线（0.28）。",
+"also": [
+{
+"source": "Hugging Face Daily Papers",
+"link": "https://huggingface.co/papers/2610.27233"
+}
+]
 },
 {
 "title": "Discrete Neural Interlingua for Ontology-Agnostic EHR Modeling",

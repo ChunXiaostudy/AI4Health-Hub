@@ -1119,7 +1119,13 @@
 "abstract": "Methods for training language models on sensitive data differ in how they balance capability gains against the risk of leaking private information. In this paper, we present a controlled comparison of data-level and training-level interventions for navigating the capability-privacy tradeoff on synthetic medical records with canaries to probe for leakage. Direct finetuning performs best on capability metrics but leads to the most privacy leakage, while DP-SGD reduces leakage at substantial cost to capabilities. Generating synthetic data from these records offers a more favorable balance, particularly when guided by a uniqueness-aware instruction to replace private details. Relative to naive paraphrasing, privacy-aware rewriting improves privacy protection across a variety of different rewriting models. We also find that more capable rewriting models generally reduce the risks of downstream privacy leakage, although held-out fit does not improve monotonically and increased test-time compute yields inconsistent gains. Overall, these results highlight privacy-aware rewriting as a promising direction for achieving a more favorable trade-off between capabilities and empirical privacy compared to other training-level methods, and our evaluation framework supports comparisons of future models and methods.",
 "day": "2026-10-19",
 "rank": 7.49,
-"zh_abstract": "在敏感数据上训练语言模型的方法，在能力提升与泄露私人信息的风险之间如何取得平衡方面存在差异。在本文中，我们针对能力—隐私权衡进行了一项受控比较，比较数据层面与训练层面的干预，所用数据为带有用于探测泄漏的金丝雀（canaries）的合成医疗记录。直接微调在能力指标上表现最好，但导致最多的隐私泄漏；而差分隐私随机梯度下降（DP-SGD）以能力遭受重大代价为代价减少了泄漏。从这些记录生成合成数据提供了更有利的平衡，尤其是在以唯一性感知指令引导替换私人细节时。相对于简单改写，隐私感知重写在多种不同的重写模型中均改善了隐私保护。我们还发现，能力更强的重写模型总体上降低了下游隐私泄漏的风险，尽管留出集拟合并非单调改善，且增加测试时计算带来的收益并不一致。总体而言，这些结果突出表明，与其他训练层面方法相比，隐私感知重写是实现能力与经验隐私之间更有利权衡的一个有前景的方向，且我们的评估框架支持对未来模型和方法进行比较。"
+"zh_abstract": "在敏感数据上训练语言模型的方法，在能力提升与泄露私人信息的风险之间如何取得平衡方面存在差异。在本文中，我们针对能力—隐私权衡进行了一项受控比较，比较数据层面与训练层面的干预，所用数据为带有用于探测泄漏的金丝雀（canaries）的合成医疗记录。直接微调在能力指标上表现最好，但导致最多的隐私泄漏；而差分隐私随机梯度下降（DP-SGD）以能力遭受重大代价为代价减少了泄漏。从这些记录生成合成数据提供了更有利的平衡，尤其是在以唯一性感知指令引导替换私人细节时。相对于简单改写，隐私感知重写在多种不同的重写模型中均改善了隐私保护。我们还发现，能力更强的重写模型总体上降低了下游隐私泄漏的风险，尽管留出集拟合并非单调改善，且增加测试时计算带来的收益并不一致。总体而言，这些结果突出表明，与其他训练层面方法相比，隐私感知重写是实现能力与经验隐私之间更有利权衡的一个有前景的方向，且我们的评估框架支持对未来模型和方法进行比较。",
+"also": [
+{
+"source": "Hugging Face Daily Papers",
+"link": "https://huggingface.co/papers/2610.22659"
+}
+]
 },
 {
 "title": "Case-Specific Priors-Guided Multimodal Fusion for Prognosis Prediction in Head and Neck Cancer",
