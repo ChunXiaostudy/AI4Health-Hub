@@ -1347,6 +1347,10 @@
 {
 "source": "搜狐网",
 "link": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxNX3ZjN0Jwd0lyYW5VUGZrZFlqRE43SU92TnpDc1ljR1RlSjF0MU1EYWRsNUdpWjFndDlWTHJtcmpCQkxOcW8tNnlya1F5d2VQclZsQnczM3huTWNpeVhMbmc1dVlMNmpfNG1RbmJpdjNIVDNYOWYyNXdqREtpSHYzUVMzQU5jV0Rwb0VR?oc=5"
+},
+{
+"source": "智东西",
+"link": "https://news.google.com/rss/articles/CBMiSEFVX3lxTE1nNXdydmxTbl91Z01DdWlUWldEMjg1VUkzQ2owOUk3Unl5c2pnU1pYdWpyc2xycTQ3U2dJNWxtTDFUTElBb20tSA?oc=5"
 }
 ],
 "keep": true,
@@ -1501,7 +1505,13 @@
 "score": 3,
 "reason": "小额融资，宠物药方向与临床医疗AI关联较弱",
 "day": "2026-10-23",
-"rank": 5.5
+"rank": 5.5,
+"also": [
+{
+"source": "ByDrug",
+"link": "https://news.google.com/rss/articles/CBMifkFVX3lxTE1HaWhfYlp0UFpfTjJmNDNyd2FBaGRZZGJzUWVxS3psU0dBWmxheXF1UmVWcTlSdE1SQmM4dUcwaWpmWEFNMk03blNuemV5M0VKaDFfR0Qyd0RkdFlzUUxDV2Q0azAwc1lvYzBEWnVRMFVhM0tRN2lsSzJ2Y1dIZw?oc=5"
+}
+]
 },
 {
 "title": "国家医疗AI中试基地广东发布成果，大模型加速赋能基层",
@@ -1554,7 +1564,13 @@
 "score": 3,
 "reason": "仅标题的企业合作消息，信息几乎为零，属增量偏低档",
 "day": "2026-10-23",
-"rank": 5.31
+"rank": 5.31,
+"also": [
+{
+"source": "新浪财经",
+"link": "https://news.google.com/rss/articles/CBMieEFVX3lxTE92dG9RWkxLeWFrXzlvY252NTBYZWQwd2lsQWdPYUFXNU1nTjViVW12dXI5eUllWkR3WER1bDBtVTZYMTVvaWZUZW9DOWdKSXFvcWJrRXhvV2pDNFV2QkJLMkQyandxSFQ5SVNJRXV2c0FfdWpOakJleQ?oc=5"
+}
+]
 },
 {
 "title": "清华大学智能产业研究院院长刘洋：医疗AI系统开发之初就需考虑伦理法规_财经报道_财经",

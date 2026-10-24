@@ -281,6 +281,10 @@
 {
 "source": "PR Newswire",
 "link": "https://news.google.com/rss/articles/CBMikwJBVV95cUxPR25DdGdfMjZPN09uQnNTM3E0ZnFzWFNLQ1NkdHN1WDk2T2ZyR2c5STBGY2dRWXpSMjFGd1pGNHVvTXByNWpwNGotUDU4anVOMmI0NXA3cUd0VElJc1A5UWNORzN3ZzAwLWs1NlZrSG1faGxidHk5VFByVDhBb1U5bU03TGo1TVpldXREZ0Q4c2lyWGZpd2toVFF2M21qUEpMdU9iQzk2UWYwMmFhWDl3b05mTlphNTJVQnhxOHozX1FNVUxwZkQyQlRheVpxR2Y5NnNfRGhOd0piWlFRb3AxODVueEg1VGVDRzBUWHZoMndjLUhlVGhZNzA3ZzVhYUg2SHkwWlM5NUY0OWlvRVFFYXhWZw?oc=5"
+},
+{
+"source": "BioSpectrum Asia",
+"link": "https://news.google.com/rss/articles/CBMihAJBVV95cUxPaGIwQUtNN19xYVNsdDJaQ3lnY3pQYmtaZGdEZ0VFUVkyS2t3N0o5NldjR1Q5a3k1X0RzOUpKZW5QZ0FjY1JHUHRIdGJMaTV5b0JVdHNuMGNhN29KQ1k1VXB6aVBzQkl5M09hZllEVy1LdkZvdTJNdUlKTS1MbWNCV29vMmNPc0lxRDh4ZGN6aG1qMGk2V1c3WG93UXpNWGNyaVJXQWhBM0wtSDBrY055dWVya29MNDRHVGo5ZDF1dFZvZE9OTkc4YXFjQmV6TXN3UWpTLVEtQ0ROcHBibzR0VjJVa09xU0tybEdseW5vYjlybEh1eFpGU05TbEcycFo2aWJQcw?oc=5"
 }
 ],
 "keep": true,
@@ -658,7 +662,13 @@
 "score": 5,
 "reason": "重要厂商并购，但披露信息极少且金额未公布，属值得一看档",
 "day": "2026-10-21",
-"rank": 8.81
+"rank": 8.81,
+"also": [
+{
+"source": "虎嗅",
+"link": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE5BZkYwR0NzZDFGRlg0X3hPdDlsUEk0eUNvQ0dRNXlQNTg1TUR2RVYwRkFCd2djZTFZbGtjcy1oU0drOXpqSXo2SlN6WWFuOTZFRzBrcA?oc=5"
+}
+]
 },
 {
 "title": "A general-purpose System One decision model for clinical records",
