@@ -60,7 +60,8 @@
   "day": "2026-10-24",
   "rank": 10.64,
   "abstract_days": [
-   "2026-10-24"
+   "2026-10-24",
+   "2026-10-25"
   ],
   "abstract_err": "page: HTTP Error 403: Forbidden; europepmc: empty; openalex: empty"
  },
@@ -188,7 +189,8 @@
   "day": "2026-10-24",
   "rank": 9.64,
   "abstract_days": [
-   "2026-10-24"
+   "2026-10-24",
+   "2026-10-25"
   ],
   "abstract_err": "page: HTTP Error 403: Forbidden; europepmc: empty; openalex: HTTP Error 404: Not Found"
  },
@@ -220,7 +222,8 @@
   "day": "2026-10-24",
   "rank": 9.64,
   "abstract_days": [
-   "2026-10-24"
+   "2026-10-24",
+   "2026-10-25"
   ],
   "abstract_err": "page: HTTP Error 403: Forbidden; europepmc: empty; openalex: empty"
  },
@@ -252,7 +255,8 @@
   "day": "2026-10-24",
   "rank": 9.64,
   "abstract_days": [
-   "2026-10-24"
+   "2026-10-24",
+   "2026-10-25"
   ],
   "abstract_err": "page: HTTP Error 403: Forbidden; europepmc: empty; openalex: empty"
  },
@@ -672,7 +676,8 @@
   "day": "2026-10-24",
   "rank": 8.64,
   "abstract_days": [
-   "2026-10-24"
+   "2026-10-24",
+   "2026-10-25"
   ],
   "abstract_err": "page: HTTP Error 403: Forbidden; europepmc: empty; openalex: empty"
  },
@@ -2594,7 +2599,17 @@
   "score": 3,
   "reason": "仅标题的媒体报道，无方法、数据或对照信息，接近宣传性质。",
   "day": "2026-10-24",
-  "rank": 5.31
+  "rank": 5.31,
+  "also": [
+   {
+    "source": "www.chinapress.com.my",
+    "link": "https://news.google.com/rss/articles/CBMi0gJBVV95cUxPZVc3elVnVC1zNUdGY1M5dGtsSFJUM29RbGFVX0lLOEJqbE9xZklHVnJ6b1plbnoxUHpNVEZMOEVuYjRtQ0hkLXJON2hORzVuZXVrT1VrTTZSbkoxOWpMM3JpbFI5WWp0d25QNzdtendRbmtKWkxHNENBeEEzTTRnaHhJWTlQeFh6V3Jab0ZZVXZkX19VQTQ2RmgwbDBmb0ZnT2M0WUY2Z0ZUdnk2OThXTldpR1dERzNkZDJ0ZUxzZnRsclNWa19NQXFYczItWmdNZTc5MW95QUNoMU1kM3l2bkFMNXV4WVo4bW54NDBzZ3VyU3BYc2xsaEMtYkJfQUlsOHhyU3JVV0txdzVUdjlfX2RPdDJMZHBlb0NMa3FGWUl3bnlfRDdqVmE1MEVKNGw1LTdlR1ZXMmdVTnhHdVVGbnFFdGp5TERWNDlBT2FBMUNCUQ?oc=5"
+   },
+   {
+    "source": "Sin Chew Daily",
+    "link": "https://news.google.com/rss/articles/CBMiTkFVX3lxTE9Xc0hHa2c3MGIzMXpXOWRRX0VBUkl5QjJpZ2J5ZURVb2E1NU9LNUFUY0tfRUhmRmJoajNlZm55WFozMWJ5TG1JbGs4NE50Zw?oc=5"
+   }
+  ]
  },
  {
   "title": "Interpretable Deep Learning for Opportunistic Screening of Left Ventricular Dysfunction Screening Using Chest Radiographs.",
@@ -4075,7 +4090,13 @@
   "score": 4,
   "reason": "仅标题的行业动态，无具体数据或研究细节，属增量档",
   "day": "2026-10-23",
-  "rank": 6.14
+  "rank": 6.14,
+  "also": [
+   {
+    "source": "ZAKER新闻",
+    "link": "https://news.google.com/rss/articles/CBMid0FVX3lxTFAxb0xjSmptVlpaQ0dicDZvSnJoQm8wZEdNVk50V3VHSGxfekhKaG4yZFhWdFVFM3c2NWRkb1NJNHF0aktkWVd3YU9aWU1vczc1STAyWG9lQzdDRzc3cWZheG15Y0xNcHJNY0tRQWhwYjRuR1dpdS1R?oc=5"
+   }
+  ]
  },
  {
   "title": "【首发】智宠制药完成数千万元A1轮融资，以\"端到端AI+比较医学\"双轮驱动重塑宠物药研发",
@@ -11024,7 +11045,8 @@
    "2026-10-21",
    "2026-10-22",
    "2026-10-23",
-   "2026-10-24"
+   "2026-10-24",
+   "2026-10-25"
   ],
   "abstract_err": "page: HTTP Error 403: Forbidden; no DOI / PMID",
   "also": [
@@ -17603,6 +17625,10 @@
    {
     "source": "PubMed · Pain research & management",
     "link": "https://pubmed.ncbi.nlm.nih.gov/42893423/"
+   },
+   {
+    "source": "PubMed · PloS one",
+    "link": "https://pubmed.ncbi.nlm.nih.gov/42912756/"
    }
   ]
  },

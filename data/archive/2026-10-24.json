@@ -60,7 +60,8 @@
 "day": "2026-10-24",
 "rank": 10.64,
 "abstract_days": [
-"2026-10-24"
+"2026-10-24",
+"2026-10-25"
 ],
 "abstract_err": "page: HTTP Error 403: Forbidden; europepmc: empty; openalex: empty"
 },
@@ -188,7 +189,8 @@
 "day": "2026-10-24",
 "rank": 9.64,
 "abstract_days": [
-"2026-10-24"
+"2026-10-24",
+"2026-10-25"
 ],
 "abstract_err": "page: HTTP Error 403: Forbidden; europepmc: empty; openalex: HTTP Error 404: Not Found"
 },
@@ -220,7 +222,8 @@
 "day": "2026-10-24",
 "rank": 9.64,
 "abstract_days": [
-"2026-10-24"
+"2026-10-24",
+"2026-10-25"
 ],
 "abstract_err": "page: HTTP Error 403: Forbidden; europepmc: empty; openalex: empty"
 },
@@ -252,7 +255,8 @@
 "day": "2026-10-24",
 "rank": 9.64,
 "abstract_days": [
-"2026-10-24"
+"2026-10-24",
+"2026-10-25"
 ],
 "abstract_err": "page: HTTP Error 403: Forbidden; europepmc: empty; openalex: empty"
 },
@@ -672,7 +676,8 @@
 "day": "2026-10-24",
 "rank": 8.64,
 "abstract_days": [
-"2026-10-24"
+"2026-10-24",
+"2026-10-25"
 ],
 "abstract_err": "page: HTTP Error 403: Forbidden; europepmc: empty; openalex: empty"
 },
@@ -2594,6 +2599,16 @@
 "score": 3,
 "reason": "仅标题的媒体报道，无方法、数据或对照信息，接近宣传性质。",
 "day": "2026-10-24",
-"rank": 5.31
+"rank": 5.31,
+"also": [
+{
+"source": "www.chinapress.com.my",
+"link": "https://news.google.com/rss/articles/CBMi0gJBVV95cUxPZVc3elVnVC1zNUdGY1M5dGtsSFJUM29RbGFVX0lLOEJqbE9xZklHVnJ6b1plbnoxUHpNVEZMOEVuYjRtQ0hkLXJON2hORzVuZXVrT1VrTTZSbkoxOWpMM3JpbFI5WWp0d25QNzdtendRbmtKWkxHNENBeEEzTTRnaHhJWTlQeFh6V3Jab0ZZVXZkX19VQTQ2RmgwbDBmb0ZnT2M0WUY2Z0ZUdnk2OThXTldpR1dERzNkZDJ0ZUxzZnRsclNWa19NQXFYczItWmdNZTc5MW95QUNoMU1kM3l2bkFMNXV4WVo4bW54NDBzZ3VyU3BYc2xsaEMtYkJfQUlsOHhyU3JVV0txdzVUdjlfX2RPdDJMZHBlb0NMa3FGWUl3bnlfRDdqVmE1MEVKNGw1LTdlR1ZXMmdVTnhHdVVGbnFFdGp5TERWNDlBT2FBMUNCUQ?oc=5"
+},
+{
+"source": "Sin Chew Daily",
+"link": "https://news.google.com/rss/articles/CBMiTkFVX3lxTE9Xc0hHa2c3MGIzMXpXOWRRX0VBUkl5QjJpZ2J5ZURVb2E1NU9LNUFUY0tfRUhmRmJoajNlZm55WFozMWJ5TG1JbGs4NE50Zw?oc=5"
+}
+]
 }
 ]

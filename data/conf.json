@@ -9,7 +9,7 @@
 "year": 2025,
 "date": "2025-02-16",
 "link": "https://doi.org/10.48550/arXiv.2502.11211",
-"cites": 154,
+"cites": 156,
 "zh_title": "LLM医疗智能体综述：离Baymax还有多远？",
 "summary": "ACL 2025综述梳理LLM医疗智能体的架构、应用与挑战，涵盖规划、推理与外部能力增强。",
 "key_points": [
@@ -34,7 +34,7 @@
 "year": 2025,
 "date": "2025-01-01",
 "link": "https://doi.org/10.18653/v1/2025.acl-long.1381",
-"cites": 116,
+"cites": 117,
 "zh_title": "MedGraphRAG：基于图检索增强的循证医学大模型",
 "summary": "提出图检索增强生成框架MedGraphRAG，通过三元图构建与U-Retrieval提升医学回答的安全性与可靠性。",
 "key_points": [
@@ -213,7 +213,7 @@
 "year": 2025,
 "date": "2025-05-30",
 "link": "https://doi.org/10.48550/arXiv.2505.24223",
-"cites": 29,
+"cites": 30,
 "zh_title": "自动化结构化放射报告生成",
 "summary": "针对自由文本报告变异性大的问题，开展胸部X线结构化放射报告自动生成研究，以提升生成与评估一致性。",
 "key_points": [
@@ -316,7 +316,7 @@
 "year": 2025,
 "date": "2025-01-01",
 "link": "https://doi.org/10.18653/v1/2025.acl-long.580",
-"cites": 23,
+"cites": 24,
 "zh_title": "HyKGE：知识图谱增强医学RAG",
 "summary": "提出假设知识图谱增强的RAG框架，利用LLM推理补偿知识检索不足，提升医学回答准确可靠。",
 "key_points": [
@@ -868,7 +868,7 @@
 "year": 2025,
 "date": "2025-05-27",
 "link": "https://doi.org/10.18653/v1/2025.findings-acl.1179",
-"cites": 11,
+"cites": 12,
 "zh_title": "LLM医学文本摘要评估：高OOV下的词汇适配",
 "summary": "基准研究发现LLM在高OOV或高新颖性医学文本上摘要性能显著下降，并考察词汇适配作用。",
 "key_points": [
@@ -1508,7 +1508,7 @@
 "year": 2025,
 "date": "2025-01-01",
 "link": "https://doi.org/10.18653/v1/2025.findings-acl.757",
-"cites": 6,
+"cites": 7,
 "zh_title": "数据共享受限下的临床信息抽取模型适配",
 "summary": "ACL 2025 Findings探讨在数据共享限制下，利用LLM标注适配临床信息抽取模型。",
 "key_points": [
@@ -6803,7 +6803,7 @@
 "year": 2025,
 "date": "2025-04-13",
 "link": "https://doi.org/10.48550/arXiv.2504.09689",
-"cites": 39,
+"cites": 40,
 "zh_title": "EmoAgent：评估与守护心理健康人机交互安全",
 "summary": "EMNLP 2025 提出多智能体框架 EmoAgent，用于评估与缓解人与 AI 角色交互中的心理健康风险。",
 "key_points": [
@@ -6930,7 +6930,7 @@
 "year": 2025,
 "date": "2025-09-22",
 "link": "https://doi.org/10.48550/arXiv.2509.18030",
-"cites": 29,
+"cites": 30,
 "zh_title": "RadEval：放射学文本评估统一框架",
 "summary": "EMNLP 2025 提出开源统一框架 RadEval，整合放射学文本的多种评估指标。",
 "key_points": [
@@ -27997,7 +27997,7 @@
 "year": 2025,
 "date": "2025-01-18",
 "link": "https://doi.org/10.1145/3690624.3709281",
-"cites": 8,
+"cites": 9,
 "skip": true
 },
 "3e35420253c6f923528af645b07b435e6c64188b": {
@@ -32627,7 +32627,7 @@
 "year": 2025,
 "date": "2025-03-20",
 "link": "https://doi.org/10.1007/978-3-031-72384-1_8",
-"cites": 29,
+"cites": 30,
 "zh_title": "CausalCLIPSeg：因果干预的医学图像分割",
 "summary": "提出CausalCLIPSeg端到端框架，利用CLIP语义空间与因果干预实现指代性医学图像分割。",
 "key_points": [
@@ -33161,7 +33161,7 @@
 "year": 2025,
 "date": "2025-05-23",
 "link": "https://doi.org/10.48550/arXiv.2505.18423",
-"cites": 14,
+"cites": 15,
 "zh_title": "CENet：面向医学图像分割的上下文增强网络",
 "summary": "提出上下文增强网络 CENet，缓解多域医学图像分割中边界表征不准、器官形态多变与下采样信息损失。",
 "key_points": [
@@ -36264,7 +36264,7 @@
 "year": 2025,
 "date": "2025-01-01",
 "link": "https://doi.org/10.1007/978-3-032-05169-1_16",
-"cites": 4,
+"cites": 5,
 "zh_title": "面向医学图像复原的方向自适应混洗视觉状态空间模型",
 "summary": "提出基于方向自适应混洗的视觉状态空间模型，用于医学图像复原任务。",
 "key_points": [
@@ -37013,7 +37013,7 @@
 "year": 2025,
 "date": "2025-01-01",
 "link": "https://doi.org/10.1007/978-3-032-04965-0_50",
-"cites": 4,
+"cites": 5,
 "zh_title": "SSPNet：基于空间-光谱画像的神经退行性疾病多分类框架",
 "summary": "提出SSPNet框架，基于空间-光谱画像实现神经退行性疾病多分类。",
 "key_points": [
@@ -39114,7 +39114,7 @@
 "year": 2025,
 "date": "2025-02-28",
 "link": "https://doi.org/10.48550/arXiv.2502.20869",
-"cites": 3,
+"cites": 4,
 "zh_title": "PathVG：病理视觉定位基准与数据集",
 "summary": "提出病理视觉定位基准PathVG及数据集，用于检测病理区域。",
 "key_points": [
@@ -40872,7 +40872,7 @@
 "year": 2025,
 "date": "2025-06-24",
 "link": "https://doi.org/10.1007/978-3-031-72120-5_10",
-"cites": 1,
+"cites": 2,
 "zh_title": "医学影像专有模型的窃取风险评估",
 "summary": "评估医学影像商业专有模型面临的模型窃取攻击风险，即通过查询克隆模型功能。",
 "key_points": [
@@ -47944,7 +47944,7 @@
 "year": 2025,
 "date": "2025-04-14",
 "link": "https://doi.org/10.1109/ISBI60581.2025.10981035",
-"cites": 13,
+"cites": 14,
 "zh_title": "阿尔茨海默病脑状态转换异常：EEG状态动力学",
 "summary": "用拉普拉斯特征图框架分析静息态EEG，发现AD患者脑状态转换一致性更高、灵活性降低。",
 "key_points": [
@@ -48238,7 +48238,7 @@
 "year": 2025,
 "date": "2025-11-15",
 "link": "https://doi.org/10.1109/ISBI61048.2026.11515341",
-"cites": 8,
+"cites": 9,
 "zh_title": "TM-UNet：令牌记忆增强的高效医学图像分割",
 "summary": "提出轻量分割框架TM-UNet，用多尺度令牌记忆模块以线性复杂度建模长程依赖，降低医学图像分割的计算开销。",
 "key_points": [
@@ -50689,7 +50689,7 @@
 "year": 2025,
 "date": "2025-04-14",
 "link": "https://doi.org/10.1109/ISBI60581.2025.10981008",
-"cites": 2,
+"cites": 3,
 "zh_title": "潜在扩散模型用于胸部X线肺病分类",
 "summary": "ISBI 2025研究以放射报告为条件训练潜在扩散模型，通过比较不同疾病提示下的噪声估计误差对胸部X线做肺病分类。",
 "key_points": [
@@ -53455,7 +53455,7 @@
 "year": 2025,
 "date": "2025-04-14",
 "link": "https://doi.org/10.1109/ISBI60581.2025.10980887",
-"cites": 1,
+"cites": 2,
 "zh_title": "通过变量归因图提升脓毒症预测深度网络可解释性",
 "summary": "在卷积层分离时间变量，用梯度归因与扰动样本指标在MIMIC-IV 17万患者上提升脓毒症预测可解释性。",
 "key_points": [

@@ -1478,7 +1478,13 @@
 "score": 4,
 "reason": "仅标题的行业动态，无具体数据或研究细节，属增量档",
 "day": "2026-10-23",
-"rank": 6.14
+"rank": 6.14,
+"also": [
+{
+"source": "ZAKER新闻",
+"link": "https://news.google.com/rss/articles/CBMid0FVX3lxTFAxb0xjSmptVlpaQ0dicDZvSnJoQm8wZEdNVk50V3VHSGxfekhKaG4yZFhWdFVFM3c2NWRkb1NJNHF0aktkWVd3YU9aWU1vczc1STAyWG9lQzdDRzc3cWZheG15Y0xNcHJNY0tRQWhwYjRuR1dpdS1R?oc=5"
+}
+]
 },
 {
 "title": "【首发】智宠制药完成数千万元A1轮融资，以\"端到端AI+比较医学\"双轮驱动重塑宠物药研发",
