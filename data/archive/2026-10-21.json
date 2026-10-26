@@ -1206,7 +1206,13 @@
 "abstract": "[Journal of imaging informatics in medicine] Current light-based devices, such as laser hair removal, intense pulsed light (IPL), vascular laser therapy, and dermatologic phototherapy, are widely used in clinical dermatology but rely heavily on subjective manual parameterization or uncalibrated point-based colorimeters. To overcome these limitations, this work presents a unified system for hair segmentation and skin characterization in macroscopic dermatological images. Unlike most existing literature that relies on dermoscopic datasets captured under highly controlled conditions, our approach is specifically designed for macroscopic images that replicate real clinical laser treatments. The proposed pipeline integrates a custom-trained variant of the YOLOv9 deep learning architecture for instance segmentation and classical image processing within a single workflow to extract objective skin and hair parameters such as phototype, hair density, color, and thickness. A color calibration stage using spectrophotometric measurements ensures accurate feature estimation regardless of illumination conditions. Experimental results show competitive segmentation metrics (mAP@50 ≈ 0.80) on a custom dataset featuring short, shaved hairs, typical of pre-treatment scenarios. These findings demonstrate the feasibility of the proposed pipeline in providing the objective, foundational skin and hair features required for future automated laser parameterization, paving the way for its extension to broader light-based medical therapies.",
 "day": "2026-10-21",
 "rank": 8.14,
-"zh_abstract": "[Journal of imaging informatics in medicine] 当前基于光的设备，如激光脱毛、强脉冲光（IPL）、血管激光治疗和皮肤科光疗，在临床皮肤科中广泛使用，但严重依赖主观的人工参数设置或未校准的基于点的色度计。为克服这些局限性，本工作提出了一种用于宏观皮肤科图像中毛发分割和皮肤表征的统一系统。与大多数依赖在高度受控条件下采集的皮肤镜数据集的现有文献不同，我们的方法专门针对可复现真实临床激光治疗的宏观图像而设计。所提出的流程将用于实例分割的定制训练 YOLOv9 深度学习架构变体与经典图像处理整合到单一工作流中，以提取客观的皮肤和毛发参数，如光型、毛发密度、颜色和厚度。使用分光光度测量进行的颜色校准阶段可确保无论照明条件如何都能准确估计特征。实验结果表明，在包含短小、剃过毛发的自定义数据集（典型于治疗前场景）上，分割指标具有竞争力（mAP@50 ≈ 0.80）。这些发现证明，所提出的流程在提供未来自动化激光参数化所需的客观、基础皮肤和毛发特征方面具有可行性，为其扩展到更广泛的光学医疗疗法铺平了道路。"
+"zh_abstract": "[Journal of imaging informatics in medicine] 当前基于光的设备，如激光脱毛、强脉冲光（IPL）、血管激光治疗和皮肤科光疗，在临床皮肤科中广泛使用，但严重依赖主观的人工参数设置或未校准的基于点的色度计。为克服这些局限性，本工作提出了一种用于宏观皮肤科图像中毛发分割和皮肤表征的统一系统。与大多数依赖在高度受控条件下采集的皮肤镜数据集的现有文献不同，我们的方法专门针对可复现真实临床激光治疗的宏观图像而设计。所提出的流程将用于实例分割的定制训练 YOLOv9 深度学习架构变体与经典图像处理整合到单一工作流中，以提取客观的皮肤和毛发参数，如光型、毛发密度、颜色和厚度。使用分光光度测量进行的颜色校准阶段可确保无论照明条件如何都能准确估计特征。实验结果表明，在包含短小、剃过毛发的自定义数据集（典型于治疗前场景）上，分割指标具有竞争力（mAP@50 ≈ 0.80）。这些发现证明，所提出的流程在提供未来自动化激光参数化所需的客观、基础皮肤和毛发特征方面具有可行性，为其扩展到更广泛的光学医疗疗法铺平了道路。",
+"also": [
+{
+"source": "arXiv",
+"link": "https://arxiv.org/abs/2610.32609"
+}
+]
 },
 {
 "title": "Predicting trail-making test performance using 7-Tesla structural cerebral MRI.",

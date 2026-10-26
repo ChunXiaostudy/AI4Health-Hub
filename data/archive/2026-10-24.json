@@ -61,7 +61,8 @@
 "rank": 10.64,
 "abstract_days": [
 "2026-10-24",
-"2026-10-25"
+"2026-10-25",
+"2026-10-26"
 ],
 "abstract_err": "page: HTTP Error 403: Forbidden; europepmc: empty; openalex: empty"
 },
@@ -190,7 +191,8 @@
 "rank": 9.64,
 "abstract_days": [
 "2026-10-24",
-"2026-10-25"
+"2026-10-25",
+"2026-10-26"
 ],
 "abstract_err": "page: HTTP Error 403: Forbidden; europepmc: empty; openalex: HTTP Error 404: Not Found"
 },
@@ -223,7 +225,8 @@
 "rank": 9.64,
 "abstract_days": [
 "2026-10-24",
-"2026-10-25"
+"2026-10-25",
+"2026-10-26"
 ],
 "abstract_err": "page: HTTP Error 403: Forbidden; europepmc: empty; openalex: empty"
 },
@@ -256,7 +259,8 @@
 "rank": 9.64,
 "abstract_days": [
 "2026-10-24",
-"2026-10-25"
+"2026-10-25",
+"2026-10-26"
 ],
 "abstract_err": "page: HTTP Error 403: Forbidden; europepmc: empty; openalex: empty"
 },
@@ -677,7 +681,8 @@
 "rank": 8.64,
 "abstract_days": [
 "2026-10-24",
-"2026-10-25"
+"2026-10-25",
+"2026-10-26"
 ],
 "abstract_err": "page: HTTP Error 403: Forbidden; europepmc: empty; openalex: empty"
 },
@@ -2479,7 +2484,13 @@
 "score": 4,
 "reason": "医疗大模型产品升级与标准共建，标题信息有限，属增量档",
 "day": "2026-10-24",
-"rank": 6.31
+"rank": 6.31,
+"also": [
+{
+"source": "经济观察网",
+"link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE1FOFdhQUhKdGlWSFNZaGZQMC1RNGU5SWtPMkl4MldwakJuSlAxeTlmMDFBSzNRbWVlY1pRVi1oX1dXcVdvTlo4anRqUlVDOWJBTzVKVC1n?oc=5"
+}
+]
 },
 {
 "title": "Comparative Evaluation of Artificial Intelligence-Assisted Versus Conventional Guided Implant Planning in Free End Saddle Cases",
