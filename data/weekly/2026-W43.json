@@ -1,0 +1,109 @@
+{
+ "week": "2026-W43",
+ "range": "2026-10-19 ~ 2026-10-25",
+ "partial": false,
+ "generated": "2026-10-26T05:49:07.205275+00:00",
+ "summary": "本周影像与病理方向的研究多聚焦外部验证与真实世界表现。一项多中心随机对照试验评估生成式AI肺穿刺导航系统，报告其可减少穿刺次数，并提升操作标准化与效率[1]；针对两款获FDA清关的肺栓塞AI，17家机构的回顾性评估显示分诊灵敏度为86.8%、偶发肺栓塞为73.5%，同时报告了部分亚组灵敏度下降[4]。低级别胶质瘤放疗反应预测模型GUARD-LGG在治疗前进行预测，并经过七家外部机构与前瞻性试验队列验证[5]；用于胸片筛查左心室功能不全的可解释深度学习模型，则在一个三级中心与两个体检队列中完成外部验证，评估其作为超声初筛工具的价值[6]。超声心动图领域，一项纳入160项研究的系统综述汇总了全自动深度学习模型在疾病预测、测量复现、分割与视图分类中的表现及影响因素[15]；DROID-RV模型从经胸超声视频估测右心室舒张末内径并识别收缩功能障碍，在外部队列验证且与心血管结局相关[16]。\n\n病理与细胞学方面，一项研究基于3528张全切片图像，评估五种病理基础模型集成方案在Barrett食管形态分型与腺癌检测中的表现[10]；多中心研究构建的CytoNet基于细胞学图像同时预测膀胱癌淋巴结转移与无病生存，并在宫颈癌、甲状腺癌中开展泛细胞学验证[13]。另有单中心回顾性研究开发多智能体大模型与CNN结合的端到端系统，自动生成胶质瘤治疗后BT-RADS分级，以专家标注为参考标准[12]。\n\n临床预测与决策方向，OUD-REY基于All of Us纵向电子病历的语言模型预测一年内阿片使用障碍风险，并在时间外部队列与约600万VA患者数据上完成外部验证[2]；一项强化学习研究基于1609例常规EHR数据训练，在留出诊所中，推荐方案与PHQ-9更大改善相关[7]。针对脓毒症，系统综述梳理了MIMIC-III与eICU中基于Sepsis-3的自动病例识别方法，指出各研究在判定细节上存在显著异质性[20]，这一提示对跨研究比较具有普遍意义。\n\n大模型与落地评估方面，一项研究利用患者门户消息的分阶段上线，在21,073条展示组与45,127条未展示组消息上比较BLEU、ROUGE、BERTScore等自动指标与医师盲评结果，认为自动指标的效度依赖情境[9]；JAMIA研究在1000份MIMIC-IV出院小结上比较单智能体、自我反思与多智能体审阅三种架构对DNR/DNI/CMO的抽取表现[14]。落地层面，一项准实验中断时间序列研究覆盖36家诊所、220名基层医生，考察环境AI记录员使用前后各150天的记录时间、非工作时间与wRVU变化[3]；1750次阅片的交叉试验则显示，高可靠AI反而使受训者产生自动化偏差，而专家对错误建议表现出更高纠错率[11]。\n\n方法与产业动态亦值得关注。Nature Machine Intelligence刊出的指南提出评估蛋白-配体对接与亲和力预测评分函数的规范，强调数据、代码与流程透明及防数据泄漏[8]；NEJM AI刊文探讨在个性化AI心理健康支持中纳入文化背景因素[17]。此外，DEXI AI辅助黑色素瘤诊断的III期干预性研究正在招募，计划入组1.4万人，目前尚无结果，相关信息来自注册平台而非同行评审论文[18]；AI药物研发公司Pathos完成2.37亿美元融资、估值30亿美元，结合Tempus数据集、Pathos的AI分析与BMS的药物开发[19]。上述条目多为回顾性或单中心设计，读者在解读时应留意其证据边界。",
+ "items": [
+  {
+   "title": "生成式AI导航用于CBCT引导肺穿刺：随机对照试验",
+   "link": "https://www.nature.com/articles/s41746-026-03355-1",
+   "source": "npj Digital Medicine"
+  },
+  {
+   "title": "跨EHR语言建模预测阿片使用障碍的深度学习模型",
+   "link": "https://www.nature.com/articles/s41746-026-03392-w",
+   "source": "npj Digital Medicine"
+  },
+  {
+   "title": "门诊AI记录员对文书负担与生产力的长期影响",
+   "link": "https://pubmed.ncbi.nlm.nih.gov/42893542/",
+   "source": "PubMed · Journal of the American Medical Informatics Association : JAMIA"
+  },
+  {
+   "title": "商用AI检测肺栓塞与偶发肺栓塞多中心真实世界表现",
+   "link": "https://www.nature.com/articles/s41746-026-03418-3",
+   "source": "npj Digital Medicine"
+  },
+  {
+   "title": "GUARD-LGG：低级别胶质瘤放疗反应AI预测",
+   "link": "https://www.nature.com/articles/s41746-026-03112-4",
+   "source": "npj Digital Medicine"
+  },
+  {
+   "title": "可解释深度学习用胸片筛查左心室功能不全",
+   "link": "https://pubmed.ncbi.nlm.nih.gov/42905014/",
+   "source": "PubMed · Radiology. Artificial intelligence"
+  },
+  {
+   "title": "强化学习选择rTMS方案：19家诊所外部验证",
+   "link": "https://www.nature.com/articles/s41746-026-03417-4",
+   "source": "npj Digital Medicine"
+  },
+  {
+   "title": "蛋白-配体结合预测结构方法的评估指南",
+   "link": "https://www.nature.com/articles/s42256-026-01331-8",
+   "source": "Nature Machine Intelligence"
+  },
+  {
+   "title": "自动指标评价 AI 生成临床消息的效度依赖情境",
+   "link": "https://www.nature.com/articles/s41746-026-03211-2",
+   "source": "npj Digital Medicine"
+  },
+  {
+   "title": "集成病理基础模型用于Barrett食管形态分型与癌检测",
+   "link": "https://www.nature.com/articles/s41746-026-03329-3",
+   "source": "npj Digital Medicine"
+  },
+  {
+   "title": "人机协同诊断中专业水平对自动化偏差的影响",
+   "link": "https://www.nature.com/articles/s41746-026-03399-3",
+   "source": "npj Digital Medicine"
+  },
+  {
+   "title": "多智能体LLM系统自动完成胶质瘤BT-RADS分级",
+   "link": "https://pubmed.ncbi.nlm.nih.gov/42905016/",
+   "source": "PubMed · Radiology. Artificial intelligence"
+  },
+  {
+   "title": "多任务深度学习从细胞学图像预测膀胱癌淋巴结转移与无病生存",
+   "link": "https://pubmed.ncbi.nlm.nih.gov/42904771/",
+   "source": "PubMed · Advanced science (Weinheim, Baden-Wurttemberg, Germany)"
+  },
+  {
+   "title": "智能体架构用于病历代码状态抽取的跨模型比较",
+   "link": "https://pubmed.ncbi.nlm.nih.gov/42901486/",
+   "source": "PubMed · Journal of the American Medical Informatics Association : JAMIA"
+  },
+  {
+   "title": "深度学习超声心动图心脏评估：系统综述与荟萃分析",
+   "link": "https://pubmed.ncbi.nlm.nih.gov/42899077/",
+   "source": "PubMed · European heart journal. Digital health"
+  },
+  {
+   "title": "深度学习评估右心室大小与功能并与心血管结局相关",
+   "link": "https://pubmed.ncbi.nlm.nih.gov/42881254/",
+   "source": "PubMed · Nature cardiovascular research"
+  },
+  {
+   "title": "将文化背景融入个性化AI心理健康支持",
+   "link": "https://ai.nejm.org/doi/full/10.1056/AIltr2601137?af=R&rss=currentIssue",
+   "source": "NEJM AI"
+  },
+  {
+   "title": "DEXI AI辅助黑色素瘤诊断III期试验",
+   "link": "https://clinicaltrials.gov/study/NCT07890415",
+   "source": "ClinicalTrials.gov"
+  },
+  {
+   "title": "AI药企Pathos融资2.37亿美元，估值30亿",
+   "link": "https://www.statnews.com/2026/10/23/pathos-ai-bristol-myers-squibb-tempus-deal/?utm_campaign=rss",
+   "source": "STAT News"
+  },
+  {
+   "title": "自动脓毒症病例识别方法异质性系统综述",
+   "link": "https://pubmed.ncbi.nlm.nih.gov/42900705/",
+   "source": "PubMed · Journal of the American Medical Informatics Association : JAMIA"
+  }
+ ]
+}
