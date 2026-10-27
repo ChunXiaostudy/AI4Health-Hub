@@ -62,7 +62,8 @@
 "abstract_days": [
 "2026-10-24",
 "2026-10-25",
-"2026-10-26"
+"2026-10-26",
+"2026-10-27"
 ],
 "abstract_err": "page: HTTP Error 403: Forbidden; europepmc: empty; openalex: empty"
 },
@@ -192,7 +193,8 @@
 "abstract_days": [
 "2026-10-24",
 "2026-10-25",
-"2026-10-26"
+"2026-10-26",
+"2026-10-27"
 ],
 "abstract_err": "page: HTTP Error 403: Forbidden; europepmc: empty; openalex: HTTP Error 404: Not Found"
 },
@@ -226,7 +228,8 @@
 "abstract_days": [
 "2026-10-24",
 "2026-10-25",
-"2026-10-26"
+"2026-10-26",
+"2026-10-27"
 ],
 "abstract_err": "page: HTTP Error 403: Forbidden; europepmc: empty; openalex: empty"
 },
@@ -260,7 +263,8 @@
 "abstract_days": [
 "2026-10-24",
 "2026-10-25",
-"2026-10-26"
+"2026-10-26",
+"2026-10-27"
 ],
 "abstract_err": "page: HTTP Error 403: Forbidden; europepmc: empty; openalex: empty"
 },
@@ -682,7 +686,8 @@
 "abstract_days": [
 "2026-10-24",
 "2026-10-25",
-"2026-10-26"
+"2026-10-26",
+"2026-10-27"
 ],
 "abstract_err": "page: HTTP Error 403: Forbidden; europepmc: empty; openalex: empty"
 },
@@ -2489,6 +2494,10 @@
 {
 "source": "经济观察网",
 "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE1FOFdhQUhKdGlWSFNZaGZQMC1RNGU5SWtPMkl4MldwakJuSlAxeTlmMDFBSzNRbWVlY1pRVi1oX1dXcVdvTlo4anRqUlVDOWJBTzVKVC1n?oc=5"
+},
+{
+"source": "新浪财经",
+"link": "https://news.google.com/rss/articles/CBMieEFVX3lxTE15NGpmVTZ2RTFJOWJDTHlMNGplaDg2NERUYUdWMFFxclZpOThJaWM5dWZCeEpIUHhSSnQ2NGVCelh0QkdDLVVBdVJwbEdjRjRqcGZ5WWRxRGRiaUpNNlVUWjNBbkxQRlhHWkU2cnV2bEY1ZE9uUE1Eag?oc=5"
 }
 ]
 },
