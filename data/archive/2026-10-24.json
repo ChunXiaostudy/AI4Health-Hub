@@ -63,7 +63,8 @@
 "2026-10-24",
 "2026-10-25",
 "2026-10-26",
-"2026-10-27"
+"2026-10-27",
+"2026-10-28"
 ],
 "abstract_err": "page: HTTP Error 403: Forbidden; europepmc: empty; openalex: empty"
 },
@@ -194,7 +195,8 @@
 "2026-10-24",
 "2026-10-25",
 "2026-10-26",
-"2026-10-27"
+"2026-10-27",
+"2026-10-28"
 ],
 "abstract_err": "page: HTTP Error 403: Forbidden; europepmc: empty; openalex: HTTP Error 404: Not Found"
 },
@@ -229,7 +231,8 @@
 "2026-10-24",
 "2026-10-25",
 "2026-10-26",
-"2026-10-27"
+"2026-10-27",
+"2026-10-28"
 ],
 "abstract_err": "page: HTTP Error 403: Forbidden; europepmc: empty; openalex: empty"
 },
@@ -264,7 +267,8 @@
 "2026-10-24",
 "2026-10-25",
 "2026-10-26",
-"2026-10-27"
+"2026-10-27",
+"2026-10-28"
 ],
 "abstract_err": "page: HTTP Error 403: Forbidden; europepmc: empty; openalex: empty"
 },
@@ -400,7 +404,13 @@
 "abstract": "[European journal of oral sciences] This systematic review provides a broad overview of three distinct applications of artificial intelligence (AI) in facial soft-tissue assessment: landmark localization, automated facial measurement, and classification of soft-tissue conditions in orthodontic and dentofacial evaluation. PubMed, Embase, Scopus, Web of Science, Cochrane Library, ClinicalTrials.gov, Google Scholar, and Open Science Framework were searched. Studies using 2D facial photographs, 3D facial scans, or AI-generated facial models were included. Risk of bias was assessed with an adapted QUADAS-2 tool and certainty of evidence with GRADE. The protocol was registered in PROSPERO (CRD420261452521). Fifteen studies were included. Landmark-localization performance varied substantially by imaging modality, landmark definition, data set, reference standard, and error metric; central and anatomically well-defined landmarks were generally more accurate than peripheral or subjective points. Agreement for AI-derived measurements ranged from poor to excellent, with ICCs of approximately 0.01-0.984. Classification accuracy ranged from approximately 0.83 to 0.98, with AUCs up to 0.98. Given only two narrowly scoped classification studies, these findings should be considered exploratory and hypothesis-generating rather than broadly generalizable. Because of substantial methodological heterogeneity, findings were synthesized qualitatively. Current evidence supports AI as an adjunctive tool, but routine clinical implementation requires robust external validation and clinician oversight. PROSPERO registration: CRD420261452521.",
 "day": "2026-10-24",
 "rank": 9.14,
-"zh_abstract": "[European journal of oral sciences] 本系统综述对人工智能（artificial intelligence, AI）在面部软组织评估中的三种不同应用提供了广泛概述：标志点定位、自动面部测量以及正畸和牙颌面评估中软组织状况的分类。检索了 PubMed、Embase、Scopus、Web of Science、Cochrane Library、ClinicalTrials.gov、Google Scholar 和 Open Science Framework。纳入使用 2D 面部照片、3D 面部扫描或 AI 生成面部模型的研究。使用改编的 QUADAS-2 工具评估偏倚风险，并使用 GRADE 评估证据确定性。该方案已在 PROSPERO 注册（CRD420261452521）。共纳入 15 项研究。标志点定位性能因成像模式、标志点定义、数据集、参考标准和误差指标而有很大差异；中央和解剖学上定义明确的标志点通常比外周或主观点更准确。AI 衍生测量的一致性从差到优不等，ICC 约为 0.01-0.984。分类准确率约为 0.83 至 0.98，AUC 高达 0.98。鉴于仅有两项范围狭窄的分类研究，这些发现应被视为探索性和产生假设性的，而非可广泛推广。由于方法学异质性很大，研究结果采用定性综合。当前证据支持 AI 作为辅助工具，但常规临床实施需要稳健的外部验证和临床医生监督。PROSPERO 注册号：CRD420261452521。"
+"zh_abstract": "[European journal of oral sciences] 本系统综述对人工智能（artificial intelligence, AI）在面部软组织评估中的三种不同应用提供了广泛概述：标志点定位、自动面部测量以及正畸和牙颌面评估中软组织状况的分类。检索了 PubMed、Embase、Scopus、Web of Science、Cochrane Library、ClinicalTrials.gov、Google Scholar 和 Open Science Framework。纳入使用 2D 面部照片、3D 面部扫描或 AI 生成面部模型的研究。使用改编的 QUADAS-2 工具评估偏倚风险，并使用 GRADE 评估证据确定性。该方案已在 PROSPERO 注册（CRD420261452521）。共纳入 15 项研究。标志点定位性能因成像模式、标志点定义、数据集、参考标准和误差指标而有很大差异；中央和解剖学上定义明确的标志点通常比外周或主观点更准确。AI 衍生测量的一致性从差到优不等，ICC 约为 0.01-0.984。分类准确率约为 0.83 至 0.98，AUC 高达 0.98。鉴于仅有两项范围狭窄的分类研究，这些发现应被视为探索性和产生假设性的，而非可广泛推广。由于方法学异质性很大，研究结果采用定性综合。当前证据支持 AI 作为辅助工具，但常规临床实施需要稳健的外部验证和临床医生监督。PROSPERO 注册号：CRD420261452521。",
+"also": [
+{
+"source": "PubMed · Healthcare (Basel, Switzerland)",
+"link": "https://pubmed.ncbi.nlm.nih.gov/42940577/"
+}
+]
 },
 {
 "title": "Physics-aware geometric deep learning for pre-planning dosimetric feasibility in Gamma Knife radiosurgery.",
@@ -687,7 +697,8 @@
 "2026-10-24",
 "2026-10-25",
 "2026-10-26",
-"2026-10-27"
+"2026-10-27",
+"2026-10-28"
 ],
 "abstract_err": "page: HTTP Error 403: Forbidden; europepmc: empty; openalex: empty"
 },
@@ -2498,6 +2509,10 @@
 {
 "source": "新浪财经",
 "link": "https://news.google.com/rss/articles/CBMieEFVX3lxTE15NGpmVTZ2RTFJOWJDTHlMNGplaDg2NERUYUdWMFFxclZpOThJaWM5dWZCeEpIUHhSSnQ2NGVCelh0QkdDLVVBdVJwbEdjRjRqcGZ5WWRxRGRiaUpNNlVUWjNBbkxQRlhHWkU2cnV2bEY1ZE9uUE1Eag?oc=5"
+},
+{
+"source": "手机新浪网",
+"link": "https://news.google.com/rss/articles/CBMif0FVX3lxTE9uYkNwM1NTZ3dPa2N5VFBnWThIaV95ZkVoY2tVZlJsYU5TYVZDR1hWcmp3T3kwaldzSFhablA2MEVDeExwS0tHNnU2a3UzMHRSRmNfRk00cnhxZEVJS2plb0xfOWJyMkNRMjNiZ0s5UE84UkljNmtOLW12UUpzMEU?oc=5"
 }
 ]
 },

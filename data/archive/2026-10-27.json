@@ -506,7 +506,8 @@
 "day": "2026-10-27",
 "rank": 9.0,
 "abstract_days": [
-"2026-10-27"
+"2026-10-27",
+"2026-10-28"
 ],
 "abstract_err": "page: HTTP Error 403: Forbidden; no DOI / PMID"
 },
@@ -3022,7 +3023,13 @@
 "score": 4,
 "reason": "开源工具但条目信息极少、无评测与对比，属增量档",
 "day": "2026-10-27",
-"rank": 6.29
+"rank": 6.29,
+"also": [
+{
+"source": "arXiv",
+"link": "https://arxiv.org/abs/2610.35842"
+}
+]
 },
 {
 "title": "What doctors want to know about cancer and AI",
@@ -3174,7 +3181,13 @@
 "score": 3,
 "reason": "仅标题的厂商产品更新，无性能或验证信息，属增量档",
 "day": "2026-10-27",
-"rank": 5.5
+"rank": 5.5,
+"also": [
+{
+"source": "驱动之家",
+"link": "https://news.google.com/rss/articles/CBMiWEFVX3lxTFAydjhHbXRLM0NjdEVMcWhQeXFqNWlHUTJ2Y0R3WFNUUF9fMDdJdTVqVTVwQ0oteVVoNVNzQk5iZk1ZcG5hY2Y5OUp6cG5OQm53UDVZVjFSSFc?oc=5"
+}
+]
 },
 {
 "title": "巨头们的新战役：抬高AI制药，抢占AI4S",

@@ -883,7 +883,13 @@
 "abstract": "[Dialogues in clinical neuroscience] The integration of Artificial Intelligence (AI) into psychiatry is progressing rapidly, with promising yet underexplored applications in suicide prevention. While most existing studies have focused on suicide risk prediction, AI could be applied more broadly across the suicide prevention continuum. This review explores AI's potential in improving the detection of suicidal ideation (SI), enhancing clinician training, and expanding patient access to psychotherapeutic support. Studies suggest that AI models may identify SI more sensitively than clinicians by detecting subtle linguistic or semantic cues. Furthermore, AI-based virtual patients have been shown to improve clinicians' confidence and accuracy in suicide risk assessments, particularly when used alongside traditional training methods. On the patient side, CBT-inspired AI tools offer scalable, on-demand support, but most remain unregulated and clinically unvalidated. Despite their perceived empathy and availability, such tools pose ethical and clinical risks. Many patients use AI tools without professional guidance, a trend clinicians often underestimate. This disconnect calls for urgent regulatory oversight and professional engagement. Without clear clinical validation, AI-based tools may evolve outside medical frameworks, exposing vulnerable individuals to preventable harm. Psychiatry must not only adapt but also lead, ensuring that innovation is harnessed responsibly to serve patients with empathy, safety, and scientific rigor.",
 "thin": false,
 "reason": "综述性文章，无新数据或模型，介于增量与值得一看档",
-"zh_abstract": "[Dialogues in Clinical Neuroscience] 人工智能（AI）融入精神病学的进程正在迅速推进，其在自杀预防中的应用前景广阔但尚未得到充分探索。虽然大多数现有研究聚焦于自杀风险预测，但 AI 可在整个自杀预防连续过程中得到更广泛的应用。本综述探讨了 AI 在改善自杀意念（SI）检测、加强临床医生培训以及扩大患者获得心理治疗支持方面的潜力。研究表明，AI 模型可通过检测细微的语言或语义线索，比临床医生更敏感地识别 SI。此外，基于 AI 的虚拟患者已被证明可提高临床医生在自杀风险评估中的信心和准确性，尤其是与传统培训方法结合使用时。在患者方面，受 CBT 启发的 AI 工具提供了可扩展、按需的支持，但大多数仍不受监管且未经临床验证。尽管这些工具被认为具有共情能力和可及性，但它们带来了伦理和临床风险。许多患者在没有专业指导的情况下使用 AI 工具，而临床医生往往低估这一趋势。这种脱节亟需紧急的监管监督和专业参与。缺乏明确的临床验证，基于 AI 的工具可能会在医学框架之外发展，使脆弱个体面临可预防的伤害。精神病学不仅必须适应，还必须发挥引领作用，确保以负责任的方式利用创新，以共情、安全和科学严谨性服务患者。"
+"zh_abstract": "[Dialogues in Clinical Neuroscience] 人工智能（AI）融入精神病学的进程正在迅速推进，其在自杀预防中的应用前景广阔但尚未得到充分探索。虽然大多数现有研究聚焦于自杀风险预测，但 AI 可在整个自杀预防连续过程中得到更广泛的应用。本综述探讨了 AI 在改善自杀意念（SI）检测、加强临床医生培训以及扩大患者获得心理治疗支持方面的潜力。研究表明，AI 模型可通过检测细微的语言或语义线索，比临床医生更敏感地识别 SI。此外，基于 AI 的虚拟患者已被证明可提高临床医生在自杀风险评估中的信心和准确性，尤其是与传统培训方法结合使用时。在患者方面，受 CBT 启发的 AI 工具提供了可扩展、按需的支持，但大多数仍不受监管且未经临床验证。尽管这些工具被认为具有共情能力和可及性，但它们带来了伦理和临床风险。许多患者在没有专业指导的情况下使用 AI 工具，而临床医生往往低估这一趋势。这种脱节亟需紧急的监管监督和专业参与。缺乏明确的临床验证，基于 AI 的工具可能会在医学框架之外发展，使脆弱个体面临可预防的伤害。精神病学不仅必须适应，还必须发挥引领作用，确保以负责任的方式利用创新，以共情、安全和科学严谨性服务患者。",
+"also": [
+{
+"source": "PubMed · Cancers",
+"link": "https://pubmed.ncbi.nlm.nih.gov/42938791/"
+}
+]
 },
 {
 "title": "Evaluation of Computer-aided Detection for Identifying Missed Gastric Cancer After Endoscopic Submucosal Dissection.",

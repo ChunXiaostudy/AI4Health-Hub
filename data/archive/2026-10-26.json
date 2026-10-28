@@ -297,7 +297,8 @@
 "rank": 10.49,
 "abstract_days": [
 "2026-10-26",
-"2026-10-27"
+"2026-10-27",
+"2026-10-28"
 ],
 "abstract_err": "page: HTTP Error 403: Forbidden; europepmc: empty; openalex: empty"
 },
@@ -567,7 +568,8 @@
 "rank": 9.0,
 "abstract_days": [
 "2026-10-26",
-"2026-10-27"
+"2026-10-27",
+"2026-10-28"
 ],
 "abstract_err": "page: HTTP Error 403: Forbidden; no DOI / PMID"
 },
@@ -2200,7 +2202,13 @@
 "score": 4,
 "reason": "仅标题的监管议题评论，无实质细节，受标题限制最高不超6分，取增量档",
 "day": "2026-10-26",
-"rank": 6.14
+"rank": 6.14,
+"also": [
+{
+"source": "Buchanan Ingersoll & Rooney PC",
+"link": "https://news.google.com/rss/articles/CBMiugFBVV95cUxPYW5KTTUzMENvNHhiQzVBcVQ1SDZwcVFJcnVmT3dwckh1TEV0YzVNZ0FCMlVBV3dxTGkyb0JQU3JicTF5dlZab0FMTTdmV19EUEJ1TW1HTTYxelNMSEc3VVBldmFDMHp3Nnl6X2VqZndQbXpiT2tieWxFdnpwWV92QmJWSGprRjhxRWpZQ1JzZmRqVjYzOFRBQk9kX1I5eV80QXJEVE5nYXBBb1Fndk5OMDgzbWlLdS13LWc?oc=5"
+}
+]
 },
 {
 "title": "钟睒睒10亿押注山西女首富的\"AI制药\"梦：买不够，差额捐给公司",
