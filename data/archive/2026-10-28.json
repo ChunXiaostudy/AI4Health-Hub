@@ -2874,7 +2874,13 @@
 "score": 4,
 "reason": "仅标题的行业评论，无具体数据，属增量档",
 "day": "2026-10-28",
-"rank": 6.31
+"rank": 6.31,
+"also": [
+{
+"source": "搜狐网",
+"link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE5xdktoN2k2LXpzbkhwUldIZTBkLVlvOUVPQ0JaVEdFV0d4U3Y4Tk5ySkdEdjhyT2FuVDBlODZ4WXk4Yl9XbjIwWHQ0WjVsRk5HOUpOb2l3?oc=5"
+}
+]
 },
 {
 "title": "Generative AI Simulated Patients Versus Expert Demonstration Videos for Psychiatric Interview Training in Occupational Therapy Students",
