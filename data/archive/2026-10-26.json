@@ -299,7 +299,8 @@
 "2026-10-26",
 "2026-10-27",
 "2026-10-28",
-"2026-10-29"
+"2026-10-29",
+"2026-10-30"
 ],
 "abstract_err": "page: HTTP Error 403: Forbidden; europepmc: empty; openalex: empty"
 },
@@ -571,7 +572,8 @@
 "2026-10-26",
 "2026-10-27",
 "2026-10-28",
-"2026-10-29"
+"2026-10-29",
+"2026-10-30"
 ],
 "abstract_err": "page: HTTP Error 403: Forbidden; no DOI / PMID"
 },
