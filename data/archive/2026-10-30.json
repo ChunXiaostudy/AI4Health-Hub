@@ -65,7 +65,13 @@
 "abstract": "Liu et al. present MorphX, an interpretable deep learning framework that decodes cancer prognosis from whole-slide histological images and reveals morphological biomarkers. Across independent cohorts, MorphX identifies eight morphology-based biomarkers, supporting trustworthy, transparent, AI-driven precision oncology.",
 "day": "2026-10-30",
 "rank": 11.81,
-"zh_abstract": "Liu等提出MorphX，一个可解释的深度学习框架，可从全切片组织学图像中解析癌症预后并揭示形态学生物标志物。在独立队列中，MorphX识别出八种基于形态学的生物标志物，支持可信、透明、AI驱动的精准肿瘤学。"
+"zh_abstract": "Liu等提出MorphX，一个可解释的深度学习框架，可从全切片组织学图像中解析癌症预后并揭示形态学生物标志物。在独立队列中，MorphX识别出八种基于形态学的生物标志物，支持可信、透明、AI驱动的精准肿瘤学。",
+"also": [
+{
+"source": "PubMed · Cell reports. Medicine",
+"link": "https://pubmed.ncbi.nlm.nih.gov/42956750/"
+}
+]
 },
 {
 "title": "Applying digital twins to prevent preterm births",
@@ -232,7 +238,8 @@
 "day": "2026-10-30",
 "rank": 10.0,
 "abstract_days": [
-"2026-10-30"
+"2026-10-30",
+"2026-10-31"
 ],
 "abstract_err": "page: HTTP Error 403: Forbidden; no DOI / PMID"
 },
@@ -2769,7 +2776,8 @@
 "day": "2026-10-30",
 "rank": 6.14,
 "abstract_days": [
-"2026-10-30"
+"2026-10-30",
+"2026-10-31"
 ],
 "abstract_err": "page: skipped; pubmed: empty; europepmc: empty; openalex: empty"
 },
@@ -2797,7 +2805,13 @@
 "score": 3,
 "reason": "仅标题、泛行业观点，无方法与数据，属增量档",
 "day": "2026-10-30",
-"rank": 5.5
+"rank": 5.5,
+"also": [
+{
+"source": "AgeClub",
+"link": "https://news.google.com/rss/articles/CBMiVEFVX3lxTFAwaTQxeEZ4VGlLdXRKd2RNa3BtQjN2bE9kczZJa2hENFNjRGY1WmFYM1kzbmtlZFVsT0gzUlc1VHJmMlVtVXZtdENqM3EteGJJLWlLSA?oc=5"
+}
+]
 },
 {
 "title": "AI制药进入临床候选的药物比例仅10%，发展瓶颈在哪？对话百图生科首席执行官刘维",

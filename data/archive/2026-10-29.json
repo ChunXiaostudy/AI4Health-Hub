@@ -99,7 +99,13 @@
 "abstract": "Luo et al. review uncertainty quantification in medical AI from a clinical perspective and propose a practical roadmap for translating uncertainty estimates into meaningful action. They highlight the need to validate uncertainty against clinically relevant errors and embed its use within real-world workflows and governance.",
 "day": "2026-10-29",
 "rank": 9.81,
-"zh_abstract": "Luo等人从临床视角综述了医学AI中的不确定性量化，并提出了将不确定性估计转化为有意义行动的实际路线图。他们强调需要针对临床相关错误验证不确定性，并将其使用嵌入真实世界工作流程和治理中。"
+"zh_abstract": "Luo等人从临床视角综述了医学AI中的不确定性量化，并提出了将不确定性估计转化为有意义行动的实际路线图。他们强调需要针对临床相关错误验证不确定性，并将其使用嵌入真实世界工作流程和治理中。",
+"also": [
+{
+"source": "PubMed · Cell reports. Medicine",
+"link": "https://pubmed.ncbi.nlm.nih.gov/42950830/"
+}
+]
 },
 {
 "title": "FDA clears Deep Reasoning AI’s NeuroDR for neurovascular CT scans",
