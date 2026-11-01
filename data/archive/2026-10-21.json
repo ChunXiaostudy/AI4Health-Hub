@@ -1312,7 +1312,13 @@
 "abstract": "[ERJ open research] Explainability-derived imaging biomarkers offer a path to uncovering functional patterns linked to structural changes, advancing 129Xe-MRI toward clinical, biomarker-driven phenotyping in asthma and COPD https://bit.ly/4fRksAa.",
 "day": "2026-10-21",
 "rank": 8.14,
-"zh_abstract": "[ERJ open research] 可解释性衍生的影像生物标志物为揭示与结构变化相关的功能模式提供了一条路径，推动129Xe-MRI朝向哮喘和COPD中临床、生物标志物驱动的表型分型发展 https://bit.ly/4fRksAa。"
+"zh_abstract": "[ERJ open research] 可解释性衍生的影像生物标志物为揭示与结构变化相关的功能模式提供了一条路径，推动129Xe-MRI朝向哮喘和COPD中临床、生物标志物驱动的表型分型发展 https://bit.ly/4fRksAa。",
+"also": [
+{
+"source": "PubMed · ERJ open research",
+"link": "https://pubmed.ncbi.nlm.nih.gov/42959980/"
+}
+]
 },
 {
 "title": "Reinforcement Learning in Healthcare Analytics: Transforming Personalised Medicine and Clinical Decision-Making.",

@@ -431,37 +431,6 @@
 "zh_abstract": "[JMIR AI] AI 模型已推动医疗保健取得实质性进展。自欧洲联盟（EU）《AI 法案》于 2024 年生效以来，这些系统在欧盟受到一个共同监管框架的约束，该框架旨在协调所有成员国的 AI 治理。该法案的显著特征之一是，它通过将某些实施责任留给国家主管机构，来兼顾欧洲国家之间现有的经济、技术和监管差异。这一点在监管沙盒中尤为明显，监管沙盒是部署前用于开发、测试和验证 AI 系统的受监督环境。在本观点文章中，我们对 EU《AI 法案》下的医疗保健监管沙盒进行政策导向分析，并为其设计提出建议。这些建议涉及以下需求：记录可能影响超过 1025 次浮点运算每秒阈值的大型高风险系统分类的模型压缩技术；从设计阶段就将可解释性纳入 AI 系统；识别并记录医疗保健数据集中的偏差；澄清《通用数据保护条例》下联邦学习参数更新的处理方式；以及加强对临床环境中 AI 代理的监督。鉴于 2027 年 8 月 2 日的截止日期临近，届时所有成员国必须至少建立一个国家监管沙盒，实施时间表使这一讨论尤为及时。"
 },
 {
-"title": "Reproducibility without vendor names: emphasizing design over branding in AI evaluation.",
-"link": "https://pubmed.ncbi.nlm.nih.gov/42956827/",
-"date": "2026-10-29T00:00:00+00:00",
-"badge": "DOI 10.1093/jamia/ocag173",
-"source": "PubMed · Journal of the American Medical Informatics Association : JAMIA",
-"source_group": "PubMed · 重点期刊",
-"home": "",
-"thin": true,
-"pop": null,
-"id": "a136f4b61581",
-"keep": true,
-"zh_title": "AI评估可复现性：应强调设计而非厂商名称",
-"summary": "JAMIA刊文主张AI评估的可复现性应聚焦研究设计，而非厂商品牌名称。",
-"key_points": [],
-"section": "落地与监管",
-"type": "观点",
-"tags": [
-"基准",
-"临床落地"
-],
-"evidence": "同行评审",
-"score": 4,
-"reason": "仅标题、无正文，方法学观点类，按约束上限6分，信息有限取4分",
-"day": "2026-10-31",
-"rank": 9.14,
-"abstract_days": [
-"2026-10-31"
-],
-"abstract_err": "page: skipped; pubmed: empty; europepmc: empty; openalex: empty"
-},
-{
 "title": "SpaCut: Transcript-Aware Morphology Fusion for Robust Cell Segmentation in Subcellular Spatial Transcriptomics.",
 "link": "https://pubmed.ncbi.nlm.nih.gov/42958707/",
 "date": "2026-10-29T00:00:00+00:00",
@@ -527,7 +496,8 @@
 "day": "2026-10-31",
 "rank": 9.0,
 "abstract_days": [
-"2026-10-31"
+"2026-10-31",
+"2026-11-01"
 ],
 "abstract_err": "page: HTTP Error 403: Forbidden; no DOI / PMID"
 },
@@ -1035,6 +1005,38 @@
 "day": "2026-10-31",
 "rank": 8.31,
 "zh_abstract": "[Methods in molecular biology (Clifton, N.J.)] 准确预测RNA三级结构对于理解多种非编码RNA的功能至关重要，然而实验性结构测定仍具有挑战性且资源密集。受蛋白质结构预测中深度学习进展的启发，NuFold被开发为一个端到端框架，可直接从序列预测全原子RNA三级结构。NuFold整合来自多序列比对的进化信息和预测的二级结构特征，以构建RNA的三维坐标。为最大限度提高可及性，NuFold以开源软件形式提供，并配有用于基于浏览器预测的Google Colab笔记本和NuFold DB——一个大规模预计算RNA结构库。本章提供使用这些资源的实用指南，使研究人员无需大量计算资源即可生成和解读RNA结构模型，从而促进RNA生物学中的结构与功能研究。"
+},
+{
+"title": "Reproducibility without vendor names: emphasizing design over branding in AI evaluation.",
+"link": "https://pubmed.ncbi.nlm.nih.gov/42956827/",
+"date": "2026-10-29T00:00:00+00:00",
+"badge": "DOI 10.1093/jamia/ocag173",
+"source": "PubMed · Journal of the American Medical Informatics Association : JAMIA",
+"source_group": "PubMed · 重点期刊",
+"home": "",
+"thin": false,
+"pop": null,
+"id": "a136f4b61581",
+"keep": true,
+"zh_title": "供应商AI评估可重复性之争",
+"summary": "作者回应读者来信，认为在快速迭代的供应商AI产品评估中，仅公开厂商名称未必能实质提升可重复性与泛化性。",
+"key_points": [
+"认同透明度与可重复性是重要目标",
+"供应商产品迭代速度远快于其他临床技术",
+"认为公开具体厂商名称本身助益有限"
+],
+"section": "落地与监管",
+"type": "观点",
+"tags": [
+"临床落地"
+],
+"evidence": "同行评审",
+"score": 3,
+"reason": "读者来信属观点类，仅讨论评估方法学，无新数据，属增量档。",
+"day": "2026-10-31",
+"rank": 9.14,
+"abstract": "To: Suzanne Bakken, PhD, RN, FAAN, FACMI, FIAHSI Editor-in-Chief Journal of the American Medical Informatics Association (JAMIA) Oxford University Press Dear Dr. Bakken, We thank the authors for their thoughtful correspondence and for raising important issues regarding transparency, reproducibility, and generalizability in evaluations of vendor-based artificial intelligence tools. We agree that these are important goals. However, in this instance, we do not believe that identifying the specific vendors evaluated in our randomized crossover trial would, by itself, substantially advance those goals. A central challenge in evaluating vendor-based AI products is that they evolve far more rapidly than most other clinical technologies or interventions. In the broader data science literature, authors can often specify model versions with some precision. In contrast, vendor-based products may change through frequent feature releases, workflow modifications, or institution-specific customization without a clear, standardized mechanism for communicating those changes to readers. Even during the course of our trial, both products continued to evolve. As a result, naming the vendors could create a false impression that any single vendor is persistently superior to another, which does not reflect how these systems are deployed in practice.",
+"zh_abstract": "致：Suzanne Bakken，博士，注册护士（RN），FAAN，FACMI，FIAHSI，《美国医学信息学协会杂志》（JAMIA）主编，牛津大学出版社。尊敬的 Bakken 博士：我们感谢作者们发来深思熟虑的来信，并感谢他们提出关于基于厂商的人工智能工具评估中透明度、可重复性和可推广性的重要问题。我们同意这些是重要目标。然而，在本例中，我们认为，仅仅指出我们随机交叉试验中所评估的具体厂商，本身并不会实质性推进这些目标。评估基于厂商的 AI 产品的一个核心挑战在于，它们的演化速度远快于大多数其他临床技术或干预措施。在更广泛的数据科学文献中，作者通常能够较为精确地说明模型版本。相比之下，基于厂商的产品可能通过频繁的功能发布、工作流程修改或机构特定定制而发生变化，却没有清晰、标准化的机制向读者传达这些变化。甚至在我们试验进行期间，两种产品仍在持续演化。因此，指明厂商可能会造成一种错误印象，即任何单一厂商始终优于另一厂商，而这并不反映这些系统在实践中的部署方式。"
 },
 {
 "title": "Analyzing Online Discourse of Retrograde Cricopharyngeal Dysfunction: A Human-Validated LLM Study.",
@@ -2800,7 +2802,13 @@
 "score": 4,
 "reason": "商业化模式讨论的行业观察，仅标题无数据，属一般动态",
 "day": "2026-10-31",
-"rank": 6.31
+"rank": 6.31,
+"also": [
+{
+"source": "搜狐网",
+"link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE1tZjQySV9nbURSaHN4b2FXbnExaHl6UEhDZHo0ZkN2TzM0ZUV2YlFTQ1VFaklVOU9OUkdVTUhUbW96dUtaY1FnU2xPd3Q4V2hTaW5TdDdR?oc=5"
+}
+]
 },
 {
 "title": "FDA和CMS试图避免医疗AI监管陷入僵局——STAT News",
@@ -2945,6 +2953,12 @@
 "score": 3,
 "reason": "仅标题的机构合作与成果发布类消息，无技术或验证信息，属增量档",
 "day": "2026-10-31",
-"rank": 5.31
+"rank": 5.31,
+"also": [
+{
+"source": "新浪网",
+"link": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE5iLXFCa2RvOHRCT0hhbS1IUzJnUlAtQjE5Z1dtcEwtN29EMlpDQ2tCODFEbzV3Q19hS2tzUVgyN28zbjJPVUxsRTdCZw?oc=5"
+}
+]
 }
 ]

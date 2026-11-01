@@ -239,7 +239,8 @@
 "rank": 10.0,
 "abstract_days": [
 "2026-10-30",
-"2026-10-31"
+"2026-10-31",
+"2026-11-01"
 ],
 "abstract_err": "page: HTTP Error 403: Forbidden; no DOI / PMID"
 },
@@ -275,7 +276,13 @@
 "abstract": "[Journal of imaging informatics in medicine] Small unruptured intracranial aneurysms (UIAs; ≤ 7 mm) carry collectively significant rupture risk, yet conventional scoring tools (PHASES, ELAPSS) perform near chance-level in this subgroup. This systematic review and meta-analysis evaluated the pooled diagnostic accuracy of AI-based models for rupture risk prediction in small UIAs and compared performance across algorithmic architectures. Prospectively registered with PROSPERO (CRD420251142915) and conducted per PRISMA-DTA/PRISMA-S standards. MEDLINE, Scopus, and Web of Science were searched in October 2025 and updated on June 2026. Eligible studies applied machine learning (ML), deep learning (DL), radiomics, or computational fluid dynamics-integrated models to small UIAs. Area under the receiver operating characteristic curve (AUC) was pooled via a three-level random-effects model with restricted maximum likelihood estimation and Knapp-Hartung correction; heterogeneity was explored through multivariable meta-regression. Bias and reporting quality were assessed using QUADAS-3 and METRICS, respectively. Ten studies (2019-2025) encompassing 5409 patients, 7057 aneurysms, and 62 models were included. Pooled AUC was 0.793 (95% CI 0.754-0.827), with sensitivity of 0.713 and specificity of 0.780. Conventional ML achieved the highest AUC (0.827), followed by statistical models (0.779) and DL (0.741). Meta-regression explained 76.2% of variance; statistical model family was the sole significant predictor of inferior performance (p = 0.002). Nine of ten studies carried high risk of bias. No publication bias was detected (p = 0.186). AI-based models, particularly conventional ML ensemble architectures, demonstrate moderate-to-good discriminative accuracy for small UIA rupture risk stratification, meaningfully surpassing conventional scoring tools. Multicenter prospective registries, pre-rupture imaging protocols, and explainable AI frameworks are essential to support transparent neurosurgical decision-making.",
 "day": "2026-10-30",
 "rank": 9.99,
-"zh_abstract": "[Journal of imaging informatics in medicine] 小型未破裂颅内动脉瘤（UIAs；≤ 7 mm）总体上具有显著的破裂风险，但传统评分工具（PHASES、ELAPSS）在该亚组中的表现接近随机水平。本系统综述与荟萃分析评估了基于人工智能（AI）的模型预测小型UIAs破裂风险的合并诊断准确性，并比较了不同算法架构之间的性能。该研究前瞻性注册于PROSPERO（CRD420251142915），并按照PRISMA-DTA/PRISMA-S标准开展。于2025年10月检索MEDLINE、Scopus和Web of Science，并于2026年6月更新。符合条件的研究将机器学习（ML）、深度学习（DL）、影像组学或整合计算流体动力学的模型应用于小型UIAs。采用三水平随机效应模型、限制性最大似然估计和Knapp-Hartung校正对受试者工作特征曲线下面积（AUC）进行合并；通过多变量荟萃回归探讨异质性。分别使用QUADAS-3和METRICS评估偏倚风险和报告质量。共纳入10项研究（2019—2025年），涵盖5409例患者、7057个动脉瘤和62个模型。合并AUC为0.793（95% CI 0.754—0.827），灵敏度为0.713，特异度为0.780。传统ML获得最高AUC（0.827），其次为统计模型（0.779）和DL（0.741）。荟萃回归解释了76.2%的方差；统计模型类别是性能较差的唯一显著预测因素（p = 0.002）。10项研究中有9项存在高偏倚风险。未检测到发表偏倚（p = 0.186）。基于AI的模型，尤其是传统ML集成架构，对小型UIA破裂风险分层表现出中等至良好的判别准确性，显著优于传统评分工具。多中心前瞻性登记、破裂前影像学方案以及可解释AI框架对于支持透明的神经外科决策至关重要。"
+"zh_abstract": "[Journal of imaging informatics in medicine] 小型未破裂颅内动脉瘤（UIAs；≤ 7 mm）总体上具有显著的破裂风险，但传统评分工具（PHASES、ELAPSS）在该亚组中的表现接近随机水平。本系统综述与荟萃分析评估了基于人工智能（AI）的模型预测小型UIAs破裂风险的合并诊断准确性，并比较了不同算法架构之间的性能。该研究前瞻性注册于PROSPERO（CRD420251142915），并按照PRISMA-DTA/PRISMA-S标准开展。于2025年10月检索MEDLINE、Scopus和Web of Science，并于2026年6月更新。符合条件的研究将机器学习（ML）、深度学习（DL）、影像组学或整合计算流体动力学的模型应用于小型UIAs。采用三水平随机效应模型、限制性最大似然估计和Knapp-Hartung校正对受试者工作特征曲线下面积（AUC）进行合并；通过多变量荟萃回归探讨异质性。分别使用QUADAS-3和METRICS评估偏倚风险和报告质量。共纳入10项研究（2019—2025年），涵盖5409例患者、7057个动脉瘤和62个模型。合并AUC为0.793（95% CI 0.754—0.827），灵敏度为0.713，特异度为0.780。传统ML获得最高AUC（0.827），其次为统计模型（0.779）和DL（0.741）。荟萃回归解释了76.2%的方差；统计模型类别是性能较差的唯一显著预测因素（p = 0.002）。10项研究中有9项存在高偏倚风险。未检测到发表偏倚（p = 0.186）。基于AI的模型，尤其是传统ML集成架构，对小型UIA破裂风险分层表现出中等至良好的判别准确性，显著优于传统评分工具。多中心前瞻性登记、破裂前影像学方案以及可解释AI框架对于支持透明的神经外科决策至关重要。",
+"also": [
+{
+"source": "PubMed · Frontiers in public health",
+"link": "https://pubmed.ncbi.nlm.nih.gov/42948225/"
+}
+]
 },
 {
 "title": "AI-guided discovery and expansion of the human bile acid landscape.",
@@ -2777,7 +2784,8 @@
 "rank": 6.14,
 "abstract_days": [
 "2026-10-30",
-"2026-10-31"
+"2026-10-31",
+"2026-11-01"
 ],
 "abstract_err": "page: skipped; pubmed: empty; europepmc: empty; openalex: empty"
 },
