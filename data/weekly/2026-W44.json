@@ -1,0 +1,109 @@
+{
+ "week": "2026-W44",
+ "range": "2026-10-26 ~ 2026-11-01",
+ "partial": false,
+ "generated": "2026-11-02T07:21:00.826834+00:00",
+ "summary": "本周影像与病理方向仍以基础模型与可解释建模为主线。Nature Medicine 发表的多模态视觉语言基础模型 EVLF-FM 覆盖 10 种影像模态，并完成独立外部验证 [1]；FFA-RGNet 将眼底荧光造影中病灶的时序与解剖模式纳入图推理，并在多中心及前瞻数据上验证诊断性能 [4]。病理侧，MorphX 从全切片图像解码肿瘤预后，在独立队列中识别出八种形态学标志物 [17]；GTMA 把全切片图像建模为空间图，在 1871 例队列及 TCGA-STAD 外部验证中提供独立于 TNM 分期的预后信息 [9]。\n\n真实场景中的增益幅度仍需谨慎解读。单中心三个月前瞻部署中，13 名放射技师独立判读 2496 例肌骨影像，AI 辅助使准确率由 97.6% 升至 98.0%，净纠正 10 例错误 [3]；而纳入 50 篇综述、387 项原始研究的伞状综述与二次 Meta 分析汇总 AI 骨折检测敏感度约 0.897 [5]。部署后的持续监测亦有进展，MMC+ 以多模态数据一致性与基础模型嵌入实现连续性能监测，并在麻省总医院 COVID 期间数据上验证 [20]。\n\n临床预测与决策方向多采用多中心开发加外部验证的路径。糖尿病足溃疡研究结合梯度提升树与神经网络构建可解释预测模型，并包含前瞻性随机评估 [2]；癌症患者抗生素治疗后 48–72 小时持续发热的预测模型完成外部验证，外部 AUROC 为 0.78 [7]；乙肝住院多结局风险分层模型基于 3.6 万余条住院记录构建 [8]；AnySleep 在 28 个数据集、逾 2 万段整夜记录上训练验证，可从任意 EEG/EOG 信号进行可调时间分辨率的睡眠分期 [12]。但一项分析 1072 个机器学习临床预测模型的系统评价发现，仅少数完成外部验证或进入临床实施 [13]。\n\n落地与人机协同方面，新加坡七家基层诊所的准实验研究以 AI 扫描约 2.5 万份门诊记录识别漏转诊，每周检出量提升约七倍 [10]；单中心研究显示面向患者的对话式 AI 在基层医疗中可行且安全性可接受 [19]。与之相对，汇总 46 项报告的系统综述与 Meta 分析指出，医生对错误自动化建议的纠错能力有限，真实世界心电图研究中有 26.6% 的错误未被识别或纠正 [14]。上述条目均来自同行评审发表。",
+ "items": [
+  {
+   "title": "EVLF-FM：可细粒度解释的多模态医学视觉语言基础模型",
+   "link": "https://www.nature.com/articles/s41591-026-04655-5",
+   "source": "Nature Medicine"
+  },
+  {
+   "title": "糖尿病足溃疡预后评估与决策支持的可解释AI多中心研究",
+   "link": "https://www.thelancet.com/journals/eclinm/article/PIIS2589-5370(26)00537-7/fulltext?rss=yes",
+   "source": "eClinicalMedicine"
+  },
+  {
+   "title": "急诊放射技师骨折检测：AI辅助前后前瞻对比",
+   "link": "https://www.nature.com/articles/s41746-026-03313-x",
+   "source": "npj Digital Medicine"
+  },
+  {
+   "title": "FFA-RGNet：眼底荧光造影可解释图推理框架",
+   "link": "https://www.nature.com/articles/s41746-026-03428-1",
+   "source": "npj Digital Medicine"
+  },
+  {
+   "title": "AI骨折检测性能的伞状综述与二次Meta分析",
+   "link": "https://www.nature.com/articles/s41746-026-03303-z",
+   "source": "npj Digital Medicine"
+  },
+  {
+   "title": "PSMA PET/CT与mpMRI融合的多中心基准",
+   "link": "https://www.nature.com/articles/s41746-026-03358-y",
+   "source": "npj Digital Medicine"
+  },
+  {
+   "title": "机器学习预测癌症患者抗生素治疗后持续发热",
+   "link": "https://www.nature.com/articles/s41746-026-03449-w",
+   "source": "npj Digital Medicine"
+  },
+  {
+   "title": "可解释性特征工程实现乙肝住院多结局风险分层",
+   "link": "https://www.nature.com/articles/s41746-026-03439-y",
+   "source": "npj Digital Medicine"
+  },
+  {
+   "title": "可解释图学习解析胃癌病理空间微环境与预后",
+   "link": "https://www.nature.com/articles/s41746-026-03398-4",
+   "source": "npj Digital Medicine"
+  },
+  {
+   "title": "基层医疗漏诊转诊的 AI 安全系统",
+   "link": "https://www.nature.com/articles/s41746-026-03444-1",
+   "source": "npj Digital Medicine"
+  },
+  {
+   "title": "多中心评估EHR招募支持系统实际效果",
+   "link": "https://www.nature.com/articles/s41746-026-03366-y",
+   "source": "npj Digital Medicine"
+  },
+  {
+   "title": "AnySleep：跨中心高分辨率睡眠分期的通道无关深度学习系统",
+   "link": "https://www.nature.com/articles/s41746-026-03406-7",
+   "source": "npj Digital Medicine"
+  },
+  {
+   "title": "临床预测模型外部验证与落地的系统评价",
+   "link": "https://pubmed.ncbi.nlm.nih.gov/42962244/",
+   "source": "PubMed · Journal of the American Medical Informatics Association : JAMIA"
+  },
+  {
+   "title": "临床AI错误输出的人类监督：系统综述与Meta分析",
+   "link": "https://www.nature.com/articles/s41746-026-03408-5",
+   "source": "npj Digital Medicine"
+  },
+  {
+   "title": "脑MRI上颈髓椎体自动标记与形态测量的深度学习框架及多中心验证",
+   "link": "https://www.nature.com/articles/s41746-026-03403-w",
+   "source": "npj Digital Medicine"
+  },
+  {
+   "title": "深度特征与几何先验融合的特纳综合征人脸识别",
+   "link": "https://www.nature.com/articles/s41746-026-03221-0",
+   "source": "npj Digital Medicine"
+  },
+  {
+   "title": "可解释深度学习将空间形态表型映射到肝癌与肺腺癌生存",
+   "link": "https://www.cell.com/cell-reports-medicine/fulltext/S2666-3791(26)00543-4?rss=yes",
+   "source": "Cell Reports Medicine"
+  },
+  {
+   "title": "数字孪生框架评估药物对早产风险的影响",
+   "link": "https://www.nature.com/articles/d41591-026-00056-w",
+   "source": "Nature Medicine"
+  },
+  {
+   "title": "对话式AI在基层医疗的实测",
+   "link": "https://www.nature.com/articles/d41591-026-00054-y",
+   "source": "Nature Medicine"
+  },
+  {
+   "title": "医学影像AI的可扩展漂移监测框架MMC+",
+   "link": "https://www.nature.com/articles/s41746-026-03301-1",
+   "source": "npj Digital Medicine"
+  }
+ ]
+}
