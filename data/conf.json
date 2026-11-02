@@ -6725,7 +6725,7 @@
 "year": 2025,
 "date": "2025-02-21",
 "link": "https://doi.org/10.48550/arXiv.2502.17504",
-"cites": 52,
+"cites": 53,
 "zh_title": "蛋白质大语言模型：综合综述",
 "summary": "系统综述蛋白质专用大语言模型，涵盖架构、训练数据集、评测指标与应用。",
 "key_points": [
@@ -6751,7 +6751,7 @@
 "year": 2025,
 "date": "2025-02-21",
 "link": "https://doi.org/10.48550/arXiv.2502.15871",
-"cites": 43,
+"cites": 44,
 "zh_title": "医疗健康大模型可信性综述",
 "summary": "综述系统梳理医疗大模型在真实性、隐私、安全、鲁棒性、公平性与可解释性等可信维度的研究现状。",
 "key_points": [
@@ -6855,7 +6855,7 @@
 "year": 2025,
 "date": "2025-06-13",
 "link": "https://doi.org/10.48550/arXiv.2506.11474",
-"cites": 36,
+"cites": 37,
 "zh_title": "Med-PRM：基于指南验证式逐步过程奖励的医学推理模型",
 "summary": "EMNLP 2025 论文提出 Med-PRM 过程奖励建模框架，利用检索增强生成对每一步推理按既有医学知识进行验证，以定位并纠正推理过程中的错误。",
 "key_points": [
@@ -7298,7 +7298,7 @@
 "year": 2025,
 "date": "2025-02-18",
 "link": "https://doi.org/10.48550/arXiv.2502.13319",
-"cites": 12,
+"cites": 13,
 "zh_title": "阐释医疗LLM中人口统计偏见的机制",
 "summary": "利用机制可解释性工具，识别LLM中编码社会人口统计信息的激活，并揭示医疗场景下的偏见。",
 "key_points": [
@@ -7909,7 +7909,7 @@
 "year": 2025,
 "date": "2025-08-19",
 "link": "https://doi.org/10.18653/v1/2025.emnlp-main.43",
-"cites": 8,
+"cites": 9,
 "zh_title": "TracSum：医学领域句级可溯源方面摘要基准",
 "summary": "研究提出TracSum基准，为医学领域方面摘要提供句级引用溯源，便于用户核查摘要的事实准确性。",
 "key_points": [
@@ -11813,7 +11813,7 @@
 "year": 2025,
 "date": "2025-04-11",
 "link": "https://doi.org/10.1609/aaai.v39i5.32566",
-"cites": 7,
+"cites": 8,
 "zh_title": "多眼底疾病辅助诊断的深层级与不变特征学习",
 "summary": "AAAI 2025 针对多眼底疾病并发与病灶混合，提出多层级特征融合与自监督疾病指示特征学习。",
 "key_points": [
@@ -22947,7 +22947,7 @@
 "year": 2025,
 "date": "2025-01-30",
 "link": "https://doi.org/10.48550/arXiv.2501.18362",
-"cites": 274,
+"cites": 275,
 "zh_title": "MedXpertQA：专家级医学推理与理解基准",
 "summary": "ICML 2025提出MedXpertQA基准，含4460道题，覆盖17个专科与11个身体系统，分文本与多模态子集。",
 "key_points": [
@@ -23075,7 +23075,7 @@
 "year": 2025,
 "date": "2025-03-12",
 "link": "https://doi.org/10.48550/arXiv.2503.10694",
-"cites": 60,
+"cites": 61,
 "zh_title": "医学大模型基准应优先考虑构念效度",
 "summary": "ICML 2025论文指出医学LLM基准多基于执照考试题构建，主张优先考虑构念效度以衡量真实进展。",
 "key_points": [
@@ -28722,7 +28722,7 @@
 "year": 2025,
 "date": "2025-02-06",
 "link": "https://doi.org/10.1145/3696410.3714782",
-"cites": 217,
+"cites": 218,
 "zh_title": "MedRAG：知识图谱增强的医疗RAG助手",
 "summary": "WWW 2025提出MedRAG，用知识图谱激发推理增强检索生成，用于医疗Copilot，减少误诊。",
 "key_points": [
@@ -32695,7 +32695,7 @@
 "year": 2025,
 "date": "2025-01-01",
 "link": "https://doi.org/10.1007/978-3-032-04978-0_22",
-"cites": 29,
+"cites": 30,
 "zh_title": "文本增强混合专家用于复合数据半监督医学图像分割",
 "summary": "探索文本增强的混合专家方法，在复合数据下进行半监督医学图像分割。",
 "key_points": [
