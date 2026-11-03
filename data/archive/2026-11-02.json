@@ -96,7 +96,8 @@
 "day": "2026-11-02",
 "rank": 10.0,
 "abstract_days": [
-"2026-11-02"
+"2026-11-02",
+"2026-11-03"
 ],
 "abstract_err": "page: HTTP Error 403: Forbidden; no DOI / PMID"
 },
@@ -133,7 +134,8 @@
 "day": "2026-11-02",
 "rank": 10.0,
 "abstract_days": [
-"2026-11-02"
+"2026-11-02",
+"2026-11-03"
 ],
 "abstract_err": "page: HTTP Error 403: Forbidden; no DOI / PMID"
 },
@@ -202,7 +204,8 @@
 "day": "2026-11-02",
 "rank": 9.0,
 "abstract_days": [
-"2026-11-02"
+"2026-11-02",
+"2026-11-03"
 ],
 "abstract_err": "page: HTTP Error 403: Forbidden; no DOI / PMID"
 },
@@ -1404,7 +1407,13 @@
 "score": 4,
 "reason": "大型医院与企业合作动向，但仅标题无实施细节，属增量档",
 "day": "2026-11-02",
-"rank": 6.14
+"rank": 6.14,
+"also": [
+{
+"source": "手机新浪网",
+"link": "https://news.google.com/rss/articles/CBMif0FVX3lxTE9iTXpQcHZJMXFQUHV0U1BUYnA1Z0YwMlQ4UXVTWFIxVWdQdjFlUjdVd2JJYlRwTEVWeWlKNmdtVmNYS0t4MU02dll4Y0t4MjRfWXJZZk9CTjRnYUxidTRIcDM0cXNRQXBjR3dZSTY4R2ZRRjU0NW5QZXVVdnpacFk?oc=5"
+}
+]
 },
 {
 "title": "Why ECG device makers may stop rebuilding arrhythmia analysis from scratch",
@@ -1485,7 +1494,13 @@
 "score": 3,
 "reason": "仅标题的行业评论，无具体数据，属增量档",
 "day": "2026-11-02",
-"rank": 5.14
+"rank": 5.14,
+"also": [
+{
+"source": "新浪财经",
+"link": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxOc05OUWJYNWl5TU55R19qZHZuck5kcEtiZnpXTGlSU3pSeXQ1NjduaGtCdDcyb2FQMWVmWmI2dTktRXBEQVE5c0VfNU55amY0Z0c1cTBnYzA4R0Q2bDhMX2Vwa3lscUpGeUV1OGlyRWtqU3NqbHRvSEp6ay1LeGdFSzIybVlwTUNMZURYZ1MxcXQ3OGFTaExvSUhsR1VJWURuR1JIRUhibnVWcU9QM1djenpOZzZibTFWSWVSUUR0cDZab2ZuZGdOVHNQdVNlZ0JGRmc?oc=5"
+}
+]
 },
 {
 "title": "Response to the GenAI Discussion",

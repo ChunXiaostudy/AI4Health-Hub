@@ -498,7 +498,8 @@
 "abstract_days": [
 "2026-10-31",
 "2026-11-01",
-"2026-11-02"
+"2026-11-02",
+"2026-11-03"
 ],
 "abstract_err": "page: HTTP Error 403: Forbidden; no DOI / PMID"
 },
@@ -2963,6 +2964,10 @@
 {
 "source": "中国科技网",
 "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTFBxSGpYRW1NS0tuVlN1WGNZemQ1SGpkWDRhOE5xQm00YkpBU3dGODBQNWtWZDlaMGlya045WkVtMHVRdnl1dzVGUndXM21hNENZYTBLQUpYbnJpRVFVbkN4VEh1Zm5OSm1XWWdsbDBWV0M?oc=5"
+},
+{
+"source": "搜狐网",
+"link": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxObVVEc3hZQlFITkpxdzJ3MlpQXzNQdFMyQXdVNWNibTFwMUVlY29sWjNNdWNnWmJoN2ZvLVdhWUdhaEo4eGhzYUtoS1NuQzRON3B1bXoyRzYwbzFiMGM1UGF1NlgxQW9EZE5RSTd6YzZPWHVYUEs2RnBTMVpSY0RKbjJFYWVGQ0EtOUZn?oc=5"
 }
 ]
 }

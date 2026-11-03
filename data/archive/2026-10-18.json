@@ -203,7 +203,13 @@
 "2026-10-23",
 "2026-10-24"
 ],
-"abstract_err": "page: HTTP Error 403: Forbidden; europepmc: empty; openalex: empty"
+"abstract_err": "page: HTTP Error 403: Forbidden; europepmc: empty; openalex: empty",
+"also": [
+{
+"source": "NEJM AI",
+"link": "https://www.nejm.org/doi/full/10.1056/AIcs2600997?af=R&rss=currentIssue"
+}
+]
 },
 {
 "title": "AI-supported first consultation preparation in oncology: a real-world clinical usability study",
@@ -377,7 +383,13 @@
 "2026-10-23",
 "2026-10-24"
 ],
-"abstract_err": "page: HTTP Error 403: Forbidden; europepmc: empty; openalex: empty"
+"abstract_err": "page: HTTP Error 403: Forbidden; europepmc: empty; openalex: empty",
+"also": [
+{
+"source": "NEJM AI",
+"link": "https://www.nejm.org/doi/full/10.1056/AIp2600817?af=R&rss=currentIssue"
+}
+]
 },
 {
 "title": "Deep learning super-resolution enhances MRI radiomics for predicting placenta accreta spectrum and invasiveness.",

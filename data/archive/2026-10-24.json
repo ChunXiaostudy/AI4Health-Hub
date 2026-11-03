@@ -68,7 +68,13 @@
 "2026-10-29",
 "2026-10-30"
 ],
-"abstract_err": "page: HTTP Error 403: Forbidden; europepmc: empty; openalex: empty"
+"abstract_err": "page: HTTP Error 403: Forbidden; europepmc: empty; openalex: empty",
+"also": [
+{
+"source": "NEJM AI",
+"link": "https://www.nejm.org/doi/full/10.1056/AIltr2601137?af=R&rss=currentIssue"
+}
+]
 },
 {
 "title": "STAT+: AI drug firm Pathos raises $237 million, pushing valuation to $3 billion",
@@ -202,7 +208,13 @@
 "2026-10-29",
 "2026-10-30"
 ],
-"abstract_err": "page: HTTP Error 403: Forbidden; europepmc: empty; openalex: HTTP Error 404: Not Found"
+"abstract_err": "page: HTTP Error 403: Forbidden; europepmc: empty; openalex: HTTP Error 404: Not Found",
+"also": [
+{
+"source": "NEJM AI",
+"link": "https://www.nejm.org/doi/full/10.1056/AI-S2601250%4010.1056/ai_2026.3.issue-11?af=R&rss=currentIssue"
+}
+]
 },
 {
 "title": "Preserving Clinical Judgment in AI-Assisted Diagnosis",
@@ -240,7 +252,13 @@
 "2026-10-29",
 "2026-10-30"
 ],
-"abstract_err": "page: HTTP Error 403: Forbidden; europepmc: empty; openalex: empty"
+"abstract_err": "page: HTTP Error 403: Forbidden; europepmc: empty; openalex: empty",
+"also": [
+{
+"source": "NEJM AI",
+"link": "https://www.nejm.org/doi/full/10.1056/AIltr2601100?af=R&rss=currentIssue"
+}
+]
 },
 {
 "title": "Automation Bias and the Erosion of Physicians’ Cognitive Sovereignty",
@@ -278,7 +296,13 @@
 "2026-10-29",
 "2026-10-30"
 ],
-"abstract_err": "page: HTTP Error 403: Forbidden; europepmc: empty; openalex: empty"
+"abstract_err": "page: HTTP Error 403: Forbidden; europepmc: empty; openalex: empty",
+"also": [
+{
+"source": "NEJM AI",
+"link": "https://www.nejm.org/doi/full/10.1056/AIltr2600987?af=R&rss=currentIssue"
+}
+]
 },
 {
 "title": "ViBMR: A Large-Scale Multi-Sequence Brain MRI Dataset and Comprehensive Evaluation for Vietnamese Radiology Report Generation",
@@ -710,7 +734,13 @@
 "2026-10-29",
 "2026-10-30"
 ],
-"abstract_err": "page: HTTP Error 403: Forbidden; europepmc: empty; openalex: empty"
+"abstract_err": "page: HTTP Error 403: Forbidden; europepmc: empty; openalex: empty",
+"also": [
+{
+"source": "NEJM AI",
+"link": "https://www.nejm.org/doi/full/10.1056/AIltr2601017?af=R&rss=currentIssue"
+}
+]
 },
 {
 "title": "The Value of System 1 Models in Medicine",
@@ -1953,7 +1983,13 @@
 "abstract": "Edge medical segmentation must reconcile small model size, high accuracy, and fast inference. TernScope addresses this tradeoff through model--hardware co-design, learning a compact segmentation network whose low-bit operators also simplify hardware execution. Split-channel large-kernel blocks preserve spatial context with limited computation, while branch fusion removes redundant inference paths. Ternary Progressive Quantization-aware Training (TPQ) then adapts the fused network from deep to shallow layers, through the decoder, and finally to the input and prediction layers. All 25 convolutions use ternary weights and 8-bit activations, enabling packed storage and multiplier-free computation. The resulting model uses 0.2483 M parameters and 0.0949 GMACs while retaining competitive segmentation accuracy on in-domain and external datasets. Under the same 45 nm technology, TernScope reduces compute-array area by 88.46% compared with the original Gemmini, a systolic-array accelerator with 8-bit $\\times$ 8-bit multipliers. These results demonstrate a path from accurate lightweight medical segmentation to compact low-bit hardware.",
 "day": "2026-10-24",
 "rank": 7.49,
-"zh_abstract": "边缘医学分割必须兼顾小模型尺寸、高精度和快速推理。TernScope 通过模型—硬件协同设计来应对这一权衡，学习一个紧凑的分割网络，其低位宽算子也简化了硬件执行。分通道大核模块以有限计算保留空间上下文，而分支融合移除冗余推理路径。三值渐进量化感知训练（Ternary Progressive Quantization-aware Training, TPQ）随后使融合网络从深层到浅层、经过解码器、最终到输入层和预测层进行适配。全部 25 个卷积使用三值权重和 8 位激活，从而实现打包存储和无乘法器计算。所得模型使用 0.2483 M 参数和 0.0949 GMACs，同时在域内和外部数据集上保持有竞争力的分割精度。在相同 45 nm 工艺下，与原始 Gemmini（一种具有 8 位 × 8 位乘法器的脉动阵列加速器）相比，TernScope 将计算阵列面积减少 88.46%。这些结果展示了一条从准确的轻量级医学分割到紧凑低位宽硬件的路径。"
+"zh_abstract": "边缘医学分割必须兼顾小模型尺寸、高精度和快速推理。TernScope 通过模型—硬件协同设计来应对这一权衡，学习一个紧凑的分割网络，其低位宽算子也简化了硬件执行。分通道大核模块以有限计算保留空间上下文，而分支融合移除冗余推理路径。三值渐进量化感知训练（Ternary Progressive Quantization-aware Training, TPQ）随后使融合网络从深层到浅层、经过解码器、最终到输入层和预测层进行适配。全部 25 个卷积使用三值权重和 8 位激活，从而实现打包存储和无乘法器计算。所得模型使用 0.2483 M 参数和 0.0949 GMACs，同时在域内和外部数据集上保持有竞争力的分割精度。在相同 45 nm 工艺下，与原始 Gemmini（一种具有 8 位 × 8 位乘法器的脉动阵列加速器）相比，TernScope 将计算阵列面积减少 88.46%。这些结果展示了一条从准确的轻量级医学分割到紧凑低位宽硬件的路径。",
+"also": [
+{
+"source": "Hugging Face Daily Papers",
+"link": "https://huggingface.co/papers/2610.29617"
+}
+]
 },
 {
 "title": "Learning to Measure and Diagnose: A Clinical-Dictionary Radiomic Bottleneck Model for Thyroid Nodule Classification",

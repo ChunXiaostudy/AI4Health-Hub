@@ -225,7 +225,13 @@
 "2026-10-20",
 "2026-10-21"
 ],
-"abstract_err": "page: HTTP Error 403: Forbidden; europepmc: empty; openalex: empty"
+"abstract_err": "page: HTTP Error 403: Forbidden; europepmc: empty; openalex: empty",
+"also": [
+{
+"source": "NEJM AI",
+"link": "https://www.nejm.org/doi/full/10.1056/AIp2600773?af=R&rss=currentIssue"
+}
+]
 },
 {
 "title": "From compliance to competence: a multi-level model for AI governance in undergraduate medical education",

@@ -77,7 +77,13 @@
 "2026-10-22",
 "2026-10-23"
 ],
-"abstract_err": "page: HTTP Error 403: Forbidden; europepmc: empty; openalex: empty"
+"abstract_err": "page: HTTP Error 403: Forbidden; europepmc: empty; openalex: empty",
+"also": [
+{
+"source": "NEJM AI",
+"link": "https://www.nejm.org/doi/full/10.1056/AIoa2600258?af=R&rss=currentIssue"
+}
+]
 },
 {
 "title": "Advancing Cancer Biomarker Discovery Through Multi-Omics, Bioinformatics, and Artificial Intelligence: A Systematic Review.",
@@ -148,7 +154,13 @@
 "2026-10-22",
 "2026-10-23"
 ],
-"abstract_err": "page: HTTP Error 403: Forbidden; europepmc: empty; openalex: empty"
+"abstract_err": "page: HTTP Error 403: Forbidden; europepmc: empty; openalex: empty",
+"also": [
+{
+"source": "NEJM AI",
+"link": "https://www.nejm.org/doi/full/10.1056/AIoa2600136?af=R&rss=currentIssue"
+}
+]
 },
 {
 "title": "Comparative Cost of Care Recommended by Large Language Models versus Treating Physicians",
@@ -186,7 +198,13 @@
 "2026-10-22",
 "2026-10-23"
 ],
-"abstract_err": "page: HTTP Error 403: Forbidden; europepmc: empty; openalex: empty"
+"abstract_err": "page: HTTP Error 403: Forbidden; europepmc: empty; openalex: empty",
+"also": [
+{
+"source": "NEJM AI",
+"link": "https://www.nejm.org/doi/full/10.1056/AIoa2600537?af=R&rss=currentIssue"
+}
+]
 },
 {
 "title": "The missing layer: decision integrity as a verifiable assurance layer in interpretive clinical artificial intelligence.",
@@ -522,7 +540,13 @@
 "2026-10-22",
 "2026-10-23"
 ],
-"abstract_err": "page: HTTP Error 403: Forbidden; europepmc: empty; openalex: empty"
+"abstract_err": "page: HTTP Error 403: Forbidden; europepmc: empty; openalex: empty",
+"also": [
+{
+"source": "NEJM AI",
+"link": "https://www.nejm.org/doi/full/10.1056/AIe2601260?af=R&rss=currentIssue"
+}
+]
 },
 {
 "title": "Multimodal artificial intelligence to predict cardiomyopathy development in hereditary transthyretin amyloidosis.",

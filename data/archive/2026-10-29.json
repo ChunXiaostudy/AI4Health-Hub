@@ -267,7 +267,13 @@
 "abstract": "[Clinical & experimental ophthalmology] Artificial intelligence (AI) has emerged as a transformative technology in the fields of medicine and ophthalmology. Recent advances in machine learning, deep learning and convolutional neural networks have significantly improved cataract detection and grading, intraocular lens power calculations, surgical decision-making, risk prediction and patient education. Intraoperative AI-assisted surgical phase recognition, workflow analysis, real-time guidance, robotic technologies and femtosecond laser integration can improve surgical precision, efficiency and safety. AI has shown promise in predicting visual outcomes, detecting postoperative complications and facilitating telemedicine follow-up. Though challenges with AI include transparency, data diversity, regulatory oversight and clinical validation, continued advances are expected to further personalise cataract surgery, support clinical decision-making, optimise surgical performance and improve patient outcomes. This narrative summarises the current and emerging applications of AI in preoperative, intraoperative and postoperative management of cataracts.",
 "day": "2026-10-29",
 "rank": 8.85,
-"zh_abstract": "[Clinical & experimental ophthalmology] 人工智能（AI）已成为医学和眼科领域的一项变革性技术。机器学习、深度学习和卷积神经网络的最新进展显著改善了白内障检测与分级、人工晶状体度数计算、手术决策、风险预测和患者教育。术中 AI 辅助的手术阶段识别、工作流程分析、实时引导、机器人技术和飞秒激光整合可提高手术精确性、效率和安全性。AI 在预测视力结局、检测术后并发症和促进远程医疗随访方面显示出前景。尽管 AI 面临透明度、数据多样性、监管监督和临床验证等挑战，但持续进展预计将进一步实现白内障手术个性化、支持临床决策、优化手术表现并改善患者结局。本叙述性综述总结了 AI 在白内障术前、术中和术后管理中的当前和新兴应用。"
+"zh_abstract": "[Clinical & experimental ophthalmology] 人工智能（AI）已成为医学和眼科领域的一项变革性技术。机器学习、深度学习和卷积神经网络的最新进展显著改善了白内障检测与分级、人工晶状体度数计算、手术决策、风险预测和患者教育。术中 AI 辅助的手术阶段识别、工作流程分析、实时引导、机器人技术和飞秒激光整合可提高手术精确性、效率和安全性。AI 在预测视力结局、检测术后并发症和促进远程医疗随访方面显示出前景。尽管 AI 面临透明度、数据多样性、监管监督和临床验证等挑战，但持续进展预计将进一步实现白内障手术个性化、支持临床决策、优化手术表现并改善患者结局。本叙述性综述总结了 AI 在白内障术前、术中和术后管理中的当前和新兴应用。",
+"also": [
+{
+"source": "PubMed · Journal of the American Nutrition Association",
+"link": "https://pubmed.ncbi.nlm.nih.gov/42970338/"
+}
+]
 },
 {
 "title": "Richer database context improves LLM-generated EHR phenotyping algorithms",
