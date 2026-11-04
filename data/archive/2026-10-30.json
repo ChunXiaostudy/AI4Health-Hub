@@ -242,7 +242,8 @@
 "2026-10-31",
 "2026-11-01",
 "2026-11-02",
-"2026-11-03"
+"2026-11-03",
+"2026-11-04"
 ],
 "abstract_err": "page: HTTP Error 403: Forbidden; no DOI / PMID"
 },
@@ -2737,6 +2738,10 @@
 {
 "source": "搜狐网",
 "link": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxQMlJmelZUV0ltRzJDalBMZjJ3WElwb2o1akxwZ3RRYmlpQ0ttdzhJeTBLNjlJQkg5bWN1bzJZZ2dFenFyaV9YU2hUOUdUcnl2Y09zdmFTVUdDYlNaU0VKU1d2ekMxZ2V6QzdDMWFmYVVLcjM5S1pkLVpxcXNZdURFTkFFNVJQcHZEWF9R?oc=5"
+},
+{
+"source": "富途牛牛",
+"link": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE1tNXBoZjBqR0hkcXNGcXVZNkppOHNEQk5aSTdteHhlS1MzdzFDOU1COUstXzhyYWdxcGdzZlJoeXN5WHV2NGZFenNKekk2cHRD?oc=5"
 }
 ],
 "keep": true,
@@ -2789,7 +2794,8 @@
 "2026-10-31",
 "2026-11-01",
 "2026-11-02",
-"2026-11-03"
+"2026-11-03",
+"2026-11-04"
 ],
 "abstract_err": "page: skipped; pubmed: empty; europepmc: empty; openalex: empty"
 },
