@@ -170,6 +170,40 @@
 "zh_abstract": "[Radiography (London, England : 1995)] 预拍摄（pre-shot）技术是降低X线摄影重拍率的有效方法；然而，它受到患者辐射暴露增加的局限。本研究旨在评估由基于深度学习的降噪（Advanced Intelligent Clear-IQ Engine：AiCE）实现的超低剂量预拍摄对降低腕关节X线摄影重拍率的影响。使用CXDI-810C（Canon Medical Systems）作为X射线探测器。在固定成像条件下，使用额外的1.0 mm铜滤过片，采集模拟腕关节侧位预拍摄的体模图像，分别有和无AiCE。管电流-时间乘积从2.8 mAs降至0.5 mAs。15名放射技师使用五点置信度量表确定最佳成像条件，低于3分被认为不足以进行重拍决策。随后进行了一项前瞻性临床评估，比较非预拍摄组（n = 542）和预拍摄组（n = 325）之间的重拍率。入射表面空气比释动能（Ka,e）由体模测量估算。无AiCE时，没有成像条件达到重拍决策所需的阈值。相反，有AiCE时，管电流-时间乘积为1.6 mAs达到可接受的图像质量（3.29 ± 0.47），所有评估者评分≥3；因此，它被选为最佳条件。在临床评估中，重拍率从14.38%显著降至0.61%。预拍摄的Ka,e为0.11 ± 0.03 μGy，仅相当于标准腕关节侧位X线摄影剂量的0.15%。AiCE实现的超低剂量预拍摄成像大幅降低了重拍率，同时仅需极少的额外辐射剂量。使用AiCE的超低剂量预拍摄代表了一种高效策略，可在剂量代价可忽略的情况下最大限度减少重拍成像，为临床X线摄影中的剂量优化和工作流程效率提升提供了巨大潜力。"
 },
 {
+"title": "Silent Manipulation of Mental Health Treatment Recommendations From a Large Language Model.",
+"link": "https://pubmed.ncbi.nlm.nih.gov/42975904/",
+"date": "2026-11-02T00:00:00+00:00",
+"badge": "DOI 10.1001/jamanetworkopen.2026.41142",
+"source": "PubMed · JAMA network open",
+"source_group": "PubMed",
+"home": "",
+"thin": false,
+"pop": null,
+"id": "5c0f0ee51fac",
+"keep": true,
+"zh_title": "大模型心理治疗建议可被静默操纵",
+"summary": "同行评审研究显示，对开放权重大模型施加推理时激活引导，可在不告知用户的情况下改变其抑郁症治疗推荐。",
+"key_points": [
+"12个抑郁建议场景，30档引导幅度",
+"可静默偏移治疗推荐且不披露",
+"仅测试单一开放权重模型"
+],
+"section": "大模型与智能体",
+"type": "论文",
+"tags": [
+"医学大模型",
+"心理健康",
+"公平与安全"
+],
+"evidence": "同行评审",
+"score": 6,
+"reason": "小样本单模型实验，但揭示LLM心理健康安全风险，属值得一看档",
+"day": "2026-11-04",
+"rank": 9.14,
+"abstract": "Importance: Large language models (LLMs) increasingly inform mental health decisions by patients and clinicians. Inference-time activation steering can shift model behavior on a target dimension without altering weights or prompts and without disclosure to users, allowing treatment recommendations to be silently changed for commercial or ideological reasons. Objective: To determine whether directional activation steering can shift an open-weights LLM's depression treatment recommendations. Design Setting and Participants: This non-human subjects study applied directional activation steering to an open-weights LLM (DeepSeek V4 Flash) responding to 12 depression-advice scenarios (4 favoring medication, 4 favoring avoidance, 4 neutral), generated at 30 amplitudes from -1.5 to +1.5 in 0.1 increments plus an unsteered baseline. Exposures: A single steering direction contrasting antidepressant medication with self-directed approaches (diet, exercise, meditation, dietary supplements), constructed from 16 paired training prompts and applied at the attention output of every transformer block; weights and system prompt were held constant. Main Outcomes and Measures: The extent to which medication and four self-care categories were addressed, scored 0 to 3 by a human-validated LLM rater (Claude Opus 4.7), the medication-versus-self-care balance, and clinician referral, estimated per unit of amplitude using mixed-effects models with a scenario random intercept. Results: Across 372 generations, steering produced a graded, dose-dependent shift in the medication-versus-self-care balance, which declined by 0.32 per unit of amplitude (β = -0.32; 95% CI, -0.39 to -0.25; P < .001); medication extent fell and self-care extent rose. The shift was largest for scenarios with no stated treatment preference (β = -0.44; 95% CI, -0.54 to -0.34; P < .001). A clinician referral appeared in 322 of 372 responses (87%) and did not vary with steering amplitude (P = .63). Conclusions and Relevance: In this open-weights LLM providing depression treatment information, inference-time activation steering shifted treatment recommendations without altering weights, prompt structure, or safety outputs, with the largest effect among users expressing no treatment preference. These findings suggest a need for LLM disclosure standards and independent auditing as such models inform clinical decisions.",
+"zh_abstract": "【重要性】大型语言模型（LLMs）越来越多地为患者和临床医生的心理健康决策提供信息。推理时激活引导（activation steering）可以在不改变权重或提示词、且不向用户披露的情况下，使模型在目标维度上的行为发生偏移，从而使治疗建议可因商业或意识形态原因被悄然改变。【目的】确定方向性激活引导是否能改变一个开放权重LLM的抑郁症治疗建议。【设计、场所与参与者】这项非人类受试者研究将方向性激活引导应用于一个开放权重LLM（DeepSeek V4 Flash），该模型对12个抑郁症建议场景作出回应（4个偏向药物治疗、4个偏向回避、4个中性）；这些回应在从-1.5到+1.5、以0.1为增量的30个振幅下生成，另加一个未引导基线。【暴露】一个单一的引导方向，将抗抑郁药物治疗与自我指导方法（饮食、运动、冥想、膳食补充剂）相对照；该方向由16个配对训练提示词构建，并施加于每个Transformer块的注意力输出；权重和系统提示词保持不变。【主要结局与指标】药物和四个自我照护类别被涉及的程度（由经人工验证的LLM评分者（Claude Opus 4.7）按0至3分评分）、药物与自我照护之间的平衡，以及临床医生转介；使用以场景为随机截距的混合效应模型估计每单位振幅的变化。【结果】在372次生成中，引导使药物与自我照护之间的平衡产生分级、剂量依赖性的偏移，该平衡每单位振幅下降0.32（β = -0.32；95% CI，-0.39至-0.25；P < .001）；药物涉及程度下降，自我照护涉及程度上升。对于未说明治疗偏好的场景，偏移最大（β = -0.44；95% CI，-0.54至-0.34；P < .001）。372份回应中有322份（87%）出现临床医生转介，且不随引导振幅变化（P = .63）。【结论与意义】在这个提供抑郁症治疗信息的开放权重LLM中，推理时激活引导在不改变权重、提示词结构或安全性输出的情况下改变了治疗建议，且在未表达治疗偏好的用户中效应最大。这些发现表明，随着此类模型为临床决策提供信息，需要建立LLM披露标准和独立审计。"
+},
+{
 "title": "MIMIC-Note-Extract: A Large-Scale Structured Dataset Extracted from MIMIC-IV-Note Discharge Summaries",
 "link": "https://arxiv.org/abs/2611.04685",
 "date": "2026-11-03T11:08:51+00:00",
@@ -336,38 +370,6 @@
 "zh_abstract": "[Journal of nursing management] 人工智能（AI）正日益通过支持临床实践、教育、劳动力管理和决策的先进技术改变医疗保健。随着医疗系统面临与劳动力短缺、服务需求增加和快速数字化转型相关的日益严峻挑战，有必要了解AI如何促进培养面向未来的护理队伍，使其具备现代医疗环境所需的能力。本系统综述旨在考察AI在培养面向未来护理队伍中的作用，并综合关于其应用、益处、挑战及对劳动力准备度影响的当前证据。按照PRISMA 2020开展了一项系统综述，并在PROSPERO注册。检索了PubMed、Scopus、Web of Science、CINAHL和IEEE Xplore，以查找2015年1月至2026年2月发表的研究。符合条件的主要研究考察了护理教育、临床实践、劳动力发展、能力发展、劳动力规划或职业准备度中可识别的AI技术或AI特定构念。使用混合方法评价工具（Mixed Methods Appraisal Tool）评估方法学质量，并对研究结果进行叙述性综合。共有38项主要实证研究满足AI特定纳入标准。证据集中于横断面（n = 15）和定性（n = 11）设计，开发/原型（n = 6）、混合方法（n = 3）、随机或准实验（n = 2）及方法学（n = 1）研究较少。AI支持的教育、临床决策支持、劳动力预测和能力发展显示出有前景的益处，但许多证据基于认知、模拟、原型或单中心评估，而非长期实施。反复出现的障碍包括AI素养有限、伦理和隐私担忧、算法偏见、基础设施限制、工作流程整合和组织准备度。AI在支持面向未来的护理队伍方面具有有前景但仍不均衡的潜力。当前证据支持谨慎和分阶段整合，而非不加批判地扩大规模。在广泛部署之前，需要标准化AI和数字能力框架、人工监督、治理、基础设施准备度，以及对有效性、公平性和成本的前瞻性评估。护理管理者应"
 },
 {
-"title": "Silent Manipulation of Mental Health Treatment Recommendations From a Large Language Model.",
-"link": "https://pubmed.ncbi.nlm.nih.gov/42975904/",
-"date": "2026-11-02T00:00:00+00:00",
-"badge": "DOI 10.1001/jamanetworkopen.2026.41142",
-"source": "PubMed · JAMA network open",
-"source_group": "PubMed",
-"home": "",
-"thin": true,
-"pop": null,
-"id": "5c0f0ee51fac",
-"keep": true,
-"zh_title": "大语言模型对心理健康治疗建议的隐性操纵",
-"summary": "据标题：研究考察大语言模型在心理健康治疗建议上被隐性操纵的情况。",
-"key_points": [],
-"section": "大模型与智能体",
-"type": "论文",
-"tags": [
-"医学大模型",
-"公平与安全",
-"心理健康"
-],
-"evidence": "同行评审",
-"score": 5,
-"reason": "仅有标题，无法评估设计与数据，按标题信息给中等偏下档",
-"day": "2026-11-04",
-"rank": 9.14,
-"abstract_days": [
-"2026-11-04"
-],
-"abstract_err": "page: skipped; pubmed: empty; europepmc: empty; openalex: HTTP Error 404: Not Found"
-},
-{
 "title": "Neurotronics Receives FDA Clearance for Sleep Analysis Module, Advancing Nihon Kohden’s AI/ML-Enabled Sleep Analysis Capabilities",
 "link": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxOMlV3aWcydHZfLUVadUxKa05mOG1iYWlld1gzV0FjUFN3R3VTQWJUa1R2b09YWm14cGY5cVM0VUROQ2hWOG9lUThEUlFISUFQS3RnRDZFeElsTFZfdTZZODBxTTRCbzFvalNIdkl5bnI5Ry1MdVd4M3RySkdGMlI2VWJsdUtQNXRwWmxGbFpYTTZUcGtTRVJHN00weW9jZEJOX2x1ZENJRERBdVJtUHlNdllCZWRwbkxicTBoNlhheEFsUTBwaDduSHJwb0VhRkZRdFdZbmNoMmVBUlBWSkhpSXRBUQ?oc=5",
 "date": "2026-11-03T19:00:00+00:00",
@@ -393,7 +395,13 @@
 "score": 5,
 "reason": "FDA器械许可属监管实质进展，但仅标题、无性能与临床信息",
 "day": "2026-11-04",
-"rank": 9.0
+"rank": 9.0,
+"also": [
+{
+"source": "Yahoo Finance",
+"link": "https://news.google.com/rss/articles/CBMipAFBVV95cUxOcHhZcTM1aTRfYS0ycmNqOV83cGF0eUM0OWV3NG84dEZfNGpYcEJuUzR1UmVqcnZPVzBaa1RHRS10NDgwYjR5aEZDZmZ4SEY1azdXYS1zWVp6TzZSYVFJd1Y4OVpyXzdOZF81ZXY0RFY1Z3lOVTBySEU0ZTV1NGc3MGRFVlpZZG5IMUF4WXA4czgyVTZ6ZXNaamtBZWttYmdvM2F6ZA?oc=5"
+}
+]
 },
 {
 "title": "Intraoperative artificial intelligence for brain tumor surgery: from tissue diagnosis to real-time surgical guidance.",
@@ -2691,7 +2699,13 @@
 "abstract": "**Purpose:** Ultrasound biometry is widely used across various clinical applications, including prenatal and cardiac examinations, to obtain quantitative measurements by placing calipers at anatomical landmarks. However, these measurements remain subject to interoperator variability as they rely largely on manual caliper placement. Conventional methods often use specialized prediction heads for different ultrasound tasks, whereas vision-language models offer flexibility through text instructions. However, direct coordinate prediction does not explicitly model spatial likelihood distributions, limiting the representation of localization ambiguity. **Methods:** We propose Kev-Bio, a vision-language model that uses clinical measurement questions to guide ultrasound landmark detection. Inspired by System One decision models, Kev-Bio uses decision representations of the language model to generate queries for each caliper endpoint. These queries are matched against shared dense ultrasound features to produce spatial probability maps, from which landmark coordinates and clinical measurements are derived. The model is trained end-to-end using both landmark localization and clinical measurement losses. **Results:** On the nine-view FU/GU Biometry 2026 dataset, Kev-Bio achieves a mean radial error (MRE) of 22.50 pixels and a clinical measurement mean absolute error (MAE) of 15.38, outperforming the compared baselines in overall performance. **Conclusion:** These results demonstrate the effectiveness of Kev-Bio for ultrasound landmark detection and clinical measurement across different anatomical views. Our code and models are available at https://github.com/moeinheidari7829/Kev-Bio.",
 "day": "2026-11-04",
 "rank": 6.81,
-"zh_abstract": "【目的】超声生物测量广泛应用于各种临床应用，包括产前和心脏检查，通过将卡尺放置在解剖标志处来获得定量测量。然而，这些测量仍然受到操作者间变异性的影响，因为它们在很大程度上依赖手动放置卡尺。传统方法通常针对不同的超声任务使用专门的预测头，而视觉-语言模型通过文本指令提供了灵活性。然而，直接坐标预测并未显式建模空间似然分布，限制了对定位模糊性的表示。【方法】我们提出 Kev-Bio，一种使用临床测量问题来引导超声标志点检测的视觉-语言模型。受系统1（System One）决策模型启发，Kev-Bio 使用语言模型的决策表示为每个卡尺端点生成查询。这些查询与共享的稠密超声特征进行匹配以生成空间概率图，并由此导出标志点坐标和临床测量值。该模型使用标志点定位损失和临床测量损失进行端到端训练。【结果】在九视图 FU/GU Biometry 2026 数据集上，Kev-Bio 达到 22.50 像素的平均径向误差（MRE）和 15.38 的临床测量平均绝对误差（MAE），在整体性能上优于所比较的基线方法。【结论】这些结果证明了 Kev-Bio 在不同解剖视图下用于超声标志点检测和临床测量的有效性。我们的代码和模型可在 https://github.com/moeinheidari7829/Kev-Bio 获取。"
+"zh_abstract": "【目的】超声生物测量广泛应用于各种临床应用，包括产前和心脏检查，通过将卡尺放置在解剖标志处来获得定量测量。然而，这些测量仍然受到操作者间变异性的影响，因为它们在很大程度上依赖手动放置卡尺。传统方法通常针对不同的超声任务使用专门的预测头，而视觉-语言模型通过文本指令提供了灵活性。然而，直接坐标预测并未显式建模空间似然分布，限制了对定位模糊性的表示。【方法】我们提出 Kev-Bio，一种使用临床测量问题来引导超声标志点检测的视觉-语言模型。受系统1（System One）决策模型启发，Kev-Bio 使用语言模型的决策表示为每个卡尺端点生成查询。这些查询与共享的稠密超声特征进行匹配以生成空间概率图，并由此导出标志点坐标和临床测量值。该模型使用标志点定位损失和临床测量损失进行端到端训练。【结果】在九视图 FU/GU Biometry 2026 数据集上，Kev-Bio 达到 22.50 像素的平均径向误差（MRE）和 15.38 的临床测量平均绝对误差（MAE），在整体性能上优于所比较的基线方法。【结论】这些结果证明了 Kev-Bio 在不同解剖视图下用于超声标志点检测和临床测量的有效性。我们的代码和模型可在 https://github.com/moeinheidari7829/Kev-Bio 获取。",
+"also": [
+{
+"source": "Hugging Face Daily Papers",
+"link": "https://huggingface.co/papers/2611.03360"
+}
+]
 },
 {
 "title": "DR-LiteNet: A Lightweight Explainable Hybrid CNN Framework for Imbalanced Diabetic Retinopathy Grading via Adaptive SMOTE Fusion",
@@ -3075,7 +3089,13 @@
 "score": 4,
 "reason": "标准制定启动属治理层面增量，但仅标题、无文本内容",
 "day": "2026-11-04",
-"rank": 6.5
+"rank": 6.5,
+"also": [
+{
+"source": "新浪财经",
+"link": "https://news.google.com/rss/articles/CBMif0FVX3lxTE05MmlkbkhNMVVqRVJxOWhwcGpOOFhaZ2lUT2NEV0lYTmI1TGlkcVdCV1BJMWFPN251aWEzd3ExVE81dTJIX1JPUGpYNXVMSVFIU3pmUDI0Y0VBY1RqNTljcHVrT2R5UlA0bTlzUDNvQWdjMm5hVWhSRFVuVjZlWlU?oc=5"
+}
+]
 },
 {
 "title": "Palantir医疗AI平台遭质疑：29家NHS信托机构或未真正使用-人工智能",
