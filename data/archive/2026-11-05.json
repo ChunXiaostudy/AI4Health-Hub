@@ -99,7 +99,13 @@
 "abstract": "Large language models are increasingly being used to evaluate clinical texts, a concept known as LLM-as-a-judge. However, most of the existing evidence focuses on English data and uses pooled agreement metrics that obscure clinically relevant failure modes. This study audited six open-weight models against expert judges on four German clinical datasets covering report and nursing documentation summarization, discharge summary generation, and patient letter generation. The models were evaluated across three paradigms and four prompt configurations. Alignment with experts varied by criterion and corpus, and no configuration proved reliable across paradigms. All judges exhibited position and identity bias. Substituting LLM-as-a-judge for the expert panel shifted 57.2% of pointwise categories, swapped 41.7% of pairwise winners, missed 10.2% of clinical errors, and inverted clinical priorities by overrating the criteria succinct and accurate. Therefore, LLM-as-a-judge is not a safe substitute for experts in German clinical text evaluations, and deployment thresholds should follow decision-impact analysis for LLM-as-a-judge in clinical contexts.",
 "day": "2026-11-05",
 "rank": 11.31,
-"zh_abstract": "大型语言模型正越来越多地被用于评估临床文本，这一概念被称为LLM作为评判者（LLM-as-a-judge）。然而，现有证据大多集中于英文数据，并使用汇总的一致性指标，掩盖了具有临床相关性的失效模式。本研究以专家评判者为参照，审计了六个开放权重模型在四个德语临床数据集上的表现，这些数据集涵盖报告和护理记录摘要、出院摘要生成以及患者信件生成。模型在三种范式和四种提示配置下接受评估。与专家的一致性因标准和语料而异，且没有任何配置在所有范式中均被证明可靠。所有评判者均表现出位置偏倚和身份偏倚。用LLM作为评判者替代专家小组后，57.2%的逐点类别发生偏移，41.7%的成对胜者被调换，10.2%的临床错误被漏检，并通过高估“简洁”和“准确”标准而颠倒了临床优先次序。因此，在德语临床文本评估中，LLM作为评判者并非专家的安全替代品，部署阈值应遵循针对临床情境中LLM作为评判者的决策影响分析。"
+"zh_abstract": "大型语言模型正越来越多地被用于评估临床文本，这一概念被称为LLM作为评判者（LLM-as-a-judge）。然而，现有证据大多集中于英文数据，并使用汇总的一致性指标，掩盖了具有临床相关性的失效模式。本研究以专家评判者为参照，审计了六个开放权重模型在四个德语临床数据集上的表现，这些数据集涵盖报告和护理记录摘要、出院摘要生成以及患者信件生成。模型在三种范式和四种提示配置下接受评估。与专家的一致性因标准和语料而异，且没有任何配置在所有范式中均被证明可靠。所有评判者均表现出位置偏倚和身份偏倚。用LLM作为评判者替代专家小组后，57.2%的逐点类别发生偏移，41.7%的成对胜者被调换，10.2%的临床错误被漏检，并通过高估“简洁”和“准确”标准而颠倒了临床优先次序。因此，在德语临床文本评估中，LLM作为评判者并非专家的安全替代品，部署阈值应遵循针对临床情境中LLM作为评判者的决策影响分析。",
+"also": [
+{
+"source": "PubMed · NPJ digital medicine",
+"link": "https://pubmed.ncbi.nlm.nih.gov/42982942/"
+}
+]
 },
 {
 "title": "A multimodal tool-augmented agent for evidence-based clinical decision support in longitudinal AMD follow-up",
@@ -264,9 +270,10 @@
 "day": "2026-11-05",
 "rank": 9.99,
 "abstract_days": [
-"2026-11-05"
+"2026-11-05",
+"2026-11-06"
 ],
-"abstract_err": "page: skipped; pubmed: empty; europepmc: empty; openalex: HTTP Error 404: Not Found"
+"abstract_err": "page: skipped; pubmed: empty; europepmc: empty; openalex: empty"
 },
 {
 "title": "All-Atom Structure Tokenizer: AtomLM-9b for Biomolecular Structure Prediction",
@@ -632,7 +639,8 @@
 "day": "2026-11-05",
 "rank": 9.0,
 "abstract_days": [
-"2026-11-05"
+"2026-11-05",
+"2026-11-06"
 ],
 "abstract_err": "page: HTTP Error 403: Forbidden; no DOI / PMID"
 },
@@ -668,7 +676,8 @@
 "day": "2026-11-05",
 "rank": 9.0,
 "abstract_days": [
-"2026-11-05"
+"2026-11-05",
+"2026-11-06"
 ],
 "abstract_err": "page: HTTP Error 403: Forbidden; no DOI / PMID"
 },
@@ -703,7 +712,8 @@
 "day": "2026-11-05",
 "rank": 9.0,
 "abstract_days": [
-"2026-11-05"
+"2026-11-05",
+"2026-11-06"
 ],
 "abstract_err": "page: HTTP Error 403: Forbidden; no DOI / PMID"
 },
@@ -2340,7 +2350,13 @@
 "score": 4,
 "reason": "机构合作落地动态，仅标题无细节，属增量档",
 "day": "2026-11-05",
-"rank": 6.5
+"rank": 6.5,
+"also": [
+{
+"source": "新浪网",
+"link": "https://news.google.com/rss/articles/CBMifkFVX3lxTE0xYW1MWWx5VWtXejJZMVdORjE0MG53X0l1RjM4NHR5TXFPbVJ4b2hQLTRtajFLNmlnaUhaSXc4QVFBT2JvaVZQd1pBUUxhWmE0M0RqcEl2MTkydktpczd4czlrMlVzaWRTbW8tT0pGVmlBNEZZcUNHWVlaamZWZw?oc=5"
+}
+]
 },
 {
 "title": "脑电数据训练也戴“紧箍”，怎么防止患者信息被“滥用”？",
@@ -2459,7 +2475,13 @@
 "score": 4,
 "reason": "AI制药数亿元融资，未达亿美元级，属增量",
 "day": "2026-11-05",
-"rank": 6.31
+"rank": 6.31,
+"also": [
+{
+"source": "动脉网",
+"link": "https://news.google.com/rss/articles/CBMiU0FVX3lxTFA1ZEhXSkt5R1VSSG8xR2dhamxQV0Z3azBnTXNqUnlmQnFFa3hFNjVEbTlmWkp1YjJFMDFHQ2VEMnV4QzRZZkl6LVhNVnNhOTdOMnk4?oc=5"
+}
+]
 },
 {
 "title": "AI-Based Model for Predicting Type 2 Diabetes Risk Using Lifestyle Factors Among Senior Nursing Students",
