@@ -542,7 +542,13 @@
 "score": 5,
 "reason": "监管许可属实质进展，但仅标题、AI信息有限，取中档。",
 "day": "2026-10-27",
-"rank": 9.0
+"rank": 9.0,
+"also": [
+{
+"source": "www.dicardiology.com",
+"link": "https://news.google.com/rss/articles/CBMikwFBVV95cUxOU1pEYWp0M2FzaUFNNTdSazk3MXdLdVFUZmllMDVneUFGRWdpRlZYSWZVdmpDNzVRcHd0dTdBMlB3UDBLOEJCWkZHNEd4SWdLbVZZOXFIN3c0NnJSUVphVHhuRGFGQUdXVXlaejBCc0VKdnQxN0Z2ZGlWeXpWc2pWXzlCVkVYMHl5VE1fdGlTaW11MGs?oc=5"
+}
+]
 },
 {
 "title": "Elucid cardio imaging tech wins FDA clearance",
@@ -1065,7 +1071,13 @@
 "abstract": "[The Journal of international medical research] Hepatitis remains a major global health challenge and an important contributor to liver fibrosis, cirrhosis, hepatocellular carcinoma, and liver-related mortality worldwide. Early diagnosis, effective treatment selection, and accurate prognostic stratification remain critical unmet needs in clinical hepatology. Artificial intelligence, particularly machine learning and deep learning, has emerged as a promising approach to addressing these challenges through the integration and analysis of large-scale, heterogeneous biomedical datasets. This narrative review synthesizes advances in artificial intelligence applications in hepatitis research and clinical practice published over the past decade, organized across three clinical domains: diagnosis, treatment optimization, and prognosis prediction. In the diagnostic domain, artificial intelligence-based approaches have been applied to medical imaging, digital pathology, and multi-omics data to enhance the detection, classification, and staging of liver disease. In the therapeutic domain, machine learning models have been increasingly deployed to support drug discovery, optimize therapeutic regimens, and predict individual treatment responses. In the prognostic domain, artificial intelligence-driven models have shown promising performance in predicting disease progression, survival outcomes, and clinical complications. Nevertheless, key limitations persist, including data heterogeneity, limited external generalizability, and barriers to clinical translation. Future progress will depend on prospective multicenter evaluation, use of interoperable multimodal data, development of transparent models that account for uncertainty, and evidence that artificial intelligence improves clinical decisions and patient outcomes rather than performance metrics alone.",
 "day": "2026-10-27",
 "rank": 7.85,
-"zh_abstract": "[The Journal of international medical research] 肝炎仍是全球重大健康挑战，也是全球肝纤维化、肝硬化、肝细胞癌和肝脏相关死亡率的重要贡献因素。早期诊断、有效治疗选择以及准确预后分层仍是临床肝病学中关键的未满足需求。人工智能，特别是机器学习和深度学习，已通过整合和分析大规模、异质性生物医学数据集，成为应对这些挑战的有前景的方法。本叙述性综述综合了过去十年发表的肝炎研究和临床实践中人工智能应用进展，按三个临床领域组织：诊断、治疗优化和预后预测。在诊断领域，基于人工智能的方法已应用于医学影像、数字病理学和多组学数据，以增强肝脏疾病的检测、分类和分期。在治疗领域，机器学习模型越来越多地被部署用于支持药物发现、优化治疗方案和预测个体治疗反应。在预后领域，人工智能驱动的模型在预测疾病进展、生存结局和临床并发症方面显示出有前景的表现。然而，关键局限性仍然存在，包括数据异质性、外部泛化性有限以及临床转化障碍。未来进展将取决于前瞻性多中心评估、可互操作多模态数据的使用、考虑不确定性的透明模型的开发，以及证明人工智能改善临床决策和患者结局而不仅仅是性能指标的证据。"
+"zh_abstract": "[The Journal of international medical research] 肝炎仍是全球重大健康挑战，也是全球肝纤维化、肝硬化、肝细胞癌和肝脏相关死亡率的重要贡献因素。早期诊断、有效治疗选择以及准确预后分层仍是临床肝病学中关键的未满足需求。人工智能，特别是机器学习和深度学习，已通过整合和分析大规模、异质性生物医学数据集，成为应对这些挑战的有前景的方法。本叙述性综述综合了过去十年发表的肝炎研究和临床实践中人工智能应用进展，按三个临床领域组织：诊断、治疗优化和预后预测。在诊断领域，基于人工智能的方法已应用于医学影像、数字病理学和多组学数据，以增强肝脏疾病的检测、分类和分期。在治疗领域，机器学习模型越来越多地被部署用于支持药物发现、优化治疗方案和预测个体治疗反应。在预后领域，人工智能驱动的模型在预测疾病进展、生存结局和临床并发症方面显示出有前景的表现。然而，关键局限性仍然存在，包括数据异质性、外部泛化性有限以及临床转化障碍。未来进展将取决于前瞻性多中心评估、可互操作多模态数据的使用、考虑不确定性的透明模型的开发，以及证明人工智能改善临床决策和患者结局而不仅仅是性能指标的证据。",
+"also": [
+{
+"source": "PubMed · Zhongguo gu shang = China journal of orthopaedics and traumatology",
+"link": "https://pubmed.ncbi.nlm.nih.gov/42988406/"
+}
+]
 },
 {
 "title": "Applications of Artificial Intelligence in Parasitology: A holistic perspective from diagnosis to therapeutics.",

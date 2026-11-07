@@ -271,7 +271,8 @@
 "rank": 9.99,
 "abstract_days": [
 "2026-11-05",
-"2026-11-06"
+"2026-11-06",
+"2026-11-07"
 ],
 "abstract_err": "page: skipped; pubmed: empty; europepmc: empty; openalex: empty"
 },
@@ -640,7 +641,8 @@
 "rank": 9.0,
 "abstract_days": [
 "2026-11-05",
-"2026-11-06"
+"2026-11-06",
+"2026-11-07"
 ],
 "abstract_err": "page: HTTP Error 403: Forbidden; no DOI / PMID"
 },
@@ -677,7 +679,8 @@
 "rank": 9.0,
 "abstract_days": [
 "2026-11-05",
-"2026-11-06"
+"2026-11-06",
+"2026-11-07"
 ],
 "abstract_err": "page: HTTP Error 403: Forbidden; no DOI / PMID"
 },
@@ -713,7 +716,8 @@
 "rank": 9.0,
 "abstract_days": [
 "2026-11-05",
-"2026-11-06"
+"2026-11-06",
+"2026-11-07"
 ],
 "abstract_err": "page: HTTP Error 403: Forbidden; no DOI / PMID"
 },
@@ -1904,7 +1908,13 @@
 "abstract": "[British journal of hospital medicine (London, England : 2005)] The application of artificial intelligence (AI) in valvular heart disease (VHD) has advanced significantly in recent years. However, a systematic evaluation of this field's historical development, knowledge structure, and global research patterns has yet to be conducted. This paper aims to outline the global evolution of AI research in VHD utilizing bibliometric and knowledge-mapping methods. Publications related to AI and VHD from 1991 to 2025 were retrieved from the Web of Science Core Collection database to investigate research progress. CiteSpace software was employed for bibliometric and knowledge mapping analyses, assessing indicators such as publication trends, keyword networks, collaboration patterns, co-citation relationships, and emerging topics. A total of 3291 pieces of literature were identified. Research productivity remained low until the year before 2004, followed by steady growth and a sharp increase after 2015, culminating in 461 articles by the end of 2025. Network analysis revealed three sequential stages: image-assisted applications, prediction modeling, and recent advancements in deep-learning-based integrated systems. The United States accounted for the largest research volume, while England and Germany served as core nodes in the international cooperation network. Co-citation analysis identified significant clinical guidelines and pioneering interventional studies as key intellectual pillars in this domain. Over the past 35 years, significant progress has been achieved, transitioning from computer systems used solely for image analysis to more integrated clinical applications. Currently, deep learning techniques are increasingly prevalent, accompanied by a focus on multimodal data integration and a stronger linkage between computational methods and clinical decision-making.",
 "day": "2026-11-05",
 "rank": 7.31,
-"zh_abstract": "[《英国医院医学杂志（伦敦，2005 年版）》] 近年来，人工智能（AI）在瓣膜性心脏病（VHD）中的应用已取得显著进展。然而，尚缺乏对该领域历史发展、知识结构和全球研究格局的系统性评价。本文旨在运用文献计量学与知识图谱方法，勾勒 AI 在 VHD 研究中的全球演进脉络。从 Web of Science 核心合集数据库检索 1991 年至 2025 年 AI 与 VHD 相关文献，以考察研究进展。采用 CiteSpace 软件进行文献计量与知识图谱分析，评估发文趋势、关键词网络、合作模式、共被引关系和新兴主题等指标。共识别出 3291 篇文献。在 2004 年之前，研究产出始终较低，随后稳步增长，2015 年后急剧上升，到 2025 年底达到 461 篇。网络分析揭示了三个相继阶段：影像辅助应用、预测建模，以及近期基于深度学习的集成系统的进展。美国的研究量最大，而英格兰和德国是国际合作网络中的核心节点。共被引分析将重要临床指南和开创性介入研究识别为该领域的关键知识支柱。过去 35 年间取得了显著进展，从仅用于图像分析的计算机系统，过渡到更为整合的临床应用。目前，深度学习技术日益普及，同时伴随对多模态数据整合的关注，以及计算方法与临床决策之间更紧密的联系。"
+"zh_abstract": "[《英国医院医学杂志（伦敦，2005 年版）》] 近年来，人工智能（AI）在瓣膜性心脏病（VHD）中的应用已取得显著进展。然而，尚缺乏对该领域历史发展、知识结构和全球研究格局的系统性评价。本文旨在运用文献计量学与知识图谱方法，勾勒 AI 在 VHD 研究中的全球演进脉络。从 Web of Science 核心合集数据库检索 1991 年至 2025 年 AI 与 VHD 相关文献，以考察研究进展。采用 CiteSpace 软件进行文献计量与知识图谱分析，评估发文趋势、关键词网络、合作模式、共被引关系和新兴主题等指标。共识别出 3291 篇文献。在 2004 年之前，研究产出始终较低，随后稳步增长，2015 年后急剧上升，到 2025 年底达到 461 篇。网络分析揭示了三个相继阶段：影像辅助应用、预测建模，以及近期基于深度学习的集成系统的进展。美国的研究量最大，而英格兰和德国是国际合作网络中的核心节点。共被引分析将重要临床指南和开创性介入研究识别为该领域的关键知识支柱。过去 35 年间取得了显著进展，从仅用于图像分析的计算机系统，过渡到更为整合的临床应用。目前，深度学习技术日益普及，同时伴随对多模态数据整合的关注，以及计算方法与临床决策之间更紧密的联系。",
+"also": [
+{
+"source": "PubMed · Frontiers in oncology",
+"link": "https://pubmed.ncbi.nlm.nih.gov/42984517/"
+}
+]
 },
 {
 "title": "Application of Generative Artificial Intelligence in Perioperative Personalized Rehabilitation for Older Adults With Lung Cancer",
@@ -2324,7 +2334,13 @@
 "score": 4,
 "reason": "访谈观点，仅标题信息，属增量档",
 "day": "2026-11-05",
-"rank": 6.5
+"rank": 6.5,
+"also": [
+{
+"source": "新浪网",
+"link": "https://news.google.com/rss/articles/CBMickFVX3lxTE5kTVRuX1YzYkJzZGsxY2Z0RGVibGY5Yl9xUEszd3BIc01ESzBTTzd4NlBLa3Y1djI1WWw3Q3pVZlpYLUJUZ3ZMdl80QUdhZnJCNmZGSVR2eGlDUzlDNVlfVk5vN2NGMlRfd1BGQkdWaVhHdw?oc=5"
+}
+]
 },
 {
 "title": "华西联合华为交出答卷：医疗AI走向平台化体系化落地",

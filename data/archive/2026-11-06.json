@@ -333,7 +333,8 @@
 "day": "2026-11-06",
 "rank": 10.0,
 "abstract_days": [
-"2026-11-06"
+"2026-11-06",
+"2026-11-07"
 ],
 "abstract_err": "page: HTTP Error 403: Forbidden; no DOI / PMID"
 },
@@ -368,7 +369,8 @@
 "day": "2026-11-06",
 "rank": 10.0,
 "abstract_days": [
-"2026-11-06"
+"2026-11-06",
+"2026-11-07"
 ],
 "abstract_err": "page: HTTP Error 403: Forbidden; no DOI / PMID"
 },
@@ -1224,7 +1226,8 @@
 "day": "2026-11-06",
 "rank": 8.0,
 "abstract_days": [
-"2026-11-06"
+"2026-11-06",
+"2026-11-07"
 ],
 "abstract_err": "page: HTTP Error 403: Forbidden; no DOI / PMID"
 },
@@ -2124,7 +2127,13 @@
 "abstract": "[Oncology nursing forum] Cancer care requires critical reasoning, ethical judgment, therapeutic communication, and individualized decisions that cannot be delegated to technology. Oncology nurses must retain authority to question, escalate, report, a.",
 "day": "2026-11-06",
 "rank": 7.31,
-"zh_abstract": "[肿瘤护理论坛] 癌症护理需要批判性推理、伦理判断、治疗性沟通和个体化决策，这些不能委托给技术。肿瘤科护士必须保留质疑、升级、报告、a. 的权限。"
+"zh_abstract": "[肿瘤护理论坛] 癌症护理需要批判性推理、伦理判断、治疗性沟通和个体化决策，这些不能委托给技术。肿瘤科护士必须保留质疑、升级、报告、a. 的权限。",
+"also": [
+{
+"source": "PubMed · Current opinion in nephrology and hypertension",
+"link": "https://pubmed.ncbi.nlm.nih.gov/42989632/"
+}
+]
 },
 {
 "title": "AI in health care: from clinical support to algorithmic management?",
