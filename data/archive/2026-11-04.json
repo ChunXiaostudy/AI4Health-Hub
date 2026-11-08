@@ -100,7 +100,13 @@
 "abstract": "Pure data-driven artificial intelligence (AI) is insufficient for clinical adoption. This editorial summarizes 31 papers showing that precision medicine requires integrating structural domain knowledge before model training. We identify three necessary transitions: anchoring algorithms in biological laws for mechanistic interpretability; designing collaborative, human-centered clinical interfaces; and scaling equitable, population-level interventions. These shifts advance medical AI from technical novelty toward trustworthy, clinically grounded, and ethically deployed foundational science.",
 "day": "2026-11-04",
 "rank": 10.31,
-"zh_abstract": "纯数据驱动的人工智能（AI）不足以用于临床采纳。这篇社论总结了31篇论文，表明精准医学需要在模型训练之前整合结构化的领域知识。我们确定了三项必要的转变：将算法锚定于生物学规律以实现机制可解释性；设计协作式、以人为中心的临床界面；以及扩展公平的、人群层面的干预措施。这些转变推动医学AI从技术新奇性走向值得信赖、具有临床基础且合乎伦理部署的基础科学。"
+"zh_abstract": "纯数据驱动的人工智能（AI）不足以用于临床采纳。这篇社论总结了31篇论文，表明精准医学需要在模型训练之前整合结构化的领域知识。我们确定了三项必要的转变：将算法锚定于生物学规律以实现机制可解释性；设计协作式、以人为中心的临床界面；以及扩展公平的、人群层面的干预措施。这些转变推动医学AI从技术新奇性走向值得信赖、具有临床基础且合乎伦理部署的基础科学。",
+"also": [
+{
+"source": "PubMed · NPJ digital medicine",
+"link": "https://pubmed.ncbi.nlm.nih.gov/42977730/"
+}
+]
 },
 {
 "title": "The TEMPO program and the future of digital mental health regulation in the US",

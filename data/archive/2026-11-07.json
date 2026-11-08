@@ -261,9 +261,10 @@
 "day": "2026-11-07",
 "rank": 9.72,
 "abstract_days": [
-"2026-11-07"
+"2026-11-07",
+"2026-11-08"
 ],
-"abstract_err": "page: skipped; pubmed: empty; europepmc: empty; openalex: HTTP Error 404: Not Found"
+"abstract_err": "page: skipped; pubmed: empty; europepmc: empty; openalex: empty"
 },
 {
 "title": "Patient-Friendly Simplifications of Outpatient Reports Using Large Language Models via Few-Shot Prompting: Blinded Comparative Evaluation.",

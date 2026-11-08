@@ -667,7 +667,13 @@
 "abstract": "Transcription initiation is a key marker of active enhancers and promoters. Here we describe an atlas of efficient and interpretable deep learning models trained on over 200 transcription initiation profiling experiments representing all major human organs and many cancer types. We show that our models accurately predict initiation patterns from local DNA sequence and decode their sequence determinants across diverse cellular contexts.",
 "day": "2026-11-01",
 "rank": 8.64,
-"zh_abstract": "转录起始是活跃增强子和启动子的关键标志。在此，我们描述了一个图谱，包含在代表所有主要人体器官和多种癌症类型的超过200项转录起始谱分析实验中训练的高效且可解释的深度学习模型。我们表明，我们的模型能够从局部DNA序列准确预测起始模式，并在多种细胞情境中解析其序列决定因素。"
+"zh_abstract": "转录起始是活跃增强子和启动子的关键标志。在此，我们描述了一个图谱，包含在代表所有主要人体器官和多种癌症类型的超过200项转录起始谱分析实验中训练的高效且可解释的深度学习模型。我们表明，我们的模型能够从局部DNA序列准确预测起始模式，并在多种细胞情境中解析其序列决定因素。",
+"also": [
+{
+"source": "PubMed · bioRxiv : the preprint server for biology",
+"link": "https://pubmed.ncbi.nlm.nih.gov/42990552/"
+}
+]
 },
 {
 "title": "A Large Language Model Framework for Seed Implant Brachytherapy: Adaptive Weight Optimization via Retrieval-Augmented Generation.",
