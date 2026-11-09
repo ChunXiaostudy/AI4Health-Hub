@@ -10539,7 +10539,13 @@
 "abstract": "[Journal of Alzheimer's disease reports] Population aging has increased the prevalence of neurodegenerative disorders associated with dementia, with Alzheimer's disease remaining the leading cause worldwide. Early identification of individuals at risk of cognitive decline, particularly those with mild cognitive impairment, remains a major clinical and scientific challenge. In this context, artificial intelligence has emerged as a promising framework for prognostic modeling and for the identification of clinically relevant predictors of disease onset and progression. This narrative review provides a theoretical and historical synthesis of the main machine learning and deep learning approaches used to predict cognitive decline and dementia from multimodal data, including biomarkers, clinical and demographic variables, cognitive measures, and neuroimaging markers. The review examines the methodological evolution of the field, from traditional statistical approaches to ensemble methods and deep neural architectures, and discusses the growing role of multimodal and longitudinal data integration. It also highlights major unresolved issues, including limited external validation, reduced interpretability, restricted generalizability, and the gap between predictive performance and clinical implementation. Overall, artificial intelligence has substantially advanced prediction research in cognitive decline and dementia, but its routine clinical adoption will depend on more rigorous validation, improved transparency, and stronger integration between neuroscience, clinical practice, and data science.",
 "day": "2026-10-16",
 "rank": 6.61,
-"zh_abstract": "[Journal of Alzheimer's disease reports] 人口老龄化增加了与痴呆相关的神经退行性疾病的患病率，而阿尔茨海默病（Alzheimer's disease）仍然是全球范围内的首要病因。早期识别处于认知衰退风险的个体，尤其是轻度认知障碍（mild cognitive impairment）患者，仍然是一项重大的临床与科学挑战。在此背景下，人工智能已成为一个有前景的框架，用于预后建模以及识别与疾病发病和进展相关的临床相关预测因子。本叙述性综述对用于从多模态数据（包括生物标志物、临床与人口学变量、认知测量指标以及神经影像标志物）预测认知衰退和痴呆的主要机器学习与深度学习方法，进行了理论与历史性的综合梳理。本综述考察了该领域的方法学演变，从传统统计方法到集成方法与深度神经网络架构，并讨论了多模态与纵向数据整合日益增长的作用。它还强调了尚未解决的重大问题，包括外部验证有限、可解释性降低、泛化能力受限，以及预测性能与临床实施之间的差距。总体而言，人工智能已大幅推进了认知衰退与痴呆的预测研究，但其在临床中的常规采用将取决于更严格的验证、更高的透明度，以及神经科学、临床实践与数据科学之间更紧密的整合。"
+"zh_abstract": "[Journal of Alzheimer's disease reports] 人口老龄化增加了与痴呆相关的神经退行性疾病的患病率，而阿尔茨海默病（Alzheimer's disease）仍然是全球范围内的首要病因。早期识别处于认知衰退风险的个体，尤其是轻度认知障碍（mild cognitive impairment）患者，仍然是一项重大的临床与科学挑战。在此背景下，人工智能已成为一个有前景的框架，用于预后建模以及识别与疾病发病和进展相关的临床相关预测因子。本叙述性综述对用于从多模态数据（包括生物标志物、临床与人口学变量、认知测量指标以及神经影像标志物）预测认知衰退和痴呆的主要机器学习与深度学习方法，进行了理论与历史性的综合梳理。本综述考察了该领域的方法学演变，从传统统计方法到集成方法与深度神经网络架构，并讨论了多模态与纵向数据整合日益增长的作用。它还强调了尚未解决的重大问题，包括外部验证有限、可解释性降低、泛化能力受限，以及预测性能与临床实施之间的差距。总体而言，人工智能已大幅推进了认知衰退与痴呆的预测研究，但其在临床中的常规采用将取决于更严格的验证、更高的透明度，以及神经科学、临床实践与数据科学之间更紧密的整合。",
+"also": [
+{
+"source": "PubMed · Frontiers in digital health",
+"link": "https://pubmed.ncbi.nlm.nih.gov/42984954/"
+}
+]
 },
 {
 "title": "Experts favor a new regulatory framework for clinical AI models",
