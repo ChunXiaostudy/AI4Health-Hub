@@ -1,0 +1,109 @@
+{
+ "week": "2026-W45",
+ "range": "2026-11-02 ~ 2026-11-08",
+ "partial": false,
+ "generated": "2026-11-09T07:42:05.295485+00:00",
+ "summary": "本周临床预测研究强调部署与外部验证。AURA将可解释自免预测模型嵌入单家学术医疗系统电子病历，以两年随机实用性研究评估确诊时间影响[1]；步态基础模型基于3,328名成人单深度相机3D骨骼运动，预测跨18个身体系统健康表型[3]。中国多中心队列纳入4,367例不稳定心绞痛合并HFpEF患者，构建12/24/36个月心衰住院风险模型并外部验证[6]；谵妄风险模型在两院真实部署中完成跨院外部验证，融合多模态与NLP[8]。上述结果限于各自人群与终点。\n\n影像与病理方向覆盖基础模型、流程与质控。RetiME以视网膜照片和基础模型映射个体死亡风险，并在三大洲三个外部队列验证[2]；RETBind以统一编码器、配对OCT与超广角眼底图开展患者级多模态预训练[14]。通用CLIP与商用检测器协同，多中心回顾性外部验证n=2,001显示可安全降级非增强脑CT[5]；KITE-CRM在CT肾囊性肿块中完成多中心验证、阅片者研究与随机实施研究，改善判读与报告效率，但未确立长期肿瘤学安全性[10]。仅图像超声预测分娩日期在智利四院2,550例孕妇中外部验证，误差优于常规但重定标后增益不足一天[7]；AI辅助大血管闭塞卒中检测的Meta分析纳入13项观察性研究[17]；3D分割质控与CT气道结节检测分别报告集成不确定性方法和四院独立外部测试[19][20]。\n\n数字健康与大模型智能体研究扩展数据来源与评估维度。腕部PPG在110万条餐食数据上对齐餐食描述，卡路里摄入代理与饱腹度预测AUC提升11%，并在独立队列验证[4]；六国1,197名倒班工作者以每日两次语音的副语言特征预测急慢性疲劳[12]；母婴健康聊天机器人RCT评估12个月焦虑抑郁症状影响[9]。AMDagent整合定量影像与指南检索，为AMD随访提供有证据归属的结构化决策支持[15]；血管外科智能体基于14部ESVS指南，以55个病例情景做自动化基准评测[16]。四个德语临床数据集审计六款开放权重模型作为裁判与专家评分的一致性及失败模式[13]；统计框架以四项指标及llmReproScore量化LLM输出变异[18]。\n\n落地与监管层面，基于2023年Medicare Part B约450亿美元、56个专科58.9万名医生申报数据的分析，讨论需实体接触工作占比及对AI替代上限的影响[11]。本周条目均为同行评审研究；外部验证与实施评估受到重视，但长期结局和跨系统泛化仍需观察。",
+ "items": [
+  {
+   "title": "随机评估自身免疫病预测模型AURA",
+   "link": "https://ai.nejm.org/doi/full/10.1056/AIoa2600112?af=R&rss=currentIssue",
+   "source": "NEJM AI"
+  },
+  {
+   "title": "视网膜影像基础模型个体化建模寿命轨迹预测死亡风险",
+   "link": "https://www.nature.com/articles/s41551-026-01822-4",
+   "source": "Nature Biomedical Engineering"
+  },
+  {
+   "title": "步态基础模型：3D骨骼运动预测多系统健康表型",
+   "link": "https://www.nature.com/articles/s41591-026-04724-9",
+   "source": "Nature Medicine"
+  },
+  {
+   "title": "腕部PPG可编码饮食信息",
+   "link": "https://www.nature.com/articles/s41746-026-03425-4",
+   "source": "npj Digital Medicine"
+  },
+  {
+   "title": "通用-专用AI协同实现脑CT工作清单安全降级",
+   "link": "https://www.nature.com/articles/s41746-026-03447-y",
+   "source": "npj Digital Medicine"
+  },
+  {
+   "title": "AI驱动的不稳定心绞痛合并HFpEF心衰住院多时间跨度风险分层",
+   "link": "https://www.nature.com/articles/s41746-026-03427-2",
+   "source": "npj Digital Medicine"
+  },
+  {
+   "title": "仅图像超声预测分娩日期模型在智利四院外部验证",
+   "link": "https://www.nature.com/articles/s41746-026-03453-0",
+   "source": "npj Digital Medicine"
+  },
+  {
+   "title": "机器学习谵妄风险模型的跨院外部验证",
+   "link": "https://pubmed.ncbi.nlm.nih.gov/42981091/",
+   "source": "PubMed · JAMA network open"
+  },
+  {
+   "title": "生成式AI母婴健康聊天机器人RCT",
+   "link": "https://pubmed.ncbi.nlm.nih.gov/42981095/",
+   "source": "PubMed · JAMA network open"
+  },
+  {
+   "title": "CT影像AI辅助肾囊性肿块风险分层：多中心验证与随机实施研究",
+   "link": "https://www.thelancet.com/journals/eclinm/article/PIIS2589-5370(26)00532-8/fulltext?rss=yes",
+   "source": "eClinicalMedicine"
+  },
+  {
+   "title": "各专科 AI 替代的物理极限与医生人力影响",
+   "link": "https://ai.nejm.org/doi/full/10.1056/AIp2600957?af=R&rss=currentIssue",
+   "source": "NEJM AI"
+  },
+  {
+   "title": "基于语音数据预测疲劳的不同维度：倒班工作者纵向研究",
+   "link": "https://www.nature.com/articles/s41746-026-03437-0",
+   "source": "npj Digital Medicine"
+  },
+  {
+   "title": "临床文本评估中大模型裁判的跨范式审计",
+   "link": "https://www.nature.com/articles/s41746-026-03443-2",
+   "source": "npj Digital Medicine"
+  },
+  {
+   "title": "RETBind：患者级多模态视网膜基础模型",
+   "link": "https://www.nature.com/articles/s41746-026-03426-3",
+   "source": "npj Digital Medicine"
+  },
+  {
+   "title": "AMD随访多模态工具增强临床决策智能体",
+   "link": "https://www.nature.com/articles/s41746-026-03412-9",
+   "source": "npj Digital Medicine"
+  },
+  {
+   "title": "面向血管外科的多指南临床智能体",
+   "link": "https://pubmed.ncbi.nlm.nih.gov/42978152/",
+   "source": "PubMed · Journal of the American Medical Informatics Association : JAMIA"
+  },
+  {
+   "title": "AI检测大血管闭塞卒中及流程优化Meta分析",
+   "link": "https://pubmed.ncbi.nlm.nih.gov/42974828/",
+   "source": "PubMed · Journal of neurosurgical sciences"
+  },
+  {
+   "title": "评估大语言模型可重复性与再现性的统计框架",
+   "link": "https://pubmed.ncbi.nlm.nih.gov/42987417/",
+   "source": "PubMed · Journal of the American Medical Informatics Association : JAMIA"
+  },
+  {
+   "title": "集成不确定性用于人群影像3D分割质控",
+   "link": "https://www.sciencedirect.com/science/article/pii/S1361841526004202?dgcid=rss_sd_all",
+   "source": "Medical Image Analysis"
+  },
+  {
+   "title": "深度学习检测与分类CT气道结节",
+   "link": "https://pubmed.ncbi.nlm.nih.gov/42986384/",
+   "source": "PubMed · Insights into imaging"
+  }
+ ]
+}
