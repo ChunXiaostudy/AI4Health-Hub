@@ -200,7 +200,13 @@
 "abstract": "[Journal of medical imaging (Bellingham, Wash.)] We aim to present a consolidated overview of current achievements in generative artificial intelligence (AI) in breast imaging, identify prevalent technical and clinical challenges alongside the strategies employed to overcome them, and highlight critical directions for future investigation. A comprehensive literature search has been conducted in PubMed, MEDLINE, and Embase for peer-reviewed journal publications since 2020, with the final search performed in October 2025. The review focuses on common methodologies, performance metrics, and strategies used to address existing hurdles in breast imaging. The 120 included papers were categorized by application, ranging from technical and/or clinical tasks-image synthesis (including 24 data augmentation, 10 enhancement, 20 image-to-image translation, and 2 secure data sharing papers), 12 segmentation, 5 reconstruction, and 16 classification papers-as well as 17 papers in radiology workflow improvement, 13 papers in the development of medical education materials, and 7 papers on solving beyond our defined tasks (six papers were assigned more than one application). Papers in each category showed their own potential to solve the task of interests. However, we identified six common challenges and concerns, such as lack of standardized evaluation for synthetic outputs, across papers that the future research should be focused on. Recent works across the field of generative AI in breast imaging have demonstrated transformative potential in clinical workflows. However, there still exists technical and ethical gaps to be addressed for safe, reliable, and equitable deployment of the generative AI models to routine medical practice.",
 "day": "2026-11-09",
 "rank": 9.99,
-"zh_abstract": "[Journal of medical imaging (Bellingham, Wash.)] 我们旨在对乳腺影像中生成式人工智能（AI）的当前成果进行整合性概述，识别常见技术与临床挑战及用于克服这些挑战的策略，并强调未来研究的关键方向。我们在PubMed、MEDLINE和Embase中对2020年以来同行评议期刊发表文献进行了全面检索，最终检索于2025年10月进行。本综述聚焦于乳腺影像中用于解决现有障碍的常见方法、性能指标和策略。纳入的120篇论文按应用分类，涵盖技术与/或临床任务——图像合成（包括24篇数据增强、10篇增强、20篇图像到图像翻译和2篇安全数据共享论文）、12篇分割、5篇重建和16篇分类论文——以及17篇放射学工作流程改进论文、13篇医学教育材料开发论文和7篇解决超出我们所定义任务的论文（6篇论文被分配至一个以上应用）。各类别论文均显示出解决其感兴趣任务的自身潜力。然而，我们识别出六项跨论文的共同挑战和关切，例如合成输出缺乏标准化评估，未来研究应重点关注。乳腺影像生成式AI领域的最新工作已证明其在临床工作流程中的变革潜力。然而，要将生成式AI模型安全、可靠和公平地部署到常规医疗实践中，仍需解决技术和社会伦理方面的差距。"
+"zh_abstract": "[Journal of medical imaging (Bellingham, Wash.)] 我们旨在对乳腺影像中生成式人工智能（AI）的当前成果进行整合性概述，识别常见技术与临床挑战及用于克服这些挑战的策略，并强调未来研究的关键方向。我们在PubMed、MEDLINE和Embase中对2020年以来同行评议期刊发表文献进行了全面检索，最终检索于2025年10月进行。本综述聚焦于乳腺影像中用于解决现有障碍的常见方法、性能指标和策略。纳入的120篇论文按应用分类，涵盖技术与/或临床任务——图像合成（包括24篇数据增强、10篇增强、20篇图像到图像翻译和2篇安全数据共享论文）、12篇分割、5篇重建和16篇分类论文——以及17篇放射学工作流程改进论文、13篇医学教育材料开发论文和7篇解决超出我们所定义任务的论文（6篇论文被分配至一个以上应用）。各类别论文均显示出解决其感兴趣任务的自身潜力。然而，我们识别出六项跨论文的共同挑战和关切，例如合成输出缺乏标准化评估，未来研究应重点关注。乳腺影像生成式AI领域的最新工作已证明其在临床工作流程中的变革潜力。然而，要将生成式AI模型安全、可靠和公平地部署到常规医疗实践中，仍需解决技术和社会伦理方面的差距。",
+"also": [
+{
+"source": "PubMed · The Journal of heart and lung transplantation : the official publication of the International Society for Heart Transplantation",
+"link": "https://pubmed.ncbi.nlm.nih.gov/43000107/"
+}
+]
 },
 {
 "title": "Artificial intelligence in cardiovascular medicine: systematic review of randomized controlled trials.",
@@ -861,7 +867,13 @@
 "score": 5,
 "reason": "大额融资属重要信号，但仅标题无细节，受标题上限约束",
 "day": "2026-11-09",
-"rank": 7.31
+"rank": 7.31,
+"also": [
+{
+"source": "搜狐网",
+"link": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxNb2JKNmxxODR1cjVBRnBuUldVZUtyMjdpeUlWQ2g3UlR6eC1HQ2ZReXlGYUFXRk9rLWdjR0xmTl9UNDFkUmtDSVhMWDhpRkRFRTFEY0RyLUlDeDNOSVl5R296TDhpWGtZY0JRYk9vSmRRc0xuYkhveVBhV2l3SWk5R2RHV3NMNW1U?oc=5"
+}
+]
 },
 {
 "title": "FDA Grants Breakthrough Device Designation to Cleo Skin AI Pathology Tool",
@@ -1385,6 +1397,12 @@
 "score": 3,
 "reason": "企业高管访谈观点，仅标题信息有限，属增量档",
 "day": "2026-11-09",
-"rank": 5.31
+"rank": 5.31,
+"also": [
+{
+"source": "每日经济新闻",
+"link": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE1Yem15dnViNFFvaG52RHBvNnZuYXBOeTBjRlNUM2tsOEIwSlVtTEM4MzNacFVVS1Q5YXBQVUJyUkZxTm14RDNLaTIySmdHNU5nWnNEUjZEeTRVTHFkUzJCTWdDQU11dw?oc=5"
+}
+]
 }
 ]

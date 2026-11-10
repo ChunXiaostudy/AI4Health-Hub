@@ -30,7 +30,13 @@
 "abstract": "Gait is increasingly recognized as a vital sign, yet current approaches treat it as a symptom of specific pathologies rather than a systemic biomarker. Here we developed a gait foundation model for three-dimensional skeletal motion, which was recorded via a single-depth camera during 5 motor tasks, from 3,328 deeply phenotyped adults. Our purpose was to capture the full pattern of a person’s movement and use it to predict health phenotypes such as grip strength and sleep quality across 18 body systems. Gait is conventionally described by engineered features (for example, calculated measurements such as cadence and stride length), which may fail to capture the fine detail of how a person moves. Our model instead translates movement into learned embeddings: sets of numbers that describe how all body joints move together over time. Learned embeddings outperformed engineered features for prediction of age (Pearsonʼs r = 0.69), body mass index ( r = 0.91) and visceral adipose tissue area ( r = 0.83), and embeddings significantly predicted 1,887 of 3,210 tested phenotypes. Relative to a baseline model using age, body mass index, visceral adipose tissue and height alone, gait embeddings improved prediction in all 18 systems in males and 17 of 18 in females, as well as prediction of clinical diagnoses and medication use. Anatomical ablation analyses revealed that leg dynamics dominated metabolic and frailty predictions, and torso dynamics encoded sleep and lifestyle phenotypes. These findings establish gait as an independent, multisystem biosignal, motivating integration of gait analysis into routine clinical assessment as a scalable, passive vital sign. A gait foundation model, developed using three-dimensional skeletal motion data from 3,328 adults, predicts a wide array of clinical characteristics and diagnoses, including cardiometabolic, mental health and frailty phenotypes.",
 "day": "2026-11-07",
 "rank": 12.81,
-"zh_abstract": "步态日益被视为一种生命体征，但当前方法仍将其视为特定病理的症状，而非系统性生物标志物。在此，我们开发了一个针对三维骨骼运动的步态基础模型（gait foundation model），该运动由单深度相机在5项运动任务中记录，来自3,328名深度表型成人。我们的目的是捕捉一个人运动的完整模式，并用其预测跨越18个身体系统的健康表型，如握力和睡眠质量。步态通常由工程化特征（例如，计算得到的步频和步幅等测量值）描述，这些特征可能无法捕捉一个人如何运动的精细细节。我们的模型则将运动转换为学习到的嵌入：一组描述所有身体关节随时间共同运动方式的数值。学习到的嵌入在预测年龄（Pearson r = 0.69）、体重指数（r = 0.91）和内脏脂肪组织面积（r = 0.83）方面优于工程化特征，并且嵌入显著预测了3,210个受测表型中的1,887个。相对于仅使用年龄、体重指数、内脏脂肪组织和身高的基线模型，步态嵌入改善了男性全部18个系统和女性18个系统中17个系统的预测，以及临床诊断和药物使用的预测。解剖消融分析显示，腿部动力学主导代谢和衰弱预测，而躯干动力学编码睡眠和生活方式表型。这些发现确立了步态作为一种独立的多系统生物信号，推动将步态分析整合到常规临床评估中，作为一种可扩展的被动生命体征。一个利用3,328名成人三维骨骼运动数据开发的步态基础模型可预测广泛的临床特征和诊断，包括心脏代谢、心理健康和衰弱表型。"
+"zh_abstract": "步态日益被视为一种生命体征，但当前方法仍将其视为特定病理的症状，而非系统性生物标志物。在此，我们开发了一个针对三维骨骼运动的步态基础模型（gait foundation model），该运动由单深度相机在5项运动任务中记录，来自3,328名深度表型成人。我们的目的是捕捉一个人运动的完整模式，并用其预测跨越18个身体系统的健康表型，如握力和睡眠质量。步态通常由工程化特征（例如，计算得到的步频和步幅等测量值）描述，这些特征可能无法捕捉一个人如何运动的精细细节。我们的模型则将运动转换为学习到的嵌入：一组描述所有身体关节随时间共同运动方式的数值。学习到的嵌入在预测年龄（Pearson r = 0.69）、体重指数（r = 0.91）和内脏脂肪组织面积（r = 0.83）方面优于工程化特征，并且嵌入显著预测了3,210个受测表型中的1,887个。相对于仅使用年龄、体重指数、内脏脂肪组织和身高的基线模型，步态嵌入改善了男性全部18个系统和女性18个系统中17个系统的预测，以及临床诊断和药物使用的预测。解剖消融分析显示，腿部动力学主导代谢和衰弱预测，而躯干动力学编码睡眠和生活方式表型。这些发现确立了步态作为一种独立的多系统生物信号，推动将步态分析整合到常规临床评估中，作为一种可扩展的被动生命体征。一个利用3,328名成人三维骨骼运动数据开发的步态基础模型可预测广泛的临床特征和诊断，包括心脏代谢、心理健康和衰弱表型。",
+"also": [
+{
+"source": "Nature Medicine",
+"link": "https://www.nature.com/articles/s41591-026-04725-8"
+}
+]
 },
 {
 "title": "Wrist photoplethysmography encodes dietary information",
@@ -263,7 +269,8 @@
 "abstract_days": [
 "2026-11-07",
 "2026-11-08",
-"2026-11-09"
+"2026-11-09",
+"2026-11-10"
 ],
 "abstract_err": "page: skipped; pubmed: empty; europepmc: empty; openalex: empty"
 },
@@ -1328,7 +1335,13 @@
 "abstract": "Medical 3D scans and reports are inherently hierarchical, with diagnostic cues concentrated in specific anatomical regions across multiple levels of organization. Yet, most medical vision-language models ignore this structure and fail to focus on clinically relevant anatomy. We introduce MedHiVE, which combines hierarchical vision-language Soft Mixture-of-Experts (SMoE) with contrastive learning to jointly model fine-grained anatomy and global scan context. To our knowledge, MedHiVE is the first framework to route both vision and text tokens through a two-level SMoE hierarchy organized by anatomical scale, coupling this with report-derived anatomy-level contrastive alignment for 3D medical imaging. This replaces the direct region-text alignment of statically pooled features and vision-only hierarchical routing of prior work with dynamic, slot-based cross-modal information flow across anatomical scales. MedHiVE operates via a two-level, learnable token-routing mechanism, where local image and text features are first routed through a local SMoE and then fused by a global SMoE into unified multimodal representations. Contrastive learning aligns both anatomy-level and global vision-language representations in a unified space. Pre-trained on 25,000+ CT scans with anatomical supervision, MedHiVE consistently surpasses 11 state-of-the-art methods across 6 datasets on 3 tasks: segmentation, classification, and detection, demonstrating the importance of hierarchical modeling. The code for MedHiVE is at github.com/szczurek-lab/MedHiVE.",
 "day": "2026-11-07",
 "rank": 7.64,
-"zh_abstract": "医学3D扫描和报告本质上是层级化的，诊断线索集中在多个组织层级的特定解剖区域。然而，大多数医学视觉-语言模型忽略这种结构，未能聚焦于临床相关解剖。我们介绍MedHiVE，它将层级化视觉-语言软混合专家（SMoE）与对比学习相结合，以联合建模细粒度解剖结构和全局扫描上下文。据我们所知，MedHiVE是首个通过按解剖尺度组织的两级SMoE层级路由视觉和文本token的框架，并将其与用于3D医学影像的报告衍生的解剖层面对比对齐相结合。这取代了先前工作中静态池化特征的直接区域-文本对齐和仅视觉的层级路由，转而采用跨解剖尺度的动态、基于槽的跨模态信息流。MedHiVE通过两级可学习token路由机制运行，其中局部图像和文本特征首先通过局部SMoE路由，然后由全局SMoE融合为统一多模态表征。对比学习在统一空间中对齐解剖层面和全局视觉-语言表征。MedHiVE在25,000+例CT扫描上以解剖监督进行预训练，在6个数据集、3项任务（分割、分类和检测）上持续超越11种最先进方法，证明层级化建模的重要性。MedHiVE的代码见github.com/szczurek-lab/MedHiVE。"
+"zh_abstract": "医学3D扫描和报告本质上是层级化的，诊断线索集中在多个组织层级的特定解剖区域。然而，大多数医学视觉-语言模型忽略这种结构，未能聚焦于临床相关解剖。我们介绍MedHiVE，它将层级化视觉-语言软混合专家（SMoE）与对比学习相结合，以联合建模细粒度解剖结构和全局扫描上下文。据我们所知，MedHiVE是首个通过按解剖尺度组织的两级SMoE层级路由视觉和文本token的框架，并将其与用于3D医学影像的报告衍生的解剖层面对比对齐相结合。这取代了先前工作中静态池化特征的直接区域-文本对齐和仅视觉的层级路由，转而采用跨解剖尺度的动态、基于槽的跨模态信息流。MedHiVE通过两级可学习token路由机制运行，其中局部图像和文本特征首先通过局部SMoE路由，然后由全局SMoE融合为统一多模态表征。对比学习在统一空间中对齐解剖层面和全局视觉-语言表征。MedHiVE在25,000+例CT扫描上以解剖监督进行预训练，在6个数据集、3项任务（分割、分类和检测）上持续超越11种最先进方法，证明层级化建模的重要性。MedHiVE的代码见github.com/szczurek-lab/MedHiVE。",
+"also": [
+{
+"source": "arXiv",
+"link": "https://arxiv.org/abs/2611.10960"
+}
+]
 },
 {
 "title": "ProtoGestalt: Interpretable Prototypes for Facial Phenotyping and Diagnosis of Rare Genetic Disorders",
