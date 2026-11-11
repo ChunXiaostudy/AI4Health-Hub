@@ -135,7 +135,13 @@
 "abstract": "[British journal of neurosurgery] Artificial intelligence (AI) models for clinical prediction are proliferating across neurosurgery, but their aggregate discriminative performance, distribution along the care pathway and methodological quality are unclear. We systematically reviewed and meta-analysed these studies in neurosurgery and its subspecialities along with their risk of bias appraisal. We performed a PRISMA search on PubMed and Ovid for peer-reviewed original studies (2015-2026) using AI to predict a clinical outcome in neurosurgical populations. Metrics (primary- AUC; secondary- accuracy, sensitivity, specificity, c-index) were pooled using random effects modelling, overall, by subspeciality and care-pathway stage. Each study was classified as diagnostic, prognostic or forecasting and was assigned an evidence level. Clinical prediction task sub-stratification analysis was performed. Risk-of-bias was assessed using PROBAST. PROSPERO registered: CRD420261436614. 1063 studies were included. Across 451 (42.2%) studies reporting AUC, pooled discrimination was 0.86 (95% CI: 0.849-0.862), ranging from 0.84 (spine) to 0.87 (neuro-oncology), with extreme heterogeneity (I2 98.6%, τ2=0.27; 95% prediction interval: 0.68-0.94). Performance varied by clinical pathway stage, highest for diagnosis, grading and molecular tasks and lowest for post-operative tasks; pre-diagnosis, pre-operative and intra-operative applications were sparse, and treatment models were confined to neuro-oncology. Only 51 studies (4.8%) were using prospective data with external validation, whereas 619 (58%) rested on internal validation alone or no validation. 89% studies were at high risk-of-bias, driven by the analysis domain. Pooled discrimination was unchanged (AUC: 0.86%) when restricted to externally validated or non-high-risk studies. AI models report high performance across all the neurosurgical subspecialities, concordant across AUC, accuracy, sensitivity and specificity and robust to risk-of-bias stratification. Performance is highest for imaging-anchored diagnostic tasks and lowest at decision-facing post-operative stage. However, the literature is dominated by optimism-prone, internally-validated and poorly calibrated models with extreme heterogeneity. External validation, calibration analysis and reporting guidelines adherence remain prerequisites for clinical adoption.",
 "day": "2026-11-07",
 "rank": 10.31,
-"zh_abstract": "用于临床预测的人工智能（artificial intelligence, AI）模型在神经外科领域迅速增多，但其总体判别性能、沿诊疗路径的分布及方法学质量尚不明确。我们系统综述并荟萃分析了神经外科及其亚专科中的这些研究，并评估其偏倚风险。我们按照PRISMA在PubMed和Ovid上检索使用AI预测神经外科人群临床结局的同行评议原创研究（2015-2026年）。采用随机效应模型合并指标（主要指标AUC；次要指标准确率、灵敏度、特异度和c指数），分别进行总体、按亚专科和按诊疗路径阶段的合并。每项研究被分类为诊断性、预后性或预测性，并分配证据等级。进行了临床预测任务亚分层分析。使用PROBAST评估偏倚风险。PROSPERO注册号：CRD420261436614。共纳入1063项研究。在451项（42.2%）报告AUC的研究中，合并判别性能为0.86（95% CI：0.849-0.862），范围为0.84（脊柱）至0.87（神经肿瘤学），异质性极大（I2 98.6%，τ2=0.27；95%预测区间：0.68-0.94）。性能随临床路径阶段而变化，在诊断、分级和分子任务中最高，在术后任务中最低；诊断前、术前和术中应用稀少，治疗模型仅限于神经肿瘤学。仅51项研究（4.8%）使用前瞻性数据并进行外部验证，而619项（58%）仅依赖内部验证或无验证。89%的研究存在高偏倚风险，主要由分析域驱动。当仅限于外部验证或非高风险研究时，合并判别性能未变（AUC：0.86%）。AI模型在所有神经外科亚专科中均报告高性能，在AUC、准确率、灵敏度和特异度方面一致，且对偏倚风险分层稳健。性能在以影像为基础的诊断任务中最高，在面向决策的术后阶段最低。然而，文献主要由易产生乐观偏倚、仅内部验证且校准不良的模型主导，并具有极大异质性。外部验证、校准分析和报告指南依从性仍是临床采用的前提条件。"
+"zh_abstract": "用于临床预测的人工智能（artificial intelligence, AI）模型在神经外科领域迅速增多，但其总体判别性能、沿诊疗路径的分布及方法学质量尚不明确。我们系统综述并荟萃分析了神经外科及其亚专科中的这些研究，并评估其偏倚风险。我们按照PRISMA在PubMed和Ovid上检索使用AI预测神经外科人群临床结局的同行评议原创研究（2015-2026年）。采用随机效应模型合并指标（主要指标AUC；次要指标准确率、灵敏度、特异度和c指数），分别进行总体、按亚专科和按诊疗路径阶段的合并。每项研究被分类为诊断性、预后性或预测性，并分配证据等级。进行了临床预测任务亚分层分析。使用PROBAST评估偏倚风险。PROSPERO注册号：CRD420261436614。共纳入1063项研究。在451项（42.2%）报告AUC的研究中，合并判别性能为0.86（95% CI：0.849-0.862），范围为0.84（脊柱）至0.87（神经肿瘤学），异质性极大（I2 98.6%，τ2=0.27；95%预测区间：0.68-0.94）。性能随临床路径阶段而变化，在诊断、分级和分子任务中最高，在术后任务中最低；诊断前、术前和术中应用稀少，治疗模型仅限于神经肿瘤学。仅51项研究（4.8%）使用前瞻性数据并进行外部验证，而619项（58%）仅依赖内部验证或无验证。89%的研究存在高偏倚风险，主要由分析域驱动。当仅限于外部验证或非高风险研究时，合并判别性能未变（AUC：0.86%）。AI模型在所有神经外科亚专科中均报告高性能，在AUC、准确率、灵敏度和特异度方面一致，且对偏倚风险分层稳健。性能在以影像为基础的诊断任务中最高，在面向决策的术后阶段最低。然而，文献主要由易产生乐观偏倚、仅内部验证且校准不良的模型主导，并具有极大异质性。外部验证、校准分析和报告指南依从性仍是临床采用的前提条件。",
+"also": [
+{
+"source": "arXiv",
+"link": "https://arxiv.org/abs/2611.12385"
+}
+]
 },
 {
 "title": "Deep Learning for AD Risk Screening and Progression Prediction.",
@@ -270,7 +276,8 @@
 "2026-11-07",
 "2026-11-08",
 "2026-11-09",
-"2026-11-10"
+"2026-11-10",
+"2026-11-11"
 ],
 "abstract_err": "page: skipped; pubmed: empty; europepmc: empty; openalex: empty"
 },
@@ -1391,6 +1398,10 @@
 {
 "source": "驱动之家",
 "link": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE9xX0stZnVuTmVkbWpTa2trRTZ1Y080dV9zQ0pIMS02d3FRNE9MM2pCNmNNb05uQkRubjQ5eVdoTXhXV29naDk0UEplYTZkWmNYMmtZaHdfd1Y?oc=5"
+},
+{
+"source": "新浪网",
+"link": "https://news.google.com/rss/articles/CBMi1gJBVV95cUxQbHdBdDd4WWUzNHNQTnFIUHZQNkxDVzdSRTE0VWxvVDhNNEhpdEtPSDV2M0ZKUEctS1JiS1Rib0lBTVFGZ0FfYkZ1bEJheC1WSk9sQnBjY0ViSU95WWpTMjBHYkpNS1FFWVRSZXBGNkFkZVpMVWV3ejVHLVozV1pPWkliWEdZRERfOENVUWtGVDBOS3A0UkVJbm9ydEJNa2xuRkxxaTNXTEpxZ0R4Z014WXVVXzVjT2lweWs3RmFwN3I3WFV4RVlkVTlveDdQUDJ0ZlhBV0dhelFTa0FMUWhtWVRfcm5kNVFRdktvR3dGRjZnOGZKdEktRm5nM1ZrY3FwVl9JQ2Y2UHhOWGZtVkZubGp4dElxcjJLeEpVcXpsWGFvWElKU2tHUnNaNjZvdjVWdm95ekN3NmYxcjlEenVKMTNib0xCZEZQd3NNYXkzTHdGRlhCYUE?oc=5"
 }
 ],
 "keep": true,

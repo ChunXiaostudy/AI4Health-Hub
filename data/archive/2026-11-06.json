@@ -337,7 +337,8 @@
 "2026-11-07",
 "2026-11-08",
 "2026-11-09",
-"2026-11-10"
+"2026-11-10",
+"2026-11-11"
 ],
 "abstract_err": "page: HTTP Error 403: Forbidden; no DOI / PMID"
 },
@@ -376,7 +377,8 @@
 "2026-11-07",
 "2026-11-08",
 "2026-11-09",
-"2026-11-10"
+"2026-11-10",
+"2026-11-11"
 ],
 "abstract_err": "page: HTTP Error 403: Forbidden; no DOI / PMID"
 },
@@ -1236,7 +1238,8 @@
 "2026-11-07",
 "2026-11-08",
 "2026-11-09",
-"2026-11-10"
+"2026-11-10",
+"2026-11-11"
 ],
 "abstract_err": "page: HTTP Error 403: Forbidden; no DOI / PMID"
 },
@@ -2274,7 +2277,13 @@
 "abstract": "[Frontiers in psychology] Generative artificial intelligence (GAI) is reshaping health sciences education. For nursing students, educational interaction (EI), self-regulated learning (SRL), and GAI interaction are all particularly important. However, these relationships and their processes remain underexplored. A total of 1020 nursing students were recruited from one medical university in Hunan Province in China. The Demographics Questionnaire, the Chinese version of Student-GAI interaction scale, the Educational Interaction Scale, and the Self-regulated Learning Questionnaire were administered. SPSS 22.0 and AMOS 24.0 software were used to analyze the data. The mean scores of student-GAI interaction (SGI) and EI were 14.80 ± 2.27 and 70.90 ± 8.15, respectively. Significant positive relationships were found among all three variables (all P < 0.01). Both SGI (β = 0.256) and SRL (β = 0.520) positively were associated with EI (both P < 0.001). Furthermore, SGI showed a significant direct association with EI, with a direct effect value of 0.92 (P < 0.001). SRL statistically mediated the association between SGI and EI, with a significant indirect effect value of 0.44. The mediating effect represented 32.35% of the total effect (P < 0.001). Dimension-specific analyses revealed that the mediating effect was strongest for student-teacher interaction (45.41%) and student-content interaction (41.54%). SGI is positively associated with EI among nursing students, both directly and indirectly through SRL. Educational strategies that encourage effective GAI use and strengthen SRL may be associated with enhanced EI in nursing education.",
 "day": "2026-11-06",
 "rank": 6.87,
-"zh_abstract": "[Frontiers in psychology] 生成式人工智能（generative artificial intelligence, GAI）正在重塑健康科学教育。对护理学生而言，教育互动（educational interaction, EI）、自我调节学习（self-regulated learning, SRL）和GAI互动都尤为重要。然而，这些关系及其过程仍未被充分探讨。从中国湖南省一所医科大学招募了1020名护理学生。施测了人口学问卷、中文版学生-GAI互动量表、教育互动量表和自我调节学习问卷。使用SPSS 22.0和AMOS 24.0软件分析数据。学生-GAI互动（student-GAI interaction, SGI）和EI的平均得分分别为14.80 ± 2.27和70.90 ± 8.15。三个变量之间均发现显著正相关（均P < 0.01）。SGI（β = 0.256）和SRL（β = 0.520）均与EI呈正相关（均P < 0.001）。此外，SGI与EI表现出显著直接关联，直接效应值为0.92（P < 0.001）。SRL在SGI与EI的关联中起统计学中介作用，间接效应值显著为0.44。中介效应占总效应的32.35%（P < 0.001）。维度特异性分析显示，中介效应在学生-教师互动（45.41%）和学生-内容互动（41.54%）中最强。在护理学生中，SGI与EI呈正相关，既存在直接关联，也通过SRL间接关联。鼓励有效使用GAI并加强SRL的教育策略可能与护理教育中EI的提升相关。"
+"zh_abstract": "[Frontiers in psychology] 生成式人工智能（generative artificial intelligence, GAI）正在重塑健康科学教育。对护理学生而言，教育互动（educational interaction, EI）、自我调节学习（self-regulated learning, SRL）和GAI互动都尤为重要。然而，这些关系及其过程仍未被充分探讨。从中国湖南省一所医科大学招募了1020名护理学生。施测了人口学问卷、中文版学生-GAI互动量表、教育互动量表和自我调节学习问卷。使用SPSS 22.0和AMOS 24.0软件分析数据。学生-GAI互动（student-GAI interaction, SGI）和EI的平均得分分别为14.80 ± 2.27和70.90 ± 8.15。三个变量之间均发现显著正相关（均P < 0.01）。SGI（β = 0.256）和SRL（β = 0.520）均与EI呈正相关（均P < 0.001）。此外，SGI与EI表现出显著直接关联，直接效应值为0.92（P < 0.001）。SRL在SGI与EI的关联中起统计学中介作用，间接效应值显著为0.44。中介效应占总效应的32.35%（P < 0.001）。维度特异性分析显示，中介效应在学生-教师互动（45.41%）和学生-内容互动（41.54%）中最强。在护理学生中，SGI与EI呈正相关，既存在直接关联，也通过SRL间接关联。鼓励有效使用GAI并加强SRL的教育策略可能与护理教育中EI的提升相关。",
+"also": [
+{
+"source": "PubMed · Frontiers in medicine",
+"link": "https://pubmed.ncbi.nlm.nih.gov/43005000/"
+}
+]
 },
 {
 "title": "Green AI for Telehealth.",
