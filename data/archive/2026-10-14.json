@@ -1114,7 +1114,13 @@
 "rank": 11.0,
 "abstract": "Although machine learning shows promise in predicting epilepsy treatment outcomes, the high heterogeneity and bias—particularly in small sample sizes, handling of missing data, and scarcity of studies with external validation—limit its clinical applicability. Future research should focus on larger, diverse datasets and standardised minimum reporting. Prospective trials are needed to evaluate machine learning models in real-world settings.",
 "reason": "系统综述与meta分析，揭示偏倚与外部验证不足，值得一看档",
-"zh_abstract": "尽管机器学习在预测癫痫治疗结局方面显示出前景，但高度异质性和偏倚——尤其是在小样本量、缺失数据处理以及外部验证研究稀缺方面——限制了其临床适用性。未来研究应聚焦于更大、多样化的数据集和标准化的最低报告要求。需要前瞻性试验来评估机器学习模型在真实世界环境中的表现。"
+"zh_abstract": "尽管机器学习在预测癫痫治疗结局方面显示出前景，但高度异质性和偏倚——尤其是在小样本量、缺失数据处理以及外部验证研究稀缺方面——限制了其临床适用性。未来研究应聚焦于更大、多样化的数据集和标准化的最低报告要求。需要前瞻性试验来评估机器学习模型在真实世界环境中的表现。",
+"also": [
+{
+"source": "PubMed · International journal of medical informatics",
+"link": "https://pubmed.ncbi.nlm.nih.gov/43002852/"
+}
+]
 },
 {
 "title": "Subversion of clinical judgment by conversational artificial intelligence",

@@ -2341,7 +2341,8 @@
 "rank": 7.41,
 "abstract_days": [
 "2026-11-10",
-"2026-11-11"
+"2026-11-11",
+"2026-11-12"
 ],
 "abstract_err": "page: skipped; pubmed: empty; europepmc: empty; openalex: empty"
 },
@@ -3570,6 +3571,12 @@
 "score": 3,
 "reason": "仅标题的行业报道，成功率说法无方法细节，属增量档",
 "day": "2026-11-10",
-"rank": 5.31
+"rank": 5.31,
+"also": [
+{
+"source": "手机新浪网",
+"link": "https://news.google.com/rss/articles/CBMickFVX3lxTE5rTkpxcFR5Q0k1TGFFQk1KZ2Zvb05RV0pucG9JZU9OOWZQMm9aZWRnSTZPUUFQTWs4ZTI1T0owdnZHUEUzS0lZM2hCR2lRd1VVNkF6VElvV0lwVWVGQ190eGh3NWlicjJMd2c0ajhoaDRIQQ?oc=5"
+}
+]
 }
 ]

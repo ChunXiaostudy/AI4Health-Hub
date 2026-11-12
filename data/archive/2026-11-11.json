@@ -137,7 +137,13 @@
 "abstract": "Wong et al. review how in-context learning enables large language models to adapt to medical tasks using examples rather than model parameter updates. They map its applications and limitations and propose a risk-proportionate framework for evaluation, governance, and monitoring to guide responsible clinical translation.",
 "day": "2026-11-11",
 "rank": 9.81,
-"zh_abstract": "Wong等综述了上下文学习如何使大型语言模型利用示例而非模型参数更新来适应医学任务。他们梳理了其应用与局限性，并提出一个风险相称的框架，用于评估、治理和监测，以指导负责任的临床转化。"
+"zh_abstract": "Wong等综述了上下文学习如何使大型语言模型利用示例而非模型参数更新来适应医学任务。他们梳理了其应用与局限性，并提出一个风险相称的框架，用于评估、治理和监测，以指导负责任的临床转化。",
+"also": [
+{
+"source": "PubMed · Cell reports. Medicine",
+"link": "https://pubmed.ncbi.nlm.nih.gov/43008739/"
+}
+]
 },
 {
 "title": "LUCQUE: A lung cancer screening dataset from Québec for reliable AI evaluation",
@@ -467,7 +473,13 @@
 "abstract": "Smart ring maker and health tracking company Oura plans to acquire AI virtual primary care company and business partner Counsel Health for $625 million, the health tech companies announced Tuesday. | The companies have worked together since June, and more recently had shared plans to partner on CMS' 10-year ACCESS Model.",
 "day": "2026-11-11",
 "rank": 9.0,
-"zh_abstract": "智能戒指制造商和健康追踪公司Oura计划以6.25亿美元收购AI虚拟初级保健公司及业务合作伙伴Counsel Health，这两家健康科技公司周二宣布。| 两家公司自6月起一直合作，最近还分享了在CMS的10年ACCESS Model上合作的计划。"
+"zh_abstract": "智能戒指制造商和健康追踪公司Oura计划以6.25亿美元收购AI虚拟初级保健公司及业务合作伙伴Counsel Health，这两家健康科技公司周二宣布。| 两家公司自6月起一直合作，最近还分享了在CMS的10年ACCESS Model上合作的计划。",
+"also": [
+{
+"source": "Fierce Healthcare",
+"link": "https://news.google.com/rss/articles/CBMirgFBVV95cUxQU2V6b2xocDJ0MXRjakY1QjNnQWh3YUpSSS1FN09HRFhUSENzNGJ1RFAzcFdicTk2WWpnUUxBejVVc0JfcXRpMHBDaWstNm1GQTdzR1VkVlhVVUNhcXBoNy16WXRvbVFNN3dzcjgxSEFQSWYtUXRUM0U2THV6dElHZmh4eF9fLWtsbzljcXV1YklWOHRqQ3o0Qk5WdjZ0ZnRGbG1EUjNRRURSd0VPcUE?oc=5"
+}
+]
 },
 {
 "title": "LingoCell interprets gene perturbations through natural language and tissue niches",
