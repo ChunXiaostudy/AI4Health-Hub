@@ -165,7 +165,8 @@
 "day": "2026-11-12",
 "rank": 10.0,
 "abstract_days": [
-"2026-11-12"
+"2026-11-12",
+"2026-11-13"
 ],
 "abstract_err": "page: HTTP Error 403: Forbidden; no DOI / PMID"
 },

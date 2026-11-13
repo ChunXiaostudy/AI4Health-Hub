@@ -2019,7 +2019,13 @@
 "score": 5,
 "reason": "监管机构征求意见属实质进展，但仅标题、细节缺失",
 "day": "2026-11-10",
-"rank": 7.5
+"rank": 7.5,
+"also": [
+{
+"source": "Medical Device and Diagnostic industry",
+"link": "https://news.google.com/rss/articles/CBMioAFBVV95cUxNa2hKbmduUDc3QThQWGc3d2EtY1U4V1VFbFplRnplSE5VeWFqMTZSUkI5aGczbG8wQWdBQTVPdVQzS2N3UkpzX3M1MFJkMTVKU1RFbWZ1MjVySS1nak1WR1prT1gtenZRcVdfaGhxNEpKWmp6endSTWFBSVRYQkI2M3l2c3pWYnNwSEw5YkJTVlBQOWEteXdTcDBhMUNnSkln?oc=5"
+}
+]
 },
 {
 "title": "FDA CDS Guidance: 4 Non-Device CDS Criteria",
@@ -2342,7 +2348,8 @@
 "abstract_days": [
 "2026-11-10",
 "2026-11-11",
-"2026-11-12"
+"2026-11-12",
+"2026-11-13"
 ],
 "abstract_err": "page: skipped; pubmed: empty; europepmc: empty; openalex: empty"
 },
@@ -3576,6 +3583,10 @@
 {
 "source": "手机新浪网",
 "link": "https://news.google.com/rss/articles/CBMickFVX3lxTE5rTkpxcFR5Q0k1TGFFQk1KZ2Zvb05RV0pucG9JZU9OOWZQMm9aZWRnSTZPUUFQTWs4ZTI1T0owdnZHUEUzS0lZM2hCR2lRd1VVNkF6VElvV0lwVWVGQ190eGh3NWlicjJMd2c0ajhoaDRIQQ?oc=5"
+},
+{
+"source": "财联社",
+"link": "https://news.google.com/rss/articles/CBMiSEFVX3lxTE01RUh3aEdQZ04xRTNJc2R6UnJlQnYzcE9Ldnc5V0Z2ZmZCcXBmdktFTDVOLW1Lb1hscmFhdTQ4YTl5WldwemhBWQ?oc=5"
 }
 ]
 }
