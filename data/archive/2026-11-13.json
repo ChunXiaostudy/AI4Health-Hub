@@ -402,7 +402,13 @@
 "abstract": "Medical imaging is essential for diagnosing disease, guiding treatment and monitoring patients over time. Although artificial intelligence has advanced image interpretation, existing medical models often address restricted tasks, while general-purpose proprietary models lack access to private clinical imaging required to achieve medical expertise. Developing models that can interpret complex examinations and communicate their findings in the context of clinical decisions remains a major challenge. Here, we show that Neuro-VL, a vision-language model trained on nearly one million neuroimaging studies from routine clinical care, can interpret complete imaging examinations and engage in natural language conversations about their findings. Across internal and international datasets, Neuro-VL outperformed frontier general-purpose and specialized medical models in diagnosing, localizing, and describing abnormalities, as well as generating comprehensive radiology reports. The model also compared serial examinations to assess disease progression and more reliably resisted misleading clinical assumptions than leading frontier models from OpenAI and Google. These results extend health system learning beyond individual predictions to interactive image interpretation and longitudinal disease monitoring. They demonstrate how the collective clinical experience of health systems can be used to develop medical AI with specialized expertise and broad clinical capabilities.",
 "day": "2026-11-13",
 "rank": 9.64,
-"zh_abstract": "医学影像对于疾病的诊断、指导治疗以及随时间监测患者至关重要。尽管人工智能推动了图像解读的进步，但现有的医学模型往往只处理范围受限的任务，而通用型专有模型无法获取形成医学专业知识所需的私有临床影像。开发能够解读复杂检查、并在临床决策背景下交流其发现的模型，仍是一项重大挑战。在此，我们展示 Neuro-VL——一个在来自常规临床诊疗的近一百万例神经影像检查上训练的视觉-语言模型——能够解读完整的影像检查，并就其发现进行自然语言对话。在内部和国际数据集上，Neuro-VL 在诊断、定位和描述异常以及生成全面的放射学报告方面，均优于前沿的通用模型和专业医学模型。该模型还能比较系列检查以评估疾病进展，并且在抵御误导性临床假设方面，比来自 OpenAI 和 Google 的领先前沿模型更为可靠。这些结果将卫生系统的学习从单个预测扩展到交互式图像解读和纵向疾病监测。它们表明，卫生系统的集体临床经验可用于开发兼具专业专长和广泛临床能力的医学人工智能。"
+"zh_abstract": "医学影像对于疾病的诊断、指导治疗以及随时间监测患者至关重要。尽管人工智能推动了图像解读的进步，但现有的医学模型往往只处理范围受限的任务，而通用型专有模型无法获取形成医学专业知识所需的私有临床影像。开发能够解读复杂检查、并在临床决策背景下交流其发现的模型，仍是一项重大挑战。在此，我们展示 Neuro-VL——一个在来自常规临床诊疗的近一百万例神经影像检查上训练的视觉-语言模型——能够解读完整的影像检查，并就其发现进行自然语言对话。在内部和国际数据集上，Neuro-VL 在诊断、定位和描述异常以及生成全面的放射学报告方面，均优于前沿的通用模型和专业医学模型。该模型还能比较系列检查以评估疾病进展，并且在抵御误导性临床假设方面，比来自 OpenAI 和 Google 的领先前沿模型更为可靠。这些结果将卫生系统的学习从单个预测扩展到交互式图像解读和纵向疾病监测。它们表明，卫生系统的集体临床经验可用于开发兼具专业专长和广泛临床能力的医学人工智能。",
+"also": [
+{
+"source": "Hugging Face Daily Papers",
+"link": "https://huggingface.co/papers/2611.15094"
+}
+]
 },
 {
 "title": "Evaluating Large Language Models in Nursing Care Decision-Making: A Randomized Controlled Trial",
@@ -902,9 +908,10 @@
 "day": "2026-11-13",
 "rank": 8.31,
 "abstract_days": [
-"2026-11-13"
+"2026-11-13",
+"2026-11-14"
 ],
-"abstract_err": "page: skipped; pubmed: empty; europepmc: empty; openalex: HTTP Error 404: Not Found"
+"abstract_err": "page: skipped; pubmed: empty; europepmc: empty; openalex: empty"
 },
 {
 "title": "Artificial Intelligence for Precision Phytomedicine: A Critical Review and the Patient-Product-Mechanism-Response (PPMR) Framework.",

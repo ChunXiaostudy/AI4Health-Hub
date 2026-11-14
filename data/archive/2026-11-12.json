@@ -166,7 +166,8 @@
 "rank": 10.0,
 "abstract_days": [
 "2026-11-12",
-"2026-11-13"
+"2026-11-13",
+"2026-11-14"
 ],
 "abstract_err": "page: HTTP Error 403: Forbidden; no DOI / PMID"
 },
@@ -2080,7 +2081,13 @@
 "score": 3,
 "reason": "仅标题的战略合作消息，无细节，属增量档。",
 "day": "2026-11-12",
-"rank": 5.31
+"rank": 5.31,
+"also": [
+{
+"source": "手机新浪网",
+"link": "https://news.google.com/rss/articles/CBMickFVX3lxTFBNTENJVjU3RGxGNTRtZEpNSUthYTNBTTJVSC1Gc25wTVIyTWJ5d0l1TEtFY2hJWVBQRW5pbkQzVnE4SmxKclUzT2lFY0tWZU1YTGVmRHF4VFV2eUdELWM0Sm9TcldhZHNIQnZQTnlmdmluQQ?oc=5"
+}
+]
 },
 {
 "title": "Username1008/Reasoning-Medical-27B",

@@ -838,7 +838,13 @@
 "abstract": "Protein sequence databases are growing far faster than experimentally curated annotations, limiting functional interpretation of newly identified proteins and coding variants. We developed PALM, a protein annotation language model that jointly predicts domain and functional-site occurrence, while preserving overlapping and nested annotations through a soft-target objective. PALM integrates ESM2 with low-rank adaptation (LoRA), learned layer aggregation, and a bidirectional long short-term memory (BiLSTM) encoder. PALM was trained on ~15 million InterPro-annotated UniRef50 sequences spanning 17,951 domain and 1,383 site classes. Across 2.3 million held-out proteins, PALM achieved domain- and site-occurrence F1 scores of 0.941 and 0.877, respectively, and retained substantial performance in proteins with <20% sequence identity to the training and validation data. PALM also substantially outperformed ESM3 annotation baseline. Without training on variant-pathogenicity labels, PALM embedding disruption distinguished 151,823 ClinVar missense variants more accurately than ESM2 embedding disruption (AUROC 0.835 versus 0.710), and combining PALM embedding disruption with the ESM2 likelihood-ratio signal reached an AUROC of 0.877. The same combined zero-shot score outperformed AlphaMissense on a benchmark dataset on 128,161 missense variants, that were derived from literature but not present in ClinVar database. At the protein level, PALM embeddings showed stronger CATH-Gene3D superfamily organization than frozen ESM2 and ESM3 embeddings, and improved prediction of experimental activation and repression effects when combined with ESM2. In a downstream case study, we demonstrated the ability to use PALM-derived embedding as proxy of deep mutational scanning (DMS), showcasing the broad application of PALM. Together, PALM converts curated residue-level knowledge into transferable and mechanistically interpretable representations that connect protein sequence, function, and variant consequence.",
 "day": "2026-11-06",
 "rank": 8.81,
-"zh_abstract": "蛋白质序列数据库的增长速度远超经实验人工整理的注释，这限制了对新鉴定蛋白质和编码变体的功能解读。我们开发了 PALM，一种蛋白质注释语言模型，它通过软目标（soft-target）目标函数联合预测结构域和功能位点的出现，同时保留重叠和嵌套注释。PALM 将 ESM2 与低秩适配（LoRA）、可学习层聚合以及双向长短期记忆（BiLSTM）编码器相整合。PALM 在约 1500 万条经 InterPro 注释的 UniRef50 序列上训练，涵盖 17,951 个结构域类别和 1,383 个位点类别。在 230 万条留出蛋白质上，PALM 的结构域出现和位点出现 F1 分数分别为 0.941 和 0.877，并且在与其训练和验证数据序列一致性 <20% 的蛋白质中仍保持显著性能。PALM 还大幅优于 ESM3 注释基线。在未使用变异致病性标签训练的情况下，PALM 嵌入扰动区分 151,823 个 ClinVar 错义变异比 ESM2 嵌入扰动更准确（AUROC 0.835 对 0.710），而将 PALM 嵌入扰动与 ESM2 似然比信号结合后，AUROC 达到 0.877。相同的组合零样本评分在一个包含 128,161 个错义变异的基准数据集上优于 AlphaMissense，这些变异源自文献但未出现在 ClinVar 数据库中。在蛋白质水平上，PALM 嵌入显示出比冻结的 ESM2 和 ESM3 嵌入更强的 CATH-Gene3D 超家族组织，并且在与 ESM2 结合时改善了对实验性激活和抑制效应的预测。在一项下游案例研究中，我们展示了将 PALM 衍生的嵌入用作深度突变扫描（DMS）代理的能力，展示了 PALM 的广泛应用。总之，PALM 将人工整理的残基水平知识转化为可迁移且机制可解释的表征，将蛋白质序列、功能和变异后果联系起来。"
+"zh_abstract": "蛋白质序列数据库的增长速度远超经实验人工整理的注释，这限制了对新鉴定蛋白质和编码变体的功能解读。我们开发了 PALM，一种蛋白质注释语言模型，它通过软目标（soft-target）目标函数联合预测结构域和功能位点的出现，同时保留重叠和嵌套注释。PALM 将 ESM2 与低秩适配（LoRA）、可学习层聚合以及双向长短期记忆（BiLSTM）编码器相整合。PALM 在约 1500 万条经 InterPro 注释的 UniRef50 序列上训练，涵盖 17,951 个结构域类别和 1,383 个位点类别。在 230 万条留出蛋白质上，PALM 的结构域出现和位点出现 F1 分数分别为 0.941 和 0.877，并且在与其训练和验证数据序列一致性 <20% 的蛋白质中仍保持显著性能。PALM 还大幅优于 ESM3 注释基线。在未使用变异致病性标签训练的情况下，PALM 嵌入扰动区分 151,823 个 ClinVar 错义变异比 ESM2 嵌入扰动更准确（AUROC 0.835 对 0.710），而将 PALM 嵌入扰动与 ESM2 似然比信号结合后，AUROC 达到 0.877。相同的组合零样本评分在一个包含 128,161 个错义变异的基准数据集上优于 AlphaMissense，这些变异源自文献但未出现在 ClinVar 数据库中。在蛋白质水平上，PALM 嵌入显示出比冻结的 ESM2 和 ESM3 嵌入更强的 CATH-Gene3D 超家族组织，并且在与 ESM2 结合时改善了对实验性激活和抑制效应的预测。在一项下游案例研究中，我们展示了将 PALM 衍生的嵌入用作深度突变扫描（DMS）代理的能力，展示了 PALM 的广泛应用。总之，PALM 将人工整理的残基水平知识转化为可迁移且机制可解释的表征，将蛋白质序列、功能和变异后果联系起来。",
+"also": [
+{
+"source": "bioRxiv",
+"link": "https://www.biorxiv.org/content/10.64898/2026.11.11.765945v1?rss=1"
+}
+]
 },
 {
 "title": "Harnessing catalytic knowledge to guide enzyme discovery and evolution with AlphaEnzyme",
@@ -2289,6 +2295,10 @@
 {
 "source": "PubMed · Frontiers in medicine",
 "link": "https://pubmed.ncbi.nlm.nih.gov/43005000/"
+},
+{
+"source": "PubMed · Frontiers in artificial intelligence",
+"link": "https://pubmed.ncbi.nlm.nih.gov/43022241/"
 }
 ]
 },
