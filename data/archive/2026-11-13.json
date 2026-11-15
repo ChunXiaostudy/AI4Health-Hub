@@ -64,7 +64,13 @@
 "abstract": "[Abdominal radiology (New York)] Human epidermal growth factor receptor 2 (HER2) is an important predictive and prognostic biomarker that guides targeted therapy, particularly in breast and gastric cancers. Conventional HER2 assessment using immunohistochemistry (IHC) and fluorescence in situ hybridization (FISH) is limited by inter-observer variability, heterogeneous expression, and diagnostic complexity. This systematic review and diagnostic meta-analysis followed the PRISMA 2020 guidelines to evaluate Artificial Intelligence-based HER2 assessment. Fifty-one studies were included in the qualitative synthesis and 14 in the diagnostic meta-analysis. Bibliometric analysis, methodological taxonomy, comparative evaluation, and pooled diagnostic performance were assessed, with study quality evaluated using QUADAS-2. AI methodologies have rapidly evolved from conventional machine learning and radiomics to deep learning, Vision Transformers, explainable AI, and multimodal frameworks, with histopathology and Magnetic Resonance Imaging. being the most frequently used modalities. Research activity increased markedly between 2023 and 2025. Pooled sensitivity was 87.8%, specificity was 83.5%, and Summary Receiver Operating Characteristic Area Under the Curve (SROC AUC) was 0.852 (95% CI: 0.801-0.881), indicating promising overall diagnostic performance. Deeks' funnel plot asymmetry test showed no significant evidence of publication bias (p = 0.14). However, heterogeneity warrants cautious interpretation of the pooled estimates. Heterogeneous datasets, limited external validation, and inconsistent evaluation methods remain important barriers to clinical implementation. Future research should emphasize multicenter prospective validation, explainable and multimodal AI, foundation models, federated learning, and evaluation in underexplored malignancies, including gallbladder cancer.",
 "day": "2026-11-13",
 "rank": 11.31,
-"zh_abstract": "[Abdominal radiology (New York)] 人表皮生长因子受体2（HER2）是一种重要的预测和预后生物标志物，可指导靶向治疗，尤其在乳腺癌和胃癌中。使用免疫组织化学（IHC）和荧光原位杂交（FISH）的常规HER2评估受限于观察者间变异性、表达异质性和诊断复杂性。本系统综述和诊断性meta分析遵循PRISMA 2020指南，评估基于人工智能的HER2评估。51项研究纳入定性综合，14项纳入诊断性meta分析。评估了文献计量分析、方法学分类、比较性评价和合并诊断性能，并使用QUADAS-2评价研究质量。AI方法已从传统机器学习和影像组学迅速发展到深度学习、视觉Transformer（Vision Transformers）、可解释AI和多模态框架，其中组织病理学和磁共振成像（Magnetic Resonance Imaging, MRI）是最常用的模态。2023年至2025年间研究活动显著增加。合并灵敏度为87.8%，特异度为83.5%，汇总受试者工作特征曲线下面积（SROC AUC）为0.852（95% CI：0.801-0.881），表明总体诊断性能有前景。Deeks漏斗图不对称性检验未显示显著的发表偏倚证据（p = 0.14）。然而，异质性要求对合并估计值进行谨慎解读。异质性数据集、有限的外部验证和不一致的评估方法仍是临床实施的重要障碍。未来研究应强调多中心前瞻性验证、可解释和多模态AI、基础模型、联邦学习，以及在包括胆囊癌在内的研究不足恶性肿瘤中的评估。"
+"zh_abstract": "[Abdominal radiology (New York)] 人表皮生长因子受体2（HER2）是一种重要的预测和预后生物标志物，可指导靶向治疗，尤其在乳腺癌和胃癌中。使用免疫组织化学（IHC）和荧光原位杂交（FISH）的常规HER2评估受限于观察者间变异性、表达异质性和诊断复杂性。本系统综述和诊断性meta分析遵循PRISMA 2020指南，评估基于人工智能的HER2评估。51项研究纳入定性综合，14项纳入诊断性meta分析。评估了文献计量分析、方法学分类、比较性评价和合并诊断性能，并使用QUADAS-2评价研究质量。AI方法已从传统机器学习和影像组学迅速发展到深度学习、视觉Transformer（Vision Transformers）、可解释AI和多模态框架，其中组织病理学和磁共振成像（Magnetic Resonance Imaging, MRI）是最常用的模态。2023年至2025年间研究活动显著增加。合并灵敏度为87.8%，特异度为83.5%，汇总受试者工作特征曲线下面积（SROC AUC）为0.852（95% CI：0.801-0.881），表明总体诊断性能有前景。Deeks漏斗图不对称性检验未显示显著的发表偏倚证据（p = 0.14）。然而，异质性要求对合并估计值进行谨慎解读。异质性数据集、有限的外部验证和不一致的评估方法仍是临床实施的重要障碍。未来研究应强调多中心前瞻性验证、可解释和多模态AI、基础模型、联邦学习，以及在包括胆囊癌在内的研究不足恶性肿瘤中的评估。",
+"also": [
+{
+"source": "PubMed · Journal of imaging informatics in medicine",
+"link": "https://pubmed.ncbi.nlm.nih.gov/43015530/"
+}
+]
 },
 {
 "title": "The COSAS 2024 challenge: Cross-Organ and Cross-Scanner Adenocarcinoma Segmentation for domain generalization in computational pathology",
@@ -909,7 +915,8 @@
 "rank": 8.31,
 "abstract_days": [
 "2026-11-13",
-"2026-11-14"
+"2026-11-14",
+"2026-11-15"
 ],
 "abstract_err": "page: skipped; pubmed: empty; europepmc: empty; openalex: empty"
 },
