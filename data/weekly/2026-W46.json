@@ -1,0 +1,109 @@
+{
+ "week": "2026-W46",
+ "range": "2026-11-09 ~ 2026-11-15",
+ "partial": false,
+ "generated": "2026-11-16T07:42:20.247970+00:00",
+ "summary": "影像与病理研究继续围绕可计算标志物与分割稳健性展开。研究开发并验证计算病理生物标志物TROP2归一化膜比率，用于量化亚细胞定位并预测非鳞NSCLC患者的无进展与总生存获益[1]。基于MedNeXt的乳腺DCE-MRI自动分割在多队列中评估测量保真度，包含外部验证与放射科医生审阅[2]。DFE-Net以可学习模糊隶属度场表达空间不确定性，在多中心CT与MRI队列上联合分类卒中并定位病灶[7]。此外，AI评估HER2状态的系统综述纳入51项研究，其中14项进入meta分析[11]。\n\n临床预测与决策方面，随机对照证据与大队列模型开发并行。单中心开放标签RCT随机纳入14 665名无房颤成人，比较AI-ECG引导策略与常规照护对房颤/房扑及房颤前表现的检出效果[5]。ECG2HF-Subtype在98 190人中开发，用于预测10年HFrEF与HFpEF发病风险，并在三家医院测试集中验证[13]。可解释框架复用ECG基础模型表征构建低LVEF检测模型[17]。回顾性多中心预后研究则显示，AI推导射血分数对死亡的预测略优于临床医生推导值[6]。\n\n大模型与智能体评估更强调失败模式与稳定性。随机对照研究让48名医师使用逐步失灵的AI进行心脏听诊，诊断表现随AI可靠性下降而下降[3]。三中心590份膀胱癌mpMRI报告回顾性评测9个LLM，医生评分显示输入语言与评分关联因模型而异[4]。JAMIA研究用25 680次判定测试10个LLM在3项医学任务上的评审稳定性，发现无模型能跨任务保持一致排名[16]。\n\n落地与监管议题集中在验证缺口与系统整合。观点文章提出，口腔生理性色素沉着的种族差异可能使AI口腔癌筛查模型误判正常变异或漏诊被掩盖的病变，呼吁按色素沉着分层开展验证[19]。范围综述梳理美国54项LHS框架研究与30项AI/数据科学研究，归纳五大共性组件并考察二者整合方式[20]。产业动态方面，Oura宣布以6.25亿美元收购临床AI初创公司Counsel Health，该条为新闻报道[18]。",
+ "items": [
+  {
+   "title": "TROP2归一化膜比率可预测Dato-DXd在NSCLC的疗效",
+   "link": "https://www.nature.com/articles/s41591-026-04716-9",
+   "source": "Nature Medicine"
+  },
+  {
+   "title": "乳腺DCE-MRI自动分割的测量保真度与外部验证",
+   "link": "https://www.nature.com/articles/s41746-026-03446-z",
+   "source": "npj Digital Medicine"
+  },
+  {
+   "title": "医师对AI诊断系统故障的监督挑战",
+   "link": "https://www.nature.com/articles/s41746-026-03410-x",
+   "source": "npj Digital Medicine"
+  },
+  {
+   "title": "多中心评测LLM生成膀胱癌管理建议",
+   "link": "https://www.nature.com/articles/s41746-026-03469-6",
+   "source": "npj Digital Medicine"
+  },
+  {
+   "title": "AI-ECG早期识别房颤的随机对照试验",
+   "link": "https://pubmed.ncbi.nlm.nih.gov/42998297/",
+   "source": "PubMed · Circulation"
+  },
+  {
+   "title": "AI与临床医生心脏MRI分割预测死亡率对比",
+   "link": "https://www.thelancet.com/journals/landig/article/PIIS2589-7500(26)00065-8/fulltext?rss=yes",
+   "source": "Lancet Digital Health"
+  },
+  {
+   "title": "多中心CT/MRI联合卒中诊断与病灶定位的不确定性场模型",
+   "link": "https://www.nature.com/articles/s41746-026-03458-9",
+   "source": "npj Digital Medicine"
+  },
+  {
+   "title": "基于T1 MRI的快速脑龄估计深度学习框架",
+   "link": "https://pubmed.ncbi.nlm.nih.gov/43012635/",
+   "source": "PubMed · Radiology. Artificial intelligence"
+  },
+  {
+   "title": "多模态细胞基础模型需协同整合",
+   "link": "https://www.nature.com/articles/s42256-026-01328-3",
+   "source": "Nature Machine Intelligence"
+  },
+  {
+   "title": "合成数据降低快速诊断试剂AI判读门槛",
+   "link": "https://www.nature.com/articles/s41746-026-03380-0",
+   "source": "npj Digital Medicine"
+  },
+  {
+   "title": "AI评估HER2状态的系统综述与诊断性meta分析",
+   "link": "https://pubmed.ncbi.nlm.nih.gov/43018704/",
+   "source": "PubMed · Abdominal radiology (New York)"
+  },
+  {
+   "title": "左室舒张功能评估的自动化深度学习流程",
+   "link": "https://pubmed.ncbi.nlm.nih.gov/43009241/",
+   "source": "PubMed · Journal of cardiac failure"
+  },
+  {
+   "title": "基于心电图的AI预测射血分数保留型与减低型心衰发病",
+   "link": "https://pubmed.ncbi.nlm.nih.gov/42998748/",
+   "source": "PubMed · Journal of cardiac failure"
+  },
+  {
+   "title": "COSAS 2024挑战赛：跨器官跨扫描仪腺癌分割",
+   "link": "https://www.sciencedirect.com/science/article/pii/S1361841526004597?dgcid=rss_sd_all",
+   "source": "Medical Image Analysis"
+  },
+  {
+   "title": "OSS 2024–2025：开放缝合技能视觉评估挑战赛",
+   "link": "https://www.sciencedirect.com/science/article/pii/S1361841526004287?dgcid=rss_sd_all",
+   "source": "Medical Image Analysis"
+  },
+  {
+   "title": "大语言模型作为自主医学评估者跨任务表现不稳定",
+   "link": "https://pubmed.ncbi.nlm.nih.gov/42995166/",
+   "source": "PubMed · Journal of the American Medical Informatics Association : JAMIA"
+  },
+  {
+   "title": "可解释框架：用ECG检出低射血分数",
+   "link": "https://www.thelancet.com/journals/eclinm/article/PIIS2589-5370(26)00584-5/fulltext?rss=yes",
+   "source": "eClinicalMedicine"
+  },
+  {
+   "title": "Oura以6.25亿美元收购Counsel Health",
+   "link": "https://www.statnews.com/2026/11/10/oura-acquires-counsel-health-big-bet-ai-care/?utm_campaign=rss",
+   "source": "STAT News"
+  },
+  {
+   "title": "口腔生理性色素沉着：AI口腔癌筛查被忽视的验证缺口",
+   "link": "https://www.nature.com/articles/s41746-026-03466-9",
+   "source": "npj Digital Medicine"
+  },
+  {
+   "title": "学习型健康系统框架与AI整合：范围综述",
+   "link": "https://www.nature.com/articles/s41746-026-03452-1",
+   "source": "npj Digital Medicine"
+  }
+ ]
+}
