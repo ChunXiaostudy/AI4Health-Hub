@@ -3126,7 +3126,13 @@
 "abstract": "[Medical review (2021)] Artificial intelligence (AI) is rapidly transforming medical imaging, reshaping the field as it does everyday life. As imaging data grow in complexity and clinical workloads continue to rise, AI has become increasingly essential for improving diagnostic efficiency and precision. However, despite these technical advances, the clinical adoption of AI in medical imaging remains fragmented, with limited generalizability, insufficient interpretability, and unclear clinical responsibility. In this review, we critically examine the evolution of AI in medical imaging, with a particular focus on its functional roles across the imaging workflow and its actual contributions to contemporary clinical needs. We systematically analyze current application paradigms, identify methodological and translational bottlenecks, and discuss emerging strategies to improve model robustness, interpretability, and clinical integration. In addition, we identify key barriers to the practical implementation of AI in medical imaging, including challenges related to cross-domain generalizability, data privacy issues and regulatory compliance. By examining these opportunities and challenges, this review aims to guide future research directions and foster deeper interdisciplinary collaboration among AI, clinical medicine, and biomedical engineering.",
 "day": "2026-10-28",
 "rank": 5.71,
-"zh_abstract": "【医学综述（2021）】人工智能（AI）正在迅速改变医学影像，正如它改变日常生活一样重塑该领域。随着影像数据复杂性增加和临床工作量持续上升，AI在提高诊断效率和精确性方面变得越来越重要。然而，尽管有这些技术进步，AI在医学影像中的临床采用仍然碎片化，存在泛化能力有限、可解释性不足和临床责任不明确的问题。在这篇综述中，我们批判性地审视AI在医学影像中的演进，特别关注其在影像工作流程中的功能角色及其对当代临床需求的实际贡献。我们系统分析当前应用范式，识别方法和转化瓶颈，并讨论提高模型稳健性、可解释性和临床整合的新兴策略。此外，我们识别AI在医学影像中实际实施的关键障碍，包括跨域泛化能力、数据隐私问题和监管合规相关挑战。通过审视这些机遇与挑战，本综述旨在指导未来研究方向，并促进AI、临床医学和生物医学工程之间更深入的跨学科合作。"
+"zh_abstract": "【医学综述（2021）】人工智能（AI）正在迅速改变医学影像，正如它改变日常生活一样重塑该领域。随着影像数据复杂性增加和临床工作量持续上升，AI在提高诊断效率和精确性方面变得越来越重要。然而，尽管有这些技术进步，AI在医学影像中的临床采用仍然碎片化，存在泛化能力有限、可解释性不足和临床责任不明确的问题。在这篇综述中，我们批判性地审视AI在医学影像中的演进，特别关注其在影像工作流程中的功能角色及其对当代临床需求的实际贡献。我们系统分析当前应用范式，识别方法和转化瓶颈，并讨论提高模型稳健性、可解释性和临床整合的新兴策略。此外，我们识别AI在医学影像中实际实施的关键障碍，包括跨域泛化能力、数据隐私问题和监管合规相关挑战。通过审视这些机遇与挑战，本综述旨在指导未来研究方向，并促进AI、临床医学和生物医学工程之间更深入的跨学科合作。",
+"also": [
+{
+"source": "PubMed · Zhonghua yu fang yi xue za zhi [Chinese journal of preventive medicine]",
+"link": "https://pubmed.ncbi.nlm.nih.gov/43035308/"
+}
+]
 },
 {
 "title": "AntiOxiPred: Predicting Antioxidant Peptides using Machine Learning Techniques and BLAST",

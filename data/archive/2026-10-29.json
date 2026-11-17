@@ -234,7 +234,13 @@
 "abstract": "[Oral diseases] Recent advances in artificial intelligence (AI) have shown promise for the detection of periodontal disease. This study aimed to synthesize current evidence on the diagnostic performance of AI models applied to cone-beam computed tomography (CBCT) for periodontal disease. A comprehensive literature search of MEDLINE, Scopus, Web of Science, and Embase was conducted to identify studies on AI-assisted diagnosis of periodontal disease using CBCT published up to December 2025. The Quality Assessment of Diagnostic Accuracy Studies-2 (QUADAS-2) tool was used to assess the risk of bias. Among 10,099 records screened, eight studies met the inclusion criteria. These studies indicate that AI models, predominantly based on convolutional neural network (CNN) architectures applied to CBCT images, have substantial potential for detecting periodontal bone loss and related conditions. However, diagnostic performance metrics varied markedly across studies, and direct comparisons with human clinicians produced inconsistent findings, underscoring the need for more rigorous study designs and standardized datasets. Despite limitations arising from heterogeneous methodologies and non-standardized data collection, CBCT-based AI models show considerable promise for enhancing periodontal disease diagnosis. Further high-quality, methodologically robust research is warranted to validate and optimize these approaches for clinical use. PROSPERO: CRD420251273846.",
 "day": "2026-10-29",
 "rank": 9.14,
-"zh_abstract": "[口腔疾病] 人工智能（AI）的近期进展已在牙周病检测方面显示出前景。本研究旨在综合当前关于应用于锥形束计算机断层扫描（CBCT）的AI模型对牙周病诊断性能的证据。对MEDLINE、Scopus、Web of Science和Embase进行了全面文献检索，以识别截至2025年12月发表的关于使用CBCT进行AI辅助牙周病诊断的研究。使用诊断准确性研究质量评估-2（QUADAS-2）工具评估偏倚风险。在筛选的10,099条记录中，有8项研究符合纳入标准。这些研究表明，主要基于卷积神经网络（CNN）架构并应用于CBCT图像的AI模型在检测牙周骨丧失及相关状况方面具有相当大的潜力。然而，各研究之间的诊断性能指标差异显著，且与人类临床医生的直接比较产生了不一致的结果，这凸显了需要更严谨的研究设计和标准化数据集。尽管存在由异质性方法和非标准化数据收集引起的局限性，基于CBCT的AI模型在增强牙周病诊断方面显示出相当大的前景。需要进一步开展高质量、方法学稳健的研究，以验证和优化这些方法以供临床使用。PROSPERO：CRD420251273846。"
+"zh_abstract": "[口腔疾病] 人工智能（AI）的近期进展已在牙周病检测方面显示出前景。本研究旨在综合当前关于应用于锥形束计算机断层扫描（CBCT）的AI模型对牙周病诊断性能的证据。对MEDLINE、Scopus、Web of Science和Embase进行了全面文献检索，以识别截至2025年12月发表的关于使用CBCT进行AI辅助牙周病诊断的研究。使用诊断准确性研究质量评估-2（QUADAS-2）工具评估偏倚风险。在筛选的10,099条记录中，有8项研究符合纳入标准。这些研究表明，主要基于卷积神经网络（CNN）架构并应用于CBCT图像的AI模型在检测牙周骨丧失及相关状况方面具有相当大的潜力。然而，各研究之间的诊断性能指标差异显著，且与人类临床医生的直接比较产生了不一致的结果，这凸显了需要更严谨的研究设计和标准化数据集。尽管存在由异质性方法和非标准化数据收集引起的局限性，基于CBCT的AI模型在增强牙周病诊断方面显示出相当大的前景。需要进一步开展高质量、方法学稳健的研究，以验证和优化这些方法以供临床使用。PROSPERO：CRD420251273846。",
+"also": [
+{
+"source": "PubMed · Sensors (Basel, Switzerland)",
+"link": "https://pubmed.ncbi.nlm.nih.gov/43029694/"
+}
+]
 },
 {
 "title": "Artificial Intelligence in Cataract Surgery: A Review of Preoperative, Intraoperative and Postoperative Applications.",
