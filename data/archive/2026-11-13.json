@@ -616,7 +616,13 @@
 "abstract": "Electronic nose (eNose) technology offers a portable, non-invasive route for disease screening via exhaled breath analysis. However, progress in the field is hindered by the lack of systematic benchmarks that compare machine learning methods under realistic conditions, particularly sensor drift, a known but rarely quantified failure mode. Most existing studies rely on small, private datasets with inconsistent protocols, rendering results non-comparable and slowing progress. We introduce Breath-Dx, the first comprehensive benchmark of time series classification methods for breath-based disease screening. Our work leverages the Scent of Health (S-OH) dataset, the largest public clinical eNose collection to date, comprising 1,234 patients across nine diagnostic groups, each providing a 17-channel multivariate time series with explicit temporal train/test splits that account for sensor drift. We systematically evaluate 10 methods spanning four families: feature-based tabular learners, convolution-based models, graph-based, and time series architectures. All methods degrade significantly under temporal validation (0.05-0.12 AUC drop compared to random cross-validation), confirming that drift embeds a strong temporal signal. Under this realistic evaluation, the best methods achieve ROC AUC of 0.74-0.76 for some lung conditions, though others remain near chance. Recurrent architectures show the most consistent performance across diseases, while specialized time series methods achieve the highest peak results. Demographic confounders matter: breath signals provide independent diagnostic value for some conditions but add little beyond age for others. We release the S-OH dataset, all temporal splits, evaluation protocols, and code to enable reproducible research and accelerate progress in clinical breathomics.",
 "day": "2026-11-13",
 "rank": 8.64,
-"zh_abstract": "电子鼻（electronic nose, eNose）技术通过呼出气分析为疾病筛查提供了一种便携、非侵入性的途径。然而，该领域的进展受到缺乏系统性基准的阻碍，这些基准应在现实条件下比较机器学习方法，特别是传感器漂移——一种已知但很少被量化的失效模式。大多数现有研究依赖小型私有数据集和不一致的方案，使结果不可比较并减缓进展。我们推出 Breath-Dx，这是首个用于基于呼气疾病筛查的时间序列分类方法的综合基准。我们的工作利用 Scent of Health（S-OH）数据集，这是迄今为止最大的公开临床 eNose 数据集集合，包含九个诊断组的 1,234 名患者，每位患者提供 17 通道多变量时间序列，并具有考虑传感器漂移的明确时间训练/测试划分。我们系统评估了涵盖四个家族的 10 种方法：基于特征的表格学习器、基于卷积的模型、基于图的模型和时间序列架构。所有方法在时间验证下均显著下降（与随机交叉验证相比 AUC 下降 0.05-0.12），证实漂移嵌入了强时间信号。在这种现实评估下，最佳方法对某些肺部疾病达到 ROC AUC 0.74-0.76，而其他疾病仍接近随机水平。循环架构在疾病间表现最一致，而专门的时间序列方法达到最高峰值结果。人口学混杂因素很重要：呼吸信号对某些疾病提供独立诊断价值，但对其他疾病在年龄之外几乎没有增加信息。我们发布 S-OH 数据集、所有时间划分、评估协议和代码，以实现可重复研究并加速临床呼吸组学进展。"
+"zh_abstract": "电子鼻（electronic nose, eNose）技术通过呼出气分析为疾病筛查提供了一种便携、非侵入性的途径。然而，该领域的进展受到缺乏系统性基准的阻碍，这些基准应在现实条件下比较机器学习方法，特别是传感器漂移——一种已知但很少被量化的失效模式。大多数现有研究依赖小型私有数据集和不一致的方案，使结果不可比较并减缓进展。我们推出 Breath-Dx，这是首个用于基于呼气疾病筛查的时间序列分类方法的综合基准。我们的工作利用 Scent of Health（S-OH）数据集，这是迄今为止最大的公开临床 eNose 数据集集合，包含九个诊断组的 1,234 名患者，每位患者提供 17 通道多变量时间序列，并具有考虑传感器漂移的明确时间训练/测试划分。我们系统评估了涵盖四个家族的 10 种方法：基于特征的表格学习器、基于卷积的模型、基于图的模型和时间序列架构。所有方法在时间验证下均显著下降（与随机交叉验证相比 AUC 下降 0.05-0.12），证实漂移嵌入了强时间信号。在这种现实评估下，最佳方法对某些肺部疾病达到 ROC AUC 0.74-0.76，而其他疾病仍接近随机水平。循环架构在疾病间表现最一致，而专门的时间序列方法达到最高峰值结果。人口学混杂因素很重要：呼吸信号对某些疾病提供独立诊断价值，但对其他疾病在年龄之外几乎没有增加信息。我们发布 S-OH 数据集、所有时间划分、评估协议和代码，以实现可重复研究并加速临床呼吸组学进展。",
+"also": [
+{
+"source": "Hugging Face Daily Papers",
+"link": "https://huggingface.co/papers/2611.15348"
+}
+]
 },
 {
 "title": "CaseScope: A Multi-Field Benchmark for Case-Level Pathology Diagnosis with Multimodal LLMs",
@@ -918,7 +924,8 @@
 "2026-11-14",
 "2026-11-15",
 "2026-11-16",
-"2026-11-17"
+"2026-11-17",
+"2026-11-18"
 ],
 "abstract_err": "page: skipped; pubmed: empty; europepmc: empty; openalex: empty"
 },

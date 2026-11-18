@@ -832,6 +832,12 @@
 "score": 3,
 "reason": "仅标题的媒体观点文章，属常规观点档，无研究或监管实质信息",
 "day": "2026-11-15",
-"rank": 5.14
+"rank": 5.14,
+"also": [
+{
+"source": "21财经",
+"link": "https://news.google.com/rss/articles/CBMilAFBVV95cUxQSzVCa3RZSm91Yk5MdEZOTnFPUV9UdkYtQk05dmpwek1LNkhja3JzOWxka2s0VjdBVTJHdDRkM2RCU0VBT2N2OEhGSTVPcC1oclltdE9DOXplazg3S0luVzMteFp0eTBiVmphU3RSWkhab29IeENkUFBKdlp5cXVHNkluVkUtZGJPNWVta2tMRnFMQXJk?oc=5"
+}
+]
 }
 ]
