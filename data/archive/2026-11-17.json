@@ -406,7 +406,8 @@
 "rank": 10.0,
 "abstract_days": [
 "2026-11-17",
-"2026-11-18"
+"2026-11-18",
+"2026-11-19"
 ],
 "abstract_err": "page: HTTP Error 403: Forbidden; no DOI / PMID"
 },
@@ -443,7 +444,8 @@
 "rank": 10.0,
 "abstract_days": [
 "2026-11-17",
-"2026-11-18"
+"2026-11-18",
+"2026-11-19"
 ],
 "abstract_err": "page: HTTP Error 403: Forbidden; no DOI / PMID"
 },
@@ -514,7 +516,8 @@
 "rank": 10.0,
 "abstract_days": [
 "2026-11-17",
-"2026-11-18"
+"2026-11-18",
+"2026-11-19"
 ],
 "abstract_err": "page: HTTP Error 403: Forbidden; no DOI / PMID"
 },
@@ -813,7 +816,8 @@
 "rank": 9.0,
 "abstract_days": [
 "2026-11-17",
-"2026-11-18"
+"2026-11-18",
+"2026-11-19"
 ],
 "abstract_err": "page: HTTP Error 403: Forbidden; no DOI / PMID"
 },
@@ -850,7 +854,8 @@
 "rank": 9.0,
 "abstract_days": [
 "2026-11-17",
-"2026-11-18"
+"2026-11-18",
+"2026-11-19"
 ],
 "abstract_err": "page: HTTP Error 403: Forbidden; no DOI / PMID"
 },
@@ -888,7 +893,8 @@
 "rank": 9.0,
 "abstract_days": [
 "2026-11-17",
-"2026-11-18"
+"2026-11-18",
+"2026-11-19"
 ],
 "abstract_err": "page: HTTP Error 403: Forbidden; no DOI / PMID"
 },
@@ -927,7 +933,8 @@
 "rank": 9.0,
 "abstract_days": [
 "2026-11-17",
-"2026-11-18"
+"2026-11-18",
+"2026-11-19"
 ],
 "abstract_err": "page: HTTP Error 403: Forbidden; no DOI / PMID"
 },
@@ -964,7 +971,8 @@
 "rank": 9.0,
 "abstract_days": [
 "2026-11-17",
-"2026-11-18"
+"2026-11-18",
+"2026-11-19"
 ],
 "abstract_err": "page: HTTP Error 403: Forbidden; no DOI / PMID"
 },
@@ -1299,7 +1307,13 @@
 "abstract": "[Methodist DeBakey cardiovascular journal] Coronary artery disease (CAD) remains the leading cause of death worldwide, yet the landscape is rapidly evolving as artificial intelligence (AI) is increasingly applied to its detection, diagnosis, and management. This review surveys the expanding role of AI across the full spectrum of CAD care. In screening, deep-learning electrocardiography and electronic health record-based digital markers enable earlier identification of clinically significant disease. In noninvasive imaging, AI-driven coronary computed tomography angiography automates calcium scoring, derives fractional flow reserve without invasive wires, and quantifies high-risk plaque features that predict incident adverse events. Within the cardiac catheterization laboratory, angiography-derived physiologic assessment and AI-guided intravascular imaging segmentation support real-time procedural decision-making. Beyond diagnosis, machine-learning models integrating multimodality imaging data improve risk stratification over conventional clinical scores, while pharmacogenomic algorithms and wearable-based digital rehabilitation platforms enable patient-centric secondary prevention. Despite this progress, significant challenges persist, including limited evidence from randomized trials, algorithmic bias in underrepresented populations, regulatory uncertainty surrounding software-as-a-medical-device frameworks, and the risk of clinician de-skilling. AI has the potential to act as a collaborative tool that augments-rather than replaces-physician judgment. Future directions include foundation models, multiomics integration, agentic AI workflows, and equity-centered deployment strategies to ensure that AI-driven advances benefit all individuals with CAD.",
 "day": "2026-11-17",
 "rank": 8.5,
-"zh_abstract": "【Methodist DeBakey 心血管杂志】冠状动脉疾病（CAD）仍是全球主要死因，但随着人工智能（AI）越来越多地应用于其检测、诊断和管理，这一格局正在迅速演变。本综述考察了 AI 在 CAD 全程照护中日益扩大的作用。在筛查方面，深度学习心电图和基于电子健康记录的数字标志物使临床显著疾病能够更早识别。在无创成像方面，AI 驱动的冠状动脉计算机断层扫描血管造影可自动完成钙化评分、无需侵入性导丝即可推导血流储备分数，并量化可预测新发不良事件的高危斑块特征。在心导管室中，血管造影衍生的生理学评估和 AI 引导的血管内成像分割支持实时操作决策。在诊断之外，整合多模态影像数据的机器学习模型较传统临床评分改善风险分层，而药物基因组学算法和基于可穿戴设备的数字康复平台使以患者为中心的二级预防成为可能。尽管取得这些进展，仍存在重大挑战，包括随机试验证据有限、代表性不足人群中的算法偏倚、软件即医疗器械框架的监管不确定性以及临床医生技能退化的风险。AI 有潜力作为一种协作工具，增强而非替代医生的判断。未来方向包括基础模型、多组学整合、智能体 AI 工作流程以及以公平为中心的部署策略，以确保 AI 驱动的进步惠及所有 CAD 个体。"
+"zh_abstract": "【Methodist DeBakey 心血管杂志】冠状动脉疾病（CAD）仍是全球主要死因，但随着人工智能（AI）越来越多地应用于其检测、诊断和管理，这一格局正在迅速演变。本综述考察了 AI 在 CAD 全程照护中日益扩大的作用。在筛查方面，深度学习心电图和基于电子健康记录的数字标志物使临床显著疾病能够更早识别。在无创成像方面，AI 驱动的冠状动脉计算机断层扫描血管造影可自动完成钙化评分、无需侵入性导丝即可推导血流储备分数，并量化可预测新发不良事件的高危斑块特征。在心导管室中，血管造影衍生的生理学评估和 AI 引导的血管内成像分割支持实时操作决策。在诊断之外，整合多模态影像数据的机器学习模型较传统临床评分改善风险分层，而药物基因组学算法和基于可穿戴设备的数字康复平台使以患者为中心的二级预防成为可能。尽管取得这些进展，仍存在重大挑战，包括随机试验证据有限、代表性不足人群中的算法偏倚、软件即医疗器械框架的监管不确定性以及临床医生技能退化的风险。AI 有潜力作为一种协作工具，增强而非替代医生的判断。未来方向包括基础模型、多组学整合、智能体 AI 工作流程以及以公平为中心的部署策略，以确保 AI 驱动的进步惠及所有 CAD 个体。",
+"also": [
+{
+"source": "PubMed · Heart failure clinics",
+"link": "https://pubmed.ncbi.nlm.nih.gov/43039579/"
+}
+]
 },
 {
 "title": "Naegele's rule is not a 280-day count: generative AI conflates two distinct pregnancy-dating algorithms.",

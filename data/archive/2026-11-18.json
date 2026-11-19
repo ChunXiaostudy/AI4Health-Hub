@@ -299,7 +299,13 @@
 "score": 6,
 "reason": "监管实质进展，但仅标题、为单点功能清关，受标题限制取6分",
 "day": "2026-11-18",
-"rank": 10.0
+"rank": 10.0,
+"also": [
+{
+"source": "MassDevice",
+"link": "https://news.google.com/rss/articles/CBMinwFBVV95cUxQbW1oTWsxdTJ4ODRyanItMV83czhITFNmOS05VzY1V0VBMXpjNW5LUUpRQmNSNEVFUEFVaEdjc3d4NmxpMkpPU3FVVkM1dXNvcDZUV1poS3J2YnZGOXJLbUdELWVSdm80LTNUUVJwV0tWaUlFNDJrbGU1dERlUzlEWnhtQU56OU9UOVZHTTN6WC1NNkFyT0VreVMya08xUDg?oc=5"
+}
+]
 },
 {
 "title": "GEHC gets FDA clearance for feeding tube AI on mobile x-ray",
@@ -1063,6 +1069,14 @@
 {
 "source": "https://zgeo.net/",
 "link": "https://news.google.com/rss/articles/CBMickFVX3lxTE12NlFCSWxrRFFieTZjZ3p1Vm5KaXNFaDZhNW1uQkY1eHVHdXNhUU1sUWd2YWMzNXhfYzd4N2lzcUx6emZMMkZUbU1jS00wMTVfcGVVVjN6VUgxMlVvYnFGdjY2MUNmQXRuUHpjb2VPbVEyZw?oc=5"
+},
+{
+"source": "ByDrug",
+"link": "https://news.google.com/rss/articles/CBMifkFVX3lxTE11czB0aW9fa3Y4VmJ0NkdHeDhwUy1Sb0RJMmVtNkd2NzNySExSTFVmYVFCSC15cEVSR1EzYWtUR25jcnh2QmhxUlVweE9fNUN3ZGNaZ2QwcFNpSldXZ2JZTlc2eVN4SEZ3QTROT2hKRDEyc1NIaE9JQ1BsVl9NUQ?oc=5"
+},
+{
+"source": "Sohu",
+"link": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxOZUtTTGxjNHdZNVRPbjdELXZQZE54Z283RW0teUdraU5UclIwU0xvSlI1WFl0NWY4RDNEdDU0WksxOG1QQmgxdl9yVlJEQmtxc3lIRDVjOUJJV1ZzYzh2aEJNYlE1R1B5RDNfdGhDV0dPQmhXSVV0SnE5UjctRjktVm1BMU1WOHpF?oc=5"
 }
 ]
 },
@@ -1297,7 +1311,13 @@
 "abstract": "Complex health conversations require answers grounded in individual information and currently valid evidence. We evaluate health context learning: acquiring, integrating, and applying relevant context during inference with fixed model parameters to answer health questions and respond appropriately to changes in facts, evidence, or task goals. To our knowledge, Chinese-language medical benchmarks have yet to systematically combine explicit contextual difficulties, controlled case variations, and member-specific medical criteria for open-ended answers. We introduce HealthCLBench, comprising 328 controlled clusters, 1,103 cases, and 4,931 rubric criteria across medical consultation and everyday health management. Members share backgrounds while evidence, patient states, or task goals change; each has its own medical scoring requirements. A 70-person medical team annotates and reviews the simulated cases and their rubrics. Human review of 700 full-context responses from the original evaluation yields 90.5% pooled agreement with the original automated judgments at the rubric-item level. We report full-context and query-only results for seven general-purpose models and Ant Afu. Across the eight systems, full- query differences range from 11.83 to 31.76 case points and from 10.87 to 38.97 geometric cluster points. GPT-6-Astra leads both full-context metrics at 75.03 and 60.42, followed by Claude-Opus-5-5 and Ant Afu. Cross-condition differences describe score changes under the reported evaluation settings. Response comparisons reveal failures in checking historical information, expressing uncertainty when warranted, and ensuring recommendations respect required conditions. The resource supports model comparison and targeted follow-up evaluation.",
 "day": "2026-11-18",
 "rank": 8.81,
-"zh_abstract": "复杂的健康对话需要基于个体信息和当前有效证据的回答。我们评估健康上下文学习：在模型参数固定的推理过程中获取、整合并应用相关上下文，以回答健康问题，并对事实、证据或任务目标的变化作出适当响应。据我们所知，中文医学基准尚未系统地将显式上下文难点、受控病例变化以及针对开放式回答的成员特定医学标准结合起来。我们提出 HealthCLBench，涵盖医学咨询和日常健康管理，包含 328 个受控簇、1,103 个病例和 4,931 条评分细则标准。成员共享背景，而证据、患者状态或任务目标发生变化；每个成员都有其自身的医学评分要求。一个 70 人医学团队对模拟病例及其评分细则进行标注和审核。对原始评估中 700 条完整上下文回答进行人工审核，在评分细则条目层面与原始自动判断的合并一致率为 90.5%。我们报告了七个通用模型和 Ant Afu 的完整上下文与仅查询结果。在八个系统中，完整上下文与仅查询之间的差异（full- query differences）范围为 11.83 至 31.76 个病例分，以及 10.87 至 38.97 个几何簇分。GPT-6-Astra 以 75.03 和 60.42 领先两项完整上下文指标，其次是 Claude-Opus-5-5 和 Ant Afu。跨条件差异描述了在报告评估设置下的分数变化。回答比较揭示了在核查历史信息、在有理由时表达不确定性以及确保建议遵守所需条件方面的失败。该资源支持模型比较和有针对性的后续评估。"
+"zh_abstract": "复杂的健康对话需要基于个体信息和当前有效证据的回答。我们评估健康上下文学习：在模型参数固定的推理过程中获取、整合并应用相关上下文，以回答健康问题，并对事实、证据或任务目标的变化作出适当响应。据我们所知，中文医学基准尚未系统地将显式上下文难点、受控病例变化以及针对开放式回答的成员特定医学标准结合起来。我们提出 HealthCLBench，涵盖医学咨询和日常健康管理，包含 328 个受控簇、1,103 个病例和 4,931 条评分细则标准。成员共享背景，而证据、患者状态或任务目标发生变化；每个成员都有其自身的医学评分要求。一个 70 人医学团队对模拟病例及其评分细则进行标注和审核。对原始评估中 700 条完整上下文回答进行人工审核，在评分细则条目层面与原始自动判断的合并一致率为 90.5%。我们报告了七个通用模型和 Ant Afu 的完整上下文与仅查询结果。在八个系统中，完整上下文与仅查询之间的差异（full- query differences）范围为 11.83 至 31.76 个病例分，以及 10.87 至 38.97 个几何簇分。GPT-6-Astra 以 75.03 和 60.42 领先两项完整上下文指标，其次是 Claude-Opus-5-5 和 Ant Afu。跨条件差异描述了在报告评估设置下的分数变化。回答比较揭示了在核查历史信息、在有理由时表达不确定性以及确保建议遵守所需条件方面的失败。该资源支持模型比较和有针对性的后续评估。",
+"also": [
+{
+"source": "GitHub",
+"link": "https://github.com/AQ-MedAI/HealthCLBench"
+}
+]
 },
 {
 "title": "Visual Harness Scales General VLMs to Medical Images",
@@ -2969,7 +2989,13 @@
 "score": 5,
 "reason": "大额融资属重要产业动态，但仅标题且来源为自媒体，信息有限",
 "day": "2026-11-18",
-"rank": 7.31
+"rank": 7.31,
+"also": [
+{
+"source": "华尔街见闻",
+"link": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE9HZjVEUmpUTDZYbGdkVEFWSmY3ZjRvNFFDek1LdlNhXzdpSWFKX1FHMWFXVDFOMml5NkZuUEdBSEdKeTR4LUhzTzZDM2loUkd4U1Rj?oc=5"
+}
+]
 },
 {
 "title": "Generating Medical Discharge Report Drafts Via Artificial Intelligence",
@@ -3391,9 +3417,10 @@
 "day": "2026-11-18",
 "rank": 6.91,
 "abstract_days": [
-"2026-11-18"
+"2026-11-18",
+"2026-11-19"
 ],
-"abstract_err": "page: skipped; pubmed: empty; europepmc: empty; openalex: HTTP Error 404: Not Found"
+"abstract_err": "page: skipped; pubmed: empty; europepmc: The read operation timed out; openalex: empty"
 },
 {
 "title": "Human-Agentic AI Collaboration Workflow for Trend Analysis of ChatGPT Applications in Healthcare",
