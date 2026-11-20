@@ -163,7 +163,13 @@
 "abstract": "Recent advances in machine learning have accelerated biomedical prediction, but evaluation on structured biomedical data remains fragmented, especially for datasets with high dimensionality, large sample size, missingness, and class imbalance. We introduce TabBioMed, a large-scale benchmark of 94 curated public biomedical tabular datasets spanning electronic health records, drug discovery, genomics, transcriptomics, proteomics, metabolomics, single-cell omics, and systems biology. TabBioMed unifies these datasets through a standardized, dataset-aware preprocessing and evaluation framework, enabling reproducible comparison across classification, regression, and multi-target tasks. We benchmark 23 models across classical baselines, gradient-boosted trees, neural tabular architectures, and tabular foundation models. Foundation models deliver the strongest family-level predictive performance. However, their gains are regime-dependent: tree-based models and tuned multilayer perceptrons remain highly competitive, often dominating under inference-time or training-cost constraints. Overall, TabBioMed shows that biomedical tabular learning is strongly context-dependent, with optimal model choice depending on data regime, task type, and computational budget. We release TabBioMed with curated datasets and splits, preprocessing code, baselines, and results, providing a reproducible benchmark for practical model selection and future methods development in biomedical machine learning, available at https://github.com/AI-sandbox/TabBioMed.",
 "day": "2026-11-19",
 "rank": 9.81,
-"zh_abstract": "机器学习的最新进展加速了生物医学预测，但对结构化生物医学数据的评估仍然零散，尤其是对于具有高维、大样本量、缺失值和类别不平衡的数据集。我们推出TabBioMed，这是一个大规模基准，包含94个经过整理的公共生物医学表格数据集，涵盖电子健康记录、药物发现、基因组学、转录组学、蛋白质组学、代谢组学、单细胞组学和系统生物学。TabBioMed通过标准化的、数据集感知的预处理和评估框架统一这些数据集，从而能够在分类、回归和多目标任务之间进行可重复比较。我们对23个模型进行了基准测试，涵盖经典基线、梯度提升树、神经表格架构和表格基础模型。基础模型在模型族层面表现出最强的预测性能。然而，它们的增益依赖于数据情形：基于树的模型和调优的多层感知机仍极具竞争力，在推理时间或训练成本约束下往往占优。总体而言，TabBioMed表明生物医学表格学习强烈依赖于具体情境，最优模型选择取决于数据情形、任务类型和计算预算。我们发布TabBioMed，包括经过整理的数据集和划分、预处理代码、基线和结果，为生物医学机器学习中的实际模型选择和未来方法开发提供可重复的基准，网址为 https://github.com/AI-sandbox/TabBioMed。"
+"zh_abstract": "机器学习的最新进展加速了生物医学预测，但对结构化生物医学数据的评估仍然零散，尤其是对于具有高维、大样本量、缺失值和类别不平衡的数据集。我们推出TabBioMed，这是一个大规模基准，包含94个经过整理的公共生物医学表格数据集，涵盖电子健康记录、药物发现、基因组学、转录组学、蛋白质组学、代谢组学、单细胞组学和系统生物学。TabBioMed通过标准化的、数据集感知的预处理和评估框架统一这些数据集，从而能够在分类、回归和多目标任务之间进行可重复比较。我们对23个模型进行了基准测试，涵盖经典基线、梯度提升树、神经表格架构和表格基础模型。基础模型在模型族层面表现出最强的预测性能。然而，它们的增益依赖于数据情形：基于树的模型和调优的多层感知机仍极具竞争力，在推理时间或训练成本约束下往往占优。总体而言，TabBioMed表明生物医学表格学习强烈依赖于具体情境，最优模型选择取决于数据情形、任务类型和计算预算。我们发布TabBioMed，包括经过整理的数据集和划分、预处理代码、基线和结果，为生物医学机器学习中的实际模型选择和未来方法开发提供可重复的基准，网址为 https://github.com/AI-sandbox/TabBioMed。",
+"also": [
+{
+"source": "Hugging Face Daily Papers",
+"link": "https://huggingface.co/papers/2611.23779"
+}
+]
 },
 {
 "title": "Grounding Radiology Reports in 3D Chest CT: Results of the ReXGrounding Challenge",
@@ -1913,7 +1919,13 @@
 "score": 5,
 "reason": "大额融资属重要档信号，但仅标题无细节，按title_only上限压至5",
 "day": "2026-11-19",
-"rank": 7.31
+"rank": 7.31,
+"also": [
+{
+"source": "ThePaper.cn",
+"link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTFBfQWtkNmk5ZDN0QW9tb0FmYlF5ZlVBWGJGbnpkenY5ZE5PZlUwV0cwRTBIQ1hUSjZQVE5oaUhobmRiM25kYVRoSUhtRFJUOUJwTzZWQVZFbXpCWGRabUFOVQ?oc=5"
+}
+]
 },
 {
 "title": "谷歌系公司拿下AI制药最大单轮融资，AI制药已经进入临床验证阶段丨盘中雷达",
@@ -2392,7 +2404,13 @@
 "score": 3,
 "reason": "行业会议表态，信息量有限，属一般产业动态",
 "day": "2026-11-19",
-"rank": 6.5
+"rank": 6.5,
+"also": [
+{
+"source": "STAT News",
+"link": "https://www.statnews.com/2026/11/19/epic-defends-competitive-practices-promises-ai-access-health-tech/?utm_campaign=rss"
+}
+]
 },
 {
 "title": "How Medtech Can Align the EU AI Act, MDR, and ISO/IEC 42001",

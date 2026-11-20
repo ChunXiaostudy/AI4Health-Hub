@@ -2994,6 +2994,10 @@
 {
 "source": "华尔街见闻",
 "link": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE9HZjVEUmpUTDZYbGdkVEFWSmY3ZjRvNFFDek1LdlNhXzdpSWFKX1FHMWFXVDFOMml5NkZuUEdBSEdKeTR4LUhzTzZDM2loUkd4U1Rj?oc=5"
+},
+{
+"source": "21财经",
+"link": "https://news.google.com/rss/articles/CBMijwFBVV95cUxNMEdBU3JQZl9sMW91aGMxanZraVpfaHpJOHh3eVNrZDNsaWhFYUF1X2ZOdUZ5MTdQdGxOYVBPSmJUMkJLZVphVFh3R3NJa1pOUk1SUTdKNVFRVk5qaVE0cHBGUEdpS3dlaUFXVUZDWHFheGVIaTlmZnNZbU03QTVMWkkwMl81U3JLWUJ6WGtEZw?oc=5"
 }
 ]
 },
@@ -3418,7 +3422,8 @@
 "rank": 6.91,
 "abstract_days": [
 "2026-11-18",
-"2026-11-19"
+"2026-11-19",
+"2026-11-20"
 ],
 "abstract_err": "page: skipped; pubmed: empty; europepmc: The read operation timed out; openalex: empty"
 },
