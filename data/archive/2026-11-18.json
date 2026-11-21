@@ -1518,7 +1518,13 @@
 "abstract": "Agentic artificial intelligence could automate analyses of sensitive clinical data, but current agents depend on large language models (LLMs). Cloud LLMs expose patient data. Local LLMs hallucinate, and an invented value in a tool call propagates through every later step. Here we present a method to build System 1 agents: local agents that call tools without generating text. A deterministic compiler turns each tool's schema and the request into multiple-choice questions whose options come from the request and the schema, then a one-pass decision model answers them. On 1,952 requests to 157 biomedical tools, the best System 1 agent chose the right tool, or correctly declined, for 97.0% of requests, significantly ahead of all 18 local LLM-agent settings (best 95.2%). The System 1 agent filled 97.0% of 6,056 stated argument values. No System 1 call contained invented content, against 5.5-19.7% of LLM calls. The System 1 Agents framework is freely available as open-source software at https://github.com/eltzanis/SystemOneAgents.",
 "day": "2026-11-18",
 "rank": 8.64,
-"zh_abstract": "智能体人工智能（Agentic AI）可自动化分析敏感临床数据，但当前的智能体依赖大型语言模型（LLM）。云端LLM会暴露患者数据。本地LLM会产生幻觉，而工具调用中虚构的数值会传播到后续每一个步骤。在此我们提出一种构建System 1智能体的方法：即不生成文本而直接调用工具的本地智能体。一个确定性编译器将每个工具的schema和请求转换为多项选择题，选项来自请求和schema，然后由单遍决策模型作答。在针对157个生物医学工具的1,952个请求中，最佳System 1智能体在97.0%的请求中选择了正确工具或正确拒绝，显著领先于所有18种本地LLM智能体设置（最佳为95.2%）。该System 1智能体填入了6,056个明确给出的参数值中的97.0%。没有任何System 1调用包含虚构内容，而LLM调用中有5.5%–19.7%包含虚构内容。System 1 Agents框架作为开源软件可在https://github.com/eltzanis/SystemOneAgents免费获取。"
+"zh_abstract": "智能体人工智能（Agentic AI）可自动化分析敏感临床数据，但当前的智能体依赖大型语言模型（LLM）。云端LLM会暴露患者数据。本地LLM会产生幻觉，而工具调用中虚构的数值会传播到后续每一个步骤。在此我们提出一种构建System 1智能体的方法：即不生成文本而直接调用工具的本地智能体。一个确定性编译器将每个工具的schema和请求转换为多项选择题，选项来自请求和schema，然后由单遍决策模型作答。在针对157个生物医学工具的1,952个请求中，最佳System 1智能体在97.0%的请求中选择了正确工具或正确拒绝，显著领先于所有18种本地LLM智能体设置（最佳为95.2%）。该System 1智能体填入了6,056个明确给出的参数值中的97.0%。没有任何System 1调用包含虚构内容，而LLM调用中有5.5%–19.7%包含虚构内容。System 1 Agents框架作为开源软件可在https://github.com/eltzanis/SystemOneAgents免费获取。",
+"also": [
+{
+"source": "Hugging Face Daily Papers",
+"link": "https://huggingface.co/papers/2611.21053"
+}
+]
 },
 {
 "title": "PlainPairs: A Corpus Pairing the Prescriber and Patient Texts of U.S. Prescription Medicine Labels",
@@ -1642,7 +1648,13 @@
 "score": 6,
 "reason": "创纪录级别融资属重要产业事件，但仅标题、无金额与细节，受标题限制取6分",
 "day": "2026-11-18",
-"rank": 8.5
+"rank": 8.5,
+"also": [
+{
+"source": "财联社电报",
+"link": "https://news.google.com/rss/articles/CBMiRkFVX3lxTE9JYWpDNUE5X1l5VHZmVUJKaUZLYWlMTy1RaTVsWEVncktVSUxSN194Skd3M3p3aFRzTXlncUVXZUpHRUt6X1E?oc=5"
+}
+]
 },
 {
 "title": "The Evolving Role of Artificial Intelligence in Facial Plastic Surgery: From Education and Research to EHR-Embedded Applications.",
@@ -3423,9 +3435,10 @@
 "abstract_days": [
 "2026-11-18",
 "2026-11-19",
-"2026-11-20"
+"2026-11-20",
+"2026-11-21"
 ],
-"abstract_err": "page: skipped; pubmed: empty; europepmc: The read operation timed out; openalex: empty"
+"abstract_err": "page: skipped; pubmed: empty; europepmc: empty; openalex: empty"
 },
 {
 "title": "Human-Agentic AI Collaboration Workflow for Trend Analysis of ChatGPT Applications in Healthcare",

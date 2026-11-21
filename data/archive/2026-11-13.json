@@ -515,7 +515,13 @@
 "abstract": "Contradictory claims about drug efficacy across randomized controlled trials (RCTs) complicate evidence-based medicine, yet existing automated methods classify isolated sentence pairs and do not explain why studies disagree. We present DrugCon, a large language model (LLM)-based framework that extracts study conclusions from RCT abstracts, links these claims when they concern the same drug-disease association, detects contradictions with counterfactual reasoning, and explains them using a taxonomy of ten study-level factors such as population, dosage, and outcome measures. Applying DrugCon to 224,756 RCT abstracts, we built DrugCon-Bench, an exhaustively annotated benchmark of 542 contradictory claim pairs from 819 abstracts. Most contradictions involve more than one study-level factor (75.5%). The most common are differences in outcome measures (64.0%), populations (51.3%), and dosage or exposure duration (35.6%). DrugCon achieves an F1 score of 0.744 for contradiction detection, outperforming rule-based, supervised, and natural language inference baselines, and an F1 of 0.482 for identifying explanatory study factors. DrugCon enables scalable and explainable analysis of contradictory clinical evidence.",
 "day": "2026-11-13",
 "rank": 8.81,
-"zh_abstract": "随机对照试验（RCTs）之间关于药物疗效的矛盾主张使循证医学复杂化，然而现有的自动化方法对孤立的句子对进行分类，并不解释研究为何不一致。我们提出 DrugCon，一个基于大型语言模型（LLM）的框架，从 RCT 摘要中提取研究结论，当这些主张涉及同一药物-疾病关联时将其链接起来，通过反事实推理检测矛盾，并使用包含十个研究层面因素（如人群、剂量和结局指标）的分类体系来解释矛盾。将 DrugCon 应用于 224,756 篇 RCT 摘要，我们构建了 DrugCon-Bench，一个对来自 819 篇摘要的 542 对矛盾主张进行详尽标注的基准。大多数矛盾涉及不止一个研究层面因素（75.5%）。最常见的是结局指标差异（64.0%）、人群差异（51.3%）以及剂量或暴露持续时间差异（35.6%）。DrugCon 在矛盾检测上的 F1 分数为 0.744，优于基于规则、监督学习和自然语言推理的基线；在识别解释性研究因素方面的 F1 为 0.482。DrugCon 能够对矛盾的临床证据进行可扩展且可解释的分析。"
+"zh_abstract": "随机对照试验（RCTs）之间关于药物疗效的矛盾主张使循证医学复杂化，然而现有的自动化方法对孤立的句子对进行分类，并不解释研究为何不一致。我们提出 DrugCon，一个基于大型语言模型（LLM）的框架，从 RCT 摘要中提取研究结论，当这些主张涉及同一药物-疾病关联时将其链接起来，通过反事实推理检测矛盾，并使用包含十个研究层面因素（如人群、剂量和结局指标）的分类体系来解释矛盾。将 DrugCon 应用于 224,756 篇 RCT 摘要，我们构建了 DrugCon-Bench，一个对来自 819 篇摘要的 542 对矛盾主张进行详尽标注的基准。大多数矛盾涉及不止一个研究层面因素（75.5%）。最常见的是结局指标差异（64.0%）、人群差异（51.3%）以及剂量或暴露持续时间差异（35.6%）。DrugCon 在矛盾检测上的 F1 分数为 0.744，优于基于规则、监督学习和自然语言推理的基线；在识别解释性研究因素方面的 F1 为 0.482。DrugCon 能够对矛盾的临床证据进行可扩展且可解释的分析。",
+"also": [
+{
+"source": "PubMed · medRxiv : the preprint server for health sciences",
+"link": "https://pubmed.ncbi.nlm.nih.gov/43060237/"
+}
+]
 },
 {
 "title": "Network scaling in swarm learning across real hospitals of different sizes: a KPI-driven analysis on the eICU Collaborative Research Database",

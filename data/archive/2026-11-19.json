@@ -1793,7 +1793,13 @@
 "score": 4,
 "reason": "行业通讯类报道，信息量有限、无数据支撑，属增量档",
 "day": "2026-11-19",
-"rank": 7.5
+"rank": 7.5,
+"also": [
+{
+"source": "STAT",
+"link": "https://news.google.com/rss/articles/CBMilAFBVV95cUxPcElLZDltbG4ybUZXTkc5aV9IX2pmWFhlUEJ6dWtDZFRmSWdXM3FCcTZxZUxIWGRnQlJQOXZwSmxNODhJY01ySi1lR1ctXzJlSENYQ0o4MGlBcjV2QlJpRGpfV0VRVVJDQnZUZDh3Y2FqMjhwMFBtX0F2c1N3YXM3WXJXS3prNmhka1YydjNIMWt1Wkpr?oc=5"
+}
+]
 },
 {
 "title": "The Formal-Functional Gap: How Artificial Intelligence Reshapes Medical Professional Identity.",
@@ -1952,7 +1958,13 @@
 "score": 5,
 "reason": "大额AI制药融资有信息量，但仅标题、无金额与细节，封顶6分取5",
 "day": "2026-11-19",
-"rank": 7.31
+"rank": 7.31,
+"also": [
+{
+"source": "东方财富网",
+"link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE9ETXRvWHI0S0FJZ0FJWkJfYnFwREVNVU83VUgzMnB2OFpFT082c2Y5WS1DbnZnSU9mcEQ1blItV2ZhVlFaUWNHVUROWmlneDhfTFBfRVBOUGZhTlFDQTJ3Rg?oc=5"
+}
+]
 },
 {
 "title": "AI-Assisted Diabetes Education for Children With Type 1 Diabetes",
