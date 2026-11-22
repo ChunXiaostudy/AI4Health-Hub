@@ -126,7 +126,8 @@
 "day": "2026-11-21",
 "rank": 10.64,
 "abstract_days": [
-"2026-11-21"
+"2026-11-21",
+"2026-11-22"
 ],
 "abstract_err": "page: HTTP Error 403: Forbidden; europepmc: empty; openalex: empty"
 },
@@ -259,7 +260,8 @@
 "day": "2026-11-21",
 "rank": 9.0,
 "abstract_days": [
-"2026-11-21"
+"2026-11-21",
+"2026-11-22"
 ],
 "abstract_err": "page: HTTP Error 403: Forbidden; no DOI / PMID"
 },
@@ -295,7 +297,8 @@
 "day": "2026-11-21",
 "rank": 9.0,
 "abstract_days": [
-"2026-11-21"
+"2026-11-21",
+"2026-11-22"
 ],
 "abstract_err": "page: HTTP Error 403: Forbidden; no DOI / PMID"
 },
@@ -330,7 +333,8 @@
 "day": "2026-11-21",
 "rank": 9.0,
 "abstract_days": [
-"2026-11-21"
+"2026-11-21",
+"2026-11-22"
 ],
 "abstract_err": "page: HTTP Error 403: Forbidden; no DOI / PMID"
 },
@@ -1628,7 +1632,13 @@
 "score": 4,
 "reason": "仅标题，涉及AI问诊安全但细节缺失，属增量档",
 "day": "2026-11-21",
-"rank": 6.31
+"rank": 6.31,
+"also": [
+{
+"source": "凤凰网科技",
+"link": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE8ydzFrOTltTXdVSi13WTZpdmZLN3psOFk1clYtZXFmNUZjRjVEaHN5N0tmX0F1VEU4VHVuMVdncDFWbDNYZThOLTdOOGY?oc=5"
+}
+]
 },
 {
 "title": "Educational Methods for Learning Thyroid Ultrasound Interpretation in Medical Students",

@@ -1069,7 +1069,13 @@
 "abstract": "[Oral and maxillofacial surgery clinics of North America] Virtual surgical planning (VSP) has transformed oral and maxillofacial surgery (OMFS) by enabling patient-specific planning and execution of complex procedures using patient-specific surgical guides and implants. Three-dimensional computer-aided design and manufacturing have advanced the field from traditional model surgery to fully digital workflows. These technologies have significantly improved outcomes across a wide range of procedures, including orthognathic surgery, maxillofacial reconstructive surgery, temporomandibular joint surgery, trauma management, and implantology. This article reviews the historical evolution of VSP in OMFS, current major clinical applications, developments in artificial intelligence, and the limitations and future directions of virtual surgical workflows.",
 "day": "2026-10-26",
 "rank": 7.85,
-"zh_abstract": "虚拟手术规划（virtual surgical planning, VSP）通过使用患者特异性手术导板和植入物实现复杂手术的患者特异性规划与执行，从而改变了口腔颌面外科（oral and maxillofacial surgery, OMFS）。三维计算机辅助设计与制造已推动该领域从传统模型外科发展到全数字化工作流程。这些技术已在广泛的手术中显著改善结局，包括正颌手术、颌面重建手术、颞下颌关节手术、创伤管理和种植学。本文综述 VSP 在 OMFS 中的历史演变、当前主要临床应用、人工智能进展，以及虚拟手术工作流程的局限性和未来方向。"
+"zh_abstract": "虚拟手术规划（virtual surgical planning, VSP）通过使用患者特异性手术导板和植入物实现复杂手术的患者特异性规划与执行，从而改变了口腔颌面外科（oral and maxillofacial surgery, OMFS）。三维计算机辅助设计与制造已推动该领域从传统模型外科发展到全数字化工作流程。这些技术已在广泛的手术中显著改善结局，包括正颌手术、颌面重建手术、颞下颌关节手术、创伤管理和种植学。本文综述 VSP 在 OMFS 中的历史演变、当前主要临床应用、人工智能进展，以及虚拟手术工作流程的局限性和未来方向。",
+"also": [
+{
+"source": "PubMed · Journal of cranio-maxillo-facial surgery : official publication of the European Association for Cranio-Maxillo-Facial Surgery",
+"link": "https://pubmed.ncbi.nlm.nih.gov/43056880/"
+}
+]
 },
 {
 "title": "Artificial intelligence in diabetic retinopathy: From deep learning to foundation models, clinical translation, and real-world deployment.",

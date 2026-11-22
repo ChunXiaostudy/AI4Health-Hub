@@ -763,7 +763,13 @@
 "score": 6,
 "reason": "大额融资属重要档，但title_only限制最高6分",
 "day": "2026-11-19",
-"rank": 8.5
+"rank": 8.5,
+"also": [
+{
+"source": "国际科技创新中心",
+"link": "https://news.google.com/rss/articles/CBMifkFVX3lxTE1VQjRDaWdEbm5SdWx2ajI5YVBTeUtOYnUyYWxCSUNYdjc4ZFRBUHdRREVCUXNWY2REVmhWMWNEUHRvZjNQRTNQQ2cxUjY3d2xRN25HMnFoVFlXT2YteUhvZnpVNFF3NEo0V290Z0pRdFlJTmZEdmZGR3Z6T09RZw?oc=5"
+}
+]
 },
 {
 "title": "AI Assistance for Clinicians Identifying Causes of Chest Pain From ECG Images",
@@ -1930,6 +1936,10 @@
 {
 "source": "ThePaper.cn",
 "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTFBfQWtkNmk5ZDN0QW9tb0FmYlF5ZlVBWGJGbnpkenY5ZE5PZlUwV0cwRTBIQ1hUSjZQVE5oaUhobmRiM25kYVRoSUhtRFJUOUJwTzZWQVZFbXpCWGRabUFOVQ?oc=5"
+},
+{
+"source": "手机新浪网",
+"link": "https://news.google.com/rss/articles/CBMicEFVX3lxTE9HYWJvbmhJaWNMUFJqTElvc043MXlzbDZJM0toRFNWc2lQR3ZTbmlfRDgwb3BManFKSzdIMnBidWsyb2lha1k0RFRlWDJEOWRMUHBtdjludzNsUkk2U0lSV1JWMUxEODhRb0hVblZrQ2U?oc=5"
 }
 ]
 },
@@ -2421,6 +2431,10 @@
 {
 "source": "STAT News",
 "link": "https://www.statnews.com/2026/11/19/epic-defends-competitive-practices-promises-ai-access-health-tech/?utm_campaign=rss"
+},
+{
+"source": "STAT",
+"link": "https://news.google.com/rss/articles/CBMipAFBVV95cUxQNTAtOFBwY2c1REVDVnhjSWVYdWRRYS0zLXJPMkpNX3JjUmdXRHRmU2FLT3Bzc2dNRVZLcGY2TWNObGFidkEybEE3ekJsUEg3TXBIMkVXUDRCTWN4RGxPam5ta1JsYWlnLUxhZFEtemp1NUJfR01DcXNmVjBXRnAyVkFrRTh1eVVwOWc3R1EtVXVLUmgzYlBBQlpuazlGdzQ1dVZPcg?oc=5"
 }
 ]
 },

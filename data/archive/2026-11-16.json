@@ -736,7 +736,13 @@
 "abstract": "[Methodist DeBakey cardiovascular journal] This review examines the role of artificial intelligence (AI) across the heart failure (HF) continuum, with particular emphasis on patient identification and early recognition, AI-enabled electrocardiography and echocardiography, etiologic and phenotypic classification, electronic health record-based staging and risk prediction, advanced HF identification, continuous monitoring, treatment optimization, and emerging applications of agentic AI.",
 "day": "2026-11-16",
 "rank": 7.6,
-"zh_abstract": "[Methodist DeBakey cardiovascular journal] 本综述考察人工智能（AI）在心力衰竭（HF）连续统一体中的作用，特别强调患者识别和早期识别、AI赋能的心电图和超声心动图、病因学和表型分类、基于电子健康记录的分期和风险预测、晚期HF识别、连续监测、治疗优化以及代理式AI（agentic AI）的新兴应用。"
+"zh_abstract": "[Methodist DeBakey cardiovascular journal] 本综述考察人工智能（AI）在心力衰竭（HF）连续统一体中的作用，特别强调患者识别和早期识别、AI赋能的心电图和超声心动图、病因学和表型分类、基于电子健康记录的分期和风险预测、晚期HF识别、连续监测、治疗优化以及代理式AI（agentic AI）的新兴应用。",
+"also": [
+{
+"source": "PubMed · European urology focus",
+"link": "https://pubmed.ncbi.nlm.nih.gov/43064602/"
+}
+]
 },
 {
 "title": "The Verge：苹果将招募最多20万人参与医疗AI 研究",

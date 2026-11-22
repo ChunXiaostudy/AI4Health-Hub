@@ -168,7 +168,8 @@
 "rank": 10.0,
 "abstract_days": [
 "2026-11-20",
-"2026-11-21"
+"2026-11-21",
+"2026-11-22"
 ],
 "abstract_err": "page: HTTP Error 403: Forbidden; no DOI / PMID"
 },
@@ -197,7 +198,13 @@
 "score": 6,
 "reason": "FDA许可属监管实质进展，但仅标题、信息有限，封顶6分",
 "day": "2026-11-20",
-"rank": 10.0
+"rank": 10.0,
+"also": [
+{
+"source": "Yahoo Finance",
+"link": "https://news.google.com/rss/articles/CBMikAFBVV95cUxNVXhjemw2TmE5eGJqU2ZaOXJUdXd5cm05OEpaMUNjaVVlMmliZHl2Q0pXc21SR2dLTWowYjZ5V1JBd3FDZy0yRXdreXc2cm01cUhnTUlDRG9uYm1xenBMMTJXOENwWlZFOHRfRGRsbE9fNTkyTHp6S01jMGs3bFdma1A1aWMwSHlNRjlLX1dUWEg?oc=5"
+}
+]
 },
 {
 "title": "Pre-training everywhere: Parameter-efficient fine-tuning for medical image analysis via target parameter pre-training",
@@ -231,7 +238,8 @@
 "rank": 10.0,
 "abstract_days": [
 "2026-11-20",
-"2026-11-21"
+"2026-11-21",
+"2026-11-22"
 ],
 "abstract_err": "page: HTTP Error 403: Forbidden; no DOI / PMID"
 },
@@ -3943,7 +3951,13 @@
 "score": 4,
 "reason": "仅标题、融资报道，信息有限",
 "day": "2026-11-20",
-"rank": 6.31
+"rank": 6.31,
+"also": [
+{
+"source": "21财经",
+"link": "https://news.google.com/rss/articles/CBMilAFBVV95cUxNZE1vb0VRR0M1ekRWUTZtbjZZaUgxVEQxRG5hS3pCUVdYYVNXRzVTbEtzbEMtaWlVVW4ydTlfM2RoZVhtSkxPQnNrbmZ6TUx0TFJQaWE5WGhDcjZ0cFVPbE9qRm1uR1Rkd2ZZSEgwQ2l3cXFtRDhnRzJVeDVyYjRhUklMM0t3VUt3bWNWMGJpWVNBb0lv?oc=5"
+}
+]
 },
 {
 "title": "The Effect of AI-Powered Chatbot Simulator-Based Climate-Resilient Perinatal Care Training on Midwifery Students' Climate Change Knowledge, Awareness, and Risk Assessment Skills",
