@@ -127,7 +127,8 @@
 "rank": 10.64,
 "abstract_days": [
 "2026-11-21",
-"2026-11-22"
+"2026-11-22",
+"2026-11-23"
 ],
 "abstract_err": "page: HTTP Error 403: Forbidden; europepmc: empty; openalex: empty"
 },
@@ -261,7 +262,8 @@
 "rank": 9.0,
 "abstract_days": [
 "2026-11-21",
-"2026-11-22"
+"2026-11-22",
+"2026-11-23"
 ],
 "abstract_err": "page: HTTP Error 403: Forbidden; no DOI / PMID"
 },
@@ -298,7 +300,8 @@
 "rank": 9.0,
 "abstract_days": [
 "2026-11-21",
-"2026-11-22"
+"2026-11-22",
+"2026-11-23"
 ],
 "abstract_err": "page: HTTP Error 403: Forbidden; no DOI / PMID"
 },
@@ -334,7 +337,8 @@
 "rank": 9.0,
 "abstract_days": [
 "2026-11-21",
-"2026-11-22"
+"2026-11-22",
+"2026-11-23"
 ],
 "abstract_err": "page: HTTP Error 403: Forbidden; no DOI / PMID"
 },
@@ -1186,7 +1190,13 @@
 "abstract": "[Newly registered clinical trial, no results yet; sponsor: European Institute of Oncology; conditions: Cancer, Oncologic, Solid Tumor Cancer; type: OBSERVATIONAL; enrollment: 150; status: ACTIVE_NOT_RECRUITING] The aim of this prospective, observational, non-interventional study is to evaluate the level of agreement between IEO-MATCH, a newly developed AI-based clinical trial matcher, and the standard manual matching workflow in assigning patients to phase I clinical trials open at IEO in the Division of New Drugs and Early Drug Development.",
 "day": "2026-11-21",
 "rank": 7.31,
-"zh_abstract": "[新注册临床试验，尚无结果；申办者：European Institute of Oncology；疾病：Cancer, Oncologic, Solid Tumor Cancer；类型：OBSERVATIONAL；入组：150；状态：ACTIVE_NOT_RECRUITING] 这项前瞻性、观察性、非干预性研究的目的是评估IEO-MATCH（一种新开发的基于AI的临床试验匹配器）与标准人工匹配工作流程在将患者分配到IEO新药与早期药物开发部门正在开展的I期临床试验方面的一致性水平。"
+"zh_abstract": "[新注册临床试验，尚无结果；申办者：European Institute of Oncology；疾病：Cancer, Oncologic, Solid Tumor Cancer；类型：OBSERVATIONAL；入组：150；状态：ACTIVE_NOT_RECRUITING] 这项前瞻性、观察性、非干预性研究的目的是评估IEO-MATCH（一种新开发的基于AI的临床试验匹配器）与标准人工匹配工作流程在将患者分配到IEO新药与早期药物开发部门正在开展的I期临床试验方面的一致性水平。",
+"also": [
+{
+"source": "PubMed · Current problems in pediatric and adolescent health care",
+"link": "https://pubmed.ncbi.nlm.nih.gov/43067579/"
+}
+]
 },
 {
 "title": "AI-powered Childbirth Preparation Training",
