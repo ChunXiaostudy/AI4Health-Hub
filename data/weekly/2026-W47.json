@@ -1,0 +1,109 @@
+{
+ "week": "2026-W47",
+ "range": "2026-11-16 ~ 2026-11-22",
+ "partial": false,
+ "generated": "2026-11-23T08:38:34.419017+00:00",
+ "summary": "本周多项研究聚焦医学影像的再利用与风险分层。一项基于常规胸片的卷积神经网络生存模型在53,109名成人中开发，用于预测主要骨质疏松性骨折，并在两家独立机构的85,284例中完成外部验证[3]；另一项多中心前瞻队列在8,616名孕妇中融合视网膜照片、临床因素与平均动脉压，用于子痫前期预测并做外部验证[4]。系统综述与荟萃分析汇总40篇报告，其中21篇纳入荟萃分析，发现影像生物学年龄差每增加5年，全因死亡风险升高（HR 1.31），并与痴呆、卒中、心衰等相关[5]。数据资源方面，Shiraz-TBI数据集公开3,602例患者、12,155次脑CT及结构化标注与结局[7]；一项基于手机2D面部照片重建3D面形并估计骨骼形态的方法，用于颅颌面畸形远程评估与术后模拟[14]。方法学层面，一项大规模研究考察了医学图像分析模型性能评估中置信区间的不确定性[17]。\n\n临床预测与决策方向继续向多病种与外部验证扩展。基于常规实验室数据构建的可解释痛风临床亚型框架，在UKB、中国GoutRe登记与MIMIC-IV共21,235人中开展外部评估[6]；基于3,905例患者277万余条检验数据的Transformer模型，用于预测两年内162种治疗相关并发症[8]。前瞻性多中心研究开发并外部验证AI数字听诊方法，用于识别LVEF≤40%的左室功能不全[10]；基于323例患者高密度电解剖图构建的左房数字孪生，其虚拟诱导房颤的可持续性及恢复模式可分层预测消融后房性心律失常复发[15]。基于33万余份心电图-超声心动图配对训练的深度学习模型，可检测并预测扩张型心肌病表型并在多中心外部队列验证[18]；另有预印本MyoECG将心脏磁共振结构与功能知识蒸馏进12导联心电图，在七个独立数据集、逾180万份心电图上验证，该结果未经同行评审[19]。NEJM AI还刊发一款获FDA授权的脓毒症预测AI工具的开发与验证研究[20]。\n\n大模型与智能体的应用形态趋于具体。开源智能体系统OpenScientist经领域专家在五项生物医学案例中评估，可在数分钟内完成原本需数月人工分析的任务[1]；一项研究在三个队列中比较六种大模型与医师标准，用于患者门户紧急消息分诊[9]；一项单中心随机对照试验纳入300名神经外科门诊成人，评估会诊前提供经质量核查的AI生成通俗病情摘要对医患沟通与就诊时长的影响[16]。\n\n数字健康与落地监管方面，前瞻性临床研究显示AI辅助的消费级智能手表测血压与诊室测量表现相近，可用于人群机会性筛查[2]。一项横断面元研究综述纳入36项2023年至2025年开发的肺癌影像AI研究，评估其统计方法严谨性与报告透明度并指出最佳实践缺口[11]。中国1,574名成人的5×2析因实验显示，公众对行政类AI的评价优于诊断与治疗类AI，且在高严重度下对治疗类AI的负面反应更强[12]。此外，CGMap距离分辨图学习框架用于从生物分子网络优先筛选癌症基因候选并追踪机制线索[13]。",
+ "items": [
+  {
+   "title": "开源智能体式AI协同科学家用于临床与生物医学发现",
+   "link": "https://www.nature.com/articles/s41591-026-04808-6",
+   "source": "Nature Medicine"
+  },
+  {
+   "title": "AI智能手表用于未诊断高血压筛查",
+   "link": "https://www.nature.com/articles/d41591-026-00058-8",
+   "source": "Nature Medicine"
+  },
+  {
+   "title": "胸片深度学习机会性预测骨质疏松性骨折",
+   "link": "https://ai.nejm.org/doi/full/10.1056/AIoa2600590?af=R&rss=currentIssue",
+   "source": "NEJM AI"
+  },
+  {
+   "title": "深度学习视网膜血管生物标志物预测子痫前期",
+   "link": "https://www.nature.com/articles/s41746-026-03463-y",
+   "source": "npj Digital Medicine"
+  },
+  {
+   "title": "影像生物学年龄差与死亡及发病风险的系统综述与荟萃分析",
+   "link": "https://www.nature.com/articles/s41746-026-03472-x",
+   "source": "npj Digital Medicine"
+  },
+  {
+   "title": "可解释AI联系痛风临床表型与多组学特征及健康轨迹",
+   "link": "https://www.nature.com/articles/s41746-026-03507-3",
+   "source": "npj Digital Medicine"
+  },
+  {
+   "title": "STBI：逾1.2万例脑CT创伤性颅脑损伤数据集",
+   "link": "https://www.nature.com/articles/s41746-026-03471-y",
+   "source": "npj Digital Medicine"
+  },
+  {
+   "title": "常规检验轨迹预测癌症器官层面并发症",
+   "link": "https://www.nature.com/articles/s41746-026-03405-8",
+   "source": "npj Digital Medicine"
+  },
+  {
+   "title": "云端与本地大模型筛查患者门户紧急消息对比",
+   "link": "https://www.nature.com/articles/s41746-026-03477-6",
+   "source": "npj Digital Medicine"
+  },
+  {
+   "title": "AI听诊识别左室功能不全的多中心外部验证",
+   "link": "https://ai.nejm.org/doi/full/10.1056/AIoa2600258?af=R&rss=currentIssue",
+   "source": "NEJM AI"
+  },
+  {
+   "title": "肺癌影像AI统计实践的元研究综述",
+   "link": "https://ai.nejm.org/doi/full/10.1056/AIra2600064?af=R&rss=currentIssue",
+   "source": "NEJM AI"
+  },
+  {
+   "title": "医生AI披露、病情严重程度与公众对数字医疗的信任",
+   "link": "https://www.nature.com/articles/s41746-026-03484-7",
+   "source": "npj Digital Medicine"
+  },
+  {
+   "title": "可解释距离分辨图学习用于癌症基因优先筛选",
+   "link": "https://www.nature.com/articles/s42256-026-01327-4",
+   "source": "Nature Machine Intelligence"
+  },
+  {
+   "title": "Tele-Cranio：免CT的颅颌面畸形远程AI诊断与规划",
+   "link": "https://www.nature.com/articles/s41746-026-03454-z",
+   "source": "npj Digital Medicine"
+  },
+  {
+   "title": "虚拟房颤动力学可反映消融术后临床结局",
+   "link": "https://www.nature.com/articles/s41746-026-03495-4",
+   "source": "npj Digital Medicine"
+  },
+  {
+   "title": "AI会诊前摘要对沟通与就诊时长影响的RCT",
+   "link": "https://ai.nejm.org/doi/full/10.1056/AIoa2600136?af=R&rss=currentIssue",
+   "source": "NEJM AI"
+  },
+  {
+   "title": "医学图像分析中的性能不确定性：置信区间大规模考察",
+   "link": "https://www.sciencedirect.com/science/article/pii/S1361841526004184?dgcid=rss_sd_all",
+   "source": "Medical Image Analysis"
+  },
+  {
+   "title": "AI心电图检测与预测扩张型心肌病",
+   "link": "https://pubmed.ncbi.nlm.nih.gov/43031488/",
+   "source": "PubMed · European heart journal"
+  },
+  {
+   "title": "心脏磁共振知识蒸馏至心电图实现心肌病检测",
+   "link": "https://arxiv.org/abs/2611.23925",
+   "source": "arXiv"
+  },
+  {
+   "title": "FDA授权脓毒症预测AI工具的开发与验证",
+   "link": "https://ai.nejm.org/doi/full/10.1056/AIx2601439?af=R&rss=currentIssue",
+   "source": "NEJM AI"
+  }
+ ]
+}
