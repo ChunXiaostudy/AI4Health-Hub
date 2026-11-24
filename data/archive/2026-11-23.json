@@ -632,7 +632,8 @@
 "day": "2026-11-23",
 "rank": 8.0,
 "abstract_days": [
-"2026-11-23"
+"2026-11-23",
+"2026-11-24"
 ],
 "abstract_err": "page: HTTP Error 403: Forbidden; no DOI / PMID"
 },
@@ -792,7 +793,17 @@
 "score": 5,
 "reason": "开源医学大模型有工具价值，但仅标题、无评测信息，属值得一看档",
 "day": "2026-11-23",
-"rank": 7.5
+"rank": 7.5,
+"also": [
+{
+"source": "新浪财经",
+"link": "https://news.google.com/rss/articles/CBMiggFBVV95cUxQZXhiWW04MHlYOGJkcmhKMUFIOWJRVDhva0cyamhxOTFnR3pUYUgtNmtqWF9pTG1XUThEcjlwSExIVjZpMXdSR1lXcm5DV0FMTkFqS1doZ2Nqc2ZicWY2RDJXX3BSMUJmYjYzYk1VMlNhYzF2MDRQM01pMXhvTkJWZHl3?oc=5"
+},
+{
+"source": "中金在线",
+"link": "https://news.google.com/rss/articles/CBMickFVX3lxTE5FVlNMZWpZS0hVbVNhcFdWVjBUU3lUakR0UnRiZ2YxNFYyWUJzUmMyc1A3OHk3dkdMcjAxOU1LamNtM1hNUVpMM3drZUpfTTdVX19fclhoOE1lS1FVb1VXQXcwOUUwZmkyY2ZYOG1vRHlFQQ?oc=5"
+}
+]
 },
 {
 "title": "Neurodegenerative Differential Diagnosis with Knowledge-enhanced Structural Reasoning",

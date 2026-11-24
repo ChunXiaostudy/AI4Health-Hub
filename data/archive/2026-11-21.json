@@ -128,7 +128,8 @@
 "abstract_days": [
 "2026-11-21",
 "2026-11-22",
-"2026-11-23"
+"2026-11-23",
+"2026-11-24"
 ],
 "abstract_err": "page: HTTP Error 403: Forbidden; europepmc: empty; openalex: empty"
 },
@@ -263,7 +264,8 @@
 "abstract_days": [
 "2026-11-21",
 "2026-11-22",
-"2026-11-23"
+"2026-11-23",
+"2026-11-24"
 ],
 "abstract_err": "page: HTTP Error 403: Forbidden; no DOI / PMID"
 },
@@ -301,7 +303,8 @@
 "abstract_days": [
 "2026-11-21",
 "2026-11-22",
-"2026-11-23"
+"2026-11-23",
+"2026-11-24"
 ],
 "abstract_err": "page: HTTP Error 403: Forbidden; no DOI / PMID"
 },
@@ -338,7 +341,8 @@
 "abstract_days": [
 "2026-11-21",
 "2026-11-22",
-"2026-11-23"
+"2026-11-23",
+"2026-11-24"
 ],
 "abstract_err": "page: HTTP Error 403: Forbidden; no DOI / PMID"
 },
@@ -1157,7 +1161,13 @@
 "score": 4,
 "reason": "标题仅述版本更新获许可，无细节，属增量档",
 "day": "2026-11-21",
-"rank": 7.49
+"rank": 7.49,
+"also": [
+{
+"source": "Imaging Technology News",
+"link": "https://news.google.com/rss/articles/CBMilgFBVV95cUxNNVhjeVh3T3RoNDc4TmQ0aFgwcE41MVdiQmNFMmFsdkx4dFZVOVVQTTMyZU9wSFRGODlkX0hzbDBES0I1UW5OXzJMWU5mUFNfMjRkdEcyX2hrRzRrQTlDTTJaelI1MzhoMl9yeUtYMVE2dUNhQmtSU0RreVpMQ2pRS1NiQjVOcGhYVUtILUJKTzd5dTBvcUE?oc=5"
+}
+]
 },
 {
 "title": "Smart Artificial Intelligence for Trial Linking",
