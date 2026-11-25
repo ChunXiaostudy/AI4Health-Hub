@@ -865,6 +865,39 @@
 "zh_abstract": "[Pediatric radiology] 儿童计算机断层扫描（CT）中的辐射剂量优化是一项关键要求，其驱动力是儿童更高的辐射敏感性。本综述对剂量优化的演变进行了批判性分析，从“在合理可达到的范围内尽可能低”（ALARA）等基本原则和传统技术，到人工智能（AI）的变革性影响。我们追溯了从迭代重建（IR）到深度学习重建（DLR）新范式以及光子计数CT等新兴探测器技术的发展历程；IR最初提供了剂量降低，但受限于不自然的图像纹理和计算需求。临床证据表明，DLR显著改变了剂量与图像质量之间的传统折衷，在产生具有更优噪声特性和诊断信心的图像的同时，实现了显著的潜在剂量降低。除重建外，AI还在自动化扫描协议设置，以提高一致性并减少错误。然而，这些强大工具的临床整合并非无缝。重大障碍仍然存在，包括算法的“黑箱”性质、放射技师需要新的培训课程，以及复杂的伦理和监管挑战。本综述综合了这些问题并规划了前进路径，倡导采取整体方法，包括补充性的AI专用参考水平、联邦学习和稳健治理，以充分发挥更安全、更高效且针对患者的剂量优化生态系统的全部潜力。"
 },
 {
+"title": "MitoLODE: a virtual mitochondrion framework with knowledge graph priors for trajectory modeling and mechanistic perturbation analysis.",
+"link": "https://pubmed.ncbi.nlm.nih.gov/43076351/",
+"date": "2026-11-24T00:00:00+00:00",
+"badge": "DOI 10.1093/bib/bbag536",
+"source": "PubMed · Briefings in bioinformatics",
+"source_group": "PubMed",
+"home": "",
+"thin": false,
+"pop": null,
+"id": "9f7f1d5df566",
+"keep": true,
+"zh_title": "MitoLODE：知识图谱先验的虚拟线粒体框架",
+"summary": "构建线粒体知识图谱MitoKG并据此提出MitoLODE，用于疾病轨迹建模与机制性扰动分析。",
+"key_points": [
+"整合五个权威数据库构建MitoKG，含2549节点、23019边",
+"指出现有伪时间轨迹与虚拟细胞方法的局限",
+"将疾病与对照作为独立轨迹建模以分析演化"
+],
+"section": "生命科学与药物",
+"type": "模型",
+"tags": [
+"基因组学",
+"数据集"
+],
+"evidence": "同行评审",
+"score": 5,
+"reason": "有新方法且构建公开知识图谱资源，但缺乏实验验证信息",
+"abstract": "[Briefings in bioinformatics] Mitochondria play a central role in the pathogenesis of major diseases. Tracking how they evolve under disease conditions is valuable for understanding pathological mechanisms and identifying intervention windows. Existing single-cell trajectory inference methods rely on pseudotime rather than a real temporal axis, and rarely model disease and control as independent trajectories. Virtual cell methods target one-shot drug perturbation responses and do not handle the continuous temporal evolution of disease phenotypes. To address these gaps, we propose a virtual mitochondrion research paradigm. We first curate and construct MitoKG, a mitochondria-specific heterogeneous knowledge graph integrated from five authoritative databases. MitoKG contains 2549 nodes of four types and 23 019 edges of five relation types. Building on these priors, we develop MitoLODE, a conditioned dual-trajectory neural ordinary differential equation framework. MitoLODE embeds graph priors and temporal features throughout encoding, continuous-time dynamics, and decoding, modeling disease and control evolution as two coupled paths. Benchmarked against eight baselines across four datasets covering Parkinson's disease, cardiac, and pancreatic differentiation, MitoLODE leads in most settings and remains robust under low-data regimes and extrapolation to unseen time points. Two synthetic datasets with known ground truth validate its trajectory recovery under controlled conditions. Building on the trained model, we design a gradient-guided perturbation procedure that identifies potential intervention targets aligned with known Parkinson's pathology. We develop MGMI, a large language model-based reasoning module that grounds model outputs in MitoKG nodes and turns them into confidence-graded mechanistic hypotheses, which nonetheless require experimental validation.",
+"day": "2026-11-25",
+"rank": 9.31,
+"zh_abstract": "线粒体在重大疾病的发病机制中发挥核心作用。追踪其在疾病条件下如何演变，对于理解病理机制和识别干预窗口具有价值。现有的单细胞轨迹推断方法依赖伪时间而非真实的时间轴，且很少将疾病与对照建模为独立轨迹。虚拟细胞方法针对一次性药物扰动反应，不能处理疾病表型的连续时间演化。为弥补这些空白，我们提出一种虚拟线粒体研究范式。我们首先整理并构建 MitoKG，这是一个整合自五个权威数据库的线粒体特异性异质知识图谱。MitoKG 包含四类共 2549 个节点和五种关系类型共 23 019 条边。基于这些先验，我们开发了 MitoLODE，一个条件化双轨迹神经常微分方程框架。MitoLODE 在编码、连续时间动力学和解码全过程中嵌入图先验和时间特征，将疾病与对照的演化建模为两条耦合路径。在涵盖帕金森病、心脏和胰腺分化的四个数据集上，与八个基线进行基准比较，MitoLODE 在大多数设置中领先，并在低数据情形和向未见时间点外推时保持稳健。两个具有已知真值的合成数据集在受控条件下验证了其轨迹恢复能力。在训练好的模型基础上，我们设计了一种梯度引导的扰动流程，用于识别与已知帕金森病理相符的潜在干预靶点。我们开发了 MGMI，一个基于大语言模型的推理模块，将模型输出锚定到 MitoKG 节点，并将其转化为按置信度分级的机制假设，但这些假设仍需实验验证。"
+},
+{
 "title": "AI-Assisted Multimodal Imaging Integration for Individualized Transseptal Puncture Planning During Atrial Fibrillation Ablation.",
 "link": "https://pubmed.ncbi.nlm.nih.gov/43073638/",
 "date": "2026-11-23T00:00:00+00:00",
@@ -1571,6 +1604,40 @@
 "zh_abstract": "[Biomarker insights] 人工智能正在迅速扩展帕金森病和阿尔茨海默病的生物标志物版图。结合神经影像、语音、步态、生理信号、认知测量和分子标志物的多模态系统显示出可观的研究阶段性能。在可提取准确率和分母数据的研究中，报告的帕金森病分类准确率范围为94.25%（95% Wilson CI：93.78-94.68%）至98.6%（95% Wilson CI：95.71-99.67%），而阿尔茨海默病诊断或转化预测准确率范围为65.8%（95% Wilson CI：62.54-68.87%）至99.26%（95% Wilson CI：97.89-99.75%）。因此，该领域不再受限于候选AI生物标志物的缺乏。然而，核心瓶颈是转化验证。外部验证在医学AI中仍不常见，在高影响力医学信息学研究中的比例为3.7%，在诊断性医学影像AI研究中为6%，在ICU AI评分系统研究中为14.7%。在神经退行性疾病中，许多模型仍依赖单队列、内部划分、不完整的指标报告，以及AI衍生数字表型与既定分子或临床生物标志物之间联系薄弱。因此，真实世界人群中的性能下降、特异度降低、校准漂移和队列偏倚有助于解释为何大量机器学习活动尚未转化为常规临床部署。在本叙述性综述中，我们因此整合了运动、认知、神经精神、远程监测和神经影像领域的定量证据。我们认为，帕金森病和阿尔茨海默病AI的进展如今较少仅取决于额外的模型新颖性，而更多取决于标准化验证流程、外部队列测试、校准评估、可解释的多模态融合和具有临床意义的终点。尽管如此，在这些保障措施下，多模态AI可以从有前景的生物标志物发现迈向神经退行性疾病中可重复、可临床部署的精准诊断。"
 },
 {
+"title": "Large Language Models Predict Functional Outcomes After Acute Ischemic Stroke.",
+"link": "https://pubmed.ncbi.nlm.nih.gov/43055493/",
+"date": "2026-11-19T00:00:00+00:00",
+"badge": "DOI 10.1227/neu.0000000000004298",
+"source": "PubMed · Neurosurgery",
+"source_group": "PubMed",
+"home": "",
+"thin": false,
+"pop": null,
+"id": "8ff9facfd0ac",
+"keep": true,
+"zh_title": "大语言模型预测急性缺血性卒中后功能结局",
+"summary": "基于近万份入院记录，评估编码器与生成式大模型预测卒中出院及90天mRS的能力。",
+"key_points": [
+"回顾性分析9485份入院记录预测出院mRS",
+"另用1898份记录预测90天mRS",
+"比较BERT、NYUTron、Llama-3.1与MedGemma"
+],
+"section": "大模型与智能体",
+"type": "论文",
+"tags": [
+"临床NLP",
+"医学大模型",
+"临床预测"
+],
+"evidence": "同行评审",
+"score": 5,
+"reason": "大样本回顾性单中心研究，有基线模型对比但无外部验证，属值得一看档",
+"abstract": "[Neurosurgery] Accurate prediction of functional outcomes after acute ischemic stroke can guide clinical decision-making and resource allocation. Prior work has relied predominantly on structured predictors and conventional machine learning, while the ability of large language models (LLMs) to infer modified Rankin Scale (mRS) scores from routine clinical admission notes is largely unexplored. We evaluated encoder (Bidirectional Encoder Representations from Transformers [BERT], NYUTron) and generative (Llama-3.1-8B, MedGemma-4B) LLMs, in both frozen and fine-tuned settings, for discharge and 90-day mRS prediction. ModernBERT-base was evaluated as a long-context encoder sensitivity analysis. We retrospectively analyzed 9485 admission history and physical notes for discharge prediction and 1898 notes for 90-day prediction from the NYU Langone Get With The Guidelines-Stroke registry (2016-2025). The most recent 12 months were held out for testing. Performance was assessed for binary functional outcome (mRS 0-2 vs 3-6) and compared with structured, hybrid, and clinical risk score baselines. In frozen settings, the clinically pretrained NYUTron encoder outperformed all other models. After fine-tuning, Llama achieved the highest discrimination for discharge (area under the receiver operating characteristic curve [AUROC] 0.84, area under the precision-recall curve 0.81) and 90-day (AUROC 0.87, area under the precision-recall curve 0.84) prediction, while binary accuracy was similar among NYUTron, Llama, and MedGemma. A long-context ModernBERT-base sensitivity analysis did not outperform NYUTron or eliminate differences in exact mRS prediction. For 90-day prediction, fine-tuned Llama outperformed structured (Zhang et al, AUROC 0.82), hybrid (Sung et al, AUROC 0.82), and clinical risk score (Totaled Health Risks in Vascular Events, AUROC 0.80; Stroke Prognostication using Age and NIH Stroke Scale, AUROC 0.79) baselines (all P < .05). Fine-tuned LLMs can predict poststroke functional outcomes from admission notes alone and outperform the evaluated prognostic baselines. Task-specific adaptation altered relative model-class performance, with generative models achieving the strongest performance on several metrics; however, differences between model classes varied by metric and cannot be attributed to architecture alone. Our findings support the development of text-based prognostic tools that integrate into clinical workflows without manual data extraction.",
+"day": "2026-11-25",
+"rank": 8.6,
+"zh_abstract": "准确预测急性缺血性卒中后的功能结局可指导临床决策和资源分配。既往工作主要依赖结构化预测变量和传统机器学习，而大语言模型（LLMs）从常规临床入院记录推断改良 Rankin 量表（mRS）评分的能力在很大程度上尚未探索。我们评估了编码器模型（来自 Transformers 的双向编码器表示 [BERT]、NYUTron）和生成式模型（Llama-3.1-8B、MedGemma-4B）LLMs，在冻结和微调两种设置下，用于出院时和 90 天 mRS 预测。ModernBERT-base 作为长上下文编码器敏感性分析进行评估。我们回顾性分析了来自 NYU Langone Get With The Guidelines-Stroke 登记处（2016-2025）的 9485 份入院病史和体格检查记录用于出院预测，以及 1898 份记录用于 90 天预测。最近 12 个月被留出用于测试。评估二分类功能结局（mRS 0-2 对 3-6）的性能，并与结构化、混合和临床风险评分基线比较。在冻结设置下，经临床预训练的 NYUTron 编码器优于所有其他模型。微调后，Llama 在出院预测（受试者工作特征曲线下面积 [AUROC] 0.84，精确率-召回率曲线下面积 0.81）和 90 天预测（AUROC 0.87，精确率-召回率曲线下面积 0.84）中取得最高区分度，而 NYUTron、Llama 和 MedGemma 之间的二分类准确率相似。长上下文 ModernBERT-base 敏感性分析未优于 NYUTron，也未消除精确 mRS 预测方面的差异。对于 90 天预测，微调后的 Llama 优于结构化基线（Zhang 等，AUROC 0.82）、混合基线（Sung 等，AUROC 0.82）和临床风险评分基线（Totaled Health Risks in Vascular Events，AUROC 0.80；Stroke Prognostication using Age and NIH Stroke Scale，AUROC 0.79）（均 P < .05）。微调后的 LLMs 可仅根据入院记录预测卒中后功能结局，并优于所评估的预后基线。任务特定适配改变了相对模型类别性能，生成式模型在若干指标上取得最强性能；然而，模型类别之间的差异因指标而异，不能仅归因于架构。我们的发现支持开发基于文本的预后工具，这些工具无需手动数据提取即可整合到临床工作流程中。"
+},
+{
 "title": "Artificial Intelligence (AI) Support in Mammography Screening: Evidence From the MASAI (Mammography Screening With Artificial Intelligence) Trial and Gaps in Device Regulation",
 "link": "https://news.google.com/rss/articles/CBMizAJBVV95cUxOMEg5eWphM29LM2lxOV80MWgyN1NyNk5WU283SFRJT1Bva0V2aFFSVm9TeFh3NWZDYnJVTzhDeHJCdC1YbV80ZkF2emFadTJySnFCc3ZOejFvQlJyc2NUTEtNWlltLTFyeEpYMEdGRnJmS2U1UkNCNVZDTVJWY3lsdHVPUE8tWmdlXzJrN084dlQzbTAwa0JOZUZSdWx2M0x6VlZMYW1zVWpjV1EwbzVNeTJKVlpVMHJ1UmF2ZC1nVGU5clJ4ejVzU0h6TEVSa2wzZEUwaXRDY01SdkJZZEo0MHE1eXJtbGRIRXNlcmhtb0w5TUtKV0h0anEyZ2NZV3BUMzVOcm5kNkNDTk5ySGhYeUlBVy14OURzMHI3SnhwMWc3VDZ4RmF2WmYySU45TFQtUi1zeVBCLThoTTFiMWRUODR4eWlCTkgyTGdSTQ?oc=5",
 "date": "2026-11-25T01:09:12+00:00",
@@ -1696,6 +1763,107 @@
 "day": "2026-11-25",
 "rank": 8.31,
 "zh_abstract": "[Journal of chemical theory and computation] 自适应采样通过反复分析已积累的轨迹，并从信息丰富的构象出发启动新一轮模拟，加速分子动力学（MD）模拟中对构象空间的探索。已提出越来越多的自适应采样策略，每种策略都围绕关于何种构象具有信息量的特定概念构建，但这些方法分散于彼此独立且常常不兼容的实现中，这使其系统比较以及在元自适应采样方案中的组合使用变得复杂。在此，我们提出 AdaptivePy，一个紧凑且可扩展的 Python 框架，在单一配置驱动接口后实现九种种子选择策略，涵盖简单的基于总体的基线、若干已有机器学习与基于几何的方法，以及本工作引入的两种集成或元采样策略。我们表明，共享实现在一系列解析基准景观上重现了每种策略的特征选择行为。我们还引入一种新的自适应采样方案，采用 TS-DAR——一个最初设计用于识别过渡态的深度学习框架——作为采集准则，驱动从单个盆地出发发现整个多盆地景观。我们进一步证明，该公共接口使元自适应采样策略成为可能，这些策略将若干策略的排名聚合为单一组种子。我们将全部九种策略应用于丙氨酸二肽和微型蛋白 chignolin 的显式溶剂模拟。表现最佳的策略取决于体系、性能指标以及已积累采样的数量，这证明使用结合不同算法的元策略是合理的。因此，AdaptivePy 为生物分子 MD 模拟中自适应采样方法的采用、基准测试和持续开发提供了统一测试平台。"
+},
+{
+"title": "MKP-ECG: A Knowledge-Enhanced Dual-Stream Network for Robust Arrhythmia Classification with Medical Prior-Guided Multi-Loss Optimization.",
+"link": "https://pubmed.ncbi.nlm.nih.gov/43077017/",
+"date": "2026-11-24T00:00:00+00:00",
+"badge": "DOI 10.1007/s12539-026-00892-x",
+"source": "PubMed · Interdisciplinary sciences, computational life sciences",
+"source_group": "PubMed",
+"home": "",
+"thin": false,
+"pop": null,
+"id": "c5c6726163d0",
+"keep": true,
+"zh_title": "知识增强双流网络用于心律失常心电分类",
+"summary": "提出MKP-ECG双流网络，融合多尺度CNN与34维临床特征先验，改善心电四分类中的类别不平衡。",
+"key_points": [
+"第一流为含残差与SE注意力的多尺度CNN",
+"医学先验模块提取34维形态、节律、模板特征",
+"按AAMI标准做N、S、V、F四分类，针对F类不平衡"
+],
+"section": "临床预测与决策",
+"type": "论文",
+"tags": [
+"生理信号",
+"临床预测"
+],
+"evidence": "同行评审",
+"score": 4,
+"reason": "方法有新意但未见外部验证或临床结局，属增量档",
+"abstract": "[Interdisciplinary sciences, computational life sciences] Accurate classification of cardiac arrhythmias from electrocardiogram (ECG) signals is essential for clinical decision-making, yet deep learning models often struggle with minority classes such as Fusion beats (F-type) owing to severe class imbalance and insufficient integration of domain knowledge. In this work, we propose Medical Knowledge Prior Network (MKP-ECG), a knowledge-enhanced dual-stream network for four-class arrhythmia classification (N, S, V, F) following the AAMI standard. The first stream employs a multi-scale CNN with residual connections and squeeze-and-excitation attention to learn data-driven representations from raw waveforms. The second stream, termed the Medical Prior Module, extracts a 34-dimensional clinical feature vector encoding morphology, rhythm, template matching, and rule-based indicators that mirror the reasoning process of cardiologists. The two streams are fused through explicit feature concatenation and a knowledge attention gate that dynamically modulates neural representations based on clinical evidence, and are jointly optimized by a composite loss function comprising two novel medical knowledge prior losses: a knowledge graph KL-divergence loss that aligns predictions with expert-defined electrophysiological priors and a clinical constraint loss that penalizes predictions contradicting established diagnostic criteria. Evaluated on the MIT-BIH Arrhythmia Database under the inter-patient DS1/DS2 paradigm with methodologically corrected data augmentation (waveform-only SMOTE with nearest-neighbor clinical feature copying and purity-weighted contrastive loss), MKP-ECG achieves 99.14% accuracy, 92.77% Macro-F1, and 76.98% F-class F1-score with perfect F-recall, representing a 51.7% relative improvement over the knowledge-free baseline. Independent evaluation on the INCART database, where the model is trained and tested entirely within INCART using the same architecture and hyperparameters without any dataset-specific tuning, provides encouraging evidence of architectural generalizability under a record-split protocol, achieving 99.71% accuracy and 87.43% F-class F1-score.",
+"day": "2026-11-25",
+"rank": 8.31,
+"zh_abstract": "从心电图（ECG）信号中准确分类心律失常对于临床决策至关重要，然而由于严重的类别不平衡以及对领域知识整合不足，深度学习模型在 Fusion 波（F 型）等少数类上往往难以取得良好表现。在本工作中，我们提出 Medical Knowledge Prior Network（MKP-ECG），一种知识增强的双流网络，按照 AAMI 标准进行四类心律失常分类（N、S、V、F）。第一条流采用带残差连接和挤压-激励（squeeze-and-excitation）注意力的多尺度 CNN，从原始波形中学习数据驱动的表征。第二条流称为医学先验模块（Medical Prior Module），提取一个 34 维临床特征向量，编码形态学、节律、模板匹配以及基于规则的指标，以模拟心脏病专家的推理过程。两条流通过显式特征拼接和知识注意力门进行融合，该门根据临床证据动态调节神经表征，并通过复合损失函数联合优化，该损失函数包含两个新颖的医学知识先验损失：一个知识图谱 KL 散度损失，使预测与专家定义的电生理先验对齐；以及一个临床约束损失，惩罚与既定诊断标准相矛盾的预测。在 MIT-BIH 心律失常数据库上，采用患者间 DS1/DS2 范式并结合方法学上校正的数据增强（仅波形的 SMOTE，配合最近邻临床特征复制和纯度加权对比损失）进行评估，MKP-ECG 达到 99.14% 准确率、92.77% Macro-F1 和 76.98% F 类 F1 分数，F 类召回率完美，相较于无知识基线实现 51.7% 的相对提升。在 INCART 数据库上的独立评估中，模型完全在 INCART 内部使用相同架构和超参数进行训练和测试，未做任何数据集特定调优，在按记录划分的方案下提供了架构泛化性的令人鼓舞的证据，达到 99.71% 准确率和 87.43% F 类 F1 分数。"
+},
+{
+"title": "An Ultra-Lightweight Event-Driven Neuromorphic Filter on FPGA with Approximate Robust Scaling for Cross-Modality Respiratory Monitoring.",
+"link": "https://pubmed.ncbi.nlm.nih.gov/43077377/",
+"date": "2026-11-24T00:00:00+00:00",
+"badge": "DOI 10.1109/TBCAS.2026.3731167",
+"source": "PubMed · IEEE transactions on biomedical circuits and systems",
+"source_group": "PubMed",
+"home": "",
+"thin": false,
+"pop": null,
+"id": "d614c6d3ac78",
+"keep": true,
+"zh_title": "面向跨模态呼吸监测的超轻量FPGA事件驱动神经形态滤波器",
+"summary": "提出可在FPGA上实现的超轻量事件驱动神经形态滤波架构，用于可穿戴跨模态呼吸监测并抑制运动伪影。",
+"key_points": [
+"采用纯整数硬件逻辑与分位数跟踪归一化",
+"目标是低功耗与跨传感器泛化",
+"面向可穿戴呼吸监测的运动伪影干扰"
+],
+"section": "数字健康",
+"type": "模型",
+"tags": [
+"生理信号",
+"数字健康",
+"可解释性"
+],
+"evidence": "同行评审",
+"score": 4,
+"reason": "硬件滤波方法学研究，非临床验证，属增量档",
+"abstract": "[IEEE transactions on biomedical circuits and systems] Wearable respiratory monitoring is critical in the Internet of Medical Things (IoMT) but faces primary challenges including stringent power constraints, severe motion artifact interference, and cross-sensor generalization. Existing deep learning solutions incur large hardware overheads, while traditional lightweight digital signal processing approaches often lack robustness to non-stationary signals. In this paper, we propose an ultra-lightweight, closed-loop event-driven neuromorphic filtering architecture with an FPGA implementation for cross-modality respiratory monitoring. The architecture integrates a unified event-driven pipeline with a streaming robust normalization module. By employing pure-integer hardware logic based on quantile tracking and log-domain shifting, the design renders the encoder threshold dimensionless and stabilizes the event budget against substantial amplitude-scale disparities across sensors and modalities, eliminating the need for hardware multipliers and memory-intensive dividers. The proposed architecture is validated on a Xilinx Artix-7 FPGA prototype, demonstrating real-time operation and very low hardware cost. The neuromorphic core occupies only 187 Look-Up Tables (LUTs). Clinical validation on the BIDMC BioZ dataset (typical cohort, N = 18) achieves a mean absolute error (MAE) of 1.398 bpm. External validation on the CapnoBase dataset (N = 42) yields an MAE of 1.084 bpm without architecture retuning, supporting robust zero-shot cross-modality generalization. In addition, an ablation study shows that the proposed log-domain quantization acts as an algorithmic regularizer by suppressing large deviations induced by multiplicative noise.",
+"day": "2026-11-25",
+"rank": 8.31,
+"zh_abstract": "可穿戴呼吸监测在医疗物联网（IoMT）中至关重要，但面临严格功耗约束、严重运动伪影干扰和跨传感器泛化等主要挑战。现有深度学习方案带来较大硬件开销，而传统轻量级数字信号处理方法往往对非平稳信号缺乏稳健性。本文提出一种超轻量、闭环事件驱动的神经形态滤波架构，并给出用于跨模态呼吸监测的 FPGA 实现。该架构将统一的事件驱动流水线与流式稳健归一化模块相集成。通过采用基于分位数跟踪和对数域移位的纯整数硬件逻辑，该设计使编码器阈值无量纲化，并在传感器与模态之间存在显著幅度尺度差异时稳定事件预算，从而无需硬件乘法器和内存密集的除法器。所提架构在 Xilinx Artix-7 FPGA 原型上得到验证，展示了实时运行和极低的硬件成本。神经形态核心仅占用 187 个查找表（LUT）。在 BIDMC BioZ 数据集（典型队列，N = 18）上的临床验证达到平均绝对误差（MAE）1.398 bpm。在 CapnoBase 数据集（N = 42）上的外部验证在未重新调优架构的情况下得到 MAE 1.084 bpm，支持稳健的零样本跨模态泛化。此外，一项消融研究表明，所提出的对数域量化通过抑制乘性噪声引起的大偏差，起到算法正则化的作用。"
+},
+{
+"title": "SurvStudio for browser-based survival analysis and model comparison in cancer genomics.",
+"link": "https://pubmed.ncbi.nlm.nih.gov/43077057/",
+"date": "2026-11-24T00:00:00+00:00",
+"badge": "DOI 10.1007/s13258-026-01823-2",
+"source": "PubMed · Genes & genomics",
+"source_group": "PubMed",
+"home": "",
+"thin": false,
+"pop": null,
+"id": "4512de0f0708",
+"keep": true,
+"zh_title": "SurvStudio：浏览器端癌症基因组学生存分析与模型比较工具",
+"summary": "开发浏览器本地运行的SurvStudio，整合生存分析、标志物评估与九种机器学习/深度学习模型比较。",
+"key_points": [
+"在同一测试集患者中比较多个预测模型",
+"提供生存曲线、校正标志物估计与稳定性摘要",
+"用合成数据与公开癌症队列评估并与现有工具对照"
+],
+"section": "生命科学与药物",
+"type": "模型",
+"tags": [
+"基因组学",
+"临床预测",
+"数据集"
+],
+"evidence": "同行评审",
+"score": 4,
+"reason": "工具类论文，使用公开队列与合成数据评估，属增量档",
+"abstract": "[Genes & genomics] Molecular prognostic studies need to test whether markers improve prediction beyond clinical variables. This requires survival analysis, model comparison and checks of data coding and model assumptions, steps that existing tools often provide separately. We developed SurvStudio to combine survival analysis, marker assessment and machine-learning (ML) and deep-learning (DL) model comparison in one browser workspace. SurvStudio analyzes prepared clinical and molecular tables and compares models in the same test patients. Users install SurvStudio locally and run it through a web browser. We evaluated it using synthetic data and public cancer cohorts and compared its outputs with existing tools. Browser controls provided survival curves, clinically adjusted marker estimates, selection-stability summaries and comparison of nine prediction models. Fixed marker models could also be applied to external cohorts. Adding established isocitrate dehydrogenase (IDH) mutation/1p/19q codeletion groups to age, sex and grade increased the concordance index (C) of the primary gradient-boosting model in two external glioma cohorts (ΔC = 0.118 and 0.084, 95% confidence intervals 0.067-0.171 and 0.035-0.136). The nine models had similar C values (0.632-0.646) in 381 breast cancer test patients. Input checks blocked specified invalid inputs and asked users to review predictors that may contain outcome information. In a public gastric cancer cohort, correct event coding changed estimated five-year survival from 89.3% to 52.2%. With SurvStudio, researchers can test whether molecular markers improve survival prediction beyond clinical variables and compare survival models in one browser workspace, while input checks and model diagnostics show whether the data and models support each result.",
+"day": "2026-11-25",
+"rank": 8.31,
+"zh_abstract": "分子预后研究需要检验标志物是否能在临床变量之外改善预测。这需要生存分析、模型比较，以及对数据编码和模型假设的检查，而现有工具往往分别提供这些步骤。我们开发了 SurvStudio，在一个浏览器工作区内整合生存分析、标志物评估以及机器学习（ML）和深度学习（DL）模型比较。SurvStudio 分析准备好的临床和分子表格，并在相同的测试患者中比较模型。用户可在本地安装 SurvStudio 并通过网页浏览器运行。我们使用合成数据和公开癌症队列对其进行评估，并将其输出与现有工具比较。浏览器控件提供生存曲线、经临床校正的标志物估计、选择稳定性摘要以及九种预测模型的比较。固定标志物模型也可应用于外部队列。将已建立的异柠檬酸脱氢酶（IDH）突变/1p/19q 共缺失分组加入年龄、性别和分级后，在两个外部胶质瘤队列中提高了主要梯度提升模型的一致性指数（C）（ΔC = 0.118 和 0.084，95% 置信区间 0.067-0.171 和 0.035-0.136）。九种模型在 381 例乳腺癌测试患者中的 C 值相似（0.632-0.646）。输入检查会阻止指定的无效输入，并提示用户审查可能包含结局信息的预测变量。在一个公开胃癌队列中，正确的事件编码使估计的五年生存率从 89.3% 变为 52.2%。借助 SurvStudio，研究人员可以在一个浏览器工作区内检验分子标志物是否能在临床变量之外改善生存预测，并比较生存模型，同时输入检查和模型诊断可显示数据与模型是否支持每项结果。"
 },
 {
 "title": "Artificial intelligence and enhanced recovery after surgery: from protocol-driven pathways to adaptive perioperative care systems (cognitive ERAS).",
@@ -2898,6 +3066,72 @@
 "rank": 7.31
 },
 {
+"title": "Peer Review Challenges in the Era of Artificial Intelligence: Preserving Scientific Judgment, Confidentiality, and Trust.",
+"link": "https://pubmed.ncbi.nlm.nih.gov/43074587/",
+"date": "2026-11-23T00:00:00+00:00",
+"badge": "DOI 10.3346/jkms.2026.41.e347",
+"source": "PubMed · Journal of Korean medical science",
+"source_group": "PubMed",
+"home": "",
+"thin": false,
+"pop": null,
+"id": "2d0a9892abea",
+"keep": true,
+"zh_title": "人工智能时代的同行评审挑战：维护科学判断、保密与信任",
+"summary": "综述2023年以来的实证研究与编辑指南，梳理生成式AI与大模型给同行评审带来的质量与伦理挑战。",
+"key_points": [
+"归纳沿用、被AI放大与新出现的三类挑战",
+"涵盖保密性、科学判断与信任问题",
+"提出AI伦理使用标准升级方向"
+],
+"section": "落地与监管",
+"type": "观点",
+"tags": [
+"公平与安全",
+"医学大模型"
+],
+"evidence": "同行评审",
+"score": 3,
+"reason": "综述与观点，聚焦出版伦理而非临床应用，属增量档",
+"abstract": "[Journal of Korean medical science] Peer review is a pillar of quality assurance in publishing. Increasing publication volumes, reviewer fatigue, and difficulty of recruiting skilled reviewers have put immense pressure on the process over the past decades. The global adoption of artificial intelligence (AI), particularly generative AI and large language models (LLMs), may alleviate some of these pressures. Nonetheless, new challenges are emerging in the AI era that may affect the quality and ethics of peer review. This article reviews available empirical studies, editorial guidance, and consensus statements on peer review identified from 2023 through September 10, 2026. It aims to conceptualize key challenges and upgrade standards for ethical AI use. The paper discusses inherited, AI-amplified, and emerging AI-specific challenges. LLMs may assist with structured checks, text refinement, information organization, and selected preliminary tasks. However, important risks include non-specific and shallow critiques, fabricated methodological concerns and 'hallucinated' references, limited contextual reasoning, algorithmic bias, confidentiality breaches, undisclosed AI use, blurred accountability, and erosion of reviewers' critical appraisal skills. The central question is which AI-supported tasks may be utilized for peer review and which scientific judgments should remain human responsibilities. AI may assist, but not replace, reviewers. The future of peer review should therefore be AI-assisted but human-commanded.",
+"day": "2026-11-25",
+"rank": 7.14,
+"zh_abstract": "同行评审是出版质量保证的支柱。过去几十年，出版量不断增加、审稿人疲劳以及招募熟练审稿人的困难，给这一过程带来了巨大压力。人工智能（AI），尤其是生成式 AI 和大语言模型（LLMs）的全球采用，可能缓解其中一些压力。然而，AI 时代正在出现可能影响同行评审质量和伦理的新挑战。本文回顾了从 2023 年到 2026 年 9 月 10 日识别出的关于同行评审的现有实证研究、编辑指南和共识声明。它旨在概念化关键挑战并提升合乎伦理地使用 AI 的标准。本文讨论了继承性挑战、AI 放大性挑战和新出现的 AI 特有挑战。LLMs 可协助结构化检查、文本润色、信息组织以及选定的初步任务。然而，重要风险包括批评不具体且肤浅、捏造的方法学问题以及“幻觉”参考文献、情境推理有限、算法偏见、保密性泄露、未披露的 AI 使用、责任模糊，以及审稿人批判性评价能力的侵蚀。核心问题是哪些 AI 支持的任务可用于同行评审，以及哪些科学判断应仍由人类负责。AI 可以协助但不能替代审稿人。因此，同行评审的未来应是 AI 辅助但由人类指挥。"
+},
+{
+"title": "Improving Oxygen Extraction Fraction (OEF) Mapping From Integrated Quantitative Susceptibility Mapping and Quantitative Blood Oxygen Level Dependent Imaging (QSM+qBOLD, or QQ) by Learning Temporal Signal Evolution.",
+"link": "https://pubmed.ncbi.nlm.nih.gov/43074120/",
+"date": "2026-11-23T00:00:00+00:00",
+"badge": "DOI 10.1002/mrm.70672",
+"source": "PubMed · Magnetic resonance in medicine",
+"source_group": "PubMed",
+"home": "",
+"thin": false,
+"pop": null,
+"id": "7f3817524efb",
+"keep": true,
+"zh_title": "学习时间信号演化改进QSM+qBOLD的氧摄取分数成像",
+"summary": "提出QQ-S，用ConvLSTM序列学习多回波信号演化以改进深度学习氧摄取分数成像。",
+"key_points": [
+"在34例缺血性卒中患者采集多回波GRE等影像",
+"以ConvLSTM扩展QQ-NET处理回波序列",
+"与QQ-NET在仿真与患者数据上对比"
+],
+"section": "影像与病理",
+"type": "论文",
+"tags": [
+"医学影像",
+"神经科学"
+],
+"evidence": "同行评审",
+"score": 3,
+"reason": "单中心小样本方法改进，仅报告成像指标对比，属增量档",
+"abstract": "[Magnetic resonance in medicine] To improve deep learning-based QSM+qBOLD (QQ) oxygen extraction fraction (OEF) mapping by explicitly learning the temporal evolution of the multi-echo gradient-echo (mGRE) magnitude signal, whose decay encodes the tissue oxygenation that QQ-based OEF mapping depends on. 3D multi-echo gradient echo images were acquired in 34 ischemic stroke patients with arterial spin labeling (ASL) and diffusion-weighted imaging (DWI). We developed QQ-S, a deep learning method that estimates OEF by inverting the QQ model. QQ-S extends QQ-NET by adding convolutional long short-term memory (ConvLSTM) modules to the encoder to process the mGRE echoes sequentially. To isolate the effect of this architectural change, both networks were trained with the same simulated data and training scheme including the loss function. OEF maps from QQ-S and QQ-NET were compared in simulation and ischemic stroke patients. In simulation, QQ-S provided more accurate OEF than QQ-NET, with lower mean absolute error (MAE) against the simulation ground truth: 3.43% vs. 5.03% in normal-appearing tissue and 4.88% vs. 10.60% in low-OEF lesions. In subacute stroke patients, where no ground truth is available, the lesion-to-contralateral OEF ratio was significantly lower with QQ-S than with QQ-NET (0.71 ± 0.26 vs. 0.81 ± 0.24; p < 0.001), suggesting more sensitive detection of lesion OEF, consistent with PET reports in the subacute phase. OEF in acute lesions and normal-appearing tissue was comparable between methods. By explicitly learning inter-echo signal evolution with ConvLSTM, QQ-S improves OEF accuracy over QQ-NET, offering a promising tool for assessing tissue viability from conventional mGRE data.",
+"day": "2026-11-25",
+"rank": 7.14,
+"zh_abstract": "通过显式学习多回波梯度回波（mGRE）幅度信号的时间演化，改进基于深度学习的 QSM+qBOLD（QQ）氧摄取分数（OEF）映射；该信号的衰减编码了基于 QQ 的 OEF 映射所依赖的组织氧合。对 34 例缺血性卒中患者采集了 3D 多回波梯度回波图像，并同时进行动脉自旋标记（ASL）和弥散加权成像（DWI）。我们开发了 QQ-S，这是一种通过反演 QQ 模型来估计 OEF 的深度学习方法。QQ-S 扩展了 QQ-NET，在编码器中加入卷积长短期记忆（ConvLSTM）模块以顺序处理 mGRE 回波。为分离这一架构改变的影响，两个网络均使用相同的模拟数据和训练方案（包括损失函数）进行训练。在模拟和缺血性卒中患者中比较了 QQ-S 与 QQ-NET 生成的 OEF 图。在模拟中，QQ-S 提供的 OEF 比 QQ-NET 更准确，相对于模拟真值的平均绝对误差（MAE）更低：正常表现组织中为 3.43% 对 5.03%，低 OEF 病灶中为 4.88% 对 10.60%。在亚急性卒中患者中，由于没有真值，QQ-S 的病灶/对侧 OEF 比值显著低于 QQ-NET（0.71 ± 0.26 对 0.81 ± 0.24；p < 0.001），提示对病灶 OEF 的检测更敏感，这与亚急性期的 PET 报告一致。两种方法在急性病灶和正常表现组织中的 OEF 相当。通过使用 ConvLSTM 显式学习回波间信号演化，QQ-S 较 QQ-NET 提高了 OEF 准确性，为从常规 mGRE 数据评估组织活力提供了一种有前景的工具。"
+},
+{
 "title": "Public Healthcare AI Network launched in South Korea",
 "link": "https://news.google.com/rss/articles/CBMilwFBVV95cUxNUkI5Y01mVzgta1N5OHo1T1VVc0ZKM044YnVPWmJfUnBxQURhdTFnbHZDYzNaTjhUNE1yZW5kUDF0RTJ4dlBMZFNJNE5xV1BTQ0ctWGdVRmo2dGhOdEtPQ29aNm4zMXAybl9xQ3FGa1N5T0g0aUZfeTFfb3JDTEc2TWJFM3hEczBfY0hLUjVOMU1LUnczcVhB?oc=5",
 "date": "2026-11-25T00:26:40+00:00",
@@ -3058,6 +3292,40 @@
 "day": "2026-11-25",
 "rank": 7.0,
 "zh_abstract": "关于乳腺数据的量子核优势主张通常只是一个单一数字：一个量子实验组、一个对照方法、一个测试划分。我们追问：一旦完整的对照集合和选择历史可见，该数字衡量的是什么。我们报告三项有效基准，全部是8量子比特保真度核的精确经典态矢量模拟，推理路径中不含任何量子成分：在威斯康星诊断乳腺癌（Wisconsin Diagnostic Breast Cancer）数据集上、十个训练集规模下的样本效率扫描；在1,200幅M-SYNTH模拟乳腺X线摄影图像上的原始数据对处理后数据实验组，配备匹配的闭式去量子化替代模型、同一输入下的五种经典方法和十一个核函数族；以及在BreastMNIST上的30个随机种子选择膨胀测量。一个CMMD D1临床实验组不再作为结果实验组，因为其冻结的数据划分通过患者序号顺序泄露标签，该缺陷已在另一项研究中报告；它仅作为示例保留。三个活跃实验组均为负结果。在M-SYNTH原始数据上，相对于调优的RBF-SVM的表观+0.1736（p = 5.2e-06）在相同输入下相对于随机森林降至+0.0019（p = 0.937），而拉普拉斯核在验证集上胜出。在WDBC上，模型选择仅限于训练数据，量子核在每个训练集规模下都低于所选经典实验组，仅在200个配对子样本中有2个领先。30个种子中取最佳的选择在BreastMNIST上增加+0.0210。有一个结果不符合：在带宽2pi下，匹配的闭式高斯替代模型未能复现M-SYNTH原始核（0.5410对0.7045，p = 6.3e-06）。对照方法的选择和选择过程各自产生的影响都大于我们所测得的任何量子-经典差异；我们给出一个可消除这两者的报告标准。"
+},
+{
+"title": "Artificial intelligence and multi-omics integration for cardiac regeneration: from cell fate decoding to clinical translation.",
+"link": "https://pubmed.ncbi.nlm.nih.gov/43075039/",
+"date": "2026-11-09T00:00:00+00:00",
+"badge": "DOI 10.3389/fcell.2026.1998983",
+"source": "PubMed · Frontiers in cell and developmental biology",
+"source_group": "PubMed",
+"home": "",
+"thin": false,
+"pop": null,
+"id": "20cbd378f185",
+"keep": true,
+"zh_title": "AI与多组学整合用于心肌再生：从细胞命运解码到临床转化",
+"summary": "综述梳理AI与多组学整合在心肌再生研究中的应用，涵盖细胞命运解析与向临床转化的路径与障碍。",
+"key_points": [
+"综述AI与多组学在心肌再生中的整合应用",
+"关注细胞命运解码与再生调控机制",
+"讨论细胞治疗存活与微环境抑制等障碍"
+],
+"section": "生命科学与药物",
+"type": "观点",
+"tags": [
+"多模态",
+"基因组学",
+"临床落地"
+],
+"evidence": "同行评审",
+"score": 4,
+"reason": "综述类，AI仅为其中一个方向且无新数据，属增量档",
+"abstract": "[Frontiers in cell and developmental biology] Heart failure remains among the leading causes of death worldwide, and its burden is increasing as populations age. The adult mammalian heart has almost no capacity to replace cardiomyocytes lost to injury: most cardiomyocytes leave the cell cycle, and the infarcted muscle is replaced by scar, so that function declines progressively. This constraint is not fixed. Neonatal mice regenerate myocardium for a brief window that closes within the first postnatal week, whereas adult zebrafish retain the capacity throughout life; the machinery for regeneration therefore exists, but is held in check. Cell-based therapy was expected to circumvent the problem, yet its clinical benefit has remained modest: transplanted cells survive and engraft poorly, their fate resists precise control, and the host microenvironment actively suppresses regeneration. These shortcomings are symptoms of a single underlying difficulty-scale. The regulatory logic of cardiac regeneration is distributed across transcriptional control, intercellular communication, spatial microenvironments and protein interactions, so that no omics layer examined in isolation, however high its resolution, can recover the integrated picture from high-dimensional, sparse and heterogeneous data. This review proposes an artificial intelligence (AI)-multi-omics integration framework for cardiac regeneration. We survey the methodological progress that becomes available when single-cell transcriptomics, spatial transcriptomics and proteomics are modelled jointly, and examine what these approaches can and cannot establish about cardiac lineage cell fate determination, about regeneration trajectory reconstruction, and about the failing-heart microenvironment. We then consider the translational pathways, and the limits of the evidence for each. The resulting evidence is uneven: the sections on the failing-heart microenvironment rest largely on direct cardiac data, whereas most of the methodological progress has been made outside the heart and transfers only under additional assumptions. One qualification is therefore stated at the outset: evidence for AI in cardiac regeneration is still scarce. The review is positioned as a methodological framework and a forward-looking perspective rather than a synthesis of established conclusions, and the evidence supporting each principal claim is graded, from direct experimental evidence in the heart to methodology.",
+"day": "2026-11-25",
+"rank": 6.91,
+"zh_abstract": "心力衰竭仍然是全球主要死因之一，且随着人口老龄化其负担不断加重。成年哺乳动物心脏几乎没有能力替代因损伤而丧失的心肌细胞：大多数心肌细胞退出细胞周期，梗死心肌被瘢痕替代，因此功能逐渐衰退。这一限制并非固定不变。新生小鼠在出生后第一周内关闭的一个短暂窗口内可再生心肌，而成年斑马鱼终生保有这种能力；因此再生机制是存在的，但受到抑制。细胞疗法曾被期望规避这一问题，然而其临床获益一直有限：移植细胞存活和定植不佳、其命运难以精确控制，且宿主微环境主动抑制再生。这些缺陷是单一潜在困难的表征——尺度。心脏再生的调控逻辑分布于转录调控、细胞间通讯、空间微环境和蛋白质相互作用之中，因此任何孤立考察的组学层面，无论分辨率多高，都无法从高维、稀疏和异质的数据中还原出整合的图景。本综述提出一个用于心脏再生的人工智能（AI）-多组学整合框架。我们综述了当单细胞转录组学、空间转录组学和蛋白质组学被联合建模时所可获得的方法学进展，并考察这些方法在心脏谱系细胞命运决定、再生轨迹重建以及衰竭心脏微环境方面能够确立什么、不能确立什么。随后我们讨论转化路径以及各自证据的局限。由此产生的证据并不均衡：关于衰竭心脏微环境的章节主要基于直接的心脏数据，而大多数方法学进展是在心脏之外取得的，只有在额外假设下才能迁移。因此，我们在开篇即说明一点限定：AI 在心脏再生中的证据仍然稀少。本综述定位为方法学框架和前瞻性视角，而非对既定结论的综合，并对每个主要主张所依据的证据进行分级，从心脏中的直接实验证据到方法学证据。"
 },
 {
 "title": "Leakage-Safe Auditing of Attribution-Driven Data Curation in Medical Imaging",
@@ -3583,6 +3851,33 @@
 "evidence": "新闻",
 "score": 3,
 "reason": "标题级行业观察，涉及医疗AI商业化路径，信息有限，增量档",
+"day": "2026-11-25",
+"rank": 5.5
+},
+{
+"title": "AI-generated data could accelerate medical imaging trials with new validation tool",
+"link": "https://news.google.com/rss/articles/CBMiygFBVV95cUxNa3pqY3V2SC1Sb19Dd3BJSVE0Z0MtTWloMm02UGNQZk5iS1RKQ1phaDBzR1Z3Y3YyUTdzazVLM3ZzaTlaM0VpNGRhN1F5R0lLNEM1Vmc2aGM3bUxPOU1BY2VubUQ3YVhmZXZTdVJjTE1IN29zOTdjdFVkTUhvbnp5TnNGUE1DN0lvc1U4ZmJ2cG5JX2Zpb1d2VVVuYTk0T3lqMDJfa0RHMXlnaWJ4bmlOVVl2d2ZqbTVTU1kwb0U2NXFfTFk5WVhLUXB3?oc=5",
+"date": "2026-11-25T03:05:00+00:00",
+"source": "News-Medical",
+"source_group": "Google News · FDA AI",
+"home": "https://www.news-medical.net",
+"thin": true,
+"badge": "",
+"pop": null,
+"id": "d9892031853c",
+"keep": true,
+"zh_title": "AI生成数据或用新验证工具加速影像试验",
+"summary": "报道称一种新的验证工具有望让AI生成数据加速医学影像临床试验。",
+"key_points": [],
+"section": "影像与病理",
+"type": "模型",
+"tags": [
+"医学影像",
+"生成模型"
+],
+"evidence": "新闻",
+"score": 3,
+"reason": "仅标题、无数据与验证细节，属增量档",
 "day": "2026-11-25",
 "rank": 5.5
 },
