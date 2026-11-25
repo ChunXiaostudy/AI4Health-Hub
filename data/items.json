@@ -236,6 +236,39 @@
   "zh_abstract": "婴儿视网膜疾病是儿童失明的主要原因之一，而指导筛查和管理的血管征象在彩色眼底摄影（CFP）中往往显示不佳。眼底荧光素血管造影（FFA）可对视网膜血管异常提供血管造影可视化，但其侵入性及对荧光素染料的依赖限制了其在脆弱婴儿中的常规使用。生成式合成可能提供无创的血管造影近似。然而，婴儿成像通常依赖手动操作的手持接触式眼底相机，单独的 CFP 与 FFA 采集之间在探头角度、接触压力和视野上的差异导致两种模态之间的空间对应关系较弱。本文提出 InfantAngio，一种基于扩散的框架，将 CFP 到 FFA 的合成重新表述为确定性潜在传输轨迹。InfantAngio 使用来自 259 名婴儿的 83,950 条配准衍生图像对记录进行开发和评估，在多项定量图像质量基准上表现出良好性能；在盲法评估中，眼科医生区分真实与合成 FFA 图像的准确率为 49.8%，接近随机水平。在一项回顾性眼科医生阅片研究中，将合成 FFA 添加到 CFP 后，既改善了下游分类器性能，也提高了总体诊断准确性。这些结果支持将合成 FFA 作为一种可能有用的无创辅助手段用于高危婴儿筛查，并有可能在真实临床场景中减少对基于染料操作的依赖。"
  },
  {
+  "title": "Performance of a self-supervised pretrained neural network for orthopedic radiograph classification.",
+  "link": "https://pubmed.ncbi.nlm.nih.gov/43069377/",
+  "date": "2026-11-23T00:00:00+00:00",
+  "badge": "DOI 10.1007/s00256-026-05442-6",
+  "source": "PubMed · Skeletal radiology",
+  "source_group": "PubMed",
+  "home": "",
+  "thin": false,
+  "pop": null,
+  "id": "d1e70c83272b",
+  "keep": true,
+  "zh_title": "自监督预训练网络用于骨科X线分类",
+  "summary": "在4.4万张肌骨X线上继续自监督预训练ResNet-50，并在独立外部跟骨队列验证骨折分类与归因可靠性。",
+  "key_points": [
+   "对比ImageNet监督、DINO与DINO-Ortho三种初始化",
+   "含5365张外部跟骨X线（1775例）分布外验证",
+   "用ROAD评分量化Grad-CAM归因忠实度"
+  ],
+  "section": "影像与病理",
+  "type": "论文",
+  "tags": [
+   "医学影像",
+   "可解释性"
+  ],
+  "evidence": "同行评审",
+  "score": 7,
+  "reason": "同行评审，含独立外部队列分布外验证，达重要档",
+  "abstract": "[Skeletal radiology] To evaluate whether domain-adaptive self-supervised pretraining of a convolutional neural network on musculoskeletal radiographs improves binary fracture classification and attribution faithfulness relative to ImageNet-pretrained baselines. This retrospective study (conducted June 2025 to May 2026) compared three initializations of a ResNet-50 convolutional neural network: supervised ImageNet (control), self-supervised ImageNet (DINO), and DINO further pretrained on 44,029 musculoskeletal radiographs (DINO-Ortho). Each was fine-tuned in three experiments: in-distribution (MURA and FracAtlas), out-of-distribution (5365 external calcaneal radiographs from 1775 patients acquired during 2015-2022), and initial weights (calcaneal fine-tuning). Attribution faithfulness was quantified using Remove and Debias (ROAD) scores from Grad-CAM saliency maps, with higher scores indicating greater faithfulness. AUROCs were compared using DeLong tests, and ROAD scores using Friedman tests with Bonferroni-adjusted post hoc pairwise comparisons. DINO-Ortho AUROC did not differ significantly from either baseline in any experiment (0.82 [95% confidence interval, 0.79-0.84] in-distribution and 0.95 [0.93-0.96] with initial weights). DINO-Ortho ROAD scores were significantly higher than both baselines in-distribution (20.01 vs 3.70 and 9.35, respectively) and with initial weights (20.41 vs 12.15 and 1.67, respectively, P < 0.001 for all) and higher than control but not DINO out-of-distribution (15.47 vs 3.06 and 16.09, respectively). All models discriminated poorly out-of-distribution (AUROC 0.65 [0.63-0.67], 0.64 [0.63-0.66], and 0.64 [0.63-0.66] for control, DINO, and DINO-Ortho, respectively). With no significant difference in AUROC from either baseline, domain-adapted self-supervised pretraining yielded more faithful attributions than supervised ImageNet pretraining in every experiment and than self-supervised ImageNet pretraining in two of three. No model generalized adequately to unfamiliar anatomy without fine-tuning. Groups fine-tuning on their own musculoskeletal data should therefore consider domain-adapted weights, whose saliency maps more reliably show what drove each prediction, making reliance on irrelevant features easier to detect.",
+  "day": "2026-11-25",
+  "rank": 11.14,
+  "zh_abstract": "[Skeletal radiology] 评估在肌肉骨骼X线片上对卷积神经网络进行域自适应自监督预训练，相较于ImageNet预训练基线，是否能改善二分类骨折分类和归因忠实度。这项回顾性研究（于2025年6月至2026年5月进行）比较了ResNet-50卷积神经网络的三种初始化：监督式ImageNet（对照）、自监督式ImageNet（DINO），以及在44,029张肌肉骨骼X线片上进一步预训练的DINO（DINO-Ortho）。每种初始化均在三个实验中进行微调：分布内（MURA和FracAtlas）、分布外（2015-2022年期间采集的来自1775例患者的5365张外部跟骨X线片）以及初始权重（跟骨微调）。归因忠实度使用Grad-CAM显著性图的Remove and Debias（ROAD）评分进行量化，评分越高表示忠实度越高。AUROC使用DeLong检验比较，ROAD评分使用Friedman检验并进行Bonferroni校正的事后两两比较。在任何实验中，DINO-Ortho的AUROC与任一基线均无显著差异（分布内为0.82 [95%置信区间，0.79-0.84]，使用初始权重时为0.95 [0.93-0.96]）。在分布内，DINO-Ortho的ROAD评分显著高于两个基线（分别为20.01 vs 3.70和9.35），在使用初始权重时也显著更高（分别为20.41 vs 12.15和1.67，所有P < 0.001）；在分布外，其ROAD评分高于对照但未高于DINO（分别为15.47 vs 3.06和16.09）。所有模型在分布外的区分能力均较差（对照、DINO和DINO-Ortho的AUROC分别为0.65 [0.63-0.67]、0.64 [0.63-0.66]和0.64 [0.63-0.66]）。由于AUROC与任一基线相比均无显著差异，域自适应自监督预训练在每个实验中均产生了比监督式ImageNet预训练更忠实的归因，并在三分之二的实验中产生了比自监督式ImageNet预训练更忠实的归因。若未进行微调，没有任何模型能充分泛化到不熟悉的解剖部位。因此，在自有肌肉骨骼数据上进行微调的团队应考虑使用域自适应权重，其显著性图能更可靠地显示驱动每个预测的因素，从而更容易发现对无关特征的依赖。"
+ },
+ {
   "title": "The autoPET3 challenge: Automated lesion segmentation in whole-body PET/CT — Multitracer multicenter generalization",
   "link": "https://www.sciencedirect.com/science/article/pii/S136184152600469X?dgcid=rss_sd_all",
   "date": "2026-11-25T05:33:42.874160+00:00",
@@ -1934,6 +1967,40 @@
   "zh_abstract": "具有对比式图像-文本预训练的生物医学视觉-语言模型（VLM）的发展，一直由扩展到日益庞大且多样的图像-文本数据集所驱动。除扩展规模外，进一步进展还可来自从现有数据中学习更丰富的表征。我们假设，科学文献本身的结构提供了额外的监督来源：图、子图面板、图注以及随附的正文文本编码了跨模态的丰富关系。然而，将这些视为独立的图像-文本对会忽略它们之间的关系。为解决这一局限，我们将这些结构关系纳入对比式图像-文本监督。我们保留精确的图像-文本匹配，同时为相关对（例如某个子图面板与同级面板的图注）引入较弱的正监督。我们提高同一内容类型的跨文章负样本的权重，以促进更精细的区分。我们还利用视觉内容、原始图注和提及段落来丰富面板描述。将面板与这些描述配对、将整图与其原始图注配对，得到Loom52M——一个包含5240万图像-文本对、涵盖科学图表和生物医学图像的数据集。使用Loom52M，BioLoom（DFN-2B）在来自10个领域43个数据集的67项零样本分类任务上取得56.82%的领域平衡平均准确率，而MedPMC-CLIP为48.77%。在采用简洁图注的BioLoomBench和BioMedFlickr上，其双向平均Recall@1分别为63.20%和10.59%，而各自最强的被评估基线BiomedCLIP和MedPMC-CLIP分别为46.37%和7.55%。代码、数据集、基准和模型可在https://bioloom-clip.github.io/获取。"
  },
  {
+  "title": "A deep-learning microglial response score integrates single-cell and spatial transcriptomics for Alzheimer's disease stratification.",
+  "link": "https://pubmed.ncbi.nlm.nih.gov/43075057/",
+  "date": "2026-11-09T00:00:00+00:00",
+  "badge": "DOI 10.3389/fnins.2026.1935678",
+  "source": "PubMed · Frontiers in neuroscience",
+  "source_group": "PubMed",
+  "home": "",
+  "thin": false,
+  "pop": null,
+  "id": "11b5a5dff424",
+  "keep": true,
+  "zh_title": "深度学习微胶质反应评分用于AD分层",
+  "summary": "研究构建深度学习微胶质反应评分DL-MRS，整合单细胞、空间与bulk转录组数据，用于阿尔茨海默病分层。",
+  "key_points": [
+   "整合单细胞、空间与bulk转录组数据",
+   "多层感知机构建8个模块输入评分",
+   "采用五折交叉重复、跨队列测试和SHAP分析"
+  ],
+  "section": "生命科学与药物",
+  "type": "论文",
+  "tags": [
+   "基因组学",
+   "神经科学",
+   "可解释性"
+  ],
+  "evidence": "同行评审",
+  "score": 5,
+  "reason": "同行评审计算研究，有跨队列测试但无前瞻临床结局，属值得一看档。",
+  "abstract": "[Frontiers in neuroscience] Microglia exhibit diverse responses in Alzheimer's disease (AD), yet linking these responses to tissue pathology and disease heterogeneity remains challenging. We aimed to develop a deep-learning microglial response score (DL-MRS) integrating single-cell, spatial and bulk transcriptomics to characterize AD-associated transcriptional patterns. We analyzed human single-cell, spatial and bulk transcriptomic data to characterize microglial clearance and inflammatory programs. These programs and tissue-context features formed eight module-level inputs to a multilayer perceptron that generated DL-MRS. Model performance and feature contributions were assessed using five repeats of five-fold cross-validation, cross-cohort testing, feature-set comparisons and SHapley Additive exPlanations (SHAP) analysis. Spatial localization, individual-level prediction using spatial transcriptomic data, and molecular heterogeneity within AD were also examined. Single-cell analyses characterized clearance-enriched and inflammation-enriched microglial groups. Descriptive spatial projection visualized regional variation in the weighted microglial and tissue-context programs. Across 697 AD and control bulk samples, DL-MRS achieved a repeated out-of-fold area under the receiver-operating characteristic curve (AUC) of 0.939 and a mean cross-cohort transfer AUC of 0.947. SHAP analysis of the expanded model identified complement as the largest contributor, alongside contributions from microglial and tissue-context modules. Among 129 AD samples, median DL-MRS was higher in the immune-enriched than in the neuronal/synaptic-enriched molecular group (0.970 versus 0.800). These findings support DL-MRS as an interpretable research tool for integrating microglial and tissue-context signals to characterize AD-associated transcriptional patterns and within-disease molecular heterogeneity. DL-MRS integrates microglial and tissue-context signals into an interpretable measure of AD-associated transcriptional remodeling. By capturing coordinated variation across immune, glial, vascular, neuronal and synaptic programs, DL-MRS reveals molecular heterogeneity among AD samples and provides a framework for investigating interindividual differences and advancing molecular stratification in AD research.",
+  "day": "2026-11-25",
+  "rank": 7.91,
+  "zh_abstract": "[Frontiers in neuroscience] 小胶质细胞在阿尔茨海默病（AD）中表现出多样化的反应，然而将这些反应与组织病理学和疾病异质性联系起来仍具有挑战性。我们旨在开发一种深度学习小胶质细胞反应评分（DL-MRS），整合单细胞、空间和批量转录组学，以表征AD相关的转录模式。我们分析了人类单细胞、空间和批量转录组数据，以表征小胶质细胞的清除程序和炎症程序。这些程序和组织背景特征形成了多层感知机的八个模块级输入，并生成DL-MRS。模型性能和特征贡献通过五次重复的五折交叉验证、跨队列测试、特征集比较和SHapley Additive exPlanations（SHAP）分析进行评估。还检查了空间定位、使用空间转录组数据的个体水平预测以及AD内的分子异质性。单细胞分析表征了富集清除程序的小胶质细胞群和富集炎症程序的小胶质细胞群。描述性空间投影可视化了加权的小胶质细胞和组织背景程序的区域变异。在697份AD和对照批量样本中，DL-MRS达到了重复的折外受试者工作特征曲线下面积（AUC）0.939和平均跨队列迁移AUC 0.947。对扩展模型的SHAP分析确定补体为最大贡献者，同时还有小胶质细胞和组织背景模块的贡献。在129份AD样本中，免疫富集分子组的DL-MRS中位数高于神经元/突触富集分子组（0.970 vs 0.800）。这些发现支持DL-MRS作为一种可解释的研究工具，用于整合小胶质细胞和组织背景信号，以表征AD相关的转录模式和疾病内分子异质性。DL-MRS将小胶质细胞和组织背景信号整合为AD相关转录重编程的可解释指标。通过捕捉免疫、胶质、血管、神经元和突触程序之间的协调变异，DL-MRS揭示了AD样本中的分子异质性，并为研究个体间差异和推进AD研究中的分子分层提供了框架。"
+ },
+ {
   "title": "Targeting protein degradation strategies in drug discovery: integrating PROTACs, ubiquitination biology, and AI-driven design.",
   "link": "https://pubmed.ncbi.nlm.nih.gov/43066850/",
   "date": "2026-11-21T00:00:00+00:00",
@@ -3493,6 +3560,33 @@
   "rank": 5.5
  },
  {
+  "title": "蚂蚁靠金融补贴、京东靠卖药兜底：大厂绕开医保的医疗AI试验",
+  "link": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxPd0hENlpMcVhRdTVxVDRfcjM1anhIS2EwNU9hcEdYeGRNclo4OU5VdzJaU3lyU2pyNHNqZHJjdUt1Ymk2YzA3MVJYUlZFMkZibU9hd1dBenNWelhIRGp1dzE5ankwTnlFT0s3cEdVT3Z3OTFCQWUxSGh3ZTBpVkVkYTZkUjlwQWJsRll3?oc=5",
+  "date": "2026-11-25T06:46:20+00:00",
+  "source": "Sohu",
+  "source_group": "Google News · 中文医疗AI",
+  "home": "https://www.sohu.com",
+  "thin": true,
+  "badge": "",
+  "pop": null,
+  "id": "cfbb1235e47c",
+  "keep": true,
+  "zh_title": "大厂绕开医保的医疗AI商业模式试验",
+  "summary": "仅有标题：报道蚂蚁以金融补贴、京东以卖药收入支撑医疗AI业务，探索绕开医保的路径。",
+  "key_points": [],
+  "section": "产业动态",
+  "type": "观点",
+  "tags": [
+   "临床落地",
+   "数字健康"
+  ],
+  "evidence": "新闻",
+  "score": 3,
+  "reason": "标题级行业观察，涉及医疗AI商业化路径，信息有限，增量档",
+  "day": "2026-11-25",
+  "rank": 5.5
+ },
+ {
   "title": "评测成绩亮眼，为何医疗大模型还走不进医院",
   "link": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE5zVjYtVTY4U0xoQy1tUFZBRGczWXpDUGt0T3JXNlNSLU9Cd2tZc0p1TE12OUFXdEZEREFObFFPYXp6NDMzbm9Wa0FzM0xwaHJUZWNB?oc=5",
   "date": "2026-11-24T08:39:32+00:00",
@@ -4724,6 +4818,10 @@
    {
     "source": "21财经",
     "link": "https://news.google.com/rss/articles/CBMijwFBVV95cUxOR052Ujd1MHFLZXY3OFRsalhxc3VpUTMwR2I3TTQ3YUNLT0tuRjVnZEFTUjBWRnFEYTRDZ1hBdlJxTkZmY3hYS25Oc05JVGIwSHVZS3BzWUtfZVVrQ05kSTZmRm9SRnlTN24yYkFzSEhYakR6ajJzaTZHbG9mUHlZdXZMVVJmdHBPbS11ZFJfOA?oc=5"
+   },
+   {
+    "source": "证券之星",
+    "link": "https://news.google.com/rss/articles/CBMiZEFVX3lxTFBsUnlsRDhQYm1NZ0lpb2tVTDRIRlhYb1EzMThKakNvNEk5RTkweVUxVmhNV2NoNjN2WlNSUHd5OGhZY21qakNrakJIUHBncEJ1TW1pYzZKUTg3UnFMWkJhT3ZBZnM?oc=5"
    }
   ],
   "keep": true,
