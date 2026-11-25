@@ -12,10 +12,10 @@ concurrency: { group: pages, cancel-in-progress: false }
 jobs:
   build:
     runs-on: ubuntu-latest
-    environment: { name: github-pages, url: "${{ steps.deploy.outputs.page_url }}" }
+    environment: { name: github-pages, url: "${{ steps.deploy1.outputs.page_url || steps.deploy2.outputs.page_url || steps.deploy3.outputs.page_url }}" }
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
         with: { python-version: "3.12" }
       - run: pip install feedparser
       - name: Unit tests
@@ -40,8 +40,23 @@ jobs:
       - name: Commit data
         run: |
           bash .github/scripts/push-data.sh "data: $(date -u +%F)"
-      - uses: actions/configure-pages@v5
-      - uses: actions/upload-pages-artifact@v3
-        with: { path: site }
-      - id: deploy
-        uses: actions/deploy-pages@v4
+      - uses: actions/configure-pages@v6
+      # since v4 the artifact drops dotfiles by default; keep site/.nojekyll in it
+      - uses: actions/upload-pages-artifact@v5
+        with: { path: site, include-hidden-files: true }
+      # The Pages backend now and then rejects a deployment outright ("Deployment failed, try again later.") with no cause;
+      # asking again a minute later goes through, so retry before the run is failed.
+      - id: deploy1
+        continue-on-error: true
+        uses: actions/deploy-pages@v5
+      - if: steps.deploy1.outcome == 'failure'
+        run: sleep 30
+      - id: deploy2
+        if: steps.deploy1.outcome == 'failure'
+        continue-on-error: true
+        uses: actions/deploy-pages@v5
+      - if: steps.deploy2.outcome == 'failure'
+        run: sleep 60
+      - id: deploy3
+        if: steps.deploy2.outcome == 'failure'
+        uses: actions/deploy-pages@v5
