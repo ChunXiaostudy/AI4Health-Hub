@@ -302,6 +302,73 @@
 "zh_abstract": "[IEEE transactions on medical imaging] 神经网络的最新进展通过摊销迭代优化加速了可变形图像配准（DIR），提供了更快的结果，并有望在标签监督下获得精度提升。然而，现有方法难以处理高度变形的结构（例如受试者间腹部扫描或受试者内心脏扫描），并且无法处理复杂运动，如滑动或呼吸动力学。这一局限源于各向同性扩散的成对正则化，其导致消息传递效率低下和边界过度平滑。我们提出 VoxelSlicer，一种受传统双边网格启发但用可学习自适应滤波增强的新型神经网络模块。VoxelSlicer 实现了体素级自适应滤波，解决了位移场中的局部不连续性，并执行更高效的消息传递。该设计以紧凑的参数占用和有利的精度-复杂度权衡，实现了自适应位移-代价传播。在四个真实数据集和两个具有不同模态和输入约束的合成数据集上的实验表明，VoxelSlicer 具有有竞争力的配准性能，以及有利的精度-复杂度和精度-平滑度权衡。"
 },
 {
+"title": "EffNetV2M-ViT: A Hybrid Deep Learning Model for MRI-Based Differentiation of Glioblastoma and Brain Metastasis.",
+"link": "https://pubmed.ncbi.nlm.nih.gov/43074481/",
+"date": "2026-11-24T00:00:00+00:00",
+"badge": "DOI 10.1002/nbm.70438",
+"source": "PubMed · NMR in biomedicine",
+"source_group": "PubMed",
+"home": "",
+"thin": false,
+"pop": null,
+"id": "3523f95bf3bc",
+"keep": true,
+"zh_title": "CNN-ViT混合模型鉴别胶质母细胞瘤与脑转移",
+"summary": "研究构建EfficientNet与ViT并行融合模型，基于MRI区分胶质母细胞瘤与脑转移。",
+"key_points": [
+"融合卷积局部特征与Transformer全局特征",
+"自动分割增强肿瘤区域作为输入",
+"采用独立验证的多中心数据评估"
+],
+"section": "影像与病理",
+"type": "论文",
+"tags": [
+"医学影像",
+"肿瘤"
+],
+"evidence": "同行评审",
+"score": 6,
+"reason": "同行评审并有独立多中心验证，但属回顾性二分类任务，重要档下沿",
+"abstract": "[NMR in biomedicine] Noninvasive differentiation between glioblastoma (GBM) and brain metastasis (BM) remains challenging because of substantial overlap in their MRI appearance. Existing deep learning (DL) approaches have primarily relied on either convolutional neural networks (CNNs), which capture local spatial features, or transformer-based models, which capture long-range contextual relationships. However, the complementary value of combining these representations for GBM-BM discrimination has not been sufficiently investigated, using independently validated multicenter data. This study aimed to develop and evaluate a hybrid CNN-Vision Transformer (ViT) framework for automated differentiation of GBM from BM. The framework integrates EfficientNet-based convolutional feature extraction with ViT-based global feature modeling through parallel fusion. Enhancing tumor was automatically segmented using 3D U-Net, with segmentations visually reviewed and manually corrected when necessary. T2-weighted (T2W) and contrast enhanced T1-weighted (CE-T1W) MRI sequences were used as inputs. A modality ablation study was performed to identify the optimal contrast combination among T1W, CE-T1W, T2W, and FLAIR. The framework was evaluated in a retrospective cohort of 344 patients with histologically confirmed tumors using cross-validation and ensemble methods, with performance further assessed in an independent multicenter external validation cohort from different institutions, MRI scanner platforms, and patient populations. The hybrid EffNetV2M-ViT framework achieved an accuracy of 95.4%, F1-score of 96.2%, and AUC of 98.4% on the internal test set, and 90.9%, 92.7%, and 96.8% on external validation, with sensitivity, specificity of 96.2%, 93.9% and 90.5%, 91.7%, respectively. The hybrid model outperformed the standalone CNN and ViT models across both datasets, with the largest performance gains observed in the external validation cohort, support its generalizability. Ablation analysis confirmed that the paired CE-T1W + T2W input yielded the most consistent performance across both cohorts, with additional contrasts providing no added benefit. These findings suggest that combining local convolutional features with global contextual representations improves automated GBM-BM discrimination, offering a noninvasive, standardized approach for MRI-based tumor classification that may support clinical decision-making.",
+"day": "2026-11-25",
+"rank": 10.31,
+"zh_abstract": "[NMR in biomedicine] 由于胶质母细胞瘤（GBM）与脑转移瘤（BM）在MRI表现上存在显著重叠，非侵入性区分二者仍具挑战性。现有深度学习方法主要依赖卷积神经网络（CNN），其捕捉局部空间特征，或基于Transformer的模型，其捕捉长程上下文关系。然而，利用独立验证的多中心数据，将这两类表征结合用于GBM-BM鉴别所具有的互补价值尚未得到充分研究。本研究旨在开发并评估一种混合CNN-视觉Transformer（ViT）框架，用于自动区分GBM与BM。该框架通过并行融合，将基于EfficientNet的卷积特征提取与基于ViT的全局特征建模相结合。增强肿瘤使用3D U-Net自动分割，分割结果经视觉审查并在必要时手动校正。T2加权（T2W）和对比增强T1加权（CE-T1W）MRI序列用作输入。进行了模态消融研究，以确定T1W、CE-T1W、T2W和FLAIR中的最佳对比组合。该框架在344例经组织学确诊肿瘤患者的回顾性队列中，使用交叉验证和集成方法进行评估，并在来自不同机构、MRI扫描仪平台和患者人群的独立多中心外部验证队列中进一步评估性能。混合EffNetV2M-ViT框架在内部测试集上达到准确率95.4%、F1分数96.2%和AUC 98.4%，在外部验证中达到90.9%、92.7%和96.8%，敏感度和特异度分别为96.2%、93.9%和90.5%、91.7%。该混合模型在两个数据集上均优于独立CNN和ViT模型，最大性能提升出现在外部验证队列，支持其泛化性。消融分析证实，配对的CE-T1W + T2W输入在两个队列中产生最一致的性能，额外对比序列未带来额外获益。这些发现提示，将局部卷积特征与全局上下文表征相结合可改善自动GBM-BM鉴别，为基于MRI的肿瘤分类提供一种非侵入性、标准化方法，可能支持临床决策。"
+},
+{
+"title": "An Integrated Systems Biology and Explainable Artificial Intelligence Framework for Robust Placental Biomarker Discovery in Preeclampsia.",
+"link": "https://pubmed.ncbi.nlm.nih.gov/43076296/",
+"date": "2026-11-24T00:00:00+00:00",
+"badge": "DOI 10.1096/fj.202603496R",
+"source": "PubMed · FASEB journal : official publication of the Federation of American Societies for Experimental Biology",
+"source_group": "PubMed",
+"home": "",
+"thin": false,
+"pop": null,
+"id": "6629abfaa4aa",
+"keep": true,
+"zh_title": "可解释AI框架用于子痫前期胎盘标志物发现",
+"summary": "基于GEO胎盘转录组数据，整合系统生物学与可解释AI，构建并外部验证子痫前期生物标志物发现与诊断框架。",
+"key_points": [
+"使用GEO胎盘转录组数据集",
+"整合差异表达、WGCNA与四种特征选择",
+"框架用于PE诊断并探索严重程度分层"
+],
+"section": "生命科学与药物",
+"type": "论文",
+"tags": [
+"基因组学",
+"可解释性",
+"临床预测"
+],
+"evidence": "同行评审",
+"score": 6,
+"reason": "同行评审且有外部验证，但样本量未明、回顾性公共数据，属值得一看档",
+"abstract": "[FASEB journal : official publication of the Federation of American Societies for Experimental Biology] Preeclampsia (PE) is a heterogeneous pregnancy disorder characterized by placental dysfunction and immune dysregulation. Translation of transcriptomic biomarkers has been limited by inconsistent feature selection, inadequate external validation, and poor model interpretability. We developed an explainable, externally validated, transcriptomics-driven artificial intelligence framework for biomarker discovery, PE diagnosis, and exploratory severity stratification. Placental transcriptomic datasets were obtained from the Gene Expression Omnibus. Differential expression analysis and weighted gene co-expression network analysis were integrated with consensus feature selection using Elastic Net, LASSO, SVM-RFE, and Boruta. Selected biomarkers were evaluated using conventional machine learning, deep learning, ensemble, and hybrid models with repeated stratified cross-validation and independent cross-platform external validation. Model performance and interpretability were assessed using ROC and precision-recall analyses, DeLong's test, permutation testing, SHAP, and permutation importance. Integrative analyses identified 166 candidate genes and prioritized a six-gene signature comprising CGB5, LEP, LIMCH1, LRRC1, PAPPA2, and SIGLEC6. Logistic Regression achieved the highest external performance (ROC-AUC: 0.8516, 95% CI: 0.7913-0.9119; PR-AUC: 0.8572). DeLong's test showed no significant differences from the best-performing deep or hybrid models. Explainability analyses consistently identified LEP, LRRC1, PAPPA2, and SIGLEC6 as major predictive contributors. Exploratory early versus late-onset PE stratification achieved an ROC-AUC of 0.7617. The proposed framework identified a reproducible six-gene placental signature with robust cross-platform predictive performance and biological interpretability. Integrating consensus biomarker selection, external validation, and explainable artificial intelligence may facilitate the reproducible development of transcriptomic biomarkers for precision medicine in PE.",
+"day": "2026-11-25",
+"rank": 10.31,
+"zh_abstract": "[FASEB journal : official publication of the Federation of American Societies for Experimental Biology] 子痫前期（PE）是一种以胎盘功能障碍和免疫失调为特征的异质性妊娠疾病。转录组生物标志物的转化一直受限于特征选择不一致、外部验证不足和模型可解释性差。我们开发了一个可解释、经外部验证、由转录组学驱动的人工智能框架，用于生物标志物发现、PE诊断和探索性严重程度分层。胎盘转录组数据集来自Gene Expression Omnibus。差异表达分析和加权基因共表达网络分析与使用Elastic Net、LASSO、SVM-RFE和Boruta的共识特征选择相结合。所选生物标志物使用传统机器学习、深度学习、集成和混合模型进行评估，采用重复分层交叉验证和独立跨平台外部验证。模型性能和可解释性使用ROC和精确率-召回率分析、DeLong检验、置换检验、SHAP和置换重要性进行评估。整合分析识别出166个候选基因，并优先确定一个由CGB5、LEP、LIMCH1、LRRC1、PAPPA2和SIGLEC6组成的六基因特征。逻辑回归取得最高的外部性能（ROC-AUC：0.8516，95% CI：0.7913-0.9119；PR-AUC：0.8572）。DeLong检验显示与表现最佳的深度或混合模型无显著差异。可解释性分析一致识别出LEP、LRRC1、PAPPA2和SIGLEC6为主要预测贡献者。探索性早发型与晚发型PE分层达到ROC-AUC 0.7617。所提出的框架识别出一个可重复的六基因胎盘特征，具有稳健的跨平台预测性能和生物学可解释性。整合共识生物标志物选择、外部验证和可解释人工智能，可能促进用于PE精准医学的转录组生物标志物的可重复开发。"
+},
+{
 "title": "Large Language Models for Electronic Health Records in Emergency Department (ED) and ED-Adjacent Emergency Care-Technical Strategies, Clinical Tasks, and Workflow Integration: Systematic Review.",
 "link": "https://pubmed.ncbi.nlm.nih.gov/43071442/",
 "date": "2026-11-23T00:00:00+00:00",
@@ -733,6 +800,38 @@
 "zh_abstract": "[Journal of chemical theory and computation] 人工智能（AI）智能体框架（agent harness）已被开发用于自主科学模拟，但当前大多数智能体框架仅在单一或少量软件包上测试。本文介绍FermiLink，一个用于多领域科学模拟的可扩展开源智能体框架。其关键设计原则是将软件包知识库与模拟工作流分离，从而使FermiLink中的模拟工作流——从图表级模拟到高性能计算集群上的整篇论文级研究——通过四层渐进式披露机制在受支持的软件包之间统一运行。该智能体框架专门针对高性能计算（HPC）集群优化，能够在无人干预的情况下开展多日、多步骤的科学模拟。使用OpenAI Codex作为智能体提供方，FermiLink的能力在约50个科学软件包上得到展示，这些软件包涵盖从化学到工程的九个研究领域。使用44个软件包的132个真实世界图表级复现任务的系统基准测试表明，FermiLink通过模拟复现了74幅（56.1%）已发表图表，其中30幅（22.7%）与目标图达到高保真一致，35幅达到定性一致。一套规模较小的、由人类专家指导的复现基准（涉及物理和化学领域的10个软件包）进一步凸显了专家洞见对提高模拟保真度的重要性。除复现外，一项单盲研究表明，当提供足够详细的研究目标时，FermiLink可在未发表的极化激元物理问题上产生研究级结果。总体而言，FermiLink提供了可扩展的研究基础设施，可能加速跨不同领域从科学问题到计算结果的进程。"
 },
 {
+"title": "Rethinking radiation dose optimization in pediatric computed tomography imaging: emerging algorithms and clinical integration.",
+"link": "https://pubmed.ncbi.nlm.nih.gov/43076934/",
+"date": "2026-11-24T00:00:00+00:00",
+"badge": "DOI 10.1007/s00247-026-06834-5",
+"source": "PubMed · Pediatric radiology",
+"source_group": "PubMed",
+"home": "",
+"thin": false,
+"pop": null,
+"id": "ac4115fc934a",
+"keep": true,
+"zh_title": "儿童CT辐射剂量优化的算法与临床整合",
+"summary": "综述分析儿童CT剂量优化从迭代重建到深度学习重建及光子计数CT的演进。",
+"key_points": [
+"儿童放射敏感性高，剂量优化尤为关键",
+"深度学习重建可望在降剂量同时保持图像质量",
+"讨论新探测器技术与临床整合路径"
+],
+"section": "影像与病理",
+"type": "论文",
+"tags": [
+"医学影像"
+],
+"evidence": "同行评审",
+"score": 5,
+"reason": "同行评审综述，无原始数据与外部验证，属值得一看档",
+"abstract": "[Pediatric radiology] The optimization of radiation dose in pediatric computed tomography (CT) is a critical imperative, driven by the heightened radiosensitivity of children. This review provides a critical analysis of the evolution of dose optimization, from foundational principles like As Low As Reasonably Achievable (ALARA) and conventional techniques to the transformative impact of artificial intelligence (AI). We trace the progression from iterative reconstruction (IR), which offered initial dose reduction but was limited by unnatural image textures and computational demands, to the new paradigm of deep learning reconstruction (DLR) and emerging detector technologies like photon-counting CT. Clinical evidence demonstrates that DLR significantly shifts the traditional compromise between dose and image quality, enabling substantial potential dose reductions while producing images with superior noise properties and diagnostic confidence. Beyond reconstruction, AI is also automating scan protocoling to enhance consistency and reduce errors. However, the clinical integration of these powerful tools is not seamless. Significant barriers remain, including the \"black box\" nature of algorithms, the need for new training curricula for radiographers, and complex ethical and regulatory challenges. This review synthesizes these issues and charts a path forward, advocating for a holistic approach involving complementary AI-specific reference levels, federated learning, and robust governance to realize the full potential of a safer, more efficient, and patient-specific dose optimization ecosystem.",
+"day": "2026-11-25",
+"rank": 9.31,
+"zh_abstract": "[Pediatric radiology] 儿童计算机断层扫描（CT）中的辐射剂量优化是一项关键要求，其驱动力是儿童更高的辐射敏感性。本综述对剂量优化的演变进行了批判性分析，从“在合理可达到的范围内尽可能低”（ALARA）等基本原则和传统技术，到人工智能（AI）的变革性影响。我们追溯了从迭代重建（IR）到深度学习重建（DLR）新范式以及光子计数CT等新兴探测器技术的发展历程；IR最初提供了剂量降低，但受限于不自然的图像纹理和计算需求。临床证据表明，DLR显著改变了剂量与图像质量之间的传统折衷，在产生具有更优噪声特性和诊断信心的图像的同时，实现了显著的潜在剂量降低。除重建外，AI还在自动化扫描协议设置，以提高一致性并减少错误。然而，这些强大工具的临床整合并非无缝。重大障碍仍然存在，包括算法的“黑箱”性质、放射技师需要新的培训课程，以及复杂的伦理和监管挑战。本综述综合了这些问题并规划了前进路径，倡导采取整体方法，包括补充性的AI专用参考水平、联邦学习和稳健治理，以充分发挥更安全、更高效且针对患者的剂量优化生态系统的全部潜力。"
+},
+{
 "title": "AI-Assisted Multimodal Imaging Integration for Individualized Transseptal Puncture Planning During Atrial Fibrillation Ablation.",
 "link": "https://pubmed.ncbi.nlm.nih.gov/43073638/",
 "date": "2026-11-23T00:00:00+00:00",
@@ -764,6 +863,73 @@
 "day": "2026-11-25",
 "rank": 9.14,
 "zh_abstract": "《Journal of imaging informatics in medicine》房间隔穿刺（TSP）是心房颤动（AF）消融过程中的关键步骤，准确理解房间隔解剖对于个体化手术规划至关重要。心腔内超声（ICE）可实时显示间隔解剖，但受限于其二维呈现和操作者依赖性。本研究开发了一种人工智能（AI）辅助的多模态影像框架，将术前计算机断层扫描血管造影（CTA）与术中ICE整合，为TSP规划提供患者特异性三维（3D）解剖指导。这项单中心研究纳入了700例接受AF消融的患者。使用500例患者的数据开发了一个AI框架，用于执行自动分割、3D重建和CTA-ICE多模态图像整合。该框架在由200例患者组成的独立时间验证队列中接受评估。主要结局是AI辅助解剖信息对个体化TSP规划的影响，通过AI辅助评估后穿刺策略的变化来评估。次要结局包括决策信心、规划时间、读者间一致性和手术可行性。AI框架在自动解剖分割中达到总体Dice相似系数0.854，在3D左心房重建中达到Dice系数0.862。在时间验证队列中，68例患者（34.0%）的最终TSP策略纳入了至少一项AI推荐的调整。这些建议涉及TSP规划的三个关键组成部分：52例患者（26.0%）的穿刺部位类别、61例患者（30.5%）的穿刺方向，以及74例患者（37.0%）的穿刺轨迹或角度。AI辅助评估提高了决策信心（4.3 ± 0.6 vs. 3.4 ± 0.8, p < 0.001），缩短了规划时间（28.7 ± 10.3 vs. 42.5 ± 15.2 s, p < 0.001），并改善了解剖评估的读者间一致性。在时间验证队列中，196例患者（98.0%）实现TSP急性期成功，平均房间隔穿刺时间为6.8-2.5 min，总体并发症发生率为3.0%。AI辅助的术前CTA与术中ICE整合提供了患者特异性3D解剖信息，支持个体化TSP规划。所提出的框架展示了可行性，以及与解剖评估和手术规划的兼容性，有望促进"
+},
+{
+"title": "Reducing Demographic Bias in Medical Imaging Using Siamese Representation Learning.",
+"link": "https://pubmed.ncbi.nlm.nih.gov/43073644/",
+"date": "2026-11-23T00:00:00+00:00",
+"badge": "DOI 10.1007/s10278-026-02519-5",
+"source": "PubMed · Journal of imaging informatics in medicine",
+"source_group": "PubMed",
+"home": "",
+"thin": false,
+"pop": null,
+"id": "ac92b1763d23",
+"keep": true,
+"zh_title": "孪生表示学习降低影像人口学偏差",
+"summary": "用三元组损失孪生网络减少胸片与脑MRI模型在年龄、性别、种族间的性能差异。",
+"key_points": [
+"胸片10.9万张、脑MRI 1494例两项任务评估",
+"三元组按疾病类别分离并促进跨人群类内相似",
+"以AUROC、精确率与真阳性率评估去偏效果"
+],
+"section": "影像与病理",
+"type": "论文",
+"tags": [
+"医学影像",
+"公平与安全"
+],
+"evidence": "同行评审",
+"score": 5,
+"reason": "同行评审大样本回顾性方法研究，未见外部验证，属值得一看档",
+"abstract": "[Journal of imaging informatics in medicine] Deep learning models for medical imaging often exhibit demographic bias, leading to performance disparities across protected groups such as age, gender, and race. This study proposes a debiasing framework to reduce such disparities while maintaining diagnostic accuracy. We propose a Siamese neural network trained using triplet loss, where demographic attributes are incorporated into triplet selection to encourage separation by disease class while promoting within-class similarity across demographic groups. The method was evaluated on pleural effusion detection using chest X-rays (109,005 images from 41,063 patients) and Alzheimer's disease classification using brain MRI (1494 scans from 348 patients). Performance was assessed using the area under the receiver operating characteristic curve (AUROC), precision, and true positive rate, along with equalized odds difference. The proposed method significantly reduced demographic disparities while maintaining or improving overall predictive performance compared with baseline and existing debiasing approaches. In pleural effusion detection, true positive rate gaps were reduced by 32% (race), 8% (age), and 22% (gender). In Alzheimer's disease classification, the true positive rate gap was reduced by 41% (age). Model interpretation indicated clinically meaningful imaging features were used for decision-making. Demographic-aware triplet sampling within a Siamese framework can effectively mitigate demographic performance disparities in medical imaging models while maintaining competitive overall diagnostic performance, suggesting potential for more equitable and clinically reliable deployment of medical imaging AI systems.",
+"day": "2026-11-25",
+"rank": 9.14,
+"zh_abstract": "[Journal of imaging informatics in medicine] 医学影像深度学习模型常表现出人口统计学偏倚，导致在年龄、性别和种族等受保护群体之间存在性能差异。本研究提出一种去偏倚框架，以减少此类差异，同时保持诊断准确性。我们提出一种使用三元组损失训练的孪生神经网络，其中将人口统计学属性纳入三元组选择，以鼓励按疾病类别分离，同时促进不同人口统计学群体内的类内相似性。该方法在胸片胸腔积液检测（来自41,063例患者的109,005张图像）和脑MRI阿尔茨海默病分类（来自348例患者的1494次扫描）上进行了评估。性能使用受试者工作特征曲线下面积（AUROC）、精确率、真阳性率以及均衡几率差进行评估。与基线和现有去偏倚方法相比，所提方法在保持或改善整体预测性能的同时显著减少了人口统计学差异。在胸腔积液检测中，真阳性率差距分别降低了32%（种族）、8%（年龄）和22%（性别）。在阿尔茨海默病分类中，真阳性率差距降低了41%（年龄）。模型解释表明，决策使用了具有临床意义的影像特征。孪生框架内的人口统计学感知三元组采样可有效缓解医学影像模型中的人口统计学性能差异，同时保持有竞争力的整体诊断性能，这表明医学影像AI系统有望实现更公平、更临床可靠的部署。"
+},
+{
+"title": "Transitions of Care in Clinical Oncology: Current Applications and Future Opportunities Enabled by Artificial Intelligence and Digital Health.",
+"link": "https://pubmed.ncbi.nlm.nih.gov/43071913/",
+"date": "2026-11-23T00:00:00+00:00",
+"badge": "DOI 10.1200/CCI-26-00115",
+"source": "PubMed · JCO clinical cancer informatics",
+"source_group": "PubMed",
+"home": "",
+"thin": false,
+"pop": null,
+"id": "7f1c01e4ae24",
+"keep": true,
+"zh_title": "肿瘤诊疗转衔中的AI与数字健康应用",
+"summary": "综述梳理AI与数字健康在肿瘤患者住院到门诊转衔中的应用，如风险预测与出院规划。",
+"key_points": [
+"聚焦肿瘤患者出院前后转衔期的连续照护",
+"预测分析与临床决策支持用于识别高危患者",
+"属综述，未报告原始研究数据"
+],
+"section": "临床预测与决策",
+"type": "论文",
+"tags": [
+"临床决策支持",
+"数字健康",
+"肿瘤"
+],
+"evidence": "同行评审",
+"score": 5,
+"reason": "同行评审综述，主题有信息量但无原始数据，属值得一看档",
+"abstract": "[JCO clinical cancer informatics] Transitions of care from hospital to outpatient settings represent a vulnerable period for patients with cancer, who often face complex treatment regimens, multiple comorbidities, and fragmented coordination across care settings. These challenges contribute to communication breakdowns and unplanned hospital readmissions. Advances in artificial intelligence (AI) and digital health technologies offer new opportunities to improve the transitional phases before, during, and after hospital discharge, and strengthen care continuity. This review examines emerging approaches enabled by AI and digital health across the inpatient-to-outpatient care spectrum for hospitalized patients with cancer. We discuss how predictive analytics and clinical decision support can identify patients at elevated risk of complications and guide discharge planning before hospitalization ends. We also review existing AI and digital health solutions tailored to the discharge process, including tools that enhance patient and caregiver education, medication reconciliation, follow-up coordination, discharge documentation, and management of pending test results. Finally, we explore post-discharge technologies, such as remote monitoring, symptom tracking systems, and AI-assisted communication platforms, that empower earlier detection of clinical deterioration and facilitate integration with outpatient and community-based resources. Overall, we highlight, as well as describe the limitations of, innovations that seek to improve coordination, reduce administrative burden, and support safer, more proactive transitions of care for patients undergoing cancer treatment.",
+"day": "2026-11-25",
+"rank": 9.14,
+"zh_abstract": "[JCO clinical cancer informatics] 从医院到门诊环境的诊疗过渡是癌症患者的脆弱时期，他们常面临复杂的治疗方案、多种合并症以及跨诊疗环境协调碎片化的问题。这些挑战导致沟通中断和非计划性再入院。人工智能（AI）和数字健康技术的进展为改善出院前、出院期间和出院后的过渡阶段以及加强诊疗连续性提供了新机会。本综述考察了针对住院癌症患者、由AI和数字健康赋能、贯穿住院至门诊诊疗全程的新兴方法。我们讨论了预测分析和临床决策支持如何识别并发症风险升高的患者，并在住院结束前指导出院计划。我们还综述了针对出院流程定制的现有AI和数字健康解决方案，包括增强患者和照护者教育、药物核对、随访协调、出院文书以及待查检验结果管理的工具。最后，我们探讨出院后技术，如远程监测、症状追踪系统和AI辅助沟通平台，这些技术有助于更早发现临床恶化，并促进与门诊和社区资源的整合。总体而言，我们重点介绍并描述了旨在改善协调、减少行政负担，并支持接受癌症治疗患者更安全、更主动诊疗过渡的创新及其局限性。"
 },
 {
 "title": "How We Do It: A Framework for Scaling Clinical AI Across Health Systems: Lessons from the Cleveland Clinic AI Summit for Healthcare Professionals",
@@ -1339,6 +1505,39 @@
 "zh_abstract": "非专业人士越来越多地使用大语言模型（large language models, LLMs）获取分诊建议，但LLMs以可变的自由文本作答，这使其难以被评估用于医疗器械。决策模型为每个预定义分诊类别赋予一个概率，可能更易于评估。为测试其分诊准确性，我们在233个合成病例和10,000个真实世界病例上评估了16个决策模型（14个开放权重模型、2个专有模型），共产生163,728次评估。最佳模型正确分诊了72.1%的合成病例，并在56.1%的真实世界病例中与现有算法一致。它们在早期识别紧急情况方面更有前景：仅给定人口学信息、主诉、危险因素和危险信号回答，最佳模型达到0.87的AUROC。在5%误差界限下，它可为约一半用户判断是否为紧急情况。因此，决策模型不应取代分诊引擎，但可以在特定场景的误差界限下缩短症状评估。"
 },
 {
+"title": "Multimodal AI is Advancing Biomarker Discovery in Parkinson's and Alzheimer's Disease: Evidence, Limitations, and the Translational Gap.",
+"link": "https://pubmed.ncbi.nlm.nih.gov/43069812/",
+"date": "2026-11-04T00:00:00+00:00",
+"badge": "DOI 10.1177/11772719261496180",
+"source": "PubMed · Biomarker insights",
+"source_group": "PubMed",
+"home": "",
+"thin": false,
+"pop": null,
+"id": "d3a080c1a3cc",
+"keep": true,
+"zh_title": "多模态AI助力帕金森与阿尔茨海默生物标志物发现",
+"summary": "综述汇总多模态AI在帕金森与阿尔茨海默病生物标志物研究中的表现与转化差距。",
+"key_points": [
+"研究报告分类与预测准确率区间跨度大",
+"外部验证在医学AI中仍不常见",
+"核心瓶颈是转化验证而非候选标志物缺乏"
+],
+"section": "生命科学与药物",
+"type": "论文",
+"tags": [
+"神经科学",
+"多模态"
+],
+"evidence": "同行评审",
+"score": 6,
+"reason": "同行评审综述，量化汇总证据并指出转化差距，属综述上限档",
+"abstract": "[Biomarker insights] Artificial intelligence is rapidly expanding the biomarker landscape for Parkinson's and Alzheimer's diseases. Multimodal systems combining neuroimaging, speech, gait, physiological signals, cognitive measures, and molecular markers show substantial research-stage performance. In studies with extractable accuracy and denominator data, reported Parkinson's disease classification accuracies ranged from 94.25% (95% Wilson CI: 93.78-94.68%) to 98.6% (95% Wilson CI: 95.71-99.67%), while Alzheimer's disease diagnostic or conversion-prediction accuracies ranged from 65.8% (95% Wilson CI: 62.54-68.87%) to 99.26% (95% Wilson CI: 97.89-99.75%). Therefore, the field is no longer limited by the absence of candidate AI biomarkers. However, the central bottleneck is translational validation. External validation remains uncommon across medical AI, with rates of 3.7% in high-impact medical informatics studies, 6% in diagnostic medical-imaging AI studies, and 14.7% in ICU AI scoring-system studies. In neurodegenerative disease, many models still rely on single cohorts, internal splits, incomplete metric reporting, and weak linkage between AI-derived digital phenotypes and established molecular or clinical biomarkers. Consequently, performance degradation in real-world populations, reduced specificity, calibration drift, and cohort bias help explain why extensive machine learning activity has not yet translated into routine clinical deployment. In this narrative review, we therefore synthesize quantitative evidence across motor, cognitive, neuropsychiatric, remote-monitoring, and neuroimaging domains. We argue that progress in AI for Parkinson's and Alzheimer's disease now depends less on additional model novelty alone than on standardized validation pipelines, external cohort testing, calibration assessment, interpretable multimodal fusion, and clinically meaningful endpoints. Nonetheless, with these safeguards, multimodal AI can move from promising biomarker discovery toward reproducible, clinically deployable precision diagnostics in neurodegenerative disease.",
+"day": "2026-11-25",
+"rank": 8.75,
+"zh_abstract": "[Biomarker insights] 人工智能正在迅速扩展帕金森病和阿尔茨海默病的生物标志物版图。结合神经影像、语音、步态、生理信号、认知测量和分子标志物的多模态系统显示出可观的研究阶段性能。在可提取准确率和分母数据的研究中，报告的帕金森病分类准确率范围为94.25%（95% Wilson CI：93.78-94.68%）至98.6%（95% Wilson CI：95.71-99.67%），而阿尔茨海默病诊断或转化预测准确率范围为65.8%（95% Wilson CI：62.54-68.87%）至99.26%（95% Wilson CI：97.89-99.75%）。因此，该领域不再受限于候选AI生物标志物的缺乏。然而，核心瓶颈是转化验证。外部验证在医学AI中仍不常见，在高影响力医学信息学研究中的比例为3.7%，在诊断性医学影像AI研究中为6%，在ICU AI评分系统研究中为14.7%。在神经退行性疾病中，许多模型仍依赖单队列、内部划分、不完整的指标报告，以及AI衍生数字表型与既定分子或临床生物标志物之间联系薄弱。因此，真实世界人群中的性能下降、特异度降低、校准漂移和队列偏倚有助于解释为何大量机器学习活动尚未转化为常规临床部署。在本叙述性综述中，我们因此整合了运动、认知、神经精神、远程监测和神经影像领域的定量证据。我们认为，帕金森病和阿尔茨海默病AI的进展如今较少仅取决于额外的模型新颖性，而更多取决于标准化验证流程、外部队列测试、校准评估、可解释的多模态融合和具有临床意义的终点。尽管如此，在这些保障措施下，多模态AI可以从有前景的生物标志物发现迈向神经退行性疾病中可重复、可临床部署的精准诊断。"
+},
+{
 "title": "Artificial Intelligence (AI) Support in Mammography Screening: Evidence From the MASAI (Mammography Screening With Artificial Intelligence) Trial and Gaps in Device Regulation",
 "link": "https://news.google.com/rss/articles/CBMizAJBVV95cUxOMEg5eWphM29LM2lxOV80MWgyN1NyNk5WU283SFRJT1Bva0V2aFFSVm9TeFh3NWZDYnJVTzhDeHJCdC1YbV80ZkF2emFadTJySnFCc3ZOejFvQlJyc2NUTEtNWlltLTFyeEpYMEdGRnJmS2U1UkNCNVZDTVJWY3lsdHVPUE8tWmdlXzJrN084dlQzbTAwa0JOZUZSdWx2M0x6VlZMYW1zVWpjV1EwbzVNeTJKVlpVMHJ1UmF2ZC1nVGU5clJ4ejVzU0h6TEVSa2wzZEUwaXRDY01SdkJZZEo0MHE1eXJtbGRIRXNlcmhtb0w5TUtKV0h0anEyZ2NZV3BUMzVOcm5kNkNDTk5ySGhYeUlBVy14OURzMHI3SnhwMWc3VDZ4RmF2WmYySU45TFQtUi1zeVBCLThoTTFiMWRUODR4eWlCTkgyTGdSTQ?oc=5",
 "date": "2026-11-25T01:09:12+00:00",
@@ -1597,6 +1796,41 @@
 "rank": 9.07,
 "abstract": "This Letter argues that the significant diagnostic accuracy decline observed in Qazi et al.’s trial reflects an erosion of physicians’ “cognitive sovereignty” due to automation bias, and contends that generic AI-literacy training is insufficient, advocating instead for empirical automation bias stress tests and structural governance to enforce critical vigilance in clinical AI deployment.",
 "zh_abstract": "本通讯认为，Qazi et al. 的试验中观察到的诊断准确性显著下降，反映了因自动化偏差导致的医生“认知主权”侵蚀，并主张通用的AI素养培训并不充分，反而倡导开展实证性的自动化偏差压力测试和结构性治理，以在临床AI部署中强制保持批判性警觉。"
+},
+{
+"title": "LingSante MedGuard Technical Report",
+"link": "https://huggingface.co/papers/2611.25509",
+"date": "2026-11-19T00:00:00.000Z",
+"pop": "▲ 5 upvotes",
+"badge": "arXiv 2611.25509",
+"source": "Hugging Face Daily Papers",
+"source_group": "Hugging Face Daily Papers",
+"home": "",
+"thin": false,
+"id": "b291739a17bf",
+"keep": true,
+"zh_title": "LingSante MedGuard医学护栏技术报告",
+"summary": "提出整合医学护栏教师模型与六类能力专家的统一护栏模型，用于识别医疗AI有害或不合规回答。",
+"key_points": [
+"护栏教师模型监督医学安全、合规与伦理风险决策",
+"六类专家覆盖规则理解、数值推理与多模态幻觉检测",
+"面向智能体安全核查与风险定位",
+"预印本，未经同行评审"
+],
+"section": "大模型与智能体",
+"type": "模型",
+"tags": [
+"医学大模型",
+"公平与安全",
+"多模态"
+],
+"evidence": "预印本",
+"score": 5,
+"reason": "新方法预印本，尚无外部验证与公开评测，属值得一看档",
+"abstract": "As medical AI is increasingly used for patient consultation and clinical decision support, identifying harmful, non-compliant, or ethically problematic responses is essential for responsible deployment. Assessing these risks requires checking clinical claims against relevant evidence, verifying calculations, and applying medical requirements under their intended conditions. We introduce LingSante MedGuard, a capability-enhanced guardrail that integrates supervision from a medical guardrail teacher model and six specialized medical capability experts into a unified model. The guardrail teacher supervises risk decisions and explanations across medical safety, compliance, and ethics, while the capability experts support medical rule understanding, numerical reasoning, multimodal hallucination detection, agentic safety verification, risk localization, and multimodal entity understanding. We consolidate these sources of supervision through offline supervised fine-tuning on teacher-generated demonstrations, followed by multi-teacher on-policy distillation using feedback on student-generated responses. We further introduce LingSante MedGuardBench, a benchmark comprising 11 risk-detection subsets spanning medical safety, compliance, and ethics. At 4B, 9B, and 27B scales, LingSante MedGuard achieves mean benchmark F1 scores of 82.3%, 82.4%, and 87.4%, respectively. The 4B model also achieves 73.9% mean accuracy across MedHallu and MedHALT-NOTA under retrieval-enabled evaluation. Additional evaluations of the verification components show improvements in evidence-supported consistency, source traceability, and rule-guided rationale quality across model scales. These results support the integration of specialized medical capabilities into a unified guardrail for medical risk assessment and evidence-based medical safety verification.",
+"day": "2026-11-25",
+"rank": 8.07,
+"zh_abstract": "随着医疗AI越来越多用于患者咨询和临床决策支持，识别有害、不合规或存在伦理问题的回复对于负责任部署至关重要。评估这些风险需要依据相关证据核查临床主张、验证计算，并在其预期条件下应用医学要求。我们提出LingSante MedGuard，一种能力增强的护栏，将来自医疗护栏教师模型和六个专门医疗能力专家的监督整合到一个统一模型中。护栏教师监督跨医疗安全、合规和伦理的风险决策与解释，而能力专家支持医疗规则理解、数值推理、多模态幻觉检测、智能体安全性验证、风险定位和多模态实体理解。我们通过对教师生成的示范进行离线监督微调，随后利用对学生生成回复的反馈进行多教师在线策略蒸馏，来整合这些监督来源。我们进一步提出LingSante MedGuardBench，一个包含11个风险检测子集、涵盖医疗安全、合规和伦理的基准。在4B、9B和27B规模下，LingSante MedGuard分别取得平均基准F1分数82.3%、82.4%和87.4%。在启用检索的评估下，4B模型在MedHallu和MedHALT-NOTA上的平均准确率也达到73.9%。对验证组件的额外评估显示，在不同模型规模下，证据支持的一致性、来源可追溯性和规则引导的推理依据质量均有提升。这些结果支持将专门的医疗能力整合到统一护栏中，用于医疗风险评估和循证医疗安全验证。"
 },
 {
 "title": "The Radar-based Activities of Daily Living (R-ADL) Dataset",
@@ -3150,6 +3384,34 @@
 "rank": 6.0
 },
 {
+"title": "Tempus PRECISION Challenge RFP #2 — H&E-to-Spatial Molecular Mapping",
+"link": "https://news.google.com/rss/articles/CBMijAJBVV95cUxONGJHM1hDUVBBbVJldlV3QTdJdkc3RzNrUkJ0SW9xa1JlaWlGUXlHS3IyTnFEeE94M24tR2x1cmRaSDd2Y3pvZFVKTE9qeUFsTHJVOV9Pc01VOHkzMGZlZmtXbGZnQnJ2N3pCSm05dWxFeWdxU0ZhYzQxbmJjSlhTLXpCUDV3cTR4VmR0SXRBUlQwZ2o4X0JaSjM4dGYwOTZicF9aOHRuMVd4bWFKSGV0LU5FTnFnck1LeU1LTlNILWZ0U1pKRTF3cVNUV1UxY1ZhV3B5NWZzMGYwb3dWTlRBWXhWbUJzdW9CTG96aFBEYllPaXVGSUtYeGpVVmkxUFFLZ3liU2dQQ2hOcDdJ?oc=5",
+"date": "2026-11-18T09:52:53+00:00",
+"source": "Tempus",
+"source_group": "Google News · AI 公司动态",
+"home": "https://media.tempus.com",
+"thin": true,
+"badge": "",
+"pop": null,
+"id": "d36fd4d70858",
+"keep": true,
+"zh_title": "Tempus发起H&E到空间分子图谱挑战",
+"summary": "Tempus PRECISION挑战第二轮征集，聚焦H&E图像到空间分子图谱的预测任务。",
+"key_points": [],
+"section": "影像与病理",
+"type": "模型",
+"tags": [
+"病理",
+"基准",
+"数据集"
+],
+"evidence": "新闻",
+"score": 4,
+"reason": "仅标题，信息有限；病理基准征集属增量档",
+"day": "2026-11-25",
+"rank": 6.0
+},
+{
 "title": "Researchers develop a way to check AI-generated images for clinical trials",
 "link": "https://news.google.com/rss/articles/CBMirAFBVV95cUxPdE1CNk50cWdJNGlLZy0zMHFFMTF2Y1kxM3NnOUhMVG84UjNSQUZTRDM1Tlc0NVBqYktzYmg0Q25hVENpbm5MNEQ1S3ZWdWZ2cWkzYTdxa0I1ZWdnSjJuY2JYY1hJalpoZDNodm1pS3BCSXlRMVFqM1VIRXpKSncyYUtoSUJoenNEQzBFYWlMbWkyR3liclc2OEdmb3dZMEdpYlFLZzJWdXdDVWQ3?oc=5",
 "date": "2026-11-25T03:55:00+00:00",
@@ -3254,6 +3516,111 @@
 "evidence": "新闻",
 "score": 3,
 "reason": "仅标题的媒体评论，无具体数据与案例，属增量档",
+"day": "2026-11-25",
+"rank": 5.31
+},
+{
+"title": "医疗 AI 不止是部署，更需把临床纠正变成持久记忆|医疗 AI|智能体|控制平面_新浪新闻",
+"link": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE10cDBONE5pZ211RnVCdXdkSTNqdk12aXZCa3hyZmd6REVmYjMyNkd4NmZYQ3VyVGtXT1ByUU1USUNxaWlCemVHSTdmTlJNbEg4N1ZRWHdjZEdSMS1TX1h1SnB6MA?oc=5",
+"date": "2026-11-24T14:53:00+00:00",
+"source": "手机新浪网",
+"source_group": "Google News · 中文医疗AI",
+"home": "https://www.sina.cn",
+"thin": true,
+"badge": "",
+"pop": null,
+"id": "67d57700fa9d",
+"keep": true,
+"zh_title": "医疗AI需把临床纠正转为持久记忆",
+"summary": "评论指出医疗AI落地不止于部署，还需将临床纠正沉淀为持久记忆。",
+"key_points": [],
+"section": "落地与监管",
+"type": "观点",
+"tags": [
+"智能体",
+"临床落地"
+],
+"evidence": "新闻",
+"score": 3,
+"reason": "仅标题的行业评论，无实证信息，属增量档",
+"day": "2026-11-25",
+"rank": 5.31
+},
+{
+"title": "申万菱信基金李金泽：AI制药的“商业化验证”仍处早期 关注产业链上游机遇",
+"link": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxOX0c5OUE0UkpYWmV3eUQ0cDEyVjJkRFlLa29vZ09QZHUyNnBnaE5RSkE2VzRsbkVlY2FOVWxYMUlHYVN3MlRWSnJHZC1zZEdQSnc0cGQzU0ViR3h1WVFCT3J6SHhIdXBseXplaC1HTHdVNkpLT2wzWmtlX0wwVGNyLTVTNG5qTzRUTGx1ejRLRE9tdVdMMDZRaFJMZXBuNXc2a1JhODcxczNCZy1GQTA0UDBoUG5HZ1BucG9zRER6YlFRQzRaMFF1U1o4cF93RHowQV9lMw?oc=5",
+"date": "2026-11-24T13:49:00+00:00",
+"source": "新浪财经",
+"source_group": "Google News · 中文医疗AI融资",
+"home": "https://finance.sina.com.cn",
+"thin": true,
+"badge": "",
+"pop": null,
+"id": "5fae2fcbe589",
+"keep": true,
+"zh_title": "机构称AI制药商业化验证仍处早期",
+"summary": "申万菱信基金李金泽认为AI制药商业化验证仍早期，建议关注产业链上游。",
+"key_points": [],
+"section": "产业动态",
+"type": "观点",
+"tags": [
+"药物发现"
+],
+"evidence": "新闻",
+"score": 3,
+"reason": "仅标题的投资观点，无新增数据，属增量档",
+"day": "2026-11-25",
+"rank": 5.31
+},
+{
+"title": "AI can analyze X-rays and CT scans to draft radiology reports. Will it make care better, safer?",
+"link": "https://news.google.com/rss/articles/CBMinAFBVV95cUxPOThFMWFOaHRJcm5Ed00zSDFMbjExNXYzSUVWRVFsdWxjTzh0c1htOFhCM3BQMWpITjVEc0FQQUNVSnVyYWdMcmctcVlLRVBqWkx2c1QzOVNnTEcxUFBzQVE2MFU5ZEl4bFFoWW9zV2lfWHN1NW9qYnQ4OVMyaGk5dDZwWDNQVkVZUkFnak54Q0sySGdkV2ZSOVEybnk?oc=5",
+"date": "2026-11-24T09:37:05+00:00",
+"source": "STAT",
+"source_group": "Google News · FDA AI",
+"home": "https://www.statnews.com",
+"thin": true,
+"badge": "",
+"pop": null,
+"id": "240ea9dcf3e5",
+"keep": true,
+"zh_title": "AI分析X光与CT生成影像报告：能否改善诊疗",
+"summary": "文章讨论AI分析X光片和CT扫描并起草放射科报告，是否能让诊疗更优质、更安全。",
+"key_points": [],
+"section": "影像与病理",
+"type": "观点",
+"tags": [
+"医学影像"
+],
+"evidence": "新闻",
+"score": 3,
+"reason": "仅标题、无正文的评论性报道，信息量低，属增量档",
+"day": "2026-11-25",
+"rank": 5.31
+},
+{
+"title": "钟南山院士谈医疗AI：助手而非替代者，决策者仍是医生",
+"link": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE9CWEFtLTBjcmdYTzY0VTdfNi03dHNELTBJTllVQTVjeDhkeUVDN052YlROUktaSGxqVXVKQXNCYlNPTlhyMW9zMnRNQ0hKLVlyUHhud1FxOTlKOXBJdXpiRk9ZeDNfUFE?oc=5",
+"date": "2026-11-24T02:05:49+00:00",
+"source": "Sohu",
+"source_group": "Google News · 中文医疗AI",
+"home": "https://m.sohu.com",
+"thin": true,
+"badge": "",
+"pop": null,
+"id": "f93c2c1e6e2a",
+"keep": true,
+"zh_title": "钟南山谈医疗AI：助手而非替代者",
+"summary": "钟南山院士表示医疗AI是医生的助手而非替代者，决策者仍是医生。",
+"key_points": [],
+"section": "落地与监管",
+"type": "观点",
+"tags": [
+"临床落地"
+],
+"evidence": "新闻",
+"score": 3,
+"reason": "仅标题的专家观点，无具体研究或数据，属增量档",
 "day": "2026-11-25",
 "rank": 5.31
 }

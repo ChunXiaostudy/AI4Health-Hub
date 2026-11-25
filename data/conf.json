@@ -2608,7 +2608,7 @@
 "year": 2026,
 "date": "2026-01-17",
 "link": "https://doi.org/10.48550/arXiv.2601.11886",
-"cites": 5,
+"cites": 6,
 "zh_title": "忠实性 vs 安全性：反事实医学证据下的 LLM 行为评估",
 "summary": "构建反事实医学问答数据集 MedCounterFact，考察大模型面对反事实或对抗性医学证据时的行为与推理。",
 "key_points": [
@@ -7677,7 +7677,7 @@
 "year": 2025,
 "date": "2025-06-26",
 "link": "https://doi.org/10.48550/arXiv.2506.21532",
-"cites": 11,
+"cites": 12,
 "zh_title": "“怎么了，医生？”：分析用户在大规模对话AI中寻求健康信息",
 "summary": "该研究构建HealthChat-11K数据集，分析用户通过对话AI寻求健康信息的行为。",
 "key_points": [
@@ -19027,7 +19027,7 @@
 "year": 2025,
 "date": "2025-10-24",
 "link": "https://doi.org/10.48550/arXiv.2510.21585",
-"cites": 161,
+"cites": 162,
 "zh_title": "REVE：可适配任意设置的EEG基础模型",
 "summary": "NeurIPS 2025提出REVE，在2.5万名受试者上大规模预训练，旨在适应不同EEG采集设置。",
 "key_points": [
@@ -19052,7 +19052,7 @@
 "year": 2025,
 "date": "2025-06-28",
 "link": "https://doi.org/10.48550/arXiv.2506.23075",
-"cites": 92,
+"cites": 93,
 "zh_title": "CSBrain：跨尺度时空脑基础模型用于EEG解码",
 "summary": "提出跨尺度时空脑基础模型CSBrain，用于EEG解码，强调神经活动的跨尺度特性。",
 "key_points": [
@@ -45763,7 +45763,7 @@
 "year": 2025,
 "date": "2025-06-18",
 "link": "https://doi.org/10.48550/arXiv.2506.15404",
-"cites": 4,
+"cites": 5,
 "zh_title": "NERO：基于神经元相关性的可解释分布外检测",
 "summary": "提出NERO，在特征层利用神经元级相关性聚类质心并定义距离度量，实现医学影像中可解释的分布外检测。",
 "key_points": [
