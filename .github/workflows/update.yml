@@ -44,6 +44,16 @@ jobs:
       # since v4 the artifact drops dotfiles by default; keep site/.nojekyll in it
       - uses: actions/upload-pages-artifact@v5
         with: { path: site, include-hidden-files: true }
+      # upload-artifact returns before the artifact shows up in the run's artifact list, and deploy-pages looks it up
+      # by name, so wait for that instead of spending the first deploy attempt on it (takes seconds at most)
+      - name: Wait for the artifact to be listed
+        env: { GH_TOKEN: "${{ github.token }}" }
+        run: |
+          for i in $(seq 1 24); do
+            [ "$(gh api "repos/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID/artifacts?name=github-pages&per_page=100" --jq .total_count)" -ge 1 ] && { echo "listed after $i check(s)"; exit 0; }
+            sleep 5
+          done
+          echo "artifact github-pages is not listed after 2 minutes" >&2; exit 1
       # The Pages backend now and then rejects a deployment outright ("Deployment failed, try again later.") with no cause;
       # asking again a minute later goes through, so retry before the run is failed.
       - id: deploy1
