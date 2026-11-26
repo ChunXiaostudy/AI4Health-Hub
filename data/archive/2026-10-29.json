@@ -683,7 +683,13 @@
 "abstract": "[npj aging] This commentary highlights the age illusion and advocates integrating biological age and artificial intelligence (AI) to enhance clinical precision in health care. By synthesizing geroscience and machine learning, practitioners and scientists can effectively bridge the gap between experimental biomarkers and personalized medicine and longevity care. This contribution is timely as the importance of biological age and predictive analytics offer transformative potential for diagnostics while necessitating a focus on modern medical systems. This article aims to elucidate how AI accelerates the clinical implementation of biological age rather than current chronological age in precision medicine.",
 "day": "2026-10-29",
 "rank": 7.99,
-"zh_abstract": "[npj aging] 本评论强调了年龄错觉，并倡导整合生物学年龄和人工智能（AI），以提升医疗保健中的临床精确性。通过综合老年科学与机器学习，从业者和科学家可以有效弥合实验性生物标志物与个性化医疗及长寿护理之间的差距。这一贡献具有及时性，因为生物学年龄和预测分析的重要性为诊断提供了变革性潜力，同时需要关注现代医疗系统。本文旨在阐明AI如何加速生物学年龄而非当前实际年龄在精准医学中的临床实施。"
+"zh_abstract": "[npj aging] 本评论强调了年龄错觉，并倡导整合生物学年龄和人工智能（AI），以提升医疗保健中的临床精确性。通过综合老年科学与机器学习，从业者和科学家可以有效弥合实验性生物标志物与个性化医疗及长寿护理之间的差距。这一贡献具有及时性，因为生物学年龄和预测分析的重要性为诊断提供了变革性潜力，同时需要关注现代医疗系统。本文旨在阐明AI如何加速生物学年龄而非当前实际年龄在精准医学中的临床实施。",
+"also": [
+{
+"source": "PubMed · JAMA health forum",
+"link": "https://pubmed.ncbi.nlm.nih.gov/43084334/"
+}
+]
 },
 {
 "title": "Artificial intelligence in digital implant dentistry: current applications, clinical translation, and future directions.",

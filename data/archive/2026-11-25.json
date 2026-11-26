@@ -534,7 +534,8 @@
 "day": "2026-11-25",
 "rank": 10.0,
 "abstract_days": [
-"2026-11-25"
+"2026-11-25",
+"2026-11-26"
 ],
 "abstract_err": "page: HTTP Error 403: Forbidden; no DOI / PMID"
 },
@@ -1024,7 +1025,8 @@
 "day": "2026-11-25",
 "rank": 9.07,
 "abstract_days": [
-"2026-11-25"
+"2026-11-25",
+"2026-11-26"
 ],
 "abstract_err": "page: HTTP Error 403: Forbidden; europepmc: empty; openalex: HTTP Error 404: Not Found"
 },
@@ -1960,7 +1962,8 @@
 "day": "2026-11-25",
 "rank": 8.07,
 "abstract_days": [
-"2026-11-25"
+"2026-11-25",
+"2026-11-26"
 ],
 "abstract_err": "page: HTTP Error 403: Forbidden; europepmc: empty; openalex: empty"
 },
@@ -3879,7 +3882,13 @@
 "score": 3,
 "reason": "仅标题、无数据与验证细节，属增量档",
 "day": "2026-11-25",
-"rank": 5.5
+"rank": 5.5,
+"also": [
+{
+"source": "Convergence Now",
+"link": "https://news.google.com/rss/articles/CBMi6wFBVV95cUxPZWJVRjJvbkE4WG44T3RMYWtPRGZHMXAyaWpDYnF0TFNfOWczdDJ1enkxaDV1R3llMDZkeVZVZTYyRVZDTmE5azhuN0gwRjJaSWlZalB5QUZ0cVNEN3drZDVZa2hfV3pmNkxPUnVKRklGM1RqVzhGaUtkR1N4VzdwN1ZPYXA2b0h2TzlZR2tEM2Q2ZEVGa1h4VTh4SDZuYW1TT3RFZDZZVmJqSm1UVzRQOU8yTVdUVTJKUjZJMWgyNG0zMjd1REhtWXVrWHFaQ3VWRVdocFp0Qng0MFEta2JjQnJ4ZkIxVmZkaTJR?oc=5"
+}
+]
 },
 {
 "title": "评测成绩亮眼，为何医疗大模型还走不进医院",

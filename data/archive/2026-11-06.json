@@ -510,7 +510,13 @@
 "abstract": "[Journal der Deutschen Dermatologischen Gesellschaft = Journal of the German Society of Dermatology : JDDG] Basal cell carcinoma (BCC) is the most common cancer and a major public health burden. Noninvasive techniques such as optical coherence tomography (OCT) may reduce unnecessary biopsies and enable earlier detection. However, effective OCT interpretation requires expertise. Artificial intelligence (AI) may help overcome this barrier. An AI model based on a U-Net convolutional neural network was trained using 4,680 annotated OCT image frames from 39 BCCs, 5,640 frames from 47 premalignant and benign lesions, and 12,360 frames from 103 scans of healthy skin. Detection performance was evaluated on an independent test set comprising 26 scans (3,120 frames) from 16 BCCs, 5 premalignant lesions, and 5 benign lesions. External validation used independent clinical data from 25 histologically confirmed BCCs (18 nodular, 7 superficial). AI-assisted OCT generated visual overlays corresponding to established BCC features and identified tumor areas. In the independent test set, the area under the ROC curve was 95.5 % for nodular and 98.2 % for superficial BCC. In clinical validation, all BCCs were detected, and subtype concordance with histology was achieved in 21 of 25 cases (83 %). AI-assisted OCT shows potential to improve non-invasive BCC diagnostics and warrants further clinical evaluation.",
 "day": "2026-11-06",
 "rank": 9.31,
-"zh_abstract": "《Journal der Deutschen Dermatologischen Gesellschaft = Journal of the German Society of Dermatology : JDDG》 基底细胞癌（BCC）是最常见的癌症，也是重大的公共卫生负担。光学相干断层扫描（OCT）等无创技术可能减少不必要的活检并实现更早检测。然而，有效的 OCT 判读需要专业知识。人工智能（AI）可能有助于克服这一障碍。基于 U-Net 卷积神经网络的 AI 模型使用来自 39 个 BCC 的 4,680 个标注 OCT 图像帧、来自 47 个癌前和良性病变的 5,640 个帧，以及来自 103 次健康皮肤扫描的 12,360 个帧进行训练。检测性能在独立测试集上评估，该测试集包含来自 16 个 BCC、5 个癌前病变和 5 个良性病变的 26 次扫描（3,120 个帧）。外部验证使用来自 25 个组织学确诊 BCC（18 个结节型、7 个浅表型）的独立临床数据。AI 辅助 OCT 生成与既定 BCC 特征相对应的视觉叠加图，并识别肿瘤区域。在独立测试集中，结节型 BCC 的 ROC 曲线下面积为 95.5%，浅表型 BCC 为 98.2%。在临床验证中，所有 BCC 均被检出，并且在 25 例中的 21 例（83%）实现了与组织学的亚型一致性。AI 辅助 OCT 显示出改善无创 BCC 诊断的潜力，值得进一步的临床评估。"
+"zh_abstract": "《Journal der Deutschen Dermatologischen Gesellschaft = Journal of the German Society of Dermatology : JDDG》 基底细胞癌（BCC）是最常见的癌症，也是重大的公共卫生负担。光学相干断层扫描（OCT）等无创技术可能减少不必要的活检并实现更早检测。然而，有效的 OCT 判读需要专业知识。人工智能（AI）可能有助于克服这一障碍。基于 U-Net 卷积神经网络的 AI 模型使用来自 39 个 BCC 的 4,680 个标注 OCT 图像帧、来自 47 个癌前和良性病变的 5,640 个帧，以及来自 103 次健康皮肤扫描的 12,360 个帧进行训练。检测性能在独立测试集上评估，该测试集包含来自 16 个 BCC、5 个癌前病变和 5 个良性病变的 26 次扫描（3,120 个帧）。外部验证使用来自 25 个组织学确诊 BCC（18 个结节型、7 个浅表型）的独立临床数据。AI 辅助 OCT 生成与既定 BCC 特征相对应的视觉叠加图，并识别肿瘤区域。在独立测试集中，结节型 BCC 的 ROC 曲线下面积为 95.5%，浅表型 BCC 为 98.2%。在临床验证中，所有 BCC 均被检出，并且在 25 例中的 21 例（83%）实现了与组织学的亚型一致性。AI 辅助 OCT 显示出改善无创 BCC 诊断的潜力，值得进一步的临床评估。",
+"also": [
+{
+"source": "ClinicalTrials.gov",
+"link": "https://clinicaltrials.gov/study/NCT07959458"
+}
+]
 },
 {
 "title": "AI-Assisted vs Conventional Teleglaucoma Referral",
