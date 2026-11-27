@@ -1233,7 +1233,17 @@
 "abstract": "[Frontiers in artificial intelligence] Breast cancer is still one of the main causes of death in women from cancer worldwide, and early detection is crucial. Mammography is the primary imaging modality for breast cancer screening and recent advances in artificial intelligence (AI) have significantly enhanced automated breast cancer detection. This review takes a data-centered approach, examining key characteristics of public datasets, the contributions of mammography data to AI for breast cancer detection, and the implications for clinical generalizability. This review, however, takes a data-centered approach, critically analyzing characteristics of publicly available mammography datasets, and the role of mammography data to the development, performance and clinical generalization of AI models for the detection of breast cancer. The datasets are compared on the following aspects: dataset size, quality of the annotations, imaging modality, clinical metadata, dataset accessibility and demographic diversity. Analysis reveals that the quality, diversity and representativeness of the data used are critical for the performance and generalizability of AI models, ranging from the traditional machine learning era to the current era of deep learning, transformer-based systems, multimodal learning, explainable AI and privacy-preserving learning. The results show that, apart from the development of AI model architectures, it is a necessity to have standardized, diverse and clinically representative datasets to make further progress in AI-assisted mammography. The review emphasizes the importance of establishing a comprehensive benchmark dataset for mammography that is large and diverse to enhance reproducibility, to fairly evaluate models, and to develop strong, clinically viable AI systems for breast cancer detection.",
 "day": "2026-11-05",
 "rank": 7.91,
-"zh_abstract": "［Frontiers in artificial intelligence］乳腺癌仍是全球女性癌症死亡的主要原因之一，早期发现至关重要。乳腺X线摄影（mammography）是乳腺癌筛查的主要影像学方法，人工智能（AI）的最新进展显著增强了自动化乳腺癌检测。本综述采取以数据为中心的方法，考察公开数据集的关键特征、乳腺X线摄影数据对乳腺癌检测AI的贡献，以及对临床可推广性的启示。然而，本综述采取以数据为中心的方法，批判性分析公开可用乳腺X线摄影数据集的特征，以及乳腺X线摄影数据对乳腺癌检测AI模型的开发、性能和临床推广的作用。这些数据集在以下方面进行比较：数据集规模、标注质量、成像方式、临床元数据、数据集可及性和人口学多样性。分析表明，所用数据的质量、多样性和代表性对AI模型的性能和可推广性至关重要，从传统机器学习时代到当前的深度学习、基于Transformer的系统、多模态学习、可解释AI和隐私保护学习时代均是如此。结果显示，除了AI模型架构的发展外，拥有标准化、多样化且具有临床代表性的数据集对于在AI辅助乳腺X线摄影方面取得进一步进展是必要的。本综述强调建立大型且多样化的乳腺X线摄影综合基准数据集的重要性，以提高可重复性、公平评估模型，并开发用于乳腺癌检测的稳健、临床可行的AI系统。"
+"zh_abstract": "［Frontiers in artificial intelligence］乳腺癌仍是全球女性癌症死亡的主要原因之一，早期发现至关重要。乳腺X线摄影（mammography）是乳腺癌筛查的主要影像学方法，人工智能（AI）的最新进展显著增强了自动化乳腺癌检测。本综述采取以数据为中心的方法，考察公开数据集的关键特征、乳腺X线摄影数据对乳腺癌检测AI的贡献，以及对临床可推广性的启示。然而，本综述采取以数据为中心的方法，批判性分析公开可用乳腺X线摄影数据集的特征，以及乳腺X线摄影数据对乳腺癌检测AI模型的开发、性能和临床推广的作用。这些数据集在以下方面进行比较：数据集规模、标注质量、成像方式、临床元数据、数据集可及性和人口学多样性。分析表明，所用数据的质量、多样性和代表性对AI模型的性能和可推广性至关重要，从传统机器学习时代到当前的深度学习、基于Transformer的系统、多模态学习、可解释AI和隐私保护学习时代均是如此。结果显示，除了AI模型架构的发展外，拥有标准化、多样化且具有临床代表性的数据集对于在AI辅助乳腺X线摄影方面取得进一步进展是必要的。本综述强调建立大型且多样化的乳腺X线摄影综合基准数据集的重要性，以提高可重复性、公平评估模型，并开发用于乳腺癌检测的稳健、临床可行的AI系统。",
+"also": [
+{
+"source": "PubMed · Sensors (Basel, Switzerland)",
+"link": "https://pubmed.ncbi.nlm.nih.gov/43092784/"
+},
+{
+"source": "PubMed · Journal of clinical medicine",
+"link": "https://pubmed.ncbi.nlm.nih.gov/43091037/"
+}
+]
 },
 {
 "title": "Cross-cancer knowledge transfer for lymph node metastasis prediction: Applicability of an axillary lymph node-based deep learning model",

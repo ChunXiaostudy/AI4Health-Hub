@@ -2972,7 +2972,13 @@
 "score": 4,
 "reason": "标题仅披露模型与数据集发布，缺乏评测细节，属增量档。",
 "day": "2026-11-26",
-"rank": 6.31
+"rank": 6.31,
+"also": [
+{
+"source": "Sohu",
+"link": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxOVVdhaUpxUTVsakd3dTJ0U3FaaC1vNEY5cW40S21ZNndUOGZIWHFZTUJHMjBxakdEYzdCUTRobHZWTmY3TzF1ekd2cnNTOTB3VWlnUzdLdmotU0VXMFViY1RyVDJTOHdZckp4S2RsSDJuaWVjaEdWLV9aaVF3TkJGdE9kc1JmME02?oc=5"
+}
+]
 },
 {
 "title": "Structure-Aware Multimodal Retrieval Under Data Scarcity, Privacy Constraints and Out-of-Domain Content",

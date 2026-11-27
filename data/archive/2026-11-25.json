@@ -535,7 +535,8 @@
 "rank": 10.0,
 "abstract_days": [
 "2026-11-25",
-"2026-11-26"
+"2026-11-26",
+"2026-11-27"
 ],
 "abstract_err": "page: HTTP Error 403: Forbidden; no DOI / PMID"
 },
@@ -1026,7 +1027,8 @@
 "rank": 9.07,
 "abstract_days": [
 "2026-11-25",
-"2026-11-26"
+"2026-11-26",
+"2026-11-27"
 ],
 "abstract_err": "page: HTTP Error 403: Forbidden; europepmc: empty; openalex: HTTP Error 404: Not Found"
 },
@@ -1963,7 +1965,8 @@
 "rank": 8.07,
 "abstract_days": [
 "2026-11-25",
-"2026-11-26"
+"2026-11-26",
+"2026-11-27"
 ],
 "abstract_err": "page: HTTP Error 403: Forbidden; europepmc: empty; openalex: empty"
 },
@@ -2102,7 +2105,13 @@
 "abstract": "Structured clinical decisions from volumetric computed tomography (CT) require anatomically grounded predictions and calibrated confidence estimates. However, existing 3D medical multimodal models often suffer from uncalibrated autoregressive decoding and shortcut reliance on irrelevant anatomical regions. We introduce Radev, a decision-native multimodal model that integrates anatomy-guided visual compression, direct candidate prediction, and counterfactual confidence supervision. To bridge global context with fine-grained slice details, a frozen 3D encoder extracts reusable organ-level features, which are dynamically selected by the query to attend to 2D slice features within predicted anatomical bounds. The resulting compact visual tokens enable the language backbone to estimate candidate probabilities in a single forward pass without autoregressive decoding. We further propose Counterfactual-Calibrated Training (CCT) to compare predictions under intact and intervened organ representations. CCT encourages confidence to decrease when removing target-organ evidence degrades decision quality, while penalizing excessive confidence drops under unrelated-organ removal. To facilitate rigorous evaluation, we construct CT-Verdict, a comprehensive benchmark spanning binary finding presence, multiple-choice questions, and ordinal severity assessment across both in-distribution and external cohorts. Extensive experiments demonstrate that Radev significantly outperforms state-of-the-art methods in both decision accuracy and confidence calibration, while generalizing robustly under distribution shifts. Project page at https://juntaojianggavin.github.io/projects/Radev/",
 "day": "2026-11-25",
 "rank": 8.0,
-"zh_abstract": "来自容积计算机断层扫描（CT）的结构化临床决策需要具有解剖学依据的预测和校准的置信度估计。然而，现有3D医学多模态模型常受未校准的自回归解码以及对无关解剖区域的捷径依赖影响。我们引入Radev，这是一种决策原生多模态模型，整合了解剖引导的视觉压缩、直接候选预测和反事实置信度监督。为将全局上下文与细粒度切片细节桥接，冻结的3D编码器提取可复用的器官级特征，这些特征由查询动态选择，以在预测的解剖边界内关注2D切片特征。由此产生的紧凑视觉标记使语言主干能够在单次前向传播中估计候选概率，而无需自回归解码。我们进一步提出反事实校准训练（CCT），以比较完整器官表征与干预后器官表征下的预测。CCT鼓励在移除目标器官证据导致决策质量下降时置信度降低，同时惩罚移除无关器官时置信度的过度下降。为便于严格评估，我们构建CT-Verdict，这是一个综合基准，涵盖二分类表现存在、多项选择题和序数严重程度评估，覆盖分布内和外部队列。大量实验表明，Radev在决策准确性和置信度校准方面均显著优于最先进方法，同时在分布偏移下稳健泛化。项目页面：https://juntaojianggavin.github.io/projects/Radev/"
+"zh_abstract": "来自容积计算机断层扫描（CT）的结构化临床决策需要具有解剖学依据的预测和校准的置信度估计。然而，现有3D医学多模态模型常受未校准的自回归解码以及对无关解剖区域的捷径依赖影响。我们引入Radev，这是一种决策原生多模态模型，整合了解剖引导的视觉压缩、直接候选预测和反事实置信度监督。为将全局上下文与细粒度切片细节桥接，冻结的3D编码器提取可复用的器官级特征，这些特征由查询动态选择，以在预测的解剖边界内关注2D切片特征。由此产生的紧凑视觉标记使语言主干能够在单次前向传播中估计候选概率，而无需自回归解码。我们进一步提出反事实校准训练（CCT），以比较完整器官表征与干预后器官表征下的预测。CCT鼓励在移除目标器官证据导致决策质量下降时置信度降低，同时惩罚移除无关器官时置信度的过度下降。为便于严格评估，我们构建CT-Verdict，这是一个综合基准，涵盖二分类表现存在、多项选择题和序数严重程度评估，覆盖分布内和外部队列。大量实验表明，Radev在决策准确性和置信度校准方面均显著优于最先进方法，同时在分布偏移下稳健泛化。项目页面：https://juntaojianggavin.github.io/projects/Radev/",
+"also": [
+{
+"source": "Hugging Face Daily Papers",
+"link": "https://huggingface.co/papers/2611.32993"
+}
+]
 },
 {
 "title": "BioLoom: Scaling Biomedical Vision-Language Models by Learning from the Structure of Scientific Articles",
@@ -2135,7 +2144,13 @@
 "abstract": "The development of biomedical vision-language models (VLMs) with contrastive image-text pretraining has been driven by scaling to increasingly large and diverse image-text datasets. Beyond scaling, further progress can come from learning richer representations from existing data. We hypothesize that the structure of scientific literature itself provides an additional source of supervision: figures, panels, captions, and accompanying article text encode rich relationships across modalities. Yet, treating these as independent image-text pairs overlooks their relationships. To address this limitation, we incorporate these structural relationships into contrastive image-text supervision. We preserve exact image-text matches while introducing weaker positive supervision for related pairs, such as a panel and the caption of a sibling panel. We upweight cross-article negatives of the same content type to encourage finer discrimination. We also enrich panel descriptions using visual content, original figure captions, and mentioning paragraphs. Pairing panels with these descriptions and whole figures with their original captions yields Loom52M, a dataset of 52.4 million image-text pairs spanning scientific charts and biomedical images. Using Loom52M, BioLoom (DFN-2B) achieves 56.82% domain-balanced mean accuracy across 67 zero-shot classification tasks from 43 datasets in 10 domains, compared with 48.77% for MedPMC-CLIP. On BioLoomBench with concise captions and BioMedFlickr, it achieves bidirectional mean Recall@1 of 63.20% and 10.59%, versus 46.37% and 7.55% for the respective strongest evaluated baselines, BiomedCLIP and MedPMC-CLIP. Code, datasets, benchmarks, and models are available at https://bioloom-clip.github.io/.",
 "day": "2026-11-25",
 "rank": 8.0,
-"zh_abstract": "具有对比式图像-文本预训练的生物医学视觉-语言模型（VLM）的发展，一直由扩展到日益庞大且多样的图像-文本数据集所驱动。除扩展规模外，进一步进展还可来自从现有数据中学习更丰富的表征。我们假设，科学文献本身的结构提供了额外的监督来源：图、子图面板、图注以及随附的正文文本编码了跨模态的丰富关系。然而，将这些视为独立的图像-文本对会忽略它们之间的关系。为解决这一局限，我们将这些结构关系纳入对比式图像-文本监督。我们保留精确的图像-文本匹配，同时为相关对（例如某个子图面板与同级面板的图注）引入较弱的正监督。我们提高同一内容类型的跨文章负样本的权重，以促进更精细的区分。我们还利用视觉内容、原始图注和提及段落来丰富面板描述。将面板与这些描述配对、将整图与其原始图注配对，得到Loom52M——一个包含5240万图像-文本对、涵盖科学图表和生物医学图像的数据集。使用Loom52M，BioLoom（DFN-2B）在来自10个领域43个数据集的67项零样本分类任务上取得56.82%的领域平衡平均准确率，而MedPMC-CLIP为48.77%。在采用简洁图注的BioLoomBench和BioMedFlickr上，其双向平均Recall@1分别为63.20%和10.59%，而各自最强的被评估基线BiomedCLIP和MedPMC-CLIP分别为46.37%和7.55%。代码、数据集、基准和模型可在https://bioloom-clip.github.io/获取。"
+"zh_abstract": "具有对比式图像-文本预训练的生物医学视觉-语言模型（VLM）的发展，一直由扩展到日益庞大且多样的图像-文本数据集所驱动。除扩展规模外，进一步进展还可来自从现有数据中学习更丰富的表征。我们假设，科学文献本身的结构提供了额外的监督来源：图、子图面板、图注以及随附的正文文本编码了跨模态的丰富关系。然而，将这些视为独立的图像-文本对会忽略它们之间的关系。为解决这一局限，我们将这些结构关系纳入对比式图像-文本监督。我们保留精确的图像-文本匹配，同时为相关对（例如某个子图面板与同级面板的图注）引入较弱的正监督。我们提高同一内容类型的跨文章负样本的权重，以促进更精细的区分。我们还利用视觉内容、原始图注和提及段落来丰富面板描述。将面板与这些描述配对、将整图与其原始图注配对，得到Loom52M——一个包含5240万图像-文本对、涵盖科学图表和生物医学图像的数据集。使用Loom52M，BioLoom（DFN-2B）在来自10个领域43个数据集的67项零样本分类任务上取得56.82%的领域平衡平均准确率，而MedPMC-CLIP为48.77%。在采用简洁图注的BioLoomBench和BioMedFlickr上，其双向平均Recall@1分别为63.20%和10.59%，而各自最强的被评估基线BiomedCLIP和MedPMC-CLIP分别为46.37%和7.55%。代码、数据集、基准和模型可在https://bioloom-clip.github.io/获取。",
+"also": [
+{
+"source": "GitHub",
+"link": "https://github.com/yuweiyang-anu/BioLoom"
+}
+]
 },
 {
 "title": "A deep-learning microglial response score integrates single-cell and spatial transcriptomics for Alzheimer's disease stratification.",
@@ -3855,7 +3870,13 @@
 "score": 3,
 "reason": "标题级行业观察，涉及医疗AI商业化路径，信息有限，增量档",
 "day": "2026-11-25",
-"rank": 5.5
+"rank": 5.5,
+"also": [
+{
+"source": "Sohu",
+"link": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxQT0htWm51UFhobjNiWlhsQjd2NzBpa2ltRlp6N0FPVVZUclFjSlRPQUxSUUlncUdDQmFhQ0QtcnIwUUg1Sy1pamIzLU9oRHJrdUU1aVNFaVVmbkhFTVUxMEs5dVoxQ3Jhbmg4aDlkejdLUUo4MzNjamxYTjhDLVFHRjJ0QXAzVjk5?oc=5"
+}
+]
 },
 {
 "title": "AI-generated data could accelerate medical imaging trials with new validation tool",

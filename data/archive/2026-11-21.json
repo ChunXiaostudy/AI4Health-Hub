@@ -131,7 +131,8 @@
 "2026-11-23",
 "2026-11-24",
 "2026-11-25",
-"2026-11-26"
+"2026-11-26",
+"2026-11-27"
 ],
 "abstract_err": "page: HTTP Error 403: Forbidden; europepmc: empty; openalex: empty"
 },
@@ -269,7 +270,8 @@
 "2026-11-23",
 "2026-11-24",
 "2026-11-25",
-"2026-11-26"
+"2026-11-26",
+"2026-11-27"
 ],
 "abstract_err": "page: HTTP Error 403: Forbidden; no DOI / PMID"
 },
@@ -310,7 +312,8 @@
 "2026-11-23",
 "2026-11-24",
 "2026-11-25",
-"2026-11-26"
+"2026-11-26",
+"2026-11-27"
 ],
 "abstract_err": "page: HTTP Error 403: Forbidden; no DOI / PMID"
 },
@@ -350,7 +353,8 @@
 "2026-11-23",
 "2026-11-24",
 "2026-11-25",
-"2026-11-26"
+"2026-11-26",
+"2026-11-27"
 ],
 "abstract_err": "page: HTTP Error 403: Forbidden; no DOI / PMID"
 },
@@ -1665,6 +1669,10 @@
 {
 "source": "凤凰网科技",
 "link": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE8ydzFrOTltTXdVSi13WTZpdmZLN3psOFk1clYtZXFmNUZjRjVEaHN5N0tmX0F1VEU4VHVuMVdncDFWbDNYZThOLTdOOGY?oc=5"
+},
+{
+"source": "维科号",
+"link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE1fajFKLTBfNTdNQTFUb2JWcWFuckxHb2ZwMFFRSjI3T2JRTVY1YVZZaTRWUkMtU3FZeFVmZjliRUQwc2pRZVdfWFdZVTBmaTg?oc=5"
 }
 ]
 },
