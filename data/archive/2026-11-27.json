@@ -64,7 +64,8 @@
 "day": "2026-11-27",
 "rank": 11.81,
 "abstract_days": [
-"2026-11-27"
+"2026-11-27",
+"2026-11-28"
 ],
 "abstract_err": "page: HTTP Error 403: Forbidden; no DOI / PMID"
 },
@@ -100,7 +101,8 @@
 "day": "2026-11-27",
 "rank": 11.0,
 "abstract_days": [
-"2026-11-27"
+"2026-11-27",
+"2026-11-28"
 ],
 "abstract_err": "page: HTTP Error 403: Forbidden; no DOI / PMID"
 },
@@ -289,7 +291,8 @@
 "day": "2026-11-27",
 "rank": 9.06,
 "abstract_days": [
-"2026-11-27"
+"2026-11-27",
+"2026-11-28"
 ],
 "abstract_err": "page: HTTP Error 403: Forbidden; europepmc: empty; openalex: empty"
 },
@@ -324,7 +327,8 @@
 "day": "2026-11-27",
 "rank": 9.0,
 "abstract_days": [
-"2026-11-27"
+"2026-11-27",
+"2026-11-28"
 ],
 "abstract_err": "page: HTTP Error 403: Forbidden; no DOI / PMID"
 },
@@ -360,7 +364,8 @@
 "day": "2026-11-27",
 "rank": 9.0,
 "abstract_days": [
-"2026-11-27"
+"2026-11-27",
+"2026-11-28"
 ],
 "abstract_err": "page: HTTP Error 403: Forbidden; no DOI / PMID"
 },
@@ -1064,7 +1069,13 @@
 "score": 4,
 "reason": "蛋白质AI融资事件具一定关注度，但仅标题、来源为聚合站，属增量档",
 "day": "2026-11-27",
-"rank": 6.31
+"rank": 6.31,
+"also": [
+{
+"source": "智源社区",
+"link": "https://news.google.com/rss/articles/CBMiSEFVX3lxTFBOWm5OVjRiVnlvN1l1aGYyVlFyTEo2RWFiUk54enY0X3pJbWFxclVmT3IyUV9WSmdFdmJSNnZWcEx2bVUxOS1FVg?oc=5"
+}
+]
 },
 {
 "title": "Comparative evaluation of ResNet-Based AI models for breast cancer detection in digital mammography and digital breast tomosynthesis.",
@@ -1152,7 +1163,13 @@
 "score": 3,
 "reason": "标题式年度盘点，没有具体数据，属增量档",
 "day": "2026-11-27",
-"rank": 5.5
+"rank": 5.5,
+"also": [
+{
+"source": "中华网财经",
+"link": "https://news.google.com/rss/articles/CBMicEFVX3lxTFBoMVBnRklaNFFLTzN3TjFMS3UyeXJONmJ5QUI4bGF6YlNZLVdPZzdnc2Z4eHFTdm1FSm9zZEhxV2d4eDhEOExUdHVlTTItYUxBSFRKN2dwQWpmdWRLc2RseVlUdXBIeHkyNzZEbXFycWI?oc=5"
+}
+]
 },
 {
 "title": "商务部等8部门：鼓励医疗健康优质服务进口，推动大模型相关服务出海",

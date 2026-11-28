@@ -3304,7 +3304,13 @@
 "abstract": "Community-driven Telegram bot for early diabetes and heart disease risk screening (language: TypeScript, homepage: , topics: free-hosting, google-ai-studio, openai-api, poisson, poisson-distribution, prediction-model, render-deployment, soccer-analytics, soccer-data, taskiq, web-scraping, xgboost-classifier)",
 "day": "2026-11-18",
 "rank": 6.95,
-"zh_abstract": "社区驱动的Telegram机器人，用于早期糖尿病和心脏病风险筛查（语言：TypeScript，主页：，主题：free-hosting、google-ai-studio、openai-api、poisson、poisson-distribution、prediction-model、render-deployment、soccer-analytics、soccer-data、taskiq、web-scraping、xgboost-classifier）"
+"zh_abstract": "社区驱动的Telegram机器人，用于早期糖尿病和心脏病风险筛查（语言：TypeScript，主页：，主题：free-hosting、google-ai-studio、openai-api、poisson、poisson-distribution、prediction-model、render-deployment、soccer-analytics、soccer-data、taskiq、web-scraping、xgboost-classifier）",
+"also": [
+{
+"source": "GitHub",
+"link": "https://github.com/Sh1vvu/medical-risk-screening-bot"
+}
+]
 },
 {
 "title": "Artificial intelligence in radiology education: from AI-supported learning to clinical innovation-a narrative review.",

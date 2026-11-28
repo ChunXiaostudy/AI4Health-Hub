@@ -536,7 +536,8 @@
 "abstract_days": [
 "2026-11-25",
 "2026-11-26",
-"2026-11-27"
+"2026-11-27",
+"2026-11-28"
 ],
 "abstract_err": "page: HTTP Error 403: Forbidden; no DOI / PMID"
 },
@@ -1028,7 +1029,8 @@
 "abstract_days": [
 "2026-11-25",
 "2026-11-26",
-"2026-11-27"
+"2026-11-27",
+"2026-11-28"
 ],
 "abstract_err": "page: HTTP Error 403: Forbidden; europepmc: empty; openalex: HTTP Error 404: Not Found"
 },
@@ -1966,7 +1968,8 @@
 "abstract_days": [
 "2026-11-25",
 "2026-11-26",
-"2026-11-27"
+"2026-11-27",
+"2026-11-28"
 ],
 "abstract_err": "page: HTTP Error 403: Forbidden; europepmc: empty; openalex: empty"
 },

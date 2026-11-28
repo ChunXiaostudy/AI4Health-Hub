@@ -265,7 +265,7 @@
 "year": 2025,
 "date": "2025-06-01",
 "link": "https://doi.org/10.48550/arXiv.2506.00777",
-"cites": 36,
+"cites": 37,
 "zh_title": "LLM-as-Judge改进生物医学关系抽取自动评测",
 "summary": "用大模型作为评判者，改善生物医学关系抽取中传统自动评测对同义词与缩写的不可靠问题。",
 "key_points": [
@@ -394,7 +394,7 @@
 "year": 2025,
 "date": "2025-05-20",
 "link": "https://doi.org/10.48550/arXiv.2505.14107",
-"cites": 28,
+"cites": 29,
 "zh_title": "DiagnosisArena：大型语言模型诊断推理基准",
 "summary": "提出DiagnosisArena，系统评测大型语言模型在临床场景中的诊断推理能力。",
 "key_points": [
@@ -6699,7 +6699,7 @@
 "year": 2025,
 "date": "2025-02-20",
 "link": "https://doi.org/10.48550/arXiv.2502.14302",
-"cites": 77,
+"cites": 78,
 "zh_title": "MedHallu：医学幻觉检测综合基准",
 "summary": "提出首个面向医学幻觉检测的基准MedHallu，用于评估大模型医学问答的可靠性。",
 "key_points": [
@@ -6751,7 +6751,7 @@
 "year": 2025,
 "date": "2025-02-21",
 "link": "https://doi.org/10.48550/arXiv.2502.15871",
-"cites": 46,
+"cites": 47,
 "zh_title": "医疗健康大模型可信性综述",
 "summary": "综述系统梳理医疗大模型在真实性、隐私、安全、鲁棒性、公平性与可解释性等可信维度的研究现状。",
 "key_points": [
@@ -10367,7 +10367,7 @@
 "year": 2025,
 "date": "2025-04-11",
 "link": "https://doi.org/10.1609/aaai.v39i6.32627",
-"cites": 22,
+"cites": 23,
 "zh_title": "重思U-Net：面向医学图像分割的任务自适应跳连混合",
 "summary": "提出任务自适应跳连混合模块，突破U-Net解码器对跳连信息的一一对应限制。",
 "key_points": [
@@ -18179,7 +18179,7 @@
 "year": 2025,
 "date": "2025-04-30",
 "link": "https://doi.org/10.24963/ijcai.2025/853",
-"cites": 29,
+"cites": 30,
 "zh_title": "先定位后回答：医学视觉问答的循证基准",
 "summary": "该工作揭示医学多模态大模型定位推理不足导致幻觉，并提出面向循证定位的医学视觉问答基准。",
 "key_points": [
@@ -18333,7 +18333,7 @@
 "year": 2025,
 "date": "2025-05-16",
 "link": "https://doi.org/10.48550/arXiv.2505.10856",
-"cites": 7,
+"cites": 8,
 "zh_title": "ImputeINR：隐式神经表示时间序列插补辅助疾病诊断",
 "summary": "IJCAI 2025 提出 ImputeINR，用隐式神经表示做时间序列插补，服务缺失数据下的疾病诊断。",
 "key_points": [
@@ -20105,7 +20105,7 @@
 "year": 2025,
 "date": "2025-05-09",
 "link": "https://doi.org/10.48550/arXiv.2505.07865",
-"cites": 10,
+"cites": 12,
 "zh_title": "CellVerse：大语言模型真的理解细胞生物学吗",
 "summary": "研究提出以语言为中心的单细胞多组学问答基准CellVerse，用于系统评估大语言模型在细胞生物学任务上的表现。",
 "key_points": [
@@ -20157,7 +20157,7 @@
 "year": 2025,
 "date": "2025-04-10",
 "link": "https://doi.org/10.48550/arXiv.2504.07416",
-"cites": 13,
+"cites": 14,
 "zh_title": "RadZero：放射学可解释视觉-语言对齐零样本框架",
 "summary": "提出RadZero框架，用于胸片视觉-语言对齐，具备零样本多任务能力并提升注意力可视化可解释性。",
 "key_points": [
@@ -20337,7 +20337,7 @@
 "year": 2025,
 "date": "2025-05-23",
 "link": "https://doi.org/10.48550/arXiv.2505.18087",
-"cites": 8,
+"cites": 9,
 "zh_title": "CXReasonBench：胸片结构化诊断推理基准",
 "summary": "提出CheXStruct流程与CXReasonBench基准，评估胸部X光中的结构化诊断推理能力。",
 "key_points": [
@@ -23358,7 +23358,7 @@
 "year": 2025,
 "date": "2025-07-07",
 "link": "https://doi.org/10.48550/arXiv.2507.05502",
-"cites": 16,
+"cites": 17,
 "zh_title": "由折叠能预测突变对蛋白结合的影响",
 "summary": "提出迁移学习方法，结合蛋白序列建模与折叠稳定性，预测突变对蛋白结合能的影响。",
 "key_points": [
@@ -24523,7 +24523,7 @@
 "year": 2025,
 "date": "2025-03-02",
 "link": "https://doi.org/10.48550/arXiv.2503.00710",
-"cites": 118,
+"cites": 119,
 "zh_title": "Proteina：规模化流式蛋白质结构生成模型",
 "summary": "ICLR 2025提出Proteina，基于流的大规模蛋白质骨架生成器，用层级折叠类标签条件化。",
 "key_points": [
@@ -27053,7 +27053,7 @@
 "year": 2025,
 "date": "2025-04-09",
 "link": "https://doi.org/10.1109/ICCV51701.2025.02006",
-"cites": 7,
+"cites": 8,
 "zh_title": "UKBOB：十亿级MRI标注掩码用于3D分割",
 "summary": "基于UK Biobank MRI发布UKBOB数据集，含51,761例3D样本、72个器官、超13.7亿张2D分割掩码，并附自动清洗流程。",
 "key_points": [
@@ -29490,7 +29490,7 @@
 "year": 2025,
 "date": "2025-05-08",
 "link": "https://doi.org/10.1145/3701716.3717738",
-"cites": 1,
+"cites": 2,
 "zh_title": "可解释视觉语言模型用于个性化医疗",
 "summary": "提出结合视觉语言模型与数学变换的可解释框架，用于个性化医疗。",
 "key_points": [
@@ -31124,7 +31124,7 @@
 "year": 2025,
 "date": "2025-08-08",
 "link": "https://doi.org/10.1145/3746027.3754917",
-"cites": 5,
+"cites": 6,
 "zh_title": "LoRA对比正则化的多模态生物医学图像增量学习",
 "summary": "面向多模态生物医学图像增量学习，提出基于LoRA的对比正则化方法，以缓解增量中的知识遗忘。",
 "key_points": [
@@ -32591,7 +32591,7 @@
 "year": 2025,
 "date": "2025-04-07",
 "link": "https://doi.org/10.48550/arXiv.2504.05186",
-"cites": 46,
+"cites": 47,
 "zh_title": "用更少数据训练先进病理基础模型",
 "summary": "该工作借鉴近期改进，用远少于常规的数据训练先进病理基础模型。",
 "key_points": [
@@ -33654,7 +33654,7 @@
 "year": 2025,
 "date": "2025-01-01",
 "link": "https://doi.org/10.1007/978-3-032-05325-1_19",
-"cites": 11,
+"cites": 12,
 "zh_title": "EFFDNet：增强前景判别的涂鸦监督医学图像分割",
 "summary": "条目无摘要，仅标题显示为一种增强前景特征判别的涂鸦监督医学图像分割方法。",
 "key_points": [
@@ -34822,7 +34822,7 @@
 "year": 2025,
 "date": "2025-05-20",
 "link": "https://doi.org/10.48550/arXiv.2505.13915",
-"cites": 9,
+"cites": 11,
 "zh_title": "高分辨率超声视频盲复原",
 "summary": "MICCAI 2025 提出自监督超声视频超分算法 Deep Ultrasound Prior，应对低信噪比与低分辨率问题。",
 "key_points": [
@@ -35248,7 +35248,7 @@
 "year": 2025,
 "date": "2025-03-02",
 "link": "https://doi.org/10.48550/arXiv.2503.01020",
-"cites": 8,
+"cites": 9,
 "zh_title": "医学视觉语言模型的分布外检测研究",
 "summary": "首次系统考察医学视觉语言模型的分布外检测能力，评估其零样本泛化之外的可靠性表现。",
 "key_points": [
@@ -35929,7 +35929,7 @@
 "year": 2025,
 "date": "2025-09-20",
 "link": "https://doi.org/10.1007/978-3-032-04981-0_42",
-"cites": 10,
+"cites": 11,
 "zh_title": "面向自动生成胸片报告的短语级事实核查",
 "summary": "提出短语级事实核查模型，检测自动生成胸片报告中发现及其位置的错误。",
 "key_points": [
@@ -38407,7 +38407,7 @@
 "year": 2025,
 "date": "2025-08-25",
 "link": "https://doi.org/10.48550/arXiv.2508.17667",
-"cites": 3,
+"cites": 4,
 "zh_title": "面向医学分布外检测的层次化视觉-语言学习",
 "summary": "提出基于视觉-语言模型的分布外检测框架，融合层次化视觉信息，以识别与已知疾病相似的未知疾病，降低误诊风险。",
 "key_points": [
@@ -38674,7 +38674,7 @@
 "year": 2025,
 "date": "2025-01-04",
 "link": "https://doi.org/10.1007/978-3-032-05325-1_55",
-"cites": 3,
+"cites": 4,
 "zh_title": "tCURLoRA：基于张量CUR分解的低秩参数适配及医学图像分割应用",
 "summary": "提出基于张量CUR分解的低秩参数适配方法tCURLoRA，用于医学图像分割的轻量微调。",
 "key_points": [
@@ -39639,7 +39639,7 @@
 "year": 2025,
 "date": "2025-10-10",
 "link": "https://doi.org/10.1007/978-3-032-04937-7_27",
-"cites": 4,
+"cites": 5,
 "zh_title": "病灶感知后训练潜在扩散模型：由CT灌注合成扩散MRI",
 "summary": "提出病灶感知的潜扩散模型后训练方法，从CT灌注图像合成扩散MRI，以保留临床关键结构细节。",
 "key_points": [
@@ -39810,7 +39810,7 @@
 "year": 2025,
 "date": "2025-01-01",
 "link": "https://doi.org/10.1007/978-3-032-04971-1_18",
-"cites": 2,
+"cites": 3,
 "zh_title": "Fair-MoE：面向医学公平性的视觉语言专家混合",
 "summary": "提出Fair-MoE方法，在视觉语言模型中引入面向医学公平性的专家混合机制。",
 "key_points": [
@@ -40160,7 +40160,7 @@
 "year": 2025,
 "date": "2025-08-09",
 "link": "https://doi.org/10.1007/978-3-032-04981-0_25",
-"cites": 2,
+"cites": 3,
 "zh_title": "FoundBioNet：多参数MRI胶质瘤IDH分型基础模型",
 "summary": "提出基于基础模型的FoundBioNet，从多参数MRI无创预测胶质瘤IDH突变状态。",
 "key_points": [
@@ -40487,7 +40487,7 @@
 "year": 2025,
 "date": "2025-01-01",
 "link": "https://doi.org/10.1007/978-3-032-04978-0_36",
-"cites": 1,
+"cites": 2,
 "zh_title": "知识树驱动的癫痫药物推荐基础模型指令微调",
 "summary": "提出知识树驱动的上下文指令微调方法，用于癫痫药物推荐的基础模型。",
 "key_points": [
@@ -41244,7 +41244,7 @@
 "year": 2025,
 "date": "2025-01-01",
 "link": "https://doi.org/10.1007/978-3-032-05182-0_1",
-"cites": 2,
+"cites": 3,
 "zh_title": "面向医学数据的灵活深度学习生存分析框架",
 "summary": "提出一个用于医学数据生存分析的灵活深度学习框架（来源仅提供标题）。",
 "key_points": [
@@ -43588,7 +43588,7 @@
 "year": 2025,
 "date": "2025-01-01",
 "link": "https://doi.org/10.1007/978-3-032-04971-1_47",
-"cites": 2,
+"cites": 3,
 "zh_title": "PromptReg：基于任务提示学习与域知识迁移的通用医学图像配准",
 "summary": "提出PromptReg方法，通过任务提示学习与域知识迁移实现通用医学图像配准。",
 "key_points": [
@@ -46425,7 +46425,7 @@
 "year": 2025,
 "date": "2025-07-03",
 "link": "https://doi.org/10.48550/arXiv.2507.02671",
-"cites": 4,
+"cites": 5,
 "zh_title": "基于嵌入的差分隐私条件VAE联邦数据共享",
 "summary": "提出用基础模型提取紧凑嵌入、由客户端协同训练差分隐私条件VAE建模全局分布的联邦数据共享方法，在多个特征提取器上验证，优于传统联邦分类器。",
 "key_points": [
@@ -46480,7 +46480,7 @@
 "year": 2025,
 "date": "2025-05-14",
 "link": "https://doi.org/10.48550/arXiv.2505.09435",
-"cites": 2,
+"cites": 3,
 "zh_title": "Endo-CLIP：基于原始结肠镜记录的自监督渐进预训练",
 "summary": "提出清洗、调适、统一三阶段自监督框架：去除背景帧、用大语言模型抽取临床属性做细粒度对比学习、以患者级交叉注意力消解多息肉歧义，提升零样本与少样本息肉检测分类。",
 "key_points": [
@@ -48042,7 +48042,7 @@
 "year": 2025,
 "date": "2025-01-12",
 "link": "https://doi.org/10.1109/ISBI60581.2025.10980911",
-"cites": 11,
+"cites": 12,
 "zh_title": "PGP-SAM: 原型引导提示学习的少样本医学分割",
 "summary": "提出基于原型的少样本微调方法PGP-SAM，以类内类间原型替代人工提示，在公开多器官数据集与私有心室数据集上验证。",
 "key_points": [
@@ -48068,7 +48068,7 @@
 "year": 2026,
 "date": "2026-04-08",
 "link": "https://doi.org/10.1109/ISBI61048.2026.11515899",
-"cites": 9,
+"cites": 10,
 "zh_title": "WBCBench 2026：类别不平衡下白细胞分类挑战赛",
 "summary": "ISBI挑战赛与公开基准，针对13类白细胞分类的类别不平衡、患者级划分与合成域偏移压力测试算法。",
 "key_points": [
@@ -48450,7 +48450,7 @@
 "year": 2025,
 "date": "2025-01-27",
 "link": "https://doi.org/10.1109/ISBI60581.2025.10980784",
-"cites": 7,
+"cites": 8,
 "zh_title": "CLISC：结合CLIP与SAM的增强CAM无监督脑肿瘤分割",
 "summary": "该研究提出无监督脑肿瘤分割方法，用CLIP生成图像级伪标签、CAM提取感兴趣区，再为SAM生成框与点提示得到分割伪标签。",
 "key_points": [
@@ -48801,7 +48801,7 @@
 "year": 2025,
 "date": "2025-01-04",
 "link": "https://doi.org/10.1109/ISBI60581.2025.10980900",
-"cites": 6,
+"cites": 7,
 "zh_title": "血浆标志物引导的MRI到PET跨模态翻译",
 "summary": "ISBI 2025研究表明引入血浆生物标志物可稳定提升MRI到PET生成质量，并提出Plasma-CycleGAN。",
 "key_points": [
@@ -48940,7 +48940,7 @@
 "year": 2025,
 "date": "2025-04-01",
 "link": "https://doi.org/10.1109/ISBI60581.2025.10981128",
-"cites": 5,
+"cites": 6,
 "zh_title": "多模态MRI结合Swin UNETR预测脑肿瘤总生存期",
 "summary": "提出数据高效多任务框架，利用Swin UNETR的分层分割特征预测胶质母细胞瘤患者总生存期。",
 "key_points": [
@@ -48993,7 +48993,7 @@
 "year": 2025,
 "date": "2025-04-14",
 "link": "https://doi.org/10.1109/ISBI60581.2025.10980919",
-"cites": 6,
+"cites": 8,
 "zh_title": "AnatoSegNet：融合解剖信息的乳腺超声分割网络",
 "summary": "提出CNN-Transformer混合网络，引入乳腺解剖注意力模块以提升超声图像分割性能。",
 "key_points": [
@@ -49048,7 +49048,7 @@
 "year": 2025,
 "date": "2025-04-14",
 "link": "https://doi.org/10.1109/ISBI60581.2025.10981303",
-"cites": 4,
+"cites": 5,
 "zh_title": "医学SAM的标注高效任务引导方法SAM-Mix",
 "summary": "提出多任务框架SAM-Mix，用辅助分类器的类激活图引导半监督分割分支，在LiTS与TotalSegmentator上评估并开源代码。",
 "key_points": [
@@ -49187,7 +49187,7 @@
 "year": 2025,
 "date": "2025-04-14",
 "link": "https://doi.org/10.1109/ISBI60581.2025.10981080",
-"cites": 4,
+"cites": 5,
 "zh_title": "LLM从多模态MRI自动生成脑肿瘤诊断报告",
 "summary": "ISBI 2025 提出iReportMed两阶段流程，先对多模态MRI做特征提取与分类标注，再用大语言模型生成诊断报告。",
 "key_points": [
@@ -50288,7 +50288,7 @@
 "year": 2025,
 "date": "2025-02-21",
 "link": "https://doi.org/10.1109/ISBI60581.2025.10980933",
-"cites": 3,
+"cites": 4,
 "zh_title": "fMRI时序因果建模用于可解释自闭症谱系障碍分类",
 "summary": "用因果启发的深度学习模型从fMRI时序中捕捉脑区因果作用，用于自闭症分类并与基线比较。",
 "key_points": [
@@ -51161,7 +51161,7 @@
 "year": 2025,
 "date": "2025-01-14",
 "link": "https://doi.org/10.1109/ISBI60581.2025.10981163",
-"cites": 2,
+"cites": 3,
 "zh_title": "融合深度与手工影像特征分类肝细胞癌",
 "summary": "借鉴LI-RADS两步法，融合深度与手工放射特征从CT预测病理确诊HCC，AUC较深度学习基线提高6至18点。",
 "key_points": [
@@ -51243,7 +51243,7 @@
 "year": 2025,
 "date": "2025-01-27",
 "link": "https://doi.org/10.1109/ISBI60581.2025.10980988",
-"cites": 3,
+"cites": 4,
 "zh_title": "几何深度学习自动标注新生儿唇腭裂上颌牙弓3D扫描标志点",
 "summary": "在100例唇腭裂新生儿3D牙模型上，几何深度学习标志点标注准确率94.44%，平均绝对误差1.676mm。",
 "key_points": [
@@ -54389,7 +54389,7 @@
 "year": 2026,
 "date": "2026-04-08",
 "link": "https://doi.org/10.1109/ISBI61048.2026.11515760",
-"cites": 1,
+"cites": 2,
 "zh_title": "蒸馏大模型的不确定性感知CMR报告结构化抽取",
 "summary": "ISBI 2026 提出 CMR-EXTR，用教师-学生蒸馏把心脏磁共振自由文本报告转为结构化字段并给出字段级置信度，变量级准确率 99.65%，代码开源。",
 "key_points": [
@@ -54934,7 +54934,7 @@
 "year": 2025,
 "date": "2025-11-03",
 "link": "https://doi.org/10.1109/ISBI61048.2026.11515634",
-"cites": 1,
+"cites": 2,
 "zh_title": "类级先验的弱监督概念学习用于可解释诊断",
 "summary": "提出先验引导概念预测器PCP，以类级概念先验作弱监督，无需概念标注即可输出可解释诊断依据。",
 "key_points": [
@@ -56242,7 +56242,7 @@
 "year": 2025,
 "date": "2025-12-05",
 "link": "https://doi.org/10.1109/ISBI61048.2026.11515479",
-"cites": 1,
+"cites": 2,
 "zh_title": "多模态肿瘤智能体预测低级别胶质瘤IDH1突变",
 "summary": "提出多模态肿瘤智能体MOA，结合病理基础模型与临床/基因组检索预测低级别胶质瘤IDH1突变，TCGA-LGG 488例F1达0.912。",
 "key_points": [
@@ -56908,7 +56908,7 @@
 "year": 2025,
 "date": "2025-04-14",
 "link": "https://doi.org/10.1109/ISBI60581.2025.10980796",
-"cites": 1,
+"cites": 2,
 "zh_title": "显著增强网络用于CT金属伪影减少",
 "summary": "提出两阶段金属伪影减少框架：孪生网络结合Grad-CAM生成伪影显著图，引导Transformer网络定向校正。",
 "key_points": [
@@ -57178,7 +57178,7 @@
 "year": 2025,
 "date": "2025-02-05",
 "link": "https://doi.org/10.1109/ISBI60581.2025.10980992",
-"cites": 0,
+"cites": 1,
 "zh_title": "Tell2Reg：同语言提示建立图像空间对应",
 "summary": "利用GroundingDINO与SAM，用同一语言提示预测对应区域，实现免训练图像配准。",
 "key_points": [
@@ -57994,7 +57994,7 @@
 "year": 2026,
 "date": "2026-04-08",
 "link": "https://doi.org/10.1109/ISBI61048.2026.11515939",
-"cites": 1,
+"cites": 2,
 "zh_title": "生成式AI胸片报告自动纠错方法",
 "summary": "提出自动纠正生成式AI胸片报告的方法，多机构数据上报告质量平均提升17-30%。",
 "key_points": [
@@ -58862,7 +58862,7 @@
 "year": 2025,
 "date": "2025-03-02",
 "link": "https://doi.org/10.1109/ISBI60581.2025.10981290",
-"cites": 0,
+"cites": 1,
 "zh_title": "胸片异常定位：目标检测与短语定位模型对比",
 "summary": "利用放射科医生眼动数据构建可解释性基准，比较目标检测与短语定位两模型在胸片异常定位上的表现。",
 "key_points": [
@@ -62497,7 +62497,7 @@
 "year": 2026,
 "date": "2026-01-29",
 "link": "https://doi.org/10.1109/ISBI61048.2026.11515778",
-"cites": 0,
+"cites": 1,
 "zh_title": "超网络自适应聚合多模态多示例学习预测冠脉钙化旋磨需求",
 "summary": "首次尝试从CT图像估计冠脉钙化是否需要旋磨，用超网络按患者表格数据自适应调整特征聚合策略。",
 "key_points": [
@@ -62524,7 +62524,7 @@
 "year": 2026,
 "date": "2026-04-08",
 "link": "https://doi.org/10.1109/ISBI61048.2026.11515340",
-"cites": 0,
+"cites": 1,
 "zh_title": "MRI基础模型嵌入预测胶质瘤IDH突变",
 "summary": "用MRI基础模型特征做IDH分型，BraTS训练并在独立PET-MRI队列外部验证，仅MRI组合AUC 0.90。",
 "key_points": [
@@ -67075,7 +67075,7 @@
 "year": 2026,
 "date": "2026-04-08",
 "link": "https://doi.org/10.1109/ISBI61048.2026.11516029",
-"cites": 0,
+"cites": 1,
 "zh_title": "USTri：面向端到端智能体系统的统一超声智能",
 "summary": "提出三阶段超声流程：通用模型USGen、冻结主干微调任务头USpec，以及模拟临床工作流的USAgent。",
 "key_points": [
@@ -67512,7 +67512,7 @@
 "year": 2026,
 "date": "2026-04-08",
 "link": "https://doi.org/10.1109/ISBI61048.2026.11515680",
-"cites": 0,
+"cites": 1,
 "zh_title": "缺失模态脑肿瘤分割的基础模型蒸馏",
 "summary": "提出两阶段框架TSFMD，以BrainSegFounder蒸馏预训练学生模型，改善缺失模态下脑肿瘤分割。",
 "key_points": [
@@ -69670,7 +69670,7 @@
 "year": 2026,
 "date": "2026-04-08",
 "link": "https://doi.org/10.1109/ISBI61048.2026.11515821",
-"cites": 0,
+"cites": 1,
 "zh_title": "SAM-PEFT多模态MRI胶质瘤分割",
 "summary": "提出免提示、参数高效的SAM适配框架，融合T1、T1Gd、T2与FLAIR，在BraTS 2025测试集报告Dice 0.9151。",
 "key_points": [
@@ -71898,7 +71898,7 @@
 "year": 2025,
 "date": "2025-05-04",
 "link": "https://doi.org/10.48550/arXiv.2505.02874",
-"cites": 37,
+"cites": 38,
 "zh_title": "医疗机器学习不确定性量化综述",
 "summary": "综述系统梳理医疗机器学习中的不确定性量化方法，提出可嵌入各建模流程阶段的整合框架。",
 "key_points": [
@@ -102844,7 +102844,7 @@
 "year": 2026,
 "date": "2026-01-01",
 "link": "https://doi.org/10.1007/978-3-032-38470-6_8",
-"cites": 3,
+"cites": 4,
 "zh_title": "CancerVerse：面向多癌种筛查的全开放纵向多模态数据集",
 "summary": "该工作发布面向多癌种筛查的完全开放、纵向、多模态数据集，来源为MICCAI 2026。",
 "key_points": [],
@@ -103087,7 +103087,7 @@
 "year": 2025,
 "date": "2025-10-09",
 "link": "https://doi.org/10.48550/arXiv.2510.08744",
-"cites": 8,
+"cites": 9,
 "zh_title": "图扩散Transformer作为上下文分子设计器",
 "summary": "提出演示条件扩散模型DemoDiff，以少量分子-分数示例定义任务上下文，引导生成符合目标性质的分子。",
 "key_points": [
@@ -103225,7 +103225,7 @@
 "year": 2025,
 "date": "2025-10-12",
 "link": "https://doi.org/10.48550/arXiv.2510.11750",
-"cites": 6,
+"cites": 7,
 "zh_title": "PRISM：结构-序列多模态表征细粒度检索的逆折叠",
 "summary": "提出检索增强的蛋白质逆折叠框架PRISM，从已知蛋白检索细粒度基序表征并结合混合自交叉注意力解码器。",
 "key_points": [
